@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHUGAO Power - Professional LED Power Supply Manufacturer</title>
+    <meta name="description" content="Zhongshan Chugao Electronic Technology Co., Ltd. - One-stop supplier of full-series LED switching power supplies.">
+    <style>
+        :root {
+            --primary-color: #003366; /* 深工业蓝 */
+            --secondary-color: #00509e; /* 亮蓝 */
+            --accent-color: #ff6600; /* 工业橙点缀 */
+            --text-dark: #222222;
+            --text-gray: #555555;
+            --bg-light: #f4f6f8;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        
+        body { line-height: 1.6; color: var(--text-dark); background-color: var(--white); }
+
+        /* --- Header & Nav --- */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
+        
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span { color: var(--accent-color); }
+
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 1rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--secondary-color); }
+
+        /* Language Switcher */
+        .lang-switch {
+            display: flex;
+            gap: 10px;
+            border-left: 1px solid #ddd;
+            padding-left: 20px;
+            margin-left: 20px;
+        }
+        .lang-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #666;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 80, 158, 0.8)), 
+                        url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 800; line-height: 1.2; }
+        .hero p { font-size: 1.4rem; margin-bottom: 40px; font-weight: 300; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover { background: #e65c00; transform: translateY(-2px); }
+
+        /* --- Sections General --- */
+        section { padding: 80px 0; }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- About --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text h3 { font-size: 1.8rem; color: var(--primary-color); margin-bottom: 20px; }
+        .about-text p { margin-bottom: 20px; color: var(--text-gray); font-size: 1.05rem; text-align: justify; }
+        .about-img img { width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+
+        /* --- Products --- */
+        .products { background: var(--bg-light); }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+        }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.12); }
+        
+        .product-img-box {
+            height: 220px;
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .product-card:hover .product-img-box img { transform: scale(1.05); }
+        
+        .product-info { padding: 25px; text-align: center; }
+        .product-info h3 { color: var(--primary-color); margin-bottom: 12px; font-size: 1.3rem; }
+        .product-info p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.5; }
+
+        /* --- Contact --- */
+        .contact-wrapper {
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 10px;
+            padding: 50px;
+            text-align: center;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .contact-item h4 { font-size: 1.2rem; margin-bottom: 10px; color: #ccc; }
+        .contact-item p { font-size: 1.2rem; font-weight: 600; }
+        .contact-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+
+        /* --- Footer --- */
+        footer { background: #1a1a1a; color: #888; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+        footer p { margin-bottom: 10px; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Simplified for mobile */
+            .hero h1 { font-size: 2.2rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-wrapper { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">CHUGAO<span>POWER</span></a>
+                <div style="display:flex; align-items:center;">
+                    <ul class="nav-links">
+                        <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                        <li><a href="#about" data-i18n="nav_about">About</a></li>
+                        <li><a href="#products" data-i18n="nav_products">Products</a></li>
+                        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                    <div class="lang-switch">
+                        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+                        <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 data-i18n="hero_title">One-Stop Supplier of Full-Series LED Switching Power Supplies</h1>
+            <p data-i18n="hero_sub">Zhongshan Chugao Electronic Technology Co., Ltd.</p>
+            <a href="#products" class="btn" data-i18n="btn_products">View Products</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3 data-i18n="about_title">Who We Are</h3>
+                    <p data-i18n="about_p1">Zhongshan Chugao Electronic Technology Co., Ltd. is a high-tech enterprise specializing in the R&D, production, and sales of LED switching power supplies. We are committed to providing efficient, stable, and energy-saving power solutions for global customers.</p>
+                    <p data-i18n="about_p2">With years of industry experience and strong technical capabilities, Chugao has established a comprehensive product system covering adapters, indoor power supplies, waterproof power supplies, and rainproof power supplies. Our products are widely used in commercial lighting, industrial control, and outdoor亮化.</p>
+                    <p data-i18n="about_p3">Adhering to the philosophy of "Quality First, Customer Priority", we strictly control product quality to provide the best service to our partners.</p>
+                </div>
+                <div class="about-img">
+                    <!-- Industrial Factory Image -->
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Factory">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title" data-i18n="prod_title">Our Products</h2>
+            <p class="section-subtitle" data-i18n="prod_sub">Professional power solutions for various applications</p>
+            
+            <div class="product-grid">
+                <!-- Product 1: Adapter -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Adapter">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="p1_name">Adapter Series</h3>
+                        <p data-i18n="p1_desc">High efficiency, low loss, suitable for various small electronic devices. Safe and compatible.</p>
+                    </div>
+                </div>
+
+                <!-- Product 2: Indoor -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1565514020176-8c2a28e9e574?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Indoor Power">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="p2_name">Indoor Power Supply</h3>
+                        <p data-i18n="p2_desc">Designed for indoor lighting. Compact size, excellent heat dissipation, silent operation.</p>
+                    </div>
+                </div>
+
+                <!-- Product 3: Waterproof -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Waterproof">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="p3_name">Waterproof Power Supply</h3>
+                        <p data-i18n="p3_desc">IP67/IP68 rating. Dust and water resistant. Ideal for harsh outdoor environments.</p>
+                    </div>
+                </div>
+
+                <!-- Product 4: Rainproof -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Rainproof">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="p4_name">Rainproof Power Supply</h3>
+                        <p data-i18n="p4_desc">Robust metal casing. Excellent heat dissipation. Resistant to rain and corrosion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <h2 class="section-title" style="color:white;" data-i18n="contact_title">Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <h4 data-i18n="c_addr_title">Address</h4>
+                        <p>No. 96 Caoxing West Road, Guzhen Town, Zhongshan, Guangdong</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <h4 data-i18n="c_phone_title">Phone</h4>
+                        <p>+86 0760-89869758<br>+86 18933373873 (WeChat)</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <h4 data-i18n="c_email_title">Email</h4>
+                        <p>info@chugaopower.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Zhongshan Chugao Electronic Technology Co., Ltd. All Rights Reserved.</p>
+            <p data-i18n="footer_slogan">One-Stop Supplier of Full-Series LED Switching Power Supplies</p>
+        </div>
+    </footer>
+
+    <script>
+        // Translation Data
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_about: "About",
+                nav_products: "Products",
+                nav_contact: "Contact",
+                hero_title: "One-Stop Supplier of Full-Series LED Switching Power Supplies",
+                hero_sub: "Zhongshan Chugao Electronic Technology Co., Ltd.",
+                btn_products: "View Products",
+                about_title: "Who We Are",
+                about_p1: "Zhongshan Chugao Electronic Technology Co., Ltd. is a high-tech enterprise specializing in the R&D, production, and sales of LED switching power supplies. We are committed to providing efficient, stable, and energy-saving power solutions for global customers.",
+                about_p2: "With years of industry experience and strong technical capabilities, Chugao has established a comprehensive product system covering adapters, indoor power supplies, waterproof power supplies, and rainproof power supplies. Our products are widely used in commercial lighting, industrial control, and outdoor applications.",
+                about_p3: "Adhering to the philosophy of \"Quality First, Customer Priority\", we strictly control product quality to provide the best service to our partners.",
+                prod_title: "Our Products",
+                prod_sub: "Professional power solutions for various applications",
+                p1_name: "Adapter Series",
+                p1_desc: "High efficiency, low loss, suitable for various small electronic devices. Safe and compatible.",
+                p2_name: "Indoor Power Supply",
+                p2_desc: "Designed for indoor lighting. Compact size, excellent heat dissipation, silent operation.",
+                p3_name: "Waterproof Power Supply",
+                p3_desc: "IP67/IP68 rating. Dust and water resistant. Ideal for harsh outdoor environments.",
+                p4_name: "Rainproof Power Supply",
+                p4_desc: "Robust metal casing. Excellent heat dissipation. Resistant to rain and corrosion.",
+                contact_title: "Contact Us",
+                c_addr_title: "Address",
+                c_phone_title: "Phone",
+                c_email_title: "Email",
+                footer_slogan: "One-Stop Supplier of Full-Series LED Switching Power Supplies"
+            },
+            zh: {
+                nav_home: "首页",
+                nav_about: "关于我们",
+                nav_products: "产品中心",
+                nav_contact: "联系我们",
+                hero_title: "一站式全系列开关电源供应商",
+                hero_sub: "中山市楚高电子科技有限公司",
+                btn_products: "查看产品",
+                about_title: "关于我们",
+                about_p1: "中山市楚高电子科技有限公司是一家专注于 LED 开关电源研发、生产与销售的高新技术企业。我们致力于为全球客户提供高效、稳定、节能的电源解决方案。",
+                about_p2: "凭借多年的行业经验和强大的技术研发实力，楚高电子已建立起完善的产品体系，涵盖适配器、室内电源、防水电源、防雨电源等多个系列。产品广泛应用于商业照明、工业控制及户外亮化领域。",
+                about_p3: "秉承“品质至上，客户第一”的经营理念，我们严格把控产品质量，力求为每一位合作伙伴提供最优质的服务。",
+                prod_title: "产品中心",
+                prod_sub: "适用于多种场景的专业电源解决方案",
+                p1_name: "适配器系列",
+                p1_desc: "高效能、低损耗，适用于各类小型电子设备。安全稳定，兼容性强。",
+                p2_name: "室内电源",
+                p2_desc: "专为室内照明设计。体积小巧，散热优良，静音运行。",
+                p3_name: "防水电源",
+                p3_desc: "IP67/IP68 高等级防护。防尘防水，无惧恶劣户外环境。",
+                p4_name: "防雨电源",
+                p4_desc: "坚固金属外壳。优异散热性能，有效抵御雨水侵蚀。",
+                contact_title: "联系我们",
+                c_addr_title: "公司地址",
+                c_phone_title: "联系电话",
+                c_email_title: "电子邮箱",
+                footer_slogan: "一站式全系列开关电源供应商"
+            }
+        };
+
+        function switchLang(lang) {
+            // Update Text
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update Active Button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase().includes(lang === 'zh' ? '中文' : 'en')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        }
+
+        // Initialize with English
+        switchLang('en');
+    </script>
+</body>
+</html>
