@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,12 @@
     <meta name="description" content="Zhongshan Chugao Electronic Technology Co., Ltd. - One-stop supplier of full-series LED switching power supplies.">
     <style>
         :root {
-            --primary-color: #003366; /* 深工业蓝 */
-            --secondary-color: #00509e; /* 亮蓝 */
-            --accent-color: #ff6600; /* 工业橙点缀 */
+            --primary-color: #003366;
+            --secondary-color: #00509e;
+            --accent-color: #ff6600;
+            --whatsapp-color: #25D366;
+            --gaode-color: #2E9DFE;
+            --google-color: #4285F4;
             --text-dark: #222222;
             --text-gray: #555555;
             --bg-light: #f4f6f8;
@@ -29,7 +32,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            height: 80px;
+            height: 90px;
             display: flex;
             align-items: center;
         }
@@ -39,44 +42,71 @@
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
+            text-decoration: none;
+            height: 50px;
         }
         
-        .logo span { color: var(--accent-color); }
+        .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
 
         .nav-links { display: flex; list-style: none; gap: 30px; }
         .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 1rem; transition: color 0.3s; }
         .nav-links a:hover { color: var(--secondary-color); }
 
-        /* Language Switcher */
-        .lang-switch {
-            display: flex;
-            gap: 10px;
-            border-left: 1px solid #ddd;
-            padding-left: 20px;
+        /* Language Selector (Dropdown) */
+        .lang-selector {
+            position: relative;
             margin-left: 20px;
+            border-left: 1px solid #ddd;
+            padding-left: 15px;
         }
-        .lang-btn {
-            background: none;
+        .lang-btn-main {
+            background: var(--white);
             border: 1px solid #ddd;
-            padding: 5px 10px;
-            cursor: pointer;
+            padding: 6px 12px;
             border-radius: 4px;
             font-weight: bold;
+            font-size: 0.85rem;
             color: #666;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
             transition: all 0.2s;
         }
-        .lang-btn.active {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
+        .lang-btn-main:hover { border-color: var(--primary-color); color: var(--primary-color); }
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: none;
+            flex-direction: column;
+            min-width: 120px;
+            margin-top: 5px;
+            z-index: 1001;
         }
+        .lang-dropdown.show { display: flex; }
+        .lang-option {
+            padding: 8px 12px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .lang-option:last-child { border-bottom: none; }
+        .lang-option:hover { background: var(--bg-light); color: var(--primary-color); }
+        .lang-option.active { background: var(--primary-color); color: white; }
 
         /* --- Hero Section --- */
         .hero {
@@ -90,17 +120,22 @@
             justify-content: center;
             text-align: center;
             color: var(--white);
-            margin-top: 80px;
+            margin-top: 90px;
+            position: relative;
         }
 
         .hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 800; line-height: 1.2; }
-        .hero p { font-size: 1.4rem; margin-bottom: 40px; font-weight: 300; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .hero p { font-size: 1.4rem; margin-bottom: 30px; font-weight: 300; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        
+        .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
         
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: var(--accent-color);
             color: var(--white);
-            padding: 15px 40px;
+            padding: 15px 30px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 700;
@@ -110,6 +145,7 @@
             cursor: pointer;
         }
         .btn:hover { background: #e65c00; transform: translateY(-2px); }
+        .btn svg { width: 20px; height: 20px; fill: currentColor; }
 
         /* --- Sections General --- */
         section { padding: 80px 0; }
@@ -184,18 +220,89 @@
             background: var(--primary-color);
             color: var(--white);
             border-radius: 10px;
-            padding: 50px;
+            padding: 40px 30px;
             text-align: center;
         }
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+            align-items: start;
         }
-        .contact-item h4 { font-size: 1.2rem; margin-bottom: 10px; color: #ccc; }
-        .contact-item p { font-size: 1.2rem; font-weight: 600; }
-        .contact-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+        .contact-item {
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-item h4 { 
+            font-size: 1rem; 
+            margin-bottom: 8px; 
+            color: #ddd; 
+            font-weight: 600;
+        }
+        .contact-item p, .contact-item a { 
+            font-size: 0.95rem; 
+            font-weight: 500; 
+            margin: 4px 0; 
+            line-height: 1.4;
+            word-break: break-word;
+        }
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.2s;
+            display: inline-block;
+        }
+        .contact-item a:hover { opacity: 0.85; text-decoration: underline; }
+        
+        .contact-icon { 
+            font-size: 2rem; 
+            margin-bottom: 10px; 
+            display: block; 
+            line-height: 1;
+        }
+        .whatsapp-icon-svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--whatsapp-color);
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        /* Map Buttons */
+        .map-links {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            min-height: 36px;
+        }
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s, opacity 0.2s;
+            border: none;
+            cursor: pointer;
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .map-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        .map-btn.gaode { background-color: var(--gaode-color); }
+        .map-btn.google { background-color: var(--google-color); }
+        .map-btn svg { width: 14px; height: 14px; fill: currentColor; }
 
         /* --- Footer --- */
         footer { background: #1a1a1a; color: #888; padding: 40px 0; text-align: center; font-size: 0.9rem; }
@@ -203,10 +310,18 @@
 
         /* Mobile */
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Simplified for mobile */
+            .nav-links { display: none; } 
             .hero h1 { font-size: 2.2rem; }
             .about-grid { grid-template-columns: 1fr; }
             .contact-wrapper { padding: 30px 20px; }
+            header { height: 70px; }
+            .logo { height: 40px; }
+            .lang-selector { margin-left: 10px; }
+            .lang-btn-main { padding: 4px 8px; font-size: 0.75rem; }
+            
+            .contact-grid { grid-template-columns: 1fr; gap: 25px; }
+            .contact-item { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
+            .contact-item:first-child { border-top: none; }
         }
     </style>
 </head>
@@ -216,7 +331,9 @@
     <header>
         <div class="container">
             <div class="nav-wrapper">
-                <a href="#" class="logo">CHUGAO<span>POWER</span></a>
+                <a href="#" class="logo">
+                    <img src="./logo.png" alt="CHUGAO Power Logo">
+                </a>
                 <div style="display:flex; align-items:center;">
                     <ul class="nav-links">
                         <li><a href="#home" data-i18n="nav_home">Home</a></li>
@@ -224,9 +341,18 @@
                         <li><a href="#products" data-i18n="nav_products">Products</a></li>
                         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                     </ul>
-                    <div class="lang-switch">
-                        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
-                        <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+                    <!-- Language Dropdown -->
+                    <div class="lang-selector">
+                        <button class="lang-btn-main" onclick="toggleLangDropdown()">
+                            <span id="current-lang-label">EN</span>
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+                        </button>
+                        <div class="lang-dropdown" id="lang-dropdown">
+                            <div class="lang-option active" onclick="switchLang('en')" data-lang="en">English</div>
+                            <div class="lang-option" onclick="switchLang('zh')" data-lang="zh">中文</div>
+                            <div class="lang-option" onclick="switchLang('es')" data-lang="es">Español</div>
+                            <div class="lang-option" onclick="switchLang('fr')" data-lang="fr">Français</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -238,7 +364,16 @@
         <div class="container">
             <h1 data-i18n="hero_title">One-Stop Supplier of Full-Series LED Switching Power Supplies</h1>
             <p data-i18n="hero_sub">Zhongshan Chugao Electronic Technology Co., Ltd.</p>
-            <a href="#products" class="btn" data-i18n="btn_products">View Products</a>
+            <div class="btn-group">
+                <a href="#products" class="btn" data-i18n="btn_products">
+                    <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                    <span data-i18n="btn_products_text">View Products</span>
+                </a>
+                <button class="btn" onclick="playIntro()" style="background:var(--secondary-color);">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    <span data-i18n="btn_listen">Listen</span>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -249,11 +384,10 @@
                 <div class="about-text">
                     <h3 data-i18n="about_title">Who We Are</h3>
                     <p data-i18n="about_p1">Zhongshan Chugao Electronic Technology Co., Ltd. is a high-tech enterprise specializing in the R&D, production, and sales of LED switching power supplies. We are committed to providing efficient, stable, and energy-saving power solutions for global customers.</p>
-                    <p data-i18n="about_p2">With years of industry experience and strong technical capabilities, Chugao has established a comprehensive product system covering adapters, indoor power supplies, waterproof power supplies, and rainproof power supplies. Our products are widely used in commercial lighting, industrial control, and outdoor亮化.</p>
+                    <p data-i18n="about_p2">With years of industry experience and strong technical capabilities, Chugao has established a comprehensive product system covering adapters, indoor power supplies, waterproof power supplies, and rainproof power supplies. Our products are widely used in commercial lighting, industrial control, and outdoor applications.</p>
                     <p data-i18n="about_p3">Adhering to the philosophy of "Quality First, Customer Priority", we strictly control product quality to provide the best service to our partners.</p>
                 </div>
                 <div class="about-img">
-                    <!-- Industrial Factory Image -->
                     <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Factory">
                 </div>
             </div>
@@ -267,48 +401,21 @@
             <p class="section-subtitle" data-i18n="prod_sub">Professional power solutions for various applications</p>
             
             <div class="product-grid">
-                <!-- Product 1: Adapter -->
                 <div class="product-card">
-                    <div class="product-img-box">
-                        <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Adapter">
-                    </div>
-                    <div class="product-info">
-                        <h3 data-i18n="p1_name">Adapter Series</h3>
-                        <p data-i18n="p1_desc">High efficiency, low loss, suitable for various small electronic devices. Safe and compatible.</p>
-                    </div>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Adapter"></div>
+                    <div class="product-info"><h3 data-i18n="p1_name">Adapter Series</h3><p data-i18n="p1_desc">High efficiency, low loss, suitable for various small electronic devices. Safe and compatible.</p></div>
                 </div>
-
-                <!-- Product 2: Indoor -->
                 <div class="product-card">
-                    <div class="product-img-box">
-                        <img src="https://images.unsplash.com/photo-1565514020176-8c2a28e9e574?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Indoor Power">
-                    </div>
-                    <div class="product-info">
-                        <h3 data-i18n="p2_name">Indoor Power Supply</h3>
-                        <p data-i18n="p2_desc">Designed for indoor lighting. Compact size, excellent heat dissipation, silent operation.</p>
-                    </div>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1565514020176-8c2a28e9e574?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Indoor Power"></div>
+                    <div class="product-info"><h3 data-i18n="p2_name">Indoor Power Supply</h3><p data-i18n="p2_desc">Designed for indoor lighting. Compact size, excellent heat dissipation, silent operation.</p></div>
                 </div>
-
-                <!-- Product 3: Waterproof -->
                 <div class="product-card">
-                    <div class="product-img-box">
-                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Waterproof">
-                    </div>
-                    <div class="product-info">
-                        <h3 data-i18n="p3_name">Waterproof Power Supply</h3>
-                        <p data-i18n="p3_desc">IP67/IP68 rating. Dust and water resistant. Ideal for harsh outdoor environments.</p>
-                    </div>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Waterproof"></div>
+                    <div class="product-info"><h3 data-i18n="p3_name">Waterproof Power Supply</h3><p data-i18n="p3_desc">IP67/IP68 rating. Dust and water resistant. Ideal for harsh outdoor environments.</p></div>
                 </div>
-
-                <!-- Product 4: Rainproof -->
                 <div class="product-card">
-                    <div class="product-img-box">
-                        <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Rainproof">
-                    </div>
-                    <div class="product-info">
-                        <h3 data-i18n="p4_name">Rainproof Power Supply</h3>
-                        <p data-i18n="p4_desc">Robust metal casing. Excellent heat dissipation. Resistant to rain and corrosion.</p>
-                    </div>
+                    <div class="product-img-box"><img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Rainproof"></div>
+                    <div class="product-info"><h3 data-i18n="p4_name">Rainproof Power Supply</h3><p data-i18n="p4_desc">Robust metal casing. Excellent heat dissipation. Resistant to rain and corrosion.</p></div>
                 </div>
             </div>
         </div>
@@ -318,22 +425,29 @@
     <section id="contact">
         <div class="container">
             <div class="contact-wrapper">
-                <h2 class="section-title" style="color:white;" data-i18n="contact_title">Contact Us</h2>
+                <h2 class="section-title" style="color:white; margin-bottom:20px;" data-i18n="contact_title">Contact Us</h2>
                 <div class="contact-grid">
                     <div class="contact-item">
                         <span class="contact-icon">📍</span>
                         <h4 data-i18n="c_addr_title">Address</h4>
-                        <p>No. 96 Caoxing West Road, Guzhen Town, Zhongshan, Guangdong</p>
+                        <p>No. 96 Caoxing West Road, Guzhen, Zhongshan, GD</p>
+                        <div class="map-links" id="map-container"><span style="font-size:0.8rem; color:#ddd;">Locating...</span></div>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">📞</span>
                         <h4 data-i18n="c_phone_title">Phone</h4>
-                        <p>+86 0760-89869758<br>+86 18933373873 (WeChat)</p>
+                        <a href="tel:+86076089869758">+86 0760-89869758</a><br>
+                        <a href="tel:+8618933373873">+86 18933373873</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="whatsapp-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.004 2c-5.52 0-9.996 4.476-9.996 9.996 0 1.752.448 3.46 1.304 4.988L2.004 22.004l5.132-1.348c1.488.812 3.152 1.244 4.868 1.244 5.52 0 10-4.48 10-10 0-5.52-4.48-9.996-10-9.996zm.004 17.74c-1.516 0-2.996-.408-4.296-1.18l-.308-.184-3.196.84.852-3.112-.2-.324c-.852-1.352-1.3-2.924-1.3-4.548 0-4.304 3.496-7.8 7.8-7.8s7.8 3.496 7.8 7.8-3.496 7.8-7.8 7.8zm4.292-5.824c-.236-.12-1.4-.692-1.62-.772-.216-.08-.376-.12-.536.12-.16.24-.62.772-.76.932-.14.16-.28.18-.52.06-.24-.12-1.008-.372-1.92-1.184-.712-.632-1.192-1.416-1.332-1.652-.14-.24-.016-.368.104-.488.108-.108.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.536-1.292-.736-1.772-.192-.46-.388-.4-.536-.408-.148-.008-.32-.008-.492-.008-.172 0-.452.064-.688.32-.24.256-.912.888-.912 2.16 0 1.272.924 2.5 1.052 2.672.132.172 1.816 2.772 4.404 3.892.616.268 1.096.424 1.472.544.62.196 1.184.168 1.628.1.496-.076 1.4-.572 1.692-1.124.292-.552.292-1.024.204-1.172-.088-.148-.324-.236-.56-.356z"/></svg>
+                        <h4 data-i18n="c_whatsapp_title">WhatsApp</h4>
+                        <a href="https://wa.me/8618933373873" target="_blank" rel="noopener"><span data-i18n="c_whatsapp_action">Chat on WhatsApp</span></a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">📧</span>
                         <h4 data-i18n="c_email_title">Email</h4>
-                        <p>info@chugaopower.com</p>
+                        <a href="mailto:info@chugaopower.com">info@chugaopower.com</a>
                     </div>
                 </div>
             </div>
@@ -349,88 +463,158 @@
     </footer>
 
     <script>
-        // Translation Data
+        // --- 1. IP 定位与地图逻辑 ---
+        const mapContainer = document.getElementById('map-container');
+        const gaodeUrl = "https://uri.amap.com/search?query=中山市古镇镇曹兴西路96号&src=website";
+        const googleUrl = "https://www.google.com/maps/search/?api=1&query=No.96+Caoxing+West+Road+Guzhen+Zhongshan+Guangdong";
+
+        function renderMapButton(type) {
+            let html = type === 'cn' 
+                ? `<a href="${gaodeUrl}" target="_blank" class="map-btn gaode"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><span data-i18n="btn_gaode">高德地图</span></a>`
+                : `<a href="${googleUrl}" target="_blank" class="map-btn google"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg><span data-i18n="btn_google">Google Maps</span></a>`;
+            mapContainer.innerHTML = html;
+            updateLangText();
+        }
+
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                if (data.country_code === 'CN') renderMapButton('cn');
+                else renderMapButton('google');
+            })
+            .catch(() => renderMapButton('google'));
+
+        // --- 2. 多语言与语音合成逻辑 ---
         const translations = {
             en: {
-                nav_home: "Home",
-                nav_about: "About",
-                nav_products: "Products",
-                nav_contact: "Contact",
+                nav_home: "Home", nav_about: "About", nav_products: "Products", nav_contact: "Contact",
                 hero_title: "One-Stop Supplier of Full-Series LED Switching Power Supplies",
                 hero_sub: "Zhongshan Chugao Electronic Technology Co., Ltd.",
-                btn_products: "View Products",
+                btn_products_text: "View Products", btn_listen: "Listen Intro",
                 about_title: "Who We Are",
                 about_p1: "Zhongshan Chugao Electronic Technology Co., Ltd. is a high-tech enterprise specializing in the R&D, production, and sales of LED switching power supplies. We are committed to providing efficient, stable, and energy-saving power solutions for global customers.",
                 about_p2: "With years of industry experience and strong technical capabilities, Chugao has established a comprehensive product system covering adapters, indoor power supplies, waterproof power supplies, and rainproof power supplies. Our products are widely used in commercial lighting, industrial control, and outdoor applications.",
-                about_p3: "Adhering to the philosophy of \"Quality First, Customer Priority\", we strictly control product quality to provide the best service to our partners.",
-                prod_title: "Our Products",
-                prod_sub: "Professional power solutions for various applications",
-                p1_name: "Adapter Series",
-                p1_desc: "High efficiency, low loss, suitable for various small electronic devices. Safe and compatible.",
-                p2_name: "Indoor Power Supply",
-                p2_desc: "Designed for indoor lighting. Compact size, excellent heat dissipation, silent operation.",
-                p3_name: "Waterproof Power Supply",
-                p3_desc: "IP67/IP68 rating. Dust and water resistant. Ideal for harsh outdoor environments.",
-                p4_name: "Rainproof Power Supply",
-                p4_desc: "Robust metal casing. Excellent heat dissipation. Resistant to rain and corrosion.",
-                contact_title: "Contact Us",
-                c_addr_title: "Address",
-                c_phone_title: "Phone",
-                c_email_title: "Email",
-                footer_slogan: "One-Stop Supplier of Full-Series LED Switching Power Supplies"
+                about_p3: "Adhering to the philosophy of Quality First, Customer Priority, we strictly control product quality to provide the best service to our partners.",
+                prod_title: "Our Products", prod_sub: "Professional power solutions for various applications",
+                p1_name: "Adapter Series", p1_desc: "High efficiency, low loss, suitable for various small electronic devices. Safe and compatible.",
+                p2_name: "Indoor Power Supply", p2_desc: "Designed for indoor lighting. Compact size, excellent heat dissipation, silent operation.",
+                p3_name: "Waterproof Power Supply", p3_desc: "IP67/IP68 rating. Dust and water resistant. Ideal for harsh outdoor environments.",
+                p4_name: "Rainproof Power Supply", p4_desc: "Robust metal casing. Excellent heat dissipation. Resistant to rain and corrosion.",
+                contact_title: "Contact Us", c_addr_title: "Address", c_phone_title: "Phone", c_whatsapp_title: "WhatsApp", c_whatsapp_action: "Chat on WhatsApp", c_email_title: "Email",
+                btn_gaode: "Gaode Map", btn_google: "Google Maps",
+                footer_slogan: "One-Stop Supplier of Full-Series LED Switching Power Supplies",
+                tts_intro: "Welcome to Zhongshan Chugao Electronic Technology. We are a one-stop supplier of full-series LED switching power supplies, including adapters, indoor, waterproof, and rainproof power supplies. Quality first, customer priority."
             },
             zh: {
-                nav_home: "首页",
-                nav_about: "关于我们",
-                nav_products: "产品中心",
-                nav_contact: "联系我们",
+                nav_home: "首页", nav_about: "关于我们", nav_products: "产品中心", nav_contact: "联系我们",
                 hero_title: "一站式全系列开关电源供应商",
                 hero_sub: "中山市楚高电子科技有限公司",
-                btn_products: "查看产品",
+                btn_products_text: "查看产品", btn_listen: "朗读介绍",
                 about_title: "关于我们",
                 about_p1: "中山市楚高电子科技有限公司是一家专注于 LED 开关电源研发、生产与销售的高新技术企业。我们致力于为全球客户提供高效、稳定、节能的电源解决方案。",
                 about_p2: "凭借多年的行业经验和强大的技术研发实力，楚高电子已建立起完善的产品体系，涵盖适配器、室内电源、防水电源、防雨电源等多个系列。产品广泛应用于商业照明、工业控制及户外亮化领域。",
                 about_p3: "秉承“品质至上，客户第一”的经营理念，我们严格把控产品质量，力求为每一位合作伙伴提供最优质的服务。",
-                prod_title: "产品中心",
-                prod_sub: "适用于多种场景的专业电源解决方案",
-                p1_name: "适配器系列",
-                p1_desc: "高效能、低损耗，适用于各类小型电子设备。安全稳定，兼容性强。",
-                p2_name: "室内电源",
-                p2_desc: "专为室内照明设计。体积小巧，散热优良，静音运行。",
-                p3_name: "防水电源",
-                p3_desc: "IP67/IP68 高等级防护。防尘防水，无惧恶劣户外环境。",
-                p4_name: "防雨电源",
-                p4_desc: "坚固金属外壳。优异散热性能，有效抵御雨水侵蚀。",
-                contact_title: "联系我们",
-                c_addr_title: "公司地址",
-                c_phone_title: "联系电话",
-                c_email_title: "电子邮箱",
-                footer_slogan: "一站式全系列开关电源供应商"
+                prod_title: "产品中心", prod_sub: "适用于多种场景的专业电源解决方案",
+                p1_name: "适配器系列", p1_desc: "高效能、低损耗，适用于各类小型电子设备。安全稳定，兼容性强。",
+                p2_name: "室内电源", p2_desc: "专为室内照明设计。体积小巧，散热优良，静音运行。",
+                p3_name: "防水电源", p3_desc: "IP67/IP68 高等级防护。防尘防水，无惧恶劣户外环境。",
+                p4_name: "防雨电源", p4_desc: "坚固金属外壳。优异散热性能，有效抵御雨水侵蚀。",
+                contact_title: "联系我们", c_addr_title: "公司地址", c_phone_title: "联系电话", c_whatsapp_title: "WhatsApp", c_whatsapp_action: "点击聊天", c_email_title: "电子邮箱",
+                btn_gaode: "高德地图", btn_google: "谷歌地图",
+                footer_slogan: "一站式全系列开关电源供应商",
+                tts_intro: "欢迎莅临中山市楚高电子科技有限公司。我们是一家一站式全系列开关电源供应商，产品涵盖适配器、室内电源、防水电源及防雨电源。秉承品质至上，客户第一的理念，我们期待与您合作。"
+            },
+            es: {
+                nav_home: "Inicio", nav_about: "Nosotros", nav_products: "Productos", nav_contact: "Contacto",
+                hero_title: "Proveedor integral de fuentes de alimentación LED conmutadas de serie completa",
+                hero_sub: "Zhongshan Chugao Electronic Technology Co., Ltd.",
+                btn_products_text: "Ver Productos", btn_listen: "Escuchar Intro",
+                about_title: "Quiénes Somos",
+                about_p1: "Zhongshan Chugao Electronic Technology Co., Ltd. es una empresa de alta tecnología especializada en I+D, producción y venta de fuentes de alimentación conmutadas LED. Nos comprometemos a proporcionar soluciones de energía eficientes, estables y de ahorro energético para clientes globales.",
+                about_p2: "Con años de experiencia en la industria y sólida capacidad técnica, Chugao ha establecido un sistema de productos completo que cubre adaptadores, fuentes para interiores, impermeables y a prueba de lluvia. Nuestros productos se usan ampliamente en iluminación comercial, control industrial y aplicaciones exteriores.",
+                about_p3: "Adhiriéndonos a la filosofía de Calidad primero, cliente prioritario, controlamos estrictamente la calidad del producto para ofrecer el mejor servicio a nuestros socios.",
+                prod_title: "Nuestros Productos", prod_sub: "Soluciones de energía profesionales para diversas aplicaciones",
+                p1_name: "Serie Adaptadores", p1_desc: "Alta eficiencia, baja pérdida, ideal para diversos dispositivos electrónicos pequeños. Seguro y compatible.",
+                p2_name: "Fuente Interior", p2_desc: "Diseñada para iluminación de interiores. Tamaño compacto, excelente disipación, funcionamiento silencioso.",
+                p3_name: "Fuente Impermeable", p3_desc: "Clasificación IP67/IP68. Resistente al polvo y agua. Ideal para entornos exteriores exigentes.",
+                p4_name: "Fuente a Prueba de Lluvia", p4_desc: "Carcasa metálica robusta. Excelente disipación. Resistente a lluvia y corrosión.",
+                contact_title: "Contáctenos", c_addr_title: "Dirección", c_phone_title: "Teléfono", c_whatsapp_title: "WhatsApp", c_whatsapp_action: "Chatear en WhatsApp", c_email_title: "Correo",
+                btn_gaode: "Mapa Gaode", btn_google: "Google Maps",
+                footer_slogan: "Proveedor integral de fuentes de alimentación LED conmutadas de serie completa",
+                tts_intro: "Bienvenido a Zhongshan Chugao Electronic Technology. Somos un proveedor integral de fuentes de alimentación LED, incluyendo adaptadores, fuentes para interiores, impermeables y a prueba de lluvia. Calidad primero, cliente prioritario."
+            },
+            fr: {
+                nav_home: "Accueil", nav_about: "À propos", nav_products: "Produits", nav_contact: "Contact",
+                hero_title: "Fournisseur clé en main d'alimentations LED commutées de série complète",
+                hero_sub: "Zhongshan Chugao Electronic Technology Co., Ltd.",
+                btn_products_text: "Voir les produits", btn_listen: "Écouter l'intro",
+                about_title: "Qui sommes-nous",
+                about_p1: "Zhongshan Chugao Electronic Technology Co., Ltd. est une entreprise de haute technologie spécialisée dans la R&D, la production et la vente d'alimentations LED commutées. Nous nous engageons à fournir des solutions d'alimentation efficaces, stables et économes en énergie pour les clients du monde entier.",
+                about_p2: "Fort de nombreuses années d'expérience et de solides capacités techniques, Chugao a établi un système de produits complet couvrant les adaptateurs, les alimentations d'intérieur, étanches et résistantes à la pluie. Nos produits sont largement utilisés dans l'éclairage commercial, le contrôle industriel et les applications extérieures.",
+                about_p3: "Adhérant à la philosophie Qualité d'abord, client prioritaire, nous contrôlons strictement la qualité des produits pour offrir le meilleur service à nos partenaires.",
+                prod_title: "Nos Produits", prod_sub: "Solutions d'alimentation professionnelles pour diverses applications",
+                p1_name: "Série Adaptateurs", p1_desc: "Haute efficacité, faible perte, adapté aux petits appareils électroniques. Sûr et compatible.",
+                p2_name: "Alimentation Intérieure", p2_desc: "Conçue pour l'éclairage intérieur. Taille compacte, excellente dissipation, fonctionnement silencieux.",
+                p3_name: "Alimentation Étanche", p3_desc: "Indice IP67/IP68. Résistante à la poussière et à l'eau. Idéale pour environnements extérieurs difficiles.",
+                p4_name: "Alimentation Anti-pluie", p4_desc: "Boîtier métallique robuste. Excellente dissipation. Résistante à la pluie et à la corrosion.",
+                contact_title: "Contactez-nous", c_addr_title: "Adresse", c_phone_title: "Téléphone", c_whatsapp_title: "WhatsApp", c_whatsapp_action: "Discuter sur WhatsApp", c_email_title: "Email",
+                btn_gaode: "Plan Gaode", btn_google: "Google Plans",
+                footer_slogan: "Fournisseur clé en main d'alimentations LED commutées de série complète",
+                tts_intro: "Bienvenue chez Zhongshan Chugao Electronic Technology. Nous sommes un fournisseur clé en main d'alimentations LED, y compris adaptateurs, intérieurs, étanches et anti-pluie. Qualité d'abord, client prioritaire."
             }
         };
 
-        function switchLang(lang) {
-            // Update Text
+        // 语言切换与下拉菜单逻辑
+        function toggleLangDropdown() {
+            document.getElementById('lang-dropdown').classList.toggle('show');
+        }
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.lang-selector')) {
+                document.getElementById('lang-dropdown').classList.remove('show');
+            }
+        });
+
+        function updateLangText() {
+            const currentLang = document.documentElement.lang || 'en';
+            const langKey = currentLang.includes('zh') ? 'zh' : (currentLang.includes('es') ? 'es' : (currentLang.includes('fr') ? 'fr' : 'en'));
+            const t = translations[langKey];
+            
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
-            
-            // Update Active Button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.textContent.toLowerCase().includes(lang === 'zh' ? '中文' : 'en')) {
-                    btn.classList.add('active');
-                }
+                if (t[key]) element.textContent = t[key];
             });
 
-            // Update HTML lang attribute
-            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            // 更新下拉菜单激活状态
+            document.querySelectorAll('.lang-option').forEach(opt => {
+                opt.classList.toggle('active', opt.getAttribute('data-lang') === langKey);
+            });
+            document.getElementById('current-lang-label').textContent = langKey.toUpperCase();
         }
 
-        // Initialize with English
+        function switchLang(lang) {
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : (lang === 'es' ? 'es' : (lang === 'fr' ? 'fr' : 'en'));
+            updateLangText();
+            document.getElementById('lang-dropdown').classList.remove('show');
+        }
+
+        // 语音合成 (TTS)
+        function playIntro() {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel(); // 停止当前播放
+                const currentLang = document.documentElement.lang || 'en';
+                const langKey = currentLang.includes('zh') ? 'zh' : (currentLang.includes('es') ? 'es' : (currentLang.includes('fr') ? 'fr' : 'en'));
+                const text = translations[langKey].tts_intro;
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = document.documentElement.lang;
+                utterance.rate = 0.9; // 稍慢一点更清晰
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert("Your browser does not support text-to-speech.");
+            }
+        }
+
+        // 初始化
         switchLang('en');
     </script>
 </body>
