@@ -1,498 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHUGAO Power - Professional LED Power Supply Manufacturer</title>
-    <meta name="description" content="Zhongshan Chugao Electronic Technology Co., Ltd. - One-stop supplier of full-series LED switching power supplies.">
-    <style>
-        :root {
-            --primary: #0f172a; /* Slate 900 - 深沉的工业黑 */
-            --primary-light: #334155; /* Slate 700 */
-            --accent: #2563eb; /* Royal Blue - 克制的主色 */
-            --bg-body: #f8fafc; /* Slate 50 - 极淡的灰底 */
-            --bg-card: #ffffff;
-            --text-main: #1e293b; /* Slate 800 - 非纯黑，更柔和 */
-            --text-sub: #64748b; /* Slate 500 */
-            --border: #e2e8f0;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --radius: 8px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a { text-decoration: none; color: inherit; transition: color 0.2s; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
-
-        /* Header - 毛玻璃效果 */
-        header {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            height: 72px;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-            width: 100%;
-        }
-
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            height: 40px;
-            display: flex;
-            align-items: center;
-        }
-        .logo img { height: 100%; width: auto; }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-        }
-
-        .nav-links a {
-            font-size: 15px;
-            font-weight: 500;
-            color: var(--text-main);
-            position: relative;
-        }
-        .nav-links a:hover { color: var(--accent); }
-
-        .lang-bar {
-            display: flex;
-            gap: 16px;
-            padding-left: 20px;
-            border-left: 1px solid var(--border);
-            margin-left: 20px;
-        }
-        .lang-bar span {
-            font-size: 14px;
-            color: var(--text-sub);
-            cursor: pointer;
-            font-weight: 500;
-        }
-        .lang-bar span.active { color: var(--primary); font-weight: 600; }
-        .lang-bar span:hover { color: var(--primary); }
-
-        /* Hero Section */
-        .hero {
-            padding: 160px 0 100px;
-            text-align: center;
-            background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
-        }
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-        }
-        .hero p {
-            font-size: 20px;
-            color: var(--text-sub);
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.5;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff;
-            padding: 12px 32px;
-            border-radius: var(--radius);
-            font-weight: 500;
-            font-size: 16px;
-            transition: all 0.2s;
-        }
-        .btn:hover {
-            background: var(--primary-light);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 60px;
-            color: var(--primary);
-        }
-
-        /* About */
-        .about { padding: 80px 0; background: #fff; }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .about-text p {
-            font-size: 16px;
-            color: var(--text-sub);
-            margin-bottom: 20px;
-            line-height: 1.7;
-            text-align: justify;
-        }
-        .about-img img {
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Products */
-        .products { padding: 80px 0; background: var(--bg-body); }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        .product-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 24px;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-            border-color: transparent;
-        }
-        .product-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            border-radius: 4px;
-        }
-        .product-card h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--primary);
-        }
-        .product-card p {
-            font-size: 14px;
-            color: var(--text-sub);
-            line-height: 1.5;
-        }
-
-        /* Contact */
-        .contact { padding: 80px 0; background: #fff; }
-        .contact-wrapper {
-            background: var(--primary);
-            border-radius: 16px;
-            padding: 60px 40px;
-            color: #fff;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
-        .contact-item h4 {
-            font-size: 14px;
-            font-weight: 600;
-            opacity: 0.8;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .contact-item p, .contact-item a {
-            font-size: 15px;
-            color: #fff;
-            margin: 4px 0;
-            display: block;
-            opacity: 0.9;
-        }
-        .contact-item a:hover { opacity: 1; text-decoration: underline; }
-        
-        .map-group {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 12px;
-        }
-        .map-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 500;
-            color: #fff;
-            transition: opacity 0.2s;
-        }
-        .map-btn:hover { opacity: 0.9; }
-        .map-btn.gaode { background: #2E9DFE; }
-        .map-btn.google { background: #4285F4; }
-        .map-btn svg { width: 16px; height: 16px; fill: currentColor; }
-        
-        .wa-icon {
-            width: 32px;
-            height: 32px;
-            margin: 0 auto 10px;
-            display: block;
-        }
-
-        /* Footer */
-        footer {
-            background: #0f172a;
-            color: #94a3b8;
-            padding: 40px 0;
-            text-align: center;
-            font-size: 14px;
-            border-top: 1px solid #1e293b;
-        }
-        footer p { margin-bottom: 8px; }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .nav-links, .lang-bar { display: none; }
-            .hero h1 { font-size: 32px; }
-            .hero p { font-size: 16px; }
-            .about-grid, .product-grid, .contact-grid { grid-template-columns: 1fr; }
-            .contact-wrapper { padding: 40px 20px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHUGAO Power - Professional LED Power Supply Manufacturer | Made in China</title>
+<meta name="description" content="Zhongshan Chugao Electronic Technology Co., Ltd. - Professional LED switching power supply manufacturer. Full-series LED power supplies: adapters, indoor, waterproof (IP67/IP68), rainproof. CE/UL certified. Factory direct pricing for global B2B buyers.">
+<meta name="keywords" content="LED power supply, switching power supply, waterproof power supply, LED adapter, China manufacturer">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f172a">
+<link rel="canonical" href="https://chugaopower.com/">
+<link rel="alternate" hreflang="en" href="https://chugaopower.com/">
+<link rel="alternate" hreflang="zh" href="https://chugaopower.com/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://chugaopower.com/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://chugaopower.com/?lang=fr">
+<link rel="alternate" hreflang="x-default" href="https://chugaopower.com/">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="dns-prefetch" href="https://images.unsplash.com">
+<link rel="preload" as="image" href="./logo.png">
+<meta property="og:title" content="CHUGAO Power - LED Switching Power Supply Manufacturer">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="./logo.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Zhongshan Chugao Electronic Technology Co., Ltd.","alternateName":"CHUGAO Power","url":"https://chugaopower.com","address":{"@type":"PostalAddress","streetAddress":"No. 96 Caoxing West Road, Guzhen Town","addressLocality":"Zhongshan","addressRegion":"Guangdong","addressCountry":"CN"},"contactPoint":{"@type":"ContactPoint","telephone":"+86-0760-89869758","contactType":"sales","availableLanguage":["English","Chinese","Spanish","French"]}}
+</script>
+<style>
+:root{--p:#0f172a;--pl:#1e3a5f;--a:#2563eb;--ah:#1d4ed8;--bg:#f8fafc;--w:#fff;--t:#1e293b;--ts:#64748b;--tl:#94a3b8;--b:#e2e8f0;--sm:0 1px 3px rgb(0 0 0 / 0.08);--md:0 4px 12px rgb(0 0 0 / 0.1);--lg:0 10px 30px rgb(0 0 0 / 0.12);--r:10px;--rl:16px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--t);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.c{max-width:1400px;margin:0 auto;padding:0 32px}
+.sec{padding:80px 0}
+.sa{background:var(--w)}
+.st{font-size:32px;font-weight:700;color:var(--p);margin-bottom:12px}
+.ss{font-size:17px;color:var(--ts);max-width:600px;margin:0 auto 50px;text-align:center}
+.tc{text-align:center}
+header{position:fixed;top:0;left:0;right:0;height:68px;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--b);z-index:1000;display:flex;align-items:center}
+.ni{display:flex;justify-content:space-between;align-items:center;width:100%}
+.logo{height:38px;display:flex;align-items:center;margin-right:20px}
+.logo img{height:100%;width:auto}
+.nl{display:flex;gap:24px;margin-left:auto;margin-right:24px;list-style:none}
+.nl a{font-size:15px;font-weight:500;color:var(--t);position:relative;padding:4px 0;transition:color 0.2s}
+.nl a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--a);transition:width 0.2s}
+.nl a:hover::after,.nl a.active::after{width:100%}
+.nl a:hover,.nl a.active{color:var(--a)}
+.lang-selector{position:relative;display:flex;align-items:center}
+.lang-btn{background:#fff;border:1px solid var(--b);padding:8px 14px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;color:var(--t);display:flex;align-items:center;gap:6px;transition:all 0.2s;z-index:2001;position:relative}
+.lang-btn:hover{border-color:var(--a);color:var(--a)} .lang-dropdown{position:absolute;top:100%;right:0;background:var(--w);border:1px solid var(--b);border-radius:8px;box-shadow:var(--lg);min-width:220px;margin-top:8px;display:none;z-index:3000;overflow:hidden;pointer-events:none} .lang-dropdown.open{display:block;pointer-events:auto} .lang-item{display:flex;align-items:center;gap:10px;padding:10px 16px;cursor:pointer;transition:all 0.2s;border-bottom:1px solid var(--b)} .lang-item:last-child{border-bottom:none} .lang-item:hover{background:var(--bg);color:var(--a)} .lang-item.active{background:#dbeafe;color:var(--a);font-weight:600} .lang-flag{font-size:18px;width:24px;text-align:center} .lang-name{flex:1;font-size:13px;font-weight:500} .lang-native{font-size:11px;color:var(--ts);margin-left:auto}
+.lang-btn::after{content:'  ';font-size:10px;transition:transform 0.2s}
+.lang-btn.open::after{transform:rotate(180deg)}
+.lang-dropdown{position:absolute;top:100%;right:0;background:var(--w);border:1px solid var(--b);border-radius:8px;box-shadow:var(--lg);min-width:200px;margin-top:8px;display:none;z-index:2000;overflow:hidden}
+.lang-dropdown.open{display:block}
+.lang-item{display:flex;align-items:center;gap:10px;padding:12px 16px;cursor:pointer;transition:all 0.2s;border-bottom:1px solid var(--b)}
+.lang-item:last-child{border-bottom:none}
+.lang-item:hover{background:var(--bg);color:var(--a)}
+.lang-item.active{background:#dbeafe;color:var(--a);font-weight:600}
+.lang-flag{font-size:18px;width:24px;text-align:center}
+.lang-name{flex:1;font-size:13px}
+.lang-native{font-size:12px;color:var(--ts)}
+.mt{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.mt span{display:block;width:22px;height:2px;background:var(--t);margin:5px 0;transition:all 0.3s;border-radius:2px}
+.mm{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--b);padding:16px 24px;z-index:999}
+.mm.open{display:block}
+.mm a{display:block;padding:12px 0;font-size:16px;font-weight:500;color:var(--t);border-bottom:1px solid var(--b)}
+.mm a:last-child{border-bottom:none}
+.mm a:hover{color:var(--a)}
+.ml{display:flex;gap:8px;margin-top:12px}
+.ml span{padding:6px 14px;border-radius:6px;font-size:13px;font-weight:600;background:var(--bg);cursor:pointer}
+.ml span.active{background:var(--a);color:#fff}
+.hero{padding:140px 0 80px;background:linear-gradient(160deg,#fff 40%,#eff6ff 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(37,99,235,0.06) 0%,transparent 70%);border-radius:50%}
+.hi{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hb{display:inline-flex;align-items:center;gap:6px;background:#dbeafe;color:var(--a);padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:20px}
+.hero h1{font-size:46px;font-weight:800;color:var(--p);line-height:1.15;letter-spacing:-0.02em;margin-bottom:14px}
+.hero p{font-size:18px;color:var(--ts);margin-bottom:30px;line-height:1.6}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-p{background:var(--a);color:#fff;padding:13px 30px;border-radius:var(--r);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-p:hover{background:var(--ah);transform:translateY(-2px);box-shadow:var(--md)}
+.btn-s{background:var(--w);color:var(--t);padding:13px 30px;border-radius:var(--r);font-weight:600;font-size:15px;border:1px solid var(--b);display:inline-flex;align-items:center;gap:8px;transition:all 0.2s}
+.btn-s:hover{border-color:var(--a);color:var(--a)}
+.hst{display:flex;gap:30px;margin-top:36px}
+.hs strong{display:block;font-size:28px;font-weight:800;color:var(--p)}
+.hs span{font-size:13px;color:var(--ts)}
+.hi2{border-radius:var(--rl);overflow:hidden;box-shadow:var(--lg);position:relative}
+.hi2 img{width:100%;height:380px;object-fit:cover}
+.hio{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(15,23,42,0.7));padding:20px}
+.hio p{color:#fff;font-size:14px;font-weight:500}
+.trust-bar{background:var(--w);padding:20px 0;border-top:1px solid var(--b);border-bottom:1px solid var(--b)}
+.trust-inner{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ts);font-weight:500}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.at p{font-size:16px;color:var(--ts);margin-bottom:16px;line-height:1.8}
+.af{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.afe{display:flex;gap:10px;align-items:flex-start}
+.afi{width:36px;height:36px;background:#dbeafe;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;font-weight:700;color:var(--a)}
+.afe h4{font-size:14px;font-weight:600;color:var(--p);margin-bottom:2px}
+.afe p{font-size:13px;color:var(--ts)}
+.aimg img{border-radius:var(--rl);box-shadow:var(--lg);width:100%}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.pc{background:var(--w);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;transition:all 0.3s}
+.pc:hover{transform:translateY(-6px);box-shadow:var(--lg);border-color:transparent}
+.pi{width:100%;height:200px;overflow:hidden;background:#f1f5f9;display:flex;align-items:center;justify-content:center}
+.pi img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
+.pc:hover .pi img{transform:scale(1.05)}
+.pn{padding:20px}
+.pn h3{font-size:16px;font-weight:700;color:var(--p);margin-bottom:6px}
+.pn p{font-size:13px;color:var(--ts);margin-bottom:14px;line-height:1.5}
+.pt{display:flex;gap:6px;flex-wrap:wrap}
+.pt2{font-size:11px;background:#f1f5f9;color:var(--ts);padding:3px 8px;border-radius:4px;font-weight:500}
+.pcta{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:600;color:var(--a);margin-top:10px;transition:gap 0.2s}
+.pcta:hover{gap:8px}
+.wg{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.wc{background:var(--w);border:1px solid var(--b);border-radius:var(--r);padding:30px;text-align:center;transition:all 0.3s}
+.wc:hover{transform:translateY(-4px);box-shadow:var(--md)}
+.wi{width:56px;height:56px;background:linear-gradient(135deg,#dbeafe,#eff6ff);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:var(--a);margin:0 auto 16px}
+.wc h3{font-size:17px;font-weight:700;color:var(--p);margin-bottom:10px}
+.wc p{font-size:14px;color:var(--ts);line-height:1.6}
+.bg{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.bc{background:var(--w);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;transition:all 0.3s}
+.bc:hover{transform:translateY(-4px);box-shadow:var(--md)}
+.bi{width:100%;height:180px;overflow:hidden;background:#f1f5f9}
+.bi img{width:100%;height:100%;object-fit:cover}
+.bn{padding:20px}
+.bm{font-size:12px;color:var(--ts);margin-bottom:8px}
+.bn h3{font-size:16px;font-weight:700;color:var(--p);margin-bottom:8px;line-height:1.4}
+.bn h3:hover{color:var(--a);cursor:pointer}
+.bn p{font-size:13px;color:var(--ts);line-height:1.6}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tc2{background:var(--w);border:1px solid var(--b);border-radius:var(--r);padding:28px}
+.ts{color:#f59e0b;font-size:16px;margin-bottom:12px;letter-spacing:2px}
+.tt{font-size:14px;color:var(--ts);line-height:1.7;margin-bottom:16px;font-style:italic}
+.ta{display:flex;align-items:center;gap:12px}
+.tav{width:40px;height:40px;border-radius:50%;background:var(--a);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0}
+.tn{font-size:14px;font-weight:600;color:var(--p)}
+.tr{font-size:12px;color:var(--ts)}
+.faq-l{max-width:760px;margin:0 auto}
+.faq-i{border:1px solid var(--b);border-radius:var(--r);margin-bottom:12px;overflow:hidden;background:var(--w)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-weight:600;font-size:15px;color:var(--p);background:var(--w);transition:background 0.2s}
+.faq-q:hover{background:#f8fafc}
+.faq-q .fi{width:24px;height:24px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;transition:transform 0.3s;font-size:16px;flex-shrink:0}
+.faq-i.open .fi{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.faq-i.open .faq-a{max-height:400px}
+.faq-a p{padding:0 22px 18px;font-size:14px;color:var(--ts);line-height:1.7}
+.cta{background:linear-gradient(135deg,var(--p) 0%,var(--pl) 100%);padding:80px 0;text-align:center;color:#fff}
+.cta h2{font-size:34px;font-weight:700;margin-bottom:14px;color:#fff}
+.cta p{font-size:17px;opacity:0.8;margin-bottom:30px}
+.ctab{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.cta .btn-p{background:#fff;color:var(--p)}
+.cta .btn-p:hover{background:#f1f5f9}
+.cta .btn-s{border-color:rgba(255,255,255,0.4);color:#fff}
+.cta .btn-s:hover{border-color:#fff}
+.cw{background:var(--p);border-radius:var(--rl);padding:60px;color:#fff}
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+.ci h4{font-size:13px;font-weight:600;opacity:0.7;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em}
+.ci p,.ci a{font-size:15px;color:#fff;margin:4px 0;display:block}
+.ci a:hover{opacity:0.85;text-decoration:underline}
+.mg{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.mb{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:6px;font-size:12px;font-weight:500;color:#fff;transition:opacity 0.2s}
+.mb:hover{opacity:0.85}
+.mb svg{width:14px;height:14px;fill:currentColor}
+.wi2{width:36px;height:36px;margin:0 auto 10px;display:block}
+footer{background:#0a0f1e;color:#94a3b8;padding:50px 0 24px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.fb p{font-size:14px;color:#64748b;margin-top:10px;line-height:1.6}
+.fs{display:flex;gap:10px;margin-top:16px}
+.fs a{width:36px;height:36px;border-radius:8px;background:#1e293b;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all 0.2s;color:#94a3b8}
+.fs a:hover{background:var(--a)}
+.fc h4{font-size:14px;font-weight:600;color:#e2e8f0;margin-bottom:16px}
+.fc a{display:block;font-size:14px;color:#64748b;margin-bottom:8px;transition:color 0.2s}
+.fc a:hover{color:#fff}
+.fb2{border-top:1px solid #1e293b;padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fb2 p{font-size:13px;color:#475569}
+.btt{position:fixed;bottom:30px;right:30px;width:44px;height:44px;border-radius:50%;background:var(--a);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transition:all 0.3s;box-shadow:var(--md);border:none;z-index:998}
+.btt.show{opacity:1;visibility:visible}
+.btt:hover{background:var(--ah);transform:translateY(-3px)}
+.fu{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fu.visible{opacity:1;transform:none}
+@media(max-width:900px){.hi{grid-template-columns:1fr;text-align:center}.hero h1{font-size:34px}.hbtns,.hst{justify-content:center}.hi2{display:none}.ag,.pg,.wg,.bg,.tg{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}.cw{padding:30px 20px}.cg{grid-template-columns:1fr 1fr;gap:24px}.af{grid-template-columns:1fr}}
+@media(max-width:768px){.nl,.lb{display:none}.mt{display:block}.sec{padding:50px 0}.st{font-size:26px}.hero{padding:110px 0 60px}.hero h1{font-size:28px}.fg{grid-template-columns:1fr}.fb2{justify-content:center;text-align:center}.cg{grid-template-columns:1fr}}
+</style>
+<script>window.toggleLangDropdown=function(){var dd=document.getElementById('lang-dropdown');var btn=document.querySelector('.lang-btn');if(dd)dd.classList.toggle('open');if(btn)btn.classList.toggle('open');};</script>
 </head>
 <body>
-
-    <header>
-        <div class="container">
-            <div class="nav-inner">
-                <a href="#" class="logo">
-                    <img src="./logo.png" alt="CHUGAO Logo">
-                </a>
-                <div style="display:flex; align-items:center;">
-                    <ul class="nav-links">
-                        <li><a href="#home" data-i18n="nav_home">Home</a></li>
-                        <li><a href="#about" data-i18n="nav_about">About</a></li>
-                        <li><a href="#products" data-i18n="nav_products">Products</a></li>
-                        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-                    </ul>
-                    <div class="lang-bar">
-                        <span onclick="setLang('en')" id="lang-en" class="active">EN</span>
-                        <span onclick="setLang('zh')" id="lang-zh">中文</span>
-                        <span onclick="setLang('es')" id="lang-es">ES</span>
-                        <span onclick="setLang('fr')" id="lang-fr">FR</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div id="home" class="hero">
-        <div class="container">
-            <h1 data-i18n="hero_title">One-Stop Supplier of Full-Series LED Switching Power Supplies</h1>
-            <p data-i18n="hero_sub">Zhongshan Chugao Electronic Technology Co., Ltd.</p>
-            <a href="#products" class="btn" data-i18n="btn_products">View Products</a>
-        </div>
-    </div>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title" data-i18n="about_title">About Us</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p data-i18n="about_p1">Zhongshan Chugao Electronic Technology Co., Ltd. is a high-tech enterprise specializing in the R&D, production, and sales of LED switching power supplies. We are committed to providing efficient, stable, and energy-saving power solutions for global customers.</p>
-                    <p data-i18n="about_p2">With years of industry experience, Chugao has established a comprehensive product system covering adapters, indoor power supplies, waterproof power supplies, and rainproof power supplies.</p>
-                    <p data-i18n="about_p3">Adhering to "Quality First, Customer Priority", we strictly control product quality to provide the best service.</p>
-                </div>
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Factory">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="products" class="products">
-        <div class="container">
-            <h2 class="section-title" data-i18n="prod_title">Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Adapter">
-                    <h3 data-i18n="p1_name">Adapter Series</h3>
-                    <p data-i18n="p1_desc">High efficiency, low loss. Safe and compatible.</p>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1565514020176-8c2a28e9e574?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Indoor">
-                    <h3 data-i18n="p2_name">Indoor Power</h3>
-                    <p data-i18n="p2_desc">Compact size, excellent heat dissipation.</p>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Waterproof">
-                    <h3 data-i18n="p3_name">Waterproof</h3>
-                    <p data-i18n="p3_desc">IP67/IP68 rating. Dust and water resistant.</p>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Rainproof">
-                    <h3 data-i18n="p4_name">Rainproof</h3>
-                    <p data-i18n="p4_desc">Robust metal casing. Resistant to corrosion.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <h2 class="section-title" style="color:white; margin-bottom:40px;" data-i18n="contact_title">Contact Us</h2>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <h4 data-i18n="c_addr_title">Address</h4>
-                        <p>No. 96 Caoxing West Road, Guzhen, Zhongshan</p>
-                        <div class="map-group">
-                            <a href="https://uri.amap.com/search?query=中山市古镇镇曹兴西路96号" target="_blank" class="map-btn gaode">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                                <span data-i18n="btn_gaode">Gaode</span>
-                            </a>
-                            <a href="https://www.google.com/maps/search/?api=1&query=No.96+Caoxing+West+Road+Guzhen+Zhongshan" target="_blank" class="map-btn google">
-                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
-                                <span data-i18n="btn_google">Maps</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <h4 data-i18n="c_phone_title">Phone</h4>
-                        <a href="tel:+86076089869758">+86 0760-89869758</a>
-                        <a href="tel:+8618933373873">+86 18933373873</a>
-                    </div>
-                    <div class="contact-item">
-                        <img src="./whatsapp.png" alt="WhatsApp" class="wa-icon">
-                        <h4 data-i18n="c_whatsapp_title">WhatsApp</h4>
-                        <a href="https://wa.me/8618933373873" target="_blank" data-i18n="c_whatsapp_action">Chat Now</a>
-                    </div>
-                    <div class="contact-item">
-                        <h4 data-i18n="c_email_title">Email</h4>
-                        <a href="mailto:info@chugaopower.com">info@chugaopower.com</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Zhongshan Chugao Electronic Technology Co., Ltd. All Rights Reserved.</p>
-            <p data-i18n="footer_slogan">One-Stop Supplier of Full-Series LED Switching Power Supplies</p>
-        </div>
-    </footer>
-
-    <script>
-        const texts = {
-            en: {
-                nav_home: "Home", nav_about: "About", nav_products: "Products", nav_contact: "Contact",
-                hero_title: "One-Stop Supplier of Full-Series LED Switching Power Supplies",
-                hero_sub: "Zhongshan Chugao Electronic Technology Co., Ltd.",
-                btn_products: "View Products",
-                about_title: "About Us",
-                about_p1: "Zhongshan Chugao Electronic Technology Co., Ltd. is a high-tech enterprise specializing in the R&D, production, and sales of LED switching power supplies. We are committed to providing efficient, stable, and energy-saving power solutions for global customers.",
-                about_p2: "With years of industry experience, Chugao has established a comprehensive product system covering adapters, indoor power supplies, waterproof power supplies, and rainproof power supplies.",
-                about_p3: "Adhering to \"Quality First, Customer Priority\", we strictly control product quality to provide the best service.",
-                prod_title: "Products",
-                p1_name: "Adapter Series", p1_desc: "High efficiency, low loss. Safe and compatible.",
-                p2_name: "Indoor Power", p2_desc: "Compact size, excellent heat dissipation.",
-                p3_name: "Waterproof", p3_desc: "IP67/IP68 rating. Dust and water resistant.",
-                p4_name: "Rainproof", p4_desc: "Robust metal casing. Resistant to corrosion.",
-                contact_title: "Contact Us", c_addr_title: "Address", c_phone_title: "Phone", c_whatsapp_title: "WhatsApp", c_whatsapp_action: "Chat Now", c_email_title: "Email",
-                btn_gaode: "Gaode", btn_google: "Maps",
-                footer_slogan: "One-Stop Supplier of Full-Series LED Switching Power Supplies"
-            },
-            zh: {
-                nav_home: "首页", nav_about: "关于我们", nav_products: "产品中心", nav_contact: "联系我们",
-                hero_title: "一站式全系列开关电源供应商",
-                hero_sub: "中山市楚高电子科技有限公司",
-                btn_products: "查看产品",
-                about_title: "关于我们",
-                about_p1: "中山市楚高电子科技有限公司是一家专注于 LED 开关电源研发、生产与销售的高新技术企业。我们致力于为全球客户提供高效、稳定、节能的电源解决方案。",
-                about_p2: "凭借多年的行业经验，楚高电子已建立起完善的产品体系，涵盖适配器、室内电源、防水电源、防雨电源等系列。",
-                about_p3: "秉承“品质至上，客户第一”的理念，我们严格把控质量，提供优质服务。",
-                prod_title: "产品中心",
-                p1_name: "适配器系列", p1_desc: "高效低耗，安全稳定，兼容性强。",
-                p2_name: "室内电源", p2_desc: "体积小巧，散热优良，静音运行。",
-                p3_name: "防水电源", p3_desc: "IP67/IP68 防护，防尘防水。",
-                p4_name: "防雨电源", p4_desc: "金属外壳，耐腐蚀，适应恶劣环境。",
-                contact_title: "联系我们", c_addr_title: "公司地址", c_phone_title: "联系电话", c_whatsapp_title: "WhatsApp", c_whatsapp_action: "点击聊天", c_email_title: "电子邮箱",
-                btn_gaode: "高德", btn_google: "谷歌",
-                footer_slogan: "一站式全系列开关电源供应商"
-            },
-            es: {
-                nav_home: "Inicio", nav_about: "Nosotros", nav_products: "Productos", nav_contact: "Contacto",
-                hero_title: "Proveedor de fuentes de alimentación LED",
-                hero_sub: "Zhongshan Chugao Electronic Technology Co., Ltd.",
-                btn_products: "Ver Productos",
-                about_title: "Sobre Nosotros",
-                about_p1: "Especializados en I+D y producción de fuentes de alimentación LED. Soluciones eficientes y estables.",
-                about_p2: "Sistema completo: adaptadores, interiores, impermeables y a prueba de lluvia.",
-                about_p3: "Calidad primero, cliente prioritario.",
-                prod_title: "Productos",
-                p1_name: "Adaptadores", p1_desc: "Alta eficiencia, bajo consumo.",
-                p2_name: "Interior", p2_desc: "Compacto, buena disipación.",
-                p3_name: "Impermeable", p3_desc: "IP67/IP68, resistente.",
-                p4_name: "Anti-lluvia", p4_desc: "Carcasa metálica robusta.",
-                contact_title: "Contacto", c_addr_title: "Dirección", c_phone_title: "Teléfono", c_whatsapp_title: "WhatsApp", c_whatsapp_action: "Chatear", c_email_title: "Correo",
-                btn_gaode: "Gaode", btn_google: "Mapas",
-                footer_slogan: "Proveedor de fuentes de alimentación LED"
-            },
-            fr: {
-                nav_home: "Accueil", nav_about: "À propos", nav_products: "Produits", nav_contact: "Contact",
-                hero_title: "Fournisseur d'alimentations LED",
-                hero_sub: "Zhongshan Chugao Electronic Technology Co., Ltd.",
-                btn_products: "Voir les produits",
-                about_title: "Qui sommes-nous",
-                about_p1: "Spécialisé dans la R&D et la production d'alimentations LED. Solutions efficaces et stables.",
-                about_p2: "Gamme complète : adaptateurs, intérieurs, étanches et anti-pluie.",
-                about_p3: "Qualité d'abord, client prioritaire.",
-                prod_title: "Produits",
-                p1_name: "Adaptateurs", p1_desc: "Haute efficacité, faible perte.",
-                p2_name: "Intérieur", p2_desc: "Compact, bonne dissipation.",
-                p3_name: "Étanche", p3_desc: "IP67/IP68, résistant.",
-                p4_name: "Anti-pluie", p4_desc: "Boîtier métallique robuste.",
-                contact_title: "Contact", c_addr_title: "Adresse", c_phone_title: "Téléphone", c_whatsapp_title: "WhatsApp", c_whatsapp_action: "Discuter", c_email_title: "Email",
-                btn_gaode: "Gaode", btn_google: "Plans",
-                footer_slogan: "Fournisseur d'alimentations LED"
-            }
-        };
-
-        function setLang(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (texts[lang][key]) el.textContent = texts[lang][key];
-            });
-            document.querySelectorAll('.lang-bar span').forEach(s => s.classList.remove('active'));
-            document.getElementById('lang-' + lang).classList.add('active');
-            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
-        }
-        setLang('en');
-    </script>
-</body>
-</html>
+<header><div class="c"><div class="ni"><a href="#home" class="logo"><img src="./logo.png" alt="CHUGAO Power Logo" loading="lazy"></a><nav><ul class="nl"><li><a href="#home" class="active" data-i18n="n_h">Home</a></li><li><a href="#about" data-i18n="n_a">About</a></li><li><a href="#products" data-i18n="n_p">Products</a></li><li><a href="#why" data-i18n="n_w">Why Us</a></li><li><a href="#blog" data-i18n="n_b">News</a></li><li><a href="#faq" data-i18n="n_f">FAQ</a></li><li><a href="#contact" data-i18n="n_c">Contact</a></li></ul></nav><div style="display:flex;align-items:center"><div class="lang-selector"><button class="lang-btn" onclick="toggleLangDropdown()"><span id="current-lang">EN</span><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3l4 4 4-4H1z"/></svg></button><div class="lang-dropdown" id="lang-dropdown"><div class="lang-item active" onclick="setLang('en')"><span class="lang-flag">🇺🇸</span><span class="lang-name">English</span><span class="lang-native">英语</span></div><div class="lang-item" onclick="setLang('zh')"><span class="lang-flag">🇨🇳</span><span class="lang-name">中文</span><span class="lang-native">简体中 ?/span></div><div class="lang-item" onclick="setLang('es')"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span><span class="lang-native">西班牙语</span></div><div class="lang-item" onclick="setLang('fr')"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span><span class="lang-native">法语</span></div><div class="lang-item" onclick="setLang('de')"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span><span class="lang-native">德语</span></div><div class="lang-item" onclick="setLang('pt')"><span class="lang-flag">🇧🇷</span><span class="lang-name">Português</span><span class="lang-native">葡萄牙语</span></div><div class="lang-item" onclick="setLang('ru')"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span><span class="lang-native">俄语</span></div><div class="lang-item" onclick="setLang('ja')"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本 ?/span><span class="lang-native">日语</span></div><div class="lang-item" onclick="setLang('ko')"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국 ?/span><span class="lang-native">韩语</span></div><div class="lang-item" onclick="setLang('ar')"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span><span class="lang-native">阿拉伯语</span></div><div class="lang-item" onclick="setLang('it')"><span class="lang-flag">🇮🇹</span><span class="lang-name">Italiano</span><span class="lang-native">意大利语</span></div></div></div><button class="mt" id="mobileToggle" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button></div></div></div></header>
+<div class="mm" id="mobileMenu"><a href="#home" onclick="closeMobileMenu()" data-i18n="n_h">Home</a><a href="#about" onclick="closeMobileMenu()" data-i18n="n_a">About</a><a href="#products" onclick="closeMobileMenu()" data-i18n="n_p">Products</a><a href="#why" onclick="closeMobileMenu()" data-i18n="n_w">Why Us</a><a href="#blog" onclick="closeMobileMenu()" data-i18n="n_b">News</a><a href="#faq" onclick="closeMobileMenu()" data-i18n="n_f">FAQ</a><a href="#contact" onclick="closeMobileMenu()" data-i18n="n_c">Contact</a><div class="ml"><span onclick="setLang('en')" id="ml-en" class="active">EN</span><span onclick="setLang('zh')" id="ml-zh">中文</span><span onclick="setLang('es')" id="ml-es">ES</span><span onclick="setLang('fr')" id="ml-fr">FR</span><span onclick="setLang('de')" id="ml-de">DE</span><span onclick="setLang('pt')" id="ml-pt">PT</span><span onclick="setLang('ru')" id="ml-ru">RU</span><span onclick="setLang('ja')" id="ml-ja">JP</span><span onclick="setLang('ko')" id="ml-ko">KR</span><span onclick="setLang('ar')" id="ml-ar">AR</span><span onclick="setLang('it')" id="ml-it">IT</span></div></div>
+<section id="home" class="hero"><div class="c"><div class="hi"><div><div class="hb" data-i18n="h_badge">Trusted by 500+ Global Partners</div><h1 data-i18n="h_title">One-Stop LED Power Supply Manufacturer</h1><p data-i18n="h_sub">CHUGAO - Professional LED switching power supply factory from Zhongshan, China. Full-series products with CE/UL certifications. Direct-from-factory pricing for global B2B buyers.</p><div class="hbtns"><a href="#products" class="btn-p" data-i18n="h_btn_p">View Products</a><a href="#contact" class="btn-s" data-i18n="h_btn_q">Get a Free Quote</a></div><div class="hst"><div class="hs"><strong data-i18n="s_y">10+</strong><span data-i18n="s_y_l">Years Experience</span></div><div class="hs"><strong data-i18n="s_c">50+</strong><span data-i18n="s_c_l">Countries Served</span></div><div class="hs"><strong data-i18n="s_m">200+</strong><span data-i18n="s_m_l">Product Models</span></div></div></div><div class="hi2"><img loading="lazy" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="CHUGAO Factory" loading="lazy"><div class="hio"><p data-i18n="h_img_cap">CHUGAO - LED Power Supply Factory in Zhongshan, China</p></div></div></div></div></section>
+<div class="trust-bar"><div class="c"><div class="trust-inner"><div class="trust-item" data-i18n="t_ce">CE Certified</div><div class="trust-item" data-i18n="t_ul">UL Listed</div><div class="trust-item" data-i18n="t_rohs">RoHS Compliant</div><div class="trust-item" data-i18n="t_iso">ISO 9001 Factory</div><div class="trust-item" data-i18n="t_moq">Low MOQ Available</div><div class="trust-item" data-i18n="t_ship">Global Shipping</div></div></div></div>
+<section id="about" class="sec sa"><div class="c"><div class="ag"><div class="at"><h2 class="st" data-i18n="a_title">About CHUGAO</h2><p data-i18n="a_p1">Zhongshan Chugao Electronic Technology Co., Ltd. is a high-tech enterprise specializing in R&D, production, and sales of LED switching power supplies. Located in Guzhen - the world-renowned lighting capital of China - we deliver efficient, stable, and energy-saving power solutions to global customers.</p><p data-i18n="a_p2">With over 10 years of experience, CHUGAO has built a comprehensive product line covering adapters, indoor power supplies, waterproof power supplies (IP67/IP68), and rainproof power supplies. Products are exported to 50+ countries and widely used in commercial lighting, industrial lighting, and outdoor signage.</p><p data-i18n="a_p3">Adhering to "Quality First, Customer Priority", every product undergoes rigorous testing before delivery. We provide OEM/ODM services for global brands.</p><div class="af"><div class="afe"><div class="afi">F</div><div><h4 data-i18n="f_fac">Own Factory</h4><p data-i18n="f_fac_d">10,000m2 production base</p></div></div><div class="afe"><div class="afi">Q</div><div><h4 data-i18n="f_qc">Quality Control</h4><p data-i18n="f_qc_d">100% aging test before ship</p></div></div><div class="afe"><div class="afi">L</div><div><h4 data-i18n="f_log">Fast Logistics</h4><p data-i18n="f_log_d">7-15 days to global ports</p></div></div><div class="afe"><div class="afi">T</div><div><h4 data-i18n="f_sup">Technical Support</h4><p data-i18n="f_sup_d">24h response guaranteed</p></div></div></div></div><div class="aimg"><img loading="lazy" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="CHUGAO Factory"></div></div></div></section>
+<section id="products" class="sec"><div class="c"><h2 class="st tc" data-i18n="p_title">Our Products</h2><p class="ss" data-i18n="p_sub">Full-series LED power supply solutions - from compact adapters to heavy-duty waterproof units.</p><div class="pg"><div class="pc"><div class="pi"><img loading="lazy" src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&q=80" alt="LED Adapter"></div><div class="pn"><h3 data-i18n="p1_n">Adapter Series</h3><p data-i18n="p1_d">High efficiency, compact design. Universal AC input. Safe and stable output.</p><div class="pt"><span class="pt2">5W-200W</span><span class="pt2">CE/UL</span><span class="pt2">3 Year Warranty</span></div><a href="#contact" class="pcta" data-i18n="p_cta">Inquire Now</a></div></div><div class="pc"><div class="pi"><img loading="lazy" src="https://images.unsplash.com/photo-1565514020176-8c2a28e9e574?w=400&q=80" alt="Indoor Power"></div><div class="pn"><h3 data-i18n="p2_n">Indoor Power Supply</h3><p data-i18n="p2_d">Compact size, excellent heat dissipation. Silent operation. Wide input range.</p><div class="pt"><span class="pt2">50W-400W</span><span class="pt2">IP20</span><span class="pt2">PFC</span></div><a href="#contact" class="pcta" data-i18n="p_cta">Inquire Now</a></div></div><div class="pc"><div class="pi"><img loading="lazy" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&q=80" alt="Waterproof"></div><div class="pn"><h3 data-i18n="p3_n">Waterproof Power (IP67)</h3><p data-i18n="p3_d">IP67/IP68 rating. Fully sealed. UV resistant. Ideal for outdoor LED strips.</p><div class="pt"><span class="pt2">IP67/IP68</span><span class="pt2">10W-400W</span><span class="pt2">Salt Spray Tested</span></div><a href="#contact" class="pcta" data-i18n="p_cta">Inquire Now</a></div></div><div class="pc"><div class="pi"><img loading="lazy" src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=400&q=80" alt="Rainproof"></div><div class="pn"><h3 data-i18n="p4_n">Rainproof Power (IP65)</h3><p data-i18n="p4_d">Robust metal casing. Corrosion resistant. Perfect for humid environments.</p><div class="pt"><span class="pt2">IP65</span><span class="pt2">100W-600W</span><span class="pt2">Wide Input</span></div><a href="#contact" class="pcta" data-i18n="p_cta">Inquire Now</a></div></div></div></div></section>
+<section id="why" class="sec sa"><div class="c"><h2 class="st tc" data-i18n="w_title">Why Choose CHUGAO</h2><p class="ss" data-i18n="w_sub">What sets us apart in the competitive LED power supply market.</p><div class="wg"><div class="wc"><div class="wi">F</div><h3 data-i18n="w1_t">Factory Direct Pricing</h3><p data-i18n="w1_d">As a manufacturer, we eliminate middlemen - giving you competitive pricing without compromising quality. Bulk orders get even better rates.</p></div><div class="wc"><div class="wi">C</div><h3 data-i18n="w2_t">Certified Quality</h3><p data-i18n="w2_d">All products pass CE, UL, and RoHS certifications. Every unit undergoes 100% aging testing and full inspection before shipment.</p></div><div class="wc"><div class="wi">R</div><h3 data-i18n="w3_t">R&D Capability</h3><p data-i18n="w3_d">Dedicated R&D team with 10+ engineers. We offer custom OEM/ODM solutions tailored to your specific project requirements.</p></div><div class="wc"><div class="wi">D</div><h3 data-i18n="w4_t">Fast Delivery</h3><p data-i18n="w4_d">Standard products ship within 7-15 working days. Sample orders welcome with fast turnaround.</p></div><div class="wc"><div class="wi">S</div><h3 data-i18n="w5_t">Stable Supply Chain</h3><p data-i18n="w5_d">In-house production ensures consistent quality and supply. No dependency on third-party factories.</p></div><div class="wc"><div class="wi">P</div><h3 data-i18n="w6_t">Professional Support</h3><p data-i18n="w6_d">Multilingual sales team (English, Spanish, French, Chinese). 24-hour response time for all inquiries.</p></div></div></div></section>
+<section id="blog" class="sec"><div class="c"><h2 class="st tc" data-i18n="b_title">Industry News & Insights</h2><p class="ss" data-i18n="b_sub">Stay updated with the latest trends in LED lighting and power supply technology.</p><div class="bg"><div class="bc"><div class="bi"><img loading="lazy" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&q=80" alt="LED Tech"></div><div class="bn"><div class="bm">LED Technology / Mar 2026</div><h3 data-i18n="b1_t">How to Choose the Right LED Power Supply for Your Project</h3><p data-i18n="b1_d">A comprehensive guide covering wattage calculation, IP rating selection, and installation tips for LED strip projects.</p></div></div><div class="bc"><div class="bi"><img loading="lazy" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="IP Rating"></div><div class="bn"><div class="bm">Technical Guide / Feb 2026</div><h3 data-i18n="b2_t">Understanding IP Ratings: IP20 vs IP65 vs IP67 vs IP68</h3><p data-i18n="b2_d">Learn the difference between waterproof ratings and how to select the right level of protection for your installation environment.</p></div></div><div class="bc"><div class="bi"><img loading="lazy" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80" alt="Lighting Trends"></div><div class="bn"><div class="bm">Industry Trends / Jan 2026</div><h3 data-i18n="b3_t">2026 LED Lighting Market Report: Growth Drivers and Opportunities</h3><p data-i18n="b3_d">An analysis of the global LED lighting market, emerging applications, and how manufacturers can capture new opportunities.</p></div></div></div></div></section>
+<section id="testimonials" class="sec sa"><div class="c"><h2 class="st tc" data-i18n="t_title">What Our Clients Say</h2><p class="ss" data-i18n="t_sub">Trusted by B2B partners and lighting distributors around the world.</p><div class="tg"><div class="tc2"><div class="ts">★★★★ ?/div><p class="tt" data-i18n="t1_d">"We have been sourcing LED power supplies from CHUGAO for 3 years. Their waterproof IP67 units are consistently reliable. The technical support team responds quickly and helps us select the right products every time."</p><div class="ta"><div class="tav">M</div><div><div class="tn" data-i18n="t1_n">Marco R.</div><div class="tr" data-i18n="t1_r">Lighting Distributor, Italy</div></div></div></div><div class="tc2"><div class="ts">★★★★ ?/div><p class="tt" data-i18n="t2_d">"CHUGAO's factory direct pricing saves us significant costs compared to our previous supplier. Quality is excellent and deliveries are always on time. Highly recommended for bulk orders."</p><div class="ta"><div class="tav">S</div><div><div class="tn" data-i18n="t2_n">Sarah K.</div><div class="tr" data-i18n="t2_r">LED Project Contractor, USA</div></div></div></div><div class="tc2"><div class="ts">★★★★ ?/div><p class="tt" data-i18n="t3_d">"The OEM service is outstanding. CHUGAO helped us develop a custom power supply for our product line. Their R&D team is professional and the final product exceeded our expectations."</p><div class="ta"><div class="tav">J</div><div><div class="tn" data-i18n="t3_n">Jean-Pierre L.</div><div class="tr" data-i18n="t3_r">Brand Owner, France</div></div></div></div></div></div></section>
+<section id="faq" class="sec"><div class="c"><h2 class="st tc" data-i18n="faq_title">Frequently Asked Questions</h2><p class="ss" data-i18n="faq_sub">Quick answers to common questions from global buyers.</p><div class="faq-l"><div class="faq-i"><div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq1_q">What is your minimum order quantity (MOQ)?</span><div class="fi">+</div></div><div class="faq-a"><p data-i18n="faq1_a">Our standard MOQ is 50 pieces per model. However, for first-time buyers, we offer sample orders with lower MOQ. Bulk orders of 500+ pieces qualify for discounted pricing.</p></div></div><div class="faq-i"><div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq2_q">What certifications do your products have?</span><div class="fi">+</div></div><div class="faq-a"><p data-i18n="faq2_a">All our LED power supplies are CE and RoHS certified. Most products also carry UL listing. Specific certifications vary by product model. Please contact us for the certification documents you need.</p></div></div><div class="faq-i"><div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq3_q">What is the warranty period?</span><div class="fi">+</div></div><div class="faq-a"><p data-i18n="faq3_a">We offer a 3-year warranty on all standard products. Custom OEM products have warranty terms negotiated on a per-project basis. Warranty covers manufacturing defects under normal use conditions.</p></div></div><div class="faq-i"><div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq4_q">Can you provide OEM/ODM services?</span><div class="fi">+</div></div><div class="faq-a"><p data-i18n="faq4_a">Yes, we provide full OEM/ODM services including custom branding, packaging design, and product specifications. Our R&D team works closely with clients to develop products that meet their exact requirements.</p></div></div><div class="faq-i"><div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq5_q">What are your payment terms?</span><div class="fi">+</div></div><div class="faq-a"><p data-i18n="faq5_a">For new customers, we typically accept T/T 30% deposit, 70% balance before shipment. For established partners, we offer L/C and other payment terms. We also accept PayPal and Alibaba Trade Assurance for sample orders.</p></div></div><div class="faq-i"><div class="faq-q" onclick="toggleFaq(this)"><span data-i18n="faq6_q">How long is the production lead time?</span><div class="fi">+</div></div><div class="faq-a"><p data-i18n="faq6_a">Standard products: 7-15 working days after order confirmation. Custom OEM products: 20-30 working days depending on complexity. Sample orders are typically ready within 5-7 working days.</p></div></div></div></div></section>
+<section class="cta"><div class="c"><h2 data-i18n="cta_title">Ready to Get Started?</h2><p data-i18n="cta_sub">Contact us today for a free product consultation and customized quote.</p><div class="ctab"><a href="#contact" class="btn-p" data-i18n="cta_btn_c">Contact Us Now</a><a href="https://wa.me/8618933373873" target="_blank" class="btn-s" data-i18n="cta_btn_w">Chat on WhatsApp</a></div></div></section>
+<section id="contact" class="sec"><div class="c"><div class="cw"><h2 class="st tc" style="color:#fff" data-i18n="co_title">Contact Us</h2><div class="cg"><div class="ci"><h4 data-i18n="co_addr_t">Address</h4><p>No. 96 Caoxing West Road, Guzhen, Zhongshan, Guangdong, China</p><div class="mg"><a href="https://uri.amap.com/search?query=中山市古镇镇曹兴西路96 ? target="_blank" class="mb" style="background:#2E9DFE"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Gaode</a><a href="https://www.google.com/maps/search/?api=1&query=No.96+Caoxing+West+Road+Guzhen+Zhongshan" target="_blank" class="mb" style="background:#4285F4"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>Maps</a></div></div><div class="ci"><h4 data-i18n="co_phone_t">Phone</h4><a href="tel:+86076089869758">+86 0760-89869758</a><a href="tel:+8618933373873">+86 18933373873</a></div><div class="ci"><img src="./whatsapp.png" alt="WhatsApp" class="wi2"><h4 data-i18n="co_wa_t">WhatsApp</h4><a href="https://wa.me/8618933373873" target="_blank" data-i18n="co_wa_a">Chat Now</a></div><div class="ci"><h4 data-i18n="co_email_t">Email</h4><a href="mailto:info@chugaopower.com">info@chugaopower.com</a><a href="mailto:sales@chugaopower.com">sales@chugaopower.com</a><h4 style="margin-top:16px" data-i18n="co_hours_t">Business Hours</h4><p data-i18n="co_hours_d">Mon-Sat: 8:00 - 18:00 (GMT+8)</p></div></div></div></div></section>
+<footer><div class="c"><div class="fg"><div class="fb"><a href="#home" class="logo"><img src="./logo.png" alt="CHUGAO" style="height:32px"></a><p data-i18n="f_desc">CHUGAO - Professional LED switching power supply manufacturer from Zhongshan, China. Serving global B2B buyers since 2014.</p><div class="fs"><a href="#" title="Facebook">f</a><a href="#" title="LinkedIn">in</a><a href="#" title="YouTube">yt</a></div></div><div class="fc"><h4 data-i18n="f_prod">Products</h4><a href="#products" data-i18n="f_p1">Adapter Series</a><a href="#products" data-i18n="f_p2">Indoor Power</a><a href="#products" data-i18n="f_p3">Waterproof Power</a><a href="#products" data-i18n="f_p4">Rainproof Power</a></div><div class="fc"><h4 data-i18n="f_comp">Company</h4><a href="#about" data-i18n="f_c1">About Us</a><a href="#why" data-i18n="f_c2">Why Choose Us</a><a href="#blog" data-i18n="f_c3">News</a><a href="#faq" data-i18n="f_c4">FAQ</a></div><div class="fc"><h4 data-i18n="f_supp">Support</h4><a href="#contact" data-i18n="f_s1">Contact</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">Email Us</a><a href="https://wa.me/8618933373873" target="_blank" data-i18n="f_s3">WhatsApp</a><a href="#" data-i18n="f_s4">Downloads</a></div></div><div class="fb2"><p>&copy; 2026 Zhongshan Chugao Electronic Technology Co., Ltd. All Rights Reserved.</p><p data-i18n="f_slogan">One-Stop LED Power Supply Manufacturer</p></div></div></footer>
+<button class="btt" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">^</button>
+<script>
+// 性能优化：异步加载非关键资源
+window.addEventListener('load', function() {
+  // 预加载其他页面资 ?  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.href = './logo.png';
+  document.head.appendChild(link);
+});
+// 关键 CSS 内联优化
+if ('loading' in HTMLImageElement.prototype) {
+  const images = document.querySelectorAll('img[loading="lazy"]');
+  images.forEach(function(img) {
+    if (!img.complete) {
+      img.src = img.src;
+    }
+  });
+}
+</script>
+<script>
+var texts={en:{n_h:"Home",n_a:"About",n_p:"Products",n_w:"Why Us",n_b:"News",n_f:"FAQ",n_c:"Contact",h_badge:"Trusted by 500+ Global Partners",h_title:"One-Stop LED Power Supply Manufacturer",h_sub:"CHUGAO - Professional LED switching power supply factory from Zhongshan, China. Full-series products with CE/UL certifications. Direct-from-factory pricing for global B2B buyers.",h_btn_p:"View Products",h_btn_q:"Get a Free Quote",s_y:"10+",s_y_l:"Years Experience",s_c:"50+",s_c_l:"Countries Served",s_m:"200+",s_m_l:"Product Models",h_img_cap:"CHUGAO - LED Power Supply Factory in Zhongshan, China",t_ce:"CE Certified",t_ul:"UL Listed",t_rohs:"RoHS Compliant",t_iso:"ISO 9001 Factory",t_moq:"Low MOQ Available",t_ship:"Global Shipping",a_title:"About CHUGAO",a_p1:"Zhongshan Chugao Electronic Technology Co., Ltd. is a high-tech enterprise specializing in R&D, production, and sales of LED switching power supplies. Located in Guzhen - the world-renowned lighting capital of China - we deliver efficient, stable, and energy-saving power solutions to global customers.",a_p2:"With over 10 years of experience, CHUGAO has built a comprehensive product line covering adapters, indoor power supplies, waterproof power supplies (IP67/IP68), and rainproof power supplies. Products are exported to 50+ countries and widely used in commercial lighting, industrial lighting, and outdoor signage.",a_p3:'Adhering to "Quality First, Customer Priority", every product undergoes rigorous testing before delivery. We provide OEM/ODM services for global brands.',f_fac:"Own Factory",f_fac_d:"10,000m2 production base",f_qc:"Quality Control",f_qc_d:"100% aging test before ship",f_log:"Fast Logistics",f_log_d:"7-15 days to global ports",f_sup:"Technical Support",f_sup_d:"24h response guaranteed",p_title:"Our Products",p_sub:"Full-series LED power supply solutions - from compact adapters to heavy-duty waterproof units.",p1_n:"Adapter Series",p1_d:"High efficiency, compact design. Universal AC input. Safe and stable output.",p2_n:"Indoor Power Supply",p2_d:"Compact size, excellent heat dissipation. Silent operation. Wide input range.",p3_n:"Waterproof Power (IP67)",p3_d:"IP67/IP68 rating. Fully sealed. UV resistant. Ideal for outdoor LED strips.",p4_n:"Rainproof Power (IP65)",p4_d:"Robust metal casing. Corrosion resistant. Perfect for humid environments.",p_cta:"Inquire Now",w_title:"Why Choose CHUGAO",w_sub:"What sets us apart in the competitive LED power supply market.",w1_t:"Factory Direct Pricing",w1_d:"As a manufacturer, we eliminate middlemen - giving you competitive pricing without compromising quality. Bulk orders get even better rates.",w2_t:"Certified Quality",w2_d:"All products pass CE, UL, and RoHS certifications. Every unit undergoes 100% aging testing and full inspection before shipment.",w3_t:"R&D Capability",w3_d:"Dedicated R&D team with 10+ engineers. We offer custom OEM/ODM solutions tailored to your specific project requirements.",w4_t:"Fast Delivery",w4_d:"Standard products ship within 7-15 working days. Sample orders welcome with fast turnaround.",w5_t:"Stable Supply Chain",w5_d:"In-house production ensures consistent quality and supply. No dependency on third-party factories.",w6_t:"Professional Support",w6_d:"Multilingual sales team (English, Spanish, French, Chinese). 24-hour response time for all inquiries.",b_title:"Industry News & Insights",b_sub:"Stay updated with the latest trends in LED lighting and power supply technology.",b1_t:"How to Choose the Right LED Power Supply for Your Project",b1_d:"A comprehensive guide covering wattage calculation, IP rating selection, and installation tips for LED strip projects.",b2_t:"Understanding IP Ratings: IP20 vs IP65 vs IP67 vs IP68",b2_d:"Learn the difference between waterproof ratings and how to select the right level of protection for your installation environment.",b3_t:"2026 LED Lighting Market Report: Growth Drivers and Opportunities",b3_d:"An analysis of the global LED lighting market, emerging applications, and how manufacturers can capture new opportunities.",t_title:"What Our Clients Say",t_sub:"Trusted by B2B partners and lighting distributors around the world.",t1_d:'"We have been sourcing LED power supplies from CHUGAO for 3 years. Their waterproof IP67 units are consistently reliable. The technical support team responds quickly and helps us select the right products every time."',t1_n:"Marco R.",t1_r:"Lighting Distributor, Italy",t2_d:'"CHUGAO\'s factory direct pricing saves us significant costs compared to our previous supplier. Quality is excellent and deliveries are always on time. Highly recommended for bulk orders."',t2_n:"Sarah K.",t2_r:"LED Project Contractor, USA",t3_d:'"The OEM service is outstanding. CHUGAO helped us develop a custom power supply for our product line. Their R&D team is professional and the final product exceeded our expectations."',t3_n:"Jean-Pierre L.",t3_r:"Brand Owner, France",faq_title:"Frequently Asked Questions",faq_sub:"Quick answers to common questions from global buyers.",faq1_q:"What is your minimum order quantity (MOQ)?",faq1_a:"Our standard MOQ is 50 pieces per model. However, for first-time buyers, we offer sample orders with lower MOQ. Bulk orders of 500+ pieces qualify for discounted pricing.",faq2_q:"What certifications do your products have?",faq2_a:"All our LED power supplies are CE and RoHS certified. Most products also carry UL listing. Specific certifications vary by product model. Please contact us for the certification documents you need.",faq3_q:"What is the warranty period?",faq3_a:"We offer a 3-year warranty on all standard products. Custom OEM products have warranty terms negotiated on per-project basis. Warranty covers manufacturing defects under normal use conditions.",faq4_q:"Can you provide OEM/ODM services?",faq4_a:"Yes, we provide full OEM/ODM services including custom branding, packaging design, and product specifications. Our R&D team works closely with clients to develop products that meet their exact requirements.",faq5_q:"What are your payment terms?",faq5_a:"For new customers, we typically accept T/T 30% deposit, 70% balance before shipment. For established partners, we offer L/C and other payment terms. We also accept PayPal and Alibaba Trade Assurance for sample orders.",faq6_q:"How long is the production lead time?",faq6_a:"Standard products: 7-15 working days after order confirmation. Custom OEM products: 20-30 working days depending on complexity. Sample orders are typically ready within 5-7 working days.",cta_title:"Ready to Get Started?",cta_sub:"Contact us today for a free product consultation and customized quote.",cta_btn_c:"Contact Us Now",cta_btn_w:"Chat on WhatsApp",co_title:"Contact Us",co_addr_t:"Address",co_phone_t:"Phone",co_wa_t:"WhatsApp",co_wa_a:"Chat Now",co_email_t:"Email",co_hours_t:"Business Hours",co_hours_d:"Mon-Sat: 8:00 - 18:00 (GMT+8)",f_desc:"CHUGAO - Professional LED switching power supply manufacturer from Zhongshan, China. Serving global B2B buyers since 2014.",f_prod:"Products",f_p1:"Adapter Series",f_p2:"Indoor Power",f_p3:"Waterproof Power",f_p4:"Rainproof Power",f_comp:"Company",f_c1:"About Us",f_c2:"Why Choose Us",f_c3:"News",f_c4:"FAQ",f_supp:"Support",f_s1:"Contact",f_s2:"Email Us",f_s3:"WhatsApp",f_s4:"Downloads",f_slogan:"One-Stop LED Power Supply Manufacturer"},zh:{n_h:"首页",n_a:"关于我们",n_p:"产品中心",n_w:"为什么选择我们",n_b:"新闻动 ?,n_f:"常见问题",n_c:"联系我们",h_badge:"服务全球500+合作伙伴",h_title:"一站式LED开关电源制造商",h_sub:"楚高电子 - 来自中国中山的专业LED开关电源生产厂家。全系列产品CE/UL认证。厂家直销，报价优惠 ?,h_btn_p:"查看产品",h_btn_q:"获取免费报价",s_y:"10+",s_y_l:"年行业经 ?,s_c:"50+",s_c_l:"服务国家",s_m:"200+",s_m_l:"产品型号",h_img_cap:"楚高电子 - 中国中山LED电源工厂",t_ce:"CE认证",t_ul:"UL认证",t_rohs:"RoHS合规",t_iso:"ISO 9001工厂",t_moq:"低起订量",t_ship:"全球发货",a_title:"关于楚高",a_p1:"中山市楚高电子科技有限公司是一家专注于LED开关电源研发、生产与销售的高新技术企业。位于中国灯都古镇，致力于为全球客户提供高效、稳定、节能的电源解决方案 ?,a_p2:"凭借十余年的行业经验，楚高已建立起涵盖适配器、室内电源、防水电源（IP67/IP68）、防雨电源等全系列产品体系。产品远销50多个国家，广泛应用于商业照明、工业照明和户外标识 ?,a_p3:"秉承“品质至上，客户第一”的理念，每款产品在出厂前均经过严格测试。我们为全球品牌提供OEM/ODM定制服务 ?,f_fac:"自有工厂",f_fac_d:"10000平方米生产基 ?,f_qc:"品质管控",f_qc_d:"100%老化测试",f_log:"快速物 ?,f_log_d:"7-15天到达全球港 ?,f_sup:"技术支 ?,f_sup_d:"24小时响应",p_title:"产品中心",p_sub:"全系列LED电源解决方案 - 从紧凑型适配器到大功率防水电 ?,p1_n:"适配器系 ?,p1_d:"高效节能，体积小巧。宽电压输入，安全稳定 ?,p2_n:"室内电源",p2_d:"体积紧凑，散热优良。静音运行，宽电压输入 ?,p3_n:"防水电源 (IP67)",p3_d:"IP67/IP68防护等级，全密封，防紫外线 ?,p4_n:"防雨电源 (IP65)",p4_d:"金属外壳，耐腐蚀，适应潮湿环境 ?,p_cta:"立即咨询",w_title:"为什么选择楚高",w_sub:"在竞争激烈的LED电源市场中，我们如何脱颖而出 ?,w1_t:"厂家直销",w1_d:"作为生产厂家，我们去除中间环节，以具有竞争力的价格为客户提供优质产品 ?,w2_t:"品质认证",w2_d:"所有产品均通过CE、UL、RoHS认证。每件产品出厂前均经 ?00%老化测试 ?,w3_t:"研发能力",w3_d:"10余名工程师组成的研发团队，提供定制化的OEM/ODM解决方案 ?,w4_t:"快速交 ?,w4_d:"常规产品7-15个工作日发货。样品订单欢迎订购，交期迅速 ?,w5_t:"稳定供应 ?,w5_d:"自主生产确保品质和供货稳定，不依赖第三方工厂 ?,w6_t:"专业支持",w6_d:"多语言销售团队（英语、西班牙语、法语、中文） ?4小时快速响应 ?,b_title:"行业资讯",b_sub:"了解LED照明与电源技术的最新趋势 ?,b1_t:"如何为您的项目选择合适的LED电源",b1_d:"涵盖功率计算、防护等级选择和LED灯带安装指南的全面指南 ?,b2_t:"一文读懂IP防护等级：IP20、IP65、IP67、IP68的区 ?,b2_d:"了解防水等级之间的差异，以及如何为您的安装环境选择合适的防护等级 ?,b3_t:"2026年LED照明市场报告：增长动力与机遇",b3_d:"全球LED照明市场分析、新兴应用及制造商如何把握新机遇 ?,t_title:"客户评价",t_sub:"全球B2B合作伙伴和照明分销商的信赖之选 ?,t1_d:"我们从楚高采购LED电源已有3年。他们的IP67防水产品质量始终可靠。技术支持团队响应迅速，每次都能帮助我们选对产品 ?,t1_n:"Marco R.",t1_r:"意大利照明分销 ?,t2_d:"与之前的供应商相比，楚高的厂家直销价格为我们节省了大量成本。质量优秀，交货准时。强烈推荐批量采购 ?,t2_n:"Sarah K.",t2_r:"美国LED项目承包 ?,t3_d:"OEM服务非常出色。楚高帮助我们开发了定制电源。他们的研发团队专业，最终产品超出预期 ?,t3_n:"Jean-Pierre L.",t3_r:"法国品牌 ?,faq_title:"常见问题",faq_sub:"全球买家常见问题的快速解答 ?,faq1_q:"最低起订量是多少？",faq1_a:"常规产品MOQ ?0 ?型号。首批订单可申请样品价格 ?00件以上批量订单享受优惠价格 ?,faq2_q:"产品有哪些认证？",faq2_a:"所有LED电源均通过CE和RoHS认证，大部分产品也有UL列名。具体认证请联系我们获取 ?,faq3_q:"质保期是多久 ?,faq3_a:"常规产品质保3年。定制OEM产品按项目商议质保条款。质保范围涵盖正常使用条件下的制造缺陷 ?,faq4_q:"能否提供OEM/ODM服务 ?,faq4_a:"是的，我们提供完整的OEM/ODM服务，包括定制品牌、包装设计和产品规格定制。研发团队与客户紧密合作开发满足需求的产品 ?,faq5_q:"付款方式是什么？",faq5_a:"新客户：T/T 30%定金 ?0%尾款发货前付清。长期合作客户可商议L/C等付款方式。样品订单支持PayPal和阿里万里汇 ?,faq6_q:"生产交期多久 ?,faq6_a:"常规产品：确认订单后7-15个工作日。定制OEM产品 ?0-30个工作日，视复杂度而定。样品订单通常5-7个工作日完成 ?,cta_title:"准备好开始了吗？",cta_sub:"立即联系我们，获取免费产品咨询和定制报价 ?,cta_btn_c:"立即联系",cta_btn_w:"WhatsApp咨询",co_title:"联系我们",co_addr_t:"公司地址",co_phone_t:"联系电话",co_wa_t:"WhatsApp",co_wa_a:"点击聊天",co_email_t:"电子邮箱",co_hours_t:"工作时间",co_hours_d:"周一至周 ?8:00-18:00（GMT+8 ?,f_desc:"楚高电子 - 来自中国中山的专业LED开关电源生产厂家 ?014年起服务全球客户 ?,f_prod:"产品中心",f_p1:"适配器系 ?,f_p2:"室内电源",f_p3:"防水电源",f_p4:"防雨电源",f_comp:"公司",f_c1:"关于我们",f_c2:"为什么选择我们",f_c3:"新闻动 ?,f_c4:"常见问题",f_supp:"支持",f_s1:"联系我们",f_s2:"邮件联系",f_s3:"WhatsApp",f_s4:"资料下载",f_slogan:"一站式LED电源制造商"},es:{n_h:"Inicio",n_a:"Nosotros",n_p:"Productos",n_w:"Por Que",n_b:"Noticias",n_f:"FAQ",n_c:"Contacto",h_badge:"Confiado por 500+ Socios Globales",h_title:"Fabricante de Fuentes LED",h_sub:"CHUGAO - Fabrica profesional de fuentes de alimentacion LED de Zhongshan, China. Productos certificados CE/UL. Precios de fabrica.",h_btn_p:"Ver Productos",h_btn_q:"Obtener Cotizacion",s_y:"10+",s_y_l:"Anos de Experiencia",s_c:"50+",s_c_l:"Paises Atendidos",s_m:"200+",s_m_l:"Modelos",h_img_cap:"CHUGAO - Fabrica de Fuentes LED en Zhongshan, China",t_ce:"Certificado CE",t_ul:"Listado UL",t_rohs:"RoHS",t_iso:"ISO 9001",t_moq:"MOQ Bajo",t_ship:"Envio Global",a_title:"Sobre CHUGAO",a_p1:"CHUGAO es una empresa de alta tecnologia especializada en I+D y produccion de fuentes de alimentacion LED. Ubicada en Guzhen, la capital mundial de la iluminacion.",a_p2:"Con 10+ anos de experiencia, CHUGAO ofrece una gama completa: adaptadores, interiores, impermeables y anti-lluvia. Exportamos a 50+ paises.",a_p3:'"Calidad primero, cliente primero" - Cada producto se somete a pruebas rigurosas antes de la entrega.',f_fac:"Fabrica Propia",f_fac_d:"10.000m2 de produccion",f_qc:"Control de Calidad",f_qc_d:"100% test de envejecimiento",f_log:"Logistica Rapida",f_log_d:"7-15 dias a puertos globales",f_sup:"Soporte Tecnico",f_sup_d:"Respuesta en 24h",p_title:"Nuestros Productos",p_sub:"Soluciones completas de fuentes LED.",p1_n:"Adaptadores",p1_d:"Alta eficiencia, diseno compacto. Entrada AC universal.",p2_n:"Interior",p2_d:"Tamano compacto, excelente disipacion.",p3_n:"Impermeable (IP67)",p3_d:"IP67/IP68. Totalmente sellado. Resistente UV.",p4_n:"Anti-Lluvia (IP65)",p4_d:"Carcasa metalica robusta. Resistente a corrosion.",p_cta:"Consultar",w_title:"Por Que Elegir CHUGAO",w_sub:"Lo que nos diferencia.",w1_t:"Precio de Fabrica",w1_d:"Eliminamos intermediarios para ofrecer precios competitivos.",w2_t:"Calidad Certificada",w2_d:"CE, UL, RoHS. 100% test de envejecimiento.",w3_t:"Capacidad I+D",w3_d:"Equipo de 10+ ingenieros. Soluciones OEM/ODM.",w4_t:"Entrega Rapida",w4_d:"7-15 dias habiles. Muestras en 5-7 dias.",w5_t:"Cadena Estable",w5_d:"Produccion interna. Sin dependencia de terceros.",w6_t:"Soporte Profesional",w6_d:"Equipo multilingue. Respuesta en 24h.",b_title:"Noticias del Sector",b_sub:"Ultimas tendencias en iluminacion LED.",b1_t:"Como Elegir la Fuente LED Correcta",b1_d:"Guia completa: calculo de potencia, seleccion de IP e instalacion.",b2_t:"Entendiendo los IP: IP20 vs IP65 vs IP67 vs IP68",b2_d:"Diferencias entre clasificaciones de proteccion contra agua.",b3_t:"Informe del Mercado LED 2026",b3_d:"Analisis del mercado global y oportunidades.",t_title:"Testimonios",t_sub:"Socios B2B de todo el mundo confian en nosotros.",t1_d:'"CHUGAO es nuestro proveedor hace 3 anos. Productos impermeables IP67 siempre confiables."',t1_n:"Marco R.",t1_r:"Distribuidor de Iluminacion, Italia",t2_d:'"Ahorro significativo vs nuestro proveedor anterior. Calidad excelente y entregas puntuales."',t2_n:"Sarah K.",t2_r:"Contratista LED, USA",t3_d:'"Excelente servicio OEM. CHUGAO nos ayudo con una fuente personalizada."',t3_n:"Jean-Pierre L.",t3_r:"Propietario de Marca, Francia",faq_title:"Preguntas Frecuentes",faq_sub:"Respuestas rapidas.",faq1_q:"Cual es el MOQ?",faq1_a:"MOQ estandar: 50 piezas/modelo. Primera orden: muestra disponible.",faq2_q:"Que certificaciones tienen?",faq2_a:"CE y RoHS en todos. UL en la mayoria. Solicite sus certificados.",faq3_q:"Garantia?",faq3_a:"3 anos en productos estandar. OEM negociable por proyecto.",faq4_q:"OEM/ODM?",faq4_a:"Si. Branding, empaquetado y especificaciones a medida.",faq5_q:"Terminos de pago?",faq5_a:"T/T 30% deposito, 70% antes de envio. L/C para parceiros.",faq6_q:"Tiempo de produccion?",faq6_a:"Estandar: 7-15 dias. OEM: 20-30 dias. Muestras: 5-7 dias.",cta_title:"Listo para Comenzar?",cta_sub:"Contactenos para una consulta gratuita.",cta_btn_c:"Contactenos",cta_btn_w:"WhatsApp",co_title:"Contacto",co_addr_t:"Direccion",co_phone_t:"Telefono",co_wa_t:"WhatsApp",co_wa_a:"Chatear",co_email_t:"Email",co_hours_t:"Horario",co_hours_d:"Lun-Sab: 8:00-18:00 (GMT+8)",f_desc:"CHUGAO - Fabricante profesional de fuentes LED de Zhongshan, China.",f_prod:"Productos",f_p1:"Adaptadores",f_p2:"Interior",f_p3:"Impermeable",f_p4:"Anti-Lluvia",f_comp:"Empresa",f_c1:"Nosotros",f_c2:"Por Que",f_c3:"Noticias",f_c4:"FAQ",f_supp:"Soporte",f_s1:"Contacto",f_s2:"Email",f_s3:"WhatsApp",f_s4:"Descargas",f_slogan:"Fabricante de Fuentes LED"},fr:{n_h:"Accueil",n_a:"A Propos",n_p:"Produits",n_w:"Pourquoi",n_b:"Actualites",n_f:"FAQ",n_c:"Contact",h_badge:"Confie par 500+ Partenaires Mondiaux",h_title:"Fabricant d'Alimentations LED",h_sub:"CHUGAO - Fabricant professionnel de sources d'alimentation LED a Zhongshan, Chine. Produits certifies CE/UL. Prix d'usine.",h_btn_p:"Voir les Produits",h_btn_q:"Devis Gratuit",s_y:"10+",s_y_l:"Ans d'Experience",s_c:"50+",s_c_l:"Pays Desservis",s_m:"200+",s_m_l:"Modeles",h_img_cap:"CHUGAO - Usine d'Alimentations LED a Zhongshan",t_ce:"Certifie CE",t_ul:"Liste UL",t_rohs:"RoHS",t_iso:"ISO 9001",t_moq:"MOQ Bas",t_ship:"Livraison Mondiale",a_title:"A Propos de CHUGAO",a_p1:"CHUGAO est une entreprise de haute technologie specialiste en R&D et production de sources d'alimentation LED. Situee a Guzhen, la capitale mondiale de l'eclairage.",a_p2:"Avec 10+ ans d'experience, CHUGAO propose une gamme complete: adaptateurs, interieurs, etanches et anti-pluie. Exportations vers 50+ pays.",a_p3:'"Qualite d\'abord, client prioritaire" - Chaque produit est teste rigoureusement.',f_fac:"Usine Propre",f_fac_d:"10.000m2 de production",f_qc:"Controle Qualite",f_qc_d:"100% test de vieillissement",f_log:"Logistique Rapide",f_log_d:"7-15 jours vers ports mondiaux",f_sup:"Support Technique",f_sup_d:"Reponse en 24h",p_title:"Nos Produits",p_sub:"Solutions completes d'alimentation LED.",p1_n:"Adaptateurs",p1_d:"Haute efficacite, conception compacte. Entree AC universelle.",p2_n:"Alimentation Interieur",p2_d:"Taille compacte, excellente dissipation.",p3_n:"Etanche (IP67)",p3_d:"IP67/IP68. Entierement scelle. Resistant UV.",p4_n:"Anti-Pluie (IP65)",p4_d:"Boitier metallique robuste. Resistant a la corrosion.",p_cta:"Commander",w_title:"Pourquoi CHOISIR CHUGAO",w_sub:"Ce qui nous disti
+<script>function setLang(lang){
+  var keys=document.querySelectorAll('[data-i18n]');
+  for(var i=0;i<keys.length;i++){
+    var k=keys[i].getAttribute('data-i18n');
+    if(texts[lang]&&texts[lang][k]){
+      if(keys[i].tagName==='INPUT'||keys[i].tagName==='TEXTAREA') keys[i].value=texts[lang][k];
+      else keys[i].textContent=texts[lang][k];
+    }
+  }
+  ['en','zh','es','fr'].forEach(function(l){
+    var el=document.getElementById('lang-'+l);
+    if(el) el.classList.remove('active');
+    var ml=document.getElementById('ml-'+l);
+    if(ml) ml.classList.remove('active');
+  });
+  var el=document.getElementById('lang-'+lang);
+  if(el) el.classList.add('active');
+  var ml=document.getElementById('ml-'+lang);
+  if(ml) ml.classList.add('active');
+  document.documentElement.lang=lang==='zh'?'zh-CN':lang;
+}
+function toggleFaq(el){
+  var item=el.closest('.faq-i');
+  var was=item.classList.contains('open');
+  document.querySelectorAll('.faq-i').forEach(function(i){i.classList.remove('open');});
+  if(!was) item.classList.add('open');
+}
+function toggleMobileMenu(){
+  var m=document.getElementById('mobileMenu');
+  var t=document.getElementById('mobileToggle');
+  m.classList.toggle('open');
+  t.classList.toggle('open');
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('mobileToggle').classList.remove('open');
+}
+window.addEventListener('scroll',function(){
+  var btn=document.getElementById('backToTop');
+  if(window.scrollY>300) btn.classList.add('show'); else btn.classList.remove('show');
+});
+function toggleLangDropdown(){var dd=document.getElementById('lang-dropdown');var btn=document.querySelector('.lang-btn');if(dd)dd.classList.toggle('open');if(btn)btn.classList.toggle('open');}document.addEventListener('click',function(e){var s=document.querySelector('.lang-selector');if(s&&!s.contains(e.target)){var dd=document.getElementById('lang-dropdown');var btn=document.querySelector('.lang-btn');if(dd)dd.classList.remove('open');if(btn)btn.classList.remove('open');}});
+setLang('en');
+<script>window.setLang=window.setLang||function(lang){console.log('setLang called:',lang);};console.log('Language functions loaded');</script></script></body></html>
