@@ -7,6 +7,8 @@ echo.
 echo GitHub 账号: franksmps
 echo 仓库地址:   github.com/franksmps/chugao-site
 echo.
+echo 提示：本次推送会覆盖仓库中的旧版本网站文件。
+echo.
 echo 如果你还没有 GitHub Token:
 echo 1. 打开 https://github.com/settings/tokens
 echo 2. 点击 "Generate new token (classic)"
@@ -24,7 +26,7 @@ if "%TOKEN%"=="" (
 echo 正在推送，请稍候...
 git remote remove origin 2>nul
 git remote add origin https://%TOKEN%@github.com/franksmps/chugao-site.git
-git push -u origin main
+git push -uf origin main
 
 if %ERRORLEVEL% == 0 (
     echo.
