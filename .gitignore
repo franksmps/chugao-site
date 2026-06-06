@@ -1,0 +1,24 @@
+// OS temp helper scripts
+_*.py
+_*.js
+_*.sh
+_*.bat
+
+// OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+// Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+// Node
+node_modules/
+npm-debug.log
+
+// Don't ignore images - they are part of the site
+!images/
