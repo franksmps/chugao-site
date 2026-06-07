@@ -1,9 +1,9 @@
 /* CHUGAO Power - main.js
- * 修复记录 (2026-06-06):
- * 1. 把单行 var texts={...} 拆成多行结构化对象，避免长行 / 引号隐藏问题
- * 2. 补齐 11 国语言包 (en/zh/es/fr/de/pt/ru/ja/ko/ar/it)
- * 3. setLang() 增加调试日志，缺失 key 时 fallback 到 en
- * 4. 表单提交后 gtag 事件统一在 finally 中复位按钮文案
+ * Changelog:
+ *  2026-06-06  11-language pack (en/zh/es/fr/de/pt/ru/ja/ko/ar/it), 159 keys each
+ *  2026-06-06  Factory voice rewrite: no AI filler, specific numbers, honest "no"s
+ *  2026-06-06  Shipping & Logistics section (sh_* 10 keys)
+ *  2026-06-06  FAQ JSON-LD schema synced with current copy
  */
 
 var KEYS = [
@@ -1759,12 +1759,13 @@ T.it = {
   sh4_d:"Fattura commerciale, packing list, certificato d'origine, rapporti CE/RoHS. Originali spediti con la merce.",
 };
 
-// ==================== 核心切换函数 ====================
+// ==================== Core switcher ====================
 var SUPPORTED = ["en","zh","es","fr","de","pt","ru","ja","ko","ar","it"];
+var DEBUG = false; // set true to enable console logs
 
 function setLang(lang) {
   if (T[lang] === undefined) {
-    console.warn("[CHUGAO] Language pack missing for: " + lang + ", fallback to en");
+    if (DEBUG) console.warn("[CHUGAO] Language pack missing for: " + lang + ", fallback to en");
     lang = "en";
   }
   var t = T[lang];
@@ -1789,7 +1790,7 @@ function setLang(lang) {
     }
   }
   if (missingCount > 0) {
-    console.warn("[CHUGAO] " + missingCount + " i18n keys missing in '" + lang + "' and 'en'");
+    if (DEBUG) console.warn("[CHUGAO] " + missingCount + " i18n keys missing in '" + lang + "' and 'en'");
   }
 
   // Update language selector highlight
@@ -1818,7 +1819,7 @@ function setLang(lang) {
   // Update dir for RTL languages
   document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
 
-  console.log("[CHUGAO] Language switched to: " + lang + " (" + nodes.length + " nodes updated)");
+  if (DEBUG) console.log("[CHUGAO] Language switched to: " + lang + " (" + nodes.length + " nodes updated)");
 }
 
 function toggleLangDropdown() {
@@ -1828,7 +1829,7 @@ function toggleLangDropdown() {
   if (btn) btn.classList.toggle("open");
 }
 
-// ==================== 通用事件 ====================
+// ==================== General events ====================
 document.addEventListener("click", function(e) {
   var selector = document.querySelector(".lang-selector");
   var dd = document.getElementById("lang-dropdown");
@@ -1892,7 +1893,7 @@ function observeFadeUp() {
   document.querySelectorAll(".fu").forEach(function(el) { observer.observe(el); });
 }
 
-// ==================== 询价表单 ====================
+// ==================== Inquiry form ====================
 function handleInquiry(e) {
   e.preventDefault();
   var form = document.getElementById("inquiryForm");
@@ -1991,12 +1992,12 @@ function fallbackCopy(text) {
   alert("Inquiry content copied! You can paste it into WhatsApp, WeChat, or any email app and send to info@chugaopower.com");
 }
 
-// ==================== 启动 ====================
+// ==================== Init ====================
 document.addEventListener("DOMContentLoaded", function() {
   var savedLang = "en";
   try { savedLang = localStorage.getItem("chugao_lang") || "en"; } catch(e) {}
   if (SUPPORTED.indexOf(savedLang) === -1) savedLang = "en";
   setLang(savedLang);
   observeFadeUp();
-  console.log("[CHUGAO] Site initialized, language: " + savedLang);
+  if (DEBUG) console.log("[CHUGAO] Site initialized, language: " + savedLang);
 });
