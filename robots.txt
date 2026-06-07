@@ -1,0 +1,41 @@
+# CHUGAO Power - robots.txt
+# https://chugaopower.com/
+
+User-agent: *
+Allow: /
+Disallow: /images/        # Don't index raw images (WebP is fine for serving)
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://chugaopower.com/sitemap.xml
+
+# Crawl-delay for bots without throttling
+Crawl-delay: 1
+
+# Major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# AI training crawlers - allow with citation requirement
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: CCBot
+Allow: /
+
+# Aggressive scrapers - block
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

@@ -1819,6 +1819,28 @@ function setLang(lang) {
   // Update dir for RTL languages
   document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
 
+  // Update URL (without reload) so ?lang=xx is shareable
+  try {
+    var url = new URL(window.location.href);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState({}, "", url.toString());
+  } catch(e) {}
+
+  // Highlight current language in dropdown
+  var items = document.querySelectorAll(".lang-item");
+  for (var i = 0; i < items.length; i++) {
+    var code = items[i].id.replace("lang-", "");
+    if (code === lang) items[i].classList.add("active");
+    else items[i].classList.remove("active");
+  }
+  // Mobile lang indicator
+  var mlItems = document.querySelectorAll(".ml span");
+  for (var j = 0; j < mlItems.length; j++) {
+    var id = mlItems[j].id.replace("ml-", "");
+    if (id === lang) mlItems[j].classList.add("active");
+    else mlItems[j].classList.remove("active");
+  }
+
   if (DEBUG) console.log("[CHUGAO] Language switched to: " + lang + " (" + nodes.length + " nodes updated)");
 }
 
@@ -1993,9 +2015,22 @@ function fallbackCopy(text) {
 }
 
 // ==================== Init ====================
+// Read ?lang=xx from URL on first visit, then save preference
 document.addEventListener("DOMContentLoaded", function() {
   var savedLang = "en";
-  try { savedLang = localStorage.getItem("chugao_lang") || "en"; } catch(e) {}
+  // Check URL override first (only on first visit, not on every navigation)
+  try {
+    var url = new URL(window.location.href);
+    var urlLang = url.searchParams.get("lang");
+    if (urlLang && SUPPORTED.indexOf(urlLang) !== -1) {
+      savedLang = urlLang;
+      try { localStorage.setItem("chugao_lang", urlLang); } catch(e) {}
+    } else {
+      savedLang = localStorage.getItem("chugao_lang") || "en";
+    }
+  } catch(e) {
+    try { savedLang = localStorage.getItem("chugao_lang") || "en"; } catch(e2) {}
+  }
   if (SUPPORTED.indexOf(savedLang) === -1) savedLang = "en";
   setLang(savedLang);
   observeFadeUp();
