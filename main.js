@@ -111,7 +111,7 @@ T.en = {
   f_desc:"CHUGAO makes LED power supplies in Zhongshan, China. Factory direct.",
   f_prod:"Products",f_p1:"Adapters",f_p2:"Indoor drivers",f_p3:"IP67",f_p4:"IP65",
   f_comp:"Company",f_c1:"About",f_c2:"Why us",f_c3:"News",f_c4:"FAQ",
-  f_supp:"Support",f_s1:"Contact",f_s2:"Email",f_s3:"WhatsApp",f_s4:"Datasheets",
+  f_supp:"Support",f_s1:"Contact",f_s2:"Email",f_s3:"WhatsApp",f_s4:"Request datasheets",
   f_slogan:"LED power supplies, made in China since 2014",
   sh_title:"Shipping & logistics",sh_sub:"Where we ship, and what to expect.",
   sh1_t:"FOB Shenzhen / Zhongshan",sh1_d:"Two port options. We pack in export cartons, 20-25 kg per carton. Pallets on request.",
@@ -187,7 +187,7 @@ T.zh = {
   f_desc:"楚高,中山 LED 电源工厂。厂家直供。",
   f_prod:"产品",f_p1:"适配器",f_p2:"室内电源",f_p3:"IP67",f_p4:"IP65",
   f_comp:"公司",f_c1:"关于",f_c2:"优势",f_c3:"资讯",f_c4:"常见问题",
-  f_supp:"支持",f_s1:"联系",f_s2:"邮件",f_s3:"WhatsApp",f_s4:"规格书",
+  f_supp:"支持",f_s1:"联系",f_s2:"邮件",f_s3:"WhatsApp",f_s4:"索取规格书",
   f_slogan:"LED 开关电源,中山制造 2014 年起",
 
   sh_title:"物流与运输",
@@ -360,7 +360,7 @@ T.es = {
   f_s1:"Contacto",
   f_s2:"Email",
   f_s3:"WhatsApp",
-  f_s4:"Datasheets",
+  f_s4:"Solicitar fichas técnicas",
   f_slogan:"Fuentes LED, hechas en China desde 2014",
 
   sh_title:"Envío y logística",
@@ -533,7 +533,7 @@ T.fr = {
   f_s1:"Contact",
   f_s2:"Email",
   f_s3:"WhatsApp",
-  f_s4:"Fiches techniques",
+  f_s4:"Demander les fiches techniques",
   f_slogan:"Alimentations LED, fabriquées en Chine depuis 2014",
 
   sh_title:"Expédition et logistique",
@@ -706,7 +706,7 @@ T.de = {
   f_s1:"Kontakt",
   f_s2:"E-Mail",
   f_s3:"WhatsApp",
-  f_s4:"Datenblätter",
+  f_s4:"Datenblätter anfragen",
   f_slogan:"LED-Netzteile, made in China seit 2014",
 
   sh_title:"Versand & Logistik",
@@ -879,7 +879,7 @@ T.pt = {
   f_s1:"Contato",
   f_s2:"E-mail",
   f_s3:"WhatsApp",
-  f_s4:"Fichas técnicas",
+  f_s4:"Solicitar fichas técnicas",
   f_slogan:"Fontes LED, feitas na China desde 2014",
 
   sh_title:"Envio e logística",
@@ -1052,7 +1052,7 @@ T.ru = {
   f_s1:"Контакты",
   f_s2:"Email",
   f_s3:"WhatsApp",
-  f_s4:"Даташиты",
+  f_s4:"Запросить даташиты",
   f_slogan:"LED-источники, сделано в Китае с 2014",
 
   sh_title:"Доставка и логистика",
@@ -1225,7 +1225,7 @@ T.ja = {
   f_s1:"お問い合わせ",
   f_s2:"メール",
   f_s3:"WhatsApp",
-  f_s4:"データシート",
+  f_s4:"データシートを依頼",
   f_slogan:"LED スイッチング電源、中国 2014 年から",
 
   sh_title:"物流・お届け",
@@ -1398,7 +1398,7 @@ T.ko = {
   f_s1:"문의",
   f_s2:"이메일",
   f_s3:"WhatsApp",
-  f_s4:"데이터시트",
+  f_s4:"데이터시트 요청",
   f_slogan:"LED 전원 공급 장치, 중국산 2014 년부터",
 
   sh_title:"배송 및 물류",
@@ -1571,7 +1571,7 @@ T.ar = {
   f_s1:"اتصل بنا",
   f_s2:"البريد",
   f_s3:"WhatsApp",
-  f_s4:"أوراق البيانات",
+  f_s4:"اطلب أوراق البيانات",
   f_slogan:"إمدادات الطاقة LED، صُنع في الصين منذ 2014",
 
   sh_title:"الشحن واللوجستيات",
@@ -1744,7 +1744,7 @@ T.it = {
   f_s1:"Contatti",
   f_s2:"Email",
   f_s3:"WhatsApp",
-  f_s4:"Schede tecniche",
+  f_s4:"Richiedi schede tecniche",
   f_slogan:"Alimentatori LED, prodotti in Cina dal 2014",
 
   sh_title:"Spedizione e logistica",
@@ -1762,12 +1762,20 @@ T.it = {
 // ==================== Core switcher ====================
 var SUPPORTED = ["en","zh","es","fr","de","pt","ru","ja","ko","ar","it"];
 var DEBUG = false; // set true to enable console logs
+var INQUIRY_EMAIL = "sales@chugaopower.com";
+var currentLang = "en";
+
+function tr(key, fallback) {
+  var pack = T[currentLang] || T.en;
+  return (pack && pack[key]) || (T.en && T.en[key]) || fallback || "";
+}
 
 function setLang(lang) {
   if (T[lang] === undefined) {
     if (DEBUG) console.warn("[CHUGAO] Language pack missing for: " + lang + ", fallback to en");
     lang = "en";
   }
+  currentLang = lang;
   var t = T[lang];
   var nodes = document.querySelectorAll("[data-i18n]");
   var missingCount = 0;
@@ -1809,6 +1817,8 @@ function setLang(lang) {
   // Update current language display
   var curLang = document.getElementById("current-lang");
   if (curLang) curLang.textContent = lang.toUpperCase();
+  var langBtn = document.querySelector(".lang-btn");
+  if (langBtn) langBtn.setAttribute("aria-expanded", "false");
 
   // Update <html lang> attribute
   document.documentElement.lang = (lang === "zh") ? "zh-CN" : lang;
@@ -1847,8 +1857,11 @@ function setLang(lang) {
 function toggleLangDropdown() {
   var dd = document.getElementById("lang-dropdown");
   var btn = document.querySelector(".lang-btn");
-  if (dd) dd.classList.toggle("open");
-  if (btn) btn.classList.toggle("open");
+  var isOpen = dd ? dd.classList.toggle("open") : false;
+  if (btn) {
+    btn.classList.toggle("open", isOpen);
+    btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  }
 }
 
 // ==================== General events ====================
@@ -1858,7 +1871,10 @@ document.addEventListener("click", function(e) {
   var btn = document.querySelector(".lang-btn");
   if (selector && !selector.contains(e.target)) {
     if (dd) dd.classList.remove("open");
-    if (btn) btn.classList.remove("open");
+    if (btn) {
+      btn.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+    }
   }
 });
 
@@ -1928,10 +1944,10 @@ function handleInquiry(e) {
     gtag("event", "submit_inquiry", { product: data.get("product") || "General" });
   }
 
-  if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Submitting..."; }
+  if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Preparing..."; }
 
   /*
-  // Formspree 集成示例 - 取消注释并替换 YOUR_FORMSPREE_ID
+  // Optional Formspree integration: uncomment and replace YOUR_FORMSPREE_ID.
   fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
     method: "POST",
     body: data,
@@ -1966,14 +1982,13 @@ function handleInquiry(e) {
   body += "Quantity: " + (data.get("quantity") || "") + "\n";
   body += "Message: " + (data.get("message") || "") + "\n";
   body += "\nSent from: " + window.location.href;
-  var mailtoLink = "mailto:info@chugaopower.com?subject=" + encodeURIComponent("New Product Inquiry - " + (data.get("product") || "General")) + "&body=" + encodeURIComponent(body);
+  var mailtoLink = "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent("New Product Inquiry - " + (data.get("product") || "General")) + "&body=" + encodeURIComponent(body);
   window.location.href = mailtoLink;
-  form.reset();
-  success.textContent = "Thank you! Your inquiry has been prepared. Please send the email from your mail app, or use WhatsApp for instant contact.";
+  success.textContent = "Email draft opened. Please press Send in your mail app, or use WhatsApp for instant contact.";
   success.classList.add("show");
   if (typeof gtag !== "undefined") gtag("event", "inquiry_mailto");
   setTimeout(function() { success.classList.remove("show"); }, 8000);
-  if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Submit Inquiry"; }
+  if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = tr("inq_submit", "Send"); }
   return false;
 }
 
@@ -1995,10 +2010,10 @@ function copyInquiry() {
   text += "Quantity: " + qty + "\n";
   text += "Message: " + msg + "\n";
   text += "------------------------\n";
-  text += "Send to: info@chugaopower.com";
+  text += "Send to: " + INQUIRY_EMAIL;
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text).then(function() {
-      alert("Inquiry content copied! You can paste it into WhatsApp, WeChat, or any email app and send to info@chugaopower.com");
+      alert("Inquiry content copied! You can paste it into WhatsApp, WeChat, or any email app and send to " + INQUIRY_EMAIL);
     }).catch(function() {
       fallbackCopy(text);
     });
@@ -2011,7 +2026,7 @@ function fallbackCopy(text) {
   ta.value = text; document.body.appendChild(ta); ta.select();
   try { document.execCommand("copy"); } catch(e) {}
   document.body.removeChild(ta);
-  alert("Inquiry content copied! You can paste it into WhatsApp, WeChat, or any email app and send to info@chugaopower.com");
+  alert("Inquiry content copied! You can paste it into WhatsApp, WeChat, or any email app and send to " + INQUIRY_EMAIL);
 }
 
 // ==================== Init ====================

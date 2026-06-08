@@ -3,7 +3,7 @@
 
 User-agent: *
 Allow: /
-Disallow: /images/        # Don't index raw images (WebP is fine for serving)
+Allow: /images/
 Disallow: /*.json$
 
 # Sitemap
@@ -22,7 +22,7 @@ Allow: /
 User-agent: Slurp
 Allow: /
 
-# AI training crawlers - allow with citation requirement
+# AI training crawlers
 User-agent: GPTBot
 Allow: /
 User-agent: ClaudeBot

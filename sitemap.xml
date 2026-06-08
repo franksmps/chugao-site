@@ -18,39 +18,4 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://chugaopower.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://chugaopower.com/?lang=it"/>
   </url>
-  <url>
-    <loc>https://chugaopower.com/#products</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://chugaopower.com/#specs</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://chugaopower.com/#why</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://chugaopower.com/#blog</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://chugaopower.com/#faq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://chugaopower.com/#contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://chugaopower.com/#inquiry</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
 </urlset>
