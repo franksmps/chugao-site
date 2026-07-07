@@ -15,8 +15,8 @@ header{position:fixed;top:0;left:0;right:0;height:68px;background:rgba(255,255,2
 .ni{display:flex;justify-content:space-between;align-items:center;width:100%}
 .logo{height:38px;display:flex;align-items:center;margin-right:20px}
 .logo img{height:100%;width:auto}
-.nl{display:flex;gap:24px;margin-left:auto;margin-right:24px;list-style:none}
-.nl a{font-size:15px;font-weight:500;color:var(--t);position:relative;padding:4px 0;transition:color 0.2s}
+.nl{display:flex;gap:32px;margin-left:auto;margin-right:28px;list-style:none}
+.nl a{font-size:15px;font-weight:500;color:var(--t);position:relative;padding:6px 4px;transition:color 0.2s}
 .nl a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--a);transition:width 0.2s}
 .nl a:hover::after,.nl a.active::after{width:100%}
 .nl a:hover,.nl a.active{color:var(--a)}
