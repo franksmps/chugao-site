@@ -115,12 +115,12 @@ header{position:fixed;top:0;left:0;right:0;height:68px;background:rgba(255,255,2
 .proof-strip p{font-size:14px;color:#cbd5e1}
 .proof-strip .btn-p{background:#fff;color:var(--p);white-space:nowrap}
 .proof-strip .btn-p:hover{background:#f1f5f9}
-.wg{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.wc{background:var(--w);border:1px solid var(--b);border-radius:var(--r);padding:30px;text-align:center;transition:all 0.3s}
+.wg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.wc{background:var(--w);border:1px solid var(--b);border-radius:var(--r);padding:24px 18px;text-align:center;transition:all 0.3s}
 .wc:hover{transform:translateY(-4px);box-shadow:var(--md)}
 .wi{width:56px;height:56px;background:linear-gradient(135deg,#dbeafe,#eff6ff);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:var(--a);margin:0 auto 16px}
-.wc h3{font-size:17px;font-weight:700;color:var(--p);margin-bottom:10px}
-.wc p{font-size:14px;color:var(--ts);line-height:1.6}
+.wc h3{font-size:15px;font-weight:700;color:var(--p);margin-bottom:8px}
+.wc p{font-size:13px;color:var(--ts);line-height:1.55}
 .bg{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .bc{background:var(--w);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;transition:all 0.3s}
 .bc:hover{transform:translateY(-4px);box-shadow:var(--md)}
