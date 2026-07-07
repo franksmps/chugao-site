@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IP20 vs IP65 vs IP67 vs IP68 | CHUGAO Field Notes</title>
+<meta name="description" content="IP rating explained for LED power supplies: what the numbers mean, where each rating is used, and how to pick the right one for your project.">
+<link rel="canonical" href="https://chugaopower.com/blog/ip-rating-guide.html">
+<meta property="og:title" content="IP20 vs IP65 vs IP67 vs IP68">
+<meta property="og:description" content="What the numbers mean and where each one breaks down. A practical guide to IP ratings for LED drivers.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://chugaopower.com/blog/ip-rating-guide.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"IP20 vs IP65 vs IP67 vs IP68","datePublished":"2026-02-15","author":{"@type":"Organization","name":"CHUGAO Power"},"publisher":{"@type":"Organization","name":"CHUGAO Power","logo":{"@type":"ImageObject","url":"https://chugaopower.com/logo.png"}}}</script>
+<style>
+:root{--p:#1a1a2e;--t:#333;--ts:#666;--a:#0066cc;--w:#fff;--b:#e5e7eb;--r:12px;--bg:#f8f9fa;--md:0 6px 20px rgba(0,0,0,.10)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--t);background:var(--bg);line-height:1.6}
+a{color:var(--a);text-decoration:none}
+header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--b);height:64px;display:flex;align-items:center}
+header .c{max-width:1200px;margin:0 auto;padding:0 24px;width:100%;display:flex;align-items:center}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:18px;color:var(--p);text-decoration:none}
+nav ul{display:flex;list-style:none;gap:24px;margin-left:auto;margin-right:28px}
+nav a{font-size:15px;font-weight:500;color:var(--t);padding:6px 4px;transition:color .2s}
+nav a:hover{color:var(--a)}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--a);font-size:14px;margin-bottom:16px}
+.back-link:hover{text-decoration:underline}
+.article{max-width:800px;margin:48px auto;padding:0 24px}
+.article h1{font-size:32px;line-height:1.3;color:var(--p);margin-bottom:12px}
+.meta{color:var(--ts);font-size:14px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--b)}
+.hero-img{width:100%;border-radius:var(--r);overflow:hidden;margin-bottom:32px}
+.hero-img img{width:100%;height:auto;display:block}
+.article h2{font-size:22px;color:var(--p);margin:36px 0 14px}
+.article h3{font-size:18px;color:var(--p);margin:24px 0 10px}
+.article p{margin-bottom:16px;font-size:15.5px;color:var(--t)}
+.article ul,.article ol{margin:0 0 16px 20px;font-size:15.5px}
+.article li{margin-bottom:6px}
+.article strong{color:var(--p)}
+.highlight{background:#eef4ff;border-left:4px solid var(--a);padding:16px 20px;border-radius:0 var(--r) var(--r) 0;margin:20px 0;font-size:15px}
+.warn{background:#fff8e6;border-left:4px solid #f59e0b;padding:16px 20px;border-radius:0 var(--r) var(--r) 0;margin:20px 0;font-size:15px}
+.cta-box{background:var(--w);border:1px solid var(--b);border-radius:var(--r);padding:28px;text-align:center;margin:32px 0}
+.cta-box h3{margin-bottom:12px}
+.cta-box p{margin-bottom:16px;color:var(--ts)}
+.btn{display:inline-block;background:var(--a);color:#fff;padding:11px 28px;border-radius:8px;font-weight:600;font-size:15px;transition:opacity .2s}
+.btn:hover{opacity:.88}
+.ip-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px}
+.ip-table th{padding:10px 14px;text-align:left;background:var(--bg);border:1px solid var(--b);color:var(--p);font-weight:700}
+.ip-table td{padding:10px 14px;border:1px solid var(--b)}
+.ip-table tr:nth-child(even){background:var(--w)}
+footer{background:#1a1a2e;color:#ccc;padding:40px 24px;margin-top:60px}
+footer .c{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px}
+footer p{font-size:13px}
+@media(max-width:700px){.article h1{font-size:24px}nav ul{display:none}}
+</style>
+</head>
+<body>
+<header><div class="c"><a href="./index.html" class="logo"><img src="./logo.png" alt="CHUGAO Power Logo" style="height:30px"></a><nav><ul><li><a href="./index.html#home">Home</a></li><li><a href="./index.html#products">Products</a></li><li><a href="./index.html#blog">News</a></li><li><a href="./index.html#faq">FAQ</a></li><li><a href="./index.html#contact">Contact</a></li></ul></nav></div></header>
+
+<main class="article">
+<a href="./index.html#blog" class="back-link">&larr; Back to Field notes</a>
+
+<h1>IP20 vs IP65 vs IP67 vs IP68</h1>
+<div class="meta">Technical Guide &middot; February 2026 &middot; 7 min read</div>
+
+<div class="hero-img">
+<picture>
+<source type="image/webp" srcset="./images/blog-2-ip-rating-md.webp 1200w, ./images/blog-2-ip-rating.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="./images/blog-2-ip-rating.jpg" alt="IP ratings comparison chart" loading="lazy" style="width:100%">
+</picture>
+</div>
+
+<p>Every LED power supply has an IP rating. It is two digits — the first is <strong>dust/solid particle protection</strong>, the second is <strong>water protection</strong>. The higher the number, the better the seal.</p>
+
+<p>This guide breaks down exactly what each common IP rating means in real-world terms, so you never overspend or under-spec again.</p>
+
+<h2>The Two-Digit System Explained</h2>
+
+<table class="ip-table">
+<thead><tr><th>Digit</th><th>What it Measures</th><th>Scale</th></tr></thead>
+<tbody>
+<tr><td><strong>First digit (0–6)</strong></td><td>Solid objects / dust</td><td>0 = no protection &rarr; 6 = dust-tight</td></tr>
+<tr><td><strong>Second digit (0–8)</strong></td><td>Liquid / water</td><td>0 = no protection &rarr; 8 = continuous immersion</td></tr>
+</tbody>
+</table>
+
+<h2>First Digit: Dust Protection</h2>
+
+<ul>
+<li><strong>IPx0:</strong> No protection. Not used on any commercial LED driver.</li>
+<li><strong>IPx3 – IPx4:</strong> Protected against wires, screws, fingers. Basic safety.</li>
+<li><strong>IPx5:</strong> Dust-limited ingress. Some fine dust gets in but not enough to harm operation.</li>
+<li><strong>IPx6:</strong> Dust-tight. Zero dust entry. This is the standard for all outdoor-rated drivers.</li>
+</ul>
+
+<p>In practice, every driver we sell that has a meaningful water rating (second digit 4+) already achieves IPx6 for dust. You rarely need to worry about this separately.</p>
+
+<h2>Second Digit: Water Protection — This Is Where Decisions Happen</h2>
+
+<h3>IP20 / IP21 — Indoor Only</h3>
+<p>Dripping water from vertical angles (IP20). Dripping from up to 15&deg; off-vertical (IP21).</p>
+<ul>
+<li>Use for: indoor ceiling fixtures, enclosed luminaires, dry locations</li>
+<li>Avoid: anywhere near windows, bathrooms, kitchens, or HVAC vents</li>
+<li>Cost: lowest tier</li>
+</ul>
+
+<h3>IP44 — Splash-Proof</h3>
+<p>Water splashed from any direction will not cause harm.</p>
+<ul>
+<li>Use for: bathroom vanity lights, under-cabinet strips, kitchen task lighting</li>
+<li>Not suitable for direct rain exposure or washdown</li>
+</ul>
+
+<h3>IP54 — Dust + Splash Protected</h3>
+<p>Dust-limited ingress + splash-proof from all directions.</p>
+<ul>
+<li>Use for: retail displays, exhibition stands, semi-outdoor covered areas</li>
+</ul>
+
+<h3>IP65 — Water Jets from Any Direction</h3>
+<p>This is the workhorse of outdoor LED installations.</p>
+<div class="highlight">
+<strong>IP65 = fully dust-tight + protected against low-pressure water jets from any direction (6.3mm nozzle, 12.5 L/min).</strong>
+</div>
+<ul>
+<li>Use for: outdoor signage, fa&ccedil;ade lighting, streetlighting, parking garage fixtures, food processing areas with hose-down cleaning</li>
+<li>This covers 70%+ of all outdoor LED driver needs</li>
+<li>CHUGAO's best-selling category by volume</li>
+</ul>
+
+<h3>IP67 — Temporary Immersion Up to 1 Meter</h3>
+<p>The same dust-tightness as IP65, plus it can survive being submerged in up to 1 meter of water for 30 minutes.</p>
+<ul>
+<li>Use for: landscape lighting near ponds or pools, tunnel lighting, underground/inground fixtures, flood-prone installation points</li>
+<li>Note: immersion depth is measured from the bottom of the enclosure, not the top</li>
+</ul>
+
+<h3>IP68 — Continuous Submersion Beyond 1 Meter</h3>
+<p>The highest standard. Rated for long-term underwater operation at depths specified by the manufacturer (typically 1m–10m).</p>
+<ul>
+<li>Use for: pool lights, fountain fixtures, aquarium lighting, underwater architectural features, marine applications</li>
+<li>These require specialized potting and sealing — cost is significantly higher than IP67</li>
+</ul>
+
+<div class="warn">
+<strong>Common mistake:</strong> Using IP65 in an application that sees standing water or flooding risk (e.g., ground-recessed fixtures). The extra $2–$4 per unit to step up to IP67 can prevent a costly warranty return.
+</div>
+
+<h2>How We Test at CHUGAO</h2>
+
+<ol>
+<li><strong>Assembly:</strong> Drivers are potted with PU resin inside a sealed aluminum or plastic housing.</li>
+<li><strong>IP testing:</strong> Every batch is sampled and tested against IEC 60529 standards using calibrated water jet and dust chamber equipment.</li>
+<li><strong>Aging test:</strong> Units are run at full load for 48 hours at 40&deg;C ambient after IP sealing to catch any latent defects.</li>
+</ol>
+
+<h2>Which One Should You Order?</h2>
+
+<table class="ip-table">
+<thead><tr><th>Your Application</th><th>Minimum IP Rating</th><th>Recommended</th></tr></thead>
+<tbody>
+<tr><td>Indoor ceiling / wall mount</td><td>IP20</td><td>IP20</td></tr>
+<tr><td>Bathroom / kitchen</td><td>IP44</td><td>IP44</td></tr>
+<tr><td>Outdoor sign / building facade</td><td>IP65</td><td>IP65</td></tr>
+<tr><td>Tunnel / parking garage</td><td>IP65</td><td>IP67</td></tr>
+<tr><td>Landscape near water</td><td>IP67</td><td>IP67</td></tr>
+<tr><td>Pool / fountain / underwater</td><td>IP68</td><td>IP68</td></tr>
+</tbody>
+</table>
+
+<div class="cta-box">
+<h3>Need help matching IP rating to your project?</h3>
+<p>Tell us your installation environment and we'll recommend the right IP level and model number. Free datasheet included.</p>
+<a href="./index.html#inquiry" class="btn">Get Recommendation</a>
+</div>
+
+<p style="color:var(--ts);font-size:13px;margin-top:32px;border-top:1px solid var(--b);padding-top:16px">&copy; 2026 Zhongshan Chugao Electronic Technology Co., Ltd. All Rights Reserved.</p>
+</main>
+
+<footer>
+<div class="c">
+<div style="flex:2;min-width:240px">
+<strong style="color:#fff;font-size:15px">CHUGAO Power</strong><br>
+<p style="margin-top:8px">CHUGAO makes LED power supplies in Zhongshan, China. Factory direct since 2014.</p>
+</div>
+<div style="min-width:140px"><strong style="color:#fff">Products</strong><br><a href="./index.html#products" style="color:#aaa;font-size:13px;display:block;margin-top:6px">Adapters</a><a href="./index.html#products" style="color:#aaa;font-size:13px;display:block;margin-top:4px">Indoor Drivers</a><a href="./index.html#products" style="color:#aaa;font-size:13px;display:block;margin-top:4px">IP67</a></div>
+<div style="min-width:140px"><strong style="color:#fff">Company</strong><br><a href="./index.html#about" style="color:#aaa;font-size:13px;display:block;margin-top:6px">About</a><a href="./index.html#blog" style="color:#aaa;font-size:13px;display:block;margin-top:4px">Field Notes</a><a href="./index.html#faq" style="color:#aaa;font-size:13px;display:block;margin-top:4px">FAQ</a></div>
+<div style="min-width:140px"><strong style="color:#fff">Support</strong><br><a href="./index.html#contact" style="color:#aaa;font-size:13px;display:block;margin-top:6px">Contact</a><a href="mailto:info@chugaopower.com" style="color:#aaa;font-size:13px;display:block;margin-top:4px">Email</a><a href="./index.html#inquiry" style="color:#aaa;font-size:13px;display:block;margin-top:4px">Request Datasheets</a></div>
+</div>
+</footer>
+</body>
+</html>
