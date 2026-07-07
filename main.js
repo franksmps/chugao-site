@@ -1920,6 +1920,11 @@ function setLang(lang) {
   var langBtn = document.querySelector(".lang-btn");
   if (langBtn) langBtn.setAttribute("aria-expanded", "false");
 
+  // Close the language dropdown after a selection
+  var dd = document.getElementById("lang-dropdown");
+  if (dd) dd.classList.remove("open");
+  if (langBtn) langBtn.classList.remove("open");
+
   // Update <html lang> attribute
   document.documentElement.lang = (lang === "zh") ? "zh-CN" : lang;
 
