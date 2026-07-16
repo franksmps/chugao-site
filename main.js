@@ -100,8 +100,8 @@ T.en = {
   inq_name:"Your name *",inq_email:"Email *",inq_phone:"Phone / WhatsApp",inq_company:"Company",
   inq_product:"Product *",inq_sel:"Pick a line",
   inq_opt1:"Adapters (5W-200W)",inq_opt2:"Indoor drivers (50W-400W)",inq_opt3:"IP67 waterproof (10W-400W)",inq_opt4:"IP65 rainproof (100W-600W)",inq_opt5:"Custom OEM",
-  inq_qty:"Quantity (e.g. 500 pcs)",inq_msg:"Specs, target price, delivery date *",inq_submit:"Send",
-  inq_emailto:"Sent to",inq_via:"via your email app.",inq_copy:"No email app? Click to copy.",inq_note:"We do not share your info. Used only for the quote.",
+  inq_qty:"Quantity (e.g. 500 pcs)",inq_msg:"Specs, target price, delivery date *",inq_submit:"Send",inq_sending:"Sending...",inq_mailto_note:"Email draft opened. Please press Send in your mail app, or use WhatsApp for instant contact.",
+  inq_emailto:"Sent to",inq_via:"— we reply within 1 hour.",inq_copy:"No email app? Click to copy.",inq_note:"We do not share your info. Used only for the quote.",
   inq_why:"What you get back",
   inq_w1:"Price within 1 hour",inq_w2:"Spec sheet PDF",inq_w3:"Lead time for your quantity",inq_w4:"Sample cost (refund on bulk)",inq_w5:"Shipping options to your port",
   inq_fast:"Faster than email?",inq_fast_d:"WhatsApp us directly.",inq_wa:"WhatsApp",
@@ -227,8 +227,8 @@ T.zh = {
   inq_name:"您的姓名 *",inq_email:"邮箱 *",inq_phone:"电话 / WhatsApp",inq_company:"公司名",
   inq_product:"产品 *",inq_sel:"选产品线",
   inq_opt1:"适配器(5W-200W)",inq_opt2:"室内电源(50W-400W)",inq_opt3:"IP67 防水(10W-400W)",inq_opt4:"IP65 防雨(100W-600W)",inq_opt5:"定制 OEM",
-  inq_qty:"数量(例:500 件)",inq_msg:"规格、目标价、交期 *",inq_submit:"发送",
-  inq_emailto:"发送至",inq_via:"通过您的邮件 App。",inq_copy:"没装邮件 App?点此复制。",inq_note:"信息不外传,只用于报价。",
+  inq_qty:"数量(例:500 件)",inq_msg:"规格、目标价、交期 *",inq_submit:"发送",inq_sending:"提交中...",inq_mailto_note:"已打开邮件草稿，请在邮件应用中点击发送，或用 WhatsApp 即时联系。",
+  inq_emailto:"发送至",inq_via:"— 我们 1 小时内回复。",inq_copy:"没装邮件 App?点此复制。",inq_note:"信息不外传,只用于报价。",
   inq_why:"会收到什么",
   inq_w1:"1 小时内报价格",inq_w2:"规格书 PDF",inq_w3:"你这款数量的交期",inq_w4:"样品费(大单退)",inq_w5:"到港物流方案",
   inq_fast:"比邮件快?",inq_fast_d:"直接 WhatsApp 我们。",inq_wa:"WhatsApp",
@@ -425,7 +425,7 @@ T.es = {
   inq_msg:"Specs, precio objetivo, fecha de entrega *",
   inq_submit:"Enviar",
   inq_emailto:"Enviado a",
-  inq_via:"vía tu app de correo.",
+  inq_via:"— respondemos en 1 hora.",
   inq_copy:"¿Sin app de correo? Pulsa para copiar.",
   inq_note:"No compartimos tu información. Solo para la cotización.",
   inq_why:"Qué recibes",
@@ -598,7 +598,7 @@ T.fr = {
   inq_msg:"Specs, prix cible, date de livraison *",
   inq_submit:"Envoyer",
   inq_emailto:"Envoyé à",
-  inq_via:"via votre app e-mail.",
+  inq_via:"— nous répondons sous 1 heure.",
   inq_copy:"Pas d'app e-mail ? Cliquez pour copier.",
   inq_note:"On ne partage pas vos infos. Uniquement pour le devis.",
   inq_why:"Ce que vous obtenez",
@@ -771,7 +771,7 @@ T.de = {
   inq_msg:"Specs, Zielpreis, Liefertermin *",
   inq_submit:"Senden",
   inq_emailto:"Gesendet an",
-  inq_via:"über Ihre E-Mail-App.",
+  inq_via:"— wir antworten innerhalb 1 Stunde.",
   inq_copy:"Keine E-Mail-App? Klicken zum Kopieren.",
   inq_note:"Wir teilen Ihre Daten nicht. Nur für das Angebot.",
   inq_why:"Was Sie zurückbekommen",
@@ -944,7 +944,7 @@ T.pt = {
   inq_msg:"Specs, preço-alvo, data de entrega *",
   inq_submit:"Enviar",
   inq_emailto:"Enviado para",
-  inq_via:"via seu app de e-mail.",
+  inq_via:"— respondemos em 1 hora.",
   inq_copy:"Sem app de e-mail? Clique para copiar.",
   inq_note:"Não compartilhamos seus dados. Apenas para o orçamento.",
   inq_why:"O que você recebe",
@@ -1117,7 +1117,7 @@ T.ru = {
   inq_msg:"ТЗ, целевая цена, срок *",
   inq_submit:"Отправить",
   inq_emailto:"Отправлено на",
-  inq_via:"через ваш почтовый клиент.",
+  inq_via:"— отвечаем в течение 1 часа.",
   inq_copy:"Нет почтового клиента? Нажмите чтобы скопировать.",
   inq_note:"Не передаём ваши данные. Только для расчёта.",
   inq_why:"Что получите",
@@ -1290,7 +1290,7 @@ T.ja = {
   inq_msg:"仕様、目標価格、希望納期 *",
   inq_submit:"送信",
   inq_emailto:"送信先",
-  inq_via:"メールアプリで開きます。",
+  inq_via:"— 1時間以内に返信します。",
   inq_copy:"メールアプリなし?クリックでコピー。",
   inq_note:"情報は第三者と共有しません。見積もり目的のみ。",
   inq_why:"返信内容",
@@ -1463,7 +1463,7 @@ T.ko = {
   inq_msg:"사양, 목표 가격, 납기 *",
   inq_submit:"보내기",
   inq_emailto:"보낼 곳",
-  inq_via:"이메일 앱으로 보냅니다.",
+  inq_via:"— 1시간 이내에 답변드립니다.",
   inq_copy:"이메일 앱 없음? 클릭하여 복사.",
   inq_note:"정보를 공유하지 않습니다. 견적 목적만.",
   inq_why:"받는 답변",
@@ -1636,7 +1636,7 @@ T.ar = {
   inq_msg:"المواصفات، السعر المستهدف، تاريخ التسليم *",
   inq_submit:"إرسال",
   inq_emailto:"أُرسل إلى",
-  inq_via:"عبر تطبيق البريد.",
+  inq_via:"— نرد خلال ساعة واحدة.",
   inq_copy:"لا يوجد تطبيق بريد؟ انقر للنسخ.",
   inq_note:"لا نشارك معلوماتك. تُستخدم فقط للعرض.",
   inq_why:"ما ستحصل عليه",
@@ -1809,7 +1809,7 @@ T.it = {
   inq_msg:"Specifiche, prezzo target, data di consegna *",
   inq_submit:"Invia",
   inq_emailto:"Inviato a",
-  inq_via:"tramite la tua app email.",
+  inq_via:"— rispondiamo entro 1 ora.",
   inq_copy:"Niente app email? Clicca per copiare.",
   inq_note:"Non condividiamo i tuoi dati. Solo per il preventivo.",
   inq_why:"Cosa ricevi",
@@ -1863,6 +1863,7 @@ T.it = {
 var SUPPORTED = ["en","zh","es","fr","de","pt","ru","ja","ko","ar","it"];
 var DEBUG = false; // set true to enable console logs
 var INQUIRY_EMAIL = "info@chugaopower.com";
+var FORMSPREE_ENDPOINT = "https://formspree.io/f/xqerewbv";
 var currentLang = "en";
 
 function tr(key, fallback) {
@@ -2045,55 +2046,68 @@ function handleInquiry(e) {
   var submitBtn = form.querySelector('button[type="submit"]');
   var data = new FormData(form);
 
+  // Honeypot: if the hidden field is filled, it is a bot. Pretend success, do nothing.
+  if (data.get("_gotcha")) {
+    form.reset();
+    if (success) { success.textContent = tr("inq_ok", "Sent. We reply within 1 hour during business hours."); success.classList.add("show"); }
+    return false;
+  }
+
   if (typeof gtag !== "undefined") {
     gtag("event", "submit_inquiry", { product: data.get("product") || "General" });
   }
 
-  if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Preparing..."; }
+  var submitLabel = tr("inq_submit", "Send");
+  if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = tr("inq_sending", "Sending..."); }
 
-  /*
-  // Optional Formspree integration: uncomment and replace YOUR_FORMSPREE_ID.
-  fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
-    method: "POST",
-    body: data,
-    headers: { "Accept": "application/json" }
-  })
-  .then(function(res) {
-    if (res.ok) {
-      form.reset();
-      success.textContent = "Thank you! Your inquiry has been submitted. We will contact you within 24 hours.";
+  function showSuccess() {
+    form.reset();
+    if (success) {
+      success.style.background = ""; success.style.color = "";
+      success.textContent = tr("inq_ok", "Sent. We reply within 1 hour during business hours.");
       success.classList.add("show");
-      if (typeof gtag !== "undefined") gtag("event", "inquiry_success");
       setTimeout(function() { success.classList.remove("show"); }, 8000);
-    } else { throw new Error("Server error"); }
-  })
-  .catch(function() {
-    success.textContent = "Submission failed. Please try again or contact us via WhatsApp.";
-    success.style.background = "#fee2e2"; success.style.color = "#991b1b";
-    success.classList.add("show");
-  })
-  .finally(function() {
-    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Submit Inquiry"; }
-  });
-  return false;
-  */
+    }
+    if (typeof gtag !== "undefined") gtag("event", "inquiry_success", { product: data.get("product") || "General" });
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitLabel; }
+  }
 
-  var body = "New Inquiry from CHUGAO Website\n\n";
-  body += "Name: " + (data.get("name") || "") + "\n";
-  body += "Email: " + (data.get("email") || "") + "\n";
-  body += "Phone: " + (data.get("phone") || "") + "\n";
-  body += "Company: " + (data.get("company") || "") + "\n";
-  body += "Product: " + (data.get("product") || "") + "\n";
-  body += "Quantity: " + (data.get("quantity") || "") + "\n";
-  body += "Message: " + (data.get("message") || "") + "\n";
-  body += "\nSent from: " + window.location.href;
-  var mailtoLink = "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent("New Product Inquiry - " + (data.get("product") || "General")) + "&body=" + encodeURIComponent(body);
-  window.location.href = mailtoLink;
-  success.textContent = "Email draft opened. Please press Send in your mail app, or use WhatsApp for instant contact.";
-  success.classList.add("show");
-  if (typeof gtag !== "undefined") gtag("event", "inquiry_mailto");
-  setTimeout(function() { success.classList.remove("show"); }, 8000);
-  if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = tr("inq_submit", "Send"); }
+  // Build a mailto draft as a graceful fallback if the backend is unreachable.
+  function mailtoFallback() {
+    var body = "New Inquiry from CHUGAO Website\n\n";
+    body += "Name: " + (data.get("name") || "") + "\n";
+    body += "Email: " + (data.get("email") || "") + "\n";
+    body += "Phone: " + (data.get("phone") || "") + "\n";
+    body += "Company: " + (data.get("company") || "") + "\n";
+    body += "Product: " + (data.get("product") || "") + "\n";
+    body += "Quantity: " + (data.get("quantity") || "") + "\n";
+    body += "Message: " + (data.get("message") || "") + "\n";
+    body += "\nSent from: " + window.location.href;
+    var mailtoLink = "mailto:" + INQUIRY_EMAIL + "?subject=" + encodeURIComponent("New Product Inquiry - " + (data.get("product") || "General")) + "&body=" + encodeURIComponent(body);
+    window.location.href = mailtoLink;
+    if (success) {
+      success.textContent = tr("inq_mailto_note", "Email draft opened. Please press Send in your mail app, or use WhatsApp for instant contact.");
+      success.classList.add("show");
+      setTimeout(function() { success.classList.remove("show"); }, 9000);
+    }
+    if (typeof gtag !== "undefined") gtag("event", "inquiry_mailto");
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = submitLabel; }
+  }
+
+  if (typeof fetch === "function") {
+    fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    }).then(function(res) {
+      if (res.ok) { showSuccess(); }
+      else { mailtoFallback(); }
+    }).catch(function() {
+      mailtoFallback();
+    });
+  } else {
+    mailtoFallback();
+  }
   return false;
 }
 
@@ -2133,6 +2147,19 @@ function fallbackCopy(text) {
   document.body.removeChild(ta);
   alert("Inquiry content copied! You can paste it into WhatsApp, WeChat, or any email app and send to " + INQUIRY_EMAIL);
 }
+
+// ==================== Analytics: track key conversions ====================
+// Delegated click tracking for WhatsApp and email links (GA4 events).
+document.addEventListener("click", function(ev) {
+  var a = ev.target && ev.target.closest ? ev.target.closest("a") : null;
+  if (!a || !a.href) return;
+  if (typeof gtag === "undefined") return;
+  if (a.href.indexOf("wa.me") !== -1 || a.href.indexOf("whatsapp") !== -1) {
+    gtag("event", "whatsapp_click", { location: a.getAttribute("data-i18n") || "link" });
+  } else if (a.href.indexOf("mailto:") === 0) {
+    gtag("event", "email_click");
+  }
+}, true);
 
 // ==================== Init ====================
 // Read ?lang=xx from URL on first visit, then save preference

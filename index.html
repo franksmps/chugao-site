@@ -59,21 +59,13 @@
 <meta name="twitter:title" content="CHUGAO - LED power supplies, factory direct from Zhongshan">
 <meta name="twitter:description" content="Adapters, indoor drivers, IP67 waterproof, IP65 rainproof. CE/RoHS on every unit. 50 pcs MOQ. 11 years, 42 countries.">
 <meta name="twitter:image" content="https://chugaopower.com/images/factory.jpg.webp">
-<!-- Google tag (gtag.js) - Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
-<!-- Only load if user accepts cookies (GDPR-style consent) - placeholder for now -->
+<!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NV6VNJQ8MY"></script>
 <script>
-// Uncomment when you have a GA4 ID:
-//   var GA4_ID = 'G-XXXXXXXXXX';
-//   if (GA4_ID !== 'G-XXXXXXXXXX') {
-//     var s = document.createElement('script');
-//     s.async = true;
-//     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
-//     document.head.appendChild(s);
-//     window.dataLayer = window.dataLayer || [];
-//     function gtag(){dataLayer.push(arguments);}
-//     gtag('js', new Date());
-//     gtag('config', GA4_ID);
-//   }
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NV6VNJQ8MY');
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Zhongshan Chugao Electronic Technology Co., Ltd.","alternateName":"CHUGAO Power","url":"https://chugaopower.com","logo":"https://chugaopower.com/logo.png","image":"https://chugaopower.com/images/factory.jpg.webp","description":"LED switching power supply manufacturer in Zhongshan, China. Adapters, indoor drivers, waterproof IP67, rainproof IP65. CE/RoHS on every unit. Factory direct since 2014.","foundingDate":"2014","numberOfEmployees":46,"areaServed":["CN","EU","US","AE","BR","RU","JP","KR","SA","IT","DE","FR","ES","PT","MX","IN","AU","GB","CA","TR","EG","ZA","TH","VN","ID","MY","SG","PH","CL","AR","CO"],"address":{"@type":"PostalAddress","streetAddress":"No. 96 Caoxing West Road, Guzhen Town","addressLocality":"Zhongshan","addressRegion":"Guangdong","addressCountry":"CN","postalCode":"528421"},"geo":{"@type":"GeoCoordinates","latitude":22.5159,"longitude":113.3824},"contactPoint":[{"@type":"ContactPoint","telephone":"+86-18933373873","contactType":"sales","areaServed":"Worldwide","availableLanguage":["English","Chinese","Spanish","French","German","Portuguese","Russian","Japanese","Korean","Arabic","Italian"]},{"@type":"ContactPoint","telephone":"+86-760-89869758","contactType":"customer service","areaServed":"CN","availableLanguage":["Chinese","English"]}],"sameAs":[]}
@@ -133,13 +125,14 @@
 <div class="inquiry-grid"><div class="inquiry-form">
 <div class="form-success" id="formSuccess" data-i18n="inq_ok">Sent. We reply within 1 hour during business hours.</div>
 <form id="inquiryForm" onsubmit="return handleInquiry(event)">
+<input type="text" name="_gotcha" style="display:none!important" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="form-row"><div class="form-group"><label for="inq-name" data-i18n="inq_name">Your name *</label><input id="inq-name" type="text" name="name" autocomplete="name" required placeholder="John Smith"></div><div class="form-group"><label for="inq-email" data-i18n="inq_email">Email *</label><input id="inq-email" type="email" name="email" autocomplete="email" required placeholder="john@company.com"></div></div>
 <div class="form-row"><div class="form-group"><label for="inq-phone" data-i18n="inq_phone">Phone / WhatsApp</label><input id="inq-phone" type="tel" name="phone" autocomplete="tel" placeholder="+1 234 567 8900"></div><div class="form-group"><label for="inq-company" data-i18n="inq_company">Company</label><input id="inq-company" type="text" name="company" autocomplete="organization" placeholder="Your Company Ltd."></div></div>
 <div class="form-group"><label for="inq-product" data-i18n="inq_product">Product *</label><select id="inq-product" name="product" required><option value="" data-i18n="inq_sel">Pick a line</option><option value="adapter" data-i18n="inq_opt1">Adapters (5W-200W)</option><option value="indoor" data-i18n="inq_opt2">Indoor drivers (50W-400W)</option><option value="waterproof" data-i18n="inq_opt3">IP67 waterproof (10W-400W)</option><option value="rainproof" data-i18n="inq_opt4">IP65 rainproof (100W-600W)</option><option value="custom" data-i18n="inq_opt5">Custom OEM</option></select></div>
 <div class="form-group"><label for="inq-quantity" data-i18n="inq_qty">Quantity (e.g. 500 pcs)</label><input id="inq-quantity" type="text" name="quantity" inputmode="numeric" placeholder="e.g. 500 pieces"></div>
 <div class="form-group"><label for="inq-message" data-i18n="inq_msg">Specs, target price, delivery date *</label><textarea id="inq-message" name="message" required placeholder="Please describe your project requirements, target market, and any specific technical needs."></textarea></div>
 <button type="submit" class="btn-p" style="width:100%;justify-content:center" data-i18n="inq_submit">Send</button>
-<p class="form-note" style="margin-top:12px"><span data-i18n="inq_emailto">Sent to</span> <strong>info@chugaopower.com</strong> <span data-i18n="inq_via">via your email app.</span> <a href="javascript:void(0)" onclick="copyInquiry()" style="color:var(--a);text-decoration:underline" data-i18n="inq_copy">No email app? Click to copy.</a></p>
+<p class="form-note" style="margin-top:12px"><span data-i18n="inq_emailto">Sent to</span> <strong>info@chugaopower.com</strong> <span data-i18n="inq_via">— we reply within 1 hour.</span> <a href="javascript:void(0)" onclick="copyInquiry()" style="color:var(--a);text-decoration:underline" data-i18n="inq_copy">No email app? Click to copy.</a></p>
 <p class="form-note" data-i18n="inq_note">We do not share your info. Used only for the quote.</p>
 </form>
 </div>
