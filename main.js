@@ -1862,7 +1862,7 @@ T.it = {
 // ==================== Core switcher ====================
 var SUPPORTED = ["en","zh","es","fr","de","pt","ru","ja","ko","ar","it"];
 var DEBUG = false; // set true to enable console logs
-var INQUIRY_EMAIL = "sales@chugaopower.com";
+var INQUIRY_EMAIL = "info@chugaopower.com";
 var currentLang = "en";
 
 function tr(key, fallback) {
