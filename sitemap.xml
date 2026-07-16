@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chugaopower.com/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-07-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://chugaopower.com/"/>
@@ -17,5 +17,23 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://chugaopower.com/?lang=ko"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://chugaopower.com/?lang=ar"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://chugaopower.com/?lang=it"/>
+  </url>
+  <url>
+    <loc>https://chugaopower.com/blog-1.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chugaopower.com/blog-2.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chugaopower.com/blog-3.html</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
