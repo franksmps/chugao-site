@@ -219,3 +219,8 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--a);outline-offset:3
 .btt svg{width:20px;height:20px;display:block;margin:0 auto}
 @media(max-width:768px){.nl,.lb{display:none}.mt{display:block}.sec{padding:50px 0}.st{font-size:26px}.hero{padding:100px 0 56px}.hero h1{font-size:28px}.hero p{font-size:16px}.hi{gap:32px}.hi2{min-height:240px}.hi2 img{min-height:240px!important}.hst{gap:18px;flex-wrap:wrap}.fg{grid-template-columns:1fr}.fb2{justify-content:center;text-align:center}.cg{grid-template-columns:1fr}.spec-table{display:block;overflow-x:auto;white-space:nowrap}.wa-float{right:16px;bottom:78px;width:52px;height:52px}.btt{right:16px;bottom:20px}}
 @media(max-width:768px){.quote-grid,.proof-grid{grid-template-columns:1fr}.quote-card,.proof-card,.inq-card,.quote-template,.whatsapp-card{padding:22px}.proof-strip{padding:22px}}
+/* --- 点击动效：导航与链接按下缩放反馈 (2026-07-16) --- */
+/* inline 元素 transform 无效，导航项与内联报价链接需设 inline-block */
+.nl a,.quote-cta a{display:inline-block}
+.nl a,.mm a,.fc a,.pcta,.quote-cta a{transition:color .2s,gap .2s,transform .12s ease}
+.nl a:active,.mm a:active,.fc a:active,.pcta:active,.quote-cta a:active{transform:scale(.94)}
