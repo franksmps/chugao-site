@@ -241,7 +241,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--a);outline-offset:3
 
 /* --- Flag bar (42 countries trust) --- */
 .flag-bar{background:#fff;border-bottom:1px solid var(--b);padding:14px 0;overflow:hidden}
-.flag-bar .c{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;max-width:1100px;margin:0 auto}
+.flag-bar .c{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:nowrap}
 .fb-label{font-size:13px;font-weight:600;color:var(--p);white-space:nowrap;margin-right:8px}
 .fb-f{font-size:28px;line-height:1;display:inline-block;opacity:.9;transition:transform .2s,opacity .2s}
 .fb-f:hover{opacity:1;transform:scale(1.2)}
