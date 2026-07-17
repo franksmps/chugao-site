@@ -83,6 +83,9 @@ header{position:fixed;top:0;left:0;right:0;height:68px;background:rgba(255,255,2
 .pn p{font-size:13px;color:var(--ts);margin-bottom:14px;line-height:1.5}
 .pt{display:flex;gap:6px;flex-wrap:wrap}
 .pt2{font-size:11px;background:#f1f5f9;color:var(--ts);padding:3px 8px;border-radius:4px;font-weight:500}
+/* Product model list — compact chip row */
+.pml{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.pm{font-size:11px;font-family:"SF Mono",Menlo,Consolas,monospace;background:#eff6ff;color:#1e40af;padding:2px 7px;border-radius:3px;border:1px solid #bfdbfe;font-weight:600;letter-spacing:-.2px}
 .pcta{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:600;color:var(--a);margin-top:10px;transition:gap 0.2s}
 .pcta:hover{gap:8px}
 .spec-sec{background:var(--w)}
