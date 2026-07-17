@@ -229,9 +229,9 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--a);outline-offset:3
 .nl a:active,.mm a:active,.fc a:active,.pcta:active,.quote-cta a:active{transform:scale(.94)}
 
 /* --- Flag bar (42 countries trust) --- */
-.flag-bar{background:#fff;border-bottom:1px solid var(--b);padding:12px 0;overflow:hidden}
-.flag-bar .c{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.fb-label{font-size:13px;font-weight:600;color:var(--p);white-space:nowrap;margin-right:4px}
-.fb-f{font-size:22px;line-height:1;display:inline-block;opacity:.9;transition:transform .2s,opacity .2s}
-.fb-f:hover{opacity:1;transform:scale(1.3)}
-.flag-bar img.emoji{width:24px;height:24px;margin:0 1px;vertical-align:middle}
+.flag-bar{background:#fff;border-bottom:1px solid var(--b);padding:14px 0;overflow:hidden}
+.flag-bar .c{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.fb-label{font-size:13px;font-weight:600;color:var(--p);white-space:nowrap;margin-right:8px}
+.fb-f{font-size:20px;line-height:1;display:inline-block;opacity:.85;transition:transform .2s,opacity .2s}
+.fb-f:hover{opacity:1;transform:scale(1.25)}
+.flag-bar img.emoji{width:22px;height:22px;margin:0 2px;vertical-align:middle}
