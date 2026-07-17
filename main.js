@@ -119,7 +119,7 @@ T.en = {
   f_prod:"Products",f_p1:"Adapters",f_p2:"Indoor drivers",f_p3:"IP67",f_p4:"IP65",
   f_comp:"Company",f_c1:"About",f_c2:"Why us",f_c3:"News",f_c4:"FAQ",
   f_supp:"Support",f_s1:"Contact",f_s2:"Email",f_s3:"WhatsApp",f_s4:"Request datasheets",
-  f_slogan:"LED power supplies, made in China since 2008",
+  f_slogan:"One stop whole series LED power supply manufacturer",
   sh_title:"Shipping & logistics",sh_sub:"Where we ship, and what to expect.",
   sh1_t:"FOB Shenzhen / Zhongshan",sh1_d:"Two port options. We pack in export cartons, 20-25 kg per carton. Pallets on request.",
   sh2_t:"Stock ships in 3-7 days",sh2_d:"Most adapter and indoor SKUs are in stock. We confirm availability the same day you ask.",
@@ -252,7 +252,7 @@ T.zh = {
   f_prod:"产品",f_p1:"适配器",f_p2:"室内电源",f_p3:"IP67",f_p4:"IP65",
   f_comp:"公司",f_c1:"关于",f_c2:"优势",f_c3:"资讯",f_c4:"常见问题",
   f_supp:"支持",f_s1:"联系",f_s2:"邮件",f_s3:"WhatsApp",f_s4:"索取规格书",
-  f_slogan:"LED 开关电源,中山制造 2008 年起",
+  f_slogan:"一站式全系列开关电源制造商",
 
   sh_title:"物流与运输",
   sh_sub:"发哪里，怎么发。",
@@ -482,7 +482,7 @@ T.es = {
   f_s2:"Email",
   f_s3:"WhatsApp",
   f_s4:"Solicitar fichas técnicas",
-  f_slogan:"Fuentes LED, hechas en China desde 2008",
+  f_slogan:"Fabricante integral de fuentes LED de toda la gama",
 
   sh_title:"Envío y logística",
   sh_sub:"A dónde enviamos y qué esperar.",
@@ -661,7 +661,7 @@ T.fr = {
   f_s2:"Email",
   f_s3:"WhatsApp",
   f_s4:"Demander les fiches techniques",
-  f_slogan:"Alimentations LED, fabriquées en Chine depuis 2008",
+  f_slogan:"Fabricant complet d'alimentations LED toute gamme",
 
   sh_title:"Expédition et logistique",
   sh_sub:"Où nous expédions, et à quoi s'attendre.",
@@ -840,7 +840,7 @@ T.de = {
   f_s2:"E-Mail",
   f_s3:"WhatsApp",
   f_s4:"Datenblätter anfragen",
-  f_slogan:"LED-Netzteile, made in China seit 2008",
+  f_slogan:"Kompletter Hersteller für die gesamte LED-Netzteil-Palette",
 
   sh_title:"Versand & Logistik",
   sh_sub:"Wohin wir versenden und was Sie erwartet.",
@@ -1019,7 +1019,7 @@ T.pt = {
   f_s2:"E-mail",
   f_s3:"WhatsApp",
   f_s4:"Solicitar fichas técnicas",
-  f_slogan:"Fontes LED, feitas na China desde 2008",
+  f_slogan:"Fabricante completo de fontes LED de toda a série",
 
   sh_title:"Envio e logística",
   sh_sub:"Para onde enviamos e o que esperar.",
@@ -1198,7 +1198,7 @@ T.ru = {
   f_s2:"Email",
   f_s3:"WhatsApp",
   f_s4:"Запросить даташиты",
-  f_slogan:"LED-источники, сделано в Китае с 2008",
+  f_slogan:"Производитель полного спектра источников питания для светодиодов",
 
   sh_title:"Доставка и логистика",
   sh_sub:"Куда отправляем и чего ожидать.",
@@ -1377,7 +1377,7 @@ T.ja = {
   f_s2:"メール",
   f_s3:"WhatsApp",
   f_s4:"データシートを依頼",
-  f_slogan:"LED スイッチング電源、中国 2008 年から",
+  f_slogan:"全シリーズLED電源のワンストップメーカー",
 
   sh_title:"物流・お届け",
   sh_sub:"お届け先と、お届けまでの流れ。",
@@ -1556,7 +1556,7 @@ T.ko = {
   f_s2:"이메일",
   f_s3:"WhatsApp",
   f_s4:"데이터시트 요청",
-  f_slogan:"LED 전원 공급 장치, 중국산 2008 년부터",
+  f_slogan:"전 시리즈 LED 전원 공급 장치 원스톱 제조사",
 
   sh_title:"배송 및 물류",
   sh_sub:"배송 가능 지역과 절차.",
@@ -1735,7 +1735,7 @@ T.ar = {
   f_s2:"البريد",
   f_s3:"WhatsApp",
   f_s4:"اطلب أوراق البيانات",
-  f_slogan:"إمدادات الطاقة LED، صُنع في الصين منذ 2008",
+  f_slogan:"شركة تصنيع متكاملة لمصادر طاقة LED بجميع السلاسل",
 
   sh_title:"الشحن واللوجستيات",
   sh_sub:"إلى أين نشحن وماذا تتوقع.",
@@ -1914,7 +1914,7 @@ T.it = {
   f_s2:"Email",
   f_s3:"WhatsApp",
   f_s4:"Richiedi schede tecniche",
-  f_slogan:"Alimentatori LED, prodotti in Cina dal 2008",
+  f_slogan:"Produttore unico di tutta la gamma di alimentatori LED",
 
   sh_title:"Spedizione e logistica",
   sh_sub:"Dove spediamo e cosa aspettarsi.",
