@@ -2232,6 +2232,23 @@ document.addEventListener("click", function(ev) {
   }
 }, true);
 
+// ==================== Email CTA fallback: copy to clipboard + visual feedback ====================
+// Used by the CTA "Email us" button. Tries mailto (browser default), and also copies
+// the email address to clipboard so the user always gets a usable result even without
+// a configured mail client.
+function handleEmailClick(el) {
+  var addr = "info@chugaopower.com";
+  var orig = el.textContent;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(addr).then(function() {
+      el.textContent = "✓ " + (typeof tr === "function" ? tr("inq_copy", "Copied!") : "Copied!");
+      setTimeout(function() { el.textContent = orig; }, 1800);
+    }).catch(function() {});
+  }
+  if (typeof gtag !== "undefined") gtag("event", "email_click");
+  return true; // let the native mailto: also fire
+}
+
 // ==================== Init ====================
 // Read ?lang=xx from URL on first visit, then save preference
 document.addEventListener("DOMContentLoaded", function() {

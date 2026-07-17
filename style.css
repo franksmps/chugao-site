@@ -149,8 +149,8 @@ header{position:fixed;top:0;left:0;right:0;height:68px;background:rgba(255,255,2
 .ctab{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 .cta .btn-p{background:#fff;color:var(--p)}
 .cta .btn-p:hover{background:#f1f5f9}
-.cta .btn-s{background:transparent;border-color:rgba(255,255,255,0.4);color:#fff}
-.cta .btn-s:hover{border-color:#fff}
+.cta .btn-s{background:#fff;color:var(--p);border-color:#e5e7eb}
+.cta .btn-s:hover{background:#f1f5f9;border-color:#d1d5db}
 .inquiry-sec{background:var(--w)}
 .inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .inquiry-form{background:var(--w);border:1px solid var(--b);border-radius:var(--r);padding:36px}
