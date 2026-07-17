@@ -187,6 +187,14 @@ header{position:fixed;top:0;left:0;right:0;height:68px;background:rgba(255,255,2
 footer{background:#0a0f1e;color:#94a3b8;padding:50px 0 24px}
 .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
 .fb p{font-size:14px;color:#64748b;margin-top:10px;line-height:1.6}
+.social{display:flex;gap:10px;margin-top:16px}
+.social a{width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s}
+.social a:hover{transform:translateY(-2px)}
+.social svg{width:18px;height:18px;fill:#fff}
+.social .sfb{background:#1877F2}
+.social .sig{background:#E4405F}
+.social .sfb:hover{box-shadow:0 4px 12px rgba(24,119,242,.45)}
+.social .sig:hover{box-shadow:0 4px 12px rgba(228,64,95,.45)}
 .fs{display:flex;gap:10px;margin-top:16px}
 .fs a{width:36px;height:36px;border-radius:8px;background:#1e293b;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all 0.2s;color:#94a3b8}
 .fs a:hover{background:var(--a);color:#fff}
