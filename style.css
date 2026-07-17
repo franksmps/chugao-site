@@ -232,5 +232,6 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--a);outline-offset:3
 .flag-bar{background:#fff;border-bottom:1px solid var(--b);padding:12px 0;overflow:hidden}
 .flag-bar .c{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .fb-label{font-size:13px;font-weight:600;color:var(--p);white-space:nowrap;margin-right:4px}
-.fb-f{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:24px;padding:0 7px;border-radius:4px;background:var(--bg);border:1px solid #e5e7eb;font-size:11px;font-weight:700;letter-spacing:.3px;color:#4b5563;transition:all .2s}
-.fb-f:hover{background:var(--a);color:#fff;border-color:var(--a);transform:translateY(-1px)}
+.fb-f{font-size:22px;line-height:1;display:inline-block;opacity:.9;transition:transform .2s,opacity .2s}
+.fb-f:hover{opacity:1;transform:scale(1.3)}
+.flag-bar img.emoji{width:24px;height:24px;margin:0 1px;vertical-align:middle}
