@@ -22,3 +22,10 @@ npm-debug.log
 
 // Don't ignore images - they are part of the site
 !images/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
