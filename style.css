@@ -248,3 +248,24 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--a);outline-offset:3
 .fb-f{font-size:28px;line-height:1;display:inline-block;opacity:.9;transition:transform .2s,opacity .2s}
 .fb-f:hover{opacity:1;transform:scale(1.2)}
 .flag-bar img.emoji{width:32px;height:32px;margin:0 2px;vertical-align:middle}
+
+/* --- Cookie consent banner (GDPR, P1-6) --- */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9998;background:rgba(15,23,42,.96);
+  color:#e2e8f0;font-size:14px;padding:16px 18px;box-shadow:0 -4px 20px rgba(0,0,0,.25);
+  transform:translateY(110%);transition:transform .35s ease;backdrop-filter:blur(4px)}
+.cookie-banner.show{transform:translateY(0)}
+.cb-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.cb-text{margin:0;flex:1;min-width:240px;line-height:1.5;color:#cbd5e1}
+.cb-btns{display:flex;gap:10px;flex-shrink:0}
+.cb-btn{border:0;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;transition:background .2s,transform .12s ease}
+.cb-btn:active{transform:scale(.95)}
+.cb-accept{background:var(--a,#2563eb);color:#fff}
+.cb-accept:hover{background:#1d4ed8}
+.cb-decline{background:transparent;color:#cbd5e1;border:1px solid #475569}
+.cb-decline:hover{background:#1e293b}
+@media(max-width:768px){
+  .cookie-banner{padding:14px 14px}
+  .cb-inner{flex-direction:column;align-items:stretch;text-align:center}
+  .cb-btns{justify-content:center}
+  .cb-btn{flex:1}
+}
