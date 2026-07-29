@@ -1940,12 +1940,34 @@ function tr(key, fallback) {
   return (pack && pack[key]) || (T.en && T.en[key]) || fallback || "";
 }
 
+// Per-language document title + meta description (SEO, P0-3)
+var META = {
+  en:{title:"CHUGAO - LED power supplies factory, Zhongshan China since 2008",desc:"LED switching power supplies made in Zhongshan, China. Adapters 5-200W, indoor drivers 50-400W, IP67 waterproof 10-400W, IP65 rainproof 100-600W. CE/RoHS on every unit. 50 pcs MOQ. Factory direct."},
+  zh:{title:"CHUGAO - LED 电源工厂，中国中山，始于 2008 年",desc:"中国中山制造 LED 开关电源。适配器 5-200W，室内驱动 50-400W，IP67 防水 10-400W，IP65 防雨 100-600W。每台均通过 CE/RoHS。最小起订量 50 台。工厂直供。"},
+  es:{title:"CHUGAO - Fábrica de fuentes de alimentación LED, Zhongshan China desde 2008",desc:"Fuentes de conmutación LED fabricadas en Zhongshan, China. Adaptadores 5-200W, drivers de interior 50-400W, IP67 impermeable 10-400W, IP65 anti-lluvia 100-600W. CE/RoHS en cada unidad. Pedido mínimo 50 uds. Venta directa de fábrica."},
+  fr:{title:"CHUGAO - Usine d'alimentations LED, Zhongshan Chine depuis 2008",desc:"Alimentations à découpage LED fabriquées à Zhongshan, Chine. Adaptadores 5-200W, drivers intérieurs 50-400W, IP67 étanche 10-400W, IP65 anti-pluie 100-600W. CE/RoHS sur chaque unité. MOQ 50 pièces. Vente directe usine."},
+  de:{title:"CHUGAO - LED-Netzteilwerk, Zhongshan China seit 2008",desc:"LED-Schaltnetzteile aus Zhongshan, China. Adapter 5-200W, Innen-Treiber 50-400W, IP67 wasserdicht 10-400W, IP65 regengeschützt 100-600W. CE/RoHS an jeder Einheit. MOQ 50 Stück. Direkt vom Werk."},
+  pt:{title:"CHUGAO - Fábrica de fontes de alimentação LED, Zhongshan China desde 2008",desc:"Fontes chaveadas LED fabricadas em Zhongshan, China. Adaptadores 5-200W, drivers internos 50-400W, IP67 à prova d'água 10-400W, IP65 à prova de chuva 100-600W. CE/RoHS em cada unidade. MOQ 50 unid. Venda direta da fábrica."},
+  ru:{title:"CHUGAO - Завод LED-блоков питания, Чжуншань Китай с 2008 года",desc:"Импульсные LED-блоки питания, произведённые в Чжуншане, Китай. Адаптеры 5-200 Вт, внутренние драйверы 50-400 Вт, IP67 водонепроницаемые 10-400 Вт, IP65 дождезащищённые 100-600 Вт. CE/RoHS на каждом блоке. Мин. партия 50 шт. Прямые поставки с завода."},
+  ja:{title:"CHUGAO - LED電源工場、中国中山 2008年から",desc:"中国中山製のLEDスイッチング電源。アダプター5-200W、屋内ドライバー50-400W、IP67防水10-400W、IP65防雨100-600W。全製品CE/RoHS取得。最小ロット50台。工場直送。"},
+  ko:{title:"CHUGAO - LED 전원 공급 장치 공장, 중국 중산 2008년부터",desc:"중국 중산에서 제조한 LED 스위칭 전원 공급 장치. 어댑터 5-200W, 실내 드라이버 50-400W, IP67 방수 10-400W, IP65 방우 100-600W. 모든 제품 CE/RoHS 인증. 최소 주문 50개. 공장 직송."},
+  ar:{title:"CHUGAO - مصنع مزودات طاقة LED، تشونغشان الصين منذ 2008",desc:"مزودات طاقة تعمل بالتبديل LED صنعت في تشونغشان، الصين. محولات 5-200 واط، محركات داخلية 50-400 واط، IP67 مقاوم للماء 10-400 واط، IP65 مقاوم للمطر 100-600 واط. CE/RoHS على كل وحدة. الحد الأدنى للطلب 50 قطعة. بيع مباشر من المصنع."},
+  it:{title:"CHUGAO - Fabbrica di alimentatori LED, Zhongshan Cina dal 2008",desc:"Alimentatori switching LED prodotti a Zhongshan, Cina. Adattatori 5-200W, driver interni 50-400W, IP67 impermeabile 10-400W, IP65 antipioggia 100-600W. CE/RoHS su ogni unità. MOQ 50 pz. Vendita diretta dalla fabbrica."}
+};
+
 function setLang(lang) {
   if (T[lang] === undefined) {
     if (DEBUG) console.warn("[CHUGAO] Language pack missing for: " + lang + ", fallback to en");
     lang = "en";
   }
   currentLang = lang;
+  // P0-3: sync document title + meta description to the active language
+  var meta = META[lang] || META.en;
+  if (meta) {
+    if (meta.title) document.title = meta.title;
+    var descEl = document.querySelector('meta[name="description"]');
+    if (descEl && meta.desc) descEl.setAttribute('content', meta.desc);
+  }
   var t = T[lang];
   var nodes = document.querySelectorAll("[data-i18n]");
   var missingCount = 0;

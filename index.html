@@ -42,8 +42,8 @@
 <meta property="og:url" content="https://chugaopower.com/">
 <meta property="og:image" content="https://chugaopower.com/images/factory.jpg.webp">
 <meta property="og:image:type" content="image/webp">
-<meta property="og:image:width" content="1536">
-<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1216">
+<meta property="og:image:height" content="832">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:locale:alternate" content="es_ES">
@@ -234,11 +234,13 @@ gtag('js', new Date());
   });
 })();
 </script>
-<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+<script src="./vendor/twemoji/twemoji.min.js" defer></script>
 <script>
-  if (window.twemoji) {
-    twemoji.parse(document.querySelector('.flag-bar'), { folder: 'svg', ext: '.svg' });
-  }
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.twemoji) {
+      twemoji.parse(document.querySelector('.flag-bar'), { base: './vendor/twemoji/', folder: 'svg', ext: '.svg' });
+    }
+  });
 </script>
 </body>
 </html>
