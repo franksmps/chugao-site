@@ -45,7 +45,7 @@ gtag('js', new Date());
 <div class="hero-img">
 <picture>
 <source type="image/webp" srcset="./images/blog-3-led-market-md.webp 1200w, ./images/blog-3-led-market.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
-<img src="./images/blog-3-led-market.jpg" alt="Global LED market overview 2026" loading="lazy" style="width:100%">
+<img src="./images/blog-3-led-market.jpg" alt="Global LED market overview 2026" loading="lazy" style="width:100%;aspect-ratio:4/3">
 </picture>
 </div>
 
@@ -186,10 +186,12 @@ li><strong>PWM dimming:</strong> Growing fast for horticulture and architectural
       try { var data = JSON.parse(el.textContent); data.inLanguage = bcp; el.textContent = JSON.stringify(data); } catch(e){}
     });
   }
-  if (typeof window.setLang === 'function') {
+    document.addEventListener('DOMContentLoaded', function(){
+if (typeof window.setLang === 'function') {
     var _orig = window.setLang;
     window.setLang = function(lang){ var r = _orig.apply(this, arguments); updateJsonLdLang(lang); return r; };
   }
+  });
   document.addEventListener('DOMContentLoaded', function(){
     var p = new URLSearchParams(location.search).get('lang');
     var stored = null; try { stored = localStorage.getItem('chugao_lang'); } catch(e){}
@@ -217,7 +219,7 @@ li><strong>PWM dimming:</strong> Growing fast for horticulture and architectural
 })();
 </script>
 
-<script src="main.min.js"></script>
+<script src="main.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
 <script>if(window.twemoji){twemoji.parse(document.body,{folder:'svg',ext:'.svg'});}</script>
 </body>

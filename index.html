@@ -166,7 +166,7 @@ gtag('js', new Date());
   </div>
 </div>
 
-<script src="main.min.js"></script>
+<script src="main.min.js" defer></script>
 <script>
 (function(){
   // ---- P1-4: JSON-LD inLanguage follows the selected language ----
@@ -183,7 +183,8 @@ gtag('js', new Date());
     });
   }
   // Patch setLang so every language switch also refreshes structured data
-  if (typeof window.setLang === 'function') {
+    document.addEventListener('DOMContentLoaded', function(){
+if (typeof window.setLang === 'function') {
     var _orig = window.setLang;
     window.setLang = function(lang){
       var r = _orig.apply(this, arguments);
@@ -191,6 +192,7 @@ gtag('js', new Date());
       return r;
     };
   }
+  });
   // Initial sync (covers ?lang=xx deep links and stored preference)
   document.addEventListener('DOMContentLoaded', function(){
     var p = new URLSearchParams(location.search).get('lang');

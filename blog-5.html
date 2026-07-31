@@ -45,7 +45,7 @@ gtag('js', new Date());
 <div class="hero-img">
 <picture>
 <source type="image/webp" srcset="./images/product-indoor-md.webp 1200w, ./images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
-<img src="./images/product-indoor.jpg" alt="Indoor LED driver with long lifespan" loading="lazy" style="width:100%">
+<img src="./images/product-indoor.jpg" alt="Indoor LED driver with long lifespan" loading="lazy" style="width:100%;aspect-ratio:1/1">
 </picture>
 </div>
 
@@ -162,10 +162,12 @@ Running a driver at 70-80% capacity instead of 95% can extend effective lifespan
       try { var data = JSON.parse(el.textContent); data.inLanguage = bcp; el.textContent = JSON.stringify(data); } catch(e){}
     });
   }
-  if (typeof window.setLang === 'function') {
+    document.addEventListener('DOMContentLoaded', function(){
+if (typeof window.setLang === 'function') {
     var _orig = window.setLang;
     window.setLang = function(lang){ var r = _orig.apply(this, arguments); updateJsonLdLang(lang); return r; };
   }
+  });
   document.addEventListener('DOMContentLoaded', function(){
     var p = new URLSearchParams(location.search).get('lang');
     var stored = null; try { stored = localStorage.getItem('chugao_lang'); } catch(e){}
@@ -193,7 +195,7 @@ Running a driver at 70-80% capacity instead of 95% can extend effective lifespan
 })();
 </script>
 
-<script src="main.min.js"></script>
+<script src="main.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
 <script>if(window.twemoji){twemoji.parse(document.body,{folder:'svg',ext:'.svg'});}</script>
 </body>
