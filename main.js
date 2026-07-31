@@ -1955,6 +1955,21 @@ var META = {
   it:{title:"CHUGAO - Fabbrica di alimentatori LED, Zhongshan Cina dal 2008",desc:"Alimentatori switching LED prodotti a Zhongshan, Cina. Adattatori 5-200W, driver interni 50-400W, IP67 impermeabile 10-400W, IP65 antipioggia 100-600W. CE/RoHS su ogni unità. MOQ 50 pz. Vendita diretta dalla fabbrica."}
 };
 
+// Navigate to the localized subdirectory for the chosen language.
+// Strips any leading /xx/ from the current path so it works on both the
+// homepage and nested pages (e.g. /zh/about/ -> /about/ for en).
+function goLang(lang) {
+  var path = location.pathname;
+  var m = path.match(/^\/([a-z]{2})\//);
+  if (m) { path = path.slice(m[1].length + 1); }
+  if (path === "") path = "/";
+  if (path.length > 1 && !path.endsWith("/")) path = path + "/";
+  var target = (lang === "en" ? "" : "/" + lang) + path;
+  if (target === "") target = "/";
+  if (location.hash) target += location.hash;
+  window.location.href = target;
+}
+
 function setLang(lang) {
   if (T[lang] === undefined) {
     if (DEBUG) console.warn("[CHUGAO] Language pack missing for: " + lang + ", fallback to en");

@@ -1,51 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://chugaopower.com/about/</loc>
+  </url>
+  <url>
+    <loc>https://chugaopower.com/certs/</loc>
+  </url>
+  <url>
+    <loc>https://chugaopower.com/faq/</loc>
+  </url>
   <url>
     <loc>https://chugaopower.com/</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://chugaopower.com/"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://chugaopower.com/?lang=zh"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://chugaopower.com/?lang=es"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://chugaopower.com/?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://chugaopower.com/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://chugaopower.com/?lang=pt"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://chugaopower.com/?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://chugaopower.com/?lang=ja"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://chugaopower.com/?lang=ko"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://chugaopower.com/?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://chugaopower.com/?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chugaopower.com/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://chugaopower.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://chugaopower.com/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://chugaopower.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://chugaopower.com/de/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://chugaopower.com/pt/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chugaopower.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://chugaopower.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://chugaopower.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://chugaopower.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://chugaopower.com/it/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chugaopower.com/" />
+  </url>
+  <url>
+    <loc>https://chugaopower.com/products/adapters/</loc>
+  </url>
+  <url>
+    <loc>https://chugaopower.com/products/indoor/</loc>
+  </url>
+  <url>
+    <loc>https://chugaopower.com/products/ip65/</loc>
+  </url>
+  <url>
+    <loc>https://chugaopower.com/products/ip67/</loc>
   </url>
   <url>
     <loc>https://chugaopower.com/blog-1.html</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://chugaopower.com/blog-2.html</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://chugaopower.com/blog-3.html</loc>
-    <lastmod>2026-07-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://chugaopower.com/blog-4.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://chugaopower.com/blog-5.html</loc>
-    <lastmod>2026-07-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>

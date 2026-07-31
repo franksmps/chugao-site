@@ -4,6 +4,7 @@
 User-agent: *
 Allow: /
 Allow: /images/
+Disallow: /src/
 Disallow: /*.json$
 
 # Sitemap
