@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects - CHUGAO Power
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+# Redirects are evaluated BEFORE _headers rules.
+
+# Build-source master templates are not public pages - send crawlers/visitors
+# to the real localized homepage instead of serving duplicate content.
+/src/*    /    301

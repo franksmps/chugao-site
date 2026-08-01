@@ -1,0 +1,53 @@
+# Cloudflare Pages custom headers - CHUGAO Power
+# Docs: https://developers.cloudflare.com/pages/configuration/headers/
+# NOTE: rules must NOT overlap for the same header name - Cloudflare joins
+# duplicate header values with a comma, which would corrupt Cache-Control.
+
+# ---------------------------------------------------------------------------
+# Security headers (apply to every response)
+# ---------------------------------------------------------------------------
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=(), magnetometer=(), gyroscope=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; form-action 'self' https://formspree.io; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+
+# ---------------------------------------------------------------------------
+# Caching
+# HTML keeps the Pages default (max-age=0, must-revalidate) so deploys go live
+# immediately. Only long-lived assets are overridden below.
+# ---------------------------------------------------------------------------
+/images/*
+  Cache-Control: public, max-age=2592000
+
+/vendor/*
+  Cache-Control: public, max-age=2592000
+
+# CSS/JS are NOT fingerprinted - keep short so updates actually land.
+# Listed explicitly (not /*.js) to avoid overlapping the /vendor/* rule.
+/style.css
+  Cache-Control: public, max-age=86400
+
+/blog.css
+  Cache-Control: public, max-age=86400
+
+/main.js
+  Cache-Control: public, max-age=86400
+
+/main.min.js
+  Cache-Control: public, max-age=86400
+
+# ---------------------------------------------------------------------------
+# Keep build sources and tooling out of the index
+# ---------------------------------------------------------------------------
+/src/*
+  X-Robots-Tag: noindex, nofollow
+
+/*.py
+  X-Robots-Tag: noindex, nofollow
+
+/*.json
+  X-Robots-Tag: noindex, nofollow
