@@ -56,12 +56,24 @@ about_body = '''
 <section class="sec sa"><div class="c">
 <h1>About CHUGAO</h1>
 <p>Zhongshan Chugao Electronic Technology Co., Ltd. makes LED switching power supplies in a 6,000 m&sup2; factory in Guzhen, Zhongshan, China. We run 38 people on the floor and 8 in sales, shipping to 42 countries across Europe, North America, the Middle East, and Southeast Asia.</p>
+
 <h2>What we make</h2>
-<p>Four product lines: AC/DC adapters (5-200W), indoor LED drivers (50-400W), IP67 waterproof drivers (10-400W), and IP65 rainproof drivers (100-600W). Every unit passes 48 hours of burn-in before it ships.</p>
-<h2>Quality &amp; certification</h2>
-<p>CE and RoHS on every model. UL is available per model. We send certificate PDFs before you order, and BIS certification for the India market is available on request. See our <a href="/certs/">certifications page</a>.</p>
+<p>Four product lines: AC/DC adapters (5-200W), indoor LED drivers (50-400W), IP67 waterproof drivers (10-400W), and IP65 rainproof drivers (100-600W). Every unit passes 48 hours of burn-in before it ships. Together they cover most low-voltage LED jobs, from a short strip behind a shelf to a weatherproof sign outside a shop.</p>
+
+<h2>Manufacturing &amp; quality control</h2>
+<p>Production runs on four dedicated lines fed by SMT assembly and wave soldering, then finished on in-house potting and enclosure lines. Each driver moves through incoming component inspection and automated ICT, then a 48-hour full-load burn-in at elevated temperature before it is packed. On the line we check output voltage, ripple, efficiency, and the four protective functions - over-voltage, over-current, over-temperature, and short-circuit - so a weak unit is caught before it reaches you.</p>
+
+<h2>Engineering &amp; customization</h2>
+<p>Our engineering team supports OEM and ODM changes to output voltage, enclosure size, connector type, and cable length. Where a project calls for it, we can add dimming control (0-10V or PWM) or adjust the input range. Custom samples are built from your spec sheet and verified against the same test routine used in mass production, so what you approve is what ships.</p>
+
+<h2>Global markets &amp; support</h2>
+<p>We supply distributors, lighting brands, and project contractors in 42 countries, with the strongest presence in Europe, North America, the Middle East, and Southeast Asia. Sales and engineering reply in English, Spanish, French, Russian, Arabic, and Chinese, and aim to respond within 1 hour during China business hours (GMT+8).</p>
+
 <h2>OEM and ODM</h2>
-<p>We build custom drivers for clients in Germany, Brazil, and Saudi Arabia. Minimum 500 pcs for custom tooling, free tooling on repeat orders over 2,000 pcs. Engineering support in English, Spanish, French, Russian, Arabic, and Chinese, with a 1-hour reply during China business hours (GMT+8).</p>
+<p>We build custom drivers for clients in Germany, Brazil, and Saudi Arabia. The minimum is 500 pcs for custom tooling, and tooling is free on repeat orders over 2,000 pcs. Send us your spec sheet and we return a quote, a sample lead time, and the certification plan for your target market.</p>
+
+<h2>Why buy factory direct</h2>
+<p>Buying from the manufacturer removes the trader margin and shortens the path from a design change to shipment. You can also request the exact certificate package your market needs instead of a generic one. Every shipment includes a commercial invoice, packing list, certificate of origin, and CE/RoHS reports, with original documents shipped with the goods.</p>
 </div></section>'''
 page('about.html', 'About CHUGAO - LED power supply factory, Zhongshan China',
      'CHUGAO is an LED switching power supply manufacturer in Zhongshan, China. 6,000 m2 factory, 4 product lines, CE/RoHS on every unit, OEM/ODM since 2008.',
@@ -98,22 +110,35 @@ page('faq.html', 'FAQ - CHUGAO LED power supply questions answered',
 certs_body = '''
 <section class="sec sa"><div class="c">
 <h1>Certifications &amp; compliance</h1>
-<p>Every CHUGAO model ships with the documentation your market requires. Certificate PDFs are sent before you place an order.</p>
-<h2>CE &amp; RoHS</h2>
-<p>CE marking and RoHS compliance are standard on every unit. Test reports are available on request.</p>
+<p>Every CHUGAO model ships with the documentation your market requires. Certificate PDFs are sent before you place an order, so you can clear customs and meet local electrical rules without surprises.</p>
+
+<h2>CE &amp; RoHS (standard on every model)</h2>
+<p>CE marking and RoHS compliance are standard on every unit. Our LED drivers are assessed against the EU directives that apply to lighting power supplies - the Low Voltage Directive and the EMC Directive - and RoHS confirms that restricted substances stay below the allowed limits. The test report and Declaration of Conformity are available on request.</p>
+
 <h2>UL</h2>
-<p>UL certification is handled per model and takes 4-6 weeks from order confirmation. We start the application once you confirm the model and quantity.</p>
+<p>UL certification is handled per model and takes 4-6 weeks from order confirmation. We start the application once you confirm the model and quantity, and we keep you updated on the file status. UL is typically required for the North American market.</p>
+
 <h2>BIS (India)</h2>
-<p>BIS certification for the India market is available on request for selected models. Tell us your target models and we confirm lead time and cost.</p>
-<h2>Factory &amp; documents</h2>
-<p>We provide commercial invoice, packing list, certificate of origin, and CE/RoHS reports with every shipment. Original documents ship with the goods.</p>
+<p>BIS certification for the India market is available on request for selected models. Tell us your target models and we confirm lead time and cost. Plan this early, because BIS registration runs in parallel with production rather than after it.</p>
+
+<h2>What we send with each shipment</h2>
+<ul>
+<li>Commercial invoice and packing list</li>
+<li>Certificate of origin</li>
+<li>CE and RoHS test reports / Declaration of Conformity</li>
+<li>UL file reference where applicable</li>
+</ul>
+<p>Original documents ship with the goods; PDF copies are emailed before the container leaves the factory.</p>
+
+<h2>Need a specific certificate?</h2>
+<p>Standards and proof requirements differ by country. Tell us the destination market and the model you plan to import, and we will confirm which certificate applies and how long it takes. See the <a href="/faq/">FAQ</a> for lead times and minimum order quantities, or <a href="/#contact">contact sales</a> for a quote.</p>
 </div></section>'''
 page('certs.html', 'Certifications - CE, RoHS, UL, BIS for CHUGAO LED drivers',
      'CHUGAO LED power supplies carry CE and RoHS on every model, UL per model, and BIS for India on request. Certificate PDFs provided before order.',
      certs_body, breadcrumb('Certifications', '/certs/'))
 
 # ---------- Product category template ----------
-def product_page(path, name, rng, ip, feat, desc, blurb, img, related=None):
+def product_page(path, name, rng, ip, feat, desc, blurb, img, related=None, extra=''):
     rel_block = ''
     if related:
         items = ''.join(f'<li><a href="/{b}.html">{t}</a></li>' for b, t in related)
@@ -133,6 +158,7 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, related=None):
 <li><strong>Key features:</strong> {feat}</li>
 </ul>
 <p>{desc}</p>
+{extra}
 <p><a href="/#inquiry" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p">View all products</a></p>{rel_block}
 </div>
 </div></section>'''
@@ -144,22 +170,54 @@ product_page('products/adapters.html', 'LED Adapters (5-200W)',
     'Compact AC/DC adapters for LED strips, modules, and signage. CE/UL available, 3-year warranty.',
     'AC/DC adapters for LED strips and modules, 5W-200W, 100-240V input.', '/images/product-adapter.webp',
     related=[('blog-1','Pick the Right LED Power Supply in 3 Steps'),
-             ('blog-5','LED Driver Lifespan: MTBF, L70, and How Long They Really Last')])
+             ('blog-5','LED Driver Lifespan: MTBF, L70, and How Long They Really Last')],
+    extra='''
+<h2>Where adapters are used</h2>
+<p>AC/DC adapters power 12V and 24V LED strips, LED modules, edge-lit signs, and small fixtures that plug into a wall outlet. The 100-240V universal input means one SKU ships worldwide - you only change the local plug or cord.</p>
+<h2>How to size an adapter</h2>
+<p>Add up the wattage of every LED you will run, then add a 20% margin so the adapter runs below its rated load. For example, 80W of strips needs at least a 100W adapter. Running below 80% load keeps the adapter cooler and extends its life.</p>
+<h2>What is built in</h2>
+<p>Each adapter has over-voltage, over-current, over-temperature, and short-circuit protection. Output options of 12V, 24V, 36V, and 48V cover most LED strips and modules.</p>
+''')
 product_page('products/indoor.html', 'Indoor LED Drivers (50-400W)',
     '50W - 400W', 'IP20', 'Built-in active PFC, fan-less silent operation',
     'Indoor LED drivers for ceiling lights and panel lights. High efficiency with active power-factor correction.',
     'Built-in PFC indoor LED drivers, 50W-400W, for ceiling and panel lights.', '/images/product-indoor.webp',
     related=[('blog-1','Pick the Right LED Power Supply in 3 Steps'),
-             ('blog-5','LED Driver Lifespan: MTBF, L70, and How Long They Really Last')])
+             ('blog-5','LED Driver Lifespan: MTBF, L70, and How Long They Really Last')],
+    extra='''
+<h2>Where indoor drivers are used</h2>
+<p>Indoor drivers feed ceiling lights, panel lights, troffers, and linear fixtures inside buildings. Built-in active PFC keeps the power factor high, which matters on commercial projects that put many fittings on one circuit.</p>
+<h2>How to size an indoor driver</h2>
+<p>Match the driver wattage to the total LED load plus a 20% margin, and confirm the output voltage (usually 12V or 24V DC) matches the fixture. For dimming projects, tell us the control type so we spec the right model.</p>
+<h2>What is built in</h2>
+<p>Active PFC, fan-less silent operation, and protection against over-voltage, over-current, over-temperature, and short-circuit. The IP20 enclosure is for dry indoor locations only.</p>
+''')
 product_page('products/ip67.html', 'IP67 Waterproof LED Drivers (10-400W)',
     '10W - 400W', 'IP67 / IP68', 'Fully sealed silicone potting, salt-spray tested',
     'Waterproof drivers for outdoor LED strips, fountains, and marine lighting. Built to survive wet environments.',
     'Fully potted IP67/IP68 waterproof LED drivers, 10W-400W, for outdoor and wet use.', '/images/product-waterproof.webp',
-    related=[('blog-2','IP20 vs IP65 vs IP67 vs IP68')])
+    related=[('blog-2','IP20 vs IP65 vs IP67 vs IP68')],
+    extra='''
+<h2>Where IP67 drivers are used</h2>
+<p>IP67 and IP68 drivers go where water is. Use them for outdoor LED strips, garden and landscape lighting, fountains, pools, and marine or coastal installs. The fully sealed silicone potting blocks water and salt spray.</p>
+<h2>How to size a waterproof driver</h2>
+<p>Total the LED load, add a 20% margin, and pick a model rated above that sum. For hot environments or sealed enclosures, leave extra headroom so the driver runs cool. The 190-340V input covers most international sites.</p>
+<h2>What is built in</h2>
+<p>Sealed potting, salt-spray resistance, and over-voltage, over-current, over-temperature, and short-circuit protection. Rated for full outdoor and wet use - not for permanent submersion unless the model is marked IP68.</p>
+''')
 product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
     '100W - 600W', 'IP65', 'Metal case with mesh vents, corrosion resistant',
     'Rainproof drivers for signage, billboards, and semi-outdoor installations. Metal housing with ventilation.',
     'Metal-case IP65 rainproof LED drivers, 100W-600W, for signage and semi-outdoor.', '/images/product-rainproof.webp',
-    related=[('blog-2','IP20 vs IP65 vs IP67 vs IP68')])
+    related=[('blog-2','IP20 vs IP65 vs IP67 vs IP68')],
+    extra='''
+<h2>Where IP65 drivers are used</h2>
+<p>IP65 rainproof drivers suit signage, billboards, channel letters, and semi-outdoor installs that face rain and dust but not direct water jets. The metal case with mesh vents sheds heat while keeping weather out.</p>
+<h2>How to size a rainproof driver</h2>
+<p>Add the wattage of all connected signs, add a 20% margin, and choose a model above that total. The 190-264V input covers standard commercial mains. Mount the case where air can flow through the vents.</p>
+<h2>What is built in</h2>
+<p>Corrosion-resistant metal case, ventilation for high-power runs, and over-voltage, over-current, over-temperature, and short-circuit protection. For full outdoor wet use, choose the IP67 line instead.</p>
+''')
 
 print("All pages generated.")
