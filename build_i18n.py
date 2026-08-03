@@ -116,9 +116,20 @@ def inject_hreflang(html, page_url, langs):
     links.append(f'  <link rel="alternate" hreflang="x-default" href="{DOMAIN + page_url}" />')
     return re.sub(r'(</title>)', r'\1\n' + '\n'.join(links), html, count=1)
 
-def inject_canonical(html, page_url):
-    canon = f'  <link rel="canonical" href="{DOMAIN + page_url}" />'
+def inject_canonical(html, page_url, lang):
+    url = page_url if lang == 'en' else '/' + lang + page_url
+    canon = f'  <link rel="canonical" href="{DOMAIN + url}" />'
     return re.sub(r'(</title>)', r'\1\n' + canon, html, count=1)
+
+def inject_og_locale(html, bcp):
+    loc = bcp.replace('-', '_')
+    cur = bcp.split('-')[0] if '-' in bcp else bcp
+    tags = [f'  <meta property="og:locale" content="{loc}" />']
+    for l in LANGS:
+        if l == cur:
+            continue
+        tags.append(f'  <meta property="og:locale:alternate" content="{BCP[l].replace("-", "_")}" />')
+    return re.sub(r'(</title>)', r'\1\n' + '\n'.join(tags), html, count=1)
 
 def rewrite_urls(html):
     def fix(m):
@@ -174,7 +185,8 @@ def build_page(rel_html, T, META):
         html = set_jsonld_lang(html, BCP[lang])
         html = strip_old_hreflang(html)
         html = inject_hreflang(html, page_url, target_langs)
-        html = inject_canonical(html, page_url)
+        html = inject_canonical(html, page_url, lang)
+        html = inject_og_locale(html, BCP[lang])
         html = rewrite_urls(html)
         html = inject_switcher(html, lang)
         out_rel = out_path(url, lang)
@@ -191,14 +203,22 @@ def build_sitemap(entries):
     out.append('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                'xmlns:xhtml="http://www.w3.org/1999/xhtml">')
     for e in entries:
-        out.append('  <url>')
-        out.append(f'    <loc>{e["canonical"]}</loc>')
         if e['fan_out']:
+            # Emit one <url> per language, each carrying the full hreflang set.
             for l in LANGS:
-                if l in e['alts']:
-                    out.append(f'    <xhtml:link rel="alternate" hreflang="{l}" href="{e["alts"][l]}" />')
-            out.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{e["alts"]["en"]}" />')
-        out.append('  </url>')
+                if l not in e['alts']:
+                    continue
+                out.append('  <url>')
+                out.append(f'    <loc>{e["alts"][l]}</loc>')
+                for la in LANGS:
+                    if la in e['alts']:
+                        out.append(f'    <xhtml:link rel="alternate" hreflang="{la}" href="{e["alts"][la]}" />')
+                out.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{e["alts"]["en"]}" />')
+                out.append('  </url>')
+        else:
+            out.append('  <url>')
+            out.append(f'    <loc>{e["canonical"]}</loc>')
+            out.append('  </url>')
     # static blog pages (English only)
     for b in ['blog-1','blog-2','blog-3','blog-4','blog-5']:
         out.append('  <url>')

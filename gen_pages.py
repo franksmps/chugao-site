@@ -27,6 +27,7 @@ def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg.we
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/logo.png">
 <link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 </head>
 <body>
 {NAV}
@@ -112,7 +113,13 @@ page('certs.html', 'Certifications - CE, RoHS, UL, BIS for CHUGAO LED drivers',
      certs_body, breadcrumb('Certifications', '/certs/'))
 
 # ---------- Product category template ----------
-def product_page(path, name, rng, ip, feat, desc, blurb, img):
+def product_page(path, name, rng, ip, feat, desc, blurb, img, related=None):
+    rel_block = ''
+    if related:
+        items = ''.join(f'<li><a href="/{b}.html">{t}</a></li>' for b, t in related)
+        rel_block = f'''
+<h2>Related reading</h2>
+<ul class="rl">{items}</ul>'''
     body = f'''
 <section class="sec sa"><div class="c">
 <h1>{name}</h1>
@@ -126,7 +133,7 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img):
 <li><strong>Key features:</strong> {feat}</li>
 </ul>
 <p>{desc}</p>
-<p><a href="/#inquiry" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p">View all products</a></p>
+<p><a href="/#inquiry" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p">View all products</a></p>{rel_block}
 </div>
 </div></section>'''
     return page(path, f'{name} - CHUGAO LED power supply', desc, body,
@@ -135,18 +142,24 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img):
 product_page('products/adapters.html', 'LED Adapters (5-200W)',
     '5W - 200W', 'IP20 (indoor)', 'Wall-mount and desktop, AC 100-240V universal input, DC 12/24/36/48V output',
     'Compact AC/DC adapters for LED strips, modules, and signage. CE/UL available, 3-year warranty.',
-    'AC/DC adapters for LED strips and modules, 5W-200W, 100-240V input.', '/images/product-adapter.webp')
+    'AC/DC adapters for LED strips and modules, 5W-200W, 100-240V input.', '/images/product-adapter.webp',
+    related=[('blog-1','Pick the Right LED Power Supply in 3 Steps'),
+             ('blog-5','LED Driver Lifespan: MTBF, L70, and How Long They Really Last')])
 product_page('products/indoor.html', 'Indoor LED Drivers (50-400W)',
     '50W - 400W', 'IP20', 'Built-in active PFC, fan-less silent operation',
     'Indoor LED drivers for ceiling lights and panel lights. High efficiency with active power-factor correction.',
-    'Built-in PFC indoor LED drivers, 50W-400W, for ceiling and panel lights.', '/images/product-indoor.webp')
+    'Built-in PFC indoor LED drivers, 50W-400W, for ceiling and panel lights.', '/images/product-indoor.webp',
+    related=[('blog-1','Pick the Right LED Power Supply in 3 Steps'),
+             ('blog-5','LED Driver Lifespan: MTBF, L70, and How Long They Really Last')])
 product_page('products/ip67.html', 'IP67 Waterproof LED Drivers (10-400W)',
     '10W - 400W', 'IP67 / IP68', 'Fully sealed silicone potting, salt-spray tested',
     'Waterproof drivers for outdoor LED strips, fountains, and marine lighting. Built to survive wet environments.',
-    'Fully potted IP67/IP68 waterproof LED drivers, 10W-400W, for outdoor and wet use.', '/images/product-waterproof.webp')
+    'Fully potted IP67/IP68 waterproof LED drivers, 10W-400W, for outdoor and wet use.', '/images/product-waterproof.webp',
+    related=[('blog-2','IP20 vs IP65 vs IP67 vs IP68')])
 product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
     '100W - 600W', 'IP65', 'Metal case with mesh vents, corrosion resistant',
     'Rainproof drivers for signage, billboards, and semi-outdoor installations. Metal housing with ventilation.',
-    'Metal-case IP65 rainproof LED drivers, 100W-600W, for signage and semi-outdoor.', '/images/product-rainproof.webp')
+    'Metal-case IP65 rainproof LED drivers, 100W-600W, for signage and semi-outdoor.', '/images/product-rainproof.webp',
+    related=[('blog-2','IP20 vs IP65 vs IP67 vs IP68')])
 
 print("All pages generated.")
