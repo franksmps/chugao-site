@@ -10,7 +10,7 @@ NODE = r"C:/Users/Admin/.workbuddy/binaries/node/versions/22.22.2/node.exe"
 EXTRACT = os.path.join(REPO, 'extract_i18n.cjs')
 MAIN_JS = os.path.join(REPO, 'main.js')
 I18N_JSON = os.path.join(REPO, 'i18n.json')
-DOMAIN = 'https://chugaopower.com'
+DOMAIN = 'https://www.chugaopower.com'
 
 BCP = {'en':'en','zh':'zh-CN','es':'es','fr':'fr','de':'de','pt':'pt','ru':'ru','ja':'ja','ko':'ko','ar':'ar','it':'it'}
 
