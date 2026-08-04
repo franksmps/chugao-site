@@ -142,15 +142,20 @@ def rewrite_urls(html):
     html = re.sub(r'(\bsrcset=)("|\')([^"\']*)\2', fixss, html)
     return html
 
-def inject_switcher(html, lang):
+def inject_switcher(html, lang, page_url='/'):
+    # Anchor fallback: each language item carries a real href so navigation works
+    # even if main.min.js fails to execute. goLang() still enhances (preserves hash).
+    def href_for(l):
+        return page_url if l == 'en' else '/' + l + page_url
     dd = ''.join(
-        f'<button type="button" class="lang-item{" active" if l==lang else ""}" id="lang-{l}" '
-        f'onclick="goLang(\'{l}\')"><span class="lang-flag">{flag(letters)}</span>'
-        f'<span class="lang-name">{native}</span></button>'
+        f'<a class="lang-item{" active" if l==lang else ""}" id="lang-{l}" '
+        f'href="{href_for(l)}" onclick="goLang(\'{l}\')">'
+        f'<span class="lang-flag">{flag(letters)}</span>'
+        f'<span class="lang-name">{native}</span></a>'
         for (l, letters, native) in LANGS_META)
     mob = ''.join(
-        f'<button type="button" onclick="goLang(\'{l}\');closeMobileMenu()" id="ml-{l}"'
-        f'{" class=\"active\"" if l==lang else ""}>{l.upper()}</button>'
+        f'<a href="{href_for(l)}" onclick="goLang(\'{l}\');closeMobileMenu()" id="ml-{l}"'
+        f'{" class=\"active\"" if l==lang else ""}>{l.upper()}</a>'
         for (l, letters, native) in LANGS_META)
     html = html.replace('<!--LANG_DROPDOWN-->', dd)
     html = html.replace('<!--LANG_MOBILE-->', mob)
@@ -188,7 +193,7 @@ def build_page(rel_html, T, META):
         html = inject_canonical(html, page_url, lang)
         html = inject_og_locale(html, BCP[lang])
         html = rewrite_urls(html)
-        html = inject_switcher(html, lang)
+        html = inject_switcher(html, lang, page_url)
         out_rel = out_path(url, lang)
         out_abs = os.path.join(REPO, out_rel)
         os.makedirs(os.path.dirname(out_abs), exist_ok=True)
