@@ -19,6 +19,9 @@ header .c{display:flex;align-items:center;justify-content:space-between;max-widt
 .lang-btn:hover{border-color:var(--a);color:var(--a)}
 .lang-dropdown{position:absolute;top:100%;right:0;background:var(--w);border:1px solid var(--b);border-radius:8px;box-shadow:var(--lg);min-width:220px;margin-top:8px;display:none;z-index:3000;overflow:hidden}
 .lang-dropdown.open{display:block;pointer-events:auto}
+/* Switcher works even without JS: reveal on hover or keyboard focus */
+.lang-selector:hover .lang-dropdown,
+.lang-selector:focus-within .lang-dropdown{display:block}
 .lang-item{display:flex;align-items:center;gap:10px;padding:10px 16px;cursor:pointer;transition:all .2s;border:0;background:transparent;width:100%;text-align:left;font:inherit;color:inherit;border-bottom:1px solid var(--b);text-decoration:none}
 .lang-item:last-child{border-bottom:none}
 .lang-item:hover{background:var(--bg);color:var(--a)}

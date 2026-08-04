@@ -31,8 +31,10 @@ LANGS_META = [
 LANGS = [c for c,_,_ in LANGS_META]
 
 # Source pages that fan out to ALL languages (full localization available).
-# New content pages start English-only; flip to True once their T keys are translated.
-LOCALIZED = {'index'}
+# Content is English-only until T keys are translated, but fanning out keeps the
+# language switcher links valid (no 404) across the whole site.
+LOCALIZED = {'index', 'about', 'certs', 'faq',
+             'products/adapters', 'products/indoor', 'products/ip65', 'products/ip67'}
 
 def flag(letters):
     base = 0x1F1E6

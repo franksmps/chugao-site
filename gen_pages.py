@@ -55,13 +55,35 @@ def breadcrumb(name, url):
 about_body = '''
 <section class="sec sa"><div class="c">
 <h1>About CHUGAO</h1>
-<p>Zhongshan Chugao Electronic Technology Co., Ltd. makes LED switching power supplies in a 6,000 m&sup2; factory in Guzhen, Zhongshan, China. We run 38 people on the floor and 8 in sales, shipping to 42 countries across Europe, North America, the Middle East, and Southeast Asia.</p>
+<p class="ss" style="margin:0 auto 48px">Zhongshan Chugao Electronic Technology Co., Ltd. makes LED switching power supplies in a 6,000 m&sup2; factory in Guzhen, Zhongshan &mdash; the lighting manufacturing hub of China. We run 38 people on the floor and 8 in sales, shipping to 42 countries across Europe, North America, the Middle East, and Southeast Asia.</p>
 
+<div class="wg" style="margin-bottom:60px">
+<div class="wc"><div class="wi">6,000</div><h3>m&sup2; Factory</h3><p>Guzhen, Zhongshan &mdash; China's lighting capital, with the full supply chain next door.</p></div>
+<div class="wc"><div class="wi">38+</div><h3>Floor staff</h3><p>Skilled SMT, wave-soldering, potting and QC operators on four dedicated lines.</p></div>
+<div class="wc"><div class="wi">42</div><h3>Countries</h3><p>Distributors, brands and contractors across Europe, North America, the Middle East and SE Asia.</p></div>
+<div class="wc"><div class="wi">2008</div><h3>Trading since</h3><p>Over 15 years building LED drivers and AC/DC adapters for global buyers.</p></div>
+<div class="wc"><div class="wi">4</div><h3>Product lines</h3><p>Adapters, indoor drivers, IP67 and IP65 &mdash; one stop for low-voltage LED power.</p></div>
+<div class="wc"><div class="wi">48h</div><h3>Burn-in</h3><p>Every unit runs a 48-hour full-load burn-in before it is packed and shipped.</p></div>
+</div>
+
+<div class="ag" style="margin-bottom:60px">
+<div class="at">
 <h2>What we make</h2>
-<p>Four product lines: AC/DC adapters (5-200W), indoor LED drivers (50-400W), IP67 waterproof drivers (10-400W), and IP65 rainproof drivers (100-600W). Every unit passes 48 hours of burn-in before it ships. Together they cover most low-voltage LED jobs, from a short strip behind a shelf to a weatherproof sign outside a shop.</p>
+<p>Four product lines cover most low-voltage LED jobs: AC/DC adapters (5-200W), indoor LED drivers (50-400W), IP67 waterproof drivers (10-400W), and IP65 rainproof drivers (100-600W). Together they run everything from a short strip behind a shelf to a weatherproof sign outside a shop.</p>
+<p>Every unit passes 48 hours of burn-in before it ships, and carries CE and RoHS as standard. UL and BIS are available per model for the North American and Indian markets.</p>
+</div>
+<div class="aimg"><img src="/images/factory.jpg.webp" alt="CHUGAO LED power supply factory in Zhongshan, China" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+</div>
 
 <h2>Manufacturing &amp; quality control</h2>
-<p>Production runs on four dedicated lines fed by SMT assembly and wave soldering, then finished on in-house potting and enclosure lines. Each driver moves through incoming component inspection and automated ICT, then a 48-hour full-load burn-in at elevated temperature before it is packed. On the line we check output voltage, ripple, efficiency, and the four protective functions - over-voltage, over-current, over-temperature, and short-circuit - so a weak unit is caught before it reaches you.</p>
+<p>Production runs on four dedicated lines fed by SMT assembly and wave soldering, then finished on in-house potting and enclosure lines. Each driver moves through incoming component inspection and automated ICT, then a 48-hour full-load burn-in at elevated temperature before it is packed. On the line we check output voltage, ripple, efficiency, and the four protective functions &mdash; over-voltage, over-current, over-temperature, and short-circuit &mdash; so a weak unit is caught before it reaches you.</p>
+
+<div class="proof-grid" style="margin:36px 0">
+<div class="proof-card"><span>SMT</span><h3>Automated assembly</h3><p>Surface-mount and wave soldering with automated optical and in-circuit inspection.</p></div>
+<div class="proof-card"><span>ICT</span><h3>In-circuit test</h3><p>Every board is tested for shorts, opens and component values before potting.</p></div>
+<div class="proof-card"><span>48h</span><h3>Full-load burn-in</h3><p>Units run at full load in a hot chamber so early failures show up before shipping.</p></div>
+<div class="proof-card"><span>4P</span><h3>Four protections</h3><p>Over-voltage, over-current, over-temperature and short-circuit protection on every model.</p></div>
+</div>
 
 <h2>Engineering &amp; customization</h2>
 <p>Our engineering team supports OEM and ODM changes to output voltage, enclosure size, connector type, and cable length. Where a project calls for it, we can add dimming control (0-10V or PWM) or adjust the input range. Custom samples are built from your spec sheet and verified against the same test routine used in mass production, so what you approve is what ships.</p>
@@ -74,6 +96,12 @@ about_body = '''
 
 <h2>Why buy factory direct</h2>
 <p>Buying from the manufacturer removes the trader margin and shortens the path from a design change to shipment. You can also request the exact certificate package your market needs instead of a generic one. Every shipment includes a commercial invoice, packing list, certificate of origin, and CE/RoHS reports, with original documents shipped with the goods.</p>
+
+<div class="proof-strip">
+<div><strong>Need a quote or certificate plan?</strong><p>Tell us your market and model &mdash; we reply within 1 hour in China business hours.</p></div>
+<a class="btn-p" href="/#inquiry">Contact sales</a>
+</div>
+
 </div></section>'''
 page('about.html', 'About CHUGAO - LED power supply factory, Zhongshan China',
      'CHUGAO is an LED switching power supply manufacturer in Zhongshan, China. 6,000 m2 factory, 4 product lines, CE/RoHS on every unit, OEM/ODM since 2008.',
@@ -138,37 +166,79 @@ page('certs.html', 'Certifications - CE, RoHS, UL, BIS for CHUGAO LED drivers',
      certs_body, breadcrumb('Certifications', '/certs/'))
 
 # ---------- Product category template ----------
-def product_page(path, name, rng, ip, feat, desc, blurb, img, related=None, extra=''):
+# Product index for cross-links shown on every product page
+PRODUCTS = [
+    ('products/adapters', 'LED Adapters (5-200W)', '/images/product-adapter.webp'),
+    ('products/indoor', 'Indoor LED Drivers (50-400W)', '/images/product-indoor.webp'),
+    ('products/ip67', 'IP67 Waterproof LED Drivers (10-400W)', '/images/product-waterproof.webp'),
+    ('products/ip65', 'IP65 Rainproof LED Drivers (100-600W)', '/images/product-rainproof.webp'),
+]
+
+def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='', related=None, extra=''):
     rel_block = ''
     if related:
         items = ''.join(f'<li><a href="/{b}.html">{t}</a></li>' for b, t in related)
         rel_block = f'''
 <h2>Related reading</h2>
 <ul class="rl">{items}</ul>'''
+    other = ''.join(
+        f'<a class="bc" href="/{p}/"><div class="bi">'
+        f'<img src="{i}" alt="{n}" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>'
+        f'<div class="bn"><h3>{n}</h3><p>View specifications &rarr;</p></div></a>'
+        for (p, n, i) in PRODUCTS if p != path)
+    other_block = f'''
+<h2>Other CHUGAO product lines</h2>
+<div class="bg" style="margin-top:24px">{other}</div>'''
     body = f'''
 <section class="sec sa"><div class="c">
 <h1>{name}</h1>
-<p>{blurb}</p>
-<div class="pc" style="max-width:760px;margin:0 auto">
-<div class="pi"><img src="{img}" alt="{name}" loading="lazy" style="width:100%;border-radius:12px"></div>
-<h2>Specifications</h2>
-<ul>
+<p class="ss" style="margin:0 auto 44px">{blurb}</p>
+
+<div class="ag" style="margin-bottom:56px">
+<div class="at">
+<h2>Overview</h2>
+<p>{desc}</p>
+<div class="quote-card" style="padding:20px 24px;margin-top:18px">
+<ul style="list-style:none;padding-left:0;margin:0">
 <li><strong>Power range:</strong> {rng}</li>
 <li><strong>Protection:</strong> {ip}</li>
-<li><strong>Key features:</strong> {feat}</li>
+<li><strong>Input:</strong> {inp}</li>
+<li><strong>Output:</strong> {outp}</li>
 </ul>
-<p>{desc}</p>
-{extra}
-<p><a href="/#inquiry" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p">View all products</a></p>{rel_block}
 </div>
+</div>
+<div class="aimg"><img src="{img}" alt="{name}" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+</div>
+
+<h2>Specifications</h2>
+<table class="spec-table">
+<tr><th>Parameter</th><th>Detail</th></tr>
+<tr><td>Power range</td><td>{rng}</td></tr>
+<tr><td>Ingress protection</td><td>{ip}</td></tr>
+<tr><td>Input voltage</td><td>{inp}</td></tr>
+<tr><td>Output voltage</td><td>{outp}</td></tr>
+<tr><td>Key features</td><td>{feat}</td></tr>
+</table>
+
+<h2>Key features</h2>
+<div class="wg" style="margin:24px 0">
+<div class="wc"><div class="wi">&#9889;</div><h3>Wide input</h3><p>{inp} &mdash; one SKU covers most international sites.</p></div>
+<div class="wc"><div class="wi">&#127754;</div><h3>Dual output</h3><p>{outp} options fit the common LED strips and modules.</p></div>
+<div class="wc"><div class="wi">&#128274;</div><h3>Four protections</h3><p>Over-voltage, over-current, over-temperature and short-circuit.</p></div>
+<div class="wc"><div class="wi">&#9989;</div><h3>Certified</h3><p>CE and RoHS standard; UL / BIS available per model.</p></div>
+</div>
+{extra}
+{other_block}
+<p style="margin-top:36px"><a href="/#inquiry" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p" style="color:var(--a);font-weight:600">View all products</a></p>{rel_block}
 </div></section>'''
     return page(path, f'{name} - CHUGAO LED power supply', desc, body,
-                breadcrumb(name, '/' + path.replace('src/','').replace('.html','/')), og_image=img)
+                breadcrumb(name, '/' + path + '/'), og_image=img)
 
 product_page('products/adapters.html', 'LED Adapters (5-200W)',
     '5W - 200W', 'IP20 (indoor)', 'Wall-mount and desktop, AC 100-240V universal input, DC 12/24/36/48V output',
     'Compact AC/DC adapters for LED strips, modules, and signage. CE/UL available, 3-year warranty.',
     'AC/DC adapters for LED strips and modules, 5W-200W, 100-240V input.', '/images/product-adapter.webp',
+    inp='AC 100-240V universal', outp='DC 12/24/36/48V',
     related=[('blog-1','Pick the Right LED Power Supply in 3 Steps'),
              ('blog-5','LED Driver Lifespan: MTBF, L70, and How Long They Really Last')],
     extra='''
@@ -183,6 +253,7 @@ product_page('products/indoor.html', 'Indoor LED Drivers (50-400W)',
     '50W - 400W', 'IP20', 'Built-in active PFC, fan-less silent operation',
     'Indoor LED drivers for ceiling lights and panel lights. High efficiency with active power-factor correction.',
     'Built-in PFC indoor LED drivers, 50W-400W, for ceiling and panel lights.', '/images/product-indoor.webp',
+    inp='AC 190-264V', outp='DC 12/24V',
     related=[('blog-1','Pick the Right LED Power Supply in 3 Steps'),
              ('blog-5','LED Driver Lifespan: MTBF, L70, and How Long They Really Last')],
     extra='''
@@ -197,6 +268,7 @@ product_page('products/ip67.html', 'IP67 Waterproof LED Drivers (10-400W)',
     '10W - 400W', 'IP67 / IP68', 'Fully sealed silicone potting, salt-spray tested',
     'Waterproof drivers for outdoor LED strips, fountains, and marine lighting. Built to survive wet environments.',
     'Fully potted IP67/IP68 waterproof LED drivers, 10W-400W, for outdoor and wet use.', '/images/product-waterproof.webp',
+    inp='AC 90-305V', outp='DC 12/24V',
     related=[('blog-2','IP20 vs IP65 vs IP67 vs IP68')],
     extra='''
 <h2>Where IP67 drivers are used</h2>
@@ -210,6 +282,7 @@ product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
     '100W - 600W', 'IP65', 'Metal case with mesh vents, corrosion resistant',
     'Rainproof drivers for signage, billboards, and semi-outdoor installations. Metal housing with ventilation.',
     'Metal-case IP65 rainproof LED drivers, 100W-600W, for signage and semi-outdoor.', '/images/product-rainproof.webp',
+    inp='AC 190-264V', outp='DC 12/24V',
     related=[('blog-2','IP20 vs IP65 vs IP67 vs IP68')],
     extra='''
 <h2>Where IP65 drivers are used</h2>
