@@ -16,6 +16,15 @@
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' data:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; form-action 'self' https://formspree.io; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
 
 # ---------------------------------------------------------------------------
+# Encoding: force UTF-8 on HTML responses so charset-less edge/CDN nodes
+# (e.g. Cloudflare returning "Content-Type: text/html" without charset) can
+# never mis-detect and render mojibake. Directory index routes ("/") are
+# covered by the <meta charset> in the document head.
+# ---------------------------------------------------------------------------
+/*.html
+  Content-Type: text/html; charset=utf-8
+
+# ---------------------------------------------------------------------------
 # Caching
 # HTML keeps the Pages default (max-age=0, must-revalidate) so deploys go live
 # immediately. Only long-lived assets are overridden below.
