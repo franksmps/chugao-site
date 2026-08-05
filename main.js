@@ -2043,13 +2043,6 @@ function setLang(lang) {
   // Update dir for RTL languages
   document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
 
-  // Update URL (without reload) so ?lang=xx is shareable
-  try {
-    var url = new URL(window.location.href);
-    url.searchParams.set("lang", lang);
-    window.history.replaceState({}, "", url.toString());
-  } catch(e) {}
-
   // Highlight current language in dropdown
   var items = document.querySelectorAll(".lang-item");
   for (var i = 0; i < items.length; i++) {
@@ -2290,13 +2283,14 @@ function handleEmailClick(el) {
 // Read ?lang=xx from URL on first visit, then save preference
 document.addEventListener("DOMContentLoaded", function() {
   var savedLang = "en";
-  // Check URL override first (only on first visit, not on every navigation)
+  // Detect language from URL path (pre-rendered pages), save preference
+  // Path pattern: /zh/, /es/, /pt/ etc. — pre-rendered content already matches.
+  // For root (/), use saved or default "en".
   try {
-    var url = new URL(window.location.href);
-    var urlLang = url.searchParams.get("lang");
-    if (urlLang && SUPPORTED.indexOf(urlLang) !== -1) {
-      savedLang = urlLang;
-      try { localStorage.setItem("chugao_lang", urlLang); } catch(e) {}
+    var m = window.location.pathname.match(/^\/([a-z]{2})\//);
+    if (m && SUPPORTED.indexOf(m[1]) !== -1) {
+      savedLang = m[1];
+      try { localStorage.setItem("chugao_lang", savedLang); } catch(e) {}
     } else {
       savedLang = localStorage.getItem("chugao_lang") || "en";
     }
