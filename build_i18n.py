@@ -3,6 +3,8 @@
 # Reads src/*.html, translates via main.js T dictionary, emits per-language
 # subdirectory pages (/zh/, /es/ ...) with hreflang + absolute asset paths.
 import os, re, json, subprocess, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from i18n_subpages import apply_translations
 
 REPO = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(REPO, 'src')
@@ -186,6 +188,7 @@ def build_page(rel_html, T, META):
     alts = {}
     for lang in target_langs:
         html = translate(raw, T, lang)
+        html = apply_translations(html, lang)
         html = set_html_lang(html, BCP[lang])
         if name == 'index':
             html = set_title_desc(html, META, lang)
