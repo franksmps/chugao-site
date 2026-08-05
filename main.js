@@ -2282,23 +2282,19 @@ function handleEmailClick(el) {
 // ==================== Init ====================
 // Read ?lang=xx from URL on first visit, then save preference
 document.addEventListener("DOMContentLoaded", function() {
-  var savedLang = "en";
-  // Detect language from URL path (pre-rendered pages), save preference
-  // Path pattern: /zh/, /es/, /pt/ etc. — pre-rendered content already matches.
-  // For root (/), use saved or default "en".
+  // Language is decided purely by the URL path (path-based i18n).
+  // Pre-rendered pages already contain the correct language:
+  //   /zh/about/  -> zh     /about/ -> en (default, no prefix)
+  // We must NOT fall back to localStorage here, otherwise clicking "English"
+  // (which navigates to a prefix-less URL like /about/) would re-translate the
+  // page back to the previously chosen language.
+  var lang = "en";
   try {
     var m = window.location.pathname.match(/^\/([a-z]{2})\//);
-    if (m && SUPPORTED.indexOf(m[1]) !== -1) {
-      savedLang = m[1];
-      try { localStorage.setItem("chugao_lang", savedLang); } catch(e) {}
-    } else {
-      savedLang = localStorage.getItem("chugao_lang") || "en";
-    }
-  } catch(e) {
-    try { savedLang = localStorage.getItem("chugao_lang") || "en"; } catch(e2) {}
-  }
-  if (SUPPORTED.indexOf(savedLang) === -1) savedLang = "en";
-  setLang(savedLang);
+    if (m && SUPPORTED.indexOf(m[1]) !== -1) lang = m[1];
+  } catch (e) {}
+  if (SUPPORTED.indexOf(lang) === -1) lang = "en";
+  setLang(lang);
   observeFadeUp();
-  if (DEBUG) console.log("[CHUGAO] Site initialized, language: " + savedLang);
+  if (DEBUG) console.log("[CHUGAO] Site initialized, language: " + lang);
 });
