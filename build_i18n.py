@@ -79,8 +79,12 @@ def translate(html, T, lang):
         return f'<{tag}{attrs}>{val}</{tag}>'
     return re.sub(r'<([a-zA-Z0-9]+)([^>]*?data-i18n="[^"]*"[^>]*)>(.*?)</\1>', repl, html, flags=re.S)
 
+RTL_LANGS = {"ar", "fa", "he", "ur", "yi", "dv"}
+
 def set_html_lang(html, bcp):
-    return re.sub(r'<html[^>]*>', f'<html lang="{bcp}">', html, count=1)
+    lang_code = bcp.split("-")[0].lower()
+    dir_attr = ' dir="rtl"' if lang_code in RTL_LANGS else ""
+    return re.sub(r'<html[^>]*>', f'<html lang="{bcp}"{dir_attr}>', html, count=1)
 
 def esc_attr(s):
     return s.replace('&', '&amp;').replace('"', '&quot;')
