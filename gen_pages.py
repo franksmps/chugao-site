@@ -231,8 +231,33 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='', r
 {other_block}
 <p style="margin-top:36px"><a href="/#inquiry" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p" style="color:var(--a);font-weight:600">View all products</a></p>{rel_block}
 </div></section>'''
+    product_data = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": name,
+        "image": [DOMAIN + img],
+        "description": desc,
+        "brand": {"@type": "Brand", "name": "CHUGAO Power"},
+        "category": "LED power supply",
+        "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Power range", "value": rng},
+            {"@type": "PropertyValue", "name": "Ingress protection", "value": ip},
+            {"@type": "PropertyValue", "name": "Input voltage", "value": inp},
+            {"@type": "PropertyValue", "name": "Output voltage", "value": outp},
+        ],
+        "offers": {
+            "@type": "Offer",
+            "url": DOMAIN + "/" + path + "/",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD",
+            "seller": {"@type": "Organization",
+                       "name": "Zhongshan Chugao Electronic Technology Co., Ltd."}
+        }
+    }
+    product_json = '<script type="application/ld+json">' + \
+        json.dumps(product_data, ensure_ascii=False) + '</script>'
     return page(path, f'{name} - CHUGAO LED power supply', desc, body,
-                breadcrumb(name, '/' + path + '/'), og_image=img)
+                product_json + breadcrumb(name, '/' + path + '/'), og_image=img)
 
 product_page('products/adapters.html', 'LED Adapters (5-200W)',
     '5W - 200W', 'IP20 (indoor)', 'Wall-mount and desktop, AC 100-240V universal input, DC 12/24/36/48V output',
