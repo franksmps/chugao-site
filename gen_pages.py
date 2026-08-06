@@ -26,7 +26,7 @@ def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg.we
 <meta property="og:image" content="{DOMAIN}{og_image}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/logo.png">
-<link rel="stylesheet" href="/style.css?v=3">
+<link rel="stylesheet" href="/style.css?v=4">
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 </head>
 <body>
@@ -57,7 +57,7 @@ about_body = '''
 <h1>About CHUGAO</h1>
 <p class="ss" style="margin:0 auto 48px">Zhongshan Chugao Electronic Technology Co., Ltd. makes LED switching power supplies in a 6,000 m&sup2; factory in Guzhen, Zhongshan &mdash; the lighting manufacturing hub of China. We run 38 people on the floor and 8 in sales, shipping to 42 countries across Europe, North America, the Middle East, and Southeast Asia.</p>
 
-<div class="wg" style="margin-bottom:60px">
+<div class="statgrid" style="margin-bottom:60px">
 <div class="wc"><div class="wi">6,000</div><h3>m&sup2; Factory</h3><p>Guzhen, Zhongshan &mdash; China's lighting capital, with the full supply chain next door.</p></div>
 <div class="wc"><div class="wi">38+</div><h3>Floor staff</h3><p>Skilled SMT, wave-soldering, potting and QC operators on four dedicated lines.</p></div>
 <div class="wc"><div class="wi">42</div><h3>Countries</h3><p>Distributors, brands and contractors across Europe, North America, the Middle East and SE Asia.</p></div>
