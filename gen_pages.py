@@ -26,12 +26,13 @@ def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg.we
 <meta property="og:image" content="{DOMAIN}{og_image}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/logo.png">
-<link rel="stylesheet" href="/style.css?v=4">
+<link rel="stylesheet" href="/style.css?v=5">
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 {NAV}
-<main>
+<main id="main">
 {body}
 </main>
 {json_ld or ''}
