@@ -38,6 +38,7 @@ def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg.we
 {json_ld or ''}
 {FOOTER}
 <script src="/main.min.js?v=2" defer></script>
+<script src="/analytics.js?v=1" defer></script>
 </body></html>'''
     out = os.path.join(SRC, path)
     os.makedirs(os.path.dirname(out), exist_ok=True)
