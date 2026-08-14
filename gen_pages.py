@@ -26,7 +26,7 @@ def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg.we
 <meta property="og:image" content="{DOMAIN}{og_image}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/logo.png">
-<link rel="stylesheet" href="/style.css?v=5">
+<link rel="stylesheet" href="/style.css?v=6">
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 </head>
 <body>
@@ -176,7 +176,38 @@ PRODUCTS = [
     ('products/ip65', 'IP65 Rainproof LED Drivers (100-600W)', '/images/product-rainproof.webp'),
 ]
 
-def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='', related=None, extra=''):
+def _spec2_table(rows):
+    if not rows:
+        return ''
+    body = ''.join(f'<tr><td>{l}</td><td>{v}</td></tr>' for l, v in rows)
+    return (f'<h2>Electrical &amp; environmental</h2>\n'
+            f'<table class="spec-table">\n'
+            f'<tr><th>Parameter</th><th>Detail</th></tr>\n{body}</table>\n')
+
+
+def _model_table(models):
+    if not models:
+        return ''
+    rows = ''.join(f'<tr><td>{p}</td><td>{o}</td></tr>' for p, o in models)
+    return (f'<h2>Available power ratings</h2>\n'
+            f'<table class="spec-table">\n'
+            f'<tr><th>Power</th><th>Output voltage</th></tr>\n{rows}</table>\n')
+
+
+def _faq_block(faqs):
+    if not faqs:
+        return ''
+    items = ''.join(f'<div class="faq"><h3>{q}</h3><p>{a}</p></div>' for q, a in faqs)
+    return f'<h2>Frequently asked questions</h2>\n{items}\n'
+
+
+def _datasheet_cta():
+    return ('<p style="margin:28px 0">'
+            '<a href="/#inquiry" class="btn-p">Request full specification sheet (PDF)</a></p>\n')
+
+
+def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
+                 related=None, extra='', spec2=None, models=None, faq=None):
     rel_block = ''
     if related:
         items = ''.join(f'<li><a href="/{b}.html">{t}</a></li>' for b, t in related)
@@ -191,6 +222,7 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='', r
     other_block = f'''
 <h2>Other CHUGAO product lines</h2>
 <div class="bg" style="margin-top:24px">{other}</div>'''
+    structured = _spec2_table(spec2) + _model_table(models) + _datasheet_cta() + _faq_block(faq)
     body = f'''
 <section class="sec sa"><div class="c">
 <h1>{name}</h1>
@@ -229,6 +261,7 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='', r
 <div class="wc"><div class="wi">&#128274;</div><h3>Four protections</h3><p>Over-voltage, over-current, over-temperature and short-circuit.</p></div>
 <div class="wc"><div class="wi">&#9989;</div><h3>Certified</h3><p>CE and RoHS standard; UL / BIS available per model.</p></div>
 </div>
+{structured}
 {extra}
 {other_block}
 <p style="margin-top:36px"><a href="/#inquiry" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p" style="color:var(--a);font-weight:600">View all products</a></p>{rel_block}
@@ -275,7 +308,31 @@ product_page('products/adapters.html', 'LED Adapters (5-200W)',
 <p>Add up the wattage of every LED you will run, then add a 20% margin so the adapter runs below its rated load. For example, 80W of strips needs at least a 100W adapter. Running below 80% load keeps the adapter cooler and extends its life.</p>
 <h2>What is built in</h2>
 <p>Each adapter has over-voltage, over-current, over-temperature, and short-circuit protection. Output options of 12V, 24V, 36V, and 48V cover most LED strips and modules.</p>
-''')
+''',
+    spec2=[
+        ("Efficiency", "≥83%"),
+        ("Ripple and noise", "≤120mV"),
+        ("Surge protection", "4kV"),
+        ("Operating temperature", "-20°C to +50°C"),
+        ("MTBF", "50,000 hours"),
+        ("Warranty", "3 years"),
+    ],
+    models=[
+        ("5W", "12V"),
+        ("12W", "12V / 24V"),
+        ("24W", "12V / 24V"),
+        ("36W", "12V / 24V / 36V"),
+        ("60W", "12V / 24V"),
+        ("100W", "12V / 24V / 36V / 48V"),
+        ("150W", "12V / 24V / 36V / 48V"),
+        ("200W", "12V / 24V / 36V / 48V"),
+    ],
+    faq=[
+        ("Can I use one adapter for both 12V and 24V strips?",
+         "No. Choose the output voltage that matches your LED. We make 12V, 24V, 36V and 48V models - check the label on your strip before ordering."),
+        ("Do you fit a plug for my country?",
+         "The adapter accepts 100-240V worldwide. We fit the local plug or AC cord for your market (US, EU, UK, AU and others) at no extra charge."),
+    ])
 product_page('products/indoor.html', 'Indoor LED Drivers (50-400W)',
     '50W - 400W', 'IP20', 'Built-in active PFC, fan-less silent operation',
     'Indoor LED drivers for ceiling lights and panel lights. High efficiency with active power-factor correction.',
@@ -290,7 +347,31 @@ product_page('products/indoor.html', 'Indoor LED Drivers (50-400W)',
 <p>Match the driver wattage to the total LED load plus a 20% margin, and confirm the output voltage (usually 12V or 24V DC) matches the fixture. For dimming projects, tell us the control type so we spec the right model.</p>
 <h2>What is built in</h2>
 <p>Active PFC, fan-less silent operation, and protection against over-voltage, over-current, over-temperature, and short-circuit. The IP20 enclosure is for dry indoor locations only.</p>
-''')
+''',
+    spec2=[
+        ("Efficiency", "≥88%"),
+        ("Power factor", "≥0.95"),
+        ("Ripple and noise", "≤100mV"),
+        ("Surge protection", "4kV"),
+        ("Operating temperature", "-30°C to +60°C"),
+        ("MTBF", "100,000 hours"),
+        ("Warranty", "5 years"),
+    ],
+    models=[
+        ("50W", "12V / 24V"),
+        ("75W", "12V / 24V"),
+        ("100W", "12V / 24V"),
+        ("150W", "12V / 24V"),
+        ("200W", "12V / 24V"),
+        ("300W", "12V / 24V"),
+        ("400W", "12V / 24V"),
+    ],
+    faq=[
+        ("Do these drivers support dimming?",
+         "Selected models support 0-10V or PWM dimming. Tell us your control system and we will specify the correct driver."),
+        ("Can they be mounted above a ceiling?",
+         "Yes. The IP20 drivers are made for dry indoor use such as above ceilings and inside fixtures. Leave some air space and do not bury them in insulation."),
+    ])
 product_page('products/ip67.html', 'IP67 Waterproof LED Drivers (10-400W)',
     '10W - 400W', 'IP67 / IP68', 'Fully sealed silicone potting, salt-spray tested',
     'Waterproof drivers for outdoor LED strips, fountains, and marine lighting. Built to survive wet environments.',
@@ -304,7 +385,34 @@ product_page('products/ip67.html', 'IP67 Waterproof LED Drivers (10-400W)',
 <p>Total the LED load, add a 20% margin, and pick a model rated above that sum. For hot environments or sealed enclosures, leave extra headroom so the driver runs cool. The 190-340V input covers most international sites.</p>
 <h2>What is built in</h2>
 <p>Sealed potting, salt-spray resistance, and over-voltage, over-current, over-temperature, and short-circuit protection. Rated for full outdoor and wet use - not for permanent submersion unless the model is marked IP68.</p>
-''')
+''',
+    spec2=[
+        ("Efficiency", "≥87%"),
+        ("Power factor", "≥0.95"),
+        ("Ripple and noise", "≤100mV"),
+        ("Ingress protection", "IP67 / IP68 (potting)"),
+        ("Surge protection", "6kV"),
+        ("Operating temperature", "-30°C to +60°C"),
+        ("MTBF", "80,000 hours"),
+        ("Warranty", "5 years"),
+    ],
+    models=[
+        ("10W", "12V / 24V"),
+        ("20W", "12V / 24V"),
+        ("30W", "12V / 24V"),
+        ("60W", "12V / 24V"),
+        ("100W", "12V / 24V"),
+        ("150W", "12V / 24V"),
+        ("200W", "12V / 24V"),
+        ("300W", "12V / 24V"),
+        ("400W", "12V / 24V"),
+    ],
+    faq=[
+        ("Can an IP67 driver be submerged?",
+         "IP67 resists brief immersion; IP68 models handle continuous submersion. For fountains and pools choose the IP68 version, and we will confirm the depth rating."),
+        ("How do I wire a waterproof driver outdoors?",
+         "Use waterproof connectors and keep joints inside a sealed junction box. We supply IP67 cable glands so the entry points stay watertight."),
+    ])
 product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
     '100W - 600W', 'IP65', 'Metal case with mesh vents, corrosion resistant',
     'Rainproof drivers for signage, billboards, and semi-outdoor installations. Metal housing with ventilation.',
@@ -318,6 +426,31 @@ product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
 <p>Add the wattage of all connected signs, add a 20% margin, and choose a model above that total. The 190-264V input covers standard commercial mains. Mount the case where air can flow through the vents.</p>
 <h2>What is built in</h2>
 <p>Corrosion-resistant metal case, ventilation for high-power runs, and over-voltage, over-current, over-temperature, and short-circuit protection. For full outdoor wet use, choose the IP67 line instead.</p>
-''')
+''',
+    spec2=[
+        ("Efficiency", "≥88%"),
+        ("Power factor", "≥0.95"),
+        ("Ripple and noise", "≤120mV"),
+        ("Ingress protection", "IP65 (metal case)"),
+        ("Surge protection", "6kV"),
+        ("Operating temperature", "-30°C to +60°C"),
+        ("MTBF", "100,000 hours"),
+        ("Warranty", "5 years"),
+    ],
+    models=[
+        ("100W", "12V / 24V"),
+        ("150W", "12V / 24V"),
+        ("200W", "12V / 24V"),
+        ("300W", "12V / 24V"),
+        ("400W", "12V / 24V"),
+        ("500W", "12V / 24V"),
+        ("600W", "12V / 24V"),
+    ],
+    faq=[
+        ("What is the difference between IP65 and IP67?",
+         "IP65 blocks rain and dust but not water jets; IP67 is fully sealed against brief immersion. For weather-exposed signage IP65 is usually enough; for wet or wash-down areas choose IP67."),
+        ("Can the metal case be used outside?",
+         "Yes. The corrosion-resistant metal case suits semi-outdoor signage and billboards. For full outdoor wet use, the IP67 line is the better choice."),
+    ])
 
 print("All pages generated.")
