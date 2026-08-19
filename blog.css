@@ -97,6 +97,14 @@ footer .c{max-width:1200px;margin:0 auto;padding:0 32px}
 .rel-card:active{transform:scale(.98)}
 .rel-cat{font-size:12px;font-weight:600;color:var(--a);text-transform:uppercase;letter-spacing:.03em}
 .rel-title{font-size:15px;font-weight:600;color:var(--p);line-height:1.4}
+/* ===== product cross-link (blog -> category pages) ===== */
+.product-crosslink{margin:40px 0 8px;padding-top:28px;border-top:1px solid var(--b)}
+.pc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pc-card{display:flex;flex-direction:column;gap:6px;padding:16px 18px;background:var(--w);border:1px solid var(--b);border-radius:var(--r);transition:border-color .2s,box-shadow .2s,transform .12s ease}
+.pc-card:hover{border-color:var(--a);box-shadow:var(--sm);transform:translateY(-2px)}
+.pc-card:active{transform:scale(.98)}
+.pc-title{font-size:15px;font-weight:600;color:var(--p);line-height:1.4}
+.pc-desc{font-size:13px;color:var(--ts);line-height:1.45}
 /* ===== responsive ===== */
 @media(max-width:900px){.fg{grid-template-columns:1fr 1fr}.social{margin-top:14px}}
 @media(max-width:768px){.nl{display:none}.mt{display:block}header{height:72px}.mm{top:72px}body{padding-top:72px}.fg{grid-template-columns:1fr}.fb2{justify-content:center;text-align:center}.wa-float{right:16px;bottom:78px;width:52px;height:52px}.btt{right:16px;bottom:20px}footer .c{padding:0 18px}.article h1{font-size:24px}}
