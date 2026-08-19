@@ -64,6 +64,8 @@ SUBTR = {
         "Need a quote or certificate plan?": "\u00bfNecesita una cotizaci\u00f3n o un plan de certificaci\u00f3n?",
         "Tell us your market and model \u2014 we reply within 1 hour in China business hours.": "D\u00edganos su mercado y modelo \u2014 respondemos en 1 hora dentro del horario comercial de China.",
         "Contact sales": "Contacte a ventas",
+        "Exhibitions & trade shows": "Ferias y exposiciones",
+        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Participamos en las principales ferias de LED y iluminación cada año, reuniéndonos cara a cara con distribuidores y dueños de marcas. Las fotos de abajo son de nuestras presentaciones en el stand en 2019 — el equipo en el piso, los productos en exhibición y las conversaciones que se convierten en relaciones de suministro a largo plazo.",
         # ---------- FAQ ----------
         "Frequently asked questions": "Preguntas frecuentes",
         "Plain answers about orders, certification, and product selection.": "Respuestas claras sobre pedidos, certificaci\u00f3n y selecci\u00f3n de productos.",
@@ -255,6 +257,8 @@ SUBTR = {
         "Need a quote or certificate plan?": "Precisa de uma cotação ou plano de certificação?",
         "Tell us your market and model — we reply within 1 hour in China business hours.": "Informe seu mercado e modelo — respondemos em 1 hora no horário comercial da China.",
         "Contact sales": "Fale com vendas",
+        "Exhibitions & trade shows": "Feiras e exposições",
+        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Participamos das principais feiras de LED e iluminação todos os anos, encontrando distribuidores e donos de marcas pessoalmente. As fotos abaixo são das nossas apresentações no estande em 2019 — a equipe no piso, os produtos em exposição e as conversas que se tornam parcerias de fornecimento de longo prazo.",
         # ---------- FAQ ----------
         "Frequently asked questions": "Perguntas frequentes",
         "Plain answers about orders, certification, and product selection.": "Respostas claras sobre pedidos, certificação e seleção de produtos.",
@@ -445,6 +449,8 @@ SUBTR = {
         "Need a quote or certificate plan?": "تحتاج عرض سعر أو خطة شهادات؟",
         "Tell us your market and model — we reply within 1 hour in China business hours.": "أخبرنا بسوقك وموديلك — نرد خلال ساعة واحدة خلال ساعات العمل في الصين.",
         "Contact sales": "تواصل مع المبيعات",
+        "Exhibitions & trade shows": "المعارض والتظاهرات التجارية",
+        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "نشارك في أكبر معارض الـ LED والإضاءة كل عام، ونلتقي الموزعين وأصحاب العلامات التجارية وجهاً لوجه. الصور أدناه من أجنحتنا في معارض 2019 — الفريق في الموقع، والمنتجات المعروضة، والمحادثات التي تتحول إلى شراكات توريد طويلة الأمد.",
         "Frequently asked questions": "الأسئلة الشائعة",
         "Plain answers about orders, certification, and product selection.": "إجابات واضحة حول الطلبات والشهادات واختيار المنتج.",
         "What is the minimum order quantity?": "ما هي الكمية الدنيا للطلب؟",
@@ -624,6 +630,8 @@ SUBTR = {
         "Need a quote or certificate plan?": "Нужен расчёт или план сертификации?",
         "Tell us your market and model — we reply within 1 hour in China business hours.": "Сообщите нам ваш рынок и модель — мы ответим в течение 1 часа в рабочее время Китая.",
         "Contact sales": "Связаться с отделом продаж",
+        "Exhibitions & trade shows": "Выставки и торговые ярмарки",
+        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Мы участвуем в крупнейших выставках по LED и освещению каждый год, встречаясь с дистрибьюторами и владельцами брендов лицом к лицу. Фотографии ниже сделаны на нашем стенде в 2019 году — команда на площадке, продукция на стенде и беседы, которые перерастают в долгосрочные партнёрства по поставкам.",
         # ---------- FAQ ----------
         "Frequently asked questions": "Часто задаваемые вопросы",
         "Plain answers about orders, certification, and product selection.": "Простые ответы о заказах, сертификации и выборе продукции.",
@@ -814,6 +822,8 @@ SUBTR = {
         "Need a quote or certificate plan?": "Besoin d'un devis ou d'un plan de certification ?",
         "Tell us your market and model — we reply within 1 hour in China business hours.": "Indiquez-nous votre marché et votre modèle — nous répondons sous 1 heure pendant les heures ouvrables en Chine.",
         "Contact sales": "Contacter le service commercial",
+        "Exhibitions & trade shows": "Salons et foires commerciales",
+        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Nous exposons dans les principaux salons LED et d'éclairage chaque année, à la rencontre des distributeurs et des propriétaires de marques en face à face. Les photos ci-dessous proviennent de nos stands en 2019 — l'équipe sur place, les produits en exposition et les échanges qui se transforment en partenariats d'approvisionnement à long terme.",
         # ---------- FAQ ----------
         "Frequently asked questions": "Foire aux questions (FAQ)",
         "Plain answers about orders, certification, and product selection.": "Des réponses claires sur les commandes, la certification et le choix des produits.",
@@ -1004,6 +1014,8 @@ SUBTR = {
         "Need a quote or certificate plan?": "Brauchen Sie ein Angebot oder einen Zertifizierungsplan?",
         "Tell us your market and model — we reply within 1 hour in China business hours.": "Nennen Sie uns Ihren Markt und Ihr Modell — wir antworten innerhalb einer Stunde in den chinesischen Geschäftszeiten.",
         "Contact sales": "Vertrieb kontaktieren",
+        "Exhibitions & trade shows": "Messen und Fachausstellungen",
+        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Wir stellen jedes Jahr auf den wichtigsten LED- und Beleuchtungsmessen aus und treffen Distributeure und Markeninhaber persönlich. Die Fotos unten stammen von unseren Messeständen im Jahr 2019 — das Team vor Ort, die ausgestellten Produkte und die Gespräche, die sich in langfristige Lieferpartnerschaften verwandeln.",
         # ---------- FAQ ----------
         "Frequently asked questions": "Häufig gestellte Fragen",
         "Plain answers about orders, certification, and product selection.": "Klare Antworten zu Bestellungen, Zertifizierung und Produktauswahl.",
