@@ -234,7 +234,7 @@ def build_sitemap(entries):
             out.append(f'    <loc>{e["canonical"]}</loc>')
             out.append('  </url>')
     # static blog pages (English only)
-    for b in ['blog-1','blog-2','blog-3','blog-4','blog-5']:
+    for b in ['blog-1','blog-2','blog-3','blog-4','blog-5','blog']:
         out.append('  <url>')
         out.append(f'    <loc>{DOMAIN}/{b}.html</loc>')
         out.append('  </url>')
