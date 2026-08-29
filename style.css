@@ -128,6 +128,7 @@ header{position:fixed;top:0;left:0;right:0;height:68px;background:rgba(255,255,2
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:32px 0}
 .gallery figure{margin:0;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm);background:var(--w)}
 .gallery img{display:block;width:100%;height:auto}
+.gallery figcaption{padding:10px 14px;font-size:13px;line-height:1.4;text-align:center;color:#475569}
 @media(max-width:768px){.gallery{grid-template-columns:1fr}}
 .bg{display:flex;flex-wrap:wrap;justify-content:center;gap:28px}
 .bc{flex:1 1 200px;max-width:215px;background:var(--w);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;transition:all 0.3s}

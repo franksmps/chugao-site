@@ -65,7 +65,12 @@ SUBTR = {
         "Tell us your market and model \u2014 we reply within 1 hour in China business hours.": "D\u00edganos su mercado y modelo \u2014 respondemos en 1 hora dentro del horario comercial de China.",
         "Contact sales": "Contacte a ventas",
         "Exhibitions & trade shows": "Ferias y exposiciones",
-        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Participamos en las principales ferias de LED y iluminación cada año, reuniéndonos cara a cara con distribuidores y dueños de marcas. Las fotos de abajo son de nuestras presentaciones en el stand en 2019 — el equipo en el piso, los productos en exhibición y las conversaciones que se convierten en relaciones de suministro a largo plazo.",
+                "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances at the Zhongshan Guzhen, Guangzhou, Canton Fair, and Shanghai lighting exhibitions between 2018 and 2024 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Participamos en las principales ferias de LED y iluminación cada año, reuniéndonos cara a cara con distribuidores y dueños de marcas. Las fotos de abajo son de nuestras presentaciones en el stand en las ferias de iluminación de Zhongshan Guzhen, Guangzhou, la Feria de Cantón y Shanghái entre 2018 y 2024 — el equipo en el piso, los productos en exhibición y las conversaciones que se convierten en relaciones de suministro a largo plazo.",
+        "2018 Zhongshan Guzhen International Lighting Fair": "Feria Internacional de Iluminación de Guzhen, Zhongshan 2018",
+        "2024 Guangzhou International Lighting Exhibition": "Exposición Internacional de Iluminación de Guangzhou 2024",
+        "2020 Canton Fair (China Import and Export Fair)": "Feria de Cantón 2020 (Feria de Importación y Exportación de China)",
+        "2022 Shanghai International Lighting Exhibition": "Exposición Internacional de Iluminación de Shanghái 2022",
+
         # ---------- FAQ ----------
         "Frequently asked questions": "Preguntas frecuentes",
         "Plain answers about orders, certification, and product selection.": "Respuestas claras sobre pedidos, certificaci\u00f3n y selecci\u00f3n de productos.",
@@ -258,7 +263,12 @@ SUBTR = {
         "Tell us your market and model — we reply within 1 hour in China business hours.": "Informe seu mercado e modelo — respondemos em 1 hora no horário comercial da China.",
         "Contact sales": "Fale com vendas",
         "Exhibitions & trade shows": "Feiras e exposições",
-        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Participamos das principais feiras de LED e iluminação todos os anos, encontrando distribuidores e donos de marcas pessoalmente. As fotos abaixo são das nossas apresentações no estande em 2019 — a equipe no piso, os produtos em exposição e as conversas que se tornam parcerias de fornecimento de longo prazo.",
+                "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances at the Zhongshan Guzhen, Guangzhou, Canton Fair, and Shanghai lighting exhibitions between 2018 and 2024 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Participamos das principais feiras de LED e iluminação todos os anos, encontrando distribuidores e donos de marcas pessoalmente. As fotos abaixo são das nossas apresentações no estande nas feiras de iluminação de Zhongshan Guzhen, Guangzhou, Feira de Cantão e Xangai entre 2018 e 2024 — a equipe no piso, os produtos em exposição e as conversas que se tornam parcerias de fornecimento de longo prazo.",
+        "2018 Zhongshan Guzhen International Lighting Fair": "Feira Internacional de Iluminação de Guzhen, Zhongshan 2018",
+        "2024 Guangzhou International Lighting Exhibition": "Exposição Internacional de Iluminação de Guangzhou 2024",
+        "2020 Canton Fair (China Import and Export Fair)": "Feira de Cantão 2020 (Feira de Importação e Exportação da China)",
+        "2022 Shanghai International Lighting Exhibition": "Exposição Internacional de Iluminação de Xangai 2022",
+
         # ---------- FAQ ----------
         "Frequently asked questions": "Perguntas frequentes",
         "Plain answers about orders, certification, and product selection.": "Respostas claras sobre pedidos, certificação e seleção de produtos.",
@@ -450,7 +460,12 @@ SUBTR = {
         "Tell us your market and model — we reply within 1 hour in China business hours.": "أخبرنا بسوقك وموديلك — نرد خلال ساعة واحدة خلال ساعات العمل في الصين.",
         "Contact sales": "تواصل مع المبيعات",
         "Exhibitions & trade shows": "المعارض والتظاهرات التجارية",
-        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "نشارك في أكبر معارض الـ LED والإضاءة كل عام، ونلتقي الموزعين وأصحاب العلامات التجارية وجهاً لوجه. الصور أدناه من أجنحتنا في معارض 2019 — الفريق في الموقع، والمنتجات المعروضة، والمحادثات التي تتحول إلى شراكات توريد طويلة الأمد.",
+                "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances at the Zhongshan Guzhen, Guangzhou, Canton Fair, and Shanghai lighting exhibitions between 2018 and 2024 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "نشارك في أكبر معارض ال‏ LED والإضاءة كل عام، ونلتقي الموزعين وأصحاب العلامات التجارية وجهاً لوجه. الصور أدناه من أجنحتنا في معارض الإضاءة في تشونغشان غوتشن وقوانغتشوومعرض كانتون وشنغهاي بين 2018 و2024 — الفريق في الموقع، والمنتجات المعروضة، والمحادثات التي تتحول إلى شراكات توريد طويلة الأمد.",
+        "2018 Zhongshan Guzhen International Lighting Fair": "معرض غوتشن تشونغشان الدولي للإضاءة 2018",
+        "2024 Guangzhou International Lighting Exhibition": "المعرض الدولي للإضاءة في قوانغتشوو 2024",
+        "2020 Canton Fair (China Import and Export Fair)": "معرض كانتون 2020 (معرض الصين للاستيراد والتصدير)",
+        "2022 Shanghai International Lighting Exhibition": "المعرض الدولي للإضاءة في شنغهاي 2022",
+
         "Frequently asked questions": "الأسئلة الشائعة",
         "Plain answers about orders, certification, and product selection.": "إجابات واضحة حول الطلبات والشهادات واختيار المنتج.",
         "What is the minimum order quantity?": "ما هي الكمية الدنيا للطلب؟",
@@ -631,7 +646,12 @@ SUBTR = {
         "Tell us your market and model — we reply within 1 hour in China business hours.": "Сообщите нам ваш рынок и модель — мы ответим в течение 1 часа в рабочее время Китая.",
         "Contact sales": "Связаться с отделом продаж",
         "Exhibitions & trade shows": "Выставки и торговые ярмарки",
-        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Мы участвуем в крупнейших выставках по LED и освещению каждый год, встречаясь с дистрибьюторами и владельцами брендов лицом к лицу. Фотографии ниже сделаны на нашем стенде в 2019 году — команда на площадке, продукция на стенде и беседы, которые перерастают в долгосрочные партнёрства по поставкам.",
+                "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances at the Zhongshan Guzhen, Guangzhou, Canton Fair, and Shanghai lighting exhibitions between 2018 and 2024 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Мы участвуем в крупнейших выставках по LED и освещению каждый год, встречаясь с дистрибьюторами и владельцами брендов лицом к лицу. Фотографии ниже сделаны на нашем стенде на выставках освещения в Гучжэне (Чжуншань), Гуанчжоу, Кантонской ярмарке и Шанхае в 2018–2024 годах — команда на площадке, продукция на стенде и беседы, которые перерастают в долгосрочные партнёрства по поставкам.",
+        "2018 Zhongshan Guzhen International Lighting Fair": "Международная выставка освещения Гучжэнь, Чжуншань 2018",
+        "2024 Guangzhou International Lighting Exhibition": "Международная выставка освещения Гуанчжоу 2024",
+        "2020 Canton Fair (China Import and Export Fair)": "Кантонская ярмарка 2020 (Китайская ярмарка импорта и экспорта)",
+        "2022 Shanghai International Lighting Exhibition": "Международная выставка освещения Шанхай 2022",
+
         # ---------- FAQ ----------
         "Frequently asked questions": "Часто задаваемые вопросы",
         "Plain answers about orders, certification, and product selection.": "Простые ответы о заказах, сертификации и выборе продукции.",
@@ -823,7 +843,12 @@ SUBTR = {
         "Tell us your market and model — we reply within 1 hour in China business hours.": "Indiquez-nous votre marché et votre modèle — nous répondons sous 1 heure pendant les heures ouvrables en Chine.",
         "Contact sales": "Contacter le service commercial",
         "Exhibitions & trade shows": "Salons et foires commerciales",
-        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Nous exposons dans les principaux salons LED et d'éclairage chaque année, à la rencontre des distributeurs et des propriétaires de marques en face à face. Les photos ci-dessous proviennent de nos stands en 2019 — l'équipe sur place, les produits en exposition et les échanges qui se transforment en partenariats d'approvisionnement à long terme.",
+                "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances at the Zhongshan Guzhen, Guangzhou, Canton Fair, and Shanghai lighting exhibitions between 2018 and 2024 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Nous exposons dans les principaux salons LED et d'éclairage chaque année, à la rencontre des distributeurs et des propriétaires de marques en face à face. Les photos ci-dessous proviennent de nos stands aux salons de l'éclairage de Zhongshan Guzhen, Guangzhou, la Foire de Canton et Shanghai entre 2018 et 2024 — l'équipe sur place, les produits en exposition et les échanges qui se transforment en partenariats d'approvisionnement à long terme.",
+        "2018 Zhongshan Guzhen International Lighting Fair": "Foire internationale de l'éclairage de Guzhen, Zhongshan 2018",
+        "2024 Guangzhou International Lighting Exhibition": "Salon international de l'éclairage de Guangzhou 2024",
+        "2020 Canton Fair (China Import and Export Fair)": "Foire de Canton 2020 (Foire d'importation et d'exportation de Chine)",
+        "2022 Shanghai International Lighting Exhibition": "Salon international de l'éclairage de Shanghai 2022",
+
         # ---------- FAQ ----------
         "Frequently asked questions": "Foire aux questions (FAQ)",
         "Plain answers about orders, certification, and product selection.": "Des réponses claires sur les commandes, la certification et le choix des produits.",
@@ -1015,7 +1040,12 @@ SUBTR = {
         "Tell us your market and model — we reply within 1 hour in China business hours.": "Nennen Sie uns Ihren Markt und Ihr Modell — wir antworten innerhalb einer Stunde in den chinesischen Geschäftszeiten.",
         "Contact sales": "Vertrieb kontaktieren",
         "Exhibitions & trade shows": "Messen und Fachausstellungen",
-        "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances in 2019 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Wir stellen jedes Jahr auf den wichtigsten LED- und Beleuchtungsmessen aus und treffen Distributeure und Markeninhaber persönlich. Die Fotos unten stammen von unseren Messeständen im Jahr 2019 — das Team vor Ort, die ausgestellten Produkte und die Gespräche, die sich in langfristige Lieferpartnerschaften verwandeln.",
+                "We exhibit at major LED and lighting trade shows every year, meeting distributors and brand owners face to face. The photos below are from our booth appearances at the Zhongshan Guzhen, Guangzhou, Canton Fair, and Shanghai lighting exhibitions between 2018 and 2024 — the team on the floor, the products on display, and the conversations that turn into long-term supply partnerships.": "Wir stellen jedes Jahr auf den wichtigsten LED- und Beleuchtungsmessen aus und treffen Distributeure und Markeninhaber persönlich. Die Fotos unten stammen von unseren Messeständen auf den Beleuchtungsmessen in Zhongshan Guzhen, Guangzhou, der Kanton-Messe und Shanghai zwischen 2018 und 2024 — das Team vor Ort, die ausgestellten Produkte und die Gespräche, die sich in langfristige Lieferpartnerschaften verwandeln.",
+        "2018 Zhongshan Guzhen International Lighting Fair": "Internationale Beleuchtungsmesse Guzhen, Zhongshan 2018",
+        "2024 Guangzhou International Lighting Exhibition": "Internationale Beleuchtungsmesse Guangzhou 2024",
+        "2020 Canton Fair (China Import and Export Fair)": "Kanton-Messe 2020 (Chinas Import- und Export-Messe)",
+        "2022 Shanghai International Lighting Exhibition": "Internationale Beleuchtungsmesse Shanghai 2022",
+
         # ---------- FAQ ----------
         "Frequently asked questions": "Häufig gestellte Fragen",
         "Plain answers about orders, certification, and product selection.": "Klare Antworten zu Bestellungen, Zertifizierung und Produktauswahl.",
