@@ -320,8 +320,9 @@ def build_sitemap(entries):
     # static blog pages (English only)
     for b in ['blog-1','blog-2','blog-3','blog-4','blog-5','blog']:
         out.append('  <url>')
-        out.append(f'    <loc>{DOMAIN}/{b}.html</loc>')
-        out.append(f'    <lastmod>{lastmod_for(b + ".html")}</lastmod>')
+        url = DOMAIN + '/blog/' if b == 'blog' else DOMAIN + '/' + b + '.html'
+        out.append(f'    <loc>{url}</loc>')
+        out.append(f'    <lastmod>{lastmod_for("blog/index.html" if b == "blog" else b + ".html")}</lastmod>')
         out.append('  </url>')
     out.append('</urlset>')
     with open(os.path.join(REPO, 'sitemap.xml'), 'w', encoding='utf-8') as f:
