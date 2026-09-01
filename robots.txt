@@ -1,5 +1,5 @@
 # CHUGAO Power - robots.txt
-# https://chugaopower.com/
+# https://www.chugaopower.com/
 
 User-agent: *
 Allow: /
@@ -8,7 +8,7 @@ Disallow: /src/
 Disallow: /*.json$
 
 # Sitemap
-Sitemap: https://chugaopower.com/sitemap.xml
+Sitemap: https://www.chugaopower.com/sitemap.xml
 
 # Crawl-delay for bots without throttling
 Crawl-delay: 1

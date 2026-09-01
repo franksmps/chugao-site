@@ -10,14 +10,14 @@ DOMAIN = 'https://www.chugaopower.com'
 NAV = '''<header><div class="c"><div class="ni"><a href="/" class="logo"><img src="/logo.png" alt="CHUGAO Power Logo" width="169" height="44" fetchpriority="high" loading="eager"></a><nav><ul class="nl"><li><a href="/" data-i18n="n_h">Home</a></li><li><a href="/about/" data-i18n="n_a">About</a></li><li><a href="/products/adapters/" data-i18n="n_p">Products</a></li><li><a href="/#specs" data-i18n="n_s">Specs</a></li><li><a href="/#why" data-i18n="n_w">Why us</a></li><li><a href="/blog/" data-i18n="n_b">News</a></li><li><a href="/faq/" data-i18n="n_f">FAQ</a></li><li><a href="/#contact" data-i18n="n_c">Contact</a></li></ul></nav><div style="display:flex;align-items:center"><div class="lang-selector"><button class="lang-btn" onclick="toggleLangDropdown()" aria-haspopup="true" aria-expanded="false" aria-controls="lang-dropdown"><span id="current-lang">EN</span><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3l4 4 4-4H1z"/></svg></button><div class="lang-dropdown" id="lang-dropdown"><!--LANG_DROPDOWN--></div></div><button class="mt" id="mobileToggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button></div></div></div></header>
 <div class="mm" id="mobileMenu"><a href="/" onclick="closeMobileMenu()" data-i18n="n_h">Home</a><a href="/about/" onclick="closeMobileMenu()" data-i18n="n_a">About</a><a href="/products/adapters/" onclick="closeMobileMenu()" data-i18n="n_p">Products</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">Specs</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">Why us</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">News</a><a href="/faq/" onclick="closeMobileMenu()" data-i18n="n_f">FAQ</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">Contact</a><div class="ml"><!--LANG_MOBILE--></div></div>'''
 
-FOOTER = '''<footer><div class="c"><div class="fg"><div class="fb"><a href="/" class="logo"><img src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px" loading="lazy"></a><p data-i18n="f_desc">CHUGAO - LED power supply factory in Zhongshan, China. Factory direct.</p></div><div class="fc"><h4 data-i18n="f_prod">Products</h4><a href="/products/adapters/">Adapters</a><a href="/products/indoor/">Indoor drivers</a><a href="/products/ip67/">IP67 waterproof</a><a href="/products/ip65/">IP65 rainproof</a></div><div class="fc"><h4 data-i18n="f_comp">Company</h4><a href="/about/">About</a><a href="/certs/">Certifications</a><a href="/faq/">FAQ</a></div><div class="fc"><h4 data-i18n="f_supp">Support</h4><a href="/#contact">Contact</a><a href="mailto:info@chugaopower.com">Email</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><div class="fb2"><p>&copy; 2026 Zhongshan Chugao Electronic Technology Co., Ltd. All Rights Reserved.</p></div></div></footer>'''
+FOOTER = '''<footer><div class="c"><div class="fg"><div class="fb"><a href="/" class="logo"><img src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px" loading="lazy"></a><p data-i18n="f_desc">CHUGAO - LED power supply factory in Zhongshan, China. Factory direct.</p></div><div class="fc"><h3 data-i18n="f_prod">Products</h3><a href="/products/adapters/">Adapters</a><a href="/products/indoor/">Indoor drivers</a><a href="/products/ip67/">IP67 waterproof</a><a href="/products/ip65/">IP65 rainproof</a></div><div class="fc"><h3 data-i18n="f_comp">Company</h3><a href="/about/">About</a><a href="/certs/">Certifications</a><a href="/faq/">FAQ</a></div><div class="fc"><h3 data-i18n="f_supp">Support</h3><a href="/#contact">Contact</a><a href="mailto:info@chugaopower.com">Email</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><div class="fb2"><p>&copy; 2026 Zhongshan Chugao Electronic Technology Co., Ltd. All Rights Reserved.</p></div></div></footer>'''
 
-def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg.webp'):
+def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg'):
     head = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f172a">
 <title>{title}</title>
 <meta name="description" content="{desc}">
@@ -27,7 +27,7 @@ def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg.we
 <meta property="og:image" content="{DOMAIN}{og_image}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/logo.png">
-<link rel="stylesheet" href="/style.css?v=8">
+<link rel="stylesheet" href="/style.css?v=9">
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 </head>
 <body>
@@ -61,12 +61,12 @@ about_body = '''
 <p class="ss" style="margin:0 auto 48px">Zhongshan Chugao Electronic Technology Co., Ltd. makes LED switching power supplies in a 6,000 m&sup2; factory in Guzhen, Zhongshan &mdash; the lighting manufacturing hub of China. We run 38 people on the floor and 8 in sales, shipping to 42 countries across Europe, North America, the Middle East, and Southeast Asia.</p>
 
 <div class="statgrid" style="margin-bottom:60px">
-<div class="wc"><div class="wi">6,000</div><h3>m&sup2; Factory</h3><p>Guzhen, Zhongshan &mdash; China's lighting capital, with the full supply chain next door.</p></div>
-<div class="wc"><div class="wi">38+</div><h3>Floor staff</h3><p>Skilled SMT, wave-soldering, potting and QC operators on four dedicated lines.</p></div>
-<div class="wc"><div class="wi">42</div><h3>Countries</h3><p>Distributors, brands and contractors across Europe, North America, the Middle East and SE Asia.</p></div>
-<div class="wc"><div class="wi">2008</div><h3>Trading since</h3><p>Over 15 years building LED drivers and AC/DC adapters for global buyers.</p></div>
-<div class="wc"><div class="wi">4</div><h3>Product lines</h3><p>Adapters, indoor drivers, IP67 and IP65 &mdash; one stop for low-voltage LED power.</p></div>
-<div class="wc"><div class="wi">48h</div><h3>Burn-in</h3><p>Every unit runs a 48-hour full-load burn-in before it is packed and shipped.</p></div>
+<div class="wc"><div class="wi">6,000</div><h2>m&sup2; Factory</h2><p>Guzhen, Zhongshan &mdash; China's lighting capital, with the full supply chain next door.</p></div>
+<div class="wc"><div class="wi">38+</div><h2>Floor staff</h2><p>Skilled SMT, wave-soldering, potting and QC operators on four dedicated lines.</p></div>
+<div class="wc"><div class="wi">42</div><h2>Countries</h2><p>Distributors, brands and contractors across Europe, North America, the Middle East and SE Asia.</p></div>
+<div class="wc"><div class="wi">2008</div><h2>Trading since</h2><p>Over 15 years building LED drivers and AC/DC adapters for global buyers.</p></div>
+<div class="wc"><div class="wi">4</div><h2>Product lines</h2><p>Adapters, indoor drivers, IP67 and IP65 &mdash; one stop for low-voltage LED power.</p></div>
+<div class="wc"><div class="wi">48h</div><h2>Burn-in</h2><p>Every unit runs a 48-hour full-load burn-in before it is packed and shipped.</p></div>
 </div>
 
 <div class="ag" style="margin-bottom:60px">
@@ -118,7 +118,7 @@ about_body = '''
 </div></section>'''
 page('about.html', 'About CHUGAO - LED power supply factory, Zhongshan China',
      'CHUGAO is an LED switching power supply manufacturer in Zhongshan, China. 6,000 m2 factory, 4 product lines, CE/RoHS on every unit, OEM/ODM since 2008.',
-     about_body, breadcrumb('About', '/about/'))
+     about_body)
 
 # ---------- FAQ ----------
 faq_qa = [
@@ -132,7 +132,7 @@ faq_qa = [
  ("How do I choose IP20, IP65, or IP67?", "IP20 for indoor dry locations. IP65 for semi-outdoor with rain and dust. IP67 for full outdoor and wet environments such as fountains and marine lighting."),
 ]
 faq_items = ''.join(
-    f'<div class="faq-item"><h3>{q}</h3><p>{a}</p></div>' for q,a in faq_qa)
+    f'<div class="faq-item"><h2>{q}</h2><p>{a}</p></div>' for q,a in faq_qa)
 faq_data = {"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en",
             "mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq_qa]}
 faq_json = '<script type="application/ld+json">' + json.dumps(faq_data, ensure_ascii=False) + '</script>'
@@ -145,7 +145,7 @@ faq_body = f'''
 </div></section>'''
 page('faq.html', 'FAQ - CHUGAO LED power supply questions answered',
      'Minimum order, certifications (CE/RoHS/UL/BIS), warranty, OEM, payment terms, lead time, and how to choose IP rating for LED drivers.',
-     faq_body, faq_json + breadcrumb('FAQ', '/faq/'))
+     faq_body, faq_json)
 
 # ---------- Certifications ----------
 certs_body = '''
@@ -176,7 +176,7 @@ certs_body = '''
 </div></section>'''
 page('certs.html', 'Certifications - CE, RoHS, UL, BIS for CHUGAO LED drivers',
      'CHUGAO LED power supplies carry CE and RoHS on every model, UL per model, and BIS for India on request. Certificate PDFs provided before order.',
-     certs_body, breadcrumb('Certifications', '/certs/'))
+     certs_body)
 
 # ---------- Product category template ----------
 # Product index for cross-links shown on every product page
@@ -280,6 +280,7 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
     product_data = {
         "@context": "https://schema.org",
         "@type": "Product",
+        "inLanguage": "en",
         "name": name,
         "image": [DOMAIN + img],
         "description": desc,
@@ -310,7 +311,7 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
         faq_json = '<script type="application/ld+json">' + \
             json.dumps(faq_data, ensure_ascii=False) + '</script>'
     return page(path, f'{name} - CHUGAO LED power supply', desc, body,
-                product_json + faq_json + breadcrumb(name, '/' + path + '/'), og_image=img)
+                product_json + faq_json, og_image=img.replace('.webp', '.jpg'))
 
 product_page('products/adapters.html', 'LED Adapters (5-200W)',
     '5W - 200W', 'IP20 (indoor)', 'Wall-mount and desktop, AC 100-240V universal input, DC 12/24/36/48V output',
