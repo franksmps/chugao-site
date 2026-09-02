@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f172a">
+<title>IP20 vs IP65 vs IP67 vs IP68 | CHUGAO Field Notes</title>
+  <meta name="twitter:image" content="https://www.chugaopower.com/images/blog-2-ip-rating.jpg" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="ar_AE" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <link rel="canonical" href="https://www.chugaopower.com/zh/blog-2/" />
+  <link rel="alternate" hreflang="en" href="https://www.chugaopower.com/blog-2/" />
+  <link rel="alternate" hreflang="zh" href="https://www.chugaopower.com/zh/blog-2/" />
+  <link rel="alternate" hreflang="es" href="https://www.chugaopower.com/es/blog-2/" />
+  <link rel="alternate" hreflang="fr" href="https://www.chugaopower.com/fr/blog-2/" />
+  <link rel="alternate" hreflang="de" href="https://www.chugaopower.com/de/blog-2/" />
+  <link rel="alternate" hreflang="pt" href="https://www.chugaopower.com/pt/blog-2/" />
+  <link rel="alternate" hreflang="ru" href="https://www.chugaopower.com/ru/blog-2/" />
+  <link rel="alternate" hreflang="ja" href="https://www.chugaopower.com/ja/blog-2/" />
+  <link rel="alternate" hreflang="ko" href="https://www.chugaopower.com/ko/blog-2/" />
+  <link rel="alternate" hreflang="ar" href="https://www.chugaopower.com/ar/blog-2/" />
+  <link rel="alternate" hreflang="it" href="https://www.chugaopower.com/it/blog-2/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.chugaopower.com/blog-2/" />
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<meta name="description" content="IP rating explained for LED power supplies: what the numbers mean, where each rating is used, and how to pick the right one for your project.">
+<meta property="og:title" content="IP20 vs IP65 vs IP67 vs IP68">
+<meta property="og:description" content="What the numbers mean and where each one breaks down. A practical guide to IP ratings for LED drivers.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.chugaopower.com/zh/blog-2/" />>
+<meta property="og:image" content="https://www.chugaopower.com/images/blog-2-ip-rating.jpg">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:width" content="1216">
+<meta property="og:image:height" content="832">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"IP20 vs IP65 vs IP67 vs IP68","datePublished":"2026-02-15","dateModified":"2026-02-15","inLanguage":"zh-CN","author":{"@type":"Organization","name":"CHUGAO Power"},"publisher":{"@type":"Organization","name":"CHUGAO Power","logo":{"@type":"ImageObject","url":"https://www.chugaopower.com/logo.png"}}}</script>
+<link rel="stylesheet" href="/blog.css?v=4">
+<!-- Google tag (gtag.js) - GA4 -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+// Consent Mode v2: denied by default until the visitor accepts the cookie banner
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied'
+});
+gtag('js', new Date());
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NV6VNJQ8MY"></script>
+<script type="application/ld+json" id="jsonld-breadcrumb">
+{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"zh-CN","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.chugaopower.com/zh/"},{"@type":"ListItem","position":2,"name":"IP20 vs IP65 vs IP67 vs IP68","item":"https://www.chugaopower.com/zh/blog-2/"}]}
+</script>
+</head>
+<body>
+<header><div class="c"><div class="ni"><a href="/#home" class="logo"><img loading="eager" src="/logo.png" alt="CHUGAO Power Logo" width="169" height="44" fetchpriority="high"></a><nav><ul class="nl"><li><a href="/#home" data-i18n="n_h">首页</a></li><li><a href="/#about" data-i18n="n_a">关于</a></li><li><a href="/#products" data-i18n="n_p">产品</a></li><li><a href="/#specs" data-i18n="n_s">规格</a></li><li><a href="/#why" data-i18n="n_w">优势</a></li><li><a href="/blog/" data-i18n="n_b">资讯</a></li><li><a href="/#faq" data-i18n="n_f">常见问题</a></li><li><a href="/#contact" data-i18n="n_c">联系</a></li></ul></nav><div style="display:flex;align-items:center"><div class="lang-selector"><button class="lang-btn" onclick="toggleLangDropdown()" aria-haspopup="true" aria-expanded="false" aria-controls="lang-dropdown"><span id="current-lang">ZH</span><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3l4 4 4-4H1z"/></svg></button><div class="lang-dropdown" id="lang-dropdown"><a class="lang-item" id="lang-en" href="/blog-2/" onclick="goLang('en')"><span class="lang-flag">🇪🇳</span><span class="lang-name">English</span></a><a class="lang-item active" id="lang-zh" href="/zh/blog-2/" onclick="goLang('zh')"><span class="lang-flag">🇨🇳</span><span class="lang-name">简体中文</span></a><a class="lang-item" id="lang-es" href="/es/blog-2/" onclick="goLang('es')"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></a><a class="lang-item" id="lang-fr" href="/fr/blog-2/" onclick="goLang('fr')"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span></a><a class="lang-item" id="lang-de" href="/de/blog-2/" onclick="goLang('de')"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span></a><a class="lang-item" id="lang-pt" href="/pt/blog-2/" onclick="goLang('pt')"><span class="lang-flag">🇵🇹</span><span class="lang-name">Português</span></a><a class="lang-item" id="lang-ru" href="/ru/blog-2/" onclick="goLang('ru')"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></a><a class="lang-item" id="lang-ja" href="/ja/blog-2/" onclick="goLang('ja')"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></a><a class="lang-item" id="lang-ko" href="/ko/blog-2/" onclick="goLang('ko')"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span></a><a class="lang-item" id="lang-ar" href="/ar/blog-2/" onclick="goLang('ar')"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></a><a class="lang-item" id="lang-it" href="/it/blog-2/" onclick="goLang('it')"><span class="lang-flag">🇮🇹</span><span class="lang-name">Italiano</span></a></div></div><button class="mt" id="mobileToggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button></div></div></div></header>
+<div class="mm" id="mobileMenu"><a href="/#home" onclick="closeMobileMenu()" data-i18n="n_h">首页</a><a href="/#about" onclick="closeMobileMenu()" data-i18n="n_a">关于</a><a href="/#products" onclick="closeMobileMenu()" data-i18n="n_p">产品</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">规格</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">优势</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">资讯</a><a href="/#faq" onclick="closeMobileMenu()" data-i18n="n_f">常见问题</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">联系</a><div class="ml"><a href="/blog-2/" onclick="goLang('en');closeMobileMenu()" id="ml-en">EN</a><a href="/zh/blog-2/" onclick="goLang('zh');closeMobileMenu()" id="ml-zh" class="active">ZH</a><a href="/es/blog-2/" onclick="goLang('es');closeMobileMenu()" id="ml-es">ES</a><a href="/fr/blog-2/" onclick="goLang('fr');closeMobileMenu()" id="ml-fr">FR</a><a href="/de/blog-2/" onclick="goLang('de');closeMobileMenu()" id="ml-de">DE</a><a href="/pt/blog-2/" onclick="goLang('pt');closeMobileMenu()" id="ml-pt">PT</a><a href="/ru/blog-2/" onclick="goLang('ru');closeMobileMenu()" id="ml-ru">RU</a><a href="/ja/blog-2/" onclick="goLang('ja');closeMobileMenu()" id="ml-ja">JA</a><a href="/ko/blog-2/" onclick="goLang('ko');closeMobileMenu()" id="ml-ko">KO</a><a href="/ar/blog-2/" onclick="goLang('ar');closeMobileMenu()" id="ml-ar">AR</a><a href="/it/blog-2/" onclick="goLang('it');closeMobileMenu()" id="ml-it">IT</a></div></div>
+
+<main class="article">
+<a href="/blog/" class="back-link">← Back to Field notes</a>
+
+<h1>IP20 vs IP65 vs IP67 vs IP68</h1>
+<div class="meta">Technical Guide · February 2026 · 7 min read</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-2-ip-rating-md.avif 1200w, /images/blog-2-ip-rating.avif 1024w">
+<source type="image/webp" srcset="/images/blog-2-ip-rating-md.webp 1200w, /images/blog-2-ip-rating.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-2-ip-rating.jpg" alt="IP ratings comparison chart" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>Every LED power supply has an IP rating. It is two digits — the first is <strong>dust/solid particle protection</strong>, the second is <strong>water protection</strong>. The higher the number, the better the seal.</p>
+
+<p>This guide breaks down exactly what each common IP rating means in real-world terms, so you never overspend or under-spec again.</p>
+
+<h2>The Two-Digit System Explained</h2>
+
+<table class="ip-table">
+<thead><tr><th>Digit</th><th>What it Measures</th><th>Scale</th></tr></thead>
+<tbody>
+<tr><td><strong>First digit (0–6)</strong></td><td>Solid objects / dust</td><td>0 = no protection → 6 = dust-tight</td></tr>
+<tr><td><strong>Second digit (0–8)</strong></td><td>Liquid / water</td><td>0 = no protection → 8 = continuous immersion</td></tr>
+</tbody>
+</table>
+
+<h2>First Digit: Dust Protection</h2>
+
+<ul>
+<li><strong>IPx0:</strong> No protection. Not used on any commercial LED driver.</li>
+<li><strong>IPx3 – IPx4:</strong> Protected against wires, screws, fingers. Basic safety.</li>
+<li><strong>IPx5:</strong> Dust-limited ingress. Some fine dust gets in but not enough to harm operation.</li>
+<li><strong>IPx6:</strong> Dust-tight. Zero dust entry. This is the standard for all outdoor-rated drivers.</li>
+</ul>
+
+<p>In practice, every driver we sell that has a meaningful water rating (second digit 4+) already achieves IPx6 for dust. You rarely need to worry about this separately.</p>
+
+<h2>Second Digit: Water Protection — This Is Where Decisions Happen</h2>
+
+<h3>IP20 / IP21 — Indoor Only</h3>
+<p>Dripping water from vertical angles (IP20). Dripping from up to 15° off-vertical (IP21).</p>
+<ul>
+<li>Use for: indoor ceiling fixtures, enclosed luminaires, dry locations</li>
+<li>Avoid: anywhere near windows, bathrooms, kitchens, or HVAC vents</li>
+<li>Cost: lowest tier</li>
+</ul>
+
+<h3>IP44 — Splash-Proof</h3>
+<p>Water splashed from any direction will not cause harm.</p>
+<ul>
+<li>Use for: bathroom vanity lights, under-cabinet strips, kitchen task lighting</li>
+<li>Not suitable for direct rain exposure or washdown</li>
+</ul>
+
+<h3>IP54 — Dust + Splash Protected</h3>
+<p>Dust-limited ingress + splash-proof from all directions.</p>
+<ul>
+<li>Use for: retail displays, exhibition stands, semi-outdoor covered areas</li>
+</ul>
+
+<h3>IP65 — Water Jets from Any Direction</h3>
+<p>This is the workhorse of outdoor LED installations.</p>
+<div class="highlight">
+<strong>IP65 = fully dust-tight + protected against low-pressure water jets from any direction (6.3mm nozzle, 12.5 L/min).</strong>
+</div>
+<ul>
+<li>Use for: outdoor signage, façade lighting, streetlighting, parking garage fixtures, food processing areas with hose-down cleaning</li>
+<li>This covers 70%+ of all outdoor LED driver needs</li>
+<li>CHUGAO's best-selling category by volume</li>
+</ul>
+
+<h3>IP67 — Temporary Immersion Up to 1 Meter</h3>
+<p>The same dust-tightness as IP65, plus it can survive being submerged in up to 1 meter of water for 30 minutes.</p>
+<ul>
+<li>Use for: landscape lighting near ponds or pools, tunnel lighting, underground/inground fixtures, flood-prone installation points</li>
+<li>Note: immersion depth is measured from the bottom of the enclosure, not the top</li>
+</ul>
+
+<h3>IP68 — Continuous Submersion Beyond 1 Meter</h3>
+<p>The highest standard. Rated for long-term underwater operation at depths specified by the manufacturer (typically 1m–10m).</p>
+<ul>
+<li>Use for: pool lights, fountain fixtures, aquarium lighting, underwater architectural features, marine applications</li>
+<li>These require specialized potting and sealing — cost is significantly higher than IP67</li>
+</ul>
+
+<div class="warn">
+<strong>Common mistake:</strong> Using IP65 in an application that sees standing water or flooding risk (e.g., ground-recessed fixtures). The extra $2–$4 per unit to step up to IP67 can prevent a costly warranty return.
+</div>
+
+<h2>How We Test at CHUGAO</h2>
+
+<ol>
+<li><strong>Assembly:</strong> Drivers are potted with PU resin inside a sealed aluminum or plastic housing.</li>
+<li><strong>IP testing:</strong> Every batch is sampled and tested against IEC 60529 standards using calibrated water jet and dust chamber equipment.</li>
+<li><strong>Aging test:</strong> Units are run at full load for 48 hours at 40°C ambient after IP sealing to catch any latent defects.</li>
+</ol>
+
+<h2>Which One Should You Order?</h2>
+
+<table class="ip-table">
+<thead><tr><th>Your Application</th><th>Minimum IP Rating</th><th>Recommended</th></tr></thead>
+<tbody>
+<tr><td>Indoor ceiling / wall mount</td><td>IP20</td><td>IP20</td></tr>
+<tr><td>Bathroom / kitchen</td><td>IP44</td><td>IP44</td></tr>
+<tr><td>Outdoor sign / building facade</td><td>IP65</td><td>IP65</td></tr>
+<tr><td>Tunnel / parking garage</td><td>IP65</td><td>IP67</td></tr>
+<tr><td>Landscape near water</td><td>IP67</td><td>IP67</td></tr>
+<tr><td>Pool / fountain / underwater</td><td>IP68</td><td>IP68</td></tr>
+</tbody>
+</table>
+
+<div class="cta-box">
+<h3>Need help matching IP rating to your project?</h3>
+<p>Tell us your installation environment and we'll recommend the right IP level and model number. Free datasheet included.</p>
+<a href="/#inquiry" class="btn">Get Recommendation</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explore CHUGAO products</h2><div class="pc-grid"><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Dust-tight and jet-resistant power supplies for building facades and signage.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Temporary immersion protection for tunnels, pools, and flood-prone areas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">More from the field</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED Technology</span><span class="rel-title">Pick the Right LED Power Supply in 3 Steps</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Industry Trends</span><span class="rel-title">2026 LED Market: What We Are Seeing</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatory</span><span class="rel-title">BIS Certification for LED Drivers: India Import Guide</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Technical Deep-dive</span><span class="rel-title">LED Driver Lifespan: MTBF, L70, and Real-World Life</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-1/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">Pick the Right LED Power Supply in 3 Steps</span></a><a class="pn-next" href="/blog-3/" rel="next"><span class="pn-lab">Next article</span><span class="pn-t">2026 LED Market: What We Are Seeing</span></a></nav>
+</main>
+
+<footer><div class="c"><div class="fg"><div class="fb"><a href="/#home" class="logo"><img loading="lazy" src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px"></a><p data-i18n="f_desc">楚高,中山 LED 电源工厂。厂家直供。</p><div class="social"><a href="https://www.facebook.com/profile.php?id=100063658296873" target="_blank" rel="noopener noreferrer" class="sfb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.014 1.794-4.677 4.533-4.677 1.313 0 2.686.234 2.686.234v2.97h-1.513c-1.49 0-1.955.926-1.955 1.876v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a><a href="https://www.instagram.com/chugao_smps/" target="_blank" rel="noopener noreferrer" class="sig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.tiktok.com/@chugaosmpsofficial" target="_blank" rel="noopener noreferrer" class="stk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/chugaosmps/" target="_blank" rel="noopener noreferrer" class="sli" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></div></div><div class="fc"><h4 data-i18n="f_prod">产品</h4><a href="/#products" data-i18n="f_p1">适配器</a><a href="/#products" data-i18n="f_p2">室内电源</a><a href="/#products" data-i18n="f_p3">IP67</a><a href="/#products" data-i18n="f_p4">IP65</a></div><div class="fc"><h4 data-i18n="f_comp">公司</h4><a href="/#about" data-i18n="f_c1">关于</a><a href="/#why" data-i18n="f_c2">优势</a><a href="/blog/" data-i18n="f_c3">资讯</a><a href="/#faq" data-i18n="f_c4">常见问题</a></div><div class="fc"><h4 data-i18n="f_supp">支持</h4><a href="/#contact" data-i18n="f_s1">联系</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">邮件</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" data-i18n="f_s3">WhatsApp</a><a href="/#inquiry" data-i18n="f_s4">索取规格书</a></div></div><div class="fb2"><p>© 2026 Zhongshan Chugao Electronic Technology Co., Ltd. 版权所有。</p><p data-i18n="f_slogan">一站式全系列开关电源制造商</p></div></div></footer>
+
+<a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<button class="btt" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="cb-inner">
+    <p class="cb-text" data-i18n="cb_text">We use cookies for anonymous traffic analytics (Google Analytics). Nothing is tracked until you accept.</p>
+    <div class="cb-btns">
+      <button id="cookie-decline" class="cb-btn cb-decline" data-i18n="cb_decline">Decline</button>
+      <button id="cookie-accept" class="cb-btn cb-accept" data-i18n="cb_accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function updateJsonLdLang(lang){
+    var bcp = (lang === 'zh') ? 'zh-CN' : lang;
+    ['jsonld-org','jsonld-faq','jsonld-products'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(!el) return;
+      try { var data = JSON.parse(el.textContent); data.inLanguage = bcp; el.textContent = JSON.stringify(data); } catch(e){}
+    });
+  }
+    document.addEventListener('DOMContentLoaded', function(){
+if (typeof window.setLang === 'function') {
+    var _orig = window.setLang;
+    window.setLang = function(lang){ var r = _orig.apply(this, arguments); updateJsonLdLang(lang); return r; };
+  }
+  });
+  document.addEventListener('DOMContentLoaded', function(){
+    var p = new URLSearchParams(location.search).get('lang');
+    var stored = null; try { stored = localStorage.getItem('chugao_lang'); } catch(e){}
+    updateJsonLdLang(p || stored || 'en');
+  });
+  var CONSENT_KEY = 'chugao_cookie_consent';
+  function getConsent(){ try { return localStorage.getItem(CONSENT_KEY); } catch(e){ return null; } }
+  function grantGtag(){
+    if (!window.gtag) return;
+    gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+    gtag('config','G-NV6VNJQ8MY');
+  }
+  function showBanner(){ var b=document.getElementById('cookie-banner'); if(b) b.classList.add('show'); }
+  function hideBanner(){ var b=document.getElementById('cookie-banner'); if(b) b.classList.remove('show'); }
+  document.addEventListener('DOMContentLoaded', function(){
+    var c = getConsent();
+    if (c === 'accepted') { grantGtag(); }
+    else if (c === 'declined') { /* keep denied */ }
+    else { showBanner(); }
+    var accept = document.getElementById('cookie-accept');
+    var decline = document.getElementById('cookie-decline');
+    if (accept) accept.addEventListener('click', function(){ try{localStorage.setItem(CONSENT_KEY,'accepted');}catch(e){} grantGtag(); hideBanner(); });
+    if (decline) decline.addEventListener('click', function(){ try{localStorage.setItem(CONSENT_KEY,'declined');}catch(e){} hideBanner(); });
+  });
+})();
+</script>
+
+<script src="/main.min.js?v=3" defer></script>
+<script src="/analytics.js?v=1" defer></script>
+</body>
+</html>

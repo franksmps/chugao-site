@@ -38,7 +38,7 @@ def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg'):
 </main>
 {json_ld or ''}
 {FOOTER}
-<script src="/main.min.js?v=2" defer></script>
+<script src="/main.min.js?v=3" defer></script>
 <script src="/analytics.js?v=1" defer></script>
 </body></html>'''
     out = os.path.join(SRC, path)
@@ -187,6 +187,15 @@ PRODUCTS = [
     ('products/ip65', 'IP65 Rainproof LED Drivers (100-600W)', '/images/product-rainproof.webp'),
 ]
 
+# product path -> (spec sheet filename, <select> value used by the inquiry form)
+SPEC_PDF = {
+    'products/adapters': ('chugao-led-adapters-5-200w.pdf', 'adapter'),
+    'products/indoor': ('chugao-indoor-led-drivers-50-400w.pdf', 'indoor'),
+    'products/ip67': ('chugao-ip67-waterproof-led-drivers-10-400w.pdf', 'waterproof'),
+    'products/ip65': ('chugao-ip65-rainproof-led-drivers-100-600w.pdf', 'rainproof'),
+}
+
+
 def _spec2_table(rows):
     if not rows:
         return ''
@@ -212,13 +221,62 @@ def _faq_block(faqs):
     return f'<h2>Frequently asked questions</h2>\n{items}\n'
 
 
-def _datasheet_cta():
+def _datasheet_cta(path=''):
+    """Link to the real PDF spec sheet; fall back to the inquiry anchor if unknown."""
+    info = SPEC_PDF.get(path[:-5] if path.endswith('.html') else path)
+    if info:
+        return ('<p style="margin:28px 0">'
+                '<a href="/specs/%s" class="btn-p" target="_blank" rel="noopener" download>'
+                'Request full specification sheet (PDF)</a></p>\n' % info[0])
     return ('<p style="margin:28px 0">'
             '<a href="/#inquiry" class="btn-p">Request full specification sheet (PDF)</a></p>\n')
 
 
+# Shared buying/quality sections for every product page.
+# Every English string below already exists as a SUBTR key across all 10
+# localized languages, so this adds substantial content with ZERO new
+# translation work and no risk of English leakage.
+_BUYING = '''<h2>Manufacturing &amp; quality control</h2>
+<p>Production runs on four dedicated lines fed by SMT assembly and wave soldering, then finished on in-house potting and enclosure lines. Each driver moves through incoming component inspection and automated ICT, then a 48-hour full-load burn-in at elevated temperature before it is packed. On the line we check output voltage, ripple, efficiency, and the four protective functions \u2014 over-voltage, over-current, over-temperature, and short-circuit \u2014 so a weak unit is caught before it reaches you.</p>
+<h2>Certifications &amp; compliance</h2>
+<p>CE and RoHS on every model. UL is per model and costs extra. We send certificate PDFs before you order. BIS for India is available on request.</p>
+<p>Every CHUGAO model ships with the documentation your market requires. Certificate PDFs are sent before you place an order, so you can clear customs and meet local electrical rules without surprises.</p>
+<h2>What is the minimum order quantity?</h2>
+<p>50 pieces per model for stock items. 500 pieces for custom OEM. We do not accept 1-piece orders.</p>
+<h2>What is the lead time?</h2>
+<p>Stock: 3-7 days. OEM: 25-30 days. Samples: 5 days, charged plus shipping, refunded on a bulk order.</p>
+<h2>What is the warranty?</h2>
+<p>3 years on stock items. OEM warranty is defined in the contract. Warranty does not cover lightning, water damage, or incorrect wiring.</p>
+<h2>OEM and ODM</h2>
+<p>Our engineering team supports OEM and ODM changes to output voltage, enclosure size, connector type, and cable length. Where a project calls for it, we can add dimming control (0-10V or PWM) or adjust the input range. Custom samples are built from your spec sheet and verified against the same test routine used in mass production, so what you approve is what ships.</p>
+<h2>Why buy factory direct</h2>
+<p>Buying from the manufacturer removes the trader margin and shortens the path from a design change to shipment. You can also request the exact certificate package your market needs instead of a generic one. Every shipment includes a commercial invoice, packing list, certificate of origin, and CE/RoHS reports, with original documents shipped with the goods.</p>
+<p>We supply distributors, lighting brands, and project contractors in 42 countries, with the strongest presence in Europe, North America, the Middle East, and Southeast Asia. Sales and engineering reply in English, Spanish, French, Russian, Arabic, and Chinese, and aim to respond within 1 hour during China business hours (GMT+8).</p>
+'''
+
+
+def _buying_block():
+    return _BUYING
+
+
+# Per-product selection guidance (translated in SUBTR for all 10 languages).
+COMPARE_ADAPTERS = (
+    "Choose an adapter when the LED load sits close to a wall socket — strips under cabinets, edge-lit signs, display cases, and small fixtures that plug in. Adapters are the smallest and lowest-cost way to get from mains to 12V or 24V DC, and the 100-240V universal input means one SKU ships to any market. Step up to the indoor driver line once you pass 200W, need a hard-wired enclosure inside a ceiling or fixture, or need active PFC for a commercial project with many fittings on one circuit."
+)
+COMPARE_INDOOR = (
+    "Choose an indoor driver when the fitting is hard-wired into a building — ceiling lights, panel lights, troffers, and linear fixtures. You get active power-factor correction, fan-less silent running, a 5-year warranty, and up to 400W in a case that mounts in a ceiling void or inside the fixture body. These are IP20, so they stay in dry interiors. If the install faces rain, dust, or wash-down, use the IP65 rainproof line for signage or the IP67 waterproof line for open outdoor sites."
+)
+COMPARE_IP67 = (
+    "Choose IP67 when the driver will sit where water collects — outdoor strips, landscape and garden lighting, fountains, pools, and coastal or marine installs. The fully potted silicone enclosure blocks water jets, driving rain, and salt spray, and 6kV surge protection handles exposed sites. IP65 costs less and runs cooler, but it only resists rain and dust. Under a roof or inside a sealed sign, IP65 is enough; in the open or near standing water, pay for IP67."
+)
+COMPARE_IP65 = (
+    "Choose IP65 when the install is semi-outdoor — signage, billboards, channel letters, and covered walkways that face rain and dust but never direct water jets. The vented metal case sheds heat better than a sealed potted unit, which is why this line reaches 600W, and it is the value choice for weather-exposed but not water-exposed jobs. If the driver will sit in standing water, be hosed down, or face salt spray, choose the IP67 line instead."
+)
+
+
 def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
-                 related=None, extra='', spec2=None, models=None, faq=None):
+                 related=None, extra='', spec2=None, models=None, faq=None,
+                 compare=None):
     rel_block = ''
     if related:
         items = ''.join(f'<li><a href="/{b}.html">{t}</a></li>' for b, t in related)
@@ -233,7 +291,14 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
     other_block = f'''
 <h2>Other CHUGAO product lines</h2>
 <div class="bg" style="margin-top:24px">{other}</div>'''
-    structured = _spec2_table(spec2) + _model_table(models) + _datasheet_cta() + _faq_block(faq)
+    structured = _spec2_table(spec2) + _model_table(models) + _datasheet_cta(path) + _faq_block(faq)
+    buying = _buying_block()
+    _sp = SPEC_PDF.get(path[:-5] if path.endswith('.html') else path)
+    inq = _sp[1] if _sp else ''
+    compare_block = ''
+    if compare:
+        compare_block = ('\n<h2>Which line fits your project?</h2>\n'
+                         '<p>%s</p>\n' % compare)
     body = f'''
 <section class="sec sa"><div class="c">
 <h1>{name}</h1>
@@ -274,8 +339,10 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
 </div>
 {structured}
 {extra}
+{compare_block}
+{buying}
 {other_block}
-<p style="margin-top:36px"><a href="/#inquiry" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p" style="color:var(--a);font-weight:600">View all products</a></p>{rel_block}
+<p style="margin-top:36px"><a href="/#inquiry?product={inq}" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p" style="color:var(--a);font-weight:600">View all products</a></p>{rel_block}
 </div></section>'''
     product_data = {
         "@context": "https://schema.org",
@@ -351,7 +418,8 @@ product_page('products/adapters.html', 'LED Adapters (5-200W)',
          "No. Choose the output voltage that matches your LED. We make 12V, 24V, 36V and 48V models - check the label on your strip before ordering."),
         ("Do you fit a plug for my country?",
          "The adapter accepts 100-240V worldwide. We fit the local plug or AC cord for your market (US, EU, UK, AU and others) at no extra charge."),
-    ])
+    ],
+    compare=COMPARE_ADAPTERS)
 product_page('products/indoor.html', 'Indoor LED Drivers (50-400W)',
     '50W - 400W', 'IP20', 'Built-in active PFC, fan-less silent operation',
     'Indoor LED drivers for ceiling lights and panel lights. High efficiency with active power-factor correction.',
@@ -390,7 +458,8 @@ product_page('products/indoor.html', 'Indoor LED Drivers (50-400W)',
          "Selected models support 0-10V or PWM dimming. Tell us your control system and we will specify the correct driver."),
         ("Can they be mounted above a ceiling?",
          "Yes. The IP20 drivers are made for dry indoor use such as above ceilings and inside fixtures. Leave some air space and do not bury them in insulation."),
-    ])
+    ],
+    compare=COMPARE_INDOOR)
 product_page('products/ip67.html', 'IP67 Waterproof LED Drivers (10-400W)',
     '10W - 400W', 'IP67 / IP68', 'Fully sealed silicone potting, salt-spray tested',
     'Waterproof drivers for outdoor LED strips, fountains, and marine lighting. Built to survive wet environments.',
@@ -431,7 +500,8 @@ product_page('products/ip67.html', 'IP67 Waterproof LED Drivers (10-400W)',
          "IP67 resists brief immersion; IP68 models handle continuous submersion. For fountains and pools choose the IP68 version, and we will confirm the depth rating."),
         ("How do I wire a waterproof driver outdoors?",
          "Use waterproof connectors and keep joints inside a sealed junction box. We supply IP67 cable glands so the entry points stay watertight."),
-    ])
+    ],
+    compare=COMPARE_IP67)
 product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
     '100W - 600W', 'IP65', 'Metal case with mesh vents, corrosion resistant',
     'Rainproof drivers for signage, billboards, and semi-outdoor installations. Metal housing with ventilation.',
@@ -470,6 +540,7 @@ product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
          "IP65 blocks rain and dust but not water jets; IP67 is fully sealed against brief immersion. For weather-exposed signage IP65 is usually enough; for wet or wash-down areas choose IP67."),
         ("Can the metal case be used outside?",
          "Yes. The corrosion-resistant metal case suits semi-outdoor signage and billboards. For full outdoor wet use, the IP67 line is the better choice."),
-    ])
+    ],
+    compare=COMPARE_IP65)
 
 print("All pages generated.")

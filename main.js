@@ -2202,8 +2202,16 @@ function handleInquiry(e) {
       headers: { "Accept": "application/json" }
     }).then(function(res) {
       if (res.ok) { showSuccess(); }
-      else { mailtoFallback(); }
+      else {
+        // Formspree rejected the submission (e.g. 429 = free-tier quota exceeded,
+        // 402/403 on plan issues). Emit a distinct analytics event so silent lead
+        // loss is observable in GA4 rather than failing quietly to mailto.
+        if (typeof gtag !== "undefined") gtag("event", "inquiry_formspree_error", { status: res.status || 0, reason: "formspree_http" });
+        mailtoFallback();
+      }
     }).catch(function() {
+      // Network/transport failure reaching Formspree (offline, blocked, timeout).
+      if (typeof gtag !== "undefined") gtag("event", "inquiry_formspree_error", { status: 0, reason: "network" });
       mailtoFallback();
     });
   } else {
@@ -2279,6 +2287,31 @@ function handleEmailClick(el) {
   return true; // let the native mailto: also fire
 }
 
+// ==================== Inquiry prefill ====================
+// Product pages link to /#inquiry?product=<line> so the form keeps the context
+// instead of dropping the buyer on a generic form.
+function prefillInquiryProduct() {
+  var sel = document.getElementById("inq-product");
+  if (!sel) return;
+  var val = null;
+  try {
+    var h = window.location.hash || "";
+    var q = h.indexOf("?") !== -1
+      ? h.slice(h.indexOf("?") + 1)
+      : window.location.search.replace(/^\?/, "");
+    var m = q.match(/(?:^|&)product=([^&#]*)/);
+    if (m) val = decodeURIComponent(m[1].replace(/\+/g, " "));
+  } catch (e) { return; }
+  if (!val) return;
+  for (var i = 0; i < sel.options.length; i++) {
+    if (sel.options[i].value === val) {
+      sel.value = val;
+      try { sel.dispatchEvent(new Event("change", { bubbles: true })); } catch (e2) {}
+      break;
+    }
+  }
+}
+
 // ==================== Init ====================
 // Read ?lang=xx from URL on first visit, then save preference
 document.addEventListener("DOMContentLoaded", function() {
@@ -2295,6 +2328,7 @@ document.addEventListener("DOMContentLoaded", function() {
   } catch (e) {}
   if (SUPPORTED.indexOf(lang) === -1) lang = "en";
   setLang(lang);
+  prefillInquiryProduct();
   observeFadeUp();
   if (DEBUG) console.log("[CHUGAO] Site initialized, language: " + lang);
 });

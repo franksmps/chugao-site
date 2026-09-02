@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CHUGAO Field Notes — LED Power Supply Guides</title>
+    <link>https://www.chugaopower.com/blog/</link>
+    <atom:link href="https://www.chugaopower.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Technical guides and factory-field notes on LED power supplies, drivers, IP ratings, certifications, and the 2026 LED market — published by CHUGAO, an LED driver manufacturer in Zhongshan, China since 2008.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate>
+    <generator>CHUGAO static site</generator>
+    <item>
+      <title>BIS Certification for LED Drivers: India Import Guide</title>
+      <link>https://www.chugaopower.com/blog-4/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-4/</guid>
+      <description>What India BIS certification means for LED power supply importers. IS 13252 Part 1 requirements, testing process, timeline, cost, and how a BIS-certified supplier like CHUGAO helps you clear customs faster.</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED Driver Lifespan: MTBF, L70, and How Long They Really Last</title>
+      <link>https://www.chugaopower.com/blog-5/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-5/</guid>
+      <description>What does 50,000 hours mean for an LED driver? Understanding MTBF, L70 rating, temperature effects, and real-world lifespan of LED switching power supplies.</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Pick the Right LED Power Supply in 3 Steps</title>
+      <link>https://www.chugaopower.com/blog-1/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-1/</guid>
+      <description>How to choose the correct LED power supply: wattage matching, IP rating for your environment, and input voltage compatibility explained simply.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP20 vs IP65 vs IP67 vs IP68</title>
+      <link>https://www.chugaopower.com/blog-2/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-2/</guid>
+      <description>IP rating explained for LED power supplies: what the numbers mean, where each rating is used, and how to pick the right one for your project.</description>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>2026 LED Market: What We Are Seeing</title>
+      <link>https://www.chugaopower.com/blog-3/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-3/</guid>
+      <description>First-hand observations from the factory floor: LED driver demand trends in 2026 — which markets are growing, what specs buyers want most, and how pricing is moving.</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

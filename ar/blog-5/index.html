@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f172a">
+<title>LED Driver Lifespan: MTBF, L70, and How Long They Really Last | CHUGAO Field Notes</title>
+  <meta name="twitter:image" content="https://www.chugaopower.com/images/factory.jpg" />
+  <meta property="og:locale" content="ar_AE" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <link rel="canonical" href="https://www.chugaopower.com/ar/blog-5/" />
+  <link rel="alternate" hreflang="en" href="https://www.chugaopower.com/blog-5/" />
+  <link rel="alternate" hreflang="zh" href="https://www.chugaopower.com/zh/blog-5/" />
+  <link rel="alternate" hreflang="es" href="https://www.chugaopower.com/es/blog-5/" />
+  <link rel="alternate" hreflang="fr" href="https://www.chugaopower.com/fr/blog-5/" />
+  <link rel="alternate" hreflang="de" href="https://www.chugaopower.com/de/blog-5/" />
+  <link rel="alternate" hreflang="pt" href="https://www.chugaopower.com/pt/blog-5/" />
+  <link rel="alternate" hreflang="ru" href="https://www.chugaopower.com/ru/blog-5/" />
+  <link rel="alternate" hreflang="ja" href="https://www.chugaopower.com/ja/blog-5/" />
+  <link rel="alternate" hreflang="ko" href="https://www.chugaopower.com/ko/blog-5/" />
+  <link rel="alternate" hreflang="ar" href="https://www.chugaopower.com/ar/blog-5/" />
+  <link rel="alternate" hreflang="it" href="https://www.chugaopower.com/it/blog-5/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.chugaopower.com/blog-5/" />
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<meta name="description" content="What does 50,000 hours mean for an LED driver? Understanding MTBF, L70 rating, temperature effects, and real-world lifespan of LED switching power supplies.">
+<meta property="og:title" content="LED Driver Lifespan: MTBF, L70, and How Long They Really Last">
+<meta property="og:description" content="A 50,000-hour LED driver does not mean 50,000 hours of continuous use. Here is what the numbers actually mean for your project budget and replacement schedule.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.chugaopower.com/ar/blog-5/" />>
+<meta property="og:image" content="https://www.chugaopower.com/images/factory.jpg">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:width" content="1216">
+<meta property="og:image:height" content="832">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"LED Driver Lifespan: MTBF, L70, and How Long They Really Last","datePublished":"2026-04-20","dateModified":"2026-04-20","inLanguage":"ar","author":{"@type":"Organization","name":"CHUGAO Power"},"publisher":{"@type":"Organization","name":"CHUGAO Power","logo":{"@type":"ImageObject","url":"https://www.chugaopower.com/logo.png"}}}</script>
+<link rel="stylesheet" href="/blog.css?v=4">
+<!-- Google tag (gtag.js) - GA4 -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+// Consent Mode v2: denied by default until the visitor accepts the cookie banner
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied'
+});
+gtag('js', new Date());
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NV6VNJQ8MY"></script>
+<script type="application/ld+json" id="jsonld-breadcrumb">
+{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"ar","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://www.chugaopower.com/ar/"},{"@type":"ListItem","position":2,"name":"LED Driver Lifespan: MTBF, L70, and How Long They Really Last","item":"https://www.chugaopower.com/ar/blog-5/"}]}
+</script>
+</head>
+<body>
+<header><div class="c"><div class="ni"><a href="/#home" class="logo"><img loading="eager" src="/logo.png" alt="CHUGAO Power Logo" width="169" height="44" fetchpriority="high"></a><nav><ul class="nl"><li><a href="/#home" data-i18n="n_h">الرئيسية</a></li><li><a href="/#about" data-i18n="n_a">من نحن</a></li><li><a href="/#products" data-i18n="n_p">المنتجات</a></li><li><a href="/#specs" data-i18n="n_s">المواصفات</a></li><li><a href="/#why" data-i18n="n_w">لماذا نحن</a></li><li><a href="/blog/" data-i18n="n_b">أخبار</a></li><li><a href="/#faq" data-i18n="n_f">الأسئلة</a></li><li><a href="/#contact" data-i18n="n_c">اتصل بنا</a></li></ul></nav><div style="display:flex;align-items:center"><div class="lang-selector"><button class="lang-btn" onclick="toggleLangDropdown()" aria-haspopup="true" aria-expanded="false" aria-controls="lang-dropdown"><span id="current-lang">AR</span><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3l4 4 4-4H1z"/></svg></button><div class="lang-dropdown" id="lang-dropdown"><a class="lang-item" id="lang-en" href="/blog-5/" onclick="goLang('en')"><span class="lang-flag">🇪🇳</span><span class="lang-name">English</span></a><a class="lang-item" id="lang-zh" href="/zh/blog-5/" onclick="goLang('zh')"><span class="lang-flag">🇨🇳</span><span class="lang-name">简体中文</span></a><a class="lang-item" id="lang-es" href="/es/blog-5/" onclick="goLang('es')"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></a><a class="lang-item" id="lang-fr" href="/fr/blog-5/" onclick="goLang('fr')"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span></a><a class="lang-item" id="lang-de" href="/de/blog-5/" onclick="goLang('de')"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span></a><a class="lang-item" id="lang-pt" href="/pt/blog-5/" onclick="goLang('pt')"><span class="lang-flag">🇵🇹</span><span class="lang-name">Português</span></a><a class="lang-item" id="lang-ru" href="/ru/blog-5/" onclick="goLang('ru')"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></a><a class="lang-item" id="lang-ja" href="/ja/blog-5/" onclick="goLang('ja')"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></a><a class="lang-item" id="lang-ko" href="/ko/blog-5/" onclick="goLang('ko')"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span></a><a class="lang-item active" id="lang-ar" href="/ar/blog-5/" onclick="goLang('ar')"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></a><a class="lang-item" id="lang-it" href="/it/blog-5/" onclick="goLang('it')"><span class="lang-flag">🇮🇹</span><span class="lang-name">Italiano</span></a></div></div><button class="mt" id="mobileToggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button></div></div></div></header>
+<div class="mm" id="mobileMenu"><a href="/#home" onclick="closeMobileMenu()" data-i18n="n_h">الرئيسية</a><a href="/#about" onclick="closeMobileMenu()" data-i18n="n_a">من نحن</a><a href="/#products" onclick="closeMobileMenu()" data-i18n="n_p">المنتجات</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">المواصفات</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">لماذا نحن</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">أخبار</a><a href="/#faq" onclick="closeMobileMenu()" data-i18n="n_f">الأسئلة</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">اتصل بنا</a><div class="ml"><a href="/blog-5/" onclick="goLang('en');closeMobileMenu()" id="ml-en">EN</a><a href="/zh/blog-5/" onclick="goLang('zh');closeMobileMenu()" id="ml-zh">ZH</a><a href="/es/blog-5/" onclick="goLang('es');closeMobileMenu()" id="ml-es">ES</a><a href="/fr/blog-5/" onclick="goLang('fr');closeMobileMenu()" id="ml-fr">FR</a><a href="/de/blog-5/" onclick="goLang('de');closeMobileMenu()" id="ml-de">DE</a><a href="/pt/blog-5/" onclick="goLang('pt');closeMobileMenu()" id="ml-pt">PT</a><a href="/ru/blog-5/" onclick="goLang('ru');closeMobileMenu()" id="ml-ru">RU</a><a href="/ja/blog-5/" onclick="goLang('ja');closeMobileMenu()" id="ml-ja">JA</a><a href="/ko/blog-5/" onclick="goLang('ko');closeMobileMenu()" id="ml-ko">KO</a><a href="/ar/blog-5/" onclick="goLang('ar');closeMobileMenu()" id="ml-ar" class="active">AR</a><a href="/it/blog-5/" onclick="goLang('it');closeMobileMenu()" id="ml-it">IT</a></div></div>
+
+<main class="article">
+<a href="/blog/" class="back-link">← Back to Field notes</a>
+
+<h1>LED Driver Lifespan: MTBF, L70, and How Long They Really Last</h1>
+<div class="meta">Technical Deep-dive · April 2026 · 8 min read</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
+<source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-indoor.jpg" alt="Indoor LED driver with long lifespan" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>A datasheet says "50,000 hours." You do the math: that is <strong>5.7 years</strong> of continuous operation. So why do some installations need driver replacement after just 2-3 years?</p>
+
+<p>The answer is that rated lifespan and real-world lifespan are different things. This article explains what those numbers actually mean, what kills drivers early, and how to pick the right spec for your project's expected service life.</p>
+
+<h2>The Three Metrics That Matter</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Metric</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">What it measures</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Typical value</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Mean Time Between Failures — statistical average time between failures across a population</td><td style="padding:10px 14px;border:1px solid var(--b)">50,000–100,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Hours until output drops to 70% or 80% of initial value</td><td style="padding:10px 14px;border:1px solid var(--b)">30,000–50,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Warranty period</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Manufacturer guarantee against defects</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 years</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Key insight:</strong> A 50,000-hour L70 rating means the driver maintains at least 70% of its original output after 50,000 hours under test conditions. It does not mean every unit will run for 50,000 hours before failing.
+</div>
+
+<h2>Why Drivers Fail Early</h2>
+
+<h3>1. Heat is the #1 killer</h3>
+<p>Every 10°C above the rated operating temperature roughly halves electrolytic capacitor life. An IP20 indoor driver mounted inside a sealed light fixture can easily run 20°C hotter than ambient. If the ambient is 35°C (common in summer), internal component temps can hit 75-85°C — well above the typical 60°C design point.</p>
+
+<ul>
+<li><strong>IP67 waterproof units:</strong> Better heat dissipation through metal case + silicone potting. Rated for -30 to +60°C. Typical lifespan: 50,000h.</li>
+<li><strong>IP20 indoor units:</strong> Depend on fixture ventilation. In sealed housings, expect 40-60% shorter life than rated.</li>
+<li><strong>Adapters:</strong> Plastic enclosure traps more heat. Typical lifespan: 30,000h.</li>
+</ul>
+
+<h3>2. Voltage spikes and surges</h3>
+<p>Grid voltage fluctuations (especially in developing markets) stress input capacitors and MOVs. A driver rated for AC 190-264V may survive a 280V transient once or twice but repeated surges degrade components faster than normal wear.</p>
+
+<h3>3. Running near full load</h3>
+<p>At 90-100% rated load, ripple current through output capacitors increases. This generates more heat and accelerates aging. The rule we recommend at CHUGAO:</p>
+
+<div class="highlight">
+<strong>Load wattage × 1.25 = minimum driver rating.</strong><br>
+Running a driver at 70-80% capacity instead of 95% can extend effective lifespan by 30–50%.
+</div>
+
+<h2>What Different Applications Need</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Application</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Recommended driver</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b">Expected service life</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Why</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Retail signage (8-12 hrs/day)</td><td style="padding:10px 14px;border:1px solid var(--b)">Adapter / Indoor IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 years</td><td style="padding:10px 14px;border:1px solid var(--b">Low daily hours offset lower per-unit lifespan</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Outdoor facade lighting (12+ hrs/day)</td><td style="padding:10px 14px;border:1px solid var(--b">IP67 Waterproof</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 years</td><td style="padding:10px 14px;border:1px solid var(--b">Sealed potting handles humidity & temp swings</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b">Industrial 24/7 (warehouse)</td><td style="padding:10px 14px;border:1px solid var(--b">IP65 Rainproof or Industrial CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 years</td><td style="padding:10px 14px;border:1px solid var(--b)">Continuous high-temp operation accelerates wear</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b">Marine / fountain</td><td style="padding:10px 14px;border:1px solid var(--b">IP68-rated unit</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 years</td><td style="padding:10px 14px;border:1px solid var(--b">Full immersion rating, salt-spray tested</td></tr>
+</tbody>
+</table>
+
+<h2>How We Test at CHUGAO</h2>
+
+<p>Every CHUGAO driver runs through a <strong>48-hour burn-in test</strong> before shipment. Failed units are discarded — they do not leave the factory floor. This pre-shipment screening catches infant mortality failures (the early-failure portion of the bathtub curve).</p>
+
+<p>For OEM orders above 500 pcs, we offer extended burn-in options (72-168 hours) at no extra cost if specified in your PO.</p>
+
+<h2>Quick Decision Guide</h2>
+
+<ol>
+<li><strong>Daily runtime?</strong> 8h retail vs 24h industrial changes everything. Multiply your target project life by daily hours to get total hour requirement.</li>
+<li><strong>Ambient temperature?</strong> Every 10°C over 40°C cuts life by ~50%. Factor this into model selection.</li>
+<li><strong>Ventilation?</strong> Sealed fixtures need IP67 or higher. Ventilated enclosures can use IP20/65.</li>
+<li><strong>Headroom?</strong> Always add 25%. The cost difference between a 60W and 100W driver is small compared to a site visit to replace a failed unit.</li>
+<li><strong>Spare stock?</strong> For 24/7 installations, keep 5-10% spare drivers on hand. It costs less than emergency shipping.</li>
+</ol>
+
+<div class="cta-box">
+<h3>Not sure which driver matches your lifespan needs?</h3>
+<p>Tell us your application, daily run time, and ambient conditions. We recommend the right series with realistic life expectancy for your specific installation.</p>
+<a href="/#inquiry" class="btn">Get a lifespan-matched recommendation</a>
+</div>
+
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explore CHUGAO products</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Long-life adapters with MTBF data for every rating.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">L70-rated drivers for commercial and architectural fixtures.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Potted and sealed for extended outdoor service life.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Rugged drivers designed for 50,000+ hour outdoor operation.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">More from the field</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED Technology</span><span class="rel-title">Pick the Right LED Power Supply in 3 Steps</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technical Guide</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Industry Trends</span><span class="rel-title">2026 LED Market: What We Are Seeing</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatory</span><span class="rel-title">BIS Certification for LED Drivers: India Import Guide</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">BIS Certification for LED Drivers: India Import Guide</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">All articles</span><span class="pn-t">Field Notes</span></a></nav>
+</main>
+
+<footer><div class="c"><div class="fg"><div class="fb"><a href="/#home" class="logo"><img loading="lazy" src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px"></a><p data-i18n="f_desc">CHUGAO تصنع إمدادات الطاقة LED في تشونغشان، الصين. مباشرة من المصنع.</p><div class="social"><a href="https://www.facebook.com/profile.php?id=100063658296873" target="_blank" rel="noopener noreferrer" class="sfb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.014 1.794-4.677 4.533-4.677 1.313 0 2.686.234 2.686.234v2.97h-1.513c-1.49 0-1.955.926-1.955 1.876v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a><a href="https://www.instagram.com/chugao_smps/" target="_blank" rel="noopener noreferrer" class="sig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.tiktok.com/@chugaosmpsofficial" target="_blank" rel="noopener noreferrer" class="stk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/chugaosmps/" target="_blank" rel="noopener noreferrer" class="sli" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></div></div><div class="fc"><h4 data-i18n="f_prod">المنتجات</h4><a href="/#products" data-i18n="f_p1">المحولات</a><a href="/#products" data-i18n="f_p2">داخلي</a><a href="/#products" data-i18n="f_p3">IP67</a><a href="/#products" data-i18n="f_p4">IP65</a></div><div class="fc"><h4 data-i18n="f_comp">الشركة</h4><a href="/#about" data-i18n="f_c1">من نحن</a><a href="/#why" data-i18n="f_c2">لماذا</a><a href="/blog/" data-i18n="f_c3">أخبار</a><a href="/#faq" data-i18n="f_c4">FAQ</a></div><div class="fc"><h4 data-i18n="f_supp">الدعم</h4><a href="/#contact" data-i18n="f_s1">اتصل بنا</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">البريد</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" data-i18n="f_s3">WhatsApp</a><a href="/#inquiry" data-i18n="f_s4">اطلب أوراق البيانات</a></div></div><div class="fb2"><p>© 2026 Zhongshan Chugao Electronic Technology Co., Ltd. جميع الحقوق محفوظة.</p><p data-i18n="f_slogan">شركة تصنيع متكاملة لمصادر طاقة LED بجميع السلاسل</p></div></div></footer>
+
+<a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<button class="btt" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="cb-inner">
+    <p class="cb-text" data-i18n="cb_text">We use cookies for anonymous traffic analytics (Google Analytics). Nothing is tracked until you accept.</p>
+    <div class="cb-btns">
+      <button id="cookie-decline" class="cb-btn cb-decline" data-i18n="cb_decline">Decline</button>
+      <button id="cookie-accept" class="cb-btn cb-accept" data-i18n="cb_accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function updateJsonLdLang(lang){
+    var bcp = (lang === 'zh') ? 'zh-CN' : lang;
+    ['jsonld-org','jsonld-faq','jsonld-products'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(!el) return;
+      try { var data = JSON.parse(el.textContent); data.inLanguage = bcp; el.textContent = JSON.stringify(data); } catch(e){}
+    });
+  }
+    document.addEventListener('DOMContentLoaded', function(){
+if (typeof window.setLang === 'function') {
+    var _orig = window.setLang;
+    window.setLang = function(lang){ var r = _orig.apply(this, arguments); updateJsonLdLang(lang); return r; };
+  }
+  });
+  document.addEventListener('DOMContentLoaded', function(){
+    var p = new URLSearchParams(location.search).get('lang');
+    var stored = null; try { stored = localStorage.getItem('chugao_lang'); } catch(e){}
+    updateJsonLdLang(p || stored || 'en');
+  });
+  var CONSENT_KEY = 'chugao_cookie_consent';
+  function getConsent(){ try { return localStorage.getItem(CONSENT_KEY); } catch(e){ return null; } }
+  function grantGtag(){
+    if (!window.gtag) return;
+    gtag('consent','update',{'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+    gtag('config','G-NV6VNJQ8MY');
+  }
+  function showBanner(){ var b=document.getElementById('cookie-banner'); if(b) b.classList.add('show'); }
+  function hideBanner(){ var b=document.getElementById('cookie-banner'); if(b) b.classList.remove('show'); }
+  document.addEventListener('DOMContentLoaded', function(){
+    var c = getConsent();
+    if (c === 'accepted') { grantGtag(); }
+    else if (c === 'declined') { /* keep denied */ }
+    else { showBanner(); }
+    var accept = document.getElementById('cookie-accept');
+    var decline = document.getElementById('cookie-decline');
+    if (accept) accept.addEventListener('click', function(){ try{localStorage.setItem(CONSENT_KEY,'accepted');}catch(e){} grantGtag(); hideBanner(); });
+    if (decline) decline.addEventListener('click', function(){ try{localStorage.setItem(CONSENT_KEY,'declined');}catch(e){} hideBanner(); });
+  });
+})();
+</script>
+
+<script src="/main.min.js?v=3" defer></script>
+<script src="/analytics.js?v=1" defer></script>
+</body>
+</html>

@@ -46,7 +46,8 @@ CRUMB_HOME = {'en':'Home','zh':'首页','es':'Inicio','fr':'Accueil','de':'Start
 # Content is English-only until T keys are translated, but fanning out keeps the
 # language switcher links valid (no 404) across the whole site.
 LOCALIZED = {'index', 'about', 'certs', 'faq',
-             'products/adapters', 'products/indoor', 'products/ip65', 'products/ip67'}
+             'products/adapters', 'products/indoor', 'products/ip65', 'products/ip67',
+             'blog', 'blog-1', 'blog-2', 'blog-3', 'blog-4', 'blog-5'}
 
 def flag(letters):
     base = 0x1F1E6
@@ -317,13 +318,6 @@ def build_sitemap(entries):
             out.append(f'    <loc>{e["canonical"]}</loc>')
             out.append(f'    <lastmod>{lastmod_for(files.get("en", ""))}</lastmod>')
             out.append('  </url>')
-    # static blog pages (English only)
-    for b in ['blog-1','blog-2','blog-3','blog-4','blog-5','blog']:
-        out.append('  <url>')
-        url = DOMAIN + '/blog/' if b == 'blog' else DOMAIN + '/' + b + '.html'
-        out.append(f'    <loc>{url}</loc>')
-        out.append(f'    <lastmod>{lastmod_for("blog/index.html" if b == "blog" else b + ".html")}</lastmod>')
-        out.append('  </url>')
     out.append('</urlset>')
     with open(os.path.join(REPO, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write('\n'.join(out) + '\n')
