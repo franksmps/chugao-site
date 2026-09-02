@@ -6,6 +6,7 @@ import os, re, json, subprocess, sys, time, datetime
 import html as html_lib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from i18n_subpages import apply_translations
+from blog_meta import BLOG_META
 
 REPO = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(REPO, 'src')
@@ -256,6 +257,10 @@ def build_page(rel_html, T, META):
         html = set_html_lang(html, BCP[lang])
         if name == 'index':
             html = set_title_desc(html, META, lang)
+        elif name in BLOG_META and lang in BLOG_META[name]:
+            # P1-3: localize blog <title>/description for the 6 full SUBTR langs
+            # (es/pt/ru/fr/de/ar). en + zh/ja/ko/it keep the English template text.
+            html = set_title_desc(html, BLOG_META[name], lang)
         html = set_jsonld_lang(html, BCP[lang])
         html = strip_old_hreflang(html)
         html = inject_hreflang(html, page_url, target_langs)
