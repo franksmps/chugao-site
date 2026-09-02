@@ -34,6 +34,13 @@ LANGS_META = [
 ]
 LANGS = [c for c,_,_ in LANGS_META]
 
+# Publicly advertised languages: the 7 fully-localized versions
+# (English + the 6 SUBTR market languages). zh/ja/ko/it are still BUILT and left
+# live as an English fallback (no 404, reversible) but are NOT surfaced as
+# language choices in the switcher, hreflang, og:locale alternates, or sitemap.
+PUBLIC_LANGS = ['en', 'es', 'pt', 'ru', 'fr', 'de', 'ar']
+PUBLIC_LANGS_META = [m for m in LANGS_META if m[0] in PUBLIC_LANGS]
+
 # OGP wants language_TERRITORY (en_US), not the bare codes hreflang uses.
 OG_LOCALE = {'en':'en_US','zh':'zh_CN','es':'es_ES','fr':'fr_FR','de':'de_DE',
              'pt':'pt_BR','ru':'ru_RU','ja':'ja_JP','ko':'ko_KR','ar':'ar_AE','it':'it_IT'}
@@ -145,7 +152,7 @@ def inject_canonical(html, page_url, lang):
 def inject_og_locale(html, lang):
     loc = OG_LOCALE.get(lang, BCP[lang].replace('-', '_'))
     tags = [f'  <meta property="og:locale" content="{loc}" />']
-    for l in LANGS:
+    for l in PUBLIC_LANGS:
         if l == lang:
             continue
         alt = OG_LOCALE.get(l, BCP[l].replace('-', '_'))
@@ -220,11 +227,11 @@ def inject_switcher(html, lang, page_url='/'):
         f'href="{href_for(l)}" onclick="goLang(\'{l}\')">'
         f'<span class="lang-flag">{flag(letters)}</span>'
         f'<span class="lang-name">{native}</span></a>'
-        for (l, letters, native) in LANGS_META)
+        for (l, letters, native) in PUBLIC_LANGS_META)
     mob = ''.join(
         f'<a href="{href_for(l)}" onclick="goLang(\'{l}\');closeMobileMenu()" id="ml-{l}"'
         f'{" class=\"active\"" if l==lang else ""}>{l.upper()}</a>'
-        for (l, letters, native) in LANGS_META)
+        for (l, letters, native) in PUBLIC_LANGS_META)
     html = html.replace('<!--LANG_DROPDOWN-->', dd)
     html = html.replace('<!--LANG_MOBILE-->', mob)
     html = re.sub(r'<span id="current-lang">[^<]*</span>',
@@ -263,7 +270,7 @@ def build_page(rel_html, T, META):
             html = set_title_desc(html, BLOG_META[name], lang)
         html = set_jsonld_lang(html, BCP[lang])
         html = strip_old_hreflang(html)
-        html = inject_hreflang(html, page_url, target_langs)
+        html = inject_hreflang(html, page_url, PUBLIC_LANGS)
         html = inject_canonical(html, page_url, lang)
         html = inject_og_locale(html, lang)
         html = inject_og_url(html, page_url, lang)
@@ -307,13 +314,13 @@ def build_sitemap(entries):
         files = e.get('files', {})
         if e['fan_out']:
             # Emit one <url> per language, each carrying the full hreflang set.
-            for l in LANGS:
+            for l in PUBLIC_LANGS:
                 if l not in e['alts']:
                     continue
                 out.append('  <url>')
                 out.append(f'    <loc>{e["alts"][l]}</loc>')
                 out.append(f'    <lastmod>{lastmod_for(files.get(l, ""))}</lastmod>')
-                for la in LANGS:
+                for la in PUBLIC_LANGS:
                     if la in e['alts']:
                         out.append(f'    <xhtml:link rel="alternate" hreflang="{la}" href="{e["alts"][la]}" />')
                 out.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{e["alts"]["en"]}" />')
