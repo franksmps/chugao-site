@@ -2,7 +2,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 section[id]{scroll-margin-top:80px}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--t);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC",sans-serif;background:var(--bg);color:var(--t);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 .c{max-width:1400px;margin:0 auto;padding:0 32px}
@@ -243,7 +243,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--a);outline-offset:3
 /* Back-to-top arrow SVG sizing */
 .btt svg{width:20px;height:20px;display:block;margin:0 auto}
 @media(max-width:900px){.nl,.lb{display:none}.mt{display:block}}
-@media(max-width:768px){.sec{padding:50px 0}.st{font-size:26px}.hero{padding:100px 0 56px}.hero h1{font-size:28px}.hero p{font-size:16px}.hi{gap:32px}.hi2{min-height:240px}.hi2 img{min-height:240px!important}.hst{gap:18px;flex-wrap:wrap}.fg{grid-template-columns:1fr}.fb2{justify-content:center;text-align:center}.cg{grid-template-columns:1fr}.statgrid{grid-template-columns:1fr}.spec-table{display:block;overflow-x:auto}.wa-float{right:16px;bottom:78px;width:52px;height:52px}.btt{right:16px;bottom:20px}.c{padding:0 18px}.trust-inner{gap:18px;justify-content:flex-start}.ctab{flex-direction:column;align-items:stretch}.ctab .btn-p,.ctab .btn-s{justify-content:center}.flag-bar .c{gap:8px}.social{margin-top:14px}header{height:72px}.mm{top:72px}}
+@media(max-width:768px){.sec{padding:50px 0}.st{font-size:26px}.hero{padding:100px 0 56px}.hero h1{font-size:28px}.hero p{font-size:16px}.hi{gap:32px}.hi2{min-height:240px}.hi2 img{min-height:240px!important}.hst{gap:18px;flex-wrap:wrap}.fg{grid-template-columns:1fr}.fb2{justify-content:center;text-align:center}.cg{grid-template-columns:1fr}.statgrid{grid-template-columns:1fr}.spec-table{width:auto;min-width:680px;font-size:13px}.spec-table th,.spec-table td{white-space:nowrap}.wa-float{right:16px;bottom:78px;width:52px;height:52px}.btt{right:16px;bottom:20px}.c{padding:0 18px}.trust-inner{gap:18px;justify-content:flex-start}.ctab{flex-direction:column;align-items:stretch}.ctab .btn-p,.ctab .btn-s{justify-content:center}.flag-bar .c{gap:8px}.social{margin-top:14px}header{height:72px}.mm{top:72px}.inquiry-form{padding:24px}.lang-btn{min-height:44px}.form-group input,.form-group select,.form-group textarea{font-size:16px}.trust-inner{justify-content:center}.hbtns{flex-direction:column}.hbtns .btn-p,.hbtns .btn-s{width:100%;justify-content:center}}
 @media(max-width:768px){.quote-grid,.proof-grid{grid-template-columns:1fr}.quote-card,.proof-card,.inq-card,.quote-template,.whatsapp-card{padding:22px}.proof-strip{padding:22px}}
 /* --- 点击动效：导航与链接按下缩放反馈 (2026-07-16) --- */
 /* inline 元素 transform 无效，导航项与内联报价链接需设 inline-block */
@@ -294,3 +294,22 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--a);outline-offset:3
 .faq h3{font-size:1.05rem;margin:0 0 6px;color:var(--a,#2563eb)}
 .faq p{margin:0;color:var(--ts,#374151);line-height:1.6}
 @media(max-width:768px){.faq h3{font-size:1rem}}
+
+/* --- Mobile polish: tap latency, notch safe-area, small-phone CTA --- */
+a,button,input,select,textarea{-webkit-tap-highlight-color:transparent}
+a,button,input,select,textarea{touch-action:manipulation}
+@supports(padding-bottom:env(safe-area-inset-bottom)){
+  .cookie-banner{padding-bottom:calc(14px + env(safe-area-inset-bottom))}
+  .wa-float{bottom:calc(78px + env(safe-area-inset-bottom))}
+  .btt{bottom:calc(20px + env(safe-area-inset-bottom))}
+  .mm{padding-bottom:calc(20px + env(safe-area-inset-bottom))}
+}
+@media(max-width:480px){
+  .hero h1{font-size:24px}
+  .st{font-size:23px}
+  .cta h2{font-size:26px}
+  .sec{padding:44px 0}
+  .c{padding:0 16px}
+  .quote-card,.proof-card,.inq-card,.quote-template,.whatsapp-card{padding:20px}
+  .inquiry-form{padding:20px}
+}
