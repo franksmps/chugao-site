@@ -27,7 +27,7 @@ def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg'):
 <meta property="og:image" content="{DOMAIN}{og_image}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/logo.png">
-<link rel="stylesheet" href="/style.css?v=10">
+<link rel="stylesheet" href="/style.css?v=11">
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 </head>
 <body>
