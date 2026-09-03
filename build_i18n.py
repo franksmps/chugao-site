@@ -305,6 +305,20 @@ def lastmod_for(rel):
         ts = time.time()
     return datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d')
 
+def priority_for(page):
+    """Relative crawl priority by page type (0.0-1.0)."""
+    if page == '/':
+        return '1.0'
+    if page.startswith('/products/'):
+        return '0.9'
+    if page in ('/about/', '/certs/', '/faq/'):
+        return '0.7'
+    if page == '/blog/':
+        return '0.6'
+    if page.startswith('/blog-'):
+        return '0.5'
+    return '0.5'
+
 def build_sitemap(entries):
     out = []
     out.append('<?xml version="1.0" encoding="UTF-8"?>')
@@ -320,6 +334,7 @@ def build_sitemap(entries):
                 out.append('  <url>')
                 out.append(f'    <loc>{e["alts"][l]}</loc>')
                 out.append(f'    <lastmod>{lastmod_for(files.get(l, ""))}</lastmod>')
+                out.append(f'    <priority>{priority_for(e["page"])}</priority>')
                 for la in PUBLIC_LANGS:
                     if la in e['alts']:
                         out.append(f'    <xhtml:link rel="alternate" hreflang="{la}" href="{e["alts"][la]}" />')
@@ -329,6 +344,7 @@ def build_sitemap(entries):
             out.append('  <url>')
             out.append(f'    <loc>{e["canonical"]}</loc>')
             out.append(f'    <lastmod>{lastmod_for(files.get("en", ""))}</lastmod>')
+            out.append(f'    <priority>{priority_for(e["page"])}</priority>')
             out.append('  </url>')
     out.append('</urlset>')
     with open(os.path.join(REPO, 'sitemap.xml'), 'w', encoding='utf-8') as f:

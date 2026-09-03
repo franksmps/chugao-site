@@ -187,6 +187,35 @@ PRODUCTS = [
     ('products/ip65', 'IP65 Rainproof LED Drivers (100-600W)', '/images/product-rainproof.webp'),
 ]
 
+# Cross-line comparison table (reuses the exact spec strings already localized
+# via SUBTR in each product page's spec table, so no new translation keys needed).
+PRODUCT_COMPARE = {
+    'products/adapters': ('5W - 200W', 'IP20 (indoor)', 'AC 100-240V universal', 'DC 12/24/36/48V'),
+    'products/indoor':   ('50W - 400W', 'IP20', 'AC 190-264V', 'DC 12/24V'),
+    'products/ip67':     ('10W - 400W', 'IP67 / IP68', 'AC 90-305V', 'DC 12/24V'),
+    'products/ip65':     ('100W - 600W', 'IP65', 'AC 190-264V', 'DC 12/24V'),
+}
+
+def _compare_table(current):
+    """Side-by-side comparison of all four CHUGAO product lines."""
+    rows = [('Power range', 0), ('Ingress protection', 1),
+            ('Input voltage', 2), ('Output voltage', 3)]
+    head = ''.join(
+        f'<th{" style=\"background:#0f172a;color:#fff" if p == current else ""}>{n}</th>'
+        for (p, n, i) in PRODUCTS)
+    body_rows = ''
+    for label, idx in rows:
+        cells = ''.join(
+            f'<td{" style=\"background:#eef4ff;font-weight:600" if p == current else ""}>'
+            f'{PRODUCT_COMPARE[p][idx]}</td>'
+            for (p, n, i) in PRODUCTS)
+        body_rows += f'<tr><th>{label}</th>{cells}</tr>'
+    return ('\n<h2>Compare all CHUGAO lines</h2>\n'
+            '<p>Four product lines cover most low-voltage LED jobs. Pick by power, '
+            'protection, and input range.</p>\n'
+            '<table class="spec-table">\n'
+            f'<tr><th>Line</th>{head}</tr>\n{body_rows}</table>')
+
 # product path -> (spec sheet filename, <select> value used by the inquiry form)
 SPEC_PDF = {
     'products/adapters': ('chugao-led-adapters-5-200w.pdf', 'adapter'),
@@ -279,7 +308,7 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
                  compare=None):
     rel_block = ''
     if related:
-        items = ''.join(f'<li><a href="/{b}.html">{t}</a></li>' for b, t in related)
+        items = ''.join(f'<li><a href="/{b}/">{t}</a></li>' for b, t in related)
         rel_block = f'''
 <h2>Related reading</h2>
 <ul class="rl">{items}</ul>'''
@@ -299,6 +328,7 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
     if compare:
         compare_block = ('\n<h2>Which line fits your project?</h2>\n'
                          '<p>%s</p>\n' % compare)
+    compare_table_block = _compare_table(path)
     body = f'''
 <section class="sec sa"><div class="c">
 <h1>{name}</h1>
@@ -340,6 +370,7 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
 {structured}
 {extra}
 {compare_block}
+{compare_table_block}
 {buying}
 {other_block}
 <p style="margin-top:36px"><a href="/#inquiry?product={inq}" class="btn-p">Get a quote for {name}</a> &nbsp; <a href="/products/adapters/" data-i18n="n_p" style="color:var(--a);font-weight:600">View all products</a></p>{rel_block}
