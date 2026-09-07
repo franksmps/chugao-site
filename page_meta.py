@@ -299,3 +299,56 @@ def apply_heading_overrides(html, page, lang):
         html = re.sub(r'(<h2[^>]*>)' + re.escape(en) + r'(</h2>)',
                       lambda m: m.group(1) + tr + m.group(2), html, count=1)
     return html
+
+
+# ---------------------------------------------------------------------------
+# Description-only overrides for the three remaining inner pages.
+#
+# Why: about / faq / certs get their <title> translated by SUBTR (the English
+# title string is a SUBTR key), but their <meta description> lives only in the
+# src template, so every language was shipping the English sentence -- visible
+# as an English snippet under a localized title in search results.
+# Only 'desc' is supplied: no 'title' key means set_title_desc() leaves the
+# SUBTR-translated title untouched.
+# ---------------------------------------------------------------------------
+PAGE_META.update({
+    'about': {
+        'en': {'desc': "CHUGAO is an LED switching power supply manufacturer in Zhongshan, China. 6,000 m2 factory, 4 product lines, CE/RoHS on every unit, OEM/ODM since 2008."},
+        'zh': {'desc': "楚高是中国中山的 LED 开关电源厂家。6000 平方米工厂，4 条产品线，每台通过 CE/RoHS，2008 年起做 OEM/ODM。"},
+        'es': {'desc': "CHUGAO es un fabricante de fuentes de alimentación LED en Zhongshan, China. Fábrica de 6.000 m², 4 líneas de producto, CE/RoHS en cada unidad, OEM/ODM desde 2008."},
+        'pt': {'desc': "A CHUGAO é fabricante de fontes de alimentação LED em Zhongshan, China. Fábrica de 6.000 m², 4 linhas de produto, CE/RoHS em cada unidade, OEM/ODM desde 2008."},
+        'ru': {'desc': "CHUGAO — производитель импульсных блоков питания для светодиодов в Чжуншане, Китай. Завод 6 000 м², 4 линейки продукции, CE/RoHS на каждом изделии, OEM/ODM с 2008 года."},
+        'fr': {'desc': "CHUGAO est un fabricant d'alimentations LED à Zhongshan, en Chine. Usine de 6 000 m², 4 gammes de produits, CE/RoHS sur chaque unité, OEM/ODM depuis 2008."},
+        'de': {'desc': "CHUGAO ist Hersteller von LED-Schaltnetzteilen in Zhongshan, China. 6.000 m² Werk, 4 Produktlinien, CE/RoHS an jedem Gerät, OEM/ODM seit 2008."},
+        'ar': {'desc': "CHUGAO شركة مصنعة لمصادر طاقة LED في مدينة تشونغشان بالصين. مصنع بمساحة 6,000 م²، 4 خطوط إنتاج، شهادتا CE وRoHS لكل وحدة، وتصنيع OEM/ODM منذ 2008."},
+        'ja': {'desc': "楚高（CHUGAO）は中国中山市の LED スイッチング電源メーカーです。6,000m² の工場、4 製品ライン、全機 CE/RoHS 対応、2008 年から OEM/ODM に対応しています。"},
+        'ko': {'desc': "CHUGAO는 중국 중산에 있는 LED 스위칭 전원 공급 장치 제조업체입니다. 6,000m² 공장, 4개 제품 라인, 전 제품 CE/RoHS 인증, 2008년부터 OEM/ODM 생산."},
+        'it': {'desc': "CHUGAO è un produttore di alimentatori switching LED a Zhongshan, in Cina. Fabbrica di 6.000 m², 4 linee di prodotto, CE/RoHS su ogni unità, OEM/ODM dal 2008."},
+    },
+    'faq': {
+        'en': {'desc': "Minimum order, certifications (CE/RoHS/UL/BIS), warranty, OEM, payment terms, lead time, and how to choose IP rating for LED drivers."},
+        'zh': {'desc': "起订量、认证（CE/RoHS/UL/BIS）、质保、OEM、付款方式、交期，以及 LED 驱动器防护等级怎么选。"},
+        'es': {'desc': "Pedido mínimo, certificaciones (CE/RoHS/UL/BIS), garantía, OEM, condiciones de pago, plazo de entrega y cómo elegir el grado IP de un driver LED."},
+        'pt': {'desc': "Pedido mínimo, certificações (CE/RoHS/UL/BIS), garantia, OEM, condições de pagamento, prazo de entrega e como escolher o grau IP de um driver LED."},
+        'ru': {'desc': "Минимальный заказ, сертификаты (CE/RoHS/UL/BIS), гарантия, OEM, условия оплаты, сроки поставки и как выбрать степень защиты IP для LED-драйверов."},
+        'fr': {'desc': "Commande minimale, certifications (CE/RoHS/UL/BIS), garantie, OEM, conditions de paiement, délais et comment choisir l'indice IP d'un driver LED."},
+        'de': {'desc': "Mindestbestellmenge, Zertifizierungen (CE/RoHS/UL/BIS), Garantie, OEM, Zahlungsbedingungen, Lieferzeit und wie Sie die IP-Schutzart für LED-Treiber wählen."},
+        'ar': {'desc': "الحد الأدنى للطلب، الشهادات (CE/RoHS/UL/BIS)، الضمان، تصنيع OEM، شروط الدفع، مدة التسليم، وكيفية اختيار درجة الحماية IP لمشغلات LED."},
+        'ja': {'desc': "最小注文数量、認証（CE/RoHS/UL/BIS）、保証、OEM、支払い条件、納期、LED ドライバーの IP 等級の選び方。"},
+        'ko': {'desc': "최소 주문 수량, 인증(CE/RoHS/UL/BIS), 보증, OEM, 결제 조건, 납기, LED 드라이버 IP 등급 선택 방법."},
+        'it': {'desc': "Ordine minimo, certificazioni (CE/RoHS/UL/BIS), garanzia, OEM, termini di pagamento, tempi di consegna e come scegliere il grado IP di un driver LED."},
+    },
+    'certs': {
+        'en': {'desc': "CHUGAO LED power supplies carry CE and RoHS on every model, UL per model, and BIS for India on request. Certificate PDFs provided before order."},
+        'zh': {'desc': "楚高 LED 电源全系通过 CE 与 RoHS，UL 按型号申请，印度 BIS 可按需办理。下单前提供证书 PDF。"},
+        'es': {'desc': "Las fuentes LED CHUGAO llevan CE y RoHS en todos los modelos, UL por modelo y BIS para India bajo pedido. PDF de certificados antes del pedido."},
+        'pt': {'desc': "As fontes LED CHUGAO têm CE e RoHS em todos os modelos, UL por modelo e BIS para a Índia sob consulta. PDF dos certificados antes do pedido."},
+        'ru': {'desc': "Блоки питания LED CHUGAO имеют CE и RoHS на каждой модели, UL — по модели, BIS для Индии — по запросу. PDF сертификатов предоставляем до заказа."},
+        'fr': {'desc': "Les alimentations LED CHUGAO sont CE et RoHS sur tous les modèles, UL par modèle et BIS pour l'Inde sur demande. PDF des certificats avant commande."},
+        'de': {'desc': "CHUGAO LED-Netzteile haben CE und RoHS bei jedem Modell, UL je Modell und BIS für Indien auf Anfrage. Zertifikats-PDFs vor der Bestellung."},
+        'ar': {'desc': "مصادر طاقة LED من CHUGAO تحمل شهادتي CE وRoHS في كل طراز، وUL حسب الطراز، وBIS للهند عند الطلب. ملفات PDF للشهادات قبل الطلب."},
+        'ja': {'desc': "CHUGAO の LED 電源は全機種 CE と RoHS 対応、UL は機種ごと、インド向け BIS は要望に応じて対応。ご注文前に証明書 PDF をご提出します。"},
+        'ko': {'desc': "CHUGAO LED 전원장치는 모든 모델에 CE와 RoHS를 갖추고 있으며, UL은 모델별, 인도 BIS는 요청 시 대응합니다. 주문 전 인증서 PDF 제공."},
+        'it': {'desc': "Gli alimentatori LED CHUGAO hanno CE e RoHS su tutti i modelli, UL per modello e BIS per l'India su richiesta. PDF dei certificati prima dell'ordine."},
+    },
+})
