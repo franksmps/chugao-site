@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from i18n_subpages import apply_translations
 from blog_meta import BLOG_META
 from page_meta import PAGE_META, apply_heading_overrides
+from blog_body_zh import BLOG_BODY_ZH
 
 REPO = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(REPO, 'src')
@@ -43,13 +44,12 @@ LANGS_META = [
 ]
 LANGS = [c for c,_,_ in LANGS_META]
 
-# Publicly advertised languages. Restored to 8: English + zh + the 6 SUBTR
-# market languages. zh is back in the switcher/hreflang/sitemap per owner
-# request (2026-09-07) — its inner-page body is fully translated (SUBTR has
-# 186 entries for zh, same as the market languages). ja/ko/it remain BUILT and
-# live as an English fallback but are NOT surfaced (AI translations pending
-# native review).
-PUBLIC_LANGS = ['en', 'zh', 'es', 'pt', 'ru', 'fr', 'de', 'ar']
+# Publicly advertised languages. All 11 are now public per owner request
+# (2026-09-07 follow-up): English + zh + the 6 SUBTR market languages (es/pt/
+# ru/fr/de/ar) + ja/ko/it. Every language's inner-page body is translated in
+# SUBTR (186 entries each); ja/ko/it are AI translations pending native review
+# but are surfaced like the others. Revert to a subset by editing this list.
+PUBLIC_LANGS = ['en', 'zh', 'es', 'pt', 'ru', 'fr', 'de', 'ar', 'ja', 'ko', 'it']
 PUBLIC_LANGS_META = [m for m in LANGS_META if m[0] in PUBLIC_LANGS]
 
 # OGP wants language_TERRITORY (en_US), not the bare codes hreflang uses.
@@ -319,6 +319,12 @@ def build_page(rel_html, T, META):
         html = translate(raw, T, lang)
         html = apply_translations(html, lang)
         html = apply_heading_overrides(html, name, lang)
+        # Chinese body for the 3 newest Field Notes posts (blog-6/7/8):
+        # their English source is fanned out to every language, but only zh
+        # gets a natively-translated article body. Swap the whole <main> block.
+        if lang == 'zh' and name in BLOG_BODY_ZH:
+            html = re.sub(r'<main class="article">.*?</main>',
+                          BLOG_BODY_ZH[name], html, count=1, flags=re.S)
         html = set_html_lang(html, BCP[lang])
         if name == 'index':
             html = set_title_desc(html, META, lang)

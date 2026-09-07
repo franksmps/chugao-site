@@ -14,6 +14,9 @@
   <meta property="og:locale:alternate" content="fr_FR" />
   <meta property="og:locale:alternate" content="de_DE" />
   <meta property="og:locale:alternate" content="ar_AE" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <meta property="og:locale:alternate" content="it_IT" />
   <link rel="canonical" href="https://www.chugaopower.com/zh/blog-8/" />
   <link rel="alternate" hreflang="en" href="https://www.chugaopower.com/blog-8/" />
   <link rel="alternate" hreflang="zh" href="https://www.chugaopower.com/zh/blog-8/" />
@@ -23,6 +26,9 @@
   <link rel="alternate" hreflang="fr" href="https://www.chugaopower.com/fr/blog-8/" />
   <link rel="alternate" hreflang="de" href="https://www.chugaopower.com/de/blog-8/" />
   <link rel="alternate" hreflang="ar" href="https://www.chugaopower.com/ar/blog-8/" />
+  <link rel="alternate" hreflang="ja" href="https://www.chugaopower.com/ja/blog-8/" />
+  <link rel="alternate" hreflang="ko" href="https://www.chugaopower.com/ko/blog-8/" />
+  <link rel="alternate" hreflang="it" href="https://www.chugaopower.com/it/blog-8/" />
   <link rel="alternate" hreflang="x-default" href="https://www.chugaopower.com/blog-8/" />
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 <meta name="description" content="累加真实负载、预留 20% 余量、考虑启动电流与温度：附实操算例。">
@@ -52,112 +58,112 @@ gtag('js', new Date());
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NV6VNJQ8MY"></script>
 <script type="application/ld+json" id="jsonld-breadcrumb">
-{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"zh-CN","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.chugaopower.com/zh/"},{"@type":"ListItem","position":2,"name":"How to Size an LED Power Supply: Wattage, Margin & Inrush","item":"https://www.chugaopower.com/zh/blog-8/"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"zh-CN","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.chugaopower.com/zh/"},{"@type":"ListItem","position":2,"name":"LED 电源功率怎么选：瓦数与余量","item":"https://www.chugaopower.com/zh/blog-8/"}]}
 </script>
 </head>
 <body>
-<header><div class="c"><div class="ni"><a href="/#home" class="logo"><img loading="eager" src="/logo.png" alt="CHUGAO Power Logo" width="169" height="44" fetchpriority="high"></a><nav><ul class="nl"><li><a href="/#home" data-i18n="n_h">首页</a></li><li><a href="/#about" data-i18n="n_a">关于</a></li><li><a href="/#products" data-i18n="n_p">产品</a></li><li><a href="/#specs" data-i18n="n_s">规格</a></li><li><a href="/#why" data-i18n="n_w">优势</a></li><li><a href="/blog/" data-i18n="n_b">资讯</a></li><li><a href="/#faq" data-i18n="n_f">常见问题</a></li><li><a href="/#contact" data-i18n="n_c">联系</a></li></ul></nav><div style="display:flex;align-items:center"><div class="lang-selector"><button class="lang-btn" onclick="toggleLangDropdown()" aria-haspopup="true" aria-expanded="false" aria-controls="lang-dropdown"><span id="current-lang">ZH</span><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3l4 4 4-4H1z"/></svg></button><div class="lang-dropdown" id="lang-dropdown"><a class="lang-item" id="lang-en" href="/blog-8/" onclick="goLang('en')"><span class="lang-flag">🇪🇳</span><span class="lang-name">English</span></a><a class="lang-item active" id="lang-zh" href="/zh/blog-8/" onclick="goLang('zh')"><span class="lang-flag">🇨🇳</span><span class="lang-name">简体中文</span></a><a class="lang-item" id="lang-es" href="/es/blog-8/" onclick="goLang('es')"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></a><a class="lang-item" id="lang-fr" href="/fr/blog-8/" onclick="goLang('fr')"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span></a><a class="lang-item" id="lang-de" href="/de/blog-8/" onclick="goLang('de')"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span></a><a class="lang-item" id="lang-pt" href="/pt/blog-8/" onclick="goLang('pt')"><span class="lang-flag">🇵🇹</span><span class="lang-name">Português</span></a><a class="lang-item" id="lang-ru" href="/ru/blog-8/" onclick="goLang('ru')"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></a><a class="lang-item" id="lang-ar" href="/ar/blog-8/" onclick="goLang('ar')"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></a></div></div><button class="mt" id="mobileToggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button></div></div></div></header>
-<div class="mm" id="mobileMenu"><a href="/#home" onclick="closeMobileMenu()" data-i18n="n_h">首页</a><a href="/#about" onclick="closeMobileMenu()" data-i18n="n_a">关于</a><a href="/#products" onclick="closeMobileMenu()" data-i18n="n_p">产品</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">规格</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">优势</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">资讯</a><a href="/#faq" onclick="closeMobileMenu()" data-i18n="n_f">常见问题</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">联系</a><div class="ml"><a href="/blog-8/" onclick="goLang('en');closeMobileMenu()" id="ml-en">EN</a><a href="/zh/blog-8/" onclick="goLang('zh');closeMobileMenu()" id="ml-zh" class="active">ZH</a><a href="/es/blog-8/" onclick="goLang('es');closeMobileMenu()" id="ml-es">ES</a><a href="/fr/blog-8/" onclick="goLang('fr');closeMobileMenu()" id="ml-fr">FR</a><a href="/de/blog-8/" onclick="goLang('de');closeMobileMenu()" id="ml-de">DE</a><a href="/pt/blog-8/" onclick="goLang('pt');closeMobileMenu()" id="ml-pt">PT</a><a href="/ru/blog-8/" onclick="goLang('ru');closeMobileMenu()" id="ml-ru">RU</a><a href="/ar/blog-8/" onclick="goLang('ar');closeMobileMenu()" id="ml-ar">AR</a></div></div>
+<header><div class="c"><div class="ni"><a href="/#home" class="logo"><img loading="eager" src="/logo.png" alt="CHUGAO Power Logo" width="169" height="44" fetchpriority="high"></a><nav><ul class="nl"><li><a href="/#home" data-i18n="n_h">首页</a></li><li><a href="/#about" data-i18n="n_a">关于</a></li><li><a href="/#products" data-i18n="n_p">产品</a></li><li><a href="/#specs" data-i18n="n_s">规格</a></li><li><a href="/#why" data-i18n="n_w">优势</a></li><li><a href="/blog/" data-i18n="n_b">资讯</a></li><li><a href="/#faq" data-i18n="n_f">常见问题</a></li><li><a href="/#contact" data-i18n="n_c">联系</a></li></ul></nav><div style="display:flex;align-items:center"><div class="lang-selector"><button class="lang-btn" onclick="toggleLangDropdown()" aria-haspopup="true" aria-expanded="false" aria-controls="lang-dropdown"><span id="current-lang">ZH</span><svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3l4 4 4-4H1z"/></svg></button><div class="lang-dropdown" id="lang-dropdown"><a class="lang-item" id="lang-en" href="/blog-8/" onclick="goLang('en')"><span class="lang-flag">🇪🇳</span><span class="lang-name">English</span></a><a class="lang-item active" id="lang-zh" href="/zh/blog-8/" onclick="goLang('zh')"><span class="lang-flag">🇨🇳</span><span class="lang-name">简体中文</span></a><a class="lang-item" id="lang-es" href="/es/blog-8/" onclick="goLang('es')"><span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span></a><a class="lang-item" id="lang-fr" href="/fr/blog-8/" onclick="goLang('fr')"><span class="lang-flag">🇫🇷</span><span class="lang-name">Français</span></a><a class="lang-item" id="lang-de" href="/de/blog-8/" onclick="goLang('de')"><span class="lang-flag">🇩🇪</span><span class="lang-name">Deutsch</span></a><a class="lang-item" id="lang-pt" href="/pt/blog-8/" onclick="goLang('pt')"><span class="lang-flag">🇵🇹</span><span class="lang-name">Português</span></a><a class="lang-item" id="lang-ru" href="/ru/blog-8/" onclick="goLang('ru')"><span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span></a><a class="lang-item" id="lang-ja" href="/ja/blog-8/" onclick="goLang('ja')"><span class="lang-flag">🇯🇵</span><span class="lang-name">日本語</span></a><a class="lang-item" id="lang-ko" href="/ko/blog-8/" onclick="goLang('ko')"><span class="lang-flag">🇰🇷</span><span class="lang-name">한국어</span></a><a class="lang-item" id="lang-ar" href="/ar/blog-8/" onclick="goLang('ar')"><span class="lang-flag">🇸🇦</span><span class="lang-name">العربية</span></a><a class="lang-item" id="lang-it" href="/it/blog-8/" onclick="goLang('it')"><span class="lang-flag">🇮🇹</span><span class="lang-name">Italiano</span></a></div></div><button class="mt" id="mobileToggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button></div></div></div></header>
+<div class="mm" id="mobileMenu"><a href="/#home" onclick="closeMobileMenu()" data-i18n="n_h">首页</a><a href="/#about" onclick="closeMobileMenu()" data-i18n="n_a">关于</a><a href="/#products" onclick="closeMobileMenu()" data-i18n="n_p">产品</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">规格</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">优势</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">资讯</a><a href="/#faq" onclick="closeMobileMenu()" data-i18n="n_f">常见问题</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">联系</a><div class="ml"><a href="/blog-8/" onclick="goLang('en');closeMobileMenu()" id="ml-en">EN</a><a href="/zh/blog-8/" onclick="goLang('zh');closeMobileMenu()" id="ml-zh" class="active">ZH</a><a href="/es/blog-8/" onclick="goLang('es');closeMobileMenu()" id="ml-es">ES</a><a href="/fr/blog-8/" onclick="goLang('fr');closeMobileMenu()" id="ml-fr">FR</a><a href="/de/blog-8/" onclick="goLang('de');closeMobileMenu()" id="ml-de">DE</a><a href="/pt/blog-8/" onclick="goLang('pt');closeMobileMenu()" id="ml-pt">PT</a><a href="/ru/blog-8/" onclick="goLang('ru');closeMobileMenu()" id="ml-ru">RU</a><a href="/ja/blog-8/" onclick="goLang('ja');closeMobileMenu()" id="ml-ja">JA</a><a href="/ko/blog-8/" onclick="goLang('ko');closeMobileMenu()" id="ml-ko">KO</a><a href="/ar/blog-8/" onclick="goLang('ar');closeMobileMenu()" id="ml-ar">AR</a><a href="/it/blog-8/" onclick="goLang('it');closeMobileMenu()" id="ml-it">IT</a></div></div>
 
 <main class="article">
-<a href="/blog/" class="back-link">← Back to Field notes</a>
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
 
-<h1>How to Size an LED Power Supply: Wattage, Margin & Inrush</h1>
-<div class="meta">Technical Guide · August 2026 · 7 min read</div>
+<h1>LED 电源功率怎么选：瓦数与余量</h1>
+<div class="meta">技术指南 · 2026 年 8 月 · 阅读约 7 分钟</div>
 
 <div class="hero-img">
-<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Indoor LED driver being sized for a commercial lighting load" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="为商业照明负载选配的室内 LED 驱动电源" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
 </div>
 
 
-<p>Undersize an LED power supply and it runs hot, dims early, and dies in a year. Oversize it wildly and you pay for capacity you never use. Between those two is a 20-minute calculation that most buyers skip.</p>
+<p>LED 电源选小了，会发烫、提前变暗、一年内报废；选得过大，则为用不上的容量买单。两者之间是一道大多买家跳过的 20 分钟计算。</p>
 
-<h2>Step 1: total the real load</h2>
+<h2>第一步：累加真实负载</h2>
 
-<p>Add the wattage of every fixture the driver will feed. Use the fixture's <strong>input</strong> wattage, not its "equivalent" rating — a "50W equivalent" downlight may draw 9W.</p>
+<p>把驱动电源要带的每一个灯具的功率相加。用灯具的<strong>输入</strong>功率，而不是“等效”标称——一个“50W 等效”的筒灯可能只耗 9W。</p>
 
 <ul>
-<li>LED strip: watts per metre × metres (check the strip label: 4.8W/m, 9.6W/m, 14.4W/m are common).</li>
-<li>Panels and troffers: the rating plate on the fitting.</li>
-<li>Signage modules: modules × watts per module.</li>
+<li>LED 灯带：每米瓦数 × 米数（看灯带标签：常见 4.8W/m、9.6W/m、14.4W/m）。</li>
+<li>面板灯与格栅灯：灯具上的铭牌。</li>
+<li>标识模组：模组数 × 单模组瓦数。</li>
 </ul>
 
-<p>Example: 12 metres of 14.4W/m strip = <strong>173W</strong>.</p>
+<p>示例：12 米 14.4W/m 灯带 = <strong>173W</strong>。</p>
 
-<h2>Step 2: add the 20% margin</h2>
+<h2>第二步：加 20% 余量</h2>
 
-<p>Multiply by 1.2. That 20% is not padding — it covers three things that all shorten driver life:</p>
+<p>乘以 1.2。这 20% 不是冗余——它覆盖了三件都会缩短驱动电源寿命的事：</p>
 
 <ol>
-<li><strong>Heat.</strong> A driver at 100% load in a 40°C ceiling runs far hotter than the same unit at 80% load. Every 10°C over the rating roughly halves capacitor life.</li>
-<li><strong>Mains variation.</strong> Input dips and surges are absorbed more comfortably with headroom.</li>
-<li><strong>Future additions.</strong> The strip someone adds next year.</li>
+<li><strong>发热。</strong> 在 40°C 吊顶里满载运行的驱动电源，比同款 80% 负载时烫得多。每超过额定温度 10°C，电容寿命大约减半。</li>
+<li><strong>市电波动。</strong> 输入电压跌落与浪涌，有余量时吸收得更从容。</li>
+<li><strong>日后扩容。</strong> 明年有人再加一段灯带。</li>
 </ol>
 
-<p>173W × 1.2 = <strong>208W</strong> → pick a <strong>240W or 250W</strong> model, the next standard rating above your number.</p>
+<p>173W × 1.2 = <strong>208W</strong> &rarr; 选 <strong>240W 或 250W</strong> 型号，即比你的数值高一号的标准额定。</p>
 
 <div class="highlight">
-<strong>Rule of thumb:</strong> run the driver at <strong>80% of its rating or less</strong>. Going from 60W to 100W costs a few dollars. Sending a technician to replace a failed driver costs a hundred times more.
+<strong>经验法则：</strong> 让驱动电源运行在<strong>额定值的 80% 或更低</strong>。从 60W 升到 100W 只多几美元；派人换一台坏掉的驱动电源，成本是其上百倍。
 </div>
 
-<h2>Step 3: check inrush before you size the breaker</h2>
+<h2>第三步：选断路器前先核对浪涌电流</h2>
 
-<p>Switching power supplies draw a large but very brief surge when energised — typically 30-60 A for a few milliseconds, sometimes more on high-power units. If you put ten drivers on one switch or contactor, that surge adds up and can trip the breaker or weld the relay on day one.</p>
+<p>开关电源通电瞬间会抽取很大但极短的浪涌——通常 30-60 A，持续几毫秒，大功率单元有时更高。如果把十个驱动电源接在同一个开关或接触器上，浪涌会叠加，可能在第一天就跳闸或焊死继电器。</p>
 
 <ul>
-<li><strong>Many small drivers?</strong> Stagger them with a time-delay relay, or use a contactor rated for the summed inrush.</li>
-<li><strong>One big driver?</strong> Use a type-C or type-D breaker rather than type-B.</li>
-<li><strong>Ask for the inrush figure</strong> — it is on the datasheet, and a supplier who cannot give it is guessing.</li>
+<li><strong>多个小驱动电源？</strong> 用时间延时继电器错开启动，或用按叠加浪涌额定选型的接触器。</li>
+<li><strong>单个大驱动电源？</strong> 用 C 型或 D 型断路器，而非 B 型。</li>
+<li><strong>索要浪涌数值</strong>——它写在规格书上，给不出来的供应商是在猜。</li>
 </ul>
 
-<h2>Step 4: derate for temperature</h2>
+<h2>第四步：按温度降额</h2>
 
-<p>Most drivers are rated for full output at 40°C ambient or below. Above that, derate — typically 2-3% of output per °C, but check the curve for your model. Practical cases:</p>
+<p>大多数驱动电源在 40°C 及以下环境可满额输出。超过后需降额——通常每升高 1°C 输出降 2-3%，但具体看型号的曲线。实际情形：</p>
 
 <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
-<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Install</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Typical ambient</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">What to do</th></tr></thead>
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">安装位置</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">典型环境温度</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">应对方法</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Open indoor ceiling</td><td style="padding:10px 14px;border:1px solid var(--b)">25-35°C</td><td style="padding:10px 14px;border:1px solid var(--b)">Standard 20% margin is enough</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Sealed ceiling void</td><td style="padding:10px 14px;border:1px solid var(--b)">45-55°C</td><td style="padding:10px 14px;border:1px solid var(--b)">Add 30-40% margin, or move the driver into open air</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Outdoor in direct sun</td><td style="padding:10px 14px;border:1px solid var(--b)">50-65°C</td><td style="padding:10px 14px;border:1px solid var(--b)">Shade the unit, or step up one size and use a potted <a href="/products/ip67/">IP67</a> model</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Inside a sealed sign box</td><td style="padding:10px 14px;border:1px solid var(--b)">45-60°C</td><td style="padding:10px 14px;border:1px solid var(--b)">Vent the box, or use a vented <a href="/products/ip65/">IP65</a> case</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">开放式室内吊顶</td><td style="padding:10px 14px;border:1px solid var(--b)">25-35°C</td><td style="padding:10px 14px;border:1px solid var(--b)">标准 20% 余量已足够</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">密闭吊顶空隙</td><td style="padding:10px 14px;border:1px solid var(--b)">45-55°C</td><td style="padding:10px 14px;border:1px solid var(--b)">再加 30-40% 余量，或把驱动电源移到开阔通风处</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">户外直晒</td><td style="padding:10px 14px;border:1px solid var(--b)">50-65°C</td><td style="padding:10px 14px;border:1px solid var(--b)">给设备遮阴，或升一号并用灌封的 <a href="/products/ip67/">IP67</a> 型号</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">密闭标识箱内</td><td style="padding:10px 14px;border:1px solid var(--b)">45-60°C</td><td style="padding:10px 14px;border:1px solid var(--b)">给箱体通风，或用带通风口的 <a href="/products/ip65/">IP65</a> 外壳</td></tr>
 </tbody>
 </table>
 
-<h2>Worked example: shopfront sign, 8 modules</h2>
+<h2>算例：店面招牌，8 个模组</h2>
 
-<p>Sign modules: 8 × 1.5W = 12W. Strip accents: 4 m × 9.6W/m = 38W. Total = 50W. Margin ×1.2 = 60W. Installed in a sealed box that reaches 50°C in summer → add another 30% → 78W. Choose a <strong>100W</strong> unit. It will run at roughly half load, stay cool, and outlast the sign.</p>
+<p>招牌模组：8 × 1.5W = 12W。灯带点缀：4 m × 9.6W/m = 38W。合计 = 50W。余量 ×1.2 = 60W。装在夏季达 50°C 的密闭箱内 &rarr; 再加 30% &rarr; 78W。选 <strong>100W</strong> 单元。它将以约一半负载运行，保持低温，寿命超过招牌本身。</p>
 
-<h2>Five sizing mistakes</h2>
+<h2>五个选配错误</h2>
 
 <ol>
-<li><strong>Using "equivalent wattage"</strong> instead of real draw.</li>
-<li><strong>Sizing to 100% load</strong> with no margin.</li>
-<li><strong>Ignoring ambient temperature</strong> in a sealed enclosure.</li>
-<li><strong>Putting ten drivers on one switch</strong> without checking inrush.</li>
-<li><strong>Forgetting the future</strong> — the extra strip, the second sign.</li>
+<li><strong>用“等效瓦数”</strong>而非真实功耗。</li>
+<li><strong>按 100% 负载选型</strong>，不留余量。</li>
+<li><strong>忽略密闭外壳内的环境温度</strong>。</li>
+<li><strong>十个驱动电源接一个开关</strong>却不核对浪涌。</li>
+<li><strong>忘记日后</strong>——多出的那段灯带、第二个招牌。</li>
 </ol>
 
-<h2>What we need from you</h2>
+<h2>我们需要您提供什么</h2>
 
-<p>Send the load in watts, the output voltage (12V or 24V), the install location and rough ambient temperature, and how many units you need. We will recommend the right rating — and tell you when a smaller, cheaper model is genuinely sufficient.</p>
+<p>把负载（瓦数）、输出电压（12V 或 24V）、安装位置与大致环境温度，以及所需数量发给我们。我们会推荐合适的额定值——并在更小的便宜型号确实够用时如实相告。</p>
 
 <div class="cta-box">
-<h3>Want us to check your sizing?</h3>
-<p>Send the load, output voltage, install location and quantity. We will confirm the right rating — or tell you a smaller model is enough.</p>
-<a href="/#inquiry" class="btn">Get a sizing check</a>
+<h3>要我们帮您核对选型吗？</h3>
+<p>把负载、输出电压、安装位置与数量发给我们。我们会确认合适的额定值——或告诉您更小的型号就够。</p>
+<a href="/#inquiry" class="btn">获取选型核对</a>
 </div>
 
-<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explore CHUGAO products</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Compact 12V/24V units for strips, modules and signage.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">Constant voltage with active PFC for ceiling and panel lights.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Fully potted, salt-spray tested for wet and coastal sites.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Vented metal case for signage and semi-outdoor installs.</span></a></div></section>
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">适用于灯带、模组与标识的紧凑型 12V/24V 单元。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动电源 50-400W</span><span class="pc-desc">带主动 PFC 的恒压驱动，适用于吊灯与面板灯。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">全灌封、盐雾测试，适用于潮湿与沿海场所。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">带通风口的金属外壳，适用于标识与半户外安装。</span></a></div></section>
 
-<section class="related" aria-label="Related articles">
-  <h2 class="related-h">More from the field</h2>
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
   <div class="rel-grid">
-  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED Technology</span><span class="rel-title">Pick the Right LED Power Supply in 3 Steps</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">Buyer's Guide</span><span class="rel-title">12V vs 24V LED Power Supply: How to Choose</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">Technical Guide</span><span class="rel-title">IP67 vs IP65 LED Driver: Which Rating Do You Need?</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">Technical Deep-dive</span><span class="rel-title">LED Driver Lifespan: MTBF, L70, and How Long They Really Last</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技术</span><span class="rel-title">3 步选对 LED 电源</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">选购指南</span><span class="rel-title">12V 还是 24V：LED 电源怎么选</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">技术指南</span><span class="rel-title">IP67 还是 IP65：你需要哪种防水 LED 驱动</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">技术深读</span><span class="rel-title">LED 驱动寿命：MTBF、L70 与真实使用寿命</span></a>
   </div>
 </section>
 
-<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-7/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">12V vs 24V LED Power Supply: How to Choose</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">Next article</span><span class="pn-t">Field Notes</span></a></nav>
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-7/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">12V 还是 24V：LED 电源怎么选</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">现场笔记</span></a></nav>
 </main>
 
 <footer><div class="c"><div class="fg"><div class="fb"><a href="/#home" class="logo"><img loading="lazy" src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px"></a><p data-i18n="f_desc">楚高,中山 LED 电源工厂。厂家直供。</p><div class="social"><a href="https://www.facebook.com/profile.php?id=100063658296873" target="_blank" rel="noopener noreferrer" class="sfb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.014 1.794-4.677 4.533-4.677 1.313 0 2.686.234 2.686.234v2.97h-1.513c-1.49 0-1.955.926-1.955 1.876v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a><a href="https://www.instagram.com/chugao_smps/" target="_blank" rel="noopener noreferrer" class="sig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.tiktok.com/@chugaosmpsofficial" target="_blank" rel="noopener noreferrer" class="stk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/chugaosmps/" target="_blank" rel="noopener noreferrer" class="sli" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></div></div><div class="fc"><h4 data-i18n="f_prod">产品</h4><a href="/#products" data-i18n="f_p1">适配器</a><a href="/#products" data-i18n="f_p2">室内电源</a><a href="/#products" data-i18n="f_p3">IP67</a><a href="/#products" data-i18n="f_p4">IP65</a></div><div class="fc"><h4 data-i18n="f_comp">公司</h4><a href="/#about" data-i18n="f_c1">关于</a><a href="/#why" data-i18n="f_c2">优势</a><a href="/blog/" data-i18n="f_c3">资讯</a><a href="/#faq" data-i18n="f_c4">常见问题</a></div><div class="fc"><h4 data-i18n="f_supp">支持</h4><a href="/#contact" data-i18n="f_s1">联系</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">邮件</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" data-i18n="f_s3">WhatsApp</a><a href="/#inquiry" data-i18n="f_s4">索取规格书</a></div></div><div class="fb2"><p>© 2026 Zhongshan Chugao Electronic Technology Co., Ltd. 版权所有。</p><p data-i18n="f_slogan">一站式全系列开关电源制造商</p></div></div></footer>

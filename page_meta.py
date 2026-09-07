@@ -18,9 +18,10 @@ All values are authored to fit the site-wide TDK guardrails
 (title <= 70 chars, description <= 160 chars); build_i18n.trim_meta() enforces
 them again as a safety net, so an over-long translation can never ship.
 
-Languages covered: en + the 6 fully-localized market languages
-(es/pt/ru/fr/de/ar). The hidden languages (zh/ja/ko/it) keep the English
-template text, consistent with their pseudo-localized body.
+Languages covered: all 11 public languages. en + zh + the 6 SUBTR market
+languages (es/pt/ru/fr/de/ar) + ja/ko/it. The latter three are AI translations
+pending native review, but their titles/descriptions are localized like the
+others (the inner-page body is translated in SUBTR for every language).
 """
 import re
 
@@ -59,6 +60,18 @@ PAGE_META = {
             'title': "مصنع محولات LED 5-200 واط | OEM ODM والحد الأدنى 50",
             'desc': "مصنع محولات LED في الصين: 5-200 واط، 12/24 فولت للشرائط والوحدات واللافتات. OEM ODM، حد أدنى 50 قطعة، اختبار إحماء 48 ساعة، ضمان 3 سنوات، CE RoHS.",
         },
+        'ja': {
+            'title': "LED アダプター製造元 5-200W | OEM ODM、最小ロット 50 台",
+            'desc': "中国の LED アダプター製造元：5-200W、12V/24V の AC/DC アダプター。テープライト、モジュール、サイン用。OEM ODM、最小ロット 50 台、48 時間エージング、3 年保証、CE RoHS。",
+        },
+        'ko': {
+            'title': "LED 어댑터 제조사 5-200W | OEM ODM, MOQ 50대",
+            'desc': "중국 LED 어댑터 제조사: 5-200W, 12V/24V AC/DC 어댑터. LED 스트립, 모듈, 간판용. OEM ODM, 최소 주문 50대, 48시간 에이징, 3년 보증, CE RoHS.",
+        },
+        'it': {
+            'title': "Fabbrica di adattatori LED 5-200W | OEM ODM, MOQ 50 pz",
+            'desc': "Fabbrica cinese di adattatori LED: 5-200W, adattatori AC/DC 12V/24V per strisce, moduli e insegne. OEM ODM, ordine minimo 50 pz, burn-in 48h, garanzia 3 anni, CE RoHS.",
+        },
     },
     'products/indoor': {
         'en': {
@@ -92,6 +105,18 @@ PAGE_META = {
         'ar': {
             'title': "مصنع مشغلات LED داخلية 50-400 واط | OEM ODM والحد 50",
             'desc': "مصنع مشغلات LED داخلية في الصين: 50-400 واط بجهد ثابت، وPFC نشط، وبدون مروحة. OEM ODM، حد أدنى 50 قطعة، ضمان 3 سنوات، CE RoHS.",
+        },
+        'ja': {
+            'title': "屋内用 LED ドライバー製造元 50-400W | OEM ODM、最小ロット 50 台",
+            'desc': "中国の屋内用 LED ドライバー製造元：50-400W 定電圧、アクティブ PFC、ファンレス。OEM ODM、最小ロット 50 台、48 時間エージング、3 年保証、CE RoHS。",
+        },
+        'ko': {
+            'title': "실내용 LED 구동장치 제조사 50-400W | OEM ODM MOQ 50대",
+            'desc': "중국 실내용 LED 구동장치 제조사: 50-400W 정전압, 액티브 PFC, 팬리스. OEM ODM, 최소 주문 50대, 48시간 에이징, 3년 보증, CE RoHS.",
+        },
+        'it': {
+            'title': "Fabbrica di driver LED da interno 50-400W | OEM ODM MOQ 50",
+            'desc': "Fabbrica cinese di driver LED da interno: 50-400W a tensione costante, PFC attivo, senza ventola. OEM ODM, ordine minimo 50 pz, burn-in 48h, garanzia 3 anni, CE RoHS.",
         },
     },
     'products/ip67': {
@@ -127,6 +152,18 @@ PAGE_META = {
             'title': "مصنع مشغلات LED مقاومة للماء IP67 بقدرة 10-400 واط",
             'desc': "مصنع مشغلات LED مقاومة للماء IP67 في الصين: 10-400 واط، معبأة بالكامل، ومختبرة برذاذ الملح، 12/24 فولت. OEM ODM، حد أدنى 50 قطعة، ضمان 3 سنوات، CE RoHS.",
         },
+        'ja': {
+            'title': "IP67 防水 LED ドライバー製造元、10-400W",
+            'desc': "中国の IP67 防水 LED ドライバー製造元：10-400W、完全ポッティング、塩水噴霧試験済み、12V/24V。OEM ODM、最小ロット 50 台、48 時間エージング、3 年保証、CE RoHS。",
+        },
+        'ko': {
+            'title': "IP67 방수 LED 구동장치 제조사, 10-400W",
+            'desc': "중국 IP67 방수 LED 구동장치 제조사: 10-400W, 완전 포팅, 염수 분무 시험, 12V/24V. OEM ODM, 최소 주문 50대, 48시간 에이징, 3년 보증, CE RoHS.",
+        },
+        'it': {
+            'title': "Fabbrica di driver LED impermeabili IP67, 10-400W",
+            'desc': "Fabbrica cinese di driver LED impermeabili IP67: 10-400W, completamente sigillati, test nebbia salina, 12V/24V. OEM ODM, ordine minimo 50 pz, burn-in 48h, garanzia 3 anni, CE RoHS.",
+        },
     },
     'products/ip65': {
         'en': {
@@ -160,6 +197,18 @@ PAGE_META = {
         'ar': {
             'title': "مصنع مشغلات LED مقاومة للمطر IP65 بقدرة 100-600 واط",
             'desc': "مصنع مشغلات LED مقاومة للمطر IP65 في الصين لللافتات واللوحات: 100-600 واط، هيكل معدني، 12/24 فولت. OEM ODM، حد أدنى 50 قطعة، ضمان 3 سنوات.",
+        },
+        'ja': {
+            'title': "IP65 防雨 LED ドライバー製造元、100-600W",
+            'desc': "中国の IP65 防雨 LED ドライバー製造元（サイン・看板向け）：100-600W、12V/24V。OEM ODM、最小ロット 50 台、48 時間エージング、3 年保証、CE RoHS。",
+        },
+        'ko': {
+            'title': "IP65 방우 LED 구동장치 제조사, 100-600W",
+            'desc': "중국 IP65 방우 LED 구동장치 제조사(간판·옥외 광고용): 100-600W, 12V/24V. OEM ODM, 최소 주문 50대, 48시간 에이징, 3년 보증, CE RoHS.",
+        },
+        'it': {
+            'title': "Fabbrica di driver LED anti-pioggia IP65, 100-600W",
+            'desc': "Fabbrica cinese di driver LED anti-pioggia IP65 per insegne e cartelloni: 100-600W, 12V/24V. OEM ODM, ordine minimo 50 pz, burn-in 48h, garanzia 3 anni, CE RoHS.",
         },
     },
 }

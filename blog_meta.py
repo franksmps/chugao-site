@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-"""P1-3: localized <title> / meta description for the Field Notes blog.
+"""Localized <title> / meta description for the Field Notes blog.
 
-Only the 6 fully-localized SUBTR languages (es/pt/ru/fr/de/ar) are covered.
-en + zh/ja/ko/it keep the English template text (consistent with their
-pseudo-localized body). Consumed by build_i18n.build_page via set_title_desc.
+All 11 public languages are covered (en + zh + es/pt/ru/fr/de/ar + ja/ko/it).
+ja/ko/it are AI translations pending native review; zh blog-6/7/8 bodies are
+translated via blog_body_zh.BLOG_BODY_ZH. Consumed by build_i18n.build_page
+via set_title_desc.
 """
 BLOG_META = {
     'blog': {
@@ -35,6 +36,18 @@ BLOG_META = {
             'title': "ملاحظات ميدانية - أدلة ورؤى حول مزودات طاقة LED | CHUGAO",
             'desc': "ملاحظات ميدانية من CHUGAO: أدلة عملية حول مزودات طاقة LED، وشرح درجات الحماية IP، وملاحظات السوق ونصائح الشهادات للمستوردين والمركّبين.",
         },
+        'ja': {
+            'title': "現場ノート - LED 電源のガイドと解説 | CHUGAO",
+            'desc': "CHUGAO 現場ノート：輸入業者・施工者向けの実践的な LED 電源ガイド、IP 等級の解説、市場情報、認証のヒント。",
+        },
+        'ko': {
+            'title': "현장 노트 - LED 전원 가이드 및 분석 | CHUGAO",
+            'desc': "CHUGAO 현장 노트: 수입업체·시공업체를 위한 실전 LED 전원 가이드, IP 등급 설명, 시장 정보, 인증 팁.",
+        },
+        'it': {
+            'title': "Note dal Campo - guide e analisi per alimentatori LED | CHUGAO",
+            'desc': "Note dal Campo CHUGAO: guide pratiche agli alimentatori LED, spiegazioni delle classi IP, note di mercato e consigli sulle certificazioni per importatori e installatori.",
+        },
     },
     'blog-1': {
         'es': {
@@ -64,6 +77,18 @@ BLOG_META = {
         'ar': {
             'title': "اختر مزوّد طاقة LED المناسب في 3 خطوات | ملاحظات ميدانية CHUGAO",
             'desc': "كيفية اختيار مزوّد طاقة LED الصحيح: مطابقة القدرة، ودرجة IP حسب البيئة، وتوافق جهد الدخل، موضّحًا ببساطة.",
+        },
+        'ja': {
+            'title': "3 ステップで選ぶ正しい LED 電源 | CHUGAO 現場ノート",
+            'desc': "正しい LED 電源の選び方：電力の適合、環境に応じた IP 等級、入力電圧の互換性をわかりやすく解説。",
+        },
+        'ko': {
+            'title': "3단계로 맞는 LED 전원 선택하기 | CHUGAO 현장 노트",
+            'desc': "올바른 LED 전원 선택법: 출력 정합, 환경별 IP 등급, 입력 전압 호환성을 쉽게 설명.",
+        },
+        'it': {
+            'title': "Scegliere l'alimentatore LED giusto in 3 passi | Note dal Campo CHUGAO",
+            'desc': "Come scegliere il giusto alimentatore LED: corrispondenza di potenza, classe IP per ambiente e compatibilità di tensione, spiegato in modo semplice.",
         },
     },
     'blog-2': {
@@ -95,6 +120,18 @@ BLOG_META = {
             'title': "IP20 مقابل IP65 وIP67 وIP68 | ملاحظات ميدانية CHUGAO",
             'desc': "شرح درجة IP لمزوّدات طاقة LED: ماذا تعني الأرقام، وأين تُستخدم كل درجة، وكيف تختار المناسب لمشروعك.",
         },
+        'ja': {
+            'title': "IP20・IP65・IP67・IP68 の違い | CHUGAO 現場ノート",
+            'desc': "LED ドライバーの IP 等級解説：数字の意味、各等級の用途、プロジェクトに合った等級の選び方。",
+        },
+        'ko': {
+            'title': "IP20·IP65·IP67·IP68 비교 | CHUGAO 현장 노트",
+            'desc': "LED 구동장치의 IP 등급 설명: 숫자의 의미, 각 등급의 용도, 프로젝트에 맞는 등급 선택법.",
+        },
+        'it': {
+            'title': "IP20 vs IP65 vs IP67 vs IP68 | Note dal Campo CHUGAO",
+            'desc': "Classi IP spiegate per driver LED: cosa significano i numeri, dove si usa ogni classe e come scegliere quella giusta per il progetto.",
+        },
     },
     'blog-3': {
         'es': {
@@ -124,6 +161,18 @@ BLOG_META = {
         'ar': {
             'title': "سوق LED لعام 2026: ما نلاحظه | ملاحظات ميدانية CHUGAO",
             'desc': "ملاحظات مباشرة من أرض المصنع: اتجاهات الطلب على محركات LED لعام 2026 — أي الأسواق تنمو، وأي المواصفات يطلبها المشترون أكثر، وكيف تتحرك الأسعار.",
+        },
+        'ja': {
+            'title': "LED 市場 2026：現場で見ていること | CHUGAO 現場ノート",
+            'desc': "工場現場からの直接的な観察：2026 年の LED ドライバー需要トレンド——成長する市場、買い手が求める仕様、価格の動き。",
+        },
+        'ko': {
+            'title': "LED 시장 2026: 현장에서 보는 것들 | CHUGAO 현장 노트",
+            'desc': "공장 현장의 직접 관찰: 2026년 LED 구동장치 수요 동향——성장하는 시장, 구매자가 요구하는 사양, 가격 흐름.",
+        },
+        'it': {
+            'title': "Mercato LED 2026: cosa stiamo osservando | Note dal Campo CHUGAO",
+            'desc': "Osservazioni dirette dalla fabbrica: trend di domanda dei driver LED nel 2026 — quali mercati crescono, quali specifiche chiedono i buyer e come si muovono i prezzi.",
         },
     },
     'blog-4': {
@@ -155,6 +204,18 @@ BLOG_META = {
             'title': "شهادة BIS لمحركات LED: دليل استيراد إلى الهند | ملاحظات ميدانية CHUGAO",
             'desc': "ماذا تعني شهادة BIS الهندية لمستوردي مزوّدات طاقة LED. متطلبات IS 13252 الجزء 1، وعملية الاختبار، والجدول الزمني، والتكلفة، وكيف يساعدك مورّد حاصل على BIS مثل CHUGAO على تجاوز الجمارك أسرع.",
         },
+        'ja': {
+            'title': "LED ドライバーの BIS 認証：インド輸入ガイド | CHUGAO 現場ノート",
+            'desc': "インドの BIS 認証が LED 電源輸入業者に意味するもの。IS 13252 パート 1 の要件、試験プロセス、所要期間、コスト、および CHUGAO のような BIS 認証供給元が通関を早める理由。",
+        },
+        'ko': {
+            'title': "LED 구동장치 BIS 인증: 인도 수입 가이드 | CHUGAO 현장 노트",
+            'desc': "인도 BIS 인증이 LED 전원 수입업체에게 의미하는 것. IS 13252 파트 1 요건, 시험 절차, 소요 기간, 비용, 그리고 CHUGAO 같은 BIS 인증 공급자가 통관을 앞당기는 이유.",
+        },
+        'it': {
+            'title': "Certificazione BIS per driver LED: guida all'import in India | Note dal Campo CHUGAO",
+            'desc': "Cosa significa la certificazione BIS indiana per gli importatori di alimentatori LED. Requisiti IS 13252 Parte 1, processo di test, tempi, costi e come un fornitore certificato BIS come CHUGAO accelera la dogana.",
+        },
     },
     'blog-5': {
         'es': {
@@ -184,6 +245,18 @@ BLOG_META = {
         'ar': {
             'title': "العمر الافتراضي لمحركات LED: MTBF وL70 وكم تدوم فعليًا | ملاحظات ميدانية CHUGAO",
             'desc': "ماذا تعني 50,000 ساعة لمحرك LED؟ فهم MTBF، وتصنيف L70، وتأثيرات الحرارة، والعمر الافتراضي الحقيقي لمزوّدات طاقة LED المحوّلة.",
+        },
+        'ja': {
+            'title': "LED ドライバーの寿命：MTBF・L70・実際のもち | CHUGAO 現場ノート",
+            'desc': "50,000 時間が LED ドライバーに本当に意味するもの。MTBF、L70 の数値、温度の影響、スイッチング電源の実寿命を理解する。",
+        },
+        'ko': {
+            'title': "LED 구동장치 수명: MTBF, L70 그리고 실제 수명 | CHUGAO 현장 노트",
+            'desc': "50,000시간이 LED 구동장치에 실제로 의미하는 것. MTBF, L70 수치, 온도 영향, LED 스위칭 전원의 실제 수명 이해.",
+        },
+        'it': {
+            'title': "Durata dei driver LED: MTBF, L70 e quanto durano davvero | Note dal Campo CHUGAO",
+            'desc': "Cosa significano davvero 50.000 ore per un driver LED. Comprendere MTBF, il valore L70, gli effetti della temperatura e la reale durata degli alimentatori a commutazione LED.",
         },
     },
     'blog-6': {
@@ -215,6 +288,18 @@ BLOG_META = {
             'title': "IP67 مقابل IP65: أي مشغل LED مقاوم للماء تحتاج؟ | CHUGAO",
             'desc': "ماذا تحمي كل درجة IP فعليًا، وأين يفشل كل منها، وكيف تختار مزوّد طاقة LED مقاومًا للماء يناسب تركيبك وحرارته.",
         },
+        'ja': {
+            'title': "IP67 か IP65 か：どちらの LED ドライバーが必要？ | CHUGAO",
+            'desc': "各 IP 等級が本当に守るもの、それぞれが破綻する場面、設置に合った防水電源の選び方。",
+        },
+        'ko': {
+            'title': "IP67 vs IP65: 어떤 LED 구동장치가 필요한가 | CHUGAO",
+            'desc': "각 IP 등급이 실제로 보호하는 것, 각각이 실패하는 지점, 설치에 맞는 방수 전원 선택법.",
+        },
+        'it': {
+            'title': "IP67 vs IP65: quale driver LED ti serve | CHUGAO",
+            'desc': "Cosa protegge davvero ogni classe IP, dove ciascuna cede e come scegliere l'alimentatore impermeabile giusto per la tua installazione.",
+        },
     },
     'blog-7': {
         'es': {
@@ -245,6 +330,18 @@ BLOG_META = {
             'title': "12 فولت أم 24 فولت: كيف تختار مزود طاقة LED | CHUGAO",
             'desc': "هبوط الجهد، وأقصى طول للكابل حسب المقطع، وقاعدة بسيطة للاختيار بين 12 و24 فولت لشرائط LED.",
         },
+        'ja': {
+            'title': "12V か 24V か：LED 電源の選び方 | CHUGAO ガイド",
+            'desc': "電圧降下、線径ごとの最大ケーブル長、LED ストリップで 12V と 24V を選ぶ簡単な法則。",
+        },
+        'ko': {
+            'title': "12V 또는 24V: LED 전원 어떻게 선택할까 | CHUGAO 가이드",
+            'desc': "전압 강하, 굵기별 최대 케이블 길이, LED 스트립용 12V·24V 선택의 간단한 법칙.",
+        },
+        'it': {
+            'title': "12V o 24V: come scegliere l'alimentatore LED | Guida CHUGAO",
+            'desc': "Caduta di tensione, lunghezza massima del cavo per sezione e la regola semplice per scegliere tra 12V e 24V per strisce LED.",
+        },
     },
     'blog-8': {
         'es': {
@@ -274,6 +371,18 @@ BLOG_META = {
         'ar': {
             'title': "كيف تختار قدرة مزود طاقة LED: الواط والهامش | CHUGAO",
             'desc': "اجمع الحمل الحقيقي، وأضف هامش 20%، واحسب تيار البدء والحرارة: أمثلة عملية من المصنع.",
+        },
+        'ja': {
+            'title': "LED 電源の容量決め：ワット数・余裕・突入電流 | CHUGAO 現場ノート",
+            'desc': "容量不足は早期故障を、過大は無駄な出費を招く。4 ステップの選定法：負荷、20% 余裕、ブレーカーの突入電流、熱降格。",
+        },
+        'ko': {
+            'title': "LED 전원 용량 정하기: 와트·여유·돌입전류 | CHUGAO 현장 노트",
+            'desc': "용량 부족은 조기 고장, 과대는 낭비를 부른다. 4단계 선정법: 부하, 20% 여유, 차단기 돌입전류, 열 감율.",
+        },
+        'it': {
+            'title': "Come dimensionare un alimentatore LED: watt, margine e inrush | Note dal Campo CHUGAO",
+            'desc': "Driver sottodimensionati falliscono presto, quelli sovradimensionati sprecano denaro. Il metodo in 4 passi: carico, margine 20%, inrush sul interruttore e derating termico.",
         },
     },
 }
