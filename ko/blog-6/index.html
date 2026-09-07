@@ -58,7 +58,7 @@ gtag('js', new Date());
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NV6VNJQ8MY"></script>
 <script type="application/ld+json" id="jsonld-breadcrumb">
-{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"ko","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.chugaopower.com/ko/"},{"@type":"ListItem","position":2,"name":"IP67 vs IP65 LED Driver: Which Rating Do You Need?","item":"https://www.chugaopower.com/ko/blog-6/"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"ko","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.chugaopower.com/ko/"},{"@type":"ListItem","position":2,"name":"IP67 vs IP65: 어떤 방수 LED 구동장치를 선택해야 할까?","item":"https://www.chugaopower.com/ko/blog-6/"}]}
 </script>
 </head>
 <body>
@@ -66,103 +66,103 @@ gtag('js', new Date());
 <div class="mm" id="mobileMenu"><a href="/#home" onclick="closeMobileMenu()" data-i18n="n_h">홈</a><a href="/#about" onclick="closeMobileMenu()" data-i18n="n_a">회사 소개</a><a href="/#products" onclick="closeMobileMenu()" data-i18n="n_p">제품</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">사양</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">왜 우리인가</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">뉴스</a><a href="/#faq" onclick="closeMobileMenu()" data-i18n="n_f">자주 묻는 질문</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">문의</a><div class="ml"><a href="/blog-6/" onclick="goLang('en');closeMobileMenu()" id="ml-en">EN</a><a href="/zh/blog-6/" onclick="goLang('zh');closeMobileMenu()" id="ml-zh">ZH</a><a href="/es/blog-6/" onclick="goLang('es');closeMobileMenu()" id="ml-es">ES</a><a href="/fr/blog-6/" onclick="goLang('fr');closeMobileMenu()" id="ml-fr">FR</a><a href="/de/blog-6/" onclick="goLang('de');closeMobileMenu()" id="ml-de">DE</a><a href="/pt/blog-6/" onclick="goLang('pt');closeMobileMenu()" id="ml-pt">PT</a><a href="/ru/blog-6/" onclick="goLang('ru');closeMobileMenu()" id="ml-ru">RU</a><a href="/ja/blog-6/" onclick="goLang('ja');closeMobileMenu()" id="ml-ja">JA</a><a href="/ko/blog-6/" onclick="goLang('ko');closeMobileMenu()" id="ml-ko" class="active">KO</a><a href="/ar/blog-6/" onclick="goLang('ar');closeMobileMenu()" id="ml-ar">AR</a><a href="/it/blog-6/" onclick="goLang('it');closeMobileMenu()" id="ml-it">IT</a></div></div>
 
 <main class="article">
-<a href="/blog/" class="back-link">← Back to Field notes</a>
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
 
-<h1>IP67 vs IP65 LED Driver: Which Rating Do You Need?</h1>
-<div class="meta">Technical Guide · June 2026 · 9 min read</div>
+<h1>IP67 vs IP65: 어떤 방수 LED 구동장치를 선택해야 할까?</h1>
+<div class="meta">기술 가이드 · 2026년 6월 · 약 9분 읽기</div>
 
 <div class="hero-img">
-<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="IP67 waterproof LED driver next to an IP65 rainproof driver" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="IP67 방수 LED 구동장치와 IP65 방우 구동장치 나란히" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
 </div>
 
 
-<p>"Waterproof" is not one specification — it is a test result. An IP65 driver and an IP67 driver look nearly identical on a datasheet, but they survive very different jobs, and picking the wrong one is the single most common cause of early outdoor failures we see in the field.</p>
+<p>"방수"는 하나의 사양이 아니라 시험 결과입니다. IP65와 IP67 구동장치는 데이터시트상 거의 동일해 보이지만, 완전히 다른 환경을 견뎠냅니다. 잘못 고르는 것은 현장에서 가장 흔히 보는 옥외 초기 고장의 원인입니다.</p>
 
-<p>This guide breaks down what each rating actually protects against, where each one stops working, and how to decide — without paying for protection you do not need.</p>
+<p>이 가이드에서는 각 등급이 실제로 보호하는 것, 각각이 실패하는 지점, 그리고 필요 없는 보호에 돈을 쓰지 않고 결정하는 방법을 풉니다.</p>
 
-<h2>What the two digits mean</h2>
+<h2>두 자리 숫자의 의미</h2>
 
-<p>Every IP code has two digits. The first is solids (dust), the second is liquids (water). For LED drivers the first digit is almost always 6, meaning dust-tight. So the real difference lives in the second digit.</p>
+<p>모든 IP 코드는 두 자리 숫자입니다. 첫째는 고체(방진), 둘째는 액체(방수)입니다. LED 구동장치에서 첫째는 거의 항상 6(완전 방진)입니다. 진짜 차이는 둘째 자리에 있습니다.</p>
 
 <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
-<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Code</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Test it must pass</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">What it survives</th></tr></thead>
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">등급</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">통과해야 할 시험</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">견디는 상황</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP65</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">6.3 mm water jet from any direction, 3 minutes</td><td style="padding:10px 14px;border:1px solid var(--b)">Rain, splashing, hose-down from a distance, dust</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP67</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Immersion in 1 m of water for 30 minutes</td><td style="padding:10px 14px;border:1px solid var(--b)">Temporary flooding, standing water, wash-down, salt spray</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP68</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Continuous immersion, depth agreed with the maker</td><td style="padding:10px 14px;border:1px solid var(--b)">Fountains, pools, in-ground wells</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP65</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">임의 방향 6.3 mm 수류 분사, 3분</td><td style="padding:10px 14px;border:1px solid var(--b)">비, 물튀김, 거리 둔 호스 세척, 분진</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP67</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">수심 1 m 30분 침지</td><td style="padding:10px 14px;border:1px solid var(--b)">일시적 침수, 고인 물, 세척, 염수 분무</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP68</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">지속 침지(수심은 제조사와 협의)</td><td style="padding:10px 14px;border:1px solid var(--b)">분수, 수영장, 지중 우물</td></tr>
 </tbody>
 </table>
 
 <div class="highlight">
-<strong>Important:</strong> IP67 does not replace IP65. A driver can pass immersion (IP67) and still be rated only "5" against jets if the maker tested it that way. That is why CHUGAO's waterproof line is marked <strong>IP67 / IP68</strong> and also jet-tested — ask your supplier which tests were actually run, not just which number is printed.
+<strong>중요:</strong> IP67이 IP65를 대체하는 것은 아닙니다. 구동장치는 침수 시험(IP67)에 합격해도, 제조사가 분사 시험을 한 경우에만 분사 등급이 "5"가 됩니다. 그래서 CHUGAO 방수 라인은 "IP67 / IP68"로 표기되고 추가로 분사 시험도 거칩니다—인쇄된 숫자만이 아니라 실제로 어떤 시험을 통과했는지 공급자에게 확인하세요.
 </div>
 
-<h2>Where IP65 is the right call</h2>
+<h2>IP65가 정답인 경우</h2>
 
-<p>IP65 is the value choice whenever the driver is exposed to weather but never sits in water:</p>
-
-<ul>
-<li><strong>Signage and channel letters</strong> — the driver lives inside a sealed sign box.</li>
-<li><strong>Billboards and light boxes</strong> — rain runs off the housing, nothing pools.</li>
-<li><strong>Covered walkways, canopies, semi-outdoor ceilings</strong> — damp and dusty, but dry.</li>
-<li><strong>High power, 100-600W</strong> — the vented metal case sheds heat far better than a sealed potted unit, which is exactly why this line reaches 600W.</li>
-</ul>
-
-<p>If your install is any of the above, our <a href="/products/ip65/">IP65 rainproof drivers</a> cost less and run cooler than a potted equivalent. Paying for IP67 here buys you nothing but a hotter driver.</p>
-
-<h2>Where you must step up to IP67</h2>
-
-<p>Choose a fully potted <a href="/products/ip67/">IP67 waterproof driver</a> when water can collect around the enclosure or the air itself is aggressive:</p>
+<p>구동장치가 날씨에 노출되지만 물에 잠기지 않는다면 IP65가 가장 경제적입니다:</p>
 
 <ul>
-<li><strong>Ground-level or in-ground installs</strong> — garden lights, path lighting, bollards that flood after heavy rain.</li>
-<li><strong>Fountains, pools, water features</strong> — splashes and temporary immersion are routine, not accidents.</li>
-<li><strong>Coastal and marine sites</strong> — salt spray corrodes a vented metal case from the inside out; silicone potting plus a salt-spray test is the only durable answer.</li>
-<li><strong>Wash-down areas</strong> — food processing, car washes, tunnels that get hosed regularly.</li>
-<li><strong>Tropical downpours</strong> — driving rain at pressure behaves like a jet, not a shower.</li>
+<li><strong>간판과 발광 글자</strong>——구동장치는 밀폐된 사인 박스 안.</li>
+<li><strong>광고판과 라이트박스</strong>——빗물은 하우징을 타고 흐르고 고이지 않음.</li>
+<li><strong>지붕 달린 보도, 캐노피, 반옥외 천장</strong>——습하고 먼지 많지만 건조.</li>
+<li><strong>고출력 100-600W</strong>——통풍구 있는 금속 하우징이 밀봉 포팅형보다 훨씬 방열이 좋아 600W에 달하는 이유.</li>
 </ul>
 
-<h2>The trade-off nobody puts on the datasheet</h2>
+<p>위 중 하나라면 <a href="/products/ip65/">IP65 방우 구동장치</a>는 포팅 방식보다 저렴하고 온도도 낮습니다. 여기서 IP67에 돈을 더 쓰는 것은 더 뜨거운 구동장치를 사는 셈입니다.</p>
 
-<p>Sealing keeps water out, but it also keeps heat in. A fully potted IP67 unit dissipates heat through its casing only, so it runs hotter than a vented IP65 case at the same load. Practical consequences:</p>
+<h2>IP67로 올려야 하는 경우</h2>
+
+<p>물이 하우징 주변에 고일 수 있거나 공기 자체가 부식성이라면 완전 포팅된 <a href="/products/ip67/">IP67 방수 구동장치</a>를 선택하세요:</p>
+
+<ul>
+<li><strong>지면 또는 지중 설치</strong>——정원등, 보도등, 폭우 후 침수되는 폴대등.</li>
+<li><strong>분수, 수영장, 수경</strong>——물튀김과 일시적 침지는 예외가 아니라 일상.</li>
+<li><strong>해안 및 해양 시설</strong>——염수 분무는 통풍구 있는 금속 하우징을 안쪽에서 부식시킴; 실리콘 포팅과 염수 분무 시험만이 유일한 내구적 해법.</li>
+<li><strong>세척 구역</strong>——식품 가공, 세차장, 정기적으로 고압 세척되는 터널.</li>
+<li><strong>열대성 호우</strong>——압력을 동반한 큰 비는 소나기가 아니라 분사에 가까움.</li>
+</ul>
+
+<h2>데이터시트에 적지 않는 트레이드오프</h2>
+
+<p>밀봉은 물을 막지만 열도 가둡니다. 완전 포팅된 IP67 유닛은 하우징만으로 방열하므로 동일 부하에서 통풍구 있는 IP65 하우징보다 더 뜨거워집니다. 실제 결과:</p>
 
 <ol>
-<li><strong>Leave more headroom.</strong> Size an IP67 driver at 70-80% of rated load rather than 80-90% when the unit sits in a hot, sealed space.</li>
-<li><strong>Mount it in air, not buried.</strong> A potted driver dropped into a sealed pit with no airflow will cook regardless of its IP code.</li>
-<li><strong>Expect a shorter top end.</strong> That is why the CHUGAO IP67 line stops at 400W while the vented IP65 line runs to 600W — physics, not marketing.</li>
+<li><strong>여유를 더 남기세요.</strong> IP67을 더운 밀폐 공간에 두면 정격 부하의 70-80%로 선정, 80-90%가 아니라.</li>
+<li><strong>통풍되는 곳에 설치하고 묻지 마세요.</strong> 통풍 없는 밀폐 피트에 포팅품을 넣으면 등급과 무관하게 익습니다.</li>
+<li><strong>상한은 짧아집니다.</strong> CHUGAO IP67 라인이 400W에서 멈추고 통풍구 있는 IP65 라인이 600W에 이르는 것은 마케팅이 아니라 물리입니다.</li>
 </ol>
 
-<h2>What you actually pay for</h2>
+<h2>실제로 지불하는 것</h2>
 
-<p>On a like-for-like 200W unit, potting adds material and process cost: silicone compound, vacuum potting, longer cure time, and 100% leak testing. In practice that is a modest premium per unit — and it is far cheaper than a truck roll to swap failed drivers on a waterfront job. The real cost question is not the driver, it is the <strong>site visit</strong>.</p>
+<p>동등 사양 200W 유닛에서 포팅은 재료와 공정 비용을 더합니다: 실리콘 소재, 진공 포팅, 긴 경화 시간, 100% 누수 검사. 실제로는 유닛당 약간의 프리미엄—하지만 해변 공사장에서 고장 난 구동장치를 교체하러 가는 출장 비용에 비하면 그 프리미엄은 훨씬 싸습니다. 진짜 비싼 것은 구동장치가 아니라 "그 출장"입니다.</p>
 
-<h2>Four questions that settle it</h2>
+<h2>네 가지 질문으로 결정</h2>
 
 <ol>
-<li><strong>Can water pool where the driver sits?</strong> Yes → IP67. No → IP65 is fine.</li>
-<li><strong>Is it coastal, or will it be hosed down?</strong> Yes → IP67 with salt-spray testing.</li>
-<li><strong>Do you need more than 400W?</strong> Yes → the vented IP65 line, mounted under cover.</li>
-<li><strong>Is the driver inside a sealed fixture or sign box?</strong> Yes → IP65 is enough, and it will run cooler.</li>
+<li><strong>구동장치 설치 위치에 물이 고이나요?</strong> 예 → IP67. 아니요 → IP65면 충분.</li>
+<li><strong>해안인가, 아니면 세척되나요?</strong> 예 → 염수 분무 시험을 거친 IP67.</li>
+<li><strong>400W 이상 필요한가요?</strong> 예 → 통풍구 있는 IP65 라인을 차폐된 곳에.</li>
+<li><strong>구동장치가 밀폐 조명이나 사인 박스 안인가요?</strong> 예 → IP65면 충분하고 더 시원함.</li>
 </ol>
 
-<p>Still on the fence? Send us a photo of the install location and the load. We will tell you honestly which line to buy — including when the cheaper IP65 is the right answer. Every unit we ship, in either line, is CE and RoHS certified, runs a 48-hour full-load burn-in before packing, and carries a 3-year warranty, with a 50 pcs minimum order and OEM/ODM options.</p>
+<p>여전히 망설이신다면 설치 위치 사진과 부하를 보내주세요. 어떤 라인을 사야 할지—더 저렴한 IP65가 정답인 경우도 포함해—정직하게 알려드리겠습니다. 당사가 출하하는 모든 유닛은 어떤 라인이든 CE와 RoHS 인증을 받았고, 출하 전 48시간 만부하 에이징을 거치며 3년 보증, 최소 주문 50대, OEM/ODM 지원입니다.</p>
 
 <div class="cta-box">
-<h3>Still not sure which rating your site needs?</h3>
-<p>Send a photo of the install location plus your load in watts. We will tell you which line to buy — including when the cheaper IP65 is the right answer.</p>
-<a href="/#inquiry" class="btn">Get a rating recommendation</a>
+<h3>현장에 어떤 등급이 필요한지 아직 모르시겠어요?</h3>
+<p>설치 위치 사진과 부하(와트)를 보내주세요. 더 저렴한 IP65가 정답인 경우도 포함해 어떤 라인을 사야 할지 알려드리겠습니다.</p>
+<a href="/#inquiry" class="btn">선정 조언 받기</a>
 </div>
 
-<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explore CHUGAO products</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Compact 12V/24V units for strips, modules and signage.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">Constant voltage with active PFC for ceiling and panel lights.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Fully potted, salt-spray tested for wet and coastal sites.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Vented metal case for signage and semi-outdoor installs.</span></a></div></section>
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">스트립, 모듈, 간판용 컴팩트 12V/24V 유닛.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내용 LED 구동장치 50-400W</span><span class="pc-desc">액티브 PFC 정전압, 펜던트·패널등용.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 구동장치 10-400W</span><span class="pc-desc">완전 포팅, 염수 분무 시험, 습윤·해안용.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 구동장치 100-600W</span><span class="pc-desc">통풍구 있는 금속 하우징, 간판·반옥외용.</span></a></div></section>
 
-<section class="related" aria-label="Related articles">
-  <h2 class="related-h">More from the field</h2>
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">다른 현장 노트</h2>
   <div class="rel-grid">
-  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technical Guide</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED Technology</span><span class="rel-title">Pick the Right LED Power Supply in 3 Steps</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">Technical Deep-dive</span><span class="rel-title">LED Driver Lifespan: MTBF, L70, and How Long They Really Last</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">Buyer's Guide</span><span class="rel-title">12V vs 24V LED Power Supply: How to Choose</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP20·IP65·IP67·IP68 비교</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 기술</span><span class="rel-title">3단계로 맞는 LED 전원 선택하기</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">기술 심층</span><span class="rel-title">LED 구동장치 수명: MTBF, L70 그리고 실제 수명</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">구매 가이드</span><span class="rel-title">12V 또는 24V: LED 전원 어떻게 선택할까</span></a>
   </div>
 </section>
 
-<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-5/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">LED Driver Lifespan: MTBF, L70, and How Long They Really Last</span></a><a class="pn-next" href="/blog-7/" rel="next"><span class="pn-lab">Next article</span><span class="pn-t">12V vs 24V LED Power Supply: How to Choose</span></a></nav>
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-5/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">LED 구동장치 수명: MTBF, L70 그리고 실제 수명</span></a><a class="pn-next" href="/blog-7/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">12V 또는 24V: LED 전원 어떻게 선택할까</span></a></nav>
 </main>
 
 <footer><div class="c"><div class="fg"><div class="fb"><a href="/#home" class="logo"><img loading="lazy" src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px"></a><p data-i18n="f_desc">CHUGAO 는 중국 중산에서 LED 전원 공급 장치를 제조. 공장 직송.</p><div class="social"><a href="https://www.facebook.com/profile.php?id=100063658296873" target="_blank" rel="noopener noreferrer" class="sfb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.014 1.794-4.677 4.533-4.677 1.313 0 2.686.234 2.686.234v2.97h-1.513c-1.49 0-1.955.926-1.955 1.876v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a><a href="https://www.instagram.com/chugao_smps/" target="_blank" rel="noopener noreferrer" class="sig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.tiktok.com/@chugaosmpsofficial" target="_blank" rel="noopener noreferrer" class="stk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/chugaosmps/" target="_blank" rel="noopener noreferrer" class="sli" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></div></div><div class="fc"><h4 data-i18n="f_prod">제품</h4><a href="/#products" data-i18n="f_p1">어댑터</a><a href="/#products" data-i18n="f_p2">실내</a><a href="/#products" data-i18n="f_p3">IP67</a><a href="/#products" data-i18n="f_p4">IP65</a></div><div class="fc"><h4 data-i18n="f_comp">회사</h4><a href="/#about" data-i18n="f_c1">소개</a><a href="/#why" data-i18n="f_c2">왜</a><a href="/blog/" data-i18n="f_c3">뉴스</a><a href="/#faq" data-i18n="f_c4">FAQ</a></div><div class="fc"><h4 data-i18n="f_supp">지원</h4><a href="/#contact" data-i18n="f_s1">문의</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">이메일</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" data-i18n="f_s3">WhatsApp</a><a href="/#inquiry" data-i18n="f_s4">데이터시트 요청</a></div></div><div class="fb2"><p>© 2026 Zhongshan Chugao Electronic Technology Co., Ltd. 저작권 보유.</p><p data-i18n="f_slogan">전 시리즈 LED 전원 공급 장치 원스톱 제조사</p></div></div></footer>

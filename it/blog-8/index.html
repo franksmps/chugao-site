@@ -58,7 +58,7 @@ gtag('js', new Date());
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NV6VNJQ8MY"></script>
 <script type="application/ld+json" id="jsonld-breadcrumb">
-{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"it","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.chugaopower.com/it/"},{"@type":"ListItem","position":2,"name":"How to Size an LED Power Supply: Wattage, Margin & Inrush","item":"https://www.chugaopower.com/it/blog-8/"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"it","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.chugaopower.com/it/"},{"@type":"ListItem","position":2,"name":"Come dimensionare un alimentatore LED: watt, margine e inrush","item":"https://www.chugaopower.com/it/blog-8/"}]}
 </script>
 </head>
 <body>
@@ -66,104 +66,104 @@ gtag('js', new Date());
 <div class="mm" id="mobileMenu"><a href="/#home" onclick="closeMobileMenu()" data-i18n="n_h">Home</a><a href="/#about" onclick="closeMobileMenu()" data-i18n="n_a">Chi siamo</a><a href="/#products" onclick="closeMobileMenu()" data-i18n="n_p">Prodotti</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">Specifiche</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">Perché noi</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">Notizie</a><a href="/#faq" onclick="closeMobileMenu()" data-i18n="n_f">FAQ</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">Contatti</a><div class="ml"><a href="/blog-8/" onclick="goLang('en');closeMobileMenu()" id="ml-en">EN</a><a href="/zh/blog-8/" onclick="goLang('zh');closeMobileMenu()" id="ml-zh">ZH</a><a href="/es/blog-8/" onclick="goLang('es');closeMobileMenu()" id="ml-es">ES</a><a href="/fr/blog-8/" onclick="goLang('fr');closeMobileMenu()" id="ml-fr">FR</a><a href="/de/blog-8/" onclick="goLang('de');closeMobileMenu()" id="ml-de">DE</a><a href="/pt/blog-8/" onclick="goLang('pt');closeMobileMenu()" id="ml-pt">PT</a><a href="/ru/blog-8/" onclick="goLang('ru');closeMobileMenu()" id="ml-ru">RU</a><a href="/ja/blog-8/" onclick="goLang('ja');closeMobileMenu()" id="ml-ja">JA</a><a href="/ko/blog-8/" onclick="goLang('ko');closeMobileMenu()" id="ml-ko">KO</a><a href="/ar/blog-8/" onclick="goLang('ar');closeMobileMenu()" id="ml-ar">AR</a><a href="/it/blog-8/" onclick="goLang('it');closeMobileMenu()" id="ml-it" class="active">IT</a></div></div>
 
 <main class="article">
-<a href="/blog/" class="back-link">← Back to Field notes</a>
+<a href="/blog/" class="back-link">&larr; Torna alle Note dal Campo</a>
 
-<h1>How to Size an LED Power Supply: Wattage, Margin & Inrush</h1>
-<div class="meta">Technical Guide · August 2026 · 7 min read</div>
+<h1>Come dimensionare un alimentatore LED: watt, margine e inrush</h1>
+<div class="meta">Guida tecnica · Agosto 2026 · 7 min di lettura</div>
 
 <div class="hero-img">
-<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Indoor LED driver being sized for a commercial lighting load" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Driver LED da interno dimensionato per un carico di illuminazione commerciale" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
 </div>
 
 
-<p>Undersize an LED power supply and it runs hot, dims early, and dies in a year. Oversize it wildly and you pay for capacity you never use. Between those two is a 20-minute calculation that most buyers skip.</p>
+<p>Un alimentatore LED sottodimensionato scalda, si attenua presto e muore in un anno. Uno sovradimensionato paghi per capacità che non usi. In mezzo c'è un calcolo di 20 minuti che la maggior parte dei compratori salta.</p>
 
-<h2>Step 1: total the real load</h2>
+<h2>Passo 1: totalizza il carico reale</h2>
 
-<p>Add the wattage of every fixture the driver will feed. Use the fixture's <strong>input</strong> wattage, not its "equivalent" rating — a "50W equivalent" downlight may draw 9W.</p>
+<p>Somma i watt di ogni apparato che il driver alimenterà. Usa i watt di ingresso dell'apparato, non la "equivalenza" — un downlight "equivalente 50W" può assorbire 9W.</p>
 
 <ul>
-<li>LED strip: watts per metre × metres (check the strip label: 4.8W/m, 9.6W/m, 14.4W/m are common).</li>
-<li>Panels and troffers: the rating plate on the fitting.</li>
-<li>Signage modules: modules × watts per module.</li>
+<li>Striscia LED: watt per metro × metri (controlla l'etichetta: comuni 4,8W/m, 9,6W/m, 14,4W/m).</li>
+<li>Pannelli e troffer: la targa dell'apparato.</li>
+<li>Moduli insegna: moduli × watt per modulo.</li>
 </ul>
 
-<p>Example: 12 metres of 14.4W/m strip = <strong>173W</strong>.</p>
+<p>Esempio: striscia 14,4W/m per 12 m = <strong>173W</strong>.</p>
 
-<h2>Step 2: add the 20% margin</h2>
+<h2>Passo 2: aggiungi il margine del 20%</h2>
 
-<p>Multiply by 1.2. That 20% is not padding — it covers three things that all shorten driver life:</p>
+<p>Moltiplica per 1,2. Quel 20% non è padding — copre tre cose che accorciano la vita del driver:</p>
 
 <ol>
-<li><strong>Heat.</strong> A driver at 100% load in a 40°C ceiling runs far hotter than the same unit at 80% load. Every 10°C over the rating roughly halves capacitor life.</li>
-<li><strong>Mains variation.</strong> Input dips and surges are absorbed more comfortably with headroom.</li>
-<li><strong>Future additions.</strong> The strip someone adds next year.</li>
+<li><strong>Calore.</strong> Un driver al 100% di carico in un soffitto a 40°C gira molto più caldo dello stesso a 80%; ogni 10°C oltre la classe dimezza circa la vita dei condensatori.</li>
+<li><strong>Variazioni rete.</strong> Cadute e picchi si assorbono meglio con margine.</li>
+<li><strong>Aggiunte future.</strong> La striscia che qualcuno aggiunge l'anno prossimo.</li>
 </ol>
 
-<p>173W × 1.2 = <strong>208W</strong> → pick a <strong>240W or 250W</strong> model, the next standard rating above your number.</p>
+<p>173W × 1,2 = <strong>208W</strong> &rarr; scegli un modello da 240W o 250W, la classe standard sopra il tuo numero.</p>
 
 <div class="highlight">
-<strong>Rule of thumb:</strong> run the driver at <strong>80% of its rating or less</strong>. Going from 60W to 100W costs a few dollars. Sending a technician to replace a failed driver costs a hundred times more.
+<strong>Regola pratica:</strong> fai girare il driver all'80% o meno della sua classe. Passare da 60W a 100W costa pochi dollari; mandare un tecnico a sostituire un driver guasto costa cento volte tanto.
 </div>
 
-<h2>Step 3: check inrush before you size the breaker</h2>
+<h2>Passo 3: controlla l'inrush prima di scegliere il magnetotermico</h2>
 
-<p>Switching power supplies draw a large but very brief surge when energised — typically 30-60 A for a few milliseconds, sometimes more on high-power units. If you put ten drivers on one switch or contactor, that surge adds up and can trip the breaker or weld the relay on day one.</p>
+<p>Gli alimentatori switching assorbono un picco brevissimo ma intenso all'inserzione — tipicamente 30-60 A per pochi millisecondi, a volte più su unità ad alta potenza. Se metti dieci driver su un solo interruttore o contattore, i picchi si sommano e possono far scattare il magnetotermico o saldare il relè al primo giorno.</p>
 
 <ul>
-<li><strong>Many small drivers?</strong> Stagger them with a time-delay relay, or use a contactor rated for the summed inrush.</li>
-<li><strong>One big driver?</strong> Use a type-C or type-D breaker rather than type-B.</li>
-<li><strong>Ask for the inrush figure</strong> — it is on the datasheet, and a supplier who cannot give it is guessing.</li>
+<li><strong>Molti driver piccoli?</strong> Scaglionali con un relè a ritardo, o usa un contattore rateizzato per l'inrush sommato.</li>
+<li><strong>Un solo driver grande?</strong> Usa un magnetotermico tipo C o D, non tipo B.</li>
+<li><strong>Chiedi il valore di inrush</strong> — è sulla scheda; un fornitore che non lo dà sta indovinando.</li>
 </ul>
 
-<h2>Step 4: derate for temperature</h2>
+<h2>Passo 4: derate per temperatura</h2>
 
-<p>Most drivers are rated for full output at 40°C ambient or below. Above that, derate — typically 2-3% of output per °C, but check the curve for your model. Practical cases:</p>
+<p>La maggior parte dei driver è a pieno carico a 40°C ambiente o meno. Oltre, derate — tipicamente 2-3% di uscita per °C, ma controlla la curva del modello. Casi pratici:</p>
 
 <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
-<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Install</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Typical ambient</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">What to do</th></tr></thead>
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Installazione</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Temperatura ambiente tipica</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Cosa fare</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Open indoor ceiling</td><td style="padding:10px 14px;border:1px solid var(--b)">25-35°C</td><td style="padding:10px 14px;border:1px solid var(--b)">Standard 20% margin is enough</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Sealed ceiling void</td><td style="padding:10px 14px;border:1px solid var(--b)">45-55°C</td><td style="padding:10px 14px;border:1px solid var(--b)">Add 30-40% margin, or move the driver into open air</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Outdoor in direct sun</td><td style="padding:10px 14px;border:1px solid var(--b)">50-65°C</td><td style="padding:10px 14px;border:1px solid var(--b)">Shade the unit, or step up one size and use a potted <a href="/products/ip67/">IP67</a> model</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Inside a sealed sign box</td><td style="padding:10px 14px;border:1px solid var(--b)">45-60°C</td><td style="padding:10px 14px;border:1px solid var(--b)">Vent the box, or use a vented <a href="/products/ip65/">IP65</a> case</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Soffitto interno aperto</td><td style="padding:10px 14px;border:1px solid var(--b)">25-35°C</td><td style="padding:10px 14px;border:1px solid var(--b)">basta il margine standard 20%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Vano soffitto sigillato</td><td style="padding:10px 14px;border:1px solid var(--b)">45-55°C</td><td style="padding:10px 14px;border:1px solid var(--b)">aggiungi 30-40% di margine, o sposta il driver all'aperto</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Esterno in pieno sole</td><td style="padding:10px 14px;border:1px solid var(--b)">50-65°C</td><td style="padding:10px 14px;border:1px solid var(--b)">ombreggia l'unità, o sali una taglia e usa un IP67 sigillato</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Dentro scatola insegna sigillata</td><td style="padding:10px 14px;border:1px solid var(--b)">45-60°C</td><td style="padding:10px 14px;border:1px solid var(--b)">ventola la scatola, o usa un contenitore IP65 ventilato</td></tr>
 </tbody>
 </table>
 
-<h2>Worked example: shopfront sign, 8 modules</h2>
+<h2>Esempio: insegna vetrina, 8 moduli</h2>
 
-<p>Sign modules: 8 × 1.5W = 12W. Strip accents: 4 m × 9.6W/m = 38W. Total = 50W. Margin ×1.2 = 60W. Installed in a sealed box that reaches 50°C in summer → add another 30% → 78W. Choose a <strong>100W</strong> unit. It will run at roughly half load, stay cool, and outlast the sign.</p>
+<p>Moduli insegna: 8 × 1,5W = 12W. Accenti striscia: 4 m × 9,6W/m = 38W. Totale = 50W. Margine ×1,2 = 60W. In scatola sigillata che d'estate raggiunge 50°C &rarr; aggiungi un altro 30% &rarr; 78W. Scegli un'unità da 100W. Girerà a circa metà carico, resterà fresca e supererà la durata dell'insegna.</p>
 
-<h2>Five sizing mistakes</h2>
+<h2>Cinque errori di dimensionamento</h2>
 
 <ol>
-<li><strong>Using "equivalent wattage"</strong> instead of real draw.</li>
-<li><strong>Sizing to 100% load</strong> with no margin.</li>
-<li><strong>Ignoring ambient temperature</strong> in a sealed enclosure.</li>
-<li><strong>Putting ten drivers on one switch</strong> without checking inrush.</li>
-<li><strong>Forgetting the future</strong> — the extra strip, the second sign.</li>
+<li><strong>Usare i "watt equivalenti"</strong> invece del consumo reale.</li>
+<li><strong>Dimensionare al 100% di carico senza margine</strong>.</li>
+<li><strong>Ignorare la temperatura ambiente in un contenitore sigillato</strong>.</li>
+<li><strong>Mettere dieci driver su un interruttore senza controllare l'inrush</strong>.</li>
+<li><strong>Dimenticare il futuro</strong> — la striscia in più, la seconda insegna.</li>
 </ol>
 
-<h2>What we need from you</h2>
+<h2>Cosa ci serve da te</h2>
 
-<p>Send the load in watts, the output voltage (12V or 24V), the install location and rough ambient temperature, and how many units you need. We will recommend the right rating — and tell you when a smaller, cheaper model is genuinely sufficient.</p>
+<p>Inviaci il carico in watt, la tensione di uscita (12V o 24V), il luogo di installazione e la temperatura ambiente approssimativa, e quante unità ti servono. Ti raccomanderemo la classe giusta — e ti diremo quando un modello più piccolo e economico è davvero sufficiente.</p>
 
 <div class="cta-box">
-<h3>Want us to check your sizing?</h3>
-<p>Send the load, output voltage, install location and quantity. We will confirm the right rating — or tell you a smaller model is enough.</p>
-<a href="/#inquiry" class="btn">Get a sizing check</a>
+<h3>Vuoi che controlliamo il tuo dimensionamento?</h3>
+<p>Inviaci carico, tensione di uscita, luogo di installazione e quantità. Confermeremo la classe giusta — o ti diremo che un modello più piccolo basta.</p>
+<a href="/#inquiry" class="btn">Ottieni un controllo di dimensionamento</a>
 </div>
 
-<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explore CHUGAO products</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Compact 12V/24V units for strips, modules and signage.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">Constant voltage with active PFC for ceiling and panel lights.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Fully potted, salt-spray tested for wet and coastal sites.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Vented metal case for signage and semi-outdoor installs.</span></a></div></section>
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Esplora i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adattatori LED 5-200W</span><span class="pc-desc">Unità compatte 12V/24V per strisce, moduli e insegne.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Driver LED da interno 50-400W</span><span class="pc-desc">Tensione costante con PFC attivo per soffitti e pannelli.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver impermeabili IP67 10-400W</span><span class="pc-desc">Completamente sigillati, test nebbia salina, per umido e coste.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver anti-pioggia IP65 100-600W</span><span class="pc-desc">Contenitore metallico ventilato per insegne e semi-esterno.</span></a></div></section>
 
-<section class="related" aria-label="Related articles">
-  <h2 class="related-h">More from the field</h2>
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre Note dal Campo</h2>
   <div class="rel-grid">
-  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED Technology</span><span class="rel-title">Pick the Right LED Power Supply in 3 Steps</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">Buyer's Guide</span><span class="rel-title">12V vs 24V LED Power Supply: How to Choose</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">Technical Guide</span><span class="rel-title">IP67 vs IP65 LED Driver: Which Rating Do You Need?</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">Technical Deep-dive</span><span class="rel-title">LED Driver Lifespan: MTBF, L70, and How Long They Really Last</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Scegliere l'alimentatore LED giusto in 3 passi</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">Guida all'acquisto</span><span class="rel-title">12V o 24V: come scegliere l'alimentatore LED</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">IP67 o IP65: quale driver LED impermeabile ti serve?</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">Approfondimento</span><span class="rel-title">Durata dei driver LED: MTBF, L70 e quanto durano davvero</span></a>
   </div>
 </section>
 
-<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-7/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">12V vs 24V LED Power Supply: How to Choose</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">Next article</span><span class="pn-t">Field Notes</span></a></nav>
+<nav class="post-nav" aria-label="Navigazione articoli"><a class="pn-prev" href="/blog-7/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">12V o 24V: come scegliere l'alimentatore LED</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Note dal Campo</span></a></nav>
 </main>
 
 <footer><div class="c"><div class="fg"><div class="fb"><a href="/#home" class="logo"><img loading="lazy" src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px"></a><p data-i18n="f_desc">CHUGAO produce alimentatori LED a Zhongshan, Cina. Diretto dalla fabbrica.</p><div class="social"><a href="https://www.facebook.com/profile.php?id=100063658296873" target="_blank" rel="noopener noreferrer" class="sfb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.014 1.794-4.677 4.533-4.677 1.313 0 2.686.234 2.686.234v2.97h-1.513c-1.49 0-1.955.926-1.955 1.876v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a><a href="https://www.instagram.com/chugao_smps/" target="_blank" rel="noopener noreferrer" class="sig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.tiktok.com/@chugaosmpsofficial" target="_blank" rel="noopener noreferrer" class="stk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/chugaosmps/" target="_blank" rel="noopener noreferrer" class="sli" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></div></div><div class="fc"><h4 data-i18n="f_prod">Prodotti</h4><a href="/#products" data-i18n="f_p1">Adattatori</a><a href="/#products" data-i18n="f_p2">Driver interni</a><a href="/#products" data-i18n="f_p3">IP67</a><a href="/#products" data-i18n="f_p4">IP65</a></div><div class="fc"><h4 data-i18n="f_comp">Azienda</h4><a href="/#about" data-i18n="f_c1">Chi siamo</a><a href="/#why" data-i18n="f_c2">Perché</a><a href="/blog/" data-i18n="f_c3">Notizie</a><a href="/#faq" data-i18n="f_c4">FAQ</a></div><div class="fc"><h4 data-i18n="f_supp">Supporto</h4><a href="/#contact" data-i18n="f_s1">Contatti</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">Email</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" data-i18n="f_s3">WhatsApp</a><a href="/#inquiry" data-i18n="f_s4">Richiedi schede tecniche</a></div></div><div class="fb2"><p>© 2026 Zhongshan Chugao Electronic Technology Co., Ltd. Tutti i diritti riservati.</p><p data-i18n="f_slogan">Produttore unico di tutta la gamma di alimentatori LED</p></div></div></footer>

@@ -3,7 +3,8 @@
 
 All 11 public languages are covered (en + zh + es/pt/ru/fr/de/ar + ja/ko/it).
 ja/ko/it are AI translations pending native review; zh blog-6/7/8 bodies are
-translated via blog_body_zh.BLOG_BODY_ZH. Consumed by build_i18n.build_page
+translated via blog_body_zh.BLOG_BODY (per-language nested dict). Consumed by
+build_i18n.build_page
 via set_title_desc.
 """
 BLOG_META = {
