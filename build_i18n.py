@@ -43,11 +43,13 @@ LANGS_META = [
 ]
 LANGS = [c for c,_,_ in LANGS_META]
 
-# Publicly advertised languages: the 7 fully-localized versions
-# (English + the 6 SUBTR market languages). zh/ja/ko/it are still BUILT and left
-# live as an English fallback (no 404, reversible) but are NOT surfaced as
-# language choices in the switcher, hreflang, og:locale alternates, or sitemap.
-PUBLIC_LANGS = ['en', 'es', 'pt', 'ru', 'fr', 'de', 'ar']
+# Publicly advertised languages. Restored to 8: English + zh + the 6 SUBTR
+# market languages. zh is back in the switcher/hreflang/sitemap per owner
+# request (2026-09-07) — its inner-page body is fully translated (SUBTR has
+# 186 entries for zh, same as the market languages). ja/ko/it remain BUILT and
+# live as an English fallback but are NOT surfaced (AI translations pending
+# native review).
+PUBLIC_LANGS = ['en', 'zh', 'es', 'pt', 'ru', 'fr', 'de', 'ar']
 PUBLIC_LANGS_META = [m for m in LANGS_META if m[0] in PUBLIC_LANGS]
 
 # OGP wants language_TERRITORY (en_US), not the bare codes hreflang uses.

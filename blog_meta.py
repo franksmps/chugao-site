@@ -11,6 +11,10 @@ BLOG_META = {
             'title': "Notas de Campo - Guías y análisis de fuentes de alimentación LED | CHUGAO",
             'desc': "Notas de Campo de CHUGAO: guías prácticas de fuentes LED, explicaciones de grados IP, novedades de mercado y consejos de certificación para importadores e instaladores.",
         },
+        'zh': {
+            'title': "CHUGAO 现场笔记",
+            'desc': "来自产线与现场的 LED 电源选型、认证与故障排查经验。",
+        },
         'pt': {
             'title': "Notas de Campo - Guias e análises de fontes de alimentação LED | CHUGAO",
             'desc': "Notas de Campo da CHUGAO: guias práticos de fontes LED, explicações de nível IP, novidades de mercado e dicas de certificação para importadores e instaladores.",
@@ -36,6 +40,10 @@ BLOG_META = {
         'es': {
             'title': "Elija la fuente de alimentación LED adecuada en 3 pasos | Notas de Campo CHUGAO",
             'desc': "Cómo elegir la fuente LED correcta: coincidencia de potencia, grado IP según el entorno y compatibilidad de voltaje de entrada, explicado de forma sencilla.",
+        },
+        'zh': {
+            'title': "3 步选对 LED 电源",
+            'desc': "功率、防护等级、输入电压。抓住这三点就够了。",
         },
         'pt': {
             'title': "Escolha a fonte de alimentação LED certa em 3 passos | Notas de Campo CHUGAO",
@@ -63,6 +71,10 @@ BLOG_META = {
             'title': "IP20 frente a IP65, IP67 e IP68 | Notas de Campo CHUGAO",
             'desc': "Grado IP explicado para fuentes LED: qué significan los números, dónde se usa cada grado y cómo elegir el adecuado para su proyecto.",
         },
+        'zh': {
+            'title': "IP20、IP65、IP67、IP68 怎么选",
+            'desc': "这些数字代表什么，各自在什么环境下会失效。",
+        },
         'pt': {
             'title': "IP20 vs IP65 vs IP67 vs IP68 | Notas de Campo CHUGAO",
             'desc': "Nível IP explicado para fontes LED: o que significam os números, onde cada nível é usado e como escolher o certo para o seu projeto.",
@@ -88,6 +100,10 @@ BLOG_META = {
         'es': {
             'title': "Mercado LED 2026: lo que estamos viendo | Notas de Campo CHUGAO",
             'desc': "Observaciones directas desde la fábrica: tendencias de demanda de drivers LED en 2026 — qué mercados crecen, qué especificaciones piden más los compradores y cómo se mueven los precios.",
+        },
+        'zh': {
+            'title': "2026 LED 市场：我们看到的",
+            'desc': "来自工厂一线的观察，不是分析师报告。",
         },
         'pt': {
             'title': "Mercado LED 2026: o que estamos a ver | Notas de Campo CHUGAO",
@@ -115,6 +131,10 @@ BLOG_META = {
             'title': "Certificación BIS para drivers LED: guía de importación a India | Notas de Campo CHUGAO",
             'desc': "Qué significa la certificación BIS de India para los importadores de fuentes LED. Requisitos de IS 13252 Parte 1, proceso de prueba, plazos, coste y cómo un proveedor con BIS como CHUGAO le ayuda a pasar aduanas más rápido.",
         },
+        'zh': {
+            'title': "LED 驱动 BIS 认证：印度进口指南",
+            'desc': "BIS 对您的订单、交期与成本意味着什么。",
+        },
         'pt': {
             'title': "Certificação BIS para drivers LED: guia de importação para a Índia | Notas de Campo CHUGAO",
             'desc': "O que a certificação BIS da Índia significa para importadores de fontes LED. Requisitos da IS 13252 Parte 1, processo de teste, prazos, custo e como um fornecedor com BIS como a CHUGAO o ajuda a liberar a alfândega mais rápido.",
@@ -140,6 +160,10 @@ BLOG_META = {
         'es': {
             'title': "Vida útil de los drivers LED: MTBF, L70 y cuánto duran realmente | Notas de Campo CHUGAO",
             'desc': "¿Qué significan 50.000 horas para un driver LED? Comprensión de MTBF, la cifra L70, los efectos de la temperatura y la vida útil real de las fuentes conmutadas LED.",
+        },
+        'zh': {
+            'title': "LED 驱动寿命：MTBF、L70 与真实使用寿命",
+            'desc': "50,000 小时并不是你想的意思。热量、负载与环境解析。",
         },
         'pt': {
             'title': "Vida útil dos drivers LED: MTBF, L70 e quanto realmente duram | Notas de Campo CHUGAO",
@@ -167,6 +191,10 @@ BLOG_META = {
             'title': "IP67 frente a IP65: qué driver LED necesita | CHUGAO",
             'desc': "Qué protege realmente cada grado IP, dónde falla cada uno y cómo elegir la fuente LED impermeable adecuada según instalación, coste y calor.",
         },
+        'zh': {
+            'title': "IP67 还是 IP65：你需要哪种防水 LED 驱动",
+            'desc': "每种 IP 等级真正防护什么、各自的失效点，以及如何按安装环境、成本与散热选对防水驱动。",
+        },
         'pt': {
             'title': "IP67 vs IP65: qual driver LED impermeável precisa | CHUGAO",
             'desc': "O que cada grau IP realmente protege, onde cada um falha e como escolher a fonte LED impermeável certa para a sua instalação, custo e calor.",
@@ -193,6 +221,10 @@ BLOG_META = {
             'title': "12V o 24V: cómo elegir la fuente LED | Guía CHUGAO",
             'desc': "Caída de tensión, longitud máxima de cable según sección y la regla simple para elegir entre 12V y 24V en tiras LED.",
         },
+        'zh': {
+            'title': "12V 还是 24V：LED 电源怎么选",
+            'desc': "压降、不同线径下的最大线缆长度，以及 12V 与 24V LED 灯带选择的简单法则。",
+        },
         'pt': {
             'title': "12V ou 24V: como escolher a fonte LED | Guia CHUGAO",
             'desc': "Queda de tensão, comprimento máximo de cabo por bitola e a regra simples para escolher entre 12V e 24V em fitas LED.",
@@ -218,6 +250,10 @@ BLOG_META = {
         'es': {
             'title': "Cómo dimensionar una fuente LED: vatios y margen | CHUGAO",
             'desc': "Sume la carga real, aplique el margen del 20%, tenga en cuenta la corriente de arranque y la temperatura: ejemplos prácticos.",
+        },
+        'zh': {
+            'title': "LED 电源功率怎么选：瓦数与余量",
+            'desc': "累加真实负载、预留 20% 余量、考虑启动电流与温度：附实操算例。",
         },
         'pt': {
             'title': "Como dimensionar uma fonte LED: watts e margem | CHUGAO",

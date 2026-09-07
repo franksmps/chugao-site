@@ -31,6 +31,10 @@ PAGE_META = {
             'title': "LED Adapter Manufacturer 5-200W | OEM ODM, MOQ 50 pcs",
             'desc': "China LED adapter manufacturer: 5-200W 12V/24V AC/DC adapters for strips, modules and signage. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty, CE RoHS.",
         },
+        'zh': {
+            'title': "LED 适配器厂家 5-200W | OEM ODM，起订 50 台",
+            'desc': "中国 LED 适配器厂家：5-200W、12V/24V AC/DC 适配器，适用于灯带、模组与标识。OEM ODM，50 台起订，48 小时老化，3 年质保，CE RoHS。",
+        },
         'es': {
             'title': "Fabricante de adaptadores LED 5-200W | OEM ODM, MOQ 50",
             'desc': "Fabricante de adaptadores LED en China: 5-200W 12V/24V para tiras, módulos y letreros. OEM ODM, pedido mínimo 50 uds, 48h de burn-in, garantía 3 años, CE RoHS.",
@@ -60,6 +64,10 @@ PAGE_META = {
         'en': {
             'title': "Indoor LED Driver Manufacturer 50-400W | OEM ODM MOQ 50",
             'desc': "China indoor LED driver manufacturer: 50-400W constant voltage, active PFC, fan-less. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty, CE RoHS.",
+        },
+        'zh': {
+            'title': "室内 LED 驱动电源厂家 50-400W | OEM ODM 起订 50 台",
+            'desc': "中国室内 LED 驱动电源厂家：50-400W 恒压、主动 PFC、无风扇设计。OEM ODM，50 台起订，48 小时老化，3 年质保，CE RoHS。",
         },
         'es': {
             'title': "Fabricante de drivers LED interior 50-400W | OEM ODM",
@@ -91,6 +99,10 @@ PAGE_META = {
             'title': "IP67 Waterproof LED Driver Manufacturer, 10-400W",
             'desc': "China IP67 waterproof LED driver manufacturer: 10-400W, fully potted, salt-spray tested, 12V/24V. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty, CE RoHS.",
         },
+        'zh': {
+            'title': "IP67 防水 LED 驱动电源厂家，10-400W",
+            'desc': "中国 IP67 防水 LED 驱动电源厂家：10-400W 全灌封、盐雾测试、12V/24V。OEM ODM，50 台起订，48 小时老化，3 年质保，CE RoHS。",
+        },
         'es': {
             'title': "Fabricante de drivers LED IP67 impermeables 10-400W",
             'desc': "Fabricante de drivers LED IP67 en China: 10-400W, encapsulado total, probado en niebla salina, 12V/24V. OEM ODM, pedido mínimo 50 uds, garantía 3 años, CE RoHS.",
@@ -120,6 +132,10 @@ PAGE_META = {
         'en': {
             'title': "IP65 Rainproof LED Driver Manufacturer, 100-600W",
             'desc': "China IP65 rainproof LED driver manufacturer for signage and billboards: 100-600W, 12V/24V. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty, CE RoHS.",
+        },
+        'zh': {
+            'title': "IP65 防雨 LED 驱动电源厂家，100-600W",
+            'desc': "中国 IP65 防雨 LED 驱动电源厂家，适用于标识与广告牌：100-600W、12V/24V。OEM ODM，50 台起订，48 小时老化，3 年质保，CE RoHS。",
         },
         'es': {
             'title': "Fabricante de drivers LED IP65 anti-lluvia 100-600W",
