@@ -305,7 +305,7 @@ COMPARE_IP65 = (
 
 def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
                  related=None, extra='', spec2=None, models=None, faq=None,
-                 compare=None):
+                 compare=None, title=None, meta_desc=None):
     rel_block = ''
     if related:
         items = ''.join(f'<li><a href="/{b}/">{t}</a></li>' for b, t in related)
@@ -408,7 +408,11 @@ def product_page(path, name, rng, ip, feat, desc, blurb, img, inp='', outp='',
                                     "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}
         faq_json = '<script type="application/ld+json">' + \
             json.dumps(faq_data, ensure_ascii=False) + '</script>'
-    return page(path, f'{name} - CHUGAO LED power supply', desc, body,
+    # `title` / `meta_desc` carry the Tier-1 buyer-intent wording (manufacturer /
+    # OEM ODM / 50 pcs MOQ). `desc` remains the Overview paragraph, so product
+    # pages need a separate meta description instead of reusing it.
+    return page(path, title or f'{name} - CHUGAO LED power supply',
+                meta_desc or desc, body,
                 product_json + faq_json, og_image=img.replace('.webp', '.jpg'))
 
 product_page('products/adapters.html', 'LED Adapters (5-200W)',
@@ -450,7 +454,9 @@ product_page('products/adapters.html', 'LED Adapters (5-200W)',
         ("Do you fit a plug for my country?",
          "The adapter accepts 100-240V worldwide. We fit the local plug or AC cord for your market (US, EU, UK, AU and others) at no extra charge."),
     ],
-    compare=COMPARE_ADAPTERS)
+    compare=COMPARE_ADAPTERS,
+    title="LED Adapter Manufacturer 5-200W | OEM ODM, MOQ 50 pcs",
+    meta_desc="China LED adapter manufacturer: 5-200W 12V/24V AC/DC adapters for strips, modules and signage. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty, CE RoHS.")
 product_page('products/indoor.html', 'Indoor LED Drivers (50-400W)',
     '50W - 400W', 'IP20', 'Built-in active PFC, fan-less silent operation',
     'Indoor LED drivers for ceiling lights and panel lights. High efficiency with active power-factor correction.',
@@ -490,7 +496,9 @@ product_page('products/indoor.html', 'Indoor LED Drivers (50-400W)',
         ("Can they be mounted above a ceiling?",
          "Yes. The IP20 drivers are made for dry indoor use such as above ceilings and inside fixtures. Leave some air space and do not bury them in insulation."),
     ],
-    compare=COMPARE_INDOOR)
+    compare=COMPARE_INDOOR,
+    title="Indoor LED Driver Manufacturer 50-400W | OEM ODM MOQ 50",
+    meta_desc="China indoor LED driver manufacturer: 50-400W constant voltage, active PFC, fan-less. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty, CE RoHS.")
 product_page('products/ip67.html', 'IP67 Waterproof LED Drivers (10-400W)',
     '10W - 400W', 'IP67 / IP68', 'Fully sealed silicone potting, salt-spray tested',
     'Waterproof drivers for outdoor LED strips, fountains, and marine lighting. Built to survive wet environments.',
@@ -532,7 +540,9 @@ product_page('products/ip67.html', 'IP67 Waterproof LED Drivers (10-400W)',
         ("How do I wire a waterproof driver outdoors?",
          "Use waterproof connectors and keep joints inside a sealed junction box. We supply IP67 cable glands so the entry points stay watertight."),
     ],
-    compare=COMPARE_IP67)
+    compare=COMPARE_IP67,
+    title="IP67 Waterproof LED Driver Manufacturer, 10-400W",
+    meta_desc="China IP67 waterproof LED driver manufacturer: 10-400W, fully potted, salt-spray tested, 12V/24V. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty, CE RoHS.")
 product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
     '100W - 600W', 'IP65', 'Metal case with mesh vents, corrosion resistant',
     'Rainproof drivers for signage, billboards, and semi-outdoor installations. Metal housing with ventilation.',
@@ -572,6 +582,8 @@ product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
         ("Can the metal case be used outside?",
          "Yes. The corrosion-resistant metal case suits semi-outdoor signage and billboards. For full outdoor wet use, the IP67 line is the better choice."),
     ],
-    compare=COMPARE_IP65)
+    compare=COMPARE_IP65,
+    title="IP65 Rainproof LED Driver Manufacturer, 100-600W",
+    meta_desc="China IP65 rainproof LED driver manufacturer for signage and billboards: 100-600W, 12V/24V. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty, CE RoHS.")
 
 print("All pages generated.")

@@ -162,4 +162,82 @@ BLOG_META = {
             'desc': "ماذا تعني 50,000 ساعة لمحرك LED؟ فهم MTBF، وتصنيف L70، وتأثيرات الحرارة، والعمر الافتراضي الحقيقي لمزوّدات طاقة LED المحوّلة.",
         },
     },
+    'blog-6': {
+        'es': {
+            'title': "IP67 frente a IP65: qué driver LED necesita | CHUGAO",
+            'desc': "Qué protege realmente cada grado IP, dónde falla cada uno y cómo elegir la fuente LED impermeable adecuada según instalación, coste y calor.",
+        },
+        'pt': {
+            'title': "IP67 vs IP65: qual driver LED impermeável precisa | CHUGAO",
+            'desc': "O que cada grau IP realmente protege, onde cada um falha e como escolher a fonte LED impermeável certa para a sua instalação, custo e calor.",
+        },
+        'ru': {
+            'title': "IP67 против IP65: какой драйвер LED выбрать | CHUGAO",
+            'desc': "Что реально защищает каждая степень IP, где каждый вариант подводит и как выбрать влагозащищённый блок питания LED для вашего объекта.",
+        },
+        'fr': {
+            'title': "IP67 vs IP65 : quel driver LED étanche choisir | CHUGAO",
+            'desc': "Ce que protège réellement chaque indice IP, où chacun échoue et comment choisir la bonne alimentation LED étanche selon l'installation et la chaleur.",
+        },
+        'de': {
+            'title': "IP67 vs IP65: Welchen LED-Treiber brauchen Sie? | CHUGAO",
+            'desc': "Was jede IP-Schutzart wirklich schützt, wo sie versagt und wie Sie das passende wasserdichte LED-Netzteil für Ihre Installation auswählen.",
+        },
+        'ar': {
+            'title': "IP67 مقابل IP65: أي مشغل LED مقاوم للماء تحتاج؟ | CHUGAO",
+            'desc': "ماذا تحمي كل درجة IP فعليًا، وأين يفشل كل منها، وكيف تختار مزوّد طاقة LED مقاومًا للماء يناسب تركيبك وحرارته.",
+        },
+    },
+    'blog-7': {
+        'es': {
+            'title': "12V o 24V: cómo elegir la fuente LED | Guía CHUGAO",
+            'desc': "Caída de tensión, longitud máxima de cable según sección y la regla simple para elegir entre 12V y 24V en tiras LED.",
+        },
+        'pt': {
+            'title': "12V ou 24V: como escolher a fonte LED | Guia CHUGAO",
+            'desc': "Queda de tensão, comprimento máximo de cabo por bitola e a regra simples para escolher entre 12V e 24V em fitas LED.",
+        },
+        'ru': {
+            'title': "12 В или 24 В: как выбрать блок питания LED | CHUGAO",
+            'desc': "Падение напряжения, максимальная длина кабеля по сечению и простое правило выбора между 12 В и 24 В для LED-лент.",
+        },
+        'fr': {
+            'title': "12V ou 24V : comment choisir son alimentation LED | CHUGAO",
+            'desc': "Chute de tension, longueur de câble maximale par section et la règle simple pour choisir entre 12V et 24V pour rubans LED.",
+        },
+        'de': {
+            'title': "12V oder 24V: Welches LED-Netzteil? | CHUGAO Ratgeber",
+            'desc': "Spannungsabfall, maximale Kabellänge je Querschnitt und die einfache Regel für die Wahl zwischen 12V und 24V bei LED-Streifen.",
+        },
+        'ar': {
+            'title': "12 فولت أم 24 فولت: كيف تختار مزود طاقة LED | CHUGAO",
+            'desc': "هبوط الجهد، وأقصى طول للكابل حسب المقطع، وقاعدة بسيطة للاختيار بين 12 و24 فولت لشرائط LED.",
+        },
+    },
+    'blog-8': {
+        'es': {
+            'title': "Cómo dimensionar una fuente LED: vatios y margen | CHUGAO",
+            'desc': "Sume la carga real, aplique el margen del 20%, tenga en cuenta la corriente de arranque y la temperatura: ejemplos prácticos.",
+        },
+        'pt': {
+            'title': "Como dimensionar uma fonte LED: watts e margem | CHUGAO",
+            'desc': "Some a carga real, aplique a margem de 20%, considere a corrente de partida e a temperatura: exemplos práticos.",
+        },
+        'ru': {
+            'title': "Как рассчитать блок питания LED: ватты и запас | CHUGAO",
+            'desc': "Суммируйте реальную нагрузку, добавьте запас 20%, учтите пусковой ток и температуру: практические примеры расчёта.",
+        },
+        'fr': {
+            'title': "Dimensionner une alimentation LED : watts et marge | CHUGAO",
+            'desc': "Additionnez la charge réelle, appliquez la marge de 20 %, tenez compte de l'appel de courant et de la température : exemples concrets.",
+        },
+        'de': {
+            'title': "LED-Netzteil dimensionieren: Watt, Reserve, Einschaltstrom",
+            'desc': "Summieren Sie die reale Last, addieren Sie 20% Reserve und berücksichtigen Sie Einschaltstrom und Temperatur: Praxisbeispiele.",
+        },
+        'ar': {
+            'title': "كيف تختار قدرة مزود طاقة LED: الواط والهامش | CHUGAO",
+            'desc': "اجمع الحمل الحقيقي، وأضف هامش 20%، واحسب تيار البدء والحرارة: أمثلة عملية من المصنع.",
+        },
+    },
 }

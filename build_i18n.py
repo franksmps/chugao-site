@@ -7,10 +7,19 @@ import html as html_lib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from i18n_subpages import apply_translations
 from blog_meta import BLOG_META
+from page_meta import PAGE_META, apply_heading_overrides
 
 REPO = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(REPO, 'src')
-NODE = r"C:/Users/Admin/.workbuddy/binaries/node/versions/22.22.2/node.exe"
+# Prefer the managed Node runtime, but fall back to whatever `node` is on PATH
+# so the build does not break when the managed version directory is renamed.
+def _find_node():
+    import glob
+    cands = sorted(glob.glob(r"C:/Users/Admin/.workbuddy/binaries/node/versions/*/node.exe"))
+    return cands[-1] if cands else 'node'
+
+
+NODE = _find_node()
 EXTRACT = os.path.join(REPO, 'extract_i18n.cjs')
 MAIN_JS = os.path.join(REPO, 'main.js')
 I18N_JSON = os.path.join(REPO, 'i18n.json')
@@ -55,7 +64,8 @@ CRUMB_HOME = {'en':'Home','zh':'首页','es':'Inicio','fr':'Accueil','de':'Start
 # language switcher links valid (no 404) across the whole site.
 LOCALIZED = {'index', 'about', 'certs', 'faq',
              'products/adapters', 'products/indoor', 'products/ip65', 'products/ip67',
-             'blog', 'blog-1', 'blog-2', 'blog-3', 'blog-4', 'blog-5'}
+             'blog', 'blog-1', 'blog-2', 'blog-3', 'blog-4', 'blog-5',
+             'blog-6', 'blog-7', 'blog-8'}
 
 def flag(letters):
     base = 0x1F1E6
@@ -306,6 +316,7 @@ def build_page(rel_html, T, META):
     for lang in target_langs:
         html = translate(raw, T, lang)
         html = apply_translations(html, lang)
+        html = apply_heading_overrides(html, name, lang)
         html = set_html_lang(html, BCP[lang])
         if name == 'index':
             html = set_title_desc(html, META, lang)
@@ -313,6 +324,9 @@ def build_page(rel_html, T, META):
             # P1-3: localize blog <title>/description for the 6 full SUBTR langs
             # (es/pt/ru/fr/de/ar). en + zh/ja/ko/it keep the English template text.
             html = set_title_desc(html, BLOG_META[name], lang)
+        elif name in PAGE_META and lang in PAGE_META[name]:
+            # Buyer-intent TDK for the 4 product-line pages (en + 6 market langs).
+            html = set_title_desc(html, PAGE_META[name], lang)
         html = set_jsonld_lang(html, BCP[lang])
         html = strip_old_hreflang(html)
         html = inject_hreflang(html, page_url, PUBLIC_LANGS)

@@ -6,8 +6,29 @@
     <atom:link href="https://www.chugaopower.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Technical guides and factory-field notes on LED power supplies, drivers, IP ratings, certifications, and the 2026 LED market — published by CHUGAO, an LED driver manufacturer in Zhongshan, China since 2008.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>How to Size an LED Power Supply: Wattage, Margin & Inrush</title>
+      <link>https://www.chugaopower.com/blog-8/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-8/</guid>
+      <description>How to size an LED power supply: add up the real load, apply the 20% margin rule, allow for inrush current and temperature derating — with worked examples.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>12V vs 24V LED Power Supply: How to Choose</title>
+      <link>https://www.chugaopower.com/blog-7/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-7/</guid>
+      <description>12V or 24V LED power supply? How voltage drop limits your cable run, real maximum lengths by cable size, and the simple rule for choosing.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP67 vs IP65 LED Driver: Which Rating Do You Need?</title>
+      <link>https://www.chugaopower.com/blog-6/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-6/</guid>
+      <description>IP67 vs IP65 LED driver: what each rating really protects against, where each one fails, and how to choose the right waterproof power supply for your installation.</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>BIS Certification for LED Drivers: India Import Guide</title>
       <link>https://www.chugaopower.com/blog-4/</link>

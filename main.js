@@ -1940,19 +1940,22 @@ function tr(key, fallback) {
   return (pack && pack[key]) || (T.en && T.en[key]) || fallback || "";
 }
 
-// Per-language document title + meta description (SEO, P0-3)
+// Per-language document title + meta description for the HOMEPAGE (SEO, P0-3).
+// Tier-1 buyer-intent wording: manufacturer / factory / OEM ODM / 50 pcs MOQ /
+// 48h burn-in / 3-year warranty. Applied to language-root paths only — see
+// setLang(), which must NOT overwrite the per-page TDK of product/blog pages.
 var META = {
-  en:{title:"CHUGAO - LED power supplies factory, Zhongshan China since 2008",desc:"LED switching power supplies made in Zhongshan, China. Adapters 5-200W, indoor drivers 50-400W, IP67 waterproof 10-400W, IP65 rainproof 100-600W. CE/RoHS, 50 pcs MOQ."},
-  zh:{title:"CHUGAO - LED 电源工厂，中国中山，始于 2008 年",desc:"中国中山制造 LED 开关电源。适配器 5-200W，室内驱动 50-400W，IP67 防水 10-400W，IP65 防雨 100-600W。每台均通过 CE/RoHS。最小起订量 50 台。工厂直供。"},
-  es:{title:"CHUGAO - Fábrica de fuentes de alimentación LED, Zhongshan China",desc:"Fuentes de conmutación LED fabricadas en Zhongshan, China. Adaptadores 5-200W, drivers de interior 50-400W, IP67 impermeable 10-400W, IP65 anti-lluvia 100-600W. CE/RoHS en cada unidad."},
-  fr:{title:"CHUGAO - Usine d'alimentations LED, Zhongshan Chine",desc:"Alimentations à découpage LED fabriquées à Zhongshan, Chine. Adaptadores 5-200W, drivers intérieurs 50-400W, IP67 étanche 10-400W, IP65 anti-pluie 100-600W. CE/RoHS sur chaque unité."},
-  de:{title:"CHUGAO - LED-Netzteilwerk, Zhongshan China seit 2008",desc:"LED-Schaltnetzteile aus Zhongshan, China. Adapter 5-200W, Innen-Treiber 50-400W, IP67 wasserdicht 10-400W, IP65 regengeschützt 100-600W. CE/RoHS an jeder Einheit."},
-  pt:{title:"CHUGAO - Fábrica de fontes de alimentação LED, Zhongshan China",desc:"Fontes chaveadas LED fabricadas em Zhongshan, China. Adaptadores 5-200W, drivers internos 50-400W, IP67 à prova d'água 10-400W, IP65 à prova de chuva 100-600W. CE/RoHS em cada unidade."},
-  ru:{title:"CHUGAO - LED-блоки питания, Чжуншань Китай",desc:"Импульсные LED-блоки питания, произведённые в Чжуншане, Китай. Адаптеры 5-200 Вт, внутренние драйверы 50-400 Вт, IP67 водонепроницаемые 10-400 Вт, IP65 дождезащищённые 100-600 Вт. CE/RoHS на каждом блоке."},
-  ja:{title:"CHUGAO - LED電源工場、中国中山 2008年から",desc:"中国中山製のLEDスイッチング電源。アダプター5-200W、屋内ドライバー50-400W、IP67防水10-400W、IP65防雨100-600W。全製品CE/RoHS取得。最小ロット50台。工場直送。"},
-  ko:{title:"CHUGAO - LED 전원 공급 장치 공장, 중국 중산 2008년부터",desc:"중국 중산에서 제조한 LED 스위칭 전원 공급 장치. 어댑터 5-200W, 실내 드라이버 50-400W, IP67 방수 10-400W, IP65 방우 100-600W. 모든 제품 CE/RoHS 인증. 최소 주문 50개. 공장 직송."},
-  ar:{title:"CHUGAO - مصنع مزودات طاقة LED، تشونغشان الصين منذ 2008",desc:"مزودات طاقة تعمل بالتبديل LED صنعت في تشونغشان، الصين. محولات 5-200 واط، محركات داخلية 50-400 واط، IP67 مقاوم للماء 10-400 واط، IP65 مقاوم للمطر 100-600 واط. CE/RoHS على كل وحدة."},
-  it:{title:"CHUGAO - Fabbrica di alimentatori LED, Zhongshan Cina dal 2008",desc:"Alimentatori switching LED prodotti a Zhongshan, Cina. Adattatori 5-200W, driver interni 50-400W, IP67 impermeabile 10-400W, IP65 antipioggia 100-600W. CE/RoHS su ogni unità."}
+  en:{title:"LED Power Supply Manufacturer China | OEM ODM, MOQ 50",desc:"LED power supply manufacturer in China. Adapters 5-200W, indoor 50-400W, IP67 10-400W, IP65 100-600W. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty."},
+  zh:{title:"LED 电源厂家 | 中国中山 CHUGAO，OEM ODM，最小起订 50 台",desc:"中国中山 LED 开关电源厂家，始于 2008 年。适配器 5-200W、室内驱动 50-400W、IP67 防水 10-400W、IP65 防雨 100-600W。OEM ODM，最小起订 50 台，48 小时老化，3 年质保。"},
+  es:{title:"Fábrica de fuentes LED China | Fabricante OEM ODM, MOQ 50",desc:"Fabricante de fuentes LED en China. Adaptadores 5-200W, interior 50-400W, IP67 10-400W, IP65 100-600W. OEM ODM, pedido mínimo 50 uds, garantía 3 años."},
+  fr:{title:"Fabricant d'alimentations LED Chine | OEM ODM, MOQ 50",desc:"Fabricant d'alimentations LED en Chine. Adaptateurs 5-200W, intérieur 50-400W, IP67 10-400W, IP65 100-600W. OEM ODM, MOQ 50 pièces, garantie 3 ans."},
+  de:{title:"LED-Netzteil Hersteller China | OEM ODM, MOQ 50 Stk",desc:"LED-Netzteil Hersteller in China. Adapter 5-200W, Innen 50-400W, IP67 10-400W, IP65 100-600W. OEM ODM, Mindestmenge 50 Stk, 3 Jahre Garantie."},
+  pt:{title:"Fábrica de fontes LED China | Fabricante OEM ODM, MOQ 50",desc:"Fabricante de fontes LED na China. Adaptadores 5-200W, interior 50-400W, IP67 10-400W, IP65 100-600W. OEM ODM, pedido mínimo 50 peças, garantia 3 anos."},
+  ru:{title:"Производитель блоков питания LED Китай | OEM ODM, MOQ 50",desc:"Производитель блоков питания LED в Китае. Адаптеры 5-200 Вт, драйверы 50-400 Вт, IP67 10-400 Вт, IP65 100-600 Вт. OEM ODM, заказ от 50 шт, гарантия 3 года."},
+  ja:{title:"LED 電源メーカー 中国 | CHUGAO、OEM ODM、最小ロット 50 台",desc:"中国中山の LED 電源メーカー、2008 年創業。アダプター 5-200W、屋内 50-400W、IP67 10-400W、IP65 100-600W。OEM ODM、最小ロット 50 台、48 時間エージング、3 年保証。"},
+  ko:{title:"LED 전원 공급 장치 제조업체 중국 | OEM ODM, MOQ 50",desc:"2008년부터 중국 중산의 LED 전원 공급 장치 제조업체. 어댑터 5-200W, 실내 50-400W, IP67 10-400W, IP65 100-600W. OEM ODM, 최소 주문 50개, 48시간 번인, 3년 보증."},
+  ar:{title:"مصنع مزودات طاقة LED في الصين | OEM ODM والحد الأدنى 50",desc:"مصنع مزودات طاقة LED في الصين منذ 2008. محولات 5-200 واط، داخلية 50-400 واط، IP67 10-400 واط، IP65 100-600 واط. OEM ODM، حد أدنى 50 قطعة، ضمان 3 سنوات."},
+  it:{title:"Produttore alimentatori LED Cina | OEM ODM, MOQ 50 pz",desc:"Produttore di alimentatori LED in Cina. Adattatori 5-200W, interni 50-400W, IP67 10-400W, IP65 100-600W. OEM ODM, ordine minimo 50 pz, garanzia 3 anni."}
 };
 
 // Navigate to the localized subdirectory for the chosen language.
@@ -2004,12 +2007,20 @@ function setLang(lang) {
     lang = "en";
   }
   currentLang = lang;
-  // P0-3: sync document title + meta description to the active language
-  var meta = META[lang] || META.en;
-  if (meta) {
-    if (meta.title) document.title = _seoTrimTitle(meta.title, 70);
-    var descEl = document.querySelector('meta[name="description"]');
-    if (descEl && meta.desc) descEl.setAttribute('content', _seoTrimDesc(meta.desc, 160));
+  // P0-3: sync document title + meta description to the active language.
+  // META holds the HOMEPAGE TDK only. Product and blog pages ship their own
+  // server-rendered title/description, so applying META there would silently
+  // replace a page-specific TDK with the homepage one (bad for SERP snippets
+  // and for Google's JS-rendered snapshot). Language-root paths only.
+  var _p = (location.pathname || '/').replace(/\/+$/, '');
+  var _isRoot = (_p === '' || /^\/[a-z]{2}$/.test(_p));
+  if (_isRoot) {
+    var meta = META[lang] || META.en;
+    if (meta) {
+      if (meta.title) document.title = _seoTrimTitle(meta.title, 70);
+      var descEl = document.querySelector('meta[name="description"]');
+      if (descEl && meta.desc) descEl.setAttribute('content', _seoTrimDesc(meta.desc, 160));
+    }
   }
   var t = T[lang];
   var nodes = document.querySelectorAll("[data-i18n]");
