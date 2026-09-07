@@ -127,6 +127,51 @@ def set_title_desc(html, META, lang):
                       f'<meta name="twitter:description" content="{esc_attr(d)}"', html, count=1)
     return html
 
+# ---------- TDK length normalization (SEO safety net) ----------
+def _trim_title(t, limit=70):
+    """Trim an over-long <title> to <=limit chars at a word boundary,
+    preferring to drop a trailing brand/suffix separator first."""
+    t = (t or '').strip()
+    if len(t) <= limit:
+        return t
+    for sep in (' | ', ' — ', ' - '):
+        if sep in t:
+            left = t.rsplit(sep, 1)[0]
+            if len(left) >= 30 and len(left) <= limit:
+                return left
+    cut = t[:limit].rsplit(' ', 1)[0]
+    return cut.rstrip(' -|—,')
+
+def _trim_desc(d, limit=160):
+    d = (d or '').strip()
+    if len(d) <= limit:
+        return d
+    cut = d[:limit].rsplit(' ', 1)[0]
+    return cut.rstrip(' -|—,')
+
+def trim_meta(html):
+    """Enforce title<=70 and description<=160 on every emitted page so Google
+    never truncates our SERP snippets. Applied uniformly across all languages
+    and survives future rebuilds."""
+    m = re.search(r'<title>([^<]*)</title>', html)
+    if m:
+        t = _trim_title(m.group(1))
+        html = re.sub(r'<title>[^<]*</title>', f'<title>{t}</title>', html, count=1)
+        html = re.sub(r'<meta property="og:title" content="[^"]*"',
+                      f'<meta property="og:title" content="{esc_attr(t)}"', html)
+        html = re.sub(r'<meta name="twitter:title" content="[^"]*"',
+                      f'<meta name="twitter:title" content="{esc_attr(t)}"', html)
+    m2 = re.search(r'<meta name="description" content="([^"]*)"', html)
+    if m2:
+        d = _trim_desc(m2.group(1))
+        html = re.sub(r'<meta name="description" content="[^"]*"',
+                      f'<meta name="description" content="{esc_attr(d)}"', html, count=1)
+        html = re.sub(r'<meta property="og:description" content="[^"]*"',
+                      f'<meta property="og:description" content="{esc_attr(d)}"', html)
+        html = re.sub(r'<meta name="twitter:description" content="[^"]*"',
+                      f'<meta name="twitter:description" content="{esc_attr(d)}"', html)
+    return html
+
 def set_jsonld_lang(html, bcp):
     # json.dumps emits '"inLanguage": "en"' (with a space); tolerate both forms.
     return re.sub(r'("inLanguage"\s*:\s*)"en"', rf'\1"{bcp}"', html)
@@ -283,6 +328,7 @@ def build_page(rel_html, T, META):
         h1 = get_h1_text(html)
         if name != 'index' and h1:
             html = inject_jsonld(html, build_breadcrumb(lang, page_url, h1), 'jsonld-breadcrumb')
+        html = trim_meta(html)
         out_rel = out_path(url, lang)
         out_abs = os.path.join(REPO, out_rel)
         os.makedirs(os.path.dirname(out_abs), exist_ok=True)
