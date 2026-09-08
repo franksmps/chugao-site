@@ -130,6 +130,19 @@ faq_qa = [
  ("What is the lead time?", "Stock: 3-7 days. OEM: 25-30 days. Samples: 5 days, charged plus shipping, refunded on a bulk order."),
  ("Which input voltages do your drivers support?", "Adapters accept 100-240V AC universal. Indoor drivers are 190-264V AC; IP67 are 190-340V AC; IP65 are 190-264V AC. Confirm the range for your market."),
  ("How do I choose IP20, IP65, or IP67?", "IP20 for indoor dry locations. IP65 for semi-outdoor with rain and dust. IP67 for full outdoor and wet environments such as fountains and marine lighting."),
+ ("Can I order a sample before a bulk order?", "Yes. Samples ship in about 5 days and are charged at unit price plus shipping. The sample fee is refunded against your first bulk order. Most buyers test one or two units on their own fixtures before committing."),
+ ("Should I choose 12V or 24V?", "24V is the safer default for anything longer than a few metres: at the same power it halves the current, so you lose less voltage over the cable and can run longer strips. 12V is fine for short runs, channel letters, and small fixtures already wired for 12V. Tell us the run length and we will size it for you."),
+ ("Constant voltage or constant current - which do I need?", "Constant voltage (12V/24V/36V/48V) powers LED strips, modules, and signage that have their own resistors or regulators. Constant current (e.g. 350mA-1500mA) powers bare high-power LEDs such as downlights, floodlights, and street lights without on-board regulation. If you are unsure, send a photo of the LED label and we will match it."),
+ ("Can you print my logo on the driver and the packaging?", "Yes, on OEM orders from 500 pcs. We silkscreen or laser-mark the housing, print your label artwork with your part number and barcodes, and pack in your printed cartons. Send the artwork as AI or PDF and we return a layout proof before tooling."),
+ ("Do your drivers support dimming?", "Selected indoor and IP67 models support 0-10V, PWM, and TRIAC (phase-cut) dimming from 100W upward. Dimming is not available on the smallest adapters. Tell us which dimmer or control system you use and we will confirm compatibility before you order."),
+ ("What is your monthly production capacity?", "Around 120,000 units per month across four lines, with roughly 60% of that allocated to stock models. High-wattage IP65 units take more line time, so confirm capacity with sales if you are planning a container-level repeat order."),
+ ("Can you arrange UL for the North American market?", "Yes, per model. UL listing takes 4-6 weeks from application and is charged per file. We usually start it after you confirm the model and quantity, and we send the file reference as soon as it is issued so you can clear customs."),
+ ("Do you accept third-party inspection or a factory audit?", "Yes. Buyers are welcome to send SGS, TUV, Intertek, or their own QA team for pre-shipment inspection, and we host factory audits by appointment. We supply the burn-in records and test reports for the batch being inspected."),
+ ("What is the expected service life of your drivers?", "30,000 hours for adapters and IP65 units, 50,000 hours for indoor and IP67 units, both rated at full load in a 25C ambient. Real life depends mainly on case temperature: every 10C reduction roughly doubles capacitor life, so leave room for ventilation."),
+ ("Do you keep stock in Europe or the United States?", "No. Everything ships from our Zhongshan factory, which is why factory-direct pricing works. Stock models leave within 3-7 days, and sea freight to Northern Europe or the US West Coast typically takes 25-35 days. Air and rail options are available for urgent orders."),
+ ("Which ports do you ship from?", "FOB Shenzhen or FOB Zhongshan, your choice. We pack in export cartons of 20-25 kg, palletise on request, and prepare the commercial invoice, packing list, and certificate of origin with every shipment."),
+ ("What is the warranty claim process?", "Send the model, quantity, and photos or a short video of the failure. After we confirm it, replacements ship with your next order or immediately if the quantity is small. Failures caused by lightning, water ingress beyond the rated IP level, or incorrect wiring are not covered."),
+ ("Can you match a competitor's driver I already use?", "Usually yes. Send the existing model number or its label photo and we will quote an equivalent with the same output voltage, current, and dimensions. Where the enclosure differs we confirm a mechanical drawing before you commit."),
 ]
 faq_items = ''.join(
     f'<div class="faq-item"><h2>{q}</h2><p>{a}</p></div>' for q,a in faq_qa)
@@ -151,23 +164,55 @@ page('faq.html', 'FAQ - CHUGAO LED power supply questions answered',
 certs_body = '''
 <section class="sec sa"><div class="c">
 <h1>Certifications &amp; compliance</h1>
-<p>Every CHUGAO model ships with the documentation your market requires. Certificate PDFs are sent before you place an order, so you can clear customs and meet local electrical rules without surprises.</p>
+<p>Every CHUGAO model ships with the documentation your market requires, and certificate PDFs are sent before you place an order - not after. That way you can clear customs, register the product, and satisfy your own customers' compliance checks without a delay at the port.</p>
+<p>What is standard and what is on request, by market:</p>
+
+<div class="table-wrap">
+<table class="spec-table">
+<thead><tr><th>Market</th><th>What is normally required</th><th>How we handle it</th><th>Timeline</th></tr></thead>
+<tbody>
+<tr><td>European Union</td><td>CE (Low Voltage + EMC directives), RoHS</td><td>Standard on every model, Declaration of Conformity issued</td><td>Already in place</td></tr>
+<tr><td>North America</td><td>UL or ETL listing, FCC</td><td>Applied per model once you confirm model and quantity</td><td>4-6 weeks</td></tr>
+<tr><td>India</td><td>BIS registration (CRS)</td><td>On request for selected models, handled per model</td><td>Runs parallel with production</td></tr>
+<tr><td>United Kingdom</td><td>UKCA</td><td>Available on request using the CE technical file</td><td>1-2 weeks</td></tr>
+<tr><td>Australia / New Zealand</td><td>SAA approval, RCM marking</td><td>On request</td><td>2-4 weeks</td></tr>
+<tr><td>South Korea</td><td>KC</td><td>On request</td><td>4-6 weeks</td></tr>
+<tr><td>Russia / EAEU</td><td>EAC</td><td>On request</td><td>2-3 weeks</td></tr>
+<tr><td>Brazil</td><td>INMETRO</td><td>On request, per model</td><td>6-8 weeks</td></tr>
+<tr><td>Other markets</td><td>CB Scheme test report, local registration</td><td>CB report available; we support your local registration</td><td>Confirmed per case</td></tr>
+</tbody>
+</table>
+</div>
 
 <h2>CE &amp; RoHS (standard on every model)</h2>
-<p>CE marking and RoHS compliance are standard on every unit. Our LED drivers are assessed against the EU directives that apply to lighting power supplies - the Low Voltage Directive and the EMC Directive - and RoHS confirms that restricted substances stay below the allowed limits. The test report and Declaration of Conformity are available on request.</p>
+<p>CE marking and RoHS compliance are standard on every unit, at no extra cost. Our LED drivers are assessed against the EU directives that apply to lighting power supplies - the Low Voltage Directive and the EMC Directive - and RoHS confirms that restricted substances stay below the allowed limits. REACH statements are available for buyers who need them. The test report and the Declaration of Conformity are sent as PDFs with your quote, so your compliance team can file them before the goods ship.</p>
 
-<h2>UL</h2>
-<p>UL certification is handled per model and takes 4-6 weeks from order confirmation. We start the application once you confirm the model and quantity, and we keep you updated on the file status. UL is typically required for the North American market.</p>
+<h2>UL and ETL (North America)</h2>
+<p>UL listing is handled per model, because the file is tied to a specific construction and component list. It takes 4-6 weeks from application, and the fee is charged per file rather than per unit. We usually start the application after you confirm the model and quantity, and we send the file reference as soon as it is issued so you can clear customs and list the product with your distributor. Class 2 output is available on selected adapter models - tell us if your installation requires it.</p>
 
 <h2>BIS (India)</h2>
-<p>BIS certification for the India market is available on request for selected models. Tell us your target models and we confirm lead time and cost. Plan this early, because BIS registration runs in parallel with production rather than after it.</p>
+<p>BIS registration for the India market is available on request for selected models. Tell us the target models and we confirm cost and lead time. Plan this early: registration is best run in parallel with production rather than after it, otherwise the goods sit at the port waiting for a number.</p>
+
+<h2>Other marks, on request</h2>
+<p>Where your market is not in the table above, the usual route is a CB Scheme test report from an accredited lab, which most national schemes accept as the technical basis for local registration. We supply the report, the circuit diagrams, the component list, and labelled samples so your local agent can complete the filing.</p>
+
+<h2>How to plan your certification timeline</h2>
+<ol>
+<li>Tell us the destination market and the model you plan to import.</li>
+<li>We confirm which of your requirements are already covered as standard.</li>
+<li>Anything missing is quoted separately, with cost and weeks attached.</li>
+<li>You receive certificate PDFs before you place the order.</li>
+<li>Original documents ship with the goods.</li>
+</ol>
+<p>The practical rule: build certification into the order timeline from day one. A certificate applied after production is a shipment that waits.</p>
 
 <h2>What we send with each shipment</h2>
 <ul>
 <li>Commercial invoice and packing list</li>
 <li>Certificate of origin</li>
-<li>CE and RoHS test reports / Declaration of Conformity</li>
-<li>UL file reference where applicable</li>
+<li>CE and RoHS test reports plus Declaration of Conformity</li>
+<li>UL file reference or BIS registration where applicable</li>
+<li>Batch burn-in and QC records, on request</li>
 </ul>
 <p>Original documents ship with the goods; PDF copies are emailed before the container leaves the factory.</p>
 
