@@ -1,0 +1,182 @@
+total en keys: 181
+0 'About CHUGAO - LED power supply factory, Zhongshan China'
+1 'FAQ - CHUGAO LED power supply questions answered'
+2 'Certifications - CE, RoHS, UL, BIS for CHUGAO LED drivers'
+3 'LED Adapters (5-200W) - CHUGAO LED power supply'
+4 'Indoor LED Drivers (50-400W) - CHUGAO LED power supply'
+5 'IP67 Waterproof LED Drivers (10-400W) - CHUGAO LED power supply'
+6 'IP65 Rainproof LED Drivers (100-600W) - CHUGAO LED power supply'
+7 'About CHUGAO'
+8 'Zhongshan Chugao Electronic Technology Co., Ltd. makes LED switching power supplies in a 
+9 'm² Factory'
+10 "Guzhen, Zhongshan — China's lighting capital, with the full supply chain next door."
+11 'Floor staff'
+12 'Skilled SMT, wave-soldering, potting and QC operators on four dedicated lines.'
+13 'Countries'
+14 'Distributors, brands and contractors across Europe, North America, the Middle East and SE
+15 'Trading since'
+16 'Over 15 years building LED drivers and AC/DC adapters for global buyers.'
+17 'Product lines'
+18 'Adapters, indoor drivers, IP67 and IP65 — one stop for low-voltage LED power.'
+19 'Burn-in'
+20 'Every unit runs a 48-hour full-load burn-in before it is packed and shipped.'
+21 'What we make'
+22 'Four product lines cover most low-voltage LED jobs: AC/DC adapters (5-200W), indoor LED d
+23 'Every unit passes 48 hours of burn-in before it ships, and carries CE and RoHS as standar
+24 'Manufacturing & quality control'
+25 'Production runs on four dedicated lines fed by SMT assembly and wave soldering, then fini
+26 'Automated assembly'
+27 'Surface-mount and wave soldering with automated optical and in-circuit inspection.'
+28 'In-circuit test'
+29 'Every board is tested for shorts, opens and component values before potting.'
+30 'Full-load burn-in'
+31 'Units run at full load in a hot chamber so early failures show up before shipping.'
+32 'Four protections'
+33 'Over-voltage, over-current, over-temperature and short-circuit protection on every model.
+34 'Engineering & customization'
+35 'Our engineering team supports OEM and ODM changes to output voltage, enclosure size, conn
+36 'Global markets & support'
+37 'We supply distributors, lighting brands, and project contractors in 42 countries, with th
+38 'OEM and ODM'
+39 'We build custom drivers for clients in Germany, Brazil, and Saudi Arabia. The minimum is 
+40 'Why buy factory direct'
+41 'Buying from the manufacturer removes the trader margin and shortens the path from a desig
+42 'Need a quote or certificate plan?'
+43 'Tell us your market and model — we reply within 1 hour in China business hours.'
+44 'Contact sales'
+45 'Exhibitions & trade shows'
+46 'We exhibit at major LED and lighting trade shows every year, meeting distributors and bra
+47 '2018 Zhongshan Guzhen International Lighting Fair'
+48 '2024 Guangzhou International Lighting Exhibition'
+49 '2020 Canton Fair (China Import and Export Fair)'
+50 '2022 Shanghai International Lighting Exhibition'
+51 'Frequently asked questions'
+52 'Plain answers about orders, certification, and product selection.'
+53 'What is the minimum order quantity?'
+54 '50 pieces per model for stock items. 500 pieces for custom OEM. We do not accept 1-piece 
+55 'What certifications do you have?'
+56 'CE and RoHS on every model. UL is per model and costs extra. We send certificate PDFs bef
+57 'What is the warranty?'
+58 '3 years on stock items. OEM warranty is defined in the contract. Warranty does not cover 
+59 'Do you do OEM?'
+60 'Yes. Minimum 500 pcs. Send us your spec sheet. Tooling is charged on the first order and 
+61 'What are the payment terms?'
+62 'New customers: 30% T/T deposit, 70% before shipment. After 3 orders we can discuss L/C. W
+63 'What is the lead time?'
+64 'Stock: 3-7 days. OEM: 25-30 days. Samples: 5 days, charged plus shipping, refunded on a b
+65 'Which input voltages do your drivers support?'
+66 'Adapters accept 100-240V AC universal. Indoor drivers are 190-264V AC; IP67 are 190-340V 
+67 'How do I choose IP20, IP65, or IP67?'
+68 'IP20 for indoor dry locations. IP65 for semi-outdoor with rain and dust. IP67 for full ou
+69 'Still have a question?'
+70 'Contact our sales team'
+71 'Certifications & compliance'
+72 'Every CHUGAO model ships with the documentation your market requires. Certificate PDFs ar
+73 'CE & RoHS (standard on every model)'
+74 'CE marking and RoHS compliance are standard on every unit. Our LED drivers are assessed a
+75 'UL'
+76 'UL certification is handled per model and takes 4-6 weeks from order confirmation. We sta
+77 'BIS (India)'
+78 'BIS certification for the India market is available on request for selected models. Tell 
+79 'What we send with each shipment'
+80 'Commercial invoice and packing list'
+81 'Certificate of origin'
+82 'CE and RoHS test reports / Declaration of Conformity'
+83 'UL file reference where applicable'
+84 'Original documents ship with the goods; PDF copies are emailed before the container leave
+85 'Need a specific certificate?'
+86 'Standards and proof requirements differ by country. Tell us the destination market and th
+87 'for lead times and minimum order quantities, or'
+88 'contact sales'
+89 'for a quote.'
+90 'Overview'
+91 'Power range:'
+92 'Protection:'
+93 'Input:'
+94 'Output:'
+95 'Specifications'
+96 'Parameter'
+97 'Detail'
+98 'Ingress protection'
+99 'Input voltage'
+100 'Output voltage'
+101 'Key features'
+102 'Wide input'
+103 'one SKU covers most international sites.'
+104 'Dual output'
+105 'options fit the common LED strips and modules.'
+106 'Over-voltage, over-current, over-temperature and short-circuit.'
+107 'Certified'
+108 'CE and RoHS standard; UL / BIS available per model.'
+109 'Related reading'
+110 'Other CHUGAO product lines'
+111 'View specifications →'
+112 'Get a quote for'
+113 'View all products'
+114 'LED Adapters (5-200W)'
+115 'AC/DC adapters for LED strips and modules, 5W-200W, 100-240V input.'
+116 'Compact AC/DC adapters for LED strips, modules, and signage. CE/UL available, 3-year warr
+117 'Where adapters are used'
+118 'Request full specification sheet (PDF)'
+119 'Can I use one adapter for both 12V and 24V strips?'
+120 'No. Choose the output voltage that matches your LED. We make 12V, 24V, 36V and 48V models
+121 'Do you fit a plug for my country?'
+122 'The adapter accepts 100-240V worldwide. We fit the local plug or AC cord for your market 
+123 'Do these drivers support dimming?'
+124 'Selected models support 0-10V or PWM dimming. Tell us your control system and we will spe
+125 'Can they be mounted above a ceiling?'
+126 'Yes. The IP20 drivers are made for dry indoor use such as above ceilings and inside fixtu
+127 'Can an IP67 driver be submerged?'
+128 'IP67 resists brief immersion; IP68 models handle continuous submersion. For fountains and
+129 'How do I wire a waterproof driver outdoors?'
+130 'Use waterproof connectors and keep joints inside a sealed junction box. We supply IP67 ca
+131 'What is the difference between IP65 and IP67?'
+132 'IP65 blocks rain and dust but not water jets; IP67 is fully sealed against brief immersio
+133 'Can the metal case be used outside?'
+134 'Yes. The corrosion-resistant metal case suits semi-outdoor signage and billboards. For fu
+135 'AC/DC adapters power 12V and 24V LED strips, LED modules, edge-lit signs, and small fixtu
+136 'How to size an adapter'
+137 'Add up the wattage of every LED you will run, then add a 20% margin so the adapter runs b
+138 'What is built in'
+139 'Each adapter has over-voltage, over-current, over-temperature, and short-circuit protecti
+140 'Indoor LED Drivers (50-400W)'
+141 'Built-in PFC indoor LED drivers, 50W-400W, for ceiling and panel lights.'
+142 'Indoor LED drivers for ceiling lights and panel lights. High efficiency with active power
+143 'Where indoor drivers are used'
+144 'Indoor drivers feed ceiling lights, panel lights, troffers, and linear fixtures inside bu
+145 'How to size an indoor driver'
+146 'Match the driver wattage to the total LED load plus a 20% margin, and confirm the output 
+147 'Active PFC, fan-less silent operation, and protection against over-voltage, over-current,
+148 'IP67 Waterproof LED Drivers (10-400W)'
+149 'Fully potted IP67/IP68 waterproof LED drivers, 10W-400W, for outdoor and wet use.'
+150 'Waterproof drivers for outdoor LED strips, fountains, and marine lighting. Built to survi
+151 'Where IP67 drivers are used'
+152 'IP67 and IP68 drivers go where water is. Use them for outdoor LED strips, garden and land
+153 'How to size a waterproof driver'
+154 'Total the LED load, add a 20% margin, and pick a model rated above that sum. For hot envi
+155 'Sealed potting, salt-spray resistance, and over-voltage, over-current, over-temperature, 
+156 'IP65 Rainproof LED Drivers (100-600W)'
+157 'Metal-case IP65 rainproof LED drivers, 100W-600W, for signage and semi-outdoor.'
+158 'Rainproof drivers for signage, billboards, and semi-outdoor installations. Metal housing 
+159 'Where IP65 drivers are used'
+160 'IP65 rainproof drivers suit signage, billboards, channel letters, and semi-outdoor instal
+161 'How to size a rainproof driver'
+162 'Add the wattage of all connected signs, add a 20% margin, and choose a model above that t
+163 'Corrosion-resistant metal case, ventilation for high-power runs, and over-voltage, over-c
+164 '<a href="/products/adapters/">Adapters</a>'
+165 '<a href="/products/indoor/">Indoor drivers</a>'
+166 '<a href="/products/ip67/">IP67 waterproof</a>'
+167 '<a href="/products/ip65/">IP65 rainproof</a>'
+168 '<a href="/about/">About</a>'
+169 '<a href="/certs/">Certifications</a>'
+170 '<a href="/faq/">FAQ</a>'
+171 '<a href="/#contact">Contact</a>'
+172 '<a href="mailto:info@chugaopower.com">Email</a>'
+173 '<a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer">WhatsApp<
+174 'All Rights Reserved.</p>'
+175 'Wall-mount and desktop, AC 100-240V universal input, DC 12/24/36/48V output'
+176 'Built-in active PFC, fan-less silent operation'
+177 'Fully sealed silicone potting, salt-spray tested'
+178 'Metal case with mesh vents, corrosion resistant'
+179 ' - we reply within 1 hour during China business hours.'
+180 '— we reply within 1 hour in China business hours.'

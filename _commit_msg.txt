@@ -1,0 +1,31 @@
+SEO: buyer-intent TDK, localized H tags, 3 long-form guides
+
+A. Tier-1 buyer keywords into TDK
+- Homepage META (main.js, 11 langs): manufacturer / factory / OEM ODM /
+  50 pcs MOQ / 48h burn-in / 3-year wording, all within 70/160.
+- New page_meta.PAGE_META: per-language title+description for the 4 product
+  lines (en + es/pt/ru/fr/de/ar). gen_pages.py gained title/meta_desc params
+  so the English source and the hidden languages stay in sync.
+- Fix: deployed main.min.js overwrote document.title and the meta description
+  on EVERY page with the homepage TDK. META is now applied on language-root
+  paths only; the P0-3 trim helpers were also missing from main.min.js and
+  are now present there too.
+
+B. Local factory-intent words in headings
+- page_meta.PAGE_H1 localizes each product <h1> (fabricante / fabricante /
+  Hersteller / производитель / مصنع + OEM ODM + MOQ 50) for the 6 market
+  languages; SITE_HEADINGS does the same for "OEM and ODM", "Why buy factory
+  direct" and the MOQ heading. Applied before breadcrumb schema so the
+  structured-data name matches the visible heading.
+
+C. Three long-form English guides (Tier-2/3 long tail)
+- blog-6 IP67 vs IP65, blog-7 12V vs 24V, blog-8 how to size a driver
+  (~1,000-1,200 words each, tables, checklists, internal links, CTA).
+- Wired into the i18n pipeline: src templates, LOCALIZED fan-out (11 langs),
+  BLOG_META titles/descriptions for the 6 market languages, listing page
+  cards + ItemList schema, prev/next nav chain, RSS feed (8 items).
+
+Build: gen_pages -> build_i18n -> avif_wrap -> feed.xml
+Verify: 194 pages, 0 titles >70, 0 descriptions >160, hreflang + x-default
+complete on every page, sitemap 119 URLs, _verify.py 3370 checks / 1 known
+pre-existing CSS assertion (style.css untouched this round).

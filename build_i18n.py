@@ -224,14 +224,19 @@ def get_og_image(html):
 def inject_og_url(html, page_url, lang):
     full = DOMAIN + (page_url if lang == 'en' else '/' + lang + page_url)
     tag = f'  <meta property="og:url" content="{full}" />'
-    if re.search(r'<meta property="og:url" content="[^"]*"', html):
-        return re.sub(r'<meta property="og:url" content="[^"]*"', tag.strip(), html, count=1)
+    # NOTE: the match must swallow the closing '>' -- the replacement tag ends
+    # with '/>'. Matching only up to the quote used to leak the original '>'
+    # as a bare text node, which forced the browser to close <head> early and
+    # render the trailing og:image metas (plus the stray '>') at the top of
+    # <body> on every page.
+    if re.search(r'<meta property="og:url" content="[^"]*"\s*/?>', html):
+        return re.sub(r'<meta property="og:url" content="[^"]*"\s*/?>', tag.strip(), html, count=1)
     return re.sub(r'(</title>)', r'\1\n' + tag, html, count=1)
 
 def inject_twitter_image(html, og_image):
     tag = f'  <meta name="twitter:image" content="{og_image}" />'
-    if re.search(r'<meta name="twitter:image" content="[^"]*"', html):
-        html = re.sub(r'<meta name="twitter:image" content="[^"]*"', tag.strip(), html, count=1)
+    if re.search(r'<meta name="twitter:image" content="[^"]*"\s*/?>', html):
+        html = re.sub(r'<meta name="twitter:image" content="[^"]*"\s*/?>', tag.strip(), html, count=1)
     else:
         html = re.sub(r'(</title>)', r'\1\n' + tag, html, count=1)
     if 'name="twitter:card"' not in html:
