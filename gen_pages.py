@@ -631,4 +631,244 @@ product_page('products/ip65.html', 'IP65 Rainproof LED Drivers (100-600W)',
     title="IP65 Rainproof LED Driver Manufacturer, 100-600W",
     meta_desc="China IP65 rainproof LED driver manufacturer for signage and billboards: 100-600W, 12V/24V. OEM ODM, 50 pcs MOQ, 48h burn-in, 3-year warranty, CE RoHS.")
 
+
+# ---------------------------------------------------------------------------
+# Individual SKU spec pages (first 16 hero models). Each gets a shareable URL
+# /products/<slug>/ and a Product JSON-LD. Generated here (not hand-written
+# HTML) so they survive future rebuilds. Body is English (same convention as
+# the four product-line pages); build_i18n fans the shell out to all 11 langs.
+# ---------------------------------------------------------------------------
+def sku_page(spec):
+    slug, model = spec['slug'], spec['model']
+    line_url, line_name = spec['line_url'], spec['line_name']
+    img = spec['img']
+    other = ''.join(
+        f'<a class="bc" href="/{p}/"><div class="bi">'
+        f'<img src="{i}" alt="{n}" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>'
+        f'<div class="bn"><h3>{n}</h3><p>View specifications &rarr;</p></div></a>'
+        for (p, n, i) in PRODUCTS if p != 'products/' + spec['line'])
+    other_block = (f'<h2>Other CHUGAO product lines</h2>'
+                   f'<div class="bg" style="margin-top:24px">{other}</div>')
+    body = f'''<section class="sec sa"><div class="c">
+<nav class="bc-nav"><a href="/">Home</a> &rsaquo; <a href="{line_url}">{line_name}</a> &rsaquo; <span>{model}</span></nav>
+<h1>{model} &mdash; {line_name}</h1>
+<p class="ss" style="margin:0 auto 44px">{spec['blurb']}</p>
+<div class="ag" style="margin-bottom:56px">
+<div class="at">
+<h2>Overview</h2>
+<p>{spec['desc']}</p>
+<div class="quote-card" style="padding:20px 24px;margin-top:18px">
+<ul style="list-style:none;padding-left:0;margin:0">
+<li><strong>Power:</strong> {spec['watt']}</li>
+<li><strong>Output:</strong> {spec['volt']}</li>
+<li><strong>Ingress protection:</strong> {spec['ip']}</li>
+<li><strong>Input:</strong> {spec['inp']}</li>
+<li><strong>Certification:</strong> CE / RoHS; UL on request</li>
+</ul>
+</div>
+</div>
+<div class="aimg"><img src="{img}" alt="{model} {line_name}" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+</div>
+<h2>Specifications</h2>
+<table class="spec-table">
+<tr><th>Parameter</th><th>Detail</th></tr>
+<tr><td>Model</td><td>{model}</td></tr>
+<tr><td>Power</td><td>{spec['watt']}</td></tr>
+<tr><td>Output voltage</td><td>{spec['volt']}</td></tr>
+<tr><td>Ingress protection</td><td>{spec['ip']}</td></tr>
+<tr><td>Input voltage</td><td>{spec['inp']}</td></tr>
+<tr><td>Efficiency</td><td>{spec['eff']}</td></tr>
+<tr><td>Protection</td><td>{spec['prot']}</td></tr>
+<tr><td>Operating temperature</td><td>{spec['temp']}</td></tr>
+<tr><td>Lifespan</td><td>{spec['life']}</td></tr>
+<tr><td>Warranty</td><td>{spec['warranty']}</td></tr>
+</table>
+<h2>Typical applications</h2>
+<p>{spec['application']}</p>
+<h2>Certification</h2>
+<p>CE and RoHS are standard on every CHUGAO unit. UL is available per model (4-6 weeks from order confirmation). BIS (India) is available on request for selected models. Certificate PDFs are sent before you place the order.</p>
+{other_block}
+<p style="margin-top:36px"><a href="/#inquiry?product={spec['inq']}" class="btn-p">Get a quote for {model}</a> &nbsp; <a href="{line_url}" style="color:var(--a);font-weight:600">View all {line_name}</a></p>
+</div></section>'''
+    product_data = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "inLanguage": "en",
+        "name": model + " " + line_name,
+        "image": [DOMAIN + img],
+        "description": spec['desc'],
+        "brand": {"@type": "Brand", "name": "CHUGAO Power"},
+        "category": "LED power supply",
+        "additionalProperty": [
+            {"@type": "PropertyValue", "name": "Power", "value": spec['watt']},
+            {"@type": "PropertyValue", "name": "Output voltage", "value": spec['volt']},
+            {"@type": "PropertyValue", "name": "Ingress protection", "value": spec['ip']},
+            {"@type": "PropertyValue", "name": "Input voltage", "value": spec['inp']},
+        ],
+        "offers": {
+            "@type": "Offer",
+            "url": DOMAIN + "/products/" + slug + "/",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD",
+            "seller": {"@type": "Organization", "name": "Zhongshan Chugao Electronic Technology Co., Ltd."}
+        }
+    }
+    product_json = '<script type="application/ld+json">' + json.dumps(product_data, ensure_ascii=False) + '</script>'
+    return page('products/' + slug + '.html', spec['title'], spec['meta_desc'], body, product_json,
+                og_image=img.replace('.webp', '.jpg'))
+
+
+SKU_SPECS = [
+  # --- Adapters (AC/DC) ---
+  dict(slug='cgm-12w', model='CGM-12W', line='adapters', line_name='LED Adapters (5-200W)',
+       line_url='/products/adapters/', img='/images/product-adapter.webp', inq='adapter',
+       watt='12W', volt='DC 12V', ip='IP20', inp='AC 100-240V', eff='≥83%',
+       prot='OVP / OCP / OTP / SCP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='12W AC/DC LED adapter, 12V output for LED strips and modules.',
+       desc='The CGM-12W is a compact 12W AC/DC adapter for 12V LED strips, LED modules and small fixtures. The universal 100-240V input means one SKU ships worldwide; we fit the local plug for your market at no extra charge. CE/RoHS standard, 3-year warranty.',
+       application='12V LED strip lighting, edge-lit signs, LED modules and small indoor fixtures that plug into a wall outlet.',
+       title='CGM-12W 12V LED Adapter Manufacturer | CHUGAO OEM ODM',
+       meta_desc='China CGM-12W 12V 12W LED adapter manufacturer. 100-240V input, CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  dict(slug='cgm-24w', model='CGM-24W', line='adapters', line_name='LED Adapters (5-200W)',
+       line_url='/products/adapters/', img='/images/product-adapter.webp', inq='adapter',
+       watt='24W', volt='DC 12V / 24V', ip='IP20', inp='AC 100-240V', eff='≥83%',
+       prot='OVP / OCP / OTP / SCP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='24W AC/DC LED adapter, selectable 12V / 24V output.',
+       desc='The CGM-24W AC/DC adapter delivers 24W with a switchable 12V or 24V output to match your LED load. Universal 100-240V input, local plug fitted per market, CE/RoHS standard and a 3-year warranty.',
+       application='12V or 24V LED strips, sign modules, and cabinet or shelf lighting in shops and exhibitions.',
+       title='CGM-24W 12V/24V LED Adapter Manufacturer | CHUGAO OEM ODM',
+       meta_desc='China CGM-24W 24W LED adapter, 12V/24V output. 100-240V input, CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  dict(slug='cgm-36w', model='CGM-36W', line='adapters', line_name='LED Adapters (5-200W)',
+       line_url='/products/adapters/', img='/images/product-adapter.webp', inq='adapter',
+       watt='36W', volt='DC 12V / 24V / 36V', ip='IP20', inp='AC 100-240V', eff='≥83%',
+       prot='OVP / OCP / OTP / SCP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='36W AC/DC LED adapter, 12V / 24V / 36V output options.',
+       desc='The CGM-36W adapts 100-240V mains to 12V, 24V or 36V DC for higher-power LED strips and modules. Four protections built in, local plug fitted per market, CE/RoHS standard, 3-year warranty.',
+       application='Longer 12/24/36V LED strip runs, light boxes, and medium signage that needs a stable DC supply.',
+       title='CGM-36W 12V/24V/36V LED Adapter Manufacturer | CHUGAO OEM ODM',
+       meta_desc='China CGM-36W 36W LED adapter, 12V/24V/36V output. 100-240V input, CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  dict(slug='cgm-60w', model='CGM-60W', line='adapters', line_name='LED Adapters (5-200W)',
+       line_url='/products/adapters/', img='/images/product-adapter.webp', inq='adapter',
+       watt='60W', volt='DC 12V / 24V', ip='IP20', inp='AC 100-240V', eff='≥83%',
+       prot='OVP / OCP / OTP / SCP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='60W AC/DC LED adapter, 12V / 24V output for longer strip runs.',
+       desc='The CGM-60W is a 60W AC/DC adapter for 12V or 24V LED strips and modules. Universal 100-240V input, local plug fitted per market, CE/RoHS standard and a 3-year warranty.',
+       application='Long 12V/24V LED strip installations, edge-lit signs and larger cabinet lighting.',
+       title='CGM-60W 12V/24V LED Adapter Manufacturer | CHUGAO OEM ODM',
+       meta_desc='China CGM-60W 60W LED adapter, 12V/24V output. 100-240V input, CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  # --- Indoor drivers ---
+  dict(slug='c-100w', model='C-100W', line='indoor', line_name='Indoor LED Drivers (50-400W)',
+       line_url='/products/indoor/', img='/images/product-indoor.webp', inq='indoor',
+       watt='100W', volt='DC 12V / 24V', ip='IP20', inp='AC 190-264V', eff='≥88%',
+       prot='OVP / OCP / SCP / OTP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='100W indoor LED driver, 12V / 24V, built-in active PFC.',
+       desc='The C-100W is a 100W indoor LED driver with built-in active PFC and fan-less silent operation. Choose 12V or 24V DC output to match your fixtures. CE/RoHS standard, 3-year warranty.',
+       application='Ceiling lights, panel lights, troffers and linear fixtures inside buildings.',
+       title='C-100W Indoor LED Driver 12V/24V Manufacturer | CHUGAO OEM ODM',
+       meta_desc='China C-100W 100W indoor LED driver, 12V/24V, active PFC. CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  dict(slug='c-200w', model='C-200W', line='indoor', line_name='Indoor LED Drivers (50-400W)',
+       line_url='/products/indoor/', img='/images/product-indoor.webp', inq='indoor',
+       watt='200W', volt='DC 12V / 24V', ip='IP20', inp='AC 190-264V', eff='≥88%',
+       prot='OVP / OCP / SCP / OTP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='200W indoor LED driver, 12V / 24V, built-in active PFC.',
+       desc='The C-200W delivers 200W for 12V or 24V indoor LED fixtures with active PFC and fan-less operation. Four protections built in, CE/RoHS standard, 3-year warranty.',
+       application='High-output ceiling and panel lights, and long linear fixtures in commercial interiors.',
+       title='C-200W Indoor LED Driver 12V/24V Manufacturer | CHUGAO OEM ODM',
+       meta_desc='China C-200W 200W indoor LED driver, 12V/24V, active PFC. CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  dict(slug='cgc-100w', model='CGC-100W', line='indoor', line_name='Indoor LED Drivers (50-400W)',
+       line_url='/products/indoor/', img='/images/product-indoor.webp', inq='indoor',
+       watt='100W', volt='DC 12V / 24V', ip='IP20', inp='AC 190-264V', eff='≥88%',
+       prot='OVP / OCP / SCP / OTP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='CGC-100W indoor LED driver, 12V / 24V, narrow metal case.',
+       desc='The CGC-100W is a 100W indoor driver in a narrow metal case for 12V or 24V fixtures. Active PFC, fan-less, four protections, CE/RoHS standard, 3-year warranty.',
+       application='Slim ceiling lights, panel lights and linear fixtures where a narrow housing fits the luminaire.',
+       title='CGC-100W Indoor LED Driver 12V/24V Manufacturer | CHUGAO OEM ODM',
+       meta_desc='China CGC-100W 100W indoor LED driver, 12V/24V, narrow case. CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  dict(slug='cgc-200w', model='CGC-200W', line='indoor', line_name='Indoor LED Drivers (50-400W)',
+       line_url='/products/indoor/', img='/images/product-indoor.webp', inq='indoor',
+       watt='200W', volt='DC 12V / 24V', ip='IP20', inp='AC 190-264V', eff='≥88%',
+       prot='OVP / OCP / SCP / OTP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='CGC-200W indoor LED driver, 12V / 24V, narrow metal case.',
+       desc='The CGC-200W is a 200W indoor driver in a narrow metal case for 12V or 24V fixtures. Active PFC, fan-less, four protections, CE/RoHS standard, 3-year warranty.',
+       application='High-output panel and linear fixtures in commercial interiors needing a slim driver.',
+       title='CGC-200W Indoor LED Driver 12V/24V Manufacturer | CHUGAO OEM ODM',
+       meta_desc='China CGC-200W 200W indoor LED driver, 12V/24V, narrow case. CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  dict(slug='cgc-400w', model='CGC-400W', line='indoor', line_name='Indoor LED Drivers (50-400W)',
+       line_url='/products/indoor/', img='/images/product-indoor.webp', inq='indoor',
+       watt='400W', volt='DC 12V / 24V', ip='IP20', inp='AC 190-264V', eff='≥88%',
+       prot='OVP / OCP / SCP / OTP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='CGC-400W indoor LED driver, 12V / 24V, narrow metal case.',
+       desc='The CGC-400W is the 400W top of the narrow-case indoor range for 12V or 24V fixtures. Active PFC, fan-less, four protections, CE/RoHS standard, 3-year warranty.',
+       application='Large commercial panel and linear lighting where a slim high-power driver is required.',
+       title='CGC-400W Indoor LED Driver 12V/24V Manufacturer | CHUGAO OEM ODM',
+       meta_desc='China CGC-400W 400W indoor LED driver, 12V/24V, narrow case. CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  dict(slug='cgb-200w', model='CGB-200W', line='indoor', line_name='Indoor LED Drivers (50-400W)',
+       line_url='/products/indoor/', img='/images/product-indoor.webp', inq='indoor',
+       watt='200W', volt='DC 12V / 24V', ip='IP20', inp='AC 190-264V', eff='≥88%',
+       prot='OVP / OCP / SCP / OTP', temp='-20 ~ +50°C', life='50,000h', warranty='3 Years',
+       blurb='CGB-200W indoor LED driver, 12V / 24V, dimming ready.',
+       desc='The CGB-200W is a 200W indoor driver for 12V or 24V fixtures with dimming support (0-10V / PWM on selected models). Active PFC, fan-less, four protections, CE/RoHS standard, 3-year warranty.',
+       application='Dimmable ceiling and panel lights and commercial interiors with a lighting-control system.',
+       title='CGB-200W Dimmable Indoor LED Driver 12V/24V | CHUGAO OEM ODM',
+       meta_desc='China CGB-200W 200W dimmable indoor LED driver, 12V/24V, 0-10V/PWM. CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  # --- IP67 waterproof ---
+  dict(slug='cgf-24w', model='CGF-24W', line='ip67', line_name='IP67 Waterproof LED Drivers (10-400W)',
+       line_url='/products/ip67/', img='/images/product-waterproof.webp', inq='waterproof',
+       watt='24W', volt='DC 12V / 24V', ip='IP67 / IP68', inp='AC 90-305V', eff='≥87%',
+       prot='OVP / OCP / SCP / OTP', temp='-30 ~ +60°C', life='50,000h', warranty='3 Years',
+       blurb='24W IP67 waterproof LED driver, 12V / 24V, fully potted.',
+       desc='The CGF-24W is a 24W fully potted IP67/IP68 waterproof driver for 12V or 24V outdoor LEDs. Silicone potting blocks water and salt spray; 90-305V input covers most sites. CE/RoHS standard, 3-year warranty.',
+       application='Outdoor LED strips, garden and landscape lighting, fountains and wet indoor areas.',
+       title='CGF-24W IP67 Waterproof LED Driver 12V/24V | CHUGAO OEM ODM',
+       meta_desc='China CGF-24W 24W IP67 waterproof LED driver, 12V/24V. Fully potted, salt-spray tested, CE/RoHS, 3-year warranty.'),
+  dict(slug='cgf-100w', model='CGF-100W', line='ip67', line_name='IP67 Waterproof LED Drivers (10-400W)',
+       line_url='/products/ip67/', img='/images/product-waterproof.webp', inq='waterproof',
+       watt='100W', volt='DC 12V / 24V', ip='IP67 / IP68', inp='AC 90-305V', eff='≥87%',
+       prot='OVP / OCP / SCP / OTP', temp='-30 ~ +60°C', life='50,000h', warranty='3 Years',
+       blurb='100W IP67 waterproof LED driver, 12V / 24V, fully potted.',
+       desc='The CGF-100W is a 100W fully potted IP67/IP68 waterproof driver for 12V or 24V outdoor LEDs. Silicone potting blocks water and salt spray; 90-305V input covers most sites. CE/RoHS standard, 3-year warranty.',
+       application='Outdoor LED strips, landscape lighting, fountains, pools and marine installations.',
+       title='CGF-100W IP67 Waterproof LED Driver 12V/24V | CHUGAO OEM ODM',
+       meta_desc='China CGF-100W 100W IP67 waterproof LED driver, 12V/24V. Fully potted, salt-spray tested, CE/RoHS, 3-year warranty.'),
+  dict(slug='cgf-200w', model='CGF-200W', line='ip67', line_name='IP67 Waterproof LED Drivers (10-400W)',
+       line_url='/products/ip67/', img='/images/product-waterproof.webp', inq='waterproof',
+       watt='200W', volt='DC 12V / 24V', ip='IP67 / IP68', inp='AC 90-305V', eff='≥87%',
+       prot='OVP / OCP / SCP / OTP', temp='-30 ~ +60°C', life='50,000h', warranty='3 Years',
+       blurb='200W IP67 waterproof LED driver, 12V / 24V, fully potted.',
+       desc='The CGF-200W is a 200W fully potted IP67/IP68 waterproof driver for 12V or 24V outdoor LEDs. Silicone potting blocks water and salt spray; 90-305V input covers most sites. CE/RoHS standard, 3-year warranty.',
+       application='Larger outdoor LED strip runs, facade lighting and wet commercial installs.',
+       title='CGF-200W IP67 Waterproof LED Driver 12V/24V | CHUGAO OEM ODM',
+       meta_desc='China CGF-200W 200W IP67 waterproof LED driver, 12V/24V. Fully potted, salt-spray tested, CE/RoHS, 3-year warranty.'),
+  dict(slug='cgf-400w', model='CGF-400W', line='ip67', line_name='IP67 Waterproof LED Drivers (10-400W)',
+       line_url='/products/ip67/', img='/images/product-waterproof.webp', inq='waterproof',
+       watt='400W', volt='DC 12V / 24V', ip='IP67 / IP68', inp='AC 90-305V', eff='≥87%',
+       prot='OVP / OCP / SCP / OTP', temp='-30 ~ +60°C', life='50,000h', warranty='3 Years',
+       blurb='400W IP67 waterproof LED driver, 12V / 24V, fully potted.',
+       desc='The CGF-400W is the 400W top of the waterproof range for 12V or 24V outdoor LEDs. Fully potted IP67/IP68, salt-spray tested, 90-305V input, CE/RoHS standard, 3-year warranty.',
+       application='High-power outdoor LED strips, large facade lighting and marine or coastal installs.',
+       title='CGF-400W IP67 Waterproof LED Driver 12V/24V | CHUGAO OEM ODM',
+       meta_desc='China CGF-400W 400W IP67 waterproof LED driver, 12V/24V. Fully potted, salt-spray tested, CE/RoHS, 3-year warranty.'),
+  # --- IP65 rainproof ---
+  dict(slug='fyg-400w', model='FYG-400W', line='ip65', line_name='IP65 Rainproof LED Drivers (100-600W)',
+       line_url='/products/ip65/', img='/images/product-rainproof.webp', inq='rainproof',
+       watt='400W', volt='DC 12V / 24V', ip='IP65', inp='AC 190-264V', eff='≥88%',
+       prot='OVP / OCP / SCP', temp='-20 ~ +50°C', life='30,000h', warranty='3 Years',
+       blurb='FYG-400W IP65 rainproof LED driver, 12V / 24V, metal case.',
+       desc='The FYG-400W is a 400W IP65 rainproof driver in a corrosion-resistant metal case for 12V or 24V signage. Mesh vents shed heat while keeping weather out. CE/RoHS standard, 3-year warranty.',
+       application='Signage, billboards, channel letters and semi-outdoor installs exposed to rain and dust.',
+       title='FYG-400W IP65 Rainproof LED Driver 12V/24V | CHUGAO OEM ODM',
+       meta_desc='China FYG-400W 400W IP65 rainproof LED driver, 12V/24V, metal case. CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+  dict(slug='fyg-600w', model='FYG-600W', line='ip65', line_name='IP65 Rainproof LED Drivers (100-600W)',
+       line_url='/products/ip65/', img='/images/product-rainproof.webp', inq='rainproof',
+       watt='600W', volt='DC 12V / 24V', ip='IP65', inp='AC 190-264V', eff='≥88%',
+       prot='OVP / OCP / SCP', temp='-20 ~ +50°C', life='30,000h', warranty='3 Years',
+       blurb='FYG-600W IP65 rainproof LED driver, 12V / 24V, metal case.',
+       desc='The FYG-600W is the 600W top of the rainproof range for 12V or 24V signage. Corrosion-resistant metal case with mesh vents, CE/RoHS standard, 3-year warranty.',
+       application='Large billboards, channel-letter signs and semi-outdoor installations needing high wattage.',
+       title='FYG-600W IP65 Rainproof LED Driver 12V/24V | CHUGAO OEM ODM',
+       meta_desc='China FYG-600W 600W IP65 rainproof LED driver, 12V/24V, metal case. CE/RoHS, 3-year warranty, 50 pcs MOQ, OEM ODM.'),
+]
+for _s in SKU_SPECS:
+    sku_page(_s)
+
 print("All pages generated.")

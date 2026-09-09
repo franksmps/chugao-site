@@ -66,6 +66,13 @@ CRUMB_HOME = {'en':'Home','zh':'首页','es':'Inicio','fr':'Accueil','de':'Start
 # language switcher links valid (no 404) across the whole site.
 LOCALIZED = {'index', 'about', 'certs', 'faq',
              'products/adapters', 'products/indoor', 'products/ip65', 'products/ip67',
+             # Individual SKU spec pages (first 16 hero models) -- fan out so the
+             # language switcher stays valid and long-tail model queries index.
+             'products/cgm-12w', 'products/cgm-24w', 'products/cgm-36w', 'products/cgm-60w',
+             'products/c-100w', 'products/c-200w', 'products/cgc-100w', 'products/cgc-200w',
+             'products/cgc-400w', 'products/cgb-200w',
+             'products/cgf-24w', 'products/cgf-100w', 'products/cgf-200w', 'products/cgf-400w',
+             'products/fyg-400w', 'products/fyg-600w',
              'blog', 'blog-1', 'blog-2', 'blog-3', 'blog-4', 'blog-5',
              'blog-6', 'blog-7', 'blog-8'}
 

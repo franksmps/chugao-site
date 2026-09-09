@@ -87,7 +87,7 @@ header{position:fixed;top:0;left:0;right:0;height:68px;background:rgba(255,255,2
 .pt2{font-size:11px;background:#f1f5f9;color:var(--ts);padding:3px 8px;border-radius:4px;font-weight:500}
 /* Product model list — compact chip row */
 .pml{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
-.pm{font-size:11px;font-family:"SF Mono",Menlo,Consolas,monospace;background:#eff6ff;color:#1e40af;padding:2px 7px;border-radius:3px;border:1px solid #bfdbfe;font-weight:600;letter-spacing:-.2px}
+.pm{font-size:11px;font-family:"SF Mono",Menlo,Consolas,monospace;background:#eff6ff;color:#1e40af;padding:2px 7px;border-radius:3px;border:1px solid #bfdbfe;font-weight:600;letter-spacing:-.2px;text-decoration:none}
 .pcta{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:600;color:var(--a);margin-top:10px;transition:gap 0.2s}
 .pcta:hover{gap:8px}
 .spec-sec{background:var(--w)}
@@ -255,11 +255,12 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--a);outline-offset:3
 
 /* --- Flag bar (42 countries trust) --- */
 .flag-bar{background:#fff;border-bottom:1px solid var(--b);padding:14px 0;overflow:hidden}
-.flag-bar .c{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:nowrap}
+.flag-bar .c{display:flex;align-items:flex-end;justify-content:center;gap:14px;flex-wrap:wrap;row-gap:8px}
 .fb-label{font-size:13px;font-weight:600;color:var(--p);white-space:nowrap;margin-right:8px}
-.fb-f{font-size:28px;line-height:1;display:inline-block;opacity:.9;transition:transform .2s,opacity .2s}
-.fb-f:hover{opacity:1;transform:scale(1.2)}
-.flag-bar img.emoji{width:32px;height:32px;margin:0 2px;vertical-align:middle}
+.fb-f{font-size:26px;line-height:1;display:inline-flex;flex-direction:column;align-items:center;gap:3px;opacity:.9;transition:transform .2s,opacity .2s;text-decoration:none}
+.fb-f .fb-n{font-size:9px;line-height:1.1;color:var(--p);font-weight:600;white-space:nowrap;font-family:inherit}
+.fb-f:hover{opacity:1;transform:scale(1.06)}
+.flag-bar img.emoji{width:26px;height:26px;margin:0;vertical-align:middle}
 
 /* --- Cookie consent banner (GDPR, P1-6) --- */
 .cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9998;background:rgba(15,23,42,.96);
