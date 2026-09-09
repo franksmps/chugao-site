@@ -24,6 +24,7 @@ pending native review, but their titles/descriptions are localized like the
 others (the inner-page body is translated in SUBTR for every language).
 """
 import re
+from sku_meta import SKU_META
 
 # (page key as build_i18n sees it, i.e. rel_html without the .html suffix)
 PAGE_META = {
@@ -352,3 +353,6 @@ PAGE_META.update({
         'it': {'desc': "Gli alimentatori LED CHUGAO hanno CE e RoHS su tutti i modelli, UL per modello e BIS per l'India su richiesta. PDF dei certificati prima dell'ordine."},
     },
 })
+
+# 27 SKU spec pages, 11 languages — auto-generated in sku_meta.py by _gen_sku_meta.py.
+PAGE_META.update(SKU_META)

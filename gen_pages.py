@@ -649,6 +649,13 @@ def sku_page(spec):
         for (p, n, i) in PRODUCTS if p != 'products/' + spec['line'])
     other_block = (f'<h2>Other CHUGAO product lines</h2>'
                    f'<div class="bg" style="margin-top:24px">{other}</div>')
+    # Same-line sibling models — internal linking within a product family.
+    sib = [s for s in SKU_SPECS if s['line'] == spec['line'] and s['slug'] != slug]
+    sib_items = ''.join(
+        f'<li><a href="/products/{s["slug"]}/">{s["model"]}</a> &mdash; {s["watt"]} {s["volt"]}</li>'
+        for s in sib)
+    sib_block = (f'<h2>More models in this series</h2>'
+                 f'<ul class="sib-list">{sib_items}</ul>') if sib_items else ''
     body = f'''<section class="sec sa"><div class="c">
 <nav class="bc-nav"><a href="/">Home</a> &rsaquo; <a href="{line_url}">{line_name}</a> &rsaquo; <span>{model}</span></nav>
 <h1>{model} &mdash; {line_name}</h1>
@@ -687,7 +694,7 @@ def sku_page(spec):
 <p>{spec['application']}</p>
 <h2>Certification</h2>
 <p>CE and RoHS are standard on every CHUGAO unit. UL is available per model (4-6 weeks from order confirmation). BIS (India) is available on request for selected models. Certificate PDFs are sent before you place the order.</p>
-{other_block}
+{sib_block}{other_block}
 <p style="margin-top:36px"><a href="/#inquiry?product={spec['inq']}" class="btn-p">Get a quote for {model}</a> &nbsp; <a href="{line_url}" style="color:var(--a);font-weight:600">View all {line_name}</a></p>
 </div></section>'''
     product_data = {
@@ -714,7 +721,24 @@ def sku_page(spec):
         }
     }
     product_json = '<script type="application/ld+json">' + json.dumps(product_data, ensure_ascii=False) + '</script>'
-    return page('products/' + slug + '.html', spec['title'], spec['meta_desc'], body, product_json,
+    faq_data = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "inLanguage": "en",
+        "mainEntity": [
+            {"@type": "Question",
+             "name": f"What ingress protection does the {model} have?",
+             "acceptedAnswer": {"@type": "Answer", "text": f"The {model} is rated {spec['ip']}."}},
+            {"@type": "Question",
+             "name": f"What is the minimum order quantity for the {model}?",
+             "acceptedAnswer": {"@type": "Answer", "text": "The minimum order quantity is 50 pieces. Lower quantities are possible for sampling and prototype runs."}},
+            {"@type": "Question",
+             "name": f"What certifications does the {model} carry?",
+             "acceptedAnswer": {"@type": "Answer", "text": "CE and RoHS are standard on every unit. UL is available per model; BIS (India) on request."}},
+        ]
+    }
+    faq_json = '<script type="application/ld+json" id="jsonld-faq">' + json.dumps(faq_data, ensure_ascii=False) + '</script>'
+    return page('products/' + slug + '.html', spec['title'], spec['meta_desc'], body, product_json + faq_json,
                 og_image=img.replace('.webp', '.jpg'))
 
 
