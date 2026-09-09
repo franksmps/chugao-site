@@ -73,6 +73,11 @@ LOCALIZED = {'index', 'about', 'certs', 'faq',
              'products/cgc-400w', 'products/cgb-200w',
              'products/cgf-24w', 'products/cgf-100w', 'products/cgf-200w', 'products/cgf-400w',
              'products/fyg-400w', 'products/fyg-600w',
+             # Remaining homepage-listed models (round 2) -- link every product-card
+             # model name on the homepage to its own spec page.
+             'products/cgm-6w', 'products/cgm-48w', 'products/cgm-72w',
+             'products/c-60w', 'products/cgc-48w', 'products/cgb-100w', 'products/cgb-400w',
+             'products/cgf-36w', 'products/cgf-60w', 'products/cgf-150w', 'products/cgf-300w',
              'blog', 'blog-1', 'blog-2', 'blog-3', 'blog-4', 'blog-5',
              'blog-6', 'blog-7', 'blog-8'}
 
