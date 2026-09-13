@@ -6,8 +6,50 @@
     <atom:link href="https://www.chugaopower.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Technical guides and factory-field notes on LED power supplies, drivers, IP ratings, certifications, and the 2026 LED market — published by CHUGAO, an LED driver manufacturer in Zhongshan, China since 2008.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>Cable Size & Voltage Drop for LED Installations</title>
+      <link>https://www.chugaopower.com/blog-14/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-14/</guid>
+      <description>Cable size and voltage drop for LED installations: the 5% rule, max run tables for 12V vs 24V, and three ways to stop dim LEDs at the far end.</description>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Choosing an LED Power Supply for Outdoor & Harsh Sites</title>
+      <link>https://www.chugaopower.com/blog-13/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-13/</guid>
+      <description>Choosing an LED power supply for outdoor and harsh sites: the environment ladder from IP20 to IP67, heat derating, dimming and surge in one decision flow.</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Surge Protection for LED Drivers: Lightning & Transients</title>
+      <link>https://www.chugaopower.com/blog-12/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-12/</guid>
+      <description>Surge protection for LED drivers: where surges come from, the two protective layers, and how to spec a driver that survives lightning and switching transients.</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Power Factor Correction & Flicker-Free LED Drivers</title>
+      <link>https://www.chugaopower.com/blog-11/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-11/</guid>
+      <description>Power factor correction and flicker-free LED drivers: what PF and ripple mean, where flicker-free is non-negotiable, and how to read the datasheet.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED Driver Dimming Explained: 0-10V, PWM, DALI & TRIAC</title>
+      <link>https://www.chugaopower.com/blog-10/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-10/</guid>
+      <description>LED driver dimming explained: 0-10V, PWM, DALI and TRIAC. What each standard does, which to specify, and why driver and dimmer must match.</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Constant Voltage vs Constant Current LED Driver: Which Do You Need?</title>
+      <link>https://www.chugaopower.com/blog-9/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-9/</guid>
+      <description>Constant voltage vs constant current LED driver: what each one powers, why mixing them destroys fixtures, and how to read the label before you buy.</description>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>How to Size an LED Power Supply: Wattage, Margin & Inrush</title>
       <link>https://www.chugaopower.com/blog-8/</link>

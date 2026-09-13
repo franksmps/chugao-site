@@ -54,5 +54,47 @@
   "desc": "How to size an LED power supply: add up the real load, apply the 20% margin rule, allow for inrush current and temperature derating — with worked examples.",
   "date": "2026-08-12",
   "img": "product-indoor.jpg"
+ },
+ "blog-9": {
+  "og": "Constant Voltage vs Constant Current LED Driver: Which Do You Need?",
+  "h1": "Constant Voltage vs Constant Current LED Driver: Which Do You Need?",
+  "desc": "Constant voltage vs constant current LED driver: what each one powers, why mixing them destroys fixtures, and how to read the label before you buy.",
+  "date": "2026-09-01",
+  "img": "product-indoor.jpg"
+ },
+ "blog-10": {
+  "og": "LED Driver Dimming Explained: 0-10V, PWM, DALI & TRIAC",
+  "h1": "LED Driver Dimming Explained: 0-10V, PWM, DALI & TRIAC",
+  "desc": "LED driver dimming explained: 0-10V, PWM, DALI and TRIAC. What each standard does, which to specify, and why driver and dimmer must match.",
+  "date": "2026-09-10",
+  "img": "product-indoor.jpg"
+ },
+ "blog-11": {
+  "og": "Power Factor Correction & Flicker-Free LED Drivers",
+  "h1": "Power Factor Correction & Flicker-Free LED Drivers",
+  "desc": "Power factor correction and flicker-free LED drivers: what PF and ripple mean, where flicker-free is non-negotiable, and how to read the datasheet.",
+  "date": "2026-09-20",
+  "img": "product-indoor.jpg"
+ },
+ "blog-12": {
+  "og": "Surge Protection for LED Drivers: Lightning & Transients",
+  "h1": "Surge Protection for LED Drivers: Lightning & Transients",
+  "desc": "Surge protection for LED drivers: where surges come from, the two protective layers, and how to spec a driver that survives lightning and switching transients.",
+  "date": "2026-09-30",
+  "img": "product-waterproof.jpg"
+ },
+ "blog-13": {
+  "og": "Choosing an LED Power Supply for Outdoor & Harsh Sites",
+  "h1": "Choosing an LED Power Supply for Outdoor & Harsh Sites",
+  "desc": "Choosing an LED power supply for outdoor and harsh sites: the environment ladder from IP20 to IP67, heat derating, dimming and surge in one decision flow.",
+  "date": "2026-10-10",
+  "img": "product-waterproof.jpg"
+ },
+ "blog-14": {
+  "og": "Cable Size & Voltage Drop for LED Installations",
+  "h1": "Cable Size & Voltage Drop for LED Installations",
+  "desc": "Cable size and voltage drop for LED installations: the 5% rule, max run tables for 12V vs 24V, and three ways to stop dim LEDs at the far end.",
+  "date": "2026-10-20",
+  "img": "product-adapter.jpg"
  }
 }
