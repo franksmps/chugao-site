@@ -38,7 +38,7 @@ def page(path, title, desc, body, json_ld=None, og_image='/images/factory.jpg'):
 </main>
 {json_ld or ''}
 {FOOTER}
-<script src="/main.min.js?v=3" defer></script>
+<script src="/main.min.js?v=4" defer></script>
 <script src="/analytics.js?v=1" defer></script>
 </body></html>'''
     out = os.path.join(SRC, path)

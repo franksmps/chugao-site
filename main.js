@@ -2135,6 +2135,19 @@ document.addEventListener("click", function(e) {
   }
 });
 
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape" || e.key === "Esc") {
+    var mm = document.getElementById("mobileMenu");
+    if (mm && mm.classList.contains("open")) closeMobileMenu();
+    var dd = document.getElementById("lang-dropdown");
+    var lb = document.querySelector(".lang-btn");
+    if (dd && dd.classList.contains("open")) {
+      dd.classList.remove("open");
+      if (lb) { lb.classList.remove("open"); lb.setAttribute("aria-expanded", "false"); }
+    }
+  }
+});
+
 document.addEventListener("click", function(e) {
   var faqQ = e.target.closest(".faq-q");
   if (faqQ) { toggleFaq(faqQ); }
@@ -2163,12 +2176,15 @@ function toggleMobileMenu() {
   var isOpen = m.classList.toggle("open");
   t.classList.toggle("open");
   t.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  document.body.style.overflow = isOpen ? "hidden" : "";
+  if (isOpen) { var f = m.querySelector("a"); if (f) f.focus(); }
 }
 function closeMobileMenu() {
   var m = document.getElementById("mobileMenu");
   var t = document.getElementById("mobileToggle");
   if (m) m.classList.remove("open");
-  if (t) t.classList.remove("open");
+  if (t) { t.classList.remove("open"); t.setAttribute("aria-expanded", "false"); }
+  document.body.style.overflow = "";
 }
 
 window.addEventListener("scroll", function() {
