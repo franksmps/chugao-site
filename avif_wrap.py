@@ -14,7 +14,7 @@ def avif_of(url):
     if ext.lower() not in ('.webp', '.jpg', '.jpeg', '.png'):
         return None
     av = base + '.avif'
-    if os.path.exists(av.lstrip('/')):
+    if os.path.exists(os.path.join(REPO, av.lstrip('/'))):
         return av
     return None
 
