@@ -1,0 +1,373 @@
+BLOG_BODY['pt'] = {}
+
+BLOG_BODY['pt']['blog-6'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar para Field Notes</a>
+
+<h1>IP67 vs IP65 Fonte de Alimentação LED: Qual Classificação Você Precisa?</h1>
+<div class="meta">Guia Técnico &middot; Junho de 2026 &middot; 9 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Fonte LED impermeável IP67 ao lado de uma fonte anti-chuva IP65" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>"Impermeável" não é uma especificação única — é um resultado de teste. Uma fonte IP65 e uma fonte IP67 parecem quase idênticas numa ficha técnica, mas sobrevivem a trabalhos muito diferentes, e escolher a errada é a causa mais comum de falhas precoces em instalações externas que vemos em campo.</p>
+
+<p>Este guia detalha contra o que cada classificação realmente protege, onde cada uma deixa de funcionar e como decidir — sem pagar por proteção que você não precisa.</p>
+
+<h2>O que os dois dígitos significam</h2>
+
+<p>Todo código IP tem dois dígitos. O primeiro refere-se a sólidos (poeira), o segundo a líquidos (água). Em fontes LED o primeiro dígito é quase sempre 6, ou seja, à prova de poeira. Portanto, a diferença real está no segundo dígito.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Código</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Teste que deve passar</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">O que sobrevive</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP65</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Jato de água de 6,3 mm de qualquer direção, por 3 minutos</td><td style="padding:10px 14px;border:1px solid var(--b)">Chuva, respingos, lavagem com mangueira à distância, poeira</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP67</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Imersão em 1 m de água por 30 minutos</td><td style="padding:10px 14px;border:1px solid var(--b)">Inundação temporária, água parada, lavagem, névoa de sal</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP68</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Imersão contínua, profundidade acordada com o fabricante</td><td style="padding:10px 14px;border:1px solid var(--b)">Fontes, piscinas, poços no solo</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Importante:</strong> IP67 não substitui IP65. Uma fonte pode passar na imersão (IP67) e ainda ser classificada apenas como "5" contra jatos, se o fabricante a tiver testado assim. É por isso que a linha impermeável da CHUGAO é marcada <strong>IP67 / IP68</strong> e também testada contra jatos — pergunte ao seu fornecedor quais testes foram realmente feitos, não apenas qual número está impresso.
+</div>
+
+<h2>Onde o IP65 é a escolha certa</h2>
+
+<p>O IP65 é a escolha de melhor custo-benefício sempre que a fonte fica exposta às intempéries, mas nunca fica submersa:</p>
+
+<ul>
+<li><strong>Letreiros e caixas de luz</strong> — a fonte fica dentro de uma caixa de sinalização selada.</li>
+<li><strong>Placas publicitárias e caixas de luz</strong> — a chuva escorre pela carcaça, nada se acumula.</li>
+<li><strong>Passarelas cobertas, coberturas, tetos semi-externos</strong> — úmidos e empoeirados, mas secos.</li>
+<li><strong>Alta potência, 100-600W</strong> — a carcaça metálica ventilada dissipa o calor muito melhor do que uma unidade selada e encapsulada, e é exatamente por isso que esta linha chega a 600W.</li>
+</ul>
+
+<p>Se a sua instalação se enquadra em alguma das anteriores, nossas <a href="/products/ip65/">fontes anti-chuva IP65</a> custam menos e operam mais frias do que um equivalente encapsulado. Pagar por IP67 aqui não traz nenhum benefício além de uma fonte mais quente.</p>
+
+<h2>Onde você precisa subir para IP67</h2>
+
+<p>Escolha uma <a href="/products/ip67/">fonte impermeável IP67 totalmente encapsulada</a> quando a água puder se acumular ao redor do invólucro ou o próprio ar for agressivo:</p>
+
+<ul>
+<li><strong>Instalações no nível do solo ou no solo</strong> — luminárias de jardim, iluminação de caminhos, blocos que alagam após chuvas fortes.</li>
+<li><strong>Fontes, piscinas, elementos de água</strong> — respingos e imersão temporária são rotineiros, não acidentes.</li>
+<li><strong>Ambientes costeiros e marítimos</strong> — a névoa de sal corrói a carcaça metálica ventilada de dentro para fora; encapsulamento em silicone mais um teste de névoa de sal é a única solução durável.</li>
+<li><strong>Áreas de lavagem</strong> — processamento de alimentos, lava-rápidos, túneis lavados regularmente com mangueira.</li>
+<li><strong>Chuvas tropicais torrenciais</strong> — chuva sob pressão comporta-se como um jato, não como um aguaceiro.</li>
+</ul>
+
+<h2>O compromisso que ninguém coloca na ficha técnica</h2>
+
+<p>A vedação mantém a água do lado de fora, mas também retém o calor. Uma unidade IP67 totalmente encapsulada dissipa calor apenas pela carcaça, então opera mais quente do que um invólucro IP65 ventilado sob a mesma carga. Consequências práticas:</p>
+
+<ol>
+<li><strong>Deixe mais folga.</strong> Dimensione uma fonte IP67 para 70-80% da carga nominal, em vez de 80-90%, quando a unidade fica num espaço quente e selado.</li>
+<li><strong>Monte-a no ar, não enterrada.</strong> Uma fonte encapsulada jogada num poço selado sem circulação de ar vai superaquecer independentemente do seu código IP.</li>
+<li><strong>Espere um teto menor.</strong> É por isso que a linha IP67 da CHUGAO para em 400W, enquanto a linha IP65 ventilada chega a 600W — física, não marketing.</li>
+</ol>
+
+<h2>Pelo que você realmente paga</h2>
+
+<p>Num comparativo de 200W, o encapsulamento acrescenta custo de material e processo: composto de silicone, encapsulamento a vácuo, maior tempo de cura e teste de vazamento de 100%. Na prática, é um prêmio modesto por unidade — e é muito mais barato do que despachar uma equipe para trocar fontes com falha numa instalação à beira-d'água. A verdadeira questão de custo não é a fonte, é a visita técnica.</p>
+
+<h2>Quatro perguntas que resolvem a questão</h2>
+
+<ol>
+<li><strong>A água pode se acumular onde a fonte fica?</strong> Sim &rarr; IP67. Não &rarr; IP65 é suficiente.</li>
+<li><strong>É em ambiente costeiro, ou será lavada com mangueira?</strong> Sim &rarr; IP67 com teste de névoa de sal.</li>
+<li><strong>Você precisa de mais de 400W?</strong> Sim &rarr; a linha IP65 ventilada, montada sob cobertura.</li>
+<li><strong>A fonte está dentro de um equipamento selado ou caixa de sinalização?</strong> Sim &rarr; IP65 é suficiente, e operará mais fria.</li>
+</ol>
+
+<p>Ainda em dúvida? Envie-nos uma foto do local de instalação e da carga. Diremos com honestidade qual linha comprar — inclusive quando o IP65 mais barato é a resposta certa. Cada unidade que enviamos, em qualquer linha, é certificada CE e RoHS, passa por um burn-in de 48 horas em carga total antes do envio e tem garantia de 3 anos, com pedido mínimo de 50 un. e opções OEM/ODM.</p>
+
+<div class="cta-box">
+<h3>Ainda não tem certeza de qual classificação seu local precisa?</h3>
+<p>Envie uma foto do local de instalação e sua carga em watts. Diremos qual linha comprar — inclusive quando o IP65 mais barato é a resposta certa.</p>
+<a href="/#inquiry" class="btn">Obter uma recomendação de classificação</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Conheça os produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Unidades compactas 12V/24V para tiras, módulos e sinalização.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">Tensão constante com PFC ativo para luminárias de teto e painel.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Totalmente encapsuladas, testadas contra névoa de sal para locais úmidos e costeiros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Carcaça metálica ventilada para sinalização e instalações semi-externas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guia Técnico</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Escolha a Fonte de Alimentação LED Certa em 3 Passos</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">Análise Técnica Profunda</span><span class="rel-title">Vida Útil da Fonte LED: MTBF, L70 e Quanto Realmente Dura</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">Guia do Comprador</span><span class="rel-title">12V vs 24V Fonte de Alimentação LED: Como Escolher</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-5/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">IP67 vs IP65 Fonte de Alimentação LED: Qual Classificação Você Precisa?</span></a><a class="pn-next" href="/blog-7/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">12V vs 24V Fonte de Alimentação LED: Como Escolher</span></a></nav>
+</main>"""
+
+BLOG_BODY['pt']['blog-7'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar para Field Notes</a>
+
+<h1>12V vs 24V Fonte de Alimentação LED: Como Escolher</h1>
+<div class="meta">Guia do Comprador &middot; Julho de 2026 &middot; 8 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="Fontes de alimentação LED 12V e 24V lado a lado" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Tanto 12V quanto 24V alimentam tiras LED. A diferença aparece como calor no cabo — e ela decide até onde você pode estender antes que a ponta da tira fique fraca. Aqui está a matemática e a regra simples que dela decorre.</p>
+
+<h2>O que a tensão realmente muda</h2>
+
+<p>Para a mesma potência, um sistema 24V consome metade da corrente de um sistema 12V:</p>
+
+<div class="highlight">
+<strong>Potência = Tensão &times; Corrente.</strong> Uma carga de 96W puxa <strong>8 A</strong> a 12V, mas apenas <strong>4 A</strong> a 24V. A queda de tensão ao longo de um cabo é proporcional à corrente; assim, reduzir a corrente pela metade reduz as perdas a cerca de um quarto — e permite estender o cabo em cerca de duas vezes a distância para a mesma perda de brilho.
+</div>
+
+<h2>Até onde você pode estender?</h2>
+
+<p>Regra prática para tira LED de tensão constante: mantenha a queda de tensão abaixo de <strong>5%</strong> (0,6V em 12V, 1,2V em 24V). Limites realistas de extensão única, alimentados por uma ponta:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Carga</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Cabo</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Extensão máx. @ 12V</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Extensão máx. @ 24V</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">24 W (2 A / 1 A)</td><td style="padding:10px 14px;border:1px solid var(--b)">1.5 mm&sup2; (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">48 W (4 A / 2 A)</td><td style="padding:10px 14px;border:1px solid var(--b)">2.5 mm&sup2; (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">96 W (8 A / 4 A)</td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm&sup2; (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">192 W (16 A / 8 A)</td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm&sup2; (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+</tbody>
+</table>
+
+<p>Precisa estender mais que isso? Alimente a tira pelas duas pontas ou divida-a em circuitos paralelos a partir da mesma fonte. Ambos os truques funcionam em 12V, mas 24V simplesmente elimina o problema na maioria dos ambientes.</p>
+
+<h2>Quando 12V ainda é a resposta certa</h2>
+
+<ul>
+<li><strong>Extensões curtas abaixo de 5 m</strong> — tiras sob armários, vitrines, iluminação de prateleiras, pequenos letreiros.</li>
+<li><strong>Instalações em RV, marítimas e solares</strong> — todo o sistema já roda em baterias de 12V.</li>
+<li><strong>Substituições</strong> — as tiras e controles existentes são 12V; mudar a tensão significa refazer toda a fiação.</li>
+<li><strong>Cargas muito pequenas</strong> — um adaptador de 15W para uma única vitrine é mais simples e barato em 12V.</li>
+</ul>
+
+<p>Nossos <a href="/products/adapters/">adaptadores LED, 5-200W</a> atendem a esses trabalhos em 12V, 24V, 36V e 48V a partir de uma única entrada universal 100-240V, então um único SKU é enviado para qualquer mercado.</p>
+
+<h2>Quando 24V vence</h2>
+
+<ul>
+<li><strong>Extensões acima de 5 m</strong>, ou qualquer extensão que não possa ser re-alimentada pelas duas pontas.</li>
+<li><strong>Tetos comerciais e linhas contínuas</strong> — uma fonte 24V alimenta uma linha contínua que precisaria de três alimentações 12V.</li>
+<li><strong>Qualquer coisa acima de ~100W</strong> — a corrente em 12V fica grande o suficiente para que o custo do cabo e o aquecimento dos conectores passem a importar.</li>
+<li><strong>Trabalhos arquitetônicos</strong> onde o decaimento de brilho visível na ponta final é inaceitável.</li>
+</ul>
+
+<h2>Dois erros que vemos constantemente</h2>
+
+<ol>
+<li><strong>Misturar tensões numa mesma fonte.</strong> Uma tira 12V numa fonte 24V queima instantaneamente. Verifique o rótulo da tira antes de energizar qualquer coisa.</li>
+<li><strong>Dimensionar o cabo para a fonte, não para a extensão.</strong> A classificação da fonte não é o problema — a distância é. Use a tabela acima e, em seguida, use um tamanho maior se o cabo estiver enterrado ou agrupado com a rede elétrica.</li>
+</ol>
+
+<h2>Tensão constante vs corrente constante</h2>
+
+<p>Tanto as tiras 12V quanto 24V são de <em>tensão constante</em>: a fonte mantém a tensão, e as resistências da tira definem a corrente. Luminárias de alta potência (downlights, refletores) costumam ser de <em>corrente constante</em> — especificadas em mA, não em volts. Se a sua luminária indica 350 mA ou 700 mA, você precisa de uma fonte de corrente constante, e a questão 12V/24V não se aplica. Informe a especificação da luminária e nós a compatibilizamos.</p>
+
+<h2>Decisão rápida</h2>
+
+<p><strong>Extensões abaixo de 5 m, sistemas de bateria ou substituição equivalente &rarr; 12V.</strong><br>
+<strong>Extensões acima de 5 m, tetos comerciais ou cargas acima de 100W &rarr; 24V.</strong></p>
+
+<p>Toda fonte CHUGAO é certificada CE e RoHS, passa por um burn-in de 48 horas em carga total e é enviada com garantia de 3 anos. O pedido mínimo é de 50 un., e fabricamos versões 12V/24V/36V/48V conforme sua especificação em regime OEM/ODM.</p>
+
+<div class="cta-box">
+<h3>Precisa da tensão certa para o comprimento do seu circuito?</h3>
+<p>Informe a carga, o comprimento do cabo e o tipo de tira. Confirmaremos 12V ou 24V e o modelo que mantém cada metro com brilho total.</p>
+<a href="/#inquiry" class="btn">Obter uma recomendação de tensão</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Conheça os produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Unidades compactas 12V/24V para tiras, módulos e sinalização.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">Tensão constante com PFC ativo para luminárias de teto e painel.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Totalmente encapsuladas, testadas contra névoa de sal para locais úmidos e costeiros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Carcaça metálica ventilada para sinalização e instalações semi-externas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Escolha a Fonte de Alimentação LED Certa em 3 Passos</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">Guia Técnico</span><span class="rel-title">IP67 vs IP65 Fonte de Alimentação LED: Qual Classificação Você Precisa?</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">Guia Técnico</span><span class="rel-title">Como Dimensionar uma Fonte de Alimentação LED: Potência, Margem e Corrente de Pico</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">Guia Técnico</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-6/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">IP67 vs IP65 Fonte de Alimentação LED: Qual Classificação Você Precisa?</span></a><a class="pn-next" href="/blog-8/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Como Dimensionar uma Fonte de Alimentação LED: Potência, Margem e Corrente de Pico</span></a></nav>
+</main>"""
+
+BLOG_BODY['pt']['blog-8'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar para Field Notes</a>
+
+<h1>Como Dimensionar uma Fonte de Alimentação LED: Potência, Margem e Corrente de Pico</h1>
+<div class="meta">Guia Técnico &middot; Agosto de 2026 &middot; 7 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Fonte LED interna sendo dimensionada para uma carga de iluminação comercial" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Subdimensione uma fonte LED e ela esquenta, perde brilho cedo e morre em um ano. Superdimensione demais e você paga por capacidade que nunca usa. Entre essas duas opções há um cálculo de 20 minutos que a maioria dos compradores pula.</p>
+
+<h2>Passo 1: some a carga real</h2>
+
+<p>Some a potência de cada luminária que a fonte alimentará. Use a potência de entrada da luminária, não a sua classificação "equivalente" — um downlight "equivalente a 50W" pode consumir 9W.</p>
+
+<ul>
+<li><strong>Tira LED:</strong> watts por metro &times; metros (verifique o rótulo da tira: 4,8W/m, 9,6W/m, 14,4W/m são comuns).</li>
+<li><strong>Painéis e luminárias embutidas:</strong> a placa de classificação do equipamento.</li>
+<li><strong>Módulos de sinalização:</strong> módulos &times; watts por módulo.</li>
+</ul>
+
+<p>Exemplo: 12 metros de tira de 14,4W/m = <strong>173W</strong>.</p>
+
+<h2>Passo 2: adicione a margem de 20%</h2>
+
+<p>Multiplique por 1,2. Esses 20% não são folga desnecessária — cobrem três fatores que encurtam a vida da fonte:</p>
+
+<ol>
+<li><strong>Calor.</strong> Uma fonte a 100% de carga num teto de 40&deg;C opera bem mais quente do que a mesma unidade a 80% de carga. Cada 10&deg;C acima da classificação reduz pela metade a vida do capacitor, aproximadamente.</li>
+<li><strong>Variação da rede.</strong> Quedas e picos de entrada são absorvidos com mais folga.</li>
+<li><strong>Adições futuras.</strong> A tira que alguém acrescentar no ano que vem.</li>
+</ol>
+
+<p>173W &times; 1,2 = <strong>208W</strong> &rarr; escolha um modelo de 240W ou 250W, a próxima classificação padrão acima do seu número.</p>
+
+<div class="highlight">
+<strong>Regra prática:</strong> opere a fonte a <strong>80% de sua classificação ou menos</strong>. Subir de 60W para 100W custa alguns dólares. Enviar um técnico para substituir uma fonte com falha custa cem vezes mais.
+</div>
+
+<h2>Passo 3: verifique a corrente de pico antes de dimensionar o disjuntor</h2>
+
+<p>As fontes chaveadas consomem uma sobrecarga grande, porém muito breve, ao serem energizadas — tipicamente 30-60 A por alguns milissegundos, às vezes mais em unidades de alta potência. Se você colocar dez fontes num único interruptor ou contator, essa sobrecarga se acumula e pode disparar o disjuntor ou soldar o relé no primeiro dia.</p>
+
+<ul>
+<li><strong>Muitas fontes pequenas?</strong> Escalone-as com um relé de atraso, ou use um contator com classificação para a corrente de pico somada.</li>
+<li><strong>Uma fonte grande?</strong> Use um disjuntor tipo C ou tipo D em vez do tipo B.</li>
+<li><strong>Peça o valor de corrente de pico</strong> — ele está na ficha técnica, e um fornecedor que não consegue fornecê-lo está chutando.</li>
+</ul>
+
+<h2>Passo 4: faça o derating pela temperatura</h2>
+
+<p>A maioria das fontes é classificada para potência total a 40&deg;C de ambiente ou menos. Acima disso, faça o derating — tipicamente 2-3% da potência por &deg;C, mas verifique a curva do seu modelo. Casos práticos:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Instalação</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Ambiente típico</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">O que fazer</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Teto interno aberto</td><td style="padding:10px 14px;border:1px solid var(--b)">25-35&deg;C</td><td style="padding:10px 14px;border:1px solid var(--b)">A margem padrão de 20% é suficiente</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Vão de teto selado</td><td style="padding:10px 14px;border:1px solid var(--b)">45-55&deg;C</td><td style="padding:10px 14px;border:1px solid var(--b)">Acrescente margem de 30-40%, ou leve a fonte para o ar livre</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Externo sob sol direto</td><td style="padding:10px 14px;border:1px solid var(--b)">50-65&deg;C</td><td style="padding:10px 14px;border:1px solid var(--b)">Proteja a unidade da sombra, ou suba um tamanho e use um modelo <a href="/products/ip67/">IP67</a> encapsulado</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Dentro de uma caixa de sinalização selada</td><td style="padding:10px 14px;border:1px solid var(--b)">45-60&deg;C</td><td style="padding:10px 14px;border:1px solid var(--b)">Ventile a caixa, ou use um invólucro <a href="/products/ip65/">IP65</a> ventilado</td></tr>
+</tbody>
+</table>
+
+<h2>Exemplo prático: letreiro de fachada, 8 módulos</h2>
+
+<p>Módulos de letreiro: 8 &times; 1,5W = 12W. Acentos de tira: 4 m &times; 9,6W/m = 38W. Total = 50W. Margem &times;1,2 = 60W. Instalado numa caixa selada que atinge 50&deg;C no verão &rarr; acrescente mais 30% &rarr; 78W. Escolha uma unidade de 100W. Ela operará com cerca de metade da carga, permanecerá fria e durará mais que o letreiro.</p>
+
+<h2>Cinco erros de dimensionamento</h2>
+
+<ol>
+<li><strong>Usar "potência equivalente"</strong> em vez do consumo real.</li>
+<li><strong>Dimensionar para 100% de carga</strong> sem margem.</li>
+<li><strong>Ignorar a temperatura ambiente</strong> num invólucro selado.</li>
+<li><strong>Colocar dez fontes num único interruptor</strong> sem verificar a corrente de pico.</li>
+<li><strong>Esquecer o futuro</strong> — a tira extra, o segundo letreiro.</li>
+</ol>
+
+<h2>O que precisamos de você</h2>
+
+<p>Envie a carga em watts, a tensão de saída (12V ou 24V), o local de instalação e a temperatura ambiente aproximada, e a quantidade de unidades necessárias. Recomendaremos a classificação certa — e diremos quando um modelo menor e mais barato é realmente suficiente.</p>
+
+<div class="cta-box">
+<h3>Quer que verifiquemos o seu dimensionamento?</h3>
+<p>Envie a carga, a tensão de saída, o local de instalação e a quantidade. Confirmaremos a classificação certa — ou diremos que um modelo menor é suficiente.</p>
+<a href="/#inquiry" class="btn">Obter uma verificação de dimensionamento</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Conheça os produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Unidades compactas 12V/24V para tiras, módulos e sinalização.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">Tensão constante com PFC ativo para luminárias de teto e painel.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Totalmente encapsuladas, testadas contra névoa de sal para locais úmidos e costeiros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Carcaça metálica ventilada para sinalização e instalações semi-externas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Escolha a Fonte de Alimentação LED Certa em 3 Passos</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">Guia do Comprador</span><span class="rel-title">12V vs 24V Fonte de Alimentação LED: Como Escolher</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">Guia Técnico</span><span class="rel-title">IP67 vs IP65 Fonte de Alimentação LED: Qual Classificação Você Precisa?</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">Análise Técnica Profunda</span><span class="rel-title">Vida Útil da Fonte LED: MTBF, L70 e Quanto Realmente Dura</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-7/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">12V vs 24V Fonte de Alimentação LED: Como Escolher</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Field Notes</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['pt']['blog-9'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar às notas de campo</a>
+
+<h1>Fonte LED de tensão constante vs corrente constante: qual você precisa?</h1>
+<div class="meta">Guia técnico &middot; setembro de 2026 &middot; 8 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Fontes LED de tensão constante e corrente constante lado a lado" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Duas palavras decidem se uma luminária LED funciona ou não: <strong>tensão constante</strong> e <strong>corrente constante</strong>. Se inverter, os LEDs ou não acendem ou queimam em dias. No entanto, a maioria dos compradores só encontra esses termos depois que uma luminária falha, por isso esta é a versão resumida que gostaríamos que toda ficha técnica imprimisse logo no início.</p>
+
+<h2>O que "tensão constante" significa</h2>
+
+<p>Uma fonte de tensão constante (CV) mantém a tensão de saída fixa —normalmente 12V, 24V, 36V ou 48V— e deixa a luminária decidir quanta corrente puxar. Tiras LED, módulos de letreiro e a maioria dos produtos "12V/24V" já trazem seus próprios resistores limitadores de corrente, então precisam de uma fonte de tensão fixa. Esta é a opção padrão para a grande maioria dos trabalhos decorativos, arquitetônicos e de sinalização.</p>
+
+<div class="highlight">
+<strong>Regra prática:</strong> se o rótulo do produto diz <strong>12V</strong> ou <strong>24V</strong>, ele quer uma fonte de tensão constante. A fonte define os volts; a tira define os amps.
+</div>
+
+<h2>O que "corrente constante" significa</h2>
+
+<p>Uma fonte de corrente constante (CC) mantém a corrente fixa —normalmente 350mA, 500mA, 700mA, 1050mA ou 1500mA— e varia a tensão para manter essa corrente constante conforme a tensão direta do LED muda com a temperatura. LEDs de alta potência sem encapsulamento (downlights, refletores, postes, módulos de alta baia) não têm regulação a bordo, então puxarão corrente descontrolada de uma fonte de tensão fixa e se queimarão. Eles precisam de uma fonte CC.</p>
+
+<p>Se o rótulo diz <strong>350 mA</strong> ou <strong>700 mA</strong>, ele quer corrente constante. Envie a especificação da luminária e nós faremos a correspondência.</p>
+
+<h2>As duas lado a lado</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Propriedade</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Tensão constante</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Corrente constante</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Saída mantida</td><td style="padding:10px 14px;border:1px solid var(--b)">Tensão (12/24/36/48V)</td><td style="padding:10px 14px;border:1px solid var(--b)">Corrente (350-1500mA)</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">O que alimenta</td><td style="padding:10px 14px;border:1px solid var(--b)">Tiras, módulos, sinalização</td><td style="padding:10px 14px;border:1px solid var(--b)">LEDs de alta potência sem encapsulamento, downlights</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Regulação a bordo</td><td style="padding:10px 14px;border:1px solid var(--b)">No produto LED</td><td style="padding:10px 14px;border:1px solid var(--b)">Na fonte</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Linha CHUGAO típica</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/adapters/">Adaptadores 5-200W</a>, <a href="/products/indoor/">interior 50-400W</a></td><td style="padding:10px 14px;border:1px solid var(--b)">Interior / IP67 sob encomenda</td></tr>
+</tbody>
+</table>
+
+<h2>Por que misturá-las destrói luminárias</h2>
+
+<ol>
+<li><strong>Fonte CV em um LED CC</strong> — o LED puxa toda a corrente que consegue, esquenta e morre. Vemos isso principalmente quando alguém reutiliza uma fonte de tira 12V em um downlight de 350mA.</li>
+<li><strong>Fonte CC em uma tira CV</strong> — a fonte força uma corrente que os resistores da tira não conseguem limitar, então a tira superaquece ou a fonte desarma. De qualquer forma, sem luz.</li>
+</ol>
+
+<p>Leia sempre o rótulo da luminária antes de energizar qualquer coisa. Se houver dúvida, envie uma foto do rótulo e diremos qual tipo você precisa.</p>
+
+<h2>Uma fonte pode fazer os dois?</h2>
+
+<p>Algumas fontes programáveis ou de "modo duplo" podem ser configuradas para CV ou CC com uma saída fixa, mas custam mais e raramente são necessárias. Para uma instalação padrão, escolha o tipo certo uma vez e evite uma visita técnica. Nossas <a href="/products/indoor/">fontes de interior</a> e <a href="/products/ip67/">fontes IP67</a> estão disponíveis em versões de corriente constante a partir de 100W para trabalho com luminárias de alta potência.</p>
+
+<h2>O que precisamos de você</h2>
+
+<p>Envie o rótulo da luminária (tensão em volts, ou corrente em miliamperes), a potência total, o local de instalação e a quantidade. Confirmaremos tensão ou corrente constante e cotaremos o modelo exato — e diremos quando uma unidade padrão mais barata é realmente suficiente.</p>
+
+<div class="cta-box">
+<h3>Não tem certeza se sua luminária é CV ou CC?</h3>
+<p>Envie uma foto do rótulo LED —tensão em volts, ou corrente em miliamperes—. Confirmaremos o tipo e cotaremos o modelo exato.</p>
+<a href="/#inquiry" class="btn">Confirmar CV ou CC</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos e sinalização.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fontes LED de interior 50-400W</span><span class="pc-desc">Tensão constante com PFC ativo para luminárias de teto e painéis.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fontes impermeáveis IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, testadas contra névoa salina para locais úmidos e costeiros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fontes resistentes à chuva IP65 100-600W</span><span class="pc-desc">Caixa de metal ventilada para sinalização e instalações semi-externas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Escolha a fonte LED certa em 3 passos</span></a>
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">Guia do comprador</span><span class="rel-title">Fonte LED 12V vs 24V: como escolher</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">Guia técnico</span><span class="rel-title">Como dimensionar uma fonte LED: potência, margem e inrush</span></a>
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">Guia técnico</span><span class="rel-title">Dimming de driver LED explicado: 0-10V, PWM, DALI e TRIAC</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Como dimensionar uma fonte LED: potência, margem e inrush</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Dimming de driver LED explicado: 0-10V, PWM, DALI e TRIAC</span></a></nav>
+</main>"""
