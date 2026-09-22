@@ -855,3 +855,137 @@ BLOG_BODY['ar']['blog-1'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog/"><span class="pn-lab">كل المقالات</span><span class="pn-t">ملاحظات الميدان</span></a><a class="pn-next" href="/blog-2/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-2'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>IP20 vs IP65 vs IP67 vs IP68</h1>
+<div class="meta">دليل تقني &middot; فبراير 2026 &middot; 7 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-2-ip-rating-md.avif 1200w, /images/blog-2-ip-rating.avif 1024w">
+<source type="image/webp" srcset="/images/blog-2-ip-rating-md.webp 1200w, /images/blog-2-ip-rating.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-2-ip-rating.jpg" alt="رسم بياني مقارن لدرجات IP" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>كل مزود LED له درجة IP. هي رقمان — الأول حماية من الغبار/الجسيمات الصلبة، والثاني حماية من الماء. كلما زاد الرقم، كان الإغلاق أفضل.</p>
+
+<p>يستعرض هذا الدليل بالضبط ما تعنيه كل درجة IP شائعة عمليًا، لكيلا تفرط في الإنفاق أو تقصّر في المواصفات مجددًا.</p>
+
+<h2>نظام الرقمين مشروحًا</h2>
+
+<table class="ip-table">
+<thead><tr><th>الرقم</th><th>ما يقيسه</th><th>المقياس</th></tr></thead>
+<tbody>
+<tr><td><strong>الرقم الأول (0&ndash;6)</strong></td><td>أجسام صلبة / غبار</td><td>0 = بلا حماية &rarr; 6 = مقاوم للغبار</td></tr>
+<tr><td><strong>الرقم الثاني (0&ndash;8)</strong></td><td>سائل / ماء</td><td>0 = بلا حماية &rarr; 8 = غمر مستمر</td></tr>
+</tbody>
+</table>
+
+<h2>الرقم الأول: حماية من الغبار</h2>
+
+<ul>
+<li><strong>IPx0:</strong> بلا حماية. لا يُستخدم على أي مزود LED تجاري.</li>
+<li><strong>IPx3 &ndash; IPx4:</strong> محمي من الأسلاك والمسامير والأصابع. أمان أساسي.</li>
+<li><strong>IPx5:</strong> تسرب محدود للغبار. يدخل بعض الغبار الناعم لكن لا يكفي لإلحاق الضرر بالتشغيل.</li>
+<li><strong>IPx6:</strong> مقاوم للغبار. دخول صفري للغبار. هذا هو معيار كل المزودات الخارجية.</li>
+</ul>
+
+<p>عمليًا، كل المزودات التي نبيعها بدرجة حماية مائية ذات معنى (الرقم الثاني 4+) تصل بالفعل إلى IPx6 للغبار. نادرًا ما تحتاج للقلق بشأن هذا على حدة.</p>
+
+<h2>الرقم الثاني: حماية من الماء — هنا تُتّخذ القرارات</h2>
+
+<h3>IP20 / IP21 — داخلي فقط</h3>
+<p>تناثر الماء من زوايا عمودية (IP20). تناثر حتى 15&deg; عن العمودي (IP21).</p>
+<ul>
+<li>استخدم لـ: إضاءة أسقف داخلية، وحدات مغلقة، أماكن جافة</li>
+<li>تجنّب: أي مكان قرب النوافذ أو الحمامات أو المطابخ أو فتحات التكييف</li>
+<li>التكلفة: الشريحة الأدنى</li>
+</ul>
+
+<h3>IP44 — مقاوم للرذاذ</h3>
+<p>الماء المتناثر من أي اتجاه لا يسبب ضررًا.</p>
+<ul>
+<li>استخدم لـ: إضاءة مرايا الحمام، أشرطة تحت الخزائن، إضاءة مهام المطبخ</li>
+<li>غير مناسب للتعرض المباشر للمطر أو الغسيل</li>
+</ul>
+
+<h3>IP54 — محمي من الغبار + الرذاذ</h3>
+<p>تسرب محدود للغبار + مقاوم للرذاذ من كل الاتجاهات.</p>
+<ul>
+<li>استخدم لـ: واجهات العرض التجارية، منصات المعارض، المناطق شبه الخارجية المغطاة</li>
+</ul>
+
+<h3>IP65 — جتّات ماء من أي اتجاه</h3>
+<p>هذا هو حصان المعركة للتركيبات LED الخارجية.</p>
+<div class="highlight">
+<strong>IP65 = مقاوم للغبار بالكامل + محمي من جتّات ماء منخفضة الضغط من أي اتجاه (فوهة 6,3mm، 12,5 لتر/دقيقة).</strong>
+</div>
+<ul>
+<li>استخدم لـ: اللافتات الخارجية، إضاءة الواجهات، إنارة الشوارع، وحدات مواقف السيارات، مناطق تصنيع الأغذية بغسيل الخرطوم</li>
+<li>يغطي أكثر من 70% من كل احتياجات مزودات LED الخارجية</li>
+<li>الفئة الأكثر مبيعًا من CHUGAO من حيث الحجم</li>
+</ul>
+
+<h3>IP67 — غمر مؤقت حتى 1 متر</h3>
+<p>نفس مقاومة الغبار كـ IP65، وفوقها البقاء غارقًا حتى متر واحد من الماء لمدة 30 دقيقة.</p>
+<ul>
+<li>استخدم لـ: إضاءة تنسيق الحدائق قرب البرك أو المسابح، إضاءة الأنفاق، الوحدات الأرضية/المغمورة، نقاط التركيب المعرضة للفيضان</li>
+<li>ملاحظة: يُقاس عمق الغمر من قاعدة الهيكل لا من أعلاه</li>
+</ul>
+
+<h3>IP68 — غمر مستمر يتجاوز 1 متر</h3>
+<p>المعيار الأعلى. مُصنّف للتشغيل تحت الماء طويل الأمد عند أعماق يحددها المصنّع (عادة 1m&ndash;10m).</p>
+<ul>
+<li>استخدم لـ: إضاءة المسابح، النوافير، إضاءة الأحواض، عناصر معمارية تحت الماء، التطبيقات البحرية</li>
+<li>تتطلب حشوًا وتغليفًا متخصصين — التكلفة أعلى بكثير من IP67</li>
+</ul>
+
+<div class="warn">
+<strong>خطأ شائع:</strong> استخدام IP65 في تطبيق يشهد ماءً راكدًا أو خطر فيضان (مثل الوحدات المغمورة في الأرض). الـ 2&ndash;4 $ الإضافية للوحدة للارتقاء إلى IP67 قد تمنع إرجاعًا مكلفًا في الضمان.
+</div>
+
+<h2>كيف نختبر في CHUGAO</h2>
+
+<ol>
+<li><strong>التجميع:</strong> تُحشى المزودات بريزين PU داخل هيكل مغلق من الألومنيوم أو البلاستيك.</li>
+<li><strong>اختبار IP:</strong> تُؤخذ عينة من كل دفعة وتُختبر وفق معايير IEC 60529 باستخدام معدات معايرة لجتّة الماء وحجرة الغبار.</li>
+<li><strong>اختبار الشيخوخة:</strong> تُشغّل الوحدات بحمل كامل لمدة 48 ساعة عند 40&deg;C محيط بعد ختم IP لالتقاط أي عيوب كامنة.</li>
+</ol>
+
+<h2>ماذا يجب أن تطلب؟</h2>
+
+<table class="ip-table">
+<thead><tr><th>تطبيقك</th><th>أدنى IP</th><th>موصى به</th></tr></thead>
+<tbody>
+<tr><td>سقف/جدار داخلي</td><td>IP20</td><td>IP20</td></tr>
+<tr><td>حمام / مطبخ</td><td>IP44</td><td>IP44</td></tr>
+<tr><td>لافتة خارجية / واجهة مبنى</td><td>IP65</td><td>IP65</td></tr>
+<tr><td>نفق / موقف سيارات</td><td>IP65</td><td>IP67</td></tr>
+<tr><td>تنسيق حدائق قرب الماء</td><td>IP67</td><td>IP67</td></tr>
+<tr><td>مسبح / نافورة / تحت الماء</td><td>IP68</td><td>IP68</td></tr>
+</tbody>
+</table>
+
+<div class="cta-box">
+<h3>تحتاج مساعدة في مطابقة درجة IP مع مشروعك؟</h3>
+<p>أخبرنا ببيئة التركيب وسنوصي بمستوى IP الصحيح ورقم الطراز. ورقة بيانات مجانية مشمولة.</p>
+<a href="/#inquiry" class="btn">احصل على توصية</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/ip65/"><span class="pc-title">مزودات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">مزودات مقاومة للغبار والجتّات لمواجهات المباني واللافتات.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">حماية من الغمر المؤقت للأنفاق والمسابح والمناطق المعرضة للفيضان.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">تقنية LED</span><span class="rel-title">اختر مزود LED الصحيح في 3 خطوات</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">اتجاهات القطاع</span><span class="rel-title">سوق LED 2026: ما نراه</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">تنظيمي</span><span class="rel-title">شهادة BIS لمزودات LED: دليل استيراد الهند</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">تحليل تقني</span><span class="rel-title">عمر مزودات LED: MTBF وL70 والحياة الواقعية</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-1/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">اختر مزود LED الصحيح في 3 خطوات</span></a><a class="pn-next" href="/blog-3/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">سوق LED 2026: ما نراه</span></a></nav>
+</main>"""

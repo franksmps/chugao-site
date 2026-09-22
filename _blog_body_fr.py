@@ -856,3 +856,137 @@ BLOG_BODY['fr']['blog-1'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog/"><span class="pn-lab">Tous les articles</span><span class="pn-t">Notes de terrain</span></a><a class="pn-next" href="/blog-2/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['fr']['blog-2'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Retour aux notes de terrain</a>
+
+<h1>IP20 vs IP65 vs IP67 vs IP68</h1>
+<div class="meta">Guide technique &middot; février 2026 &middot; 7 min de lecture</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-2-ip-rating-md.avif 1200w, /images/blog-2-ip-rating.avif 1024w">
+<source type="image/webp" srcset="/images/blog-2-ip-rating-md.webp 1200w, /images/blog-2-ip-rating.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-2-ip-rating.jpg" alt="Graphique comparatif des degrés IP" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>Toute alimentation LED possède un degré IP. Ce sont deux chiffres : le premier est la protection contre la poussière/les particules solides, le second la protection contre l'eau. Plus le nombre est élevé, meilleure est l'étanchéité.</p>
+
+<p>Ce guide détaille exactement ce que signifie chaque degré IP courant dans la réalité, pour ne plus jamais dépenser trop ni sous-spécifier.</p>
+
+<h2>Le système à deux chiffres expliqué</h2>
+
+<table class="ip-table">
+<thead><tr><th>Chiffre</th><th>Ce qu'il mesure</th><th>Échelle</th></tr></thead>
+<tbody>
+<tr><td><strong>Premier chiffre (0&ndash;6)</strong></td><td>Objets solides / poussière</td><td>0 = aucune protection &rarr; 6 = anti-poussière</td></tr>
+<tr><td><strong>Second chiffre (0&ndash;8)</strong></td><td>Liquide / eau</td><td>0 = aucune protection &rarr; 8 = immersion continue</td></tr>
+</tbody>
+</table>
+
+<h2>Premier chiffre : protection contre la poussière</h2>
+
+<ul>
+<li><strong>IPx0 :</strong> Aucune protection. N'est utilisé sur aucun driver LED commercial.</li>
+<li><strong>IPx3 &ndash; IPx4 :</strong> Protégé contre les fils, vis et doigts. Sécurité de base.</li>
+<li><strong>IPx5 :</strong> Pénétration de poussière limitée. Un peu de poussière fine entre, mais pas assez pour nuire au fonctionnement.</li>
+<li><strong>IPx6 :</strong> Anti-poussière. Aucune entrée de poussière. C'est la norme de tous les drivers d'extérieur.</li>
+</ul>
+
+<p>En pratique, tous les drivers que nous vendons avec une protection contre l'eau significative (second chiffre 4+) atteignent déjà IPx6 contre la poussière. Vous avez rarement à vous en soucier séparément.</p>
+
+<h2>Second chiffre : protection contre l'eau — c'est là que se prennent les décisions</h2>
+
+<h3>IP20 / IP21 — Intérieur uniquement</h3>
+<p>Gouttes d'eau sous angles verticaux (IP20). Gouttes jusqu'à 15&deg; de la verticale (IP21).</p>
+<ul>
+<li>À utiliser pour : luminaires de plafond intérieurs, luminaires fermés, emplacements secs</li>
+<li>À éviter : près des fenêtres, salles de bain, cuisines ou bouches de VMC</li>
+<li>Coût : le niveau le plus bas</li>
+</ul>
+
+<h3>IP44 — Éclaboussures</h3>
+<p>L'eau éclaboussée de n'importe quelle direction ne cause aucun dommage.</p>
+<ul>
+<li>À utiliser pour : miroirs lumineux de salle de bain, bandeaux sous meuble, éclairage de travail de cuisine</li>
+<li>Non adapté à l'exposition directe à la pluie ou au lavage</li>
+</ul>
+
+<h3>IP54 — Protégé poussière + éclaboussures</h3>
+<p>Pénétration de poussière limitée + éclaboussures de toutes directions.</p>
+<ul>
+<li>À utiliser pour : vitrines commerciales, stands d'exposition, zones semi-extérieures couvertes</li>
+</ul>
+
+<h3>IP65 — Jets d'eau de toutes directions</h3>
+<p>C'est le cheval de bataille des installations LED extérieures.</p>
+<div class="highlight">
+<strong>IP65 = totalement anti-poussière + protégé contre les jets d'eau à basse pression de toutes directions (buse 6,3mm, 12,5 L/min).</strong>
+</div>
+<ul>
+<li>À utiliser pour : enseignes extérieures, éclairage de façades, éclairage public, luminaires de parkings, zones agroalimentaires avec nettoyage à haute pression</li>
+<li>Couvre plus de 70% de tous les besoins en drivers LED extérieurs</li>
+<li>La catégorie la plus vendue de CHUGAO en volume</li>
+</ul>
+
+<h3>IP67 — Immersion temporaire jusqu'à 1 mètre</h3>
+<p>La même étanchéité à la poussière que IP65, plus la capacité de survivre immergé jusqu'à 1 mètre d'eau pendant 30 minutes.</p>
+<ul>
+<li>À utiliser pour : éclairage paysager près des étangs ou piscines, éclairage de tunnels, luminaires enterrés/encastrés, points d'installation sujets aux inondations</li>
+<li>Note : la profondeur d'immersion se mesure depuis le bas du boîtier, pas le haut</li>
+</ul>
+
+<h3>IP68 — Immersion continue au-delà de 1 mètre</h3>
+<p>La norme la plus élevée. Homologué pour un fonctionnement subaquatique longue durée aux profondeurs spécifiées par le fabricant (généralement 1m&ndash;10m).</p>
+<ul>
+<li>À utiliser pour : luminaires de piscine, fontaines, éclairage d'aquarium, éléments architecturaux subaquatiques, applications marines</li>
+<li>Ils nécessitent un encapsulage et un scellement spécialisés — le coût est nettement supérieur à IP67</li>
+</ul>
+
+<div class="warn">
+<strong>Erreur courante :</strong> utiliser IP65 dans une application qui voit de l'eau stagnante ou un risque d'inondation (par exemple, luminaires encastrés au sol). Les 2&ndash;4 $ supplémentaires par unité pour passer à IP67 peuvent éviter un retour en garantie coûteux.
+</div>
+
+<h2>Comment nous testons chez CHUGAO</h2>
+
+<ol>
+<li><strong>Assemblage :</strong> Les drivers sont encapsulés avec résine PU dans un boîtier scellé en aluminium ou plastique.</li>
+<li><strong>Test IP :</strong> chaque lot est échantillonné et testé selon les normes IEC 60529 avec un équipement calibré de jet d'eau et de chambre à poussière.</li>
+<li><strong>Test de vieillissement :</strong> les unités tournent à pleine charge pendant 48 heures à 40&deg;C ambiant après le scellement IP pour détecter tout défaut latent.</li>
+</ol>
+
+<h2>Que devez-vous commander ?</h2>
+
+<table class="ip-table">
+<thead><tr><th>Votre application</th><th>IP minimal</th><th>Recommandé</th></tr></thead>
+<tbody>
+<tr><td>Plafond/mur intérieur</td><td>IP20</td><td>IP20</td></tr>
+<tr><td>Salle de bain / cuisine</td><td>IP44</td><td>IP44</td></tr>
+<tr><td>Enseigne extérieure / façade</td><td>IP65</td><td>IP65</td></tr>
+<tr><td>Tunnel / parking</td><td>IP65</td><td>IP67</td></tr>
+<tr><td>Paysage près de l'eau</td><td>IP67</td><td>IP67</td></tr>
+<tr><td>Piscine / fontaine / subaquatique</td><td>IP68</td><td>IP68</td></tr>
+</tbody>
+</table>
+
+<div class="cta-box">
+<h3>Besoin d'aide pour associer le degré IP à votre projet ?</h3>
+<p>Indiquez-nous votre environnement d'installation et nous recommanderons le bon niveau IP et le numéro de modèle. Fiche technique gratuite incluse.</p>
+<a href="/#inquiry" class="btn">Obtenir une recommandation</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Découvrir les produits CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/ip65/"><span class="pc-title">Alimentations anti-pluie IP65 100-600W</span><span class="pc-desc">Alimentations étanches à la poussière et résistantes aux jets pour façades et enseignes.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Alimentations étanches IP67 10-400W</span><span class="pc-desc">Protection contre l'immersion temporaire pour tunnels, piscines et zones inondables.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Encore du terrain</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Technologie LED</span><span class="rel-title">Choisir la bonne alimentation LED en 3 étapes</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Tendances du secteur</span><span class="rel-title">Marché LED 2026 : ce que nous observons</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Réglementaire</span><span class="rel-title">Certification BIS pour drivers LED : guide d'importation en Inde</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Analyse technique</span><span class="rel-title">Durée de vie des drivers LED : MTBF, L70 et vie réelle</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-1/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Choisir la bonne alimentation LED en 3 étapes</span></a><a class="pn-next" href="/blog-3/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Marché LED 2026 : ce que nous observons</span></a></nav>
+</main>"""

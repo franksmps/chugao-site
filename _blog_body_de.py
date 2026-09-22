@@ -855,3 +855,137 @@ BLOG_BODY['de']['blog-1'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog/"><span class="pn-lab">Alle Artikel</span><span class="pn-t">Feldbriefe</span></a><a class="pn-next" href="/blog-2/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-2'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>IP20 vs IP65 vs IP67 vs IP68</h1>
+<div class="meta">Technischer Leitfaden &middot; Februar 2026 &middot; 7 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-2-ip-rating-md.avif 1200w, /images/blog-2-ip-rating.avif 1024w">
+<source type="image/webp" srcset="/images/blog-2-ip-rating-md.webp 1200w, /images/blog-2-ip-rating.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-2-ip-rating.jpg" alt="Vergleichsgrafik der IP-Grade" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>Jedes LED-Netzteil hat einen IP-Grad. Es sind zwei Ziffern: die erste ist der Schutz gegen Staub/feste Partikel, die zweite der Schutz gegen Wasser. Je höher die Zahl, desto besser die Dichtigkeit.</p>
+
+<p>Diese Anleitung zerlegt genau, was jeder gängige IP-Grad in der Praxis bedeutet, damit Sie nie wieder zu viel ausgeben oder zu niedrig spezifizieren.</p>
+
+<h2>Das Zwei-Ziffern-System erklärt</h2>
+
+<table class="ip-table">
+<thead><tr><th>Ziffer</th><th>Was sie misst</th><th>Skala</th></tr></thead>
+<tbody>
+<tr><td><strong>Erste Ziffer (0&ndash;6)</strong></td><td>Feste Objekte / Staub</td><td>0 = kein Schutz &rarr; 6 = staubdicht</td></tr>
+<tr><td><strong>Zweite Ziffer (0&ndash;8)</strong></td><td>Flüssigkeit / Wasser</td><td>0 = kein Schutz &rarr; 8 = dauerndes Tauchen</td></tr>
+</tbody>
+</table>
+
+<h2>Erste Ziffer: Staubschutz</h2>
+
+<ul>
+<li><strong>IPx0:</strong> Kein Schutz. Wird an keinem kommerziellen LED-Treiber verwendet.</li>
+<li><strong>IPx3 &ndash; IPx4:</strong> Geschützt gegen Drähte, Schrauben, Finger. Basis-Sicherheit.</li>
+<li><strong>IPx5:</strong> Begrenzter Staubeintritt. Etwas Feinstaub dringt ein, aber nicht genug, um die Funktion zu stören.</li>
+<li><strong>IPx6:</strong> Staubdicht. Kein Staubeintritt. Der Standard aller Außen-Treiber.</li>
+</ul>
+
+<p>In der Praxis erreichen alle bei uns verkauften Treiber mit nennenswertem Wasserschutz (zweite Ziffer 4+) ohnehin IPx6 gegen Staub. Darum müssen Sie sich selten separat kümmern.</p>
+
+<h2>Zweite Ziffer: Wasserschutz — hier fallen die Entscheidungen</h2>
+
+<h3>IP20 / IP21 — Nur Innen</h3>
+<p>Tropfendes Wasser aus senkrechten Winkeln (IP20). Tropfen bis 15&deg; von der Vertikalen (IP21).</p>
+<ul>
+<li>Verwenden für: Deckenleuchten innen, geschlossene Leuchten, trockene Orte</li>
+<li>Vermeiden: in der Nähe von Fenstern, Bädern, Küchen oder HVAC-Gittern</li>
+<li>Kosten: die niedrigste Stufe</li>
+</ul>
+
+<h3>IP44 — Spritzwassergeschützt</h3>
+<p>Allseitig verspritztes Wasser verursacht keinen Schaden.</p>
+<ul>
+<li>Verwenden für: Bad-Spiegelleuchten, Unterbau-Streifen, Küchen-Arbeitsbeleuchtung</li>
+<li>Nicht geeignet für direkten Regen oder Strahlreinigung</li>
+</ul>
+
+<h3>IP54 — Staub- + Spritzwassergeschützt</h3>
+<p>Begrenzter Staubeintritt + allseitig spritzwassergeschützt.</p>
+<ul>
+<li>Verwenden für: Einzelhandelsdisplays, Messestände, halbüberdachte Semi-Außenbereiche</li>
+</ul>
+
+<h3>IP65 — Wasserstrahlen aus jeder Richtung</h3>
+<p>Das Arbeitstier der Außen-LED-Installationen.</p>
+<div class="highlight">
+<strong>IP65 = voll staubdicht + geschützt gegen Niederdruck-Wasserstrahlen aus jeder Richtung (6,3mm-Düse, 12,5 L/min).</strong>
+</div>
+<ul>
+<li>Verwenden für: Außenbeschilderung, Fassadenbeleuchtung, Straßenbeleuchtung, Parkhaus-Leuchten, Lebensmittelbereiche mit Schlauchreinigung</li>
+<li>Deckt über 70% aller Außen-LED-Treiberbedarfe</li>
+<li>CHUGAs meistverkaufte Kategorie nach Volumen</li>
+</ul>
+
+<h3>IP67 — Temporäres Tauchen bis 1 Meter</h3>
+<p>Dieselbe Staubdichtigkeit wie IP65, plus Überleben unter bis zu 1 Meter Wasser für 30 Minuten.</p>
+<ul>
+<li>Verwenden für: Landschaftsbeleuchtung an Teichen oder Pools, Tunnelbeleuchtung, erd-/bodeneingelassene Leuchten, hochwassergefährdete Punkte</li>
+<li>Hinweis: Die Tauchtiefe wird vom Boden des Gehäuses gemessen, nicht von oben</li>
+</ul>
+
+<h3>IP68 — Dauerndes Tauchen über 1 Meter</h3>
+<p>Der höchste Standard. Freigegeben für langfristigen Unterwasserbetrieb in vom Hersteller angegebenen Tiefen (typisch 1m&ndash;10m).</p>
+<ul>
+<li>Verwenden für: Poolleuchten, Brunnen, Aquarienbeleuchtung, Unterwasser-Architekturelemente, Marineanwendungen</li>
+<li>Erfordern spezialisierte Verguss- und Dichttechnik — Kosten deutlich höher als IP67</li>
+</ul>
+
+<div class="warn">
+<strong>Häufiger Fehler:</strong> IP65 dort einzusetzen, wo Staunässe oder Überflutungsrisiko herrscht (z. B. bodeneingelassene Leuchten). Die 2&ndash;4 $ Aufpreis pro Gerät für IP67 können eine teure Garantierückgabe verhindern.
+</div>
+
+<h2>Wie wir bei CHUGAO testen</h2>
+
+<ol>
+<li><strong>Montage:</strong> Treiber werden mit PU-Harz in einem versiegelten Aluminium- oder Kunststoffgehäuse vergossen.</li>
+<li><strong>IP-Test:</strong> Jede Charge wird nach IEC 60529 mit kalibrierter Wasserstrahl- und Staubkammer geprüft.</li>
+<li><strong>Alterungstest:</strong> Nach der IP-Versiegelung laufen die Geräte 48 Stunden bei 40&deg;C Umgebung unter Volllast, um verborgene Fehler zu finden.</li>
+</ol>
+
+<h2>Was sollten Sie bestellen?</h2>
+
+<table class="ip-table">
+<thead><tr><th>Ihre Anwendung</th><th>Min. IP-Grad</th><th>Empfohlen</th></tr></thead>
+<tbody>
+<tr><td>Decke/Wand innen</td><td>IP20</td><td>IP20</td></tr>
+<tr><td>Bad / Küche</td><td>IP44</td><td>IP44</td></tr>
+<tr><td>Außenbeschilderung / Fassade</td><td>IP65</td><td>IP65</td></tr>
+<tr><td>Tunnel / Parkhaus</td><td>IP65</td><td>IP67</td></tr>
+<tr><td>Landschaft am Wasser</td><td>IP67</td><td>IP67</td></tr>
+<tr><td>Pool / Brunnen / unter Wasser</td><td>IP68</td><td>IP68</td></tr>
+</tbody>
+</table>
+
+<div class="cta-box">
+<h3>Brauchen Sie Hilfe, den IP-Grad Ihrem Projekt zuzuordnen?</h3>
+<p>Nennen Sie uns Ihre Installationsumgebung — wir empfehlen den richtigen IP-Level und die Modellnummer. Datenblatt kostenlos inklusive.</p>
+<a href="/#inquiry" class="btn">Empfehlung erhalten</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/ip65/"><span class="pc-title">Spritzwassergeschützte IP65-Treiber 100-600W</span><span class="pc-desc">Staubdicht und strahlwassergeschützt für Fassaden und Beschilderung.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Schutz vor temporärer Tauchung für Tunnel, Pools und Überschwemmungsgebiete.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-Technik</span><span class="rel-title">Das richtige LED-Netzteil in 3 Schritten wählen</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Branchentrends</span><span class="rel-title">LED-Markt 2026: Was wir sehen</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatorisch</span><span class="rel-title">BIS-Zertifizierung für LED-Treiber: Importleitfaden Indien</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Technische Analyse</span><span class="rel-title">Lebensdauer von LED-Treibern: MTBF, L70 und Praxis</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-1/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">Das richtige LED-Netzteil in 3 Schritten wählen</span></a><a class="pn-next" href="/blog-3/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">LED-Markt 2026: Was wir sehen</span></a></nav>
+</main>"""
