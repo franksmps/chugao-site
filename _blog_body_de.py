@@ -610,3 +610,75 @@ BLOG_BODY['de']['blog-12'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">Leistungsfaktor-Korrektur und flimmerfreie LED-Treiber</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">LED-Netzteil für Außen und extreme Standorte wählen</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-13'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>LED-Netzteil für Außen und extreme Standorte wählen</h1>
+<div class="meta">Käuferleitfaden &middot; Oktober 2026 &middot; 8 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Auswahl eines LED-Außennetzteils für extreme Umgebungen" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>„Außen“ ist keine einzige Umgebung. Eine versiegelte Letternbox unter dem Vordach eines Einkaufszentrums und ein Treiber an einer Seemauer sind beide „außen“, aber nur einer wird in zwei Jahren noch funktionieren. Dieser Leitfaden geht vom trockenen zum nassen Ende, damit Sie die richtige Einheit statt der billigsten wählen.</p>
+
+<h2>Die Umgebungsleiter</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Umgebung</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Schutz</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CHUGAO-Reihe</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Trockener Innenraum</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP20</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/indoor/">Innen 50-400W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Semi-außen, Regen + Staub</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP65</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip65/">IP65 100-600W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Nass, überflutbar, küstennahe</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 / IP68</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip67/">IP67 10-400W</a></td></tr>
+</tbody>
+</table>
+
+<h2>Schritt 1: kann Wasser den Treiber erreichen?</h2>
+
+<p>Wenn der Treiber in einer versiegelten Letternbox oder einem Vordach sitzt, läuft Regen ab und es staut sich nichts — <a href="/products/ip65/">IP65</a> genügt und läuft kühler. Wenn sich Wasser am Gehäuse sammeln kann, greifen Sie zu einer voll vergossenen <a href="/products/ip67/">IP67</a>-Einheit.</p>
+
+<h2>Schritt 2: küstennahe oder abgespritzt?</h2>
+
+<p>Salznebel korrodiert ein belüftetes Metallgehäuse von innen. An einer Seemauer, in einer Waschanlage oder einem Lebensmittelbetrieb, der abgespritzt wird, brauchen Sie Silikonverguss und einen Salznebeltest. Fragen Sie den Lieferanten, welche Tests wirklich liefen, nicht nur welche Zahl aufgedruckt ist.</p>
+
+<h2>Schritt 3: wie heiß wird es?</h2>
+
+<p>Die Abdichtung hält Wasser draußen, hält aber Wärme drin. Eine vergossene IP67-Einheit gibt Wärme nur über das Gehäuse ab, also dimensionieren Sie sie bei heißem, geschlossenem Raum auf 70-80% der Nennlast, montieren Sie sie in bewegter Luft, und rechnen Sie damit, dass die IP67-Reihe bei 400W endet, während die belüftete IP65 600W erreicht. Das ist Physik, kein Upsell.</p>
+
+<div class="highlight">
+<strong>Hitze ist der lautlose Killer:</strong> je 10&deg;C über Rating halbiert etwa die Kondensatorlebensdauer. Ein IP67-Treiber von 400W, der in einer versiegelten Grube „kocht“, fällt schneller aus als eine korrekt dimensionierte, belüftete IP65-Einheit im Schatten. Passen Sie das Rating an die Umgebung an, nicht nur an die Watt.
+</div>
+
+<h2>Schritt 4: wird gedimmt oder ist über spannung exponiert?</h2>
+
+<p>Außenanzeigen werden oft gedimmt (0-10V nachts) und sind Überspannungen ausgesetzt (Blitz auf langen Strecken). Wählen Sie einen Treiber, der Ihren Dimmstandard unterstützt, und setzen Sie ein externes SPD an die Einspeisung — siehe <a href="/blog-10/">Dimm-Guide</a> und <a href="/blog-12/">Überspannungs-Guide</a>.</p>
+
+<h2>Entscheidung in einer Zeile</h2>
+
+<p><strong>Trocken &rarr; Innen. Regen ohne Pfützen &rarr; IP65. Wasser, Küste oder abgespritzt &rarr; IP67. Mehr als 400W im Freien &rarr; belüftete IP65 unter Dach.</strong></p>
+
+<p>Senden Sie ein Foto des Installationsorts samt Last in Watt und Kabel­länge. Wir sagen Ihnen ehrlich, welche Reihe zu kaufen ist — auch wenn die günstigere IP65 die richtige Antwort ist.</p>
+
+<div class="cta-box">
+<h3>Unsicher, welchen Schutz Ihr Standort braucht?</h3>
+<p>Senden Sie ein Foto des Installationsorts samt Last und Kabel­länge. Wir sagen Ihnen ehrlich, welche Reihe zu kaufen ist.</p>
+<a href="/#inquiry" class="btn">Schutzempfehlung anfordern</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-Adapter 5-200W</span><span class="pc-desc">Kompakte 12V/24V-Geräte für Streifen, Module und Beschilderung.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Innen-LED-Treiber 50-400W</span><span class="pc-desc">Konstantspannung mit aktivem PFC für Decken- und Panelleuchten.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Vollvergossen, salzsprühgetestet für feuchte und Küsten-Standorte.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Spritzwassergeschützte IP65-Treiber 100-600W</span><span class="pc-desc">Belüftetes Metallgehäuse für Beschilderung und semi-außen.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">LED-Treiber IP67 vs IP65: Welche Schutzart brauchen Sie?</span></a>
+  <a class="rel-card" href="/blog-12/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">Überspannungsschutz für LED-Treiber: Blitz und Transienten</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">LED-Netzteil dimensionieren: Watt, Reserve und Einschaltstoß</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">Überspannungsschutz für LED-Treiber: Blitz und Transienten</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Kabelquerschnitt und Spannungsabfall für LED-Anlagen</span></a></nav>
+</main>"""

@@ -611,3 +611,75 @@ BLOG_BODY['fr']['blog-12'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Correction du facteur de puissance et drivers LED sans scintillement</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Choisir une alimentation LED pour extérieur et sites extrêmes</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['fr']['blog-13'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Retour aux notes de terrain</a>
+
+<h1>Choisir une alimentation LED pour extérieur et sites extrêmes</h1>
+<div class="meta">Guide d'achat &middot; octobre 2026 &middot; 8 min de lecture</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Choix d'une alimentation LED extérieure pour environnements extrêmes" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>« Extérieur » n'est pas un seul environnement. Une caisse de lettrage scellée sous la marquise d'un centre commercial et un driver sur un mur maritime sont tous deux « extérieurs », mais un seul fonctionnera encore dans deux ans. Ce guide avance de l'extrémité sèche à l'extrémité humide pour vous aider à choisir l'unité correcte plutôt que la moins chère.</p>
+
+<h2>L'échelle des environnements</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Environnement</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Indice</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Gamme CHUGAO</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Intérieur sec</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP20</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/indoor/">Intérieur 50-400W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Semi-extérieur, pluie + poussière</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP65</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip65/">IP65 100-600W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Humide, inondable, côtier</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 / IP68</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip67/">IP67 10-400W</a></td></tr>
+</tbody>
+</table>
+
+<h2>Étape 1 : l'eau peut-elle atteindre le driver ?</h2>
+
+<p>Si le driver vit dans une caisse de lettrage ou une marquise scellée, la pluie ruisselle et ne stagne pas — <a href="/products/ip65/">IP65</a> suffit et reste plus frais. Si l'eau peut s'accumuler autour du boîtier, passez à une unité <a href="/products/ip67/">IP67</a> totalement encapsulée.</p>
+
+<h2>Étape 2 : est-ce côtier ou lavé sous pression ?</h2>
+
+<p>L'embrun salin corrode de l'intérieur un boîtier métallique ventilé. Sur un mur maritime, dans un lavomatic ou une usine agroalimentaire lavée, il faut un encapsulage silicone et un test de brouillard salin. Demandez au fournisseur quels tests ont réellement été effectués, pas seulement quel chiffre est imprimé.</p>
+
+<h2>Étape 3 : quelle chaleur fait-il ?</h2>
+
+<p>L'étanchéité garde l'eau dehors mais retient la chaleur. Une unité IP67 encapsulée dissipe uniquement par son boîtier, alors dimensionnez-la à 70-80% de la charge nominale dans un espace chaud et scellé, montez-la dans l'air en mouvement, et attendez-vous à ce que la gamme IP67 s'arrête à 400W tandis que la IP65 ventilée atteint 600W. C'est de la physique, pas une vente additionnelle.</p>
+
+<div class="highlight">
+<strong>La chaleur est le tueur silencieux :</strong> chaque 10&deg;C au-dessus du rating réduit environ de moitié la durée de vie du condensateur. Un driver IP67 400W cuit dans une fosse scellée échouera plus vite qu'une unité IP65 ventilée et bien dimensionnée à l'ombre. Adaptez le rating à l'ambiant, pas seulement aux watts.
+</div>
+
+<h2>Étape 4 : est-il varié ou exposé aux surtensions ?</h2>
+
+<p>Les enseignes extérieures sont souvent variées (0-10V la nuit) et exposées aux surtensions (foudre sur longs parcours). Choisissez un driver qui supporte votre norme de variation et ajoutez un SPD externe à l'alimentation — voir le <a href="/blog-10/">guide de variation</a> et le <a href="/blog-12/">guide surtensions</a>.</p>
+
+<h2>Décision en une ligne</h2>
+
+<p><strong>Sec &rarr; intérieur. Pluie sans stagnation &rarr; IP65. Eau, côte ou lavé &rarr; IP67. Plus de 400W en extérieur &rarr; IP65 ventilé sous abri.</strong></p>
+
+<p>Envoyez une photo du lieu d'installation avec la charge en watts et la longueur du parcours. Nous vous dirons honnêtement quelle gamme acheter — y compris quand la IP65 moins chère est la bonne réponse.</p>
+
+<div class="cta-box">
+<h3>Vous ne savez pas quelle protection votre site nécessite ?</h3>
+<p>Envoyez une photo du lieu d'installation avec la charge et la longueur du parcours. Nous vous dirons honnêtement quelle gamme acheter.</p>
+<a href="/#inquiry" class="btn">Obtenir une recommandation de protection</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Découvrir les produits CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptateurs LED 5-200W</span><span class="pc-desc">Blocs compacts 12V/24V pour bandeaux, modules et enseignes.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Alimentations LED d'intérieur 50-400W</span><span class="pc-desc">Tension constante avec PFC actif pour plafonniers et panneaux.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Alimentations étanches IP67 10-400W</span><span class="pc-desc">Totalement encapsulées, testées aux brouillards salins pour sites humides et côtiers.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Alimentations anti-pluie IP65 100-600W</span><span class="pc-desc">Boîtier métallique ventilé pour enseignes et installations semi-extérieures.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Encore du terrain</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guide technique</span><span class="rel-title">Driver LED IP67 vs IP65 : quelle protection choisir ?</span></a>
+  <a class="rel-card" href="/blog-12/"><span class="rel-cat">Guide technique</span><span class="rel-title">Protection contre les surtensions pour drivers LED : foudre et transitoires</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guide technique</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">Guide technique</span><span class="rel-title">Dimensionner une alimentation LED : watts, marge et intrush</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Protection contre les surtensions pour drivers LED : foudre et transitoires</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Section de câble et chute de tension pour installations LED</span></a></nav>
+</main>"""

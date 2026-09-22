@@ -611,3 +611,75 @@ BLOG_BODY['pt']['blog-12'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Correção de fator de potência e drivers LED sem cintilação</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Escolhendo uma fonte LED para exteriores e locais extremos</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['pt']['blog-13'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar às notas de campo</a>
+
+<h1>Escolhendo uma fonte LED para exteriores e locais extremos</h1>
+<div class="meta">Guia do comprador &middot; outubro de 2026 &middot; 8 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Seleção de fonte LED externa para ambientes extremos" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>"Exterior" não é um único ambiente. Uma caixa de letreiro selada na marquise de um shopping e um driver num muro à beira-mar são ambos "exterior", mas só um deles ainda funcionará em dois anos. Este guia avança da ponta seca à molhada para que você escolha a unidade certa em vez da mais barata.</p>
+
+<h2>A escada de ambientes</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Ambiente</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Proteção</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Linha CHUGAO</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Interno seco</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP20</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/indoor/">Interior 50-400W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Semiexterno, chuva + poeira</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP65</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip65/">IP65 100-600W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Úmido, alagável, costeiro</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 / IP68</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip67/">IP67 10-400W</a></td></tr>
+</tbody>
+</table>
+
+<h2>Passo 1: a água pode chegar ao driver?</h2>
+
+<p>Se o driver fica dentro de uma caixa de letreiro ou marquise selada, a chuva escorre e nada se acumula — <a href="/products/ip65/">IP65</a> basta e roda mais frio. Se a água puder se acumular ao redor da caixa, suba para uma unidade <a href="/products/ip67/">IP67</a> totalmente encapsulada.</p>
+
+<h2>Passo 2: é costeiro ou lavado sob pressão?</h2>
+
+<p>O borrifo de sal corrói uma caixa metálica ventilada por dentro. Num muro à beira-mar, num lava-rápido ou numa fábrica de alimentos lavada, você precisa de encapsulamento de silicone e de um teste de borrifo salino. Pergunte ao fornecedor quais testes foram realmente feitos, não só qual número vem impresso.</p>
+
+<h2>Passo 3: quanto calor faz?</h2>
+
+<p>A vedação mantém a água fora, mas retém o calor. Uma unidade IP67 encapsulada dissipa só pela caixa, então dimensione-a a 70-80% da carga nominal num espaço quente e selado, monte-a em ar em movimento, e espere que a linha IP67 pare em 400W enquanto a IP65 ventilada chega a 600W. Isso é física, não um upsell.</p>
+
+<div class="highlight">
+<strong>O calor é o assassino silencioso:</strong> cada 10&deg;C acima da classe reduz pela metade a vida do capacitor. Um driver IP67 de 400W cozido numa vala selada falha antes que uma unidade IP65 ventilada e bem dimensionada na sombra. Iguale a classe ao ambiente, não só aos watts.
+</div>
+
+<h2>Passo 4: é dimerizado ou exposto a surtos?</h2>
+
+<p>Letreiros externos costumam ser dimerizados (0-10V à noite) e expostos a surtos (raios em tramos longos). Escolha um driver que suporte seu padrão de dimerização e adicione um SPD externo na alimentação — veja o <a href="/blog-10/">guia de dimerização</a> e o <a href="/blog-12/">guia de surtos</a>.</p>
+
+<h2>Decisão em uma linha</h2>
+
+<p><strong>Seco &rarr; interno. Chuva sem encharcamento &rarr; IP65. Água, costa ou lavado &rarr; IP67. Mais de 400W ao ar livre &rarr; IP65 ventilado sob cobertura.</strong></p>
+
+<p>Envie uma foto do local de instalação junto com a carga em watts e o comprimento do tramo. Diremos honestamente qual linha comprar — inclusive quando a IP65 mais barata é a resposta certa.</p>
+
+<div class="cta-box">
+<h3>Não sabe que proteção seu local precisa?</h3>
+<p>Envie uma foto do local de instalação junto com a carga e o comprimento do tramo. Diremos honestamente qual linha comprar.</p>
+<a href="/#inquiry" class="btn">Obter recomendação de proteção</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos e sinalização.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fontes LED de interior 50-400W</span><span class="pc-desc">Tensão constante com PFC ativo para luminárias de teto e painéis.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fontes impermeáveis IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, testadas contra névoa salina para locais úmidos e costeiros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fontes resistentes à chuva IP65 100-600W</span><span class="pc-desc">Caixa de metal ventilada para sinalização e instalações semi-externas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guia técnico</span><span class="rel-title">Driver LED IP67 vs IP65: qual proteção você precisa?</span></a>
+  <a class="rel-card" href="/blog-12/"><span class="rel-cat">Guia técnico</span><span class="rel-title">Proteção contra surtos para drivers LED: raios e transitórios</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guia técnico</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">Guia técnico</span><span class="rel-title">Como dimensionar uma fonte LED: watts, margem e inrush</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Proteção contra surtos para drivers LED: raios e transitórios</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Bitola de cabo e queda de tensão para instalações LED</span></a></nav>
+</main>"""

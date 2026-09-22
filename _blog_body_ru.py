@@ -610,3 +610,75 @@ BLOG_BODY['ru']['blog-12'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Коррекция коэффициента мощности и LED-драйверы без мерцания</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Выбор LED-блока для улицы и суровых объектов</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ru']['blog-13'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Назад к полевым заметкам</a>
+
+<h1>Выбор LED-блока для улицы и суровых объектов</h1>
+<div class="meta">Руководство покупателя &middot; октябрь 2026 &middot; 8 мин чтения</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Выбор уличного LED-блока для суровых сред" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>«Улица» — это не одна среда. Герметичный короб вывески под козырьком торгового центра и драйвер на морской стене — оба «уличные», но проработает два года лишь один из них. Этот гид идёт от сухого конца к мокрому, чтобы вы выбрали правильный блок, а не самый дешёвый.</p>
+
+<h2>Лестница сред</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Среда</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Защита</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Линейка CHUGAO</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Сухой интерьер</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP20</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/indoor/">Интерьер 50-400Вт</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Полууличная, дождь + пыль</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP65</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip65/">IP65 100-600Вт</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Влажная, затопляемая, прибрежная</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 / IP68</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip67/">IP67 10-400Вт</a></td></tr>
+</tbody>
+</table>
+
+<h2>Шаг 1: может ли вода дойти до драйвера?</h2>
+
+<p>Если драйвер стоит внутри герметичного короба вывески или козырька, дождь стекает и нигде не скапливается — <a href="/products/ip65/">IP65</a> достаточно и работает холоднее. Если вода может собираться у корпуса, переходите на полностью залитый <a href="/products/ip67/">IP67</a>.</p>
+
+<h2>Шаг 2: это берег или мойка под давлением?</h2>
+
+<p>Солевой туман корродирует вентилируемый металлический корпус изнутри. На морской стене, в автомойке или на пищевом заводе, который моют, нужен силиконовый заливочный компаунд и тест на солевой туман. Спросите поставщика, какие тесты реально прогоняли, а не только какое число напечатано.</p>
+
+<h2>Шаг 3: как там жарко?</h2>
+
+<p>Герметизация не пускает воду, но удерживает тепло. Залитый IP67 рассеивает тепло только через корпус, поэтому в горячем закрытом пространстве закладывайте 70-80% от номинала, ставьте в движущийся воздух и ждите, что линейка IP67 остановится на 400Вт, тогда как вентилируемая IP65 достигает 600Вт. Это физика, а не навязывание.</p>
+
+<div class="highlight">
+<strong>Тепло — безмолвный убийца:</strong> каждые 10&deg;C сверх рейтинга примерно вдвое сокращают срок жизни конденсатора. IP67-драйвер на 400Вт, «варящийся» в герметичной яме, откажет быстрее правильно подобранного вентилируемого IP65 в тени. Подбирайте рейтинг по среде, а не только по ваттам.
+</div>
+
+<h2>Шаг 4: он диммируется или подвержен перенапряжениям?</h2>
+
+<p>Уличные вывески часто диммируют (0-10В ночью) и подвержены перенапряжениям (молнии на длинных трассах). Выбирайте драйвер, поддерживающий ваш стандарт диммирования, и добавьте внешний УЗИП на вводе — см. <a href="/blog-10/">гид по диммированию</a> и <a href="/blog-12/">гид по перенапряжениям</a>.</p>
+
+<h2>Решение в одну строку</h2>
+
+<p><strong>Сухо &rarr; интерьер. Дождь без луж &rarr; IP65. Вода, берег или мойка &rarr; IP67. Больше 400Вт на улице &rarr; вентилируемый IP65 под навесом.</strong></p>
+
+<p>Пришлите фото места установки вместе с нагрузкой в ваттах и длиной трассы. Мы честно скажем, какую линейку покупать — включая случаи, когда более дешёвая IP65 — правильный ответ.</p>
+
+<div class="cta-box">
+<h3>Не уверены, какая защита нужна вашему объекту?</h3>
+<p>Пришлите фото места установки вместе с нагрузкой и длиной трассы. Мы честно скажем, какую линейку покупать.</p>
+<a href="/#inquiry" class="btn">Получить рекомендацию по защите</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Ознакомьтесь с продукцией CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-адаптеры 5-200Вт</span><span class="pc-desc">Компактные блоки 12В/24В для лент, модулей и вывесок.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Интерьерные LED-драйверы 50-400Вт</span><span class="pc-desc">Стабилизированное напряжение с активным PFC для потолочных и панельных светильников.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Водонепроницаемые драйверы IP67 10-400Вт</span><span class="pc-desc">Полностью залитые, испытаны солевым туманом для влажных и прибрежных объектов.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Драйверы IP65 100-600Вт</span><span class="pc-desc">Вентилируемый металлический корпус для вывесок и полууличных установок.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Ещё из поля</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">Светодиодный драйвер IP67 против IP65: какой рейтинг нужен?</span></a>
+  <a class="rel-card" href="/blog-12/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">Защита от перенапряжений для LED-драйверов: молнии и импульсы</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">IP20 против IP65 против IP67 против IP68</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">Как подобрать размер LED-блока: ватты, запас и бросок тока</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Защита от перенапряжений для LED-драйверов: молнии и импульсы</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Сечение кабеля и падение напряжения для LED-установок</span></a></nav>
+</main>"""

@@ -610,3 +610,75 @@ BLOG_BODY['ar']['blog-12'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">تصحيح معامل القدرة ومزودات LED بلا وميض</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">اختيار مزود LED للخارج والبيئات القاسية</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-13'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>اختيار مزود LED للخارج والبيئات القاسية</h1>
+<div class="meta">دليل المشتري &middot; أكتوبر 2026 &middot; 8 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="اختيار مزود LED خارجي لبيئات قاسية" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>« الخارج » ليس بيئة واحدة. صندوق لافتة مختوم تحت مظلة مركز تجاري وجدار بحري يحمل مزودًا كلاهما « خارجي »، لكن واحدًا منهما فقط سيظل يعمل بعد عامين. يسير هذا الدليل من الطرف الجاف إلى المبلل لتختار الوحدة الصحيحة بدل الأرخص.</p>
+
+<h2>سلّم البيئات</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">البيئة</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">التصنيف</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">خط CHUGAO</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>داخل جاف</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP20</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/indoor/">داخلي 50-400W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>شبه خارجي، مطر + غبار</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP65</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip65/">IP65 100-600W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>رطب، قابل للغمر، ساحلي</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 / IP68</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip67/">IP67 10-400W</a></td></tr>
+</tbody>
+</table>
+
+<h2>الخطوة 1: هل يصل الماء إلى المزود؟</h2>
+
+<p>إذا كان المزود داخل صندوق لافتة أو مظلة مختومة، ينساب المطر ولا يتجمع — <a href="/products/ip65/">IP65</a> تكفي وتعمل ببرودة أعلى. أما إن تجمع الماء حول الهيكل فارتقِ إلى وحدة <a href="/products/ip67/">IP67</a> مغمورة بالكامل.</p>
+
+<h2>الخطوة 2: هل هو ساحلي أو يُغسل بالضغط؟</h2>
+
+<p>رذاذ الملح يفسد هيكلًا معدنيًا مُهوّى من الداخل. على جدار بحري أو في محطة غسيل أو مصنع أغذية يُغسل، تحتاج عزلًا سيليكونيًا واختبار رذاذ ملحي. اسأل المورّد أي اختبارات جرت فعلًا، لا فقط أي رقم مطبوع.</p>
+
+<h2>الخطوة 3: كم تبلغ الحرارة؟</h2>
+
+<p>الإحكام يمنع الماء لكنه يحتبس الحرارة. وحدة IP67 مغمورة تبدد عبر هيكلها فقط، لذا حددها عند 70-80% من الحمل المُسمّى في فضاء ساخن ومختوم، وركّبها في هواء متحرك، وتوقع أن تتوقف خط IP67 عند 400W بينما تصل IP65 المُهوّاة إلى 600W. هذه فيزياء لا عملية بيع.</p>
+
+<div class="highlight">
+<strong>الحرارة قاتل صامت:</strong> كل 10&deg;C فوق التصنيف يقلّص عمر المكثّف إلى النصف تقريبًا. مزود IP67 بـ 400W « يُطهى » في حفرة مختومة سيفشل أسرع من وحدة IP65 مُهوّاة ومحددة الحجم جيدًا في الظل. طابِق التصنيف مع البيئة لا مع الواط فقط.
+</div>
+
+<h2>الخطوة 4: هل يُخمَت أو يتعرّض للتأثيرات؟</h2>
+
+<p>اللافتات الخارجية غالبًا تُخمَت (0-10V ليلًا) وتتعرض للتأثيرات (برق على تمديدات طويلة). اختر مزودًا يدعم معيار التخميد لديك وأضف SPD خارجيًا عند التغذية — انظر <a href="/blog-10/">دليل التخميد</a> و<a href="/blog-12/">دليل التأثيرات</a>.</p>
+
+<h2>القرار في سطر واحد</h2>
+
+<p><strong>جاف &rarr; داخلي. مطر بلا تجمّع &rarr; IP65. ماء أو ساحلي أو مغسول &rarr; IP67. أكثر من 400W في الخارج &rarr; IP65 مُهوّى تحت مظلة.</strong></p>
+
+<p>أرسل صورة موقع التركيب مع الحمل بالواط وطول التمديد. سنقول لك بصراحة أي خط تشتري — بما في ذلك حين تكون IP65 الأرخص هي الإجابة الصحيحة.</p>
+
+<div class="cta-box">
+<h3>غير متأكد أي حماية يحتاج موقعك؟</h3>
+<p>أرسل صورة موقع التركيب مع الحمل وطول التمديد. سنقول لك بصراحة أي خط تشتري.</p>
+<a href="/#inquiry" class="btn">احصل على توصية حماية</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">محوّلات LED 5-200W</span><span class="pc-desc">وحدات مدمجة 12V/24V للأشرطة والوحدات واللافتات.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">مزودات LED داخلية 50-400W</span><span class="pc-desc">ثابت الجهد مع PFC نشط لإضاءة السقف واللوحات.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">مغمورة بالكامل، مُختبَرة برذاذ الملح للمواقع الرطبة والساحلية.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">مزودات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">هيكل معدني مُهوّى للافتات والتركيبات شبه الخارجية.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">دليل تقني</span><span class="rel-title">مزود LED IP67 مقابل IP65: أي حماية تحتاج؟</span></a>
+  <a class="rel-card" href="/blog-12/"><span class="rel-cat">دليل تقني</span><span class="rel-title">حماية مزودات LED من التأثيرات: البرق والعابرة</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">دليل تقني</span><span class="rel-title">IP20 مقابل IP65 مقابل IP67 مقابل IP68</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">دليل تقني</span><span class="rel-title">كيف تحدد حجم مزود LED: الواط والهامش والتيار الاندفاعي</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">حماية مزودات LED من التأثيرات: البرق والعابرة</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">مقاس الكابل وهبوط الجهد لتجهيزات LED</span></a></nav>
+</main>"""
