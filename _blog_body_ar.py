@@ -370,3 +370,82 @@ BLOG_BODY['ar']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">كيفية تحديد حجم مزود LED: القدرة والهامش وتيار الاندفاع</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">شرح تغميق مزود LED: 0-10V وPWM وDALI وTRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>شرح تغميق مزود LED: 0-10V وPWM وDALI وTRIAC</h1>
+<div class="meta">دليل تقني &middot; سبتمبر 2026 &middot; 9 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="مقارنة معايير تغميق مزودات LED" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>يجب أن يكون تغميق تركيب LED مجرد إعداد، لا مشروع علمي. لكنه يفشل في الواقع لأن أربعة معايير تغميق مختلفة تشترك في نفس الأسلاك ولا يمكن استبدال أي منها بالآخر. إليك ما يعنيه كل معيار وأيها تحدد لتعمل عناصر التحكم لديك على التغميق فعلًا.</p>
+
+<h2>المعايير الأربعة، ببساطة</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">المعيار</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">كيف يعمل</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">الأفضل لـ</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10V</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">زوج تحكم منخفض الجهد منفصل يضبط 100% عند 10V حتى ~10% عند 0V</td><td style="padding:10px 14px;border:1px solid var(--b)">أسقف تجارية، مبانٍ جديدة</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">تعديل عرض النبضة على جانب DC؛ سلس جدًا، بلا إزاحة لون</td><td style="padding:10px 14px;border:1px solid var(--b)">اللافتات، مواقع حساسة للكاميرات</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">ناقل رقمي قابل للعنونة؛ كل تركيب له عنوان وسجل</td><td style="padding:10px 14px;border:1px solid var(--b)">مبانٍ ذكية كبيرة</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">قطع الطور، يستفيد من مخفت شبكة موجود (حافة صاعدة/هابطة)</td><td style="padding:10px 14px;border:1px solid var(--b)">ترقية، مخفتات حائط موجودة</td></tr>
+</tbody>
+</table>
+
+<h2>0-10V: الخيار التجاري الافتراضي</h2>
+
+<p>0-10V هو المواصفة الأكثر شيوعًا للتركيبات التجارية الجديدة لأنه بسيط ورخيص التوصيل — موصلان منخفضا الجهد إضافيان، بلا بيانات. الفخ أنه يغمق حتى نحو 10% لا حتى الإطفاء التام، ما لم تضف مرحل شبكة للإطفاء. إذا كان مشروعك يحتاج إلى سواد حقيقي، اذكر ذلك في المواصفات.</p>
+
+<h2>PWM: الأكثر سلاسة، الأفضل للافتات</h2>
+
+<p>يغمق PWM الخرج DC بتردد عالٍ. بما أنه لا يغير مستوى التيار أبدًا، لا يكون هناك إزاحة لدرجة حرارة اللون عند التغميق — وهذا مهم لـ <a href="/products/ip65/">اللافتات</a> وأي بيئة كاميرا أو بث لا يُقبل فيها الوميض. يعمل PWM على جانب DC، لذا يقترن بمزود ثابت الجهد.</p>
+
+<h2>DALI: تحكم قابل للعنونة في المبنى</h2>
+
+<p>يضع DALI كل تركيب على ناقل رقمي من سلكين بعنوان خاص به، بحيث يمكن لنظام إدارة المبنى تغميق المناطق وتسجيل الأعطال واستدعاء المشاهد. يكلف أكثر في المزود والإعداد، لكن في مبنى مكاتب من 20 طابقًا يعوض تكلفة العمل. نورّد إصدارات DALI على <a href="/products/indoor/">مزوداتنا الداخلية</a> من 100W فأعلى.</p>
+
+<h2>TRIAC: ترقية دون إعادة أسلاك</h2>
+
+<p>يستفيد تغميق TRIAC (قطع الطور) من مخفت شبكة حائط موجود، فلا يسحب الترقية كابل تحكم جديدًا. الفخ: ليست كل مزودات LED متوافقة مع TRIAC، والمخفتات الرخيصة تطن أو تنقطع عند الطرف المنخفض. استخدم مخفت حافة هابطة (ELV) ومزودًا مصرحًا صراحةً لذلك.</p>
+
+<div class="highlight">
+<strong>التوافق أولًا:</strong> «LED قابل للتغميق» لا يغمق إلا إذا كان <em>المزود</em> يتحدث لغة المخفت. أخبرنا بأي مخفت أو نظام تحكم تستخدم، ونؤكد التوافق قبل الطلب — طرازات داخلية وIP67 المختارة تدعم 0-10V وPWM وTRIAC من 100W فأعلى؛ المحوّلات الأصغر لا تغمق.
+</div>
+
+<h2>ثلاثة أخطاء نراها</h2>
+
+<ol>
+<li><strong>شراء شريط «قابل للتغميق» ومزود غير قابل للتغميق</strong> — المزود هو من يغمق، لا الشريط.</li>
+<li><strong>خلط مخفت TRIAC مع مزود 0-10V</strong> — ليسا نفس النظام؛ النتيجة وميض أو بلا تغميق.</li>
+<li><strong>نسيان كابل التحكم</strong> — 0-10V وDALI يحتاجان زوجهما الإضافي يُسحب وقت التركيب، لا بعده.</li>
+</ol>
+
+<h2>ماذا نحتاج منك</h2>
+
+<p>أرسل طراز المخفت أو نظام التحكم، الحمل بالواط، جهد الخرج، وما إذا كان الموقع جديدًا أو ترقية. سنؤكد معيار التغميق والطراز الصحيح — 0-10V أو PWM أو DALI أو TRIAC.</p>
+
+<div class="cta-box">
+<h3>تحتاج مزودًا يغمق فعلًا؟</h3>
+<p>أخبرنا بالمخفت أو نظام التحكم، الحمل والجهد. سنؤكد معيار التغميق والطراز الصحيح.</p>
+<a href="/#inquiry" class="btn">تأكيد نوع التغميق</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">محوّلات LED 5-200W</span><span class="pc-desc">وحدات مدمجة 12V/24V للأشرطة والوحدات واللافتات.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">مزودات LED داخلية 50-400W</span><span class="pc-desc">ثابت الجهد مع PFC نشط لإضاءة السقف واللوحات.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">مغمورة بالكامل، مُختبَرة برذاذ الملح للمواقع الرطبة والساحلية.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">مزودات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">هيكل معدني مُهوّى للافتات والتركيبات شبه الخارجية.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">دليل المشتري</span><span class="rel-title">تصحيح معامل القدرة ومزودات LED بلا وميض</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">دليل تقني</span><span class="rel-title">مزود LED ثابت الجهد مقابل ثابت التيار: أيهما تحتاج؟</span></a>
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">دليل تقني</span><span class="rel-title">مزود LED مقاوم للماء IP67 مقابل IP65: أي تصنيف تحتاج؟</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">تقنية LED</span><span class="rel-title">اختر مزود LED الصحيح في 3 خطوات</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">مزود LED ثابت الجهد مقابل ثابت التيار: أيهما تحتاج؟</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">تصحيح معامل القدرة ومزودات LED بلا وميض</span></a></nav>
+</main>"""

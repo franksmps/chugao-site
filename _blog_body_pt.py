@@ -371,3 +371,82 @@ BLOG_BODY['pt']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Como dimensionar uma fonte LED: potência, margem e inrush</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Dimming de driver LED explicado: 0-10V, PWM, DALI e TRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['pt']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar às notas de campo</a>
+
+<h1>Dimming de driver LED explicado: 0-10V, PWM, DALI e TRIAC</h1>
+<div class="meta">Guia técnico &middot; setembro de 2026 &middot; 9 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Comparação de padrões de dimerização de drivers LED" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Atenuar uma instalação LED deveria ser um ajuste, não um projeto científico. Na prática dá errado porque quatro padrões de dimerização diferentes compartilham os mesmos fios e nenhum é intercambiável. Aqui está o que cada um é e qual especificar para que seus controles realmente dimmem.</p>
+
+<h2>Os quatro padrões, direto</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Padrão</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Como funciona</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Melhor para</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10V</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Um par de controle de baixa tensão separado fixa 100% a 10V até ~10% a 0V</td><td style="padding:10px 14px;border:1px solid var(--b)">Tetos comerciais, construções novas</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Modulação por largura de pulso no lado DC; muito suave, sem mudança de cor</td><td style="padding:10px 14px;border:1px solid var(--b)">Sinalização, locais sensíveis a câmeras</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Barramento digital endereçável; cada luminária tem endereço e registro</td><td style="padding:10px 14px;border:1px solid var(--b)">Grandes edifícios inteligentes</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Corte de fase, aproveita o dimmer de rede existente (borda subida/descida)</td><td style="padding:10px 14px;border:1px solid var(--b)">Retrofit, dimmers de parede existentes</td></tr>
+</tbody>
+</table>
+
+<h2>0-10V: o padrão comercial padrão</h2>
+
+<p>0-10V é a especificação mais comum para novas instalações comerciais porque é simples e barato de cabear —dois condutores de baixa tensão extras, sem dados. A armadilha é que dimme até cerca de 10%, não totalmente desligado, a menos que adicione um relé de rede para o 'desligado'. Se seu projeto precisa de apagão real, diga na especificação.</p>
+
+<h2>PWM: o mais suave, melhor para sinalização</h2>
+
+<p>PWM dimme a saída DC em alta frequência. Como nunca muda o nível de corrente, não há desvio de temperatura de cor ao dimmer —importante para a <a href="/products/ip65/">sinalização</a> e qualquer ambiente de câmera ou transmissão onde o cintilar é inaceitável. O PWM fica no lado DC, por isso combina com um driver de tensão constante.</p>
+
+<h2>DALI: controle endereçável do edifício</h2>
+
+<p>O DALI coloca cada luminária em um barramento digital de dois fios com seu próprio endereço, assim um sistema de gestão predial pode dimmer zonas, registrar falhas e recuperar cenas. Custa mais em driver e comissionamento, mas em um escritório de 20 andares se paga em mão de obra. Fornecemos versões DALI em <a href="/products/indoor/">drivers de interior</a> a partir de 100W.</p>
+
+<h2>TRIAC: retrofit sem recabeamento</h2>
+
+<p>A dimerização TRIAC (corte de fase) permite a um driver aproveitar um dimmer de parede de rede existente, assim um retrofit não puxa cabo de controle novo. A armadilha: nem todo driver LED é compatível com TRIAC, e dimmers baratos zumbem ou caem na extremidade baixa. Use um dimmer de borda de descida (ELV) e um driver explicitamente classificado para isso.</p>
+
+<div class="highlight">
+<strong>Compatibilidade primeiro:</strong> um "LED dimável" só dimme se o <em>driver</em> falar a língua do dimmer. Diga-nos qual dimmer ou sistema de controle você usa e confirmamos compatibilidade antes de pedir —os modelos selecionados de interior e IP67 suportam 0-10V, PWM e TRIAC a partir de 100W; os adaptadores menores não dimmem.
+</div>
+
+<h2>Três erros que vemos</h2>
+
+<ol>
+<li><strong>Comprar uma tira 'dimável' e um driver não dimável</strong> — O driver faz o dimerizado, não a tira.</li>
+<li><strong>Misturar dimmer TRIAC com driver 0-10V</strong> — Não são o mesmo sistema; o resultado é cintilação ou sem dimmer.</li>
+<li><strong>Esquecer o cabo de controle</strong> — 0-10V e DALI precisam do par extra puxado na instalação, não depois.</li>
+</ol>
+
+<h2>O que precisamos de você</h2>
+
+<p>Envie o modelo do dimmer ou sistema de controle, a carga em watts, a tensão de saída e se o local é construção nova ou retrofit. Confirmaremos o padrão de dimerização e o modelo correto —0-10V, PWM, DALI ou TRIAC.</p>
+
+<div class="cta-box">
+<h3>Precisa de um driver que realmente dimme?</h3>
+<p>Diga-nos o dimmer ou sistema de controle, a carga e a tensão. Confirmaremos o padrão de dimerização e o modelo correto.</p>
+<a href="/#inquiry" class="btn">Confirmar tipo de dimmer</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos e sinalização.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fontes LED de interior 50-400W</span><span class="pc-desc">Tensão constante com PFC ativo para luminárias de teto e painéis.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fontes impermeáveis IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, testadas contra névoa salina para locais úmidos e costeiros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fontes resistentes à chuva IP65 100-600W</span><span class="pc-desc">Caixa de metal ventilada para sinalização e instalações semi-externas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Guia do comprador</span><span class="rel-title">Correção de fator de potência e drivers LED sem cintilação</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Guia técnico</span><span class="rel-title">Fonte LED de tensão constante vs corrente constante: qual você precisa?</span></a>
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guia técnica</span><span class="rel-title">Fonte LED IP67 vs IP65: qual proteção você precisa?</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Escolha a fonte LED certa em 3 passos</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Fonte LED de tensão constante vs corrente constante: qual você precisa?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Correção de fator de potência e drivers LED sem cintilação</span></a></nav>
+</main>"""

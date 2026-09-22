@@ -370,3 +370,82 @@ BLOG_BODY['es']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">Artículo anterior</span><span class="pn-t">Cómo dimensionar una fuente LED: potencia, margen y corriente de irrupción</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">Artículo siguiente</span><span class="pn-t">Dimming de driver LED explicado: 0-10V, PWM, DALI y TRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['es']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Volver a las notas de campo</a>
+
+<h1>Dimming de driver LED explicado: 0-10V, PWM, DALI y TRIAC</h1>
+<div class="meta">Guía técnica &middot; septiembre de 2026 &middot; 9 min de lectura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Comparación de estándares de atenuación de drivers LED" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Atenuar una instalación LED debería ser un ajuste, no un proyecto científico. En la práctica sale mal porque cuatro estándares de atenuación distintos comparten los mismos cables y ninguno es intercambiable. Aquí está qué es cada uno y cuál especificar para que sus controles realmente atenúen.</p>
+
+<h2>Los cuatro estándares, sin rodeos</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Estándar</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Cómo funciona</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Ideal para</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10V</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Un par de control de baja tensión independiente fija el 100% a 10V hasta ~10% a 0V</td><td style="padding:10px 14px;border:1px solid var(--b)">Techos comerciales, obras nuevas</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Modulación por ancho de pulso en el lado DC; muy suave, sin cambio de color</td><td style="padding:10px 14px;border:1px solid var(--b)">Señalización, sitios sensibles a cámaras</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Bus digital direccionable; cada luminaria tiene dirección y registro</td><td style="padding:10px 14px;border:1px solid var(--b)">Edificios inteligentes grandes</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Corte de fase, aprovecha el regulador de red existente (flanco subida/bajada)</td><td style="padding:10px 14px;border:1px solid var(--b)">Retrofit, reguladores de pared existentes</td></tr>
+</tbody>
+</table>
+
+<h2>0-10V: el valor por defecto comercial</h2>
+
+<p>0-10V es la especificación más común para nuevas instalaciones comerciales porque es simple y barato de cablear —dos conductores de baja tensión extra, sin datos. La trampa es que atenúa hasta unos 10%, no a apagado total, salvo que añada un relé de red para el 'apagado'. Si su proyecto necesita negrura real, dígalo en la especificación.</p>
+
+<h2>PWM: el más suave, ideal para señalización</h2>
+
+<p>PWM atenúa la salida DC a alta frecuencia. Como nunca cambia el nivel de corriente, no hay desplazamiento de temperatura de color al atenuar —importante para la <a href="/products/ip65/">señalización</a> y cualquier entorno de cámara o emisión donde el parpadeo es inaceptable. PWM vive en el lado DC, así que se empareja con un driver de tensión constante.</p>
+
+<h2>DALI: control direccionable del edificio</h2>
+
+<p>DALI coloca cada luminaria en un bus digital de dos hilos con su propia dirección, así un sistema de gestión de edificio puede atenuar zonas, registrar fallos y recuperar escenas. Cuesta más en driver y puesta en marcha, pero en una oficina de 20 plantas se amortiza en mano de obra. Suministramos versiones DALI en <a href="/products/indoor/">drivers de interior</a> a partir de 100W.</p>
+
+<h2>TRIAC: retrofit sin recablear</h2>
+
+<p>La atenuación TRIAC (corte de fase) permite a un driver aprovechar un regulador de pared de red existente, así un retrofit no tira cable de control nuevo. La trampa: no todo driver LED es compatible con TRIAC, y los reguladores baratos zumban o se apagan en el extremo bajo. Use un regulador de flanco de bajada (ELV) y un driver explícitamente calificado para ello.</p>
+
+<div class="highlight">
+<strong>Compatibilidad primero:</strong> un "LED dimmable" solo atenúa si el <em>driver</em> habla el lenguaje del regulador. Díganos qué regulador o sistema de control usa y confirmamos compatibilidad antes de pedir —los modelos seleccionados de interior e IP67 soportan 0-10V, PWM y TRIAC a partir de 100W; los adaptadores más pequeños no atenúan.
+</div>
+
+<h2>Tres errores que vemos</h2>
+
+<ol>
+<li><strong>Comprar una tira 'dimmable' y un driver no dimmable</strong> — El driver hace el atenuado, no la tira.</li>
+<li><strong>Mezclar regulador TRIAC con driver 0-10V</strong> — No son el mismo sistema; el resultado es parpadeo o sin atenuado.</li>
+<li><strong>Olvidar el cable de control</strong> — 0-10V y DALI necesitan su par extra tirado en la instalación, no después.</li>
+</ol>
+
+<h2>Qué necesitamos de usted</h2>
+
+<p>Envíe el modelo del regulador o sistema de control, la carga en vatios, la tensión de salida y si el sitio es obra nueva o retrofit. Confirmaremos el estándar de atenuado y el modelo correcto —0-10V, PWM, DALI o TRIAC.</p>
+
+<div class="cta-box">
+<h3>¿Necesita un driver que realmente atenúe?</h3>
+<p>Díganos el regulador o sistema de control, la carga y la tensión. Confirmaremos el estándar de atenuado y el modelo correcto.</p>
+<a href="/#inquiry" class="btn">Confirmar tipo de atenuado</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar productos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos y señalización.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fuentes LED de interior 50-400W</span><span class="pc-desc">Tensión constante con PFC activo para luces de techo y paneles.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fuentes impermeables IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, probadas contra sal marina para lugares húmedos y costeros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fuentes resistentes a la lluvia IP65 100-600W</span><span class="pc-desc">Carcasa metálica ventilada para señalización e instalaciones semiexteriores.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Más del campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Guía del comprador</span><span class="rel-title">Corrección de factor de potencia y drivers LED sin parpadeo</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Guía técnica</span><span class="rel-title">Fuente LED de tensión constante frente a corriente constante: ¿cuál necesita?</span></a>
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guía técnica</span><span class="rel-title">Fuente LED IP67 frente a IP65: ¿qué grado necesita?</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnología LED</span><span class="rel-title">Elija la fuente LED adecuada en 3 pasos</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Artículo anterior</span><span class="pn-t">Fuente LED de tensión constante frente a corriente constante: ¿cuál necesita?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Artículo siguiente</span><span class="pn-t">Corrección de factor de potencia y drivers LED sin parpadeo</span></a></nav>
+</main>"""

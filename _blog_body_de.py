@@ -370,3 +370,82 @@ BLOG_BODY['de']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">LED-Stromversorgung dimensionieren: Leistung, Reserve, Einschaltstrom</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">LED-Treiber-Dimming erklärt: 0-10V, PWM, DALI und TRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>LED-Treiber-Dimming erklärt: 0-10V, PWM, DALI und TRIAC</h1>
+<div class="meta">Technischer Leitfaden &middot; September 2026 &middot; 9 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Vergleich der Dimming-Standards von LED-Treibern" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Das Dimmen einer LED-Anlage sollte eine Einstellung sein, kein Wissenschaftsprojekt. In der Praxis geht es schief, weil vier verschiedene Dimming-Standards dieselben Kabel nutzen und keiner austauschbar ist. Hier ist, was jeder ist und welchen Sie angeben sollten, damit Ihre Steuerungen wirklich dimmen.</p>
+
+<h2>Die vier Standards, kurz gefasst</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Standard</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Funktion</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Am besten für</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10V</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Ein separates Niederspannungs-Steuerpaar setzt 100% bei 10V bis ~10% bei 0V</td><td style="padding:10px 14px;border:1px solid var(--b)">Gewerbliche Decken, Neubauten</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Pulsweitenmodulation auf der DC-Seite; sehr sanft, keine Farbverschiebung</td><td style="padding:10px 14px;border:1px solid var(--b)">Beschilderung, kameraempfindliche Standorte</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Adressierbarer digitaler Bus; jede Leuchte adressiert und protokolliert</td><td style="padding:10px 14px;border:1px solid var(--b)">Große intelligente Gebäude</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Phasenabschnitt, nutzt vorhandenen Netzdimmer (An-/Abbrand)</td><td style="padding:10px 14px;border:1px solid var(--b)">Retrofit, vorhandene Wanddimmer</td></tr>
+</tbody>
+</table>
+
+<h2>0-10V: der kommerzielle Standard</h2>
+
+<p>0-10V ist die gängigste Spezifikation für neue gewerbliche Projekte, weil es einfach und günstig zu verkabeln ist — zwei zusätzliche Niederspannungsleiter, keine Daten. Die Falle: Es dimmt auf etwa 10%, nicht auf vollständig aus, es sei denn, Sie fügen ein Netzrelais für „aus“ hinzu. Wenn Ihr Projekt echtes Schwarz braucht, schreiben Sie das in die Spezifikation.</p>
+
+<h2>PWM: am sanftesten, ideal für Beschilderung</h2>
+
+<p>PWM dimmt die DC-Ausgangsleistung mit hoher Frequenz. Da der Strompegel nie ändert, gibt es beim Dimmen keine Farbtemperatur-Verschiebung — wichtig für <a href="/products/ip65/">Beschilderung</a> und jede Kamera- oder Sendenumgebung, in der Flimmern inakzeptabel ist. PWM liegt auf der DC-Seite und passt daher zu einem Konstantspannungs-Treiber.</p>
+
+<h2>DALI: adressierbare Gebäudesteuerung</h2>
+
+<p>DALI stellt jede Leuchte an einen zweiadrigen digitalen Bus mit eigener Adresse, sodass eine Gebäudemanagement-Software Zonen dimmen, Fehler protokollieren und Szenen abrufen kann. Es kostet mehr bei Treiber und Inbetriebnahme, aber in einem Bürogebäude mit 20 Stockwerken rechnet es sich über die Arbeitszeit. Wir liefern DALI-Versionen auf <a href="/products/indoor/">Innen-Treibern</a> ab 100W.</p>
+
+<h2>TRIAC: Retrofit ohne Neuverkabelung</h2>
+
+<p>TRIAC-Dimming (Phasenabschnitt) lässt einen Treiber einen vorhandenen Netz-Wanddimmer nutzen, sodass ein Retrofit kein neues Steuerkabel zieht. Die Falle: Nicht jeder LED-Treiber ist TRIAC-kompatibel, und billige Dimmer brummen oder fallen am unteren Ende aus. Verwenden Sie einen Phasenabschnitt-Dimmer (ELV) und einen ausdrücklich dafür ausgewiesenen Treiber.</p>
+
+<div class="highlight">
+<strong>Kompatibilität zuerst:</strong> ein „dimmbares LED“ dimmt nur, wenn der <em>Treiber</em> die Sprache des Dimmers spricht. Sagen Sie uns, welchen Dimmer oder Steuersystem Sie verwenden, und wir bestätigen die Kompatibilität vor der Bestellung — ausgewählte Innen- und IP67-Modelle unterstützen 0-10V, PWM und TRIAC ab 100W; die kleinsten Adapter dimmen nicht.
+</div>
+
+<h2>Drei Fehler, die wir sehen</h2>
+
+<ol>
+<li><strong>Eine „dimmbare“ Leiste und einen nicht dimmbaren Treiber kaufen</strong> — Der Treiber dimmt, nicht die Leiste.</li>
+<li><strong>TRIAC-Dimmer mit 0-10V-Treiber mischen</strong> — Das ist nicht dasselbe System; das Ergebnis ist Flimmern oder kein Dimmen.</li>
+<li><strong>Das Steuerkabel vergessen</strong> — 0-10V und DALI brauchen ihr zusätzliches Paar, das bei der Installation gezogen wird, nicht danach.</li>
+</ol>
+
+<h2>Was wir von Ihnen brauchen</h2>
+
+<p>Schicken Sie das Modell des Dimmers oder Steuersystems, die Last in Watt, die Ausgangsspannung und ob der Standort Neubau oder Retrofit ist. Wir bestätigen den Dimming-Standard und das richtige Modell — 0-10V, PWM, DALI oder TRIAC.</p>
+
+<div class="cta-box">
+<h3>Brauchen Sie einen Treiber, der wirklich dimmt?</h3>
+<p>Sagen Sie uns Dimmer oder Steuersystem, Last und Spannung. Wir bestätigen den Dimming-Standard und das richtige Modell.</p>
+<a href="/#inquiry" class="btn">Dimming-Typ bestätigen</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-Adapter 5-200W</span><span class="pc-desc">Kompakte 12V/24V-Geräte für Streifen, Module und Beschilderung.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Innen-LED-Treiber 50-400W</span><span class="pc-desc">Konstantspannung mit aktivem PFC für Decken- und Panelleuchten.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Vollvergossen, salzsprühgetestet für feuchte und Küsten-Standorte.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Spritzwassergeschützte IP65-Treiber 100-600W</span><span class="pc-desc">Belüftetes Metallgehäuse für Beschilderung und semi-außen.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Käuferleitfaden</span><span class="rel-title">Leistungsfaktor-Korrektur und flimmerfreie LED-Treiber</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">LED-Treiber mit Konstantspannung oder Konstantstrom: Welchen benötigen Sie?</span></a>
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">LED-Treiber IP67 oder IP65: Welche Schutzart brauchen Sie?</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-Technologie</span><span class="rel-title">Die richtige LED-Stromversorgung in 3 Schritten wählen</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">LED-Treiber mit Konstantspannung oder Konstantstrom: Welchen benötigen Sie?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Leistungsfaktor-Korrektur und flimmerfreie LED-Treiber</span></a></nav>
+</main>"""

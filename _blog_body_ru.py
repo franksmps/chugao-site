@@ -370,3 +370,82 @@ BLOG_BODY['ru']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Как рассчитать LED-блок: мощность, запас и пусковой ток</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Диммирование LED-драйвера: 0-10В, PWM, DALI и TRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ru']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Назад к полевым заметкам</a>
+
+<h1>Диммирование LED-драйвера: 0-10В, PWM, DALI и TRIAC</h1>
+<div class="meta">Техническое руководство &middot; сентябрь 2026 &middot; 9 мин чтения</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Сравнение стандартов диммирования LED-драйверов" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Диммирование LED-установки должно быть настройкой, а не научным проектом. На практике оно идёт не так, потому что четыре разных стандарта диммирования делят одни и те же провода и ни один из них не взаимозаменяем. Вот что такое каждый и какой указать, чтобы ваши контроллеры действительно затемняли.</p>
+
+<h2>Четыре стандарта, без обиняков</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Стандарт</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Как работает</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Лучше всего для</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10В</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Отдельная пара управления низким напряжением задаёт 100% при 10В до ~10% при 0В</td><td style="padding:10px 14px;border:1px solid var(--b)">Коммерческие потолки, новостройки</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Широтно-импульсная модуляция по DC; очень плавно, без сдвига цвета</td><td style="padding:10px 14px;border:1px solid var(--b)">Вывески, объекты с чувствительными камерами</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Адресуемая цифровая шина; у каждого светильника есть адрес и журнал</td><td style="padding:10px 14px;border:1px solid var(--b)">Крупные умные здания</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Фазовое отсечение, использует существующий сетевой диммер (передний/задний фронт)</td><td style="padding:10px 14px;border:1px solid var(--b)">Ретрофит, существующие настенные диммеры</td></tr>
+</tbody>
+</table>
+
+<h2>0-10В: коммерческий стандарт по умолчанию</h2>
+
+<p>0-10В — самая распространённая спецификация для новых коммерческих объектов, потому что её просто и дёшево прокладывать — два дополнительных провода низкого напряжения, без данных. Ловушка в том, что она затемняет примерно до 10%, а не до полного выключения, если не добавить сетевое реле для «выкл». Если проекту нужна настоящая темнота, укажите это в спецификации.</p>
+
+<h2>PWM: самое плавное, лучше всего для вывесок</h2>
+
+<p>PWM затемняет DC-выход на высокой частоте. Поскольку уровень тока не меняется, при затемнении нет сдвига цветовой температуры — это важно для <a href="/products/ip65/">вывесок</a> и любой среды с камерами или трансляцией, где мерцание недопустимо. PWM работает по DC, поэтому сочетается с драйвером стабилизированного напряжения.</p>
+
+<h2>DALI: адресуемое управление зданием</h2>
+
+<p>DALI ставит каждый светильник на двухпроводную цифровую шину с собственным адресом, так что система управления зданием может затемнять зоны, регистрировать сбои и вызывать сцены. Это дороже по драйверу и пусконаладке, но в офисе на 20 этажей окупается трудозатратами. Мы поставляем версии DALI на <a href="/products/indoor/">интерьерных драйверах</a> от 100Вт.</p>
+
+<h2>TRIAC: ретрофит без перепрокладки</h2>
+
+<p>Диммирование TRIAC (фазовое отсечение) позволяет драйверу использовать существующий настенный сетевой диммер, поэтому при ретрофите не тянут новый кабель управления. Ловушка: не каждый LED-драйвер совместим с TRIAC, а дешёвые диммеры гудят или отключаются на нижнем пределе. Используйте диммер с задним фронтом (ELV) и драйвер, прямо заявленный для этого.</p>
+
+<div class="highlight">
+<strong>Совместимость прежде всего:</strong> «диммируемый LED» затемняется, только если <em>драйвер</em> «говорит на языке» диммера. Скажите нам, какой диммер или систему управления вы используете, и мы подтвердим совместимость до заказа — выбранные интерьерные и IP67-модели поддерживают 0-10В, PWM и TRIAC от 100Вт; самые маленькие адаптеры не диммируются.
+</div>
+
+<h2>Три ошибки, которые мы видим</h2>
+
+<ol>
+<li><strong>Купить «диммируемую» ленту и недиммируемый драйвер</strong> — Затемнение делает драйвер, а не лента.</li>
+<li><strong>Смешать TRIAC-диммер с 0-10В драйвером</strong> — Это не одна система; результат — мерцание или отсутствие затемнения.</li>
+<li><strong>Забыть кабель управления</strong> — 0-10В и DALI нуждаются в своей паре проводов, проложенной при монтаже, а не потом.</li>
+</ol>
+
+<h2>Что нам нужно от вас</h2>
+
+<p>Пришлите модель диммера или системы управления, нагрузку в ваттах, выходное напряжение и то, является ли объект новостройкой или ретрофитом. Мы подтвердим стандарт затемнения и нужную модель — 0-10В, PWM, DALI или TRIAC.</p>
+
+<div class="cta-box">
+<h3>Нужен драйвер, который реально затемняет?</h3>
+<p>Скажите нам диммер или систему управления, нагрузку и напряжение. Мы подтвердим стандарт затемнения и нужную модель.</p>
+<a href="/#inquiry" class="btn">Подтвердить тип затемнения</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Ознакомьтесь с продукцией CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-адаптеры 5-200Вт</span><span class="pc-desc">Компактные блоки 12В/24В для лент, модулей и вывесок.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Интерьерные LED-драйверы 50-400Вт</span><span class="pc-desc">Стабилизированное напряжение с активным PFC для потолочных и панельных светильников.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Водонепроницаемые драйверы IP67 10-400Вт</span><span class="pc-desc">Полностью залитые, испытаны солевым туманом для влажных и прибрежных объектов.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Драйверы IP65 100-600Вт</span><span class="pc-desc">Вентилируемый металлический корпус для вывесок и полууличных установок.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Ещё из поля</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Руководство покупателя</span><span class="rel-title">Коррекция коэффициента мощности и LED-драйверы без мерцания</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">Стабилизатор напряжения или тока для LED: что вам нужно?</span></a>
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">Светодиодный драйвер IP67 против IP65: какой рейтинг нужен?</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-технологии</span><span class="rel-title">Выберите правильный LED-блок за 3 шага</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Стабилизатор напряжения или тока для LED: что вам нужно?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Коррекция коэффициента мощности и LED-драйверы без мерцания</span></a></nav>
+</main>"""

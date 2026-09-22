@@ -371,3 +371,82 @@ BLOG_BODY['fr']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Dimensionner une alimentation LED : puissance, marge et courant d'appel</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Variation d'intensité des drivers LED : 0-10V, PWM, DALI et TRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['fr']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Retour aux notes de terrain</a>
+
+<h1>Variation d'intensité des drivers LED : 0-10V, PWM, DALI et TRIAC</h1>
+<div class="meta">Guide technique &middot; septembre 2026 &middot; 9 min de lecture</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Comparaison des normes de variation des drivers LED" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Faire varier une installation LED devrait être un réglage, pas un projet scientifique. En pratique, cela tourne mal parce que quatre normes de variation différentes partagent les mêmes fils et aucune n'est interchangeable. Voici ce qu'est chacune et laquelle spécifier pour que vos commandes varient vraiment.</p>
+
+<h2>Les quatre normes, simplement</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Norme</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Fonctionnement</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Idéal pour</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10V</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Une paire de commande basse tension séparée fixe 100% à 10V jusqu'à ~10% à 0V</td><td style="padding:10px 14px;border:1px solid var(--b)">Plafonds commerciaux, neuves constructions</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Modulation de largeur d'impulsion côté DC ; très fluide, sans décalage de couleur</td><td style="padding:10px 14px;border:1px solid var(--b)">Signalétique, sites sensibles aux caméras</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Bus numérique adressable ; chaque luminaire a une adresse et un journal</td><td style="padding:10px 14px;border:1px solid var(--b)">Grands bâtiments intelligents</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Coupe de phase, utilise le variateur réseau existant (front montant/descendant)</td><td style="padding:10px 14px;border:1px solid var(--b)">Rétrofit, variateurs muraux existants</td></tr>
+</tbody>
+</table>
+
+<h2>0-10V : la valeur par défaut commerciale</h2>
+
+<p>Le 0-10V est la spécification la plus courante pour les nouvelles installations commerciales car il est simple et peu coûteux à câbler — deux conducteurs basse tension supplémentaires, sans données. Le piège : il varie jusqu'à environ 10%, pas jusqu'à l'extinction totale, sauf si vous ajoutez un relais secteur pour « off ». Si votre projet exige un noir réel, indiquez-le dans la spécification.</p>
+
+<h2>PWM : le plus fluide, idéal pour la signalétique</h2>
+
+<p>Le PWM fait varier la sortie DC à haute fréquence. Comme le niveau de courant ne change jamais, il n'y a pas de décalage de température de couleur à la variation — important pour la <a href="/products/ip65/">signalétique</a> et tout environnement caméra ou diffusion où le scintillement est inacceptable. Le PWM vit côté DC, il s'associe donc à un driver à tension constante.</p>
+
+<h2>DALI : commande adressable du bâtiment</h2>
+
+<p>Le DALI place chaque luminaire sur un bus numérique à deux fils avec sa propre adresse, si bien qu'un système de gestion de bâtiment peut faire varier des zones, journaliser les pannes et rappeler des scènes. Cela coûte plus cher en driver et en commissioning, mais dans un immeuble de bureau de 20 étages cela se rentabilise en main-d'œuvre. Nous fournissons des versions DALI sur les <a href="/products/indoor/">drivers d'intérieur</a> à partir de 100W.</p>
+
+<h2>TRIAC : rétrofit sans recâblage</h2>
+
+<p>La variation TRIAC (coupe de phase) permet à un driver d'utiliser un variateur mural réseau existant, si bien qu'un rétrofit ne tire pas de nouveau câble de commande. Le piège : tout driver LED n'est pas compatible TRIAC, et les variateurs bon marché bourdonnent ou lâchent en bas de course. Utilisez un variateur à front descendant (ELV) et un driver explicitement homologué pour cela.</p>
+
+<div class="highlight">
+<strong>Compatibilité d'abord :</strong> un « LED dimmable » ne varie que si le <em>driver</em> parle la langue du variateur. Dites-nous quel variateur ou système de commande vous utilisez et nous confirmons la compatibilité avant de commander — les modèles sélectionnés d'intérieur et IP67 prennent en charge 0-10V, PWM et TRIAC à partir de 100W ; les plus petits adaptateurs ne varient pas.
+</div>
+
+<h2>Trois erreurs que nous voyons</h2>
+
+<ol>
+<li><strong>Acheter une bande « dimmable » et un driver non dimmable</strong> — C'est le driver qui fait la variation, pas la bande.</li>
+<li><strong>Mélanger variateur TRIAC et driver 0-10V</strong> — Ce ne sont pas le même système ; le résultat est scintillement ou pas de variation.</li>
+<li><strong>Oublier le câble de commande</strong> — 0-10V et DALI ont besoin de leur paire supplémentaire tirée à l'installation, pas après.</li>
+</ol>
+
+<h2>Ce dont nous avons besoin</h2>
+
+<p>Envoyez le modèle du variateur ou du système de commande, la charge en watts, la tension de sortie et si le site est neuf ou en rétrofit. Nous confirmerons la norme de variation et le bon modèle — 0-10V, PWM, DALI ou TRIAC.</p>
+
+<div class="cta-box">
+<h3>Besoin d'un driver qui varie vraiment ?</h3>
+<p>Dites-nous le variateur ou le système de commande, la charge et la tension. Nous confirmerons la norme de variation et le bon modèle.</p>
+<a href="/#inquiry" class="btn">Confirmer le type de variation</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Découvrir les produits CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptateurs LED 5-200W</span><span class="pc-desc">Blocs compacts 12V/24V pour bandeaux, modules et enseignes.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Alimentations LED d'intérieur 50-400W</span><span class="pc-desc">Tension constante avec PFC actif pour plafonniers et panneaux.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Alimentations étanches IP67 10-400W</span><span class="pc-desc">Totalement encapsulées, testées aux brouillards salins pour sites humides et côtiers.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Alimentations anti-pluie IP65 100-600W</span><span class="pc-desc">Boîtier métallique ventilé pour enseignes et installations semi-extérieures.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Encore du terrain</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Guide d'achat</span><span class="rel-title">Correction du facteur de puissance et drivers LED sans scintillement</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Guide technique</span><span class="rel-title">Alimentation LED à tension constante ou à courant constant : laquelle vous faut-il ?</span></a>
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guide technique</span><span class="rel-title">Alimentation LED IP67 ou IP65 : quel indice choisir ?</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Technologie LED</span><span class="rel-title">Choisir la bonne alimentation LED en 3 étapes</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Alimentation LED à tension constante ou à courant constant : laquelle vous faut-il ?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Correction du facteur de puissance et drivers LED sans scintillement</span></a></nav>
+</main>"""
