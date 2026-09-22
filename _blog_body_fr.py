@@ -529,3 +529,85 @@ BLOG_BODY['fr']['blog-11'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Variation d'intensité des drivers LED : 0-10V, PWM, DALI et TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Protection contre les surtensions pour drivers LED : foudre et transitoires</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['fr']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Retour aux notes de terrain</a>
+
+<h1>Protection contre les surtensions pour drivers LED : foudre et transitoires</h1>
+<div class="meta">Guide technique &middot; septembre 2026 &middot; 7 min de lecture</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Driver LED étanche IP67 avec protection contre les surtensions" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Un éclair tombé à trois rues de là peut tuer un driver LED parfaitement bon. La protection contre les surtensions fait la différence entre un driver qui survit à une tempête et un qui devient un déchet électronique — et la plupart des pannes imputées à la « qualité » sont en réalité des entrées non protégées. Voici ce qui protège vraiment un driver.</p>
+
+<h2>D'où viennent les surtensions</h2>
+
+<ul>
+<li><strong>Foudre</strong> — les coups indirects induisent des pics de kilovolts sur les longues lignes extérieures.</li>
+<li><strong>Commutation</strong> — contacteurs, ascenseurs et gros moteurs déversent des transitoires sur le même feeder.</li>
+<li><strong>Coup inductif</strong> — même l'ouverture d'un relais peut générer des pics de plusieurs centaines de volts.</li>
+</ul>
+
+<p>Les drivers d'intérieur sur un réseau propre de bâtiment le voient rarement. Les drivers <a href="/products/ip67/">extérieurs et des sites humides</a> sur de longs parcours de câble le voient constamment, c'est pourquoi la protection contre les surtensions fait partie de l'histoire IP, et non quelque chose de séparé.</p>
+
+<h2>Les deux couches qui comptent</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Couche</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Action</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Classe typique</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MOV intégré</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Serre les petits transitoires à l'intérieur du driver</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV différentiel</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>SPD externe</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Absorbe le gros coup au point d'alimentation</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV, selon IEC 61643</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Point clé :</strong> la pince anti-surtension interne d'un driver gère le bruit quotidien. Un véritable événement foudroyant nécessite un <strong>dispositif externe de protection contre les surtensions (SPD)</strong> à l'entrée d'alimentation, car aucun driver dimensionné pour la chaleur et le coût ne peut absorber seul un coup de plusieurs kiloampères.
+</div>
+
+<h2>Comment spécifier pour un site orageux</h2>
+
+<ol>
+<li><strong>Choisissez un driver IP67 encapsulé</strong> — pour tout parcours extérieur ou côtier — le boîtier scellé est aussi la première ligne contre les pannes d'humidité.</li>
+<li><strong>Ajoutez un SPD à l'alimentation</strong> —  — un parafoudre Type 2 sur le tableau de répartition alimentant les luminaires.</li>
+<li><strong>Gardez le câble hors du sol</strong> — et loin du réseau si possible ; les trajets parallèles invitent les pics induits.</li>
+<li><strong>Mettez le boîtier à la terre correctement</strong> — ; un driver non relié à la terre ne peut pas évacuer un coup en sécurité.</li>
+</ol>
+
+<h2>Idées reçues courantes sur les surtensions</h2>
+
+<ul>
+<li><strong>« IP67 signifie protégé contre les surtensions. »</strong> Non — l'IP c'est l'eau, pas les volts. Ce sont des spécifications distinctes ; achetez les deux.</li>
+<li><strong>« Un driver protégé protège la chaîne. »</strong> La décharge parcourt le câble ; protégez l'alimentation, pas une unité.</li>
+<li><strong>« L'intérieur est sûr. »</strong> Les drivers d'intérieur sur un feeder partagé avec ascenseurs ou compresseurs voient aussi des pics de commutation — demandez la classe de pince interne.</li>
+</ul>
+
+<p>Nos <a href="/products/ip67/">drivers étanches IP67</a> et <a href="/products/ip65/">drivers anti-pluie IP65</a> intègrent de série des pinces anti-surtension internes ; pour les sites exposés nous recommandons un SPD externe à l'alimentation et le dimensionnons avec vous.</p>
+
+<h2>Ce dont nous avons besoin</h2>
+
+<p>Envoyez le site (toit, côte, intérieur), la longueur du parcours de câble et si vous avez déjà un SPD au tableau. Nous confirmerons la classe anti-surtension du driver et la protection externe à ajouter.</p>
+
+<div class="cta-box">
+<h3>Vous protégez un site extérieur ou côtier ?</h3>
+<p>Envoyez le site, la longueur du parcours de câble et si vous avez un SPD au tableau. Nous confirmerons la classe anti-surtension et la protection externe à ajouter.</p>
+<a href="/#inquiry" class="btn">Obtenir un plan anti-surtension</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Découvrir les produits CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptateurs LED 5-200W</span><span class="pc-desc">Blocs compacts 12V/24V pour bandeaux, modules et enseignes.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Alimentations LED d'intérieur 50-400W</span><span class="pc-desc">Tension constante avec PFC actif pour plafonniers et panneaux.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Alimentations étanches IP67 10-400W</span><span class="pc-desc">Totalement encapsulées, testées aux brouillards salins pour sites humides et côtiers.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Alimentations anti-pluie IP65 100-600W</span><span class="pc-desc">Boîtier métallique ventilé pour enseignes et installations semi-extérieures.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Encore du terrain</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guide technique</span><span class="rel-title">Driver LED IP67 vs IP65 : quelle protection choisir ?</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">Guide d'achat</span><span class="rel-title">Choisir une alimentation LED pour extérieur et sites extrêmes</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guide technique</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Guide d'achat</span><span class="rel-title">Correction du facteur de puissance et drivers LED sans scintillement</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Correction du facteur de puissance et drivers LED sans scintillement</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Choisir une alimentation LED pour extérieur et sites extrêmes</span></a></nav>
+</main>"""

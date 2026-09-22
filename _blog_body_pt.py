@@ -529,3 +529,85 @@ BLOG_BODY['pt']['blog-11'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Dimming de driver LED explicado: 0-10V, PWM, DALI e TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Proteção contra surtos para drivers LED: raios e transitórios</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['pt']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar às notas de campo</a>
+
+<h1>Proteção contra surtos para drivers LED: raios e transitórios</h1>
+<div class="meta">Guia técnico &middot; setembro de 2026 &middot; 7 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Driver LED impermeável IP67 com proteção contra surtos" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Um raio a três ruas de distância pode matar um driver LED perfeitamente bom. A proteção contra surtos é a diferença entre um driver que sobrevive a uma tempestade e um que vira lixo eletrônico — e a maioria das falhas atribuídas à "qualidade" são na verdade entradas desprotegidas. Aqui está o que realmente protege um driver.</p>
+
+<h2>De onde vêm os surtos</h2>
+
+<ul>
+<li><strong>Raio</strong> — descargas indiretas induzem picos de quilovolts em tramos externos longos.</li>
+<li><strong>Comutação</strong> — contatores, elevadores e grandes motores despejam transitórios no mesmo alimentador.</li>
+<li><strong>Kick indutivo</strong> — até abrir um relé pode gerar picos de centenas de volts.</li>
+</ul>
+
+<p>Drivers de interior em rede limpa de prédio raramente veem isso. Drivers <a href="/products/ip67/">externos e de local úmido</a> em tramos de cabo longos veem constantemente, por isso a proteção contra surtos faz parte da história IP, não algo separado dela.</p>
+
+<h2>As duas camadas que importam</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Camada</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">O que faz</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Classificação típica</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MOV interno</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Aperta transitórios pequenos dentro do driver</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV diferencial</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>SPD externo</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Absorve o grande surto no ponto de alimentação</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV, conforme IEC 61643</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Ponto-chave:</strong> o clamp de surto interno de um driver absorve o ruído cotidiano. Um evento de raio real precisa de um <strong>dispositivo externo de proteção contra surtos (SPD)</strong> na entrada de alimentação, porque nenhum driver dimensionado para calor e custo aguenta sozinho um surto de vários quiloamperes.
+</div>
+
+<h2>Como especificar para um local tempestuoso</h2>
+
+<ol>
+<li><strong>Escolha um driver IP67 encapsulado</strong> — para qualquer tramo externo ou costeiro — a caixa selada também é a primeira linha contra falhas por umidade.</li>
+<li><strong>Adicione um SPD na alimentação</strong> —  — um limitador de surtos Tipo 2 no quadro de distribuição que alimenta as luzes.</li>
+<li><strong>Mantenha o cabo fora do chão</strong> — e longe da rede onde possível; tramos paralelos atraem picos induzidos.</li>
+<li><strong>Aterre a caixa corretamente</strong> — ; um driver sem terra não consegue descarregar um surto com segurança.</li>
+</ol>
+
+<h2>Mitos comuns sobre surtos</h2>
+
+<ul>
+<li><strong>"IP67 significa imune a surtos."</strong> Não — IP é água, não volts. São especificações separadas; compre ambas.</li>
+<li><strong>"Um driver protegido protege a cadeia."</strong> O surto percorre o cabo; proteja a alimentação, não uma unidade.</li>
+<li><strong>"Interior é seguro."</strong> Drivers de interior num alimentador compartilhado com elevadores ou compressores também veem picos de comutação — pergunte pela classificação de clamp interno.</li>
+</ul>
+
+<p>Nossos <a href="/products/ip67/">drivers impermeáveis IP67</a> e <a href="/products/ip65/">drivers resistentes à chuva IP65</a> trazem clamps de surto internos de série; para locais expostos recomendamos um SPD externo na alimentação e o dimensionamos com você.</p>
+
+<h2>O que precisamos de você</h2>
+
+<p>Envie o local (cobertura, costa, interior), o comprimento do tramo de cabo e se já tem um SPD no quadro. Confirmaremos a classificação de surto do driver e a proteção externa a adicionar.</p>
+
+<div class="cta-box">
+<h3>Protege um local externo ou costeiro?</h3>
+<p>Envie o local, o comprimento do tramo de cabo e se tem um SPD no quadro. Confirmaremos a classificação de surto e a proteção externa a adicionar.</p>
+<a href="/#inquiry" class="btn">Obter um plano de surtos</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos e sinalização.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fontes LED de interior 50-400W</span><span class="pc-desc">Tensão constante com PFC ativo para luminárias de teto e painéis.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fontes impermeáveis IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, testadas contra névoa salina para locais úmidos e costeiros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fontes resistentes à chuva IP65 100-600W</span><span class="pc-desc">Caixa de metal ventilada para sinalização e instalações semi-externas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guia técnico</span><span class="rel-title">Driver LED IP67 vs IP65: qual proteção você precisa?</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">Guia do comprador</span><span class="rel-title">Escolhendo uma fonte LED para exteriores e locais extremos</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guia técnico</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Guia do comprador</span><span class="rel-title">Correção de fator de potência e drivers LED sem cintilação</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Correção de fator de potência e drivers LED sem cintilação</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Escolhendo uma fonte LED para exteriores e locais extremos</span></a></nav>
+</main>"""

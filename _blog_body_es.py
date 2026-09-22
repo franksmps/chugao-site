@@ -528,3 +528,85 @@ BLOG_BODY['es']['blog-11'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Artículo anterior</span><span class="pn-t">Dimming de driver LED explicado: 0-10V, PWM, DALI y TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Artículo siguiente</span><span class="pn-t">Protección contra sobretensiones para drivers LED: rayos y transitorios</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['es']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Volver a las notas de campo</a>
+
+<h1>Protección contra sobretensiones para drivers LED: rayos y transitorios</h1>
+<div class="meta">Guía técnica &middot; septiembre de 2026 &middot; 7 min de lectura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Driver LED impermeable IP67 con protección contra sobretensiones" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Un rayo caído a tres calles de distancia puede matar a un driver LED perfectamente bueno. La protección contra sobretensiones es la diferencia entre un driver que sobrevive a una tormenta y uno que se convierte en residuo electrónico — y la mayoría de los fallos achacados a la «calidad» son en realidad entradas desprotegidas. Aquí está lo que realmente protege un driver.</p>
+
+<h2>De dónde vienen las sobretensiones</h2>
+
+<ul>
+<li><strong>Rayo</strong> — las descargas indirectas inducen picos de kilovoltios en tramos exteriores largos.</li>
+<li><strong>Conmutación</strong> — contactores, ascensores y motores grandes vierten transitorios en el mismo alimentador.</li>
+<li><strong>Kick inductivo</strong> — incluso abrir un relé puede generar picos de cientos de voltios.</li>
+</ul>
+
+<p>Los drivers de interior en redes limpias de edificio rara vez lo ven. Los drivers <a href="/products/ip67/">exteriores y de sitios húmedos</a> en tramos de cable largos lo ven constantemente, por eso la protección frente a sobretensiones forma parte de la historia IP, no algo separado de ella.</p>
+
+<h2>Las dos capas que importan</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Capa</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Qué hace</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Clasificación típica</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MOV integrado</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Sujeeta transitorios pequeños dentro del driver</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV diferencial</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>SPD externo</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Absorbe la descarga grande en el punto de alimentación</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV, según IEC 61643</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Punto clave:</strong> la sujeción interna de sobretensión de un driver maneja el ruido cotidiano. Un evento de rayo real necesita un <strong>dispositivo externo de protección contra sobretensiones (SPD)</strong> en la entrada de alimentación, porque ningún driver dimensionado para calor y coste puede absorber solo una descarga de varios kiloamperios.
+</div>
+
+<h2>Cómo especificar para un sitio tormentoso</h2>
+
+<ol>
+<li><strong>Elija un driver IP67 encapsulado</strong> — para cualquier tramo exterior o costero — la caja sellada es también la primera línea contra fallos por humedad.</li>
+<li><strong>Añada un SPD en la alimentación</strong> —  — un limitador de sobretensiones Tipo 2 en el cuadro de distribución que alimenta las luces.</li>
+<li><strong>Mantenga el cable fuera del suelo</strong> — y lejos de la red donde sea posible; los tendidos paralelos invitan a picos inducidos.</li>
+<li><strong>Conecte a tierra la caja correctamente</strong> — ; un driver sin tierra no puede evacuar una descarga con seguridad.</li>
+</ol>
+
+<h2>Mitos comunes sobre sobretensiones</h2>
+
+<ul>
+<li><strong>"IP67 significa inmune a sobretensiones."</strong> No — la IP es agua, no voltios. Son especificaciones separadas; cómprelas ambas.</li>
+<li><strong>"Un driver protegido protege toda la cadena."</strong> La descarga recorre el cable; proteja la alimentación, no una unidad.</li>
+<li><strong>"El interior es seguro."</strong> Los drivers de interior en un alimentador compartido con ascensores o compresores también ven picos de conmutación — pregunte por la clasificación de sujeción integrada.</li>
+</ul>
+
+<p>Nuestros <a href="/products/ip67/">drivers impermeables IP67</a> y <a href="/products/ip65/">drivers resistentes a la lluvia IP65</a> llevan sujeciones internas de sobretensión de serie; para sitios expuestos recomendamos un SPD externo en la alimentación y lo dimensionamos con usted.</p>
+
+<h2>Qué necesitamos de usted</h2>
+
+<p>Envíe el sitio (azotea, costa, interior), la longitud del tramo de cable y si ya tiene un SPD en el cuadro. Confirmaremos la clasificación de sobretensión del driver y la protección externa a añadir.</p>
+
+<div class="cta-box">
+<h3>¿Protege un sitio exterior o costero?</h3>
+<p>Envíe el sitio, la longitud del tramo de cable y si tiene un SPD en el cuadro. Confirmaremos la clasificación de sobretensión y la protección externa a añadir.</p>
+<a href="/#inquiry" class="btn">Obtener un plan de sobretensiones</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar productos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos y señalización.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fuentes LED de interior 50-400W</span><span class="pc-desc">Tensión constante con PFC activo para luces de techo y paneles.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fuentes impermeables IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, probadas contra sal marina para lugares húmedos y costeros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fuentes resistentes a la lluvia IP65 100-600W</span><span class="pc-desc">Carcasa metálica ventilada para señalización e instalaciones semiexteriores.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Más del campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guía técnica</span><span class="rel-title">Driver LED IP67 frente a IP65: ¿qué protección necesita?</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">Guía del comprador</span><span class="rel-title">Elegir una fuente LED para exteriores y sitios extremos</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guía técnica</span><span class="rel-title">IP20 frente a IP65 frente a IP67 frente a IP68</span></a>
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Guía del comprador</span><span class="rel-title">Corrección de factor de potencia y drivers LED sin parpadeo</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Artículo anterior</span><span class="pn-t">Corrección de factor de potencia y drivers LED sin parpadeo</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Artículo siguiente</span><span class="pn-t">Elegir una fuente LED para exteriores y sitios extremos</span></a></nav>
+</main>"""

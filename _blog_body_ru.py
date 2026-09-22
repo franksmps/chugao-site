@@ -528,3 +528,85 @@ BLOG_BODY['ru']['blog-11'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Диммирование LED-драйвера: 0-10В, PWM, DALI и TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Защита от перенапряжений для LED-драйверов: молнии и импульсы</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ru']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Назад к полевым заметкам</a>
+
+<h1>Защита от перенапряжений для LED-драйверов: молнии и импульсы</h1>
+<div class="meta">Техническое руководство &middot; сентябрь 2026 &middot; 7 мин чтения</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Водонепроницаемый LED-драйвер IP67 с защитой от перенапряжений" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Удар молнии в трёх кварталах отсюда способен убить вполне исправный LED-драйвер. Защита от перенапряжений — это разница между драйвером, пережившим грозу, и превратившимся в электронный мусор, а большинство отказов, которые списывают на «качество», на деле вызваны незащищёнными входами. Вот что реально защищает драйвер.</p>
+
+<h2>Откуда берутся перенапряжения</h2>
+
+<ul>
+<li><strong>Молния</strong> — косвенные удары наводят киловольтные всплески на длинных наружных участках.</li>
+<li><strong>Коммутация</strong> — контакторы, лифты и крупные моторы сбрасывают импульсы в тот же питающий кабель.</li>
+<li><strong>Индуктивный выброс</strong> — даже размыкание реле может дать всплеск в сотни вольт.</li>
+</ul>
+
+<p>Интерьерные драйверы на чистой заводской сети видят это редко. <a href="/products/ip67/">Наружные и влажные</a> драйверы на длинных кабельных трассах сталкиваются постоянно — поэтому защита от перенапряжений часть истории про IP, а не что-то отдельное.</p>
+
+<h2>Два слоя, которые важны</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Слой</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Что делает</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Типичный рейтинг</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Встроенный MOV</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Гасит мелкие импульсы внутри драйвера</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 кВ дифференциально</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Внешний УЗИП</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Поглощает большой удар в точке ввода</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 кВ, по IEC 61643</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Главное:</strong> внутренний ограничитель перенапряжения драйвера справляется с повседневным шумом. Настоящий удар молнии требует <strong>внешнего устройства защиты от перенапряжений (УЗИП)</strong> на вводе питания, ведь ни один драйвер, рассчитанный по теплу и цене, не съест многокилоамперный удар в одиночку.
+</div>
+
+<h2>Как задать защиту для грозового объекта</h2>
+
+<ol>
+<li><strong>Берите залитый IP67-драйвер</strong> — для любого наружного или прибрежного участка — герметичный корпус также первая линия против влажных отказов.</li>
+<li><strong>Добавьте УЗИП на вводе</strong> —  — ограничитель перенапряжения Тип 2 на распределительном щите питания светильников.</li>
+<li><strong>Держите кабель над землёй</strong> — и вдали от силовой сети где возможно; параллельные трассы наводят всплески.</li>
+<li><strong>Заземлите корпус правильно</strong> — ; незаземлённый драйвер не сбросит удар безопасно.</li>
+</ol>
+
+<h2>Распространённые мифы о перенапряжениях</h2>
+
+<ul>
+<li><strong>«IP67 значит защищён от импульсов».</strong> Нет — IP это вода, не вольты. Это разные характеристики; покупайте обе.</li>
+<li><strong>«Один защищённый драйвер защищает всю цепочку».</strong> Удар идёт по кабелю; защищайте ввод, а не одно устройство.</li>
+<li><strong>«В помещении безопасно».</strong> Интерьерные драйверы на общем фидере с лифтами или компрессорами тоже видят коммутационные всплески — спрашивайте встроенный рейтинг ограничителя.</li>
+</ul>
+
+<p>Наши <a href="/products/ip67/">водонепроницаемые драйверы IP67</a> и <a href="/products/ip65/">драйверы IP65</a> несут встроенные ограничители перенапряжения в базе; для открытых объектов мы рекомендуем внешний УЗИП на вводе и подберём его вместе с вами.</p>
+
+<h2>Что нам нужно от вас</h2>
+
+<p>Пришлите объект (крыша, побережье, материк), длину кабельной трассы и есть ли уже УЗИП на щите. Мы подтвердим рейтинг перенапряжения драйвера и внешнюю защиту к добавлению.</p>
+
+<div class="cta-box">
+<h3>Защищаете наружный или прибрежный объект?</h3>
+<p>Пришлите объект, длину кабельной трассы и есть ли УЗИП на щите. Мы подтвердим рейтинг перенапряжения и внешнюю защиту к добавлению.</p>
+<a href="/#inquiry" class="btn">Получить план защиты</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Ознакомьтесь с продукцией CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-адаптеры 5-200Вт</span><span class="pc-desc">Компактные блоки 12В/24В для лент, модулей и вывесок.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Интерьерные LED-драйверы 50-400Вт</span><span class="pc-desc">Стабилизированное напряжение с активным PFC для потолочных и панельных светильников.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Водонепроницаемые драйверы IP67 10-400Вт</span><span class="pc-desc">Полностью залитые, испытаны солевым туманом для влажных и прибрежных объектов.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Драйверы IP65 100-600Вт</span><span class="pc-desc">Вентилируемый металлический корпус для вывесок и полууличных установок.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Ещё из поля</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">Светодиодный драйвер IP67 против IP65: какой рейтинг нужен?</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">Руководство покупателя</span><span class="rel-title">Выбор LED-блока для улицы и суровых объектов</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">IP20 против IP65 против IP67 против IP68</span></a>
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Руководство покупателя</span><span class="rel-title">Коррекция коэффициента мощности и LED-драйверы без мерцания</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Коррекция коэффициента мощности и LED-драйверы без мерцания</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Выбор LED-блока для улицы и суровых объектов</span></a></nav>
+</main>"""

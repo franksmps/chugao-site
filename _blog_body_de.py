@@ -528,3 +528,85 @@ BLOG_BODY['de']['blog-11'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">LED-Treiber-Dimming erklärt: 0-10V, PWM, DALI und TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Überspannungsschutz für LED-Treiber: Blitz und Transienten</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>Überspannungsschutz für LED-Treiber: Blitz und Transienten</h1>
+<div class="meta">Technischer Leitfaden &middot; September 2026 &middot; 7 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Wasserdichter IP67-LED-Treiber mit Überspannungsschutz" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Ein Blitzeinschlag drei Straßen weiter kann einen ansonsten einwandfreien LED-Treiber zerstören. Überspannungsschutz ist der Unterschied zwischen einem Treiber, der ein Gewitter überlebt, und einem, der zu Elektroschrott wird — und die meisten Ausfälle, die man der „Qualität" zuschreibt, sind in Wahrheit ungeschützte Eingänge. Hier steht, was einen Treiber wirklich schützt.</p>
+
+<h2>Woher Überspannungen kommen</h2>
+
+<ul>
+<li><strong>Blitz</strong> — indirekte Einschläge induzieren Kilovolt-Spitzen auf langen Außenstrecken.</li>
+<li><strong>Schalten</strong> — Schütze, Aufzüge und große Motoren speisen Transienten in denselben Versorgungszweig.</li>
+<li><strong>Induktiver Kick</strong> — selbst das Öffnen eines Relais kann Spitzen von Hunderten von Volt erzeugen.</li>
+</ul>
+
+<p>Innen-Treiber an sauberen Gebäudenetzen sehen das selten. <a href="/products/ip67/">Außen- und Feuchtraum-Treiber</a> auf langen Kabelstrecken sehen es ständig — weshalb die Überspannungsfestigkeit Teil der IP-Geschichte ist und nicht davon getrennt.</p>
+
+<h2>Die zwei Schichten, die zählen</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Schicht</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Funktion</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Typische Klasse</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Integriertes MOV</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Begrenzt kleine Transienten im Treiber</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV differenziell</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Externes SPD</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Absorbiert den großen Einschlag am Einspeisepunkt</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV, nach IEC 61643</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Kernpunkt:</strong> Die interne Überspannungsklemme eines Treibers bewältigt den Alltagslärm. Ein echtes Blitzereignis braucht ein <strong>externes Überspannungsschutzgerät (SPD)</strong> am Versorgungseingang, denn kein auf Wärme und Kosten dimensionierter Treiber frisst allein einen multi-Kiloampere-Einschlag.
+</div>
+
+<h2>So spezifiziert man für eine sturmgefährdete Stätte</h2>
+
+<ol>
+<li><strong>Wählen Sie einen vergossenen IP67-Treiber</strong> — für jede Außen- oder Küstenstrecke — das dichte Gehäuse ist auch die erste Linie gegen feuchte Ausfälle.</li>
+<li><strong>Setzen Sie ein SPD an die Einspeisung</strong> —  — ein Überspannungsschutz Typ 2 am Verteiler, der die Leuchten speist.</li>
+<li><strong>Halten Sie das Kabel vom Boden fern</strong> — und wo möglich weg vom Netz; Parallelstrecken laden induzierte Spitzen ein.</li>
+<li><strong>Erden Sie das Gehäuse ordnungsgemäß</strong> — ; ein nicht geerdeter Treiber kann einen Einschlag nicht sicher abführen.</li>
+</ol>
+
+<h2>Häufige Überspannungs-Mythen</h2>
+
+<ul>
+<li><strong>„IP67 bedeutet blitzfest."</strong> Nein — IP ist Wasser, keine Volt. Das sind getrennte Kenngrößen; kaufen Sie beide.</li>
+<li><strong>„Ein geschützter Treiber schützt die Kette."</strong> Der Einschlag läuft über das Kabel; schützen Sie die Einspeisung, nicht eine Einheit.</li>
+<li><strong>„Innen ist sicher."</strong> Innen-Treiber an einem gemeinsamen Zweig mit Aufzügen oder Kompressoren sehen ebenfalls Schalt-Transienten — fragen Sie nach der integrierten Klemme.</li>
+</ul>
+
+<p>Unsere <a href="/products/ip67/">wasserdichten IP67-Treiber</a> und <a href="/products/ip65/">spritzwassergeschützten IP65-Treiber</a> haben interne Überspannungsklemmen serienmäßig; für exponierte Stätten empfehlen wir ein externes SPD an der Einspeisung und dimensionieren es mit Ihnen.</p>
+
+<h2>Was wir von Ihnen brauchen</h2>
+
+<p>Senden Sie die Stätte (Dach, Küste, Binnenland), die Kabellänge und ob am Verteiler bereits ein SPD vorhanden ist. Wir bestätigen die Überspannungsklasse des Treibers und den hinzuzufügenden externen Schutz.</p>
+
+<div class="cta-box">
+<h3>Schützen Sie eine Außen- oder Küstenstätte?</h3>
+<p>Senden Sie die Stätte, die Kabellänge und ob am Verteiler ein SPD vorhanden ist. Wir bestätigen die Überspannungsklasse und den hinzuzufügenden externen Schutz.</p>
+<a href="/#inquiry" class="btn">Überspannungsplan anfordern</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-Adapter 5-200W</span><span class="pc-desc">Kompakte 12V/24V-Geräte für Streifen, Module und Beschilderung.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Innen-LED-Treiber 50-400W</span><span class="pc-desc">Konstantspannung mit aktivem PFC für Decken- und Panelleuchten.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Vollvergossen, salzsprühgetestet für feuchte und Küsten-Standorte.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Spritzwassergeschützte IP65-Treiber 100-600W</span><span class="pc-desc">Belüftetes Metallgehäuse für Beschilderung und semi-außen.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">LED-Treiber IP67 vs IP65: Welche Schutzart brauchen Sie?</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">Käuferleitfaden</span><span class="rel-title">LED-Netzteil für Außen und extreme Standorte wählen</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Käuferleitfaden</span><span class="rel-title">Leistungsfaktor-Korrektur und flimmerfreie LED-Treiber</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">Leistungsfaktor-Korrektur und flimmerfreie LED-Treiber</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">LED-Netzteil für Außen und extreme Standorte wählen</span></a></nav>
+</main>"""

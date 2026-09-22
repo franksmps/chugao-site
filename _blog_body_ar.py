@@ -528,3 +528,85 @@ BLOG_BODY['ar']['blog-11'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">شرح تغميق مزود LED: 0-10V وPWM وDALI وTRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">حماية مزودات LED من التأثيرات: البرق والعابرة</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>حماية مزودات LED من التأثيرات: البرق والعابرة</h1>
+<div class="meta">دليل تقني &middot; سبتمبر 2026 &middot; 7 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="مزود LED مقاوم للماء IP67 مع حماية من التأثيرات" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>يمكن لصاعقة تضرب على بُعد ثلاثة شوارع أن تُتلف مزود LED سليمًا تمامًا. الحماية من التأثيرات هي الفرق بين مزود ينجو من عاصفة وآخر يصبح نفايات إلكترونية — ومعظم الأعطال المنسوبة إلى « الجودة » هي في الحقيقة مدخلات غير محمية. إليك ما يحمي المزود فعلًا.</p>
+
+<h2>من أين تأتي التأثيرات</h2>
+
+<ul>
+<li><strong>البرق</strong> — الضربات غير المباشرة تحث نبضات كيلوفولتية على التمديدات الخارجية الطويلة.</li>
+<li><strong>القطع</strong> — القواطع والمصاعد والمحركات الكبيرة تُلقي عابرات على نفس الخط التغذوي.</li>
+<li><strong>الارتداد الحثي</strong> — حتى فتح مرحل قد يولد نبضات بمئات الفولتات.</li>
+</ul>
+
+<p>مزودات الداخل على شبكة مبنى نظيفة نادرًا ما تواجه هذا. مزودات <a href="/products/ip67/">الخارج والبيئات الرطبة</a> على تمديدات كابلات طويلة تواجهه باستمرار، ولهذا تكون الحماية من التأثيرات جزءًا من قصة IP لا شيئًا منفصلًا عنها.</p>
+
+<h2>الطبقتان اللتان تهمان</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">الطبقة</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">وظيفتها</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">التصنيف النموذجي</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>مثبّت MOV داخلي</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">يقمع العابرات الصغيرة داخل المزود</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 كيلوفولت تفاضلي</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>SPD خارجي</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">يمتص الصاعقة الكبيرة عند نقطة التغذية</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 كيلوفولت، وفق IEC 61643</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>نقطة جوهرية:</strong> قابض التأثيرات الداخلي للمزود يتعامل مع ضجيج يومي. حدث برق حقيقي يحتاج إلى <strong>جهاز حماية خارجي من التأثيرات (SPD)</strong> عند مدخل التغذية، لأنه لا مزود مصمم للحرارة والتكلفة يستطيع ابتلاع ضربة بآلاف الأمبير وحده.
+</div>
+
+<h2>كيف تحدد المواصفات لموقع عاصف</h2>
+
+<ol>
+<li><strong>اختر مزود IP67 مغمورًا</strong> —  لأي تمديد خارجي أو ساحلي — الهيكل المختوم هو أيضًا خط الدفاع الأول ضد أعطال الرطوبة.</li>
+<li><strong>أضف SPD عند التغذية</strong> —  — قاطع تأثيرات من النوع 2 على لوحة التوزيع التي تغذي الإضاءة.</li>
+<li><strong>أبقِ الكابل بعيدًا عن الأرض</strong> —  وبعيدًا عن شبكة التيار حيث يمكن؛ التمديدات المتوازية تستدعي نبضات محثوثة.</li>
+<li><strong>ارتكز الهيكل بشكل صحيح</strong> — ؛ مزود بلا أرضي لا يمكنه تفريغ صاعقة بأمان.</li>
+</ol>
+
+<h2>خرافات شائعة عن التأثيرات</h2>
+
+<ul>
+<li><strong>« IP67 تعني محميًا من التأثيرات. »</strong> لا — IP ماء لا فولتات. هما مواصفتان منفصلتان؛ اشترِ كلتيهما.</li>
+<li><strong>« مزود واحد محمٍ يحمي السلسلة. »</strong> الصاعقة تقطع الكابل؛ احمِ التغذية لا وحدة واحدة.</li>
+<li><strong>« الداخل آمن. »</strong> مزودات الداخل على خط مشترك مع مصاعد أو ضواغط تظل ترى نبضات القطع — اسأل عن تصنيف القابض الداخلي.</li>
+</ul>
+
+<p>مزوداتنا <a href="/products/ip67/">المقاومة للماء IP67</a> و<a href="/products/ip65/">المقاومة للمطر IP65</a> تحمل قوابس تأثيرات داخلية كمعيار أساسي؛ للمواقع المكشوفة نوصي بـ SPD خارجي عند التغذية ونحدده معك.</p>
+
+<h2>ماذا نحتاج منك</h2>
+
+<p>أرسل الموقع (سطح، ساحلي، داخلي)، وطول تمديد الكابل، وما إذا كان لديك SPD على اللوحة. سنؤكد تصنيف تأثيرات المزود والحماية الخارجية للإضافة.</p>
+
+<div class="cta-box">
+<h3>تحمي موقعًا خارجيًا أو ساحليًا؟</h3>
+<p>أرسل الموقع، وطول تمديد الكابل، وما إذا كان لديك SPD على اللوحة. سنؤكد تصنيف التأثيرات والحماية الخارجية للإضافة.</p>
+<a href="/#inquiry" class="btn">احصل على خطة تأثيرات</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">محوّلات LED 5-200W</span><span class="pc-desc">وحدات مدمجة 12V/24V للأشرطة والوحدات واللافتات.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">مزودات LED داخلية 50-400W</span><span class="pc-desc">ثابت الجهد مع PFC نشط لإضاءة السقف واللوحات.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">مغمورة بالكامل، مُختبَرة برذاذ الملح للمواقع الرطبة والساحلية.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">مزودات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">هيكل معدني مُهوّى للافتات والتركيبات شبه الخارجية.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">دليل تقني</span><span class="rel-title">مزود LED IP67 مقابل IP65: أي حماية تحتاج؟</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">دليل المشتري</span><span class="rel-title">اختيار مزود LED للخارج والبيئات القاسية</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">دليل تقني</span><span class="rel-title">IP20 مقابل IP65 مقابل IP67 مقابل IP68</span></a>
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">دليل المشتري</span><span class="rel-title">تصحيح معامل القدرة ومزودات LED بلا وميض</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">تصحيح معامل القدرة ومزودات LED بلا وميض</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">اختيار مزود LED للخارج والبيئات القاسية</span></a></nav>
+</main>"""
