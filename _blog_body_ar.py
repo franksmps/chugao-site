@@ -1106,3 +1106,100 @@ BLOG_BODY['ar']['blog-3'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">شهادة BIS لمزودات LED: دليل استيراد الهند</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-4'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>شهادة BIS لمزودات LED: ما يحتاج مستوردو الهند لمعرفته</h1>
+<div class="meta">تنظيمي &middot; مايو 2026 &middot; 7 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof-md.avif 1200w, /images/product-waterproof.avif 1024w">
+<source type="image/webp" srcset="/images/product-waterproof-md.webp 1200w, /images/product-waterproof.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-waterproof.jpg" alt="مزودات LED حاصلة على شهادة BIS لسوق الهند" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>منذ 2018، وسّعت الهند تدريجيًا متطلب التسجيل الإلزامي لدى <strong>Bureau of Indian Standards (BIS)</strong> للمنتجات الإلكترونية. لأي شخص يستورد مزودات LED إلى الهند، لم يعد BIS اختياريًا — إنه حاجز جمركي.</p>
+
+<p>يشرح هذا الدليل ما يعنيه BIS لطلبك، وكيف يعمل الإجراء، ولماذا يهم لمواعيدك، وكيف يوفر العمل مع مصنع حاصل على شهادة BIS مثل CHUGAO أسابيع من الأوراق.</p>
+
+<h2>ما هو BIS؟</h2>
+
+<p>BIS هو الهيئة الوطنية للمعايير في الهند. بموجب Compulsory Registration Scheme (CRS)، يجب أن تحمل المنتجات في الفئات المشمولة علامة تسجيل BIS قبل استيرادها أو بيعها في الهند.</p>
+
+<p>بالنسبة لمزودات LED المبدّلة، المعيار المطبّق هو <strong>IS 13252 (الجزء 1): معدات تكنولوجيا المعلومات — السلامة — المتطلبات العامة</strong>، الذي يغطي:</p>
+<ul>
+<li>السلامة الكهربائية والعزل</li>
+<li>حدود ارتفاع الحرارة</li>
+<li>الحماية من الصدمات الكهربائية</li>
+<li>متطلبات الهيكل المقاوم للحريق</li>
+<li>تصنيفات سلامة المكونات</li>
+</ul>
+
+<div class="highlight">
+<strong>النقطة الجوهرية:</strong> إذا لم يكن لمزود LED لديك تسجيل BIS، يمكن للجمارك الهندية رفض الشحنة، أو تأخير الإفراج، أو المطالبة بإعادة التصدير على نفقتك.
+</div>
+
+<h2>BIS مقابل CE / RoHS</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">الجانب</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CE / RoHS</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">BIS (الهند)</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>الجهة المشرفة</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">مفوضية الاتحاد الأوروبي / إقرار ذاتي</td><td style="padding:10px 14px;border:1px solid var(--b)">حكومة الهند (BIS)</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>إلزامي؟</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">نعم لسوق الاتحاد الأوروبي</td><td style="padding:10px 14px;border:1px solid var(--b)">نعم للاستيراد إلى الهند</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>مكان الاختبار</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">مختبر المصنع أو جهة خارجية</td><td style="padding:10px 14px;border:1px solid var(--b)">مختبر معتمد من BIS في الهند</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>المدة النموذجية</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 أسابيع لكل موديل</td><td style="padding:10px 14px;border:1px solid var(--b)">4-8 أسابيع لكل موديل</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>الصالحية</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">بلا انتهاء (إقرار ذاتي)</td><td style="padding:10px 14px;border:1px solid var(--b)">سنتان، قابلة للتجديد</td></tr>
+</tbody>
+</table>
+
+<h2>كيف يعمل إجراء BIS</h2>
+
+<ol>
+<li><strong>التقديم:</strong> يقدّم المصنّع (أو ممثله المفوّض) طلبًا عبر الإنترنت إلى BIS عبر البوابة، مع الوثائق الفنية وتقارير الاختبار من مختبر معتمد.</li>
+<li><strong>تفتيش المصنع:</strong> قد يُدقق BIS منشأة التصنيع للتحقق من أنظمة الجودة واتساق الإنتاج.</li>
+<li><strong>الاختبار:</strong> تُختبر العينات وفق IS 13252 (الجزء 1). يشمل ذلك قوة العزل الكهربائي والحرارة والرطوبة واختبارات الإجهاد الميكانيكي.</li>
+<li><strong>منح الترخيص:</strong> عند النجاح، يصدر BIS رقم تسجيل يظهر على ملصق المنتج والتغليف.</li>
+<li><strong>المتابعة:</strong> بعد التسجيل، يُجري BIS عمليات تدقيق دورية لضمان الامتثال المستمر.</li>
+</ol>
+
+<h2>لماذا يؤثر هذا على مواعيدك</h2>
+
+<p>إذا كنت تطلب مزودات LED للسوق الهندي، أمامك مساران:</p>
+<ul>
+<li><strong>المسار أ — الطلب من مصنع بلا BIS:</strong> تتولّى أنت أمر BIS بنفسك. توقّع 4-8 أسابيع اختبار + وقت تقديم قبل شحن بضائعك. فوقها رسوم مختبر (500-2000 $ لكل موديل حسب التعقيد).</li>
+<li><strong>المسار ب — الطلب من مصنع حاصل على BIS:</strong> المصنع يحمل بالفعل ترخيص BIS لسلسلة الموديلات. يُشحن طلبك فورًا. تستلم نسخة شهادة BIS مع وثائق الشحن.</li>
+</ul>
+
+<p>تحمل CHUGAO تسجيل BIS لنماذجنا الأساسية من مزودات LED. عند تقديم طلب إلى الهند، نُدرج ملف شهادة BIS بصيغة PDF في ملف الشحن الخاص بك — بلا انتظار إضافي.</p>
+
+<h2>نصائح عملية للمشترين في الهند</h2>
+<ul>
+<li><strong>أكّد تغطية BIS مبكرًا.</strong> ليس كل الموديلات قد تكون مسجّلة. اسألنا أي SKU يحمل حالة BIS نشطة قبل تثبيت قائمة SKU لديك.</li>
+<li><strong>تحقق من تصنيف كود HS.</strong> تندرج مزودات LED عادة تحت HS 8504.40 (بالاستات/محوّلات إلكترونية). أكّد مع وسيط الجمارك لديك إذ تتغير القواعد.</li>
+<li><strong>اترك 2-3 أيام إضافية لمراجعة وثائق BIS في الموانئ الهندية.</strong> حتى بأوراق صحيحة، تُجري بعض الموانئ فحوصًا عشوائية على شحنات الإلكترونيات.</li>
+<li><strong>متطلب الوسم:</strong> يجب للمنتجات المسجلة BIS أن تظهر علامة BIS القياسية على الوحدة والكرتون الخارجي. نتولّى هذا الوسم عند تحديد «وجهة الهند» في طلبك.</li>
+</ul>
+
+<div class="cta-box">
+<h3>تشتري مزودات LED للسوق الهندي؟</h3>
+<p>أخبرنا بموديلاتك المستهدفة والكمية وميناء الوجهة. نؤكد حالة BIS خلال ساعة ونُرفق كل الشهادات مع شحنتك.</p>
+<a href="/#inquiry" class="btn">اطلب عرضًا جاهزًا للهند</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">حماية من الغمر المؤقت للأنفاق والمسابح والمناطق المعرضة للفيضان.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">مزودات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">مزودات مقاومة للغبار والجتّات لمواجهات المباني واللافتات.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">تقنية LED</span><span class="rel-title">اختر مزود LED الصحيح في 3 خطوات</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">دليل تقني</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">اتجاهات القطاع</span><span class="rel-title">سوق LED 2026: ما نراه</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">تحليل تقني</span><span class="rel-title">عمر مزودات LED: MTBF وL70 والحياة الواقعية</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">سوق LED 2026: ما نراه</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">عمر مزودات LED: MTBF وL70 وكم تدوم فعليًا</span></a></nav>
+</main>"""

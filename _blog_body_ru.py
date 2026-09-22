@@ -1106,3 +1106,100 @@ BLOG_BODY['ru']['blog-3'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Сертификация BIS для LED-драйверов: руководство по импорту в Индию</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ru']['blog-4'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Назад к полевым заметкам</a>
+
+<h1>Сертификация BIS для LED-драйверов: что нужно знать импортёрам в Индию</h1>
+<div class="meta">Регуляторика &middot; май 2026 &middot; 7 мин чтения</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof-md.avif 1200w, /images/product-waterproof.avif 1024w">
+<source type="image/webp" srcset="/images/product-waterproof-md.webp 1200w, /images/product-waterproof.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-waterproof.jpg" alt="LED-блоки питания с сертификацией BIS для рынка Индии" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>С 2018 года Индия последовательно расширяет обязательное требование регистрации <strong>Bureau of Indian Standards (BIS)</strong> для электронной продукции. Для любого, кто импортирует LED-блоки питания в Индию, BIS уже не опция — это таможенный барьер.</p>
+
+<p>Это руководство объясняет, что BIS значит для вашего заказа, как устроен процесс, почему он влияет на сроки и как работа с сертифицированной по BIS фабрикой вроде CHUGAO экономит недели бумажной волокиты.</p>
+
+<h2>Что такое BIS?</h2>
+
+<p>BIS — национальный орган по стандартизации Индии. В рамках Compulsory Registration Scheme (CRS) продукция охваченных категорий должна нести регистрационную марку BIS до импорта или продажи в Индии.</p>
+
+<p>Для коммутируемых LED-блоков питания применим стандарт <strong>IS 13252 (Часть 1): Оборудование информационных технологий — Безопасность — Общие требования</strong>, который охватывает:</p>
+<ul>
+<li>Электробезопасность и изоляцию</li>
+<li>Лимиты роста температуры</li>
+<li>Защиту от поражения электротоком</li>
+<li>Требования к пожаростойкому корпусу</li>
+<li>Классы безопасности компонентов</li>
+</ul>
+
+<div class="highlight">
+<strong>Главное:</strong> Если ваш LED-драйвер не зарегистрирован в BIS, таможня Индии может отклонить отправку, задержать выпуск или потребовать обратный вывоз за ваш счёт.
+</div>
+
+<h2>BIS против CE / RoHS</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Аспект</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CE / RoHS</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">BIS (Индия)</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Орган управления</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Комиссия ЕС / самодекларация</td><td style="padding:10px 14px;border:1px solid var(--b)">Правительство Индии (BIS)</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Обязательно?</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Да, для рынка ЕС</td><td style="padding:10px 14px;border:1px solid var(--b)">Да, для импорта в Индию</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Место испытаний</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Заводская лаборатория или сторонняя</td><td style="padding:10px 14px;border:1px solid var(--b)">Лаборатория BIS в Индии</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Типичный срок</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 недели на модель</td><td style="padding:10px 14px;border:1px solid var(--b)">4-8 недель на модель</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Действие</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Бессрочно (самодекларация)</td><td style="padding:10px 14px;border:1px solid var(--b)">2 года, продлевается</td></tr>
+</tbody>
+</table>
+
+<h2>Как устроен процесс BIS</h2>
+
+<ol>
+<li><strong>Заявка:</strong> Производитель (или его уполномоченный представитель) подаёт онлайн-заявку в BIS через портал вместе с технической документацией и протоколами испытаний из признанной лаборатории.</li>
+<li><strong>Инспекция завода:</strong> BIS может провести аудит производственных мощностей для проверки систем качества и стабильности производства.</li>
+<li><strong>Испытания:</strong> Образцы тестируются по IS 13252 (Часть 1). Это включает диэлектрическую прочность, температуру, влажность и механический стресс-тест.</li>
+<li><strong>Выдача лицензии:</strong> После прохождения BIS выдаёт регистрационный номер, который наносится на этикетку и упаковку изделия.</li>
+<li><strong>Надзор:</strong> После регистрации BIS проводит периодические контрольные аудиты для обеспечения постоянного соответствия.</li>
+</ol>
+
+<h2>Почему это влияет на ваши сроки</h2>
+
+<p>Если вы заказываете LED-драйверы для индийского рынка, у вас два пути:</p>
+<ul>
+<li><strong>Путь А — Заказ у фабрики без BIS:</strong> Вы оформляете BIS сами. Ждите 4-8 недель испытаний + подачи заявки до отгрузки товара. Плюс лабораторные сборы (500-2000 $ за модель в зависимости от сложности).</li>
+<li><strong>Путь Б — Заказ у сертифицированной по BIS фабрики:</strong> Фабрика уже имеет лицензию BIS на серию моделей. Ваш заказ отгружается немедленно. Копия сертификата BIS приходит с отгрузочными документами.</li>
+</ul>
+
+<p>В CHUGAO зарегистрирован BIS для наших ключевых моделей LED-драйверов. Когда вы делаете заказ в Индию, мы вкладываем PDF сертификата BIS в отгрузочное досье — без лишних ожиданий.</p>
+
+<h2>Практические советы для покупателей в Индии</h2>
+<ul>
+<li><strong>Подтвердите покрытие BIS заранее.</strong> Не все модели могут быть зарегистрированы. Спросите нас, какие SKU имеют активный статус BIS, до финализации списка SKU.</li>
+<li><strong>Проверьте код HS.</strong> LED-блоки питания обычно относятся к HS 8504.40 (электронные балласты/преобразователи). Уточните у брокера, так как правила меняются.</li>
+<li><strong>Заложите 2-3 лишних дня на проверку документов BIS в индийских портах.</strong> Даже с правильными бумагами некоторые порты делают выборочные проверки электронных отправлений.</li>
+<li><strong>Требование к маркировке:</strong> Зарегистрированные по BIS изделия должны нести Стандартную марку BIS на самом блоке и внешней коробке. Мы делаем эту маркировку, когда вы указываете «направление — Индия» в заказе.</li>
+</ul>
+
+<div class="cta-box">
+<h3>Закупаете LED-драйверы для индийского рынка?</h3>
+<p>Назовите целевые модели, количество и порт назначения. Мы подтвердим статус BIS за 1 час и приложим все сертификаты к отгрузке.</p>
+<a href="/#inquiry" class="btn">Запросить предложение для Индии</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Ознакомьтесь с продукцией CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">Водонепроницаемые драйверы IP67 10-400Вт</span><span class="pc-desc">Защита от временного погружения для туннелей, бассейнов и зон затопления.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Драйверы IP65 100-600Вт</span><span class="pc-desc">Пылезащищённые и стойкие к струям блоки для фасадов и вывесок.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Ещё из поля</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-технология</span><span class="rel-title">Выберите правильный LED-блок за 3 шага</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Технический гид</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Отраслевые тренды</span><span class="rel-title">Рынок LED 2026: что мы наблюдаем</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Технический разбор</span><span class="rel-title">Срок службы LED-драйверов: MTBF, L70 и реальный срок</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Рынок LED 2026: что мы наблюдаем</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Срок службы LED-драйверов: MTBF, L70 и как долго они реально работают</span></a></nav>
+</main>"""

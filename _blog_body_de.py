@@ -1106,3 +1106,100 @@ BLOG_BODY['de']['blog-3'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">BIS-Zertifizierung für LED-Treiber: Importleitfaden Indien</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-4'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>BIS-Zertifizierung für LED-Treiber: Was Indien-Importeure wissen müssen</h1>
+<div class="meta">Regulatorisch &middot; Mai 2026 &middot; 7 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof-md.avif 1200w, /images/product-waterproof.avif 1024w">
+<source type="image/webp" srcset="/images/product-waterproof-md.webp 1200w, /images/product-waterproof.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-waterproof.jpg" alt="BIS-zertifizierte LED-Netzteile für den Indien-Markt" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>Seit 2018 hat Indien die Pflichtregistrierung des <strong>Bureau of Indian Standards (BIS)</strong> für Elektronikprodukte schrittweise ausgeweitet. Für jeden, der LED-Netzteile nach Indien importiert, ist BIS nicht mehr optional — es ist eine Zollschwelle.</p>
+
+<p>Dieser Leitfaden erklärt, was BIS für Ihre Bestellung bedeutet, wie der Prozess abläuft, warum er Ihre Terminpläne betrifft und wie die Zusammenarbeit mit einer BIS-zertifizierten Fabrik wie CHUGAO Ihnen Wochen an Papierkram spart.</p>
+
+<h2>Was ist BIS?</h2>
+
+<p>BIS ist Indiens nationale Normungsbehörde. Im Rahmen des Compulsory Registration Scheme (CRS) müssen Produkte der erfassten Kategorien eine BIS-Registrierungsmarke tragen, bevor sie nach Indien importiert oder dort verkauft werden dürfen.</p>
+
+<p>Für LED-Schaltnetzteile gilt der Standard <strong>IS 13252 (Teil 1): Geräte der Informationstechnik — Sicherheit — Allgemeine Anforderungen</strong>, der abdeckt:</p>
+<ul>
+<li>Elektrische Sicherheit und Isolation</li>
+<li>Grenzwerte für Temperaturerhöhung</li>
+<li>Schutz gegen elektrischen Schlag</li>
+<li>Anforderungen an das feuerfeste Gehäuse</li>
+<li>Sicherheitsklassen der Bauteile</li>
+</ul>
+
+<div class="highlight">
+<strong>Der Kernpunkt:</strong> Wenn Ihr LED-Treiber nicht BIS-registriert ist, kann die indische Zollbehörde die Sendung abweisen, den Release verzögern oder die Wiederausfuhr auf Ihre Kosten verlangen.
+</div>
+
+<h2>BIS vs CE / RoHS</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Aspekt</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CE / RoHS</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">BIS (Indien)</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Regulierungsbehörde</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">EU-Kommission / Selbstdeklaration</td><td style="padding:10px 14px;border:1px solid var(--b)">Regierung Indiens (BIS)</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Verpflichtend?</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Ja, für EU-Markt</td><td style="padding:10px 14px;border:1px solid var(--b)">Ja, für Indien-Import</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Testort</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Werks- oder Drittlabor</td><td style="padding:10px 14px;border:1px solid var(--b)">BIS-anerkanntes Labor in Indien</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Typische Dauer</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 Wochen pro Modell</td><td style="padding:10px 14px;border:1px solid var(--b)">4-8 Wochen pro Modell</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Gültigkeit</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Unbefristet (selbstdeklariert)</td><td style="padding:10px 14px;border:1px solid var(--b)">2 Jahre, verlängerbar</td></tr>
+</tbody>
+</table>
+
+<h2>Wie der BIS-Prozess abläuft</h2>
+
+<ol>
+<li><strong>Antrag:</strong> Der Hersteller (oder sein bevollmächtigter Vertreter) reicht einen Online-Antrag beim BIS über das Portal ein, zusammen mit technischer Dokumentation und Prüfberichten eines anerkannten Labors.</li>
+<li><strong>Werksinspektion:</strong> BIS kann die Fertigungsstätte auditiert, um Qualitätsmanagementsysteme und Produktionskonsistenz zu prüfen.</li>
+<li><strong>Prüfung:</strong> Muster werden nach IS 13252 (Teil 1) getestet. Das umfasst die Dielektrikum-Festigkeit, Temperatur, Feuchte und mechanische Stress-Tests.</li>
+<li><strong>Lizenzvergabe:</strong> Bei Bestehen stellt BIS eine Registriernummer aus, die auf Produktetikett und Verpackung erscheint.</li>
+<li><strong>Überwachung:</strong> Nach der Registrierung führt BIS regelmäßige Folgeaudits durch, um die fortlaufende Konformität sicherzustellen.</li>
+</ol>
+
+<h2>Warum das Ihre Termine beeinflusst</h2>
+
+<p>Wenn Sie LED-Treiber für den indischen Markt bestellen, haben Sie zwei Wege:</p>
+<ul>
+<li><strong>Weg A — Bei einer Nicht-BIS-Fabrik bestellen:</strong> Sie kümmern sich selbst um BIS. Rechnen Sie mit 4-8 Wochen Prüfung + Antragszeit, bevor die Ware versendet werden kann. Plus Laborkosten (500-2000 $ pro Modell je nach Komplexität).</li>
+<li><strong>Weg B — Bei einer BIS-zertifizierten Fabrik bestellen:</strong> Die Fabrik hält die BIS-Lizenz für die Modellserie bereits. Ihre Bestellung wird sofort versandt. Sie erhalten die BIS-Zertifikatskopie mit den Versanddokumenten.</li>
+</ul>
+
+<p>CHUGAO hält eine BIS-Registrierung für unsere Kern-LED-Treibermodelle. Bei einer Bestellung nach Indien legen wir das BIS-Zertifikat-PDF in Ihr Versanddossier — ohne zusätzliche Wartezeit.</p>
+
+<h2>Praktische Tipps für Käufer in Indien</h2>
+<ul>
+<li><strong>BIS-Abdeckung früh klären.</strong> Nicht alle Modelle sind möglicherweise registriert. Fragen Sie uns, welche SKUs den aktiven BIS-Status haben, bevor Sie Ihre SKU-Liste festlegen.</li>
+<li><strong>Prüfen Sie den HS-Code.</strong> LED-Netzteile fallen meist unter HS 8504.40 (elektronische Ballasts/Converter). Klären Sie mit Ihrem Zollbroker, da sich Regeln ändern.</li>
+<li><strong>Rechnen Sie 2-3 zusätzliche Tage für die BIS-Dokumentenprüfung in indischen Häfen ein.</strong> Selbst bei korrekten Papieren machen manche Häfen Stichproben bei Elektroniksendungen.</li>
+<li><strong>Kennzeichnungspflicht:</strong> BIS-registrierte Produkte müssen die BIS Standard Mark auf Gerät und Außenkarton zeigen. Wir übernehmen diese Kennzeichnung, wenn Sie „Indien-Ziel“ in der Bestellung angeben.</li>
+</ul>
+
+<div class="cta-box">
+<h3>Beschaffen Sie LED-Treiber für den indischen Markt?</h3>
+<p>Nennen Sie uns Ihre Zielmodelle, Menge und Zielhafen. Wir bestätigen den BIS-Status innerhalb von 1 Stunde und legen alle Zertifikate Ihrer Sendung bei.</p>
+<a href="/#inquiry" class="btn">Indien-fertiges Angebot anfordern</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Schutz vor temporärer Tauchung für Tunnel, Pools und Überschwemmungsgebiete.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Spritzwassergeschützte IP65-Treiber 100-600W</span><span class="pc-desc">Staubdicht und strahlwassergeschützt für Fassaden und Beschilderung.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-Technik</span><span class="rel-title">Das richtige LED-Netzteil in 3 Schritten wählen</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Branchentrends</span><span class="rel-title">LED-Markt 2026: Was wir sehen</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Technische Analyse</span><span class="rel-title">Lebensdauer von LED-Treibern: MTBF, L70 und Praxis</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">LED-Markt 2026: Was wir sehen</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Lebensdauer von LED-Treibern: MTBF, L70 und wie lange sie wirklich halten</span></a></nav>
+</main>"""

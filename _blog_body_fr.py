@@ -1107,3 +1107,100 @@ BLOG_BODY['fr']['blog-3'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Certification BIS pour drivers LED : guide d'importation en Inde</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['fr']['blog-4'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Retour aux notes de terrain</a>
+
+<h1>Certification BIS pour drivers LED : ce que les importateurs en Inde doivent savoir</h1>
+<div class="meta">Réglementaire &middot; mai 2026 &middot; 7 min de lecture</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof-md.avif 1200w, /images/product-waterproof.avif 1024w">
+<source type="image/webp" srcset="/images/product-waterproof-md.webp 1200w, /images/product-waterproof.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-waterproof.jpg" alt="Alimentations LED certifiées BIS pour le marché indien" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>Depuis 2018, l'Inde a progressivement étendu son exigence d'enregistrement obligatoire du <strong>Bureau of Indian Standards (BIS)</strong> aux produits électroniques. Pour quiconque importe des alimentations LED en Inde, le BIS n'est plus optionnel — c'est un seuil douanier.</p>
+
+<p>Ce guide explique ce que le BIS signifie pour votre commande, comment fonctionne le processus, pourquoi il compte pour vos délais et comment travailler avec une usine certifiée BIS comme CHUGAO vous fait économiser des semaines de paperasse.</p>
+
+<h2>Qu'est-ce que le BIS ?</h2>
+
+<p>Le BIS est l'organisme national de normalisation de l'Inde. Dans le cadre du Compulsory Registration Scheme (CRS), les produits des catégories couvertes doivent porter une marque d'enregistrement BIS avant de pouvoir être importés ou vendus en Inde.</p>
+
+<p>Pour les alimentations à découpage LED, la norme applicable est la <strong>IS 13252 (Partie 1) : Matériel de technologie de l'information — Sécurité — Exigences générales</strong>, qui couvre :</p>
+<ul>
+<li>Sécurité électrique et isolation</li>
+<li>Limites d'échauffement</li>
+<li>Protection contre les chocs électriques</li>
+<li>Exigences d'enveloppe coupe-feu</li>
+<li>Classifications de sécurité des composants</li>
+</ul>
+
+<div class="highlight">
+<strong>Le point clé :</strong> Si votre driver LED n'a pas d'enregistrement BIS, la Douane indienne peut rejeter l'envoi, retarder le dédouanement ou exiger une réexportation à vos frais.
+</div>
+
+<h2>BIS vs CE / RoHS</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Aspect</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CE / RoHS</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">BIS (Inde)</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Organisme gouvernant</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Commission UE / Autodéclaration</td><td style="padding:10px 14px;border:1px solid var(--b)">Gouvernement de l'Inde (BIS)</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Obligatoire ?</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Oui, pour le marché UE</td><td style="padding:10px 14px;border:1px solid var(--b)">Oui, pour importer en Inde</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Lieu de test</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Laboratoire d'usine ou tiers</td><td style="padding:10px 14px;border:1px solid var(--b)">Laboratoire reconnu BIS en Inde</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Délai typique</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 semaines par modèle</td><td style="padding:10px 14px;border:1px solid var(--b)">4-8 semaines par modèle</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Validité</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Sans expiration (autodéclarée)</td><td style="padding:10px 14px;border:1px solid var(--b)">2 ans, renouvelable</td></tr>
+</tbody>
+</table>
+
+<h2>Comment fonctionne le processus BIS</h2>
+
+<ol>
+<li><strong>Demande :</strong> Le fabricant (ou son représentant autorisé) soumet une demande en ligne au BIS via le portail, accompagnée de la documentation technique et des rapports d'essai d'un laboratoire reconnu.</li>
+<li><strong>Inspection d'usine :</strong> Le BIS peut auditer l'installation de fabrication pour vérifier les systèmes qualité et la cohérence de production.</li>
+<li><strong>Essais :</strong> Les échantillons sont testés selon la IS 13252 (Partie 1). Cela inclut la rigidité diélectrique, la température, l'humidité et les tests de contrainte mécanique.</li>
+<li><strong>Octroi de licence :</strong> Après validation, le BIS émet un numéro d'enregistrement figurant sur l'étiquette produit et l'emballage.</li>
+<li><strong>Surveillance :</strong> Après enregistrement, le BIS effectue des audits de suivi périodiques pour garantir la conformité continue.</li>
+</ol>
+
+<h2>Pourquoi cela affecte vos délais</h2>
+
+<p>Si vous commandez des drivers LED pour le marché indien, vous avez deux chemins :</p>
+<ul>
+<li><strong>Chemin A — Commander à une usine sans BIS :</strong> Vous gérez le BIS vous-même. Comptez 4-8 semaines d'essais + dépôt de demande avant l'expédition. En plus, frais de laboratoire (500-2000 $ par modèle selon la complexité).</li>
+<li><strong>Chemin B — Commander à une usine certifiée BIS :</strong> L'usine détient déjà la licence BIS pour la série de modèles. Votre commande part immédiatement. Vous recevez la copie du certificat BIS avec les documents d'expédition.</li>
+</ul>
+
+<p>CHUGAO détient un enregistrement BIS pour nos modèles centraux de drivers LED. Lors d'une commande à destination de l'Inde, nous incluons le PDF du certificat BIS dans votre dossier d'expédition — sans attente supplémentaire.</p>
+
+<h2>Conseils pratiques pour les acheteurs en Inde</h2>
+<ul>
+<li><strong>Confirmez la couverture BIS tôt.</strong> Tous les modèles ne sont pas forcément enregistrés. Demandez-nous quels SKU ont un statut BIS actif avant de figer votre liste de SKU.</li>
+<li><strong>Vérifiez le code SH.</strong> Les alimentations LED relèvent généralement du SH 8504.40 (ballasts/convertisseurs électroniques). Confirmez avec votre courtier, car les règles évoluent.</li>
+<li><strong>Prévoyez 2-3 jours supplémentaires pour la revue des documents BIS dans les ports indiens.</strong> Même avec les bons papiers, certains ports font des contrôles aléatoires sur l'électronique.</li>
+<li><strong>Exigence d'étiquetage :</strong> Les produits enregistrés BIS doivent afficher la BIS Standard Mark sur l'appareil et le carton extérieur. Nous gérons cet étiquetage quand vous indiquez « destination Inde » sur la commande.</li>
+</ul>
+
+<div class="cta-box">
+<h3>Vous approvisionnez des drivers LED pour le marché indien ?</h3>
+<p>Indiquez vos modèles cibles, la quantité et le port de destination. Nous confirmons le statut BIS en 1 heure et incluons tous les certificats avec l'expédition.</p>
+<a href="/#inquiry" class="btn">Demander un devis prêt pour l'Inde</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Découvrir les produits CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">Alimentations étanches IP67 10-400W</span><span class="pc-desc">Protection contre l'immersion temporaire pour tunnels, piscines et zones inondables.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Alimentations anti-pluie IP65 100-600W</span><span class="pc-desc">Alimentations étanches à la poussière et résistantes aux jets pour façades et enseignes.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Encore du terrain</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Technologie LED</span><span class="rel-title">Choisir la bonne alimentation LED en 3 étapes</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guide technique</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Tendances du secteur</span><span class="rel-title">Marché LED 2026 : ce que nous observons</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Analyse technique</span><span class="rel-title">Durée de vie des drivers LED : MTBF, L70 et vie réelle</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Marché LED 2026 : ce que nous observons</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Durée de vie des drivers LED : MTBF, L70 et combien de temps ils durent vraiment</span></a></nav>
+</main>"""
