@@ -9,6 +9,31 @@ from i18n_subpages import apply_translations
 from blog_meta import BLOG_META
 from page_meta import PAGE_META, apply_heading_overrides
 from blog_body_zh import BLOG_BODY
+import importlib.util as _ilu
+import os as _os
+
+def _load_market_blog_bodies():
+    """Wire the 6 orphaned market-language blog-body modules (es/pt/ru/fr/de/ar
+    for blog-6/7/8). They are data-only files that mutate a module-global
+    BLOG_BODY without ever declaring it, so we inject the shared dict and exec
+    them. The translations were authored but never imported -- dead code until
+    now. This finally ships native blog bodies for the 3 flagship Field Notes
+    posts across all 10 non-English public languages."""
+    _here = _os.path.dirname(_os.path.abspath(__file__))
+    for _f in ('_blog_body_es.py', '_blog_body_pt.py', '_blog_body_ru.py',
+               '_blog_body_fr.py', '_blog_body_de.py', '_blog_body_ar.py'):
+        _p = _os.path.join(_here, _f)
+        if not _os.path.exists(_p):
+            continue
+        _spec = _ilu.spec_from_file_location('blog_body_mkt_' + _f, _p)
+        _mod = _ilu.module_from_spec(_spec)
+        _mod.BLOG_BODY = BLOG_BODY  # same dict object; their BLOG_BODY['xx']={} lands here
+        try:
+            _spec.loader.exec_module(_mod)
+        except Exception as _e:
+            print('WARN: could not load', _f, repr(_e))
+
+_load_market_blog_bodies()
 
 REPO = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(REPO, 'src')
@@ -342,7 +367,8 @@ def build_page(rel_html, T, META):
         # (blog-6/7/8). Their English source is fanned out to every language,
         # but zh/ja/ko/it get a natively-translated body. Swap the whole
         # <main> block per language (ja/ko/it are AI translations, pending
-        # native review). Other languages keep the English body.
+        # native review). es/pt/ru/fr/de/ar get native bodies too (authored
+        # earlier but never wired in). en keeps the English body.
         if name in BLOG_BODY.get(lang, {}):
             html = re.sub(r'<main class="article">.*?</main>',
                           BLOG_BODY[lang][name], html, count=1, flags=re.S)
