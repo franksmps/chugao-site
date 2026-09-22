@@ -989,3 +989,120 @@ BLOG_BODY['de']['blog-2'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-1/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">Das richtige LED-Netzteil in 3 Schritten wählen</span></a><a class="pn-next" href="/blog-3/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">LED-Markt 2026: Was wir sehen</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-3'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>LED-Markt 2026: Was wir sehen</h1>
+<div class="meta">Branchentrends &middot; Januar 2026 &middot; 8 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-3-led-market-md.avif 1200w, /images/blog-3-led-market.avif 1024w">
+<source type="image/webp" srcset="/images/blog-3-led-market-md.webp 1200w, /images/blog-3-led-market.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-3-led-market.jpg" alt="Überblick über den globalen LED-Markt 2026" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>Dies sind unsere Beobachtungen von der Produktionslinie des CHUGAO-Werks in Zhongshan — keine Analystenberichte oder Marktstudien. Das ist, was unsere Kunden 2025 tatsächlich bestellt haben und wonach sie fragen, wenn wir in 2026 gehen.</p>
+
+<h2>Die Zahlen (unser Auftragsbuch)</h2>
+
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-num">+34%</div><div class="stat-label">Volumenwachstum der Bestellungen YoY<br>(2025 vs 2024)</div></div>
+<div class="stat-card"><div class="stat-num">47%</div><div class="stat-label">Neue Bestellungen spezifizieren<br>Smart/Dimming-Funktion</div></div>
+<div class="stat-card"><div class="stat-num">Nr.1</div><div class="stat-label">Wachstumsmarkt:<br>Nahost / GCC-Region</div></div>
+<div class="stat-card"><div class="stat-num">100&ndash;200W</div><div class="stat-label">Am meisten angefragter<br>Leistungsbereich</div></div>
+</div>
+
+<h2>Trend 1: IP67 ist jetzt der Standardwunsch</h2>
+
+<p>Vor drei Jahren war IP65 die Standard-Außenspezifikation. 2025 spezifizierten 62% unserer Außen-Treiberbestellungen IP67. Die Preislücke hat sich auf 1&ndash;3 $ pro Gerät bei 100W verringert, und Kunden nehmen lieber die Tauchreserve als sich mit einer Garantiereklamation zu befassen.</p>
+
+<p>Das gilt besonders für:</p>
+<ul>
+<li><strong>Landschaftsbeleuchtungs-Fachbetriebe</strong> — ein schlechtes Regenereignis und sie verbringen ein Wochenende mit dem Austausch von Treibern</li>
+<li><strong>Beschilderungshersteller</strong> — Montagepunkte sammeln oft Kondenswasser, mit dem IP65 nicht ganz fertigwird</li>
+<li><strong>Infrastrukturprojekte</strong> (Parkhäuser, Tunnel, ÖPNV) — Spec-Schreiber greifen jetzt standardmäßig zu IP67</li>
+</ul>
+
+<h2>Trend 2: Smart / dimmbare Treiber wachsen schnell</h2>
+
+<p>Beinahe die Hälfte der neuen Anfragen fragt nach Dimmbarkeit. Die Aufschlüsselung dessen, was tatsächlich bestellt wird:</p>
+<ul>
+<li><strong>DALI:</strong> Gewerbliche Gebäudeprojekte (Büros, Einzelhandel). Stabil, aber geringes Volumen pro Projekt.</li>
+<li><strong>0-10V:</strong> Weiterhin der Volumenkönig in Nordamerika. Einfach, günstig, mit allem kompatibel.</li>
+<li><strong>PWM-Dimming:</strong> Wächst schnell für Horticultur und Architekturbeleuchtung, wo präzise Steuerung zählt.</li>
+<li><strong>Zigbee / WiFi / Bluetooth:</strong> Das Interesse ist hoch, die tatsächlichen Bestellungen bleiben niedrig (~8% der Dimmbestellungen). Die meisten Kunden bevorzugen einen separaten Smart-Controller und lassen den Treiber „dumm“.</li>
+</ul>
+<div class="highlight">
+<strong>Unsere Einschätzung:</strong> Wenn Sie 2026 eine neue Produktlinie starten, bauen Sie sie um 0-10V + optional DALI. Das deckt 85%+ der aktuellen Dimmanforderungen ohne Überkonstruktion.
+</div>
+
+<h2>Trend 3: Regionale Verschiebungen</h2>
+<h3>Naher Osten / GCC — unsere am schnellsten wachsende Region</h3>
+<p>Saudi-Arabien (Vision-2030-Projekte), die VAE (Expo-Baunachfolge) und Katar bestellen aggressiv. Kernmuster:</p>
+<ul>
+<li>Alles Außen = mindestens IP67, oft IP68 für Brunnen/Pools</li>
+<li>Netz 220V, 50Hz — für uns Standard</li>
+<li>Lieferzeitempfindlich: Lagerware in 7 Tagen, kundenspezifischer OEM in 25 Tagen</li>
+<li>Zertifizierungsfokus: SASO (Saudi), ESMA (VAE) zusätzlich zu CE/RoHS</li>
+</ul>
+<h3>Europa — stabil, preissensibel</h3>
+<p>EU-Bestellungen sind im Volumen Jahr für Jahr flach, aber beim durchschnittlichen Bestellwert leicht gestiegen. Kunden bündeln Lieferanten (weniger SKUs, größere Lose). Energieeffizienzanforderungen (ErP / Ecodesign) treiben die Nachfrage nach effizienteren Treibern (&ge;90% bei Volllast).</p>
+<h3>Südostasien — Volumenwachstum, niedriger ASP</h3>
+<p>Vietnam, Thailand, Indonesien und die Philippinen wachsen schnell. Das sind meist Bestellungen für Innenadapter und IP20-Treiber — niedrigerer Stückpreis, aber hohe Menge. Der Preiswettbewerb ist hier heftig; Werk-ab-Werk-Preis ist essenziell.</p>
+<h3>Amerikas — Nordamerika stabil, Lateinamerika im Kommen</h3>
+<p>Nordamerika (USA/Kanada/Mexiko) bleibt unser größter Einzelmarkt nach Umsatz. 110V-Eingang, UL-Listing für dauerhafte Installationen Pflicht. Lateinamerika (Brasilien, Kolumbien, Chile) kommt — 220V, wachsende Nachfrage nach Straßenbeleuchtung und kommerziellen Retrofits.</p>
+
+<h2>Trend 4: Wie Spec-Sheets 2026 aussehen</h2>
+<p>Gegenüber vor drei Jahren verlangen eingehende RFQs (Angebotsanfragen) mehr Detail vorab. Die heute am häufigsten angefragten Specs:</p>
+<ol>
+<li><strong>Effizienz &ge;88% bei 50% Last</strong> (früher nur Volllast-Effizienz)</li>
+<li><strong>Leistungsfaktor &ge;0,9</strong> bei 50% Last</li>
+<li><strong>THD &lt;15%</strong> (Gesamtklirrfaktor — von Netzbetreibern zunehmend gefordert)</li>
+<li><strong>Betriebstemperaturbereich -20&deg;C bis +50&deg;C</strong> (historisch -10&deg;C bis +40&deg;C)</li>
+<li><strong>Überspannungsschutz 2kV Leiter-Neutral</strong> (häufiger in blitzgefährdeten Märkten gefordert)</li>
+<li><strong>Garantie mindestens 3 Jahre</strong>, 5 Jahre zunehmend gefragt</li>
+</ol>
+
+<h2>Trend 5: Preisdruck und seine Auswirkung auf die Qualität</h2>
+<p>Wir sind direkt: Bei Alibaba ist immer jemand günstiger. Das bekommen Sie, wenn Sie bei einem LED-Treiber 30% unter Marktpreis gehen:</p>
+<ul>
+<li>Dünnere PCB-Leiterbahnen (überhitzt bei Dauerlast)</li>
+<li>Kleinere oder unmarkierte Kondensatoren (Versagen nach 12&ndash;18 Monaten statt 3&ndash;5 Jahren)</li>
+<li>Keine echte Vergussung (IP behauptet, aber nicht getestet — Wasser dringt in Monaten ein)</li>
+<li>Ausgangsspannung driftet warm außerhalb der Spec (LED ungleich hell oder fallen früh aus)</li>
+</ul>
+<div class="highlight">
+<strong>Unsere Haltung:</strong> Wir konkurrieren über Zuverlässigkeit und Lieferzeit, nicht darüber, absolut am günstigsten zu sein. Ein Treiber, der 0,80 $ mehr pro Gerät kostet, aber 5 Jahre statt 18 Monate hält, ist in den Gesamtbetriebskosten günstiger — zumal wenn Rücksendung, Wiedereinbau und Reputationsschaden durch Feldausfälle dazukommen.
+</div>
+
+<h2>Was wir für H2 2026 erwarten</h2>
+<ul>
+<li><strong>GCC-Infrastrukturausgaben</strong> laufen bis Jahresende weiter (Nachfolgeprojekte der WM).</li>
+<li><strong>LED-Treiber für Horticultur</strong> wachsen, wenn die Landwirtschaft mit kontrolliertem Klima in Europa und Nordamerika skaliert.</li>
+<li><strong>USB-C-/PD-Treiber (Power Delivery)</strong> tauchen in Nischen auf (Möbelintegration, portable Leuchten). Wenig Volumen jetzt, aber beobachtenswert.</li>
+<li><strong>Treiber mit Batteriebackup / Notlicht</strong> erleben neues Interesse, da Bauvorschriften mehrerer Länder Notbeleuchtung verlangen.</li>
+</ul>
+
+<div class="cta-box">
+<h3>Planen Sie Ihre Beschaffung 2026?</h3>
+<p>Senden Sie uns Ihre Stückliste oder das Produktkonzept. Wir liefern Angebot, Lieferzeitschätzung und kostenloses Muster für qualifizierte Projekte.</p>
+<a href="/#inquiry" class="btn">Anfrage starten</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Unsere am schnellsten wachsende Exportlinie für Außen- und Landschaftsbeleuchtung.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Spritzwassergeschützte IP65-Treiber 100-600W</span><span class="pc-desc">Hochvolumiges Arbeitstier für Schild- und Fassadenbeleuchtung.</span></a><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-Adapter 5-200W</span><span class="pc-desc">Kompakte Adapter für Einzelhandels- und Wohnbauprojekte weltweit.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-Technik</span><span class="rel-title">Das richtige LED-Netzteil in 3 Schritten wählen</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatorisch</span><span class="rel-title">BIS-Zertifizierung für LED-Treiber: Importleitfaden Indien</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Technische Analyse</span><span class="rel-title">Lebensdauer von LED-Treibern: MTBF, L70 und Praxis</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">BIS-Zertifizierung für LED-Treiber: Importleitfaden Indien</span></a></nav>
+</main>"""

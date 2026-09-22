@@ -989,3 +989,120 @@ BLOG_BODY['ar']['blog-2'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-1/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">اختر مزود LED الصحيح في 3 خطوات</span></a><a class="pn-next" href="/blog-3/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">سوق LED 2026: ما نراه</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-3'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>سوق LED 2026: ما نراه</h1>
+<div class="meta">اتجاهات القطاع &middot; يناير 2026 &middot; 8 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-3-led-market-md.avif 1200w, /images/blog-3-led-market.avif 1024w">
+<source type="image/webp" srcset="/images/blog-3-led-market-md.webp 1200w, /images/blog-3-led-market.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-3-led-market.jpg" alt="نظرة عامة على سوق LED العالمي 2026" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>هذه ملاحظاتنا من أرض الإنتاج في مصنع CHUGAO بمدينة Zhongshan — ليست تقارير محللين ولا أوراق بحث سوقي. هذا ما طلبه عملاؤنا فعليًا في 2025 وما يسألون عنه مع دخولنا 2026.</p>
+
+<h2>الأرقام (دفتر طلباتنا)</h2>
+
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-num">+34%</div><div class="stat-label">نمو حجم الطلبات السنوي<br>(2025 مقابل 2024)</div></div>
+<div class="stat-card"><div class="stat-num">47%</div><div class="stat-label">طلبات جديدة تحدد<br>قدرة ذكية/تعتيم</div></div>
+<div class="stat-card"><div class="stat-num">#1</div><div class="stat-label">السوق النامي:<br>الشرق الأوسط / منطقة GCC</div></div>
+<div class="stat-card"><div class="stat-num">100&ndash;200W</div><div class="stat-label">نطاق القدرة<br>الأكثر طلبًا</div></div>
+</div>
+
+<h2>الاتجاه 1: IP67 أصبح الطلب الافتراضي</h2>
+
+<p>قبل ثلاث سنوات، كان IP65 هو المواصفة الخارجية القياسية. في 2025، حدد 62% من طلباتنا لمزودات الخارج IP67. تقلص الفارق السعري إلى 1&ndash;3 $ للوحدة عند 100W، ويفضل العملاء هامش الغمر على التعامل مع مطالبة ضمان.</p>
+
+<p>هذا صحيح بشكل خاص لـ:</p>
+<ul>
+<li><strong>مقاولي إضاءة اللاندسكيب</strong> — حدث مطر سيئ واحد يُضيّع منهم عطلة نهاية أسبوع باستبدال المزودات</li>
+<li><strong>صنّاع اللافتات</strong> — نقاط التركيب كثيرًا ما تجمع تكثفًا لا يتعامل معه IP65 بالكامل</li>
+<li><strong>مشاريع البنية التحتية</strong> (مواقف، أنفاق، نقل) — كاتبو المواصفات يتجهون الآن لـ IP67 افتراضيًا</li>
+</ul>
+
+<h2>الاتجاه 2: مزودات ذكية / قابلة للتعتيم تنمو سريعًا</h2>
+
+<p>تسأل نحو نصف الاستفسارات الجديدة عن قدرة التعتيم. توزيع ما يطلبه الناس فعليًا:</p>
+<ul>
+<li><strong>DALI:</strong> مشاريع مبانٍ تجارية (مكاتب، تجزئة). حجم مستقر لكن صغير لكل مشروع.</li>
+<li><strong>0-10V:</strong> لا يزال ملك الحجم في أمريكا الشمالية. بسيط، رخيص، متوافق مع كل شيء.</li>
+<li><strong>تعتيم PWM:</strong> ينمو سريعًا للبستنة والإضاءة المعمارية حيث يهم التحكم الدقيق.</li>
+<li><strong>Zigbee / WiFi / Bluetooth:</strong> الاهتمام مرتفع، لكن الطلبات الفعلية لا تزال منخفضة (~8% من طلبات التعتيم). معظم العملاء يفضلون متحكمًا ذكيًا منفصلًا ويُبقون المزود «أبله».</li>
+</ul>
+<div class="highlight">
+<strong>رأينا:</strong> إن كنت تطلق خط منتجات جديدًا في 2026، ابنه حول 0-10V + DALI اختياري. هذا يغطي 85%+ من طلب التعتيم الحالي دون هندسة مفرطة.
+</div>
+
+<h2>الاتجاه 3: التحولات الإقليمية</h2>
+<h3>الشرق الأوسط / GCC — منطقتنا الأسرع نموًا</h3>
+<p>السعودية (مشاريع رؤية 2030)، والإمارات (إرث إكسبو)، وقطر تطلب بقوة. أنماط رئيسية:</p>
+<ul>
+<li>كل الخارج = IP67 كحد أدنى، غالبًا IP68 للنوافير/المسابح</li>
+<li>شبكة 220V، 50Hz — معياري لدينا</li>
+<li>حساسية تجاه المهلة: يريدون مخزونًا يُشحن في 7 أيام، وOEM مخصص في 25 يومًا</li>
+<li>تركيز الشهادات: SASO (السعودية)، ESMA (الإمارات) إضافة إلى CE/RoHS</li>
+</ul>
+<h3>أوروبا — مستقرة، حساسة للسعر</h3>
+<p>طلبات الاتحاد الأوروبي مستوية سنويًا في الحجم لكنها ارتفعت قليلًا في متوسط قيمة الطلب. العملاء يدمجون الموردين (SKU أقل، دفعات أكبر). متطلبات كفاءة الطاقة (ErP / Ecodesign) تدفع الطلب على مزودات أعلى كفاءة (&ge;90% عند الحمل الكامل).</p>
+<h3>جنوب شرق آسيا — نمو حجم، ASP أقل</h3>
+<p>فيتنام وتايلاند وإندونيسيا والفلبين تنمو سريعًا. معظمها طلبات محوّلات داخلية ومزودات IP20 — سعر وحدة أقل لكن كمية عالية. المنافسة السعرية محتدمة هنا؛ السعر المباشر من المصنع ضروري.</p>
+<h3>الأمريكتان — أمريكا الشمالية مستقرة، أمريكا اللاتينية ناشئة</h3>
+<p>أمريكا الشمالية (الولايات المتحدة/كندا/المكسيك) تبقى أكبر سوق منفرد لدينا من حيث الإيرادات. دخل 110V، وإدراج UL مطلوب لأي تركيب دائم. أمريكا اللاتينية (البرازيل وكولومبيا وتشيلي) تنهض — 220V، وطلب متزايد على إنارة الشوارع والترميم التجاري.</p>
+
+<h2>الاتجاه 4: كيف تبدو أوراق المواصفات في 2026</h2>
+<p>مقارنة بقبل ثلاث سنوات، طلبات RFQ الواردة (طلبات عرض السعر) تطلب تفصيلًا أكثر مقدمًا. أكثر المواصفات المطلوبة اليوم:</p>
+<ol>
+<li><strong>كفاءة &ge;88% عند 50% حمل</strong> (كانت سابقًا كفاءة الحمل الكامل فقط)</li>
+<li><strong>عامل القدرة &ge;0,9</strong> عند 50% حمل</li>
+<li><strong>THD &lt;15%</strong> (التشويه التوافقي الكلي — تطلبه متشغلات الشبكة بشكل متزايد)</li>
+<li><strong>نطاق حرارة التشغيل -20&deg;C إلى +50&deg;C</strong> (تاريخيًا -10&deg;C إلى +40&deg;C)</li>
+<li><strong>حماية من التموج 2kV خط-نيوترال</strong> (تُطلب أكثر في الأسواق المعرضة للبرق)</li>
+<li><strong>ضمان 3 سنوات كحد أدنى</strong>, و5 سنوات متزايدة الطلب</li>
+</ol>
+
+<h2>الاتجاه 5: ضغط الأسعار وأثره على الجودة</h2>
+<p>لنكن مباشرين: دائمًا سيجد من هو أرخص على Alibaba. هذا ما تحصل عليه حين تنخفض 30% عن السعر السوقي لمزود LED:</p>
+<ul>
+<li>آثار PCB أرفع (يحترّ تحت الحمل المستمر)</li>
+<li>مكثفات أصغر أو بلا علامة (تفشل بعد 12&ndash;18 شهرًا بدل 3&ndash;5 سنوات)</li>
+<li>لا حشو حقيقي (يُدّعى IP لكن دون اختبار — يتسرب الماء خلال أشهر)</li>
+<li>جهد الخرج ينحرف خارج المواصفة عند السخونة (الـ LED سطوع غير متساوٍ أو تفشل مبكرًا)</li>
+</ul>
+<div class="highlight">
+<strong>موقفنا:</strong> نتنافس بالموثوقية والمهلة، لا بكوننا الأرخص مطلقًا. مزود يكلف 0,80 $ أكثر للوحدة لكنه يدوم 5 سنوات بدل 18 شهرًا أرخص في إجمالي تكلفة الملكية — خاصة مع إضافة شحن الإرجاع وعمالة إعادة التركيب والضرر السمعي من أعطال الميدان.
+</div>
+
+<h2>ما نتوقعه في النصف الثاني 2026</h2>
+<ul>
+<li><strong>إنفاق البنية التحتية في GCC</strong> يتواصل حتى نهاية العام (مشاريع تابعة لكأس العالم).</li>
+<li><strong>مزودات LED للبستنة</strong> تنمو مع توسّع الزراعة ذات البيئة المتحكم بها في أوروبا وأمريكا الشمالية.</li>
+<li><strong>مزودات USB-C / PD (توصيل الطاقة)</strong> تبدأ بالظهور في تطبيقات متخصصة (دمج الأثاث، وحدات محمولة). حجم صغير الآن لكن يستحق المراقبة.</li>
+<li><strong>مزودات ببطارية احتياطية / طوارئ</strong> تشهد اهتمامًا متجددًا إذ تشترط قوانين البناء في عدة دول الامتثال لإنارة الطوارئ.</li>
+</ul>
+
+<div class="cta-box">
+<h3>هل تخطط لمشتريات 2026؟</h3>
+<p>أرسل لنا قائمة المواد أو مفهوم المنتج. سنوفر عرض سعر وتقدير مهلة وعينة مجانية للمشاريع المؤهلة.</p>
+<a href="/#inquiry" class="btn">ابدأ استفسارًا</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">خط التصدير الأسرع نموًا لإضاءة الخارج واللاندسكيب.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">مزودات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">حصان المعركة عالي الحجم لخزائن اللافتات وإضاءة الواجهات.</span></a><a class="pc-card" href="/products/adapters/"><span class="pc-title">محوّلات LED 5-200W</span><span class="pc-desc">محوّلات مدمجة لمشاريع تجارية وسكنية حول العالم.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">تقنية LED</span><span class="rel-title">اختر مزود LED الصحيح في 3 خطوات</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">دليل تقني</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">تنظيمي</span><span class="rel-title">شهادة BIS لمزودات LED: دليل استيراد الهند</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">تحليل تقني</span><span class="rel-title">عمر مزودات LED: MTBF وL70 والحياة الواقعية</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">شهادة BIS لمزودات LED: دليل استيراد الهند</span></a></nav>
+</main>"""

@@ -990,3 +990,120 @@ BLOG_BODY['pt']['blog-2'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-1/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Escolha a fonte de alimentação LED certa em 3 passos</span></a><a class="pn-next" href="/blog-3/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Mercado LED 2026: o que estamos a ver</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['pt']['blog-3'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar às notas de campo</a>
+
+<h1>Mercado LED 2026: o que estamos a ver</h1>
+<div class="meta">Tendências do setor &middot; janeiro de 2026 &middot; 8 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-3-led-market-md.avif 1200w, /images/blog-3-led-market.avif 1024w">
+<source type="image/webp" srcset="/images/blog-3-led-market-md.webp 1200w, /images/blog-3-led-market.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-3-led-market.jpg" alt="Resumo do mercado LED global 2026" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>Estas são as nossas observações do chão de fábrica da CHUGAO em Zhongshan — não relatórios de analistas nem estudos de mercado. Isto é o que os nossos clientes realmente encomendaram em 2025 e o que perguntam ao entrarmos em 2026.</p>
+
+<h2>Os números (o nosso livro de encomendas)</h2>
+
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-num">+34%</div><div class="stat-label">Crescimento de volume de encomendas YoY<br>(2025 vs 2024)</div></div>
+<div class="stat-card"><div class="stat-num">47%</div><div class="stat-label">Das novas encomendas especificam<br>capacidade inteligente/dimming</div></div>
+<div class="stat-card"><div class="stat-num">#1</div><div class="stat-label">Mercado em crescimento:<br>Médio Oriente / região GCC</div></div>
+<div class="stat-card"><div class="stat-num">100W&ndash;200W</div><div class="stat-label">Gama de potência<br>mais solicitada</div></div>
+</div>
+
+<h2>Tendência 1: IP67 já é o pedido padrão</h2>
+
+<p>Há três anos, IP65 era a especificação exterior padrão. Em 2025, 62% das nossas encomendas de drivers exteriores especificaram IP67. O fosso de preço estreitou para 1&ndash;3 $ por unidade a 100W, e os clientes preferem a margem de imersão a lidar com uma reclamação de garantia.</p>
+
+<p>Isto é especialmente verdade para:</p>
+<ul>
+<li><strong>Empreiteiros de iluminação de paisagens</strong> — um mau evento de chuva e perdem um fim de semana a substituir drivers</li>
+<li><strong>Fabricantes de sinalização</strong> — os pontos de montagem muitas vezes acumulam condensação que IP65 não resolve totalmente</li>
+<li><strong>Projetos de infraestrutura</strong> (parques, túneis, transporte) — os redatores de especificações já usam IP67 por padrão</li>
+</ul>
+
+<h2>Tendência 2: Drivers inteligentes / dimerizáveis crescem rápido</h2>
+
+<p>Quase metade das novas consultas pergunta sobre capacidade de dimerização. O desdobramento do que as pessoas realmente encomendam:</p>
+<ul>
+<li><strong>DALI:</strong> Projetos de edifícios comerciais (escritórios, retalho). Volume estável mas pequeno por projeto.</li>
+<li><strong>0-10V:</strong> Ainda o rei do volume na América do Norte. Simples, barato, compatível com tudo.</li>
+<li><strong>Dimming PWM:</strong> Cresce rápido para horticultura e iluminação arquitetónica onde o controlo preciso importa.</li>
+<li><strong>Zigbee / WiFi / Bluetooth:</strong> O interesse é alto, mas os pedidos reais continuam baixos (~8% dos pedidos de dimming). A maioria prefere um controlador inteligente separado e mantém o driver «mudo».</li>
+</ul>
+<div class="highlight">
+<strong>A nossa leitura:</strong> Se está a lançar uma nova linha de produtos em 2026, construa-a em torno de 0-10V + DALI opcional. Isso cobre mais de 85% da procura atual de dimming sem sobreengenharia.
+</div>
+
+<h2>Tendência 3: Mudanças regionais</h2>
+<h3>Médio Oriente / GCC — a nossa região de crescimento mais rápido</h3>
+<p>Arábia Saudita (projetos Visão 2030), EAU (construção legado Expo) e Qatar encomendam agressivamente. Padrões-chave:</p>
+<ul>
+<li>Todo o exterior = IP67 mínimo, frequentemente IP68 para fontes/piscinas</li>
+<li>Rede 220V, 50Hz — padrão para nós</li>
+<li>Sensibilidade ao prazo: querem stock enviado em 7 dias, OEM personalizado em 25 dias</li>
+<li>Foco em certificação: SASO (Saudi), ESMA (EAU) além de CE/RoHS</li>
+</ul>
+<h3>Europa — estável, sensível ao preço</h3>
+<p>As encomendas da UE estão planas YoY em volume mas sobem ligeiramente no valor médio de encomenda. Os clientes consolidam fornecedores (menos SKUs, lotes maiores). Os requisitos de eficiência energética (ErP / Ecodesign) impulsionam a procura por drivers de maior eficiência (&ge;90% a carga completa).</p>
+<h3>Sudeste Asiático — crescimento de volume, ASP mais baixo</h3>
+<p>Vietname, Tailândia, Indonésia e Filipinas crescem rápido. São maioritariamente encomendas de adaptadores interiores e drivers IP20 — preço unitário mais baixo mas alta quantidade. A concorrência de preços é intensa aqui; o preço de fábrica é essencial.</p>
+<h3>Américas — América do Norte estável, LatAm emergente</h3>
+<p>América do Norte (EUA/Canadá/México) continua a ser o nosso maior mercado único por receita. Entrada 110V, listagem UL exigida para instalações permanentes. LatAm (Brasil, Colômbia, Chile) emerge — 220V, procura crescente por alumbrado público e retroadaptação comercial.</p>
+
+<h2>Tendência 4: como as fichas técnicas se apresentam em 2026</h2>
+<p>Face a há três anos, as RFQ recebidas (pedidos de cotação) pedem mais detalhe antecipadamente. As especificações mais solicitadas hoje:</p>
+<ol>
+<li><strong>Eficiência &ge;88% a 50% de carga</strong> (antes só eficiência a carga completa)</li>
+<li><strong>Fator de potência &ge;0,9</strong> a 50% de carga</li>
+<li><strong>THD &lt;15%</strong> (distorção harmónica total — cada vez mais exigida pelas operadoras de rede)</li>
+<li><strong>Intervalo de temperatura de operação -20&deg;C a +50&deg;C</strong> (historicamente -10&deg;C a +40&deg;C)</li>
+<li><strong>Proteção contra sobretensão 2kV linha-neutro</strong> (exigida mais vezes em mercados propensos a raios)</li>
+<li><strong>Garantia mínima de 3 anos</strong>, 5 anos cada vez mais pedidos</li>
+</ol>
+
+<h2>Tendência 5: pressão de preços e como afeta a qualidade</h2>
+<p>Seremos diretos: há sempre alguém mais barato no Alibaba. Isto é o que obtém ao ir 30% abaixo do preço de mercado num driver LED:</p>
+<ul>
+<li>Pistas de PCB mais finas (sobreaquece sob carga contínua)</li>
+<li>Condensadores mais pequenos ou sem marca (falham após 12&ndash;18 meses em vez de 3&ndash;5 anos)</li>
+<li>Sem verdadeiro encapsulamento (grau IP afirmado mas não testado — a água entra em meses)</li>
+<li>A tensão de saída desvia fora da especificação ao aquecer (LEDs com brilho desigual ou falham cedo)</li>
+</ul>
+<div class="highlight">
+<strong>A nossa posição:</strong> Competimos em fiabilidade e prazo, não em ser os absolutos mais baratos. Um driver que custa 0,80 $ a mais por unidade mas dura 5 anos em vez de 18 meses é mais barato no custo total de posse — especialmente ao somar o envio de devolução, a mão de obra de reinstalação e o dano reputacional por falhas em campo.
+</div>
+
+<h2>O que esperamos no H2 2026</h2>
+<ul>
+<li><strong>Despesa em infraestrutura GCC</strong> continua até ao fim do ano (projetos seguintes ao Mundial).</li>
+<li><strong>Drivers LED de horticultura</strong> crescem ao escalar a agricultura de ambiente controlado na Europa e América do Norte.</li>
+<li><strong>Drivers USB-C / PD (Power Delivery)</strong> começam a aparecer em aplicações de nicho (integração de mobiliário, luminárias portáteis). Pouco volume agora, mas vale a pena vigiar.</li>
+<li><strong>Drivers com bateria de backup / emergência</strong> veem interesse renovado enquanto os códigos de construção de vários países exigem conformidade de iluminação de emergência.</li>
+</ul>
+
+<div class="cta-box">
+<h3>Planeia as suas compras 2026?</h3>
+<p>Envie-nos a sua lista de materiais ou conceito de produto. Fornecemos uma cotação, estimativa de prazo e amostra grátis para projetos elegíveis.</p>
+<a href="/#inquiry" class="btn">Iniciar consulta</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fontes impermeáveis IP67 10-400W</span><span class="pc-desc">Nossa linha de exportação de crescimento mais rápido para iluminação exterior e de paisagens.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fontes resistentes à chuva IP65 100-600W</span><span class="pc-desc">Cavalo de batalha de grande volume para armários de sinalização e iluminação de fachadas.</span></a><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Adaptadores compactos para projetos comerciais e residenciais em todo o mundo.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Escolha a fonte de alimentação LED certa em 3 passos</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guia técnico</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatório</span><span class="rel-title">Certificação BIS para drivers LED: guia de importação à Índia</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Análise técnica</span><span class="rel-title">Vida útil dos drivers LED: MTBF, L70 e vida real</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Certificação BIS para drivers LED: guia de importação à Índia</span></a></nav>
+</main>"""
