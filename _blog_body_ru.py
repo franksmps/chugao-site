@@ -1203,3 +1203,103 @@ BLOG_BODY['ru']['blog-4'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Рынок LED 2026: что мы наблюдаем</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Срок службы LED-драйверов: MTBF, L70 и как долго они реально работают</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ru']['blog-5'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Назад к полевым заметкам</a>
+
+<h1>Срок службы LED-драйверов: MTBF, L70 и как долго они реально работают</h1>
+<div class="meta">Технический разбор &middot; апрель 2026 &middot; 8 мин чтения</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
+<source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-indoor.jpg" alt="Внутренний LED-драйвер с длительным сроком службы" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>В даташите написано «50 000 часов». Считаем: это <strong>5,7 года</strong> непрерывной работы. Так почему некоторым установкам требуется замена драйвера уже через 2-3 года?</p>
+
+<p>Ответ в том, что номинальный и реальный срок службы — разные вещи. Эта статья объясняет, что на самом деле означают эти числа, что убивает драйверы раньше времени и как выбрать правильную спецификацию под ожидаемый срок службы вашего проекта.</p>
+
+<h2>Три метрики, которые важны</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Метрика</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Что измеряет</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Типичное значение</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Среднее время между отказами — статистическое среднее время между отказами по выборке</td><td style="padding:10px 14px;border:1px solid var(--b)">50 000–100 000 ч</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Часы до падения выхода до 70% или 80% от начального значения</td><td style="padding:10px 14px;border:1px solid var(--b)">30 000–50 000 ч</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Гарантийный срок</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Гарантия производителя от дефектов</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 лет</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Ключевой вывод:</strong> Рейтинг L70 50 000 часов означает, что драйвер сохраняет не менее 70% исходной выходной мощности после 50 000 часов в условиях испытаний. Это не значит, что каждая единица проработает 50 000 часов до отказа.
+</div>
+
+<h2>Почему драйверы выходят из строя раньше</h2>
+
+<h3>1. Тепло — убийца №1</h3>
+<p>Каждые 10&deg;C выше номинальной рабочей температуры примерно вдвое сокращают срок службы электролитических конденсаторов. Внутренний драйвер IP20 внутри герметичного светильника легко работает на 20&deg;C выше окружающей среды. Если в помещении 35&deg;C (обычно летом), внутренняя температура компонентов может достигать 75-85&deg;C — намного выше типовой расчётной точки 60&deg;C.</p>
+<ul>
+<li><strong>Водонепроницаемые IP67:</strong> Лучшее рассеивание тепла через металлический корпус + заливку силиконом. Рассчитаны на -30 до +60&deg;C. Типичный срок: 50 000 ч.</li>
+<li><strong>Внутренние IP20:</strong> Зависят от вентиляции светильника. В герметичных корпусах ждите на 40-60% меньше срока, чем номинал.</li>
+<li><strong>Адаптеры:</strong> Пластиковый корпус удерживает больше тепла. Типичный срок: 30 000 ч.</li>
+</ul>
+
+<h3>2. Скачки и перенапряжения сети</h3>
+<p>Колебания сетевого напряжения (особенно на развивающихся рынках) нагружают входные конденсаторы и варисторы. Драйвер на 190-264 В перем. может пережить импульс 280 В раз-другой, но повторяющиеся перенапряжения degradируют компоненты быстрее обычного износа.</p>
+
+<h3>3. Работа близко к полной нагрузке</h3>
+<p>При 90-100% номинальной нагрузки пульсационный ток через выходные конденсаторы растёт. Это даёт больше тепла и ускоряет старение. Правило, которое мы рекомендуем в CHUGAO:</p>
+<div class="highlight">
+<strong>Мощность нагрузки &times; 1,25 = минимальный рейтинг драйвера.</strong><br>Работа драйвера на 70-80% мощности вместо 95% может продлить реальный срок службы на 30–50%.
+</div>
+
+<h2>Что нужно разным применениям</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Применение</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Рекомендуемый драйвер</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Ожидаемый срок</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Почему</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Розничная вывеска (8-12 ч/день)</td><td style="padding:10px 14px;border:1px solid var(--b)">Адаптер / Внутренний IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 лет</td><td style="padding:10px 14px;border:1px solid var(--b)">Малые часы в день компенсируют меньший срок на единицу</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Уличная подсветка фасадов (12+ ч/день)</td><td style="padding:10px 14px;border:1px solid var(--b)">Водонепроницаемый IP67</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 лет</td><td style="padding:10px 14px;border:1px solid var(--b)">Герметичная заливка держит влагу и перепады температур</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Промышленное 24/7 (склад)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65 дождезащищённый или Industrial CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 лет</td><td style="padding:10px 14px;border:1px solid var(--b)">Непрерывная работа при высокой температуре ускоряет износ</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Морское / фонтан</td><td style="padding:10px 14px;border:1px solid var(--b)">Устройство с рейтингом IP68</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 лет</td><td style="padding:10px 14px;border:1px solid var(--b)">Полное погружение, испытано на солевой туман</td></tr>
+</tbody>
+</table>
+
+<h2>Как мы тестируем в CHUGAO</h2>
+
+<p>Каждый драйвер CHUGAO проходит <strong>48-часовое испытание на прогон</strong> перед отгрузкой. Бракованные единицы утилизируются — они не покидают цех. Эта предотгрузочная фильтрация выявляет отказы младенческой смертности (раннюю часть ваннообразной кривой).</p>
+
+<p>Для OEM-заказов свыше 500 шт. мы предлагаем расширенный прогон (72-168 часов) бесплатно, если это указано в вашем PO.</p>
+
+<h2>Краткое руководство по выбору</h2>
+<ol>
+<li><strong>Время работы в день?</strong> 8 ч в рознице против 24 ч на заводе меняет всё. Умножьте целевой срок проекта на часы в день, чтобы получить общее требование по часам.</li>
+<li><strong>Температура среды?</strong> Каждые 10&deg;C выше 40&deg;C сокращают срок на ~50%. Учитывайте это при выборе модели.</li>
+<li><strong>Вентиляция?</strong> Герметичным светильникам нужен IP67 или выше. Вентилируемым корпусам подойдут IP20/65.</li>
+<li><strong>Запас:</strong> Всегда добавляйте 25%. Разница в цене между драйвером 60 Вт и 100 Вт мала по сравнению с выездом на замену отказавшего блока.</li>
+<li><strong>Запасные:</strong> Для круглосуточных установок держите 5-10% запасных драйверов. Это дешевле экстренной доставки.</li>
+</ol>
+
+<div class="cta-box">
+<h3>Не уверены, какой драйвер подходит под ваш срок службы?</h3>
+<p>Назовите применение, время работы в день и условия среды. Мы порекомендуем нужную серию с реалистичным сроком службы для вашей установки.</p>
+<a href="/#inquiry" class="btn">Получить рекомендацию по сроку службы</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Ознакомьтесь с продукцией CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-адаптеры 5-200Вт</span><span class="pc-desc">Долговечные адаптеры с данными MTBF для каждого класса.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Внутренние LED-драйверы 50-400Вт</span><span class="pc-desc">Драйверы с рейтингом L70 для коммерческих и архитектурных светильников.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Водонепроницаемые драйверы IP67 10-400Вт</span><span class="pc-desc">Залитые компаундом и герметичные для длительного срока на улице.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Драйверы IP65 100-600Вт</span><span class="pc-desc">Прочные драйверы для уличной работы 50.000+ часов.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Ещё из поля</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-технология</span><span class="rel-title">Выберите правильный LED-блок за 3 шага</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Технический гид</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Отраслевые тренды</span><span class="rel-title">Рынок LED 2026: что мы наблюдаем</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Регуляторика</span><span class="rel-title">Сертификация BIS для LED-драйверов: руководство по импорту в Индию</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Сертификация BIS для LED-драйверов: руководство по импорту в Индию</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">IP67 vs IP65: какой рейтинг нужен?</span></a></nav>
+</main>"""

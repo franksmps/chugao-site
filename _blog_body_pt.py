@@ -1204,3 +1204,103 @@ BLOG_BODY['pt']['blog-4'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Mercado LED 2026: o que estamos a ver</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Vida útil dos drivers LED: MTBF, L70 e quanto duram realmente</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['pt']['blog-5'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar às notas de campo</a>
+
+<h1>Vida útil dos drivers LED: MTBF, L70 e quanto duram realmente</h1>
+<div class="meta">Análise técnica &middot; abril de 2026 &middot; 8 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
+<source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-indoor.jpg" alt="Driver LED de interior com longa vida útil" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>Uma ficha técnica diz «50.000 horas». Fazemos as contas: isso são <strong>5,7 anos</strong> de funcionamento contínuo. Então, por que algumas instalações precisam de substituir o driver após apenas 2-3 anos?</p>
+
+<p>A resposta é que a vida útil nominal e a vida útil real são coisas diferentes. Este artigo explica o que esses números realmente significam, o que mata os drivers precocemente e como escolher a especificação adequada para a vida útil esperada do seu projeto.</p>
+
+<h2>As três métricas que importam</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Métrica</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">O que mede</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Valor típico</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Tempo médio entre falhas — tempo médio estatístico entre falhas numa população</td><td style="padding:10px 14px;border:1px solid var(--b)">50.000–100.000 h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Horas até a saída cair para 70% ou 80% do valor inicial</td><td style="padding:10px 14px;border:1px solid var(--b)">30.000–50.000 h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Período de garantia</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Garantia do fabricante contra defeitos</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 anos</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Ideia-chave:</strong> Uma classificação L70 de 50.000 horas significa que o driver mantém pelo menos 70% da saída original após 50.000 horas em condições de ensaio. Não significa que cada unidade funcionará 50.000 horas antes de falhar.
+</div>
+
+<h2>Por que os drivers falham precocemente</h2>
+
+<h3>1. O calor é o assassino n.º 1</h3>
+<p>Cada 10&deg;C acima da temperatura de funcionamento nominal reduz aproximadamente pela metade a vida dos condensadores eletrolíticos. Um driver de interior IP20 montado dentro de uma luminária selada pode facilmente funcionar 20&deg;C acima da temperatura ambiente. Se o ambiente for de 35&deg;C (comum no verão), as temperaturas internas dos componentes podem atingir 75-85&deg;C — bem acima do ponto de projeto típico de 60&deg;C.</p>
+<ul>
+<li><strong>Unidades impermeáveis IP67:</strong> Melhor dissipação de calor através de caixa metálica + resina de potting de silicone. Classificadas para -30 a +60&deg;C. Vida típica: 50.000 h.</li>
+<li><strong>Unidades de interior IP20:</strong> Dependem da ventilação da luminária. Em caixas seladas, espere 40-60% menos vida que a nominal.</li>
+<li><strong>Adaptadores:</strong> A caixa de plástico retém mais calor. Vida típica: 30.000 h.</li>
+</ul>
+
+<h3>2. Picos de tensão e sobretensões</h3>
+<p>As flutuações de tensão da rede (especialmente em mercados em desenvolvimento) stressam os condensadores de entrada e os varistores. Um driver classificado para CA 190-264 V pode sobreviver a um transitório de 280 V uma ou duas vezes, mas as sobretensões repetidas degradam os componentes mais rápido que o desgaste normal.</p>
+
+<h3>3. Funcionamento perto da carga máxima</h3>
+<p>A 90-100% da carga nominal, a corrente de ripple através dos condensadores de saída aumenta. Isso gera mais calor e acelera o envelhecimento. A regra que recomendamos na CHUGAO:</p>
+<div class="highlight">
+<strong>Potência de carga &times; 1,25 = classificação mínima do driver.</strong><br>Operar um driver a 70-80% de capacidade em vez de 95% pode estender a vida útil efetiva entre 30 e 50%.
+</div>
+
+<h2>O que as diferentes aplicações precisam</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Aplicação</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Driver recomendado</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Vida útil esperada</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Porquê</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Sinalização comercial (8-12 h/dia)</td><td style="padding:10px 14px;border:1px solid var(--b)">Adaptador / Interior IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 anos</td><td style="padding:10px 14px;border:1px solid var(--b)">As poucas horas diárias compensam a menor vida por unidade</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Iluminação de fachada exterior (12+ h/dia)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 impermeável</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 anos</td><td style="padding:10px 14px;border:1px solid var(--b)">O potting selado suporta humidade e variações de temperatura</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Industrial 24/7 (armazém)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65 resistente à chuva ou Industrial CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 anos</td><td style="padding:10px 14px;border:1px solid var(--b)">A operação contínua a alta temperatura acelera o desgaste</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Marinho / fonte</td><td style="padding:10px 14px;border:1px solid var(--b)">Unidade com classificação IP68</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 anos</td><td style="padding:10px 14px;border:1px solid var(--b)">Classificação de imersão total, testada contra salitre</td></tr>
+</tbody>
+</table>
+
+<h2>Como testamos na CHUGAO</h2>
+
+<p>Cada driver CHUGAO passa por um <strong>teste de envelhecimento de 48 horas</strong> antes do envio. As unidades defeituosas são descartadas — não saem do chão de fábrica. Este rastreio pré-envio deteta falhas de mortalidade infantil (a porção de falha precoce da curva da banheira).</p>
+
+<p>Para encomendas OEM acima de 500 uds, oferecemos opções de envelhecimento prolongado (72-168 horas) sem custo extra se especificado na sua PO.</p>
+
+<h2>Guia rápido de decisão</h2>
+<ol>
+<li><strong>Tempo de uso diário?</strong> 8 h no retalho vs 24 h na indústria muda tudo. Multiplique a vida alvo do projeto pelas horas diárias para obter o requisito total de horas.</li>
+<li><strong>Temperatura ambiente?</strong> Cada 10&deg;C acima de 40&deg;C reduz a vida ~50%. Considere isto ao selecionar o modelo.</li>
+<li><strong>Ventilação?</strong> Luminárias seladas precisam de IP67 ou superior. Caixas ventiladas podem usar IP20/65.</li>
+<li><strong>Margem:</strong> Adicione sempre 25%. A diferença de custo entre um driver de 60 W e um de 100 W é pequena face a uma visita ao local para substituir uma unidade avariada.</li>
+<li><strong>Stock de reserva:</strong> Para instalações 24/7, mantenha 5-10% de drivers de reserva à mão. Custa menos que um envio de emergência.</li>
+</ol>
+
+<div class="cta-box">
+<h3>Não sabe que driver corresponde às suas necessidades de vida útil?</h3>
+<p>Diga-nos a sua aplicação, tempo de uso diário e condições ambientais. Recomendamos a série certa com uma expectativa de vida realista para a sua instalação específica.</p>
+<a href="/#inquiry" class="btn">Pedir recomendação por vida útil</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Adaptadores de longa vida com dados MTBF para cada classe.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Drivers LED internos 50-400W</span><span class="pc-desc">Drivers com classificação L70 para luminárias comerciais e arquiteturais.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Drivers impermeáveis IP67 10-400W</span><span class="pc-desc">Com potting e selagem para maior vida no exterior.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Drivers resistentes à chuva IP65 100-600W</span><span class="pc-desc">Drivers robustos concebidos para operação exterior de 50.000+ horas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Escolha a fonte de alimentação LED certa em 3 passos</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guia técnico</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Tendências do setor</span><span class="rel-title">Mercado LED 2026: o que estamos a ver</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatório</span><span class="rel-title">Certificação BIS para drivers LED: guia de importação à Índia</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Certificação BIS para drivers LED: guia de importação à Índia</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">IP67 vs IP65: que classificação precisa?</span></a></nav>
+</main>"""

@@ -1203,3 +1203,103 @@ BLOG_BODY['de']['blog-4'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">LED-Markt 2026: Was wir sehen</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Lebensdauer von LED-Treibern: MTBF, L70 und wie lange sie wirklich halten</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-5'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>Lebensdauer von LED-Treibern: MTBF, L70 und wie lange sie wirklich halten</h1>
+<div class="meta">Technische Analyse &middot; April 2026 &middot; 8 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
+<source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-indoor.jpg" alt="Innen-LED-Treiber mit langer Lebensdauer" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>Ein Datenblatt sagt »50.000 Stunden«. Kurz gerechnet: das sind <strong>5,7 Jahre</strong> Dauerbetrieb. Warum müssen manche Anlagen den Treiber schon nach 2-3 Jahren austauschen?</p>
+
+<p>Die Antwort: Nennlebensdauer und reale Lebensdauer sind zwei Paar Schuhe. Dieser Artikel erklärt, was diese Zahlen wirklich bedeuten, was Treiber früh killt und wie Sie die passende Spezifikation für die erwartete Nutzungsdauer Ihres Projekts wählen.</p>
+
+<h2>Die drei Kennzahlen, die zählen</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Kennzahl</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Was sie misst</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Typischer Wert</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Mean Time Between Failures — statistische mittlere Zeit zwischen Ausfällen einer Population</td><td style="padding:10px 14px;border:1px solid var(--b)">50.000–100.000 h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Stunden bis die Ausgangsleistung auf 70 % oder 80 % des Anfangswerts fällt</td><td style="padding:10px 14px;border:1px solid var(--b)">30.000–50.000 h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Garantiezeit</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Herstellergarantie gegen Defekte</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 Jahre</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Kernpunkt:</strong> Eine L70-Angabe von 50.000 Stunden bedeutet, dass der Treiber unter Prüfbedingungen nach 50.000 Stunden mindestens 70 % seiner Originalleistung behält. Das heißt nicht, dass jede Einheit 50.000 Stunden läuft, bevor sie ausfällt.
+</div>
+
+<h2>Warum Treiber früh ausfallen</h2>
+
+<h3>1. Hitze ist der Killer Nr. 1</h3>
+<p>Jede 10&deg;C über der Nennbetriebstemperatur halbiert etwa die Lebensdauer der Elektrolytkondensatoren. Ein IP20-Innentreiber in einem versiegelten Leuchtengehäuse läuft leicht 20&deg;C über der Umgebungstemperatur. Bei 35&deg;C Umgebung (im Sommer üblich) erreichen die Bauteiltemperaturen 75-85&deg;C — weit über dem typischen Auslegungspunkt von 60&deg;C.</p>
+<ul>
+<li><strong>Wasserdichte IP67:</strong> Bessere Wärmeableitung über Metallgehäuse + Silikon-Verguss. Ausgelegt für -30 bis +60&deg;C. Typische Lebensdauer: 50.000 h.</li>
+<li><strong>Innen IP20:</strong> Hängen von der Leuchtenlüftung ab. In versiegelten Gehäusen rechnen Sie mit 40-60 % weniger Leben als nominal.</li>
+<li><strong>Adapter:</strong> Kunststoffgehäuse hält mehr Wärme zurück. Typische Lebensdauer: 30.000 h.</li>
+</ul>
+
+<h3>2. Spannungsspitzen und Überspannungen</h3>
+<p>Netzspannungsschwankungen (besonders auf Entwicklungsmärkten) belasten Eingangskondensatoren und Varistoren. Ein Treiber für 190-264 V AC übersteht vielleicht einmal oder zweimal einen 280-V-Transienten, aber wiederholte Überspannungen verschleißen die Bauteile schneller als normale Alterung.</p>
+
+<h3>3. Betrieb nahe Volllast</h3>
+<p>Bei 90-100 % Nennlast steigt der Rippelstrom durch die Ausgangskondensatoren. Das erzeugt mehr Wärme und beschleunigt die Alterung. Die Regel, die wir bei CHUGAO empfehlen:</p>
+<div class="highlight">
+<strong>Lastleistung &times; 1,25 = Mindest-Treiber-Nennwert.</strong><br>Ein Treiber mit 70-80 % Last statt 95 % kann die effektive Lebensdauer um 30–50 % verlängern.
+</div>
+
+<h2>Was verschiedene Anwendungen brauchen</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Anwendung</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Empfohlener Treiber</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Erwartete Nutzungsdauer</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Warum</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Einzelhandels-Signage (8-12 h/Tag)</td><td style="padding:10px 14px;border:1px solid var(--b)">Adapter / Innen IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 Jahre</td><td style="padding:10px 14px;border:1px solid var(--b)">Wenige Betriebsstunden täglich gleichen die kürzere Einheitslebensdauer aus</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Außenfassaden-Beleuchtung (12+ h/Tag)</td><td style="padding:10px 14px;border:1px solid var(--b)">Wasserdicht IP67</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 Jahre</td><td style="padding:10px 14px;border:1px solid var(--b)">Versiegelter Verguss hält Feuchte und Temperaturschwankungen stand</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Industrie 24/7 (Lager)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65 spritzwassergeschützt oder Industrial CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 Jahre</td><td style="padding:10px 14px;border:1px solid var(--b)">Dauerbetrieb bei hoher Temperatur beschleunigt den Verschleiß</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Marin / Brunnen</td><td style="padding:10px 14px;border:1px solid var(--b)">IP68-klassierte Einheit</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 Jahre</td><td style="padding:10px 14px;border:1px solid var(--b)">Volle Tauchung, salzsprühgetestet</td></tr>
+</tbody>
+</table>
+
+<h2>Wie wir bei CHUGAO testen</h2>
+
+<p>Jeder CHUGAO-Treiber durchläuft einen <strong>48-Stunden-Burn-in-Test</strong> vor dem Versand. Ausfälle werden aussortiert — sie verlassen die Werkshalle nicht. Diese Vorversand-Prüfung fängt Frühausfälle (den frühen Teil der Badewannenkurve) ab.</p>
+
+<p>Bei OEM-Bestellungen über 500 Stück bieten wir verlängerte Burn-in-Optionen (72-168 Stunden) ohne Aufpreis an, wenn in Ihrer PO angegeben.</p>
+
+<h2>Kurzentscheidungshilfe</h2>
+<ol>
+<li><strong>Tägliche Laufzeit?</strong> 8 h Einzelhandel vs. 24 h Industrie ändert alles. Multiplizieren Sie die Ziellebensdauer mit den Tagesstunden für den Gesamtstundenbedarf.</li>
+<li><strong>Umgebungstemperatur?</strong> Jede 10&deg;C über 40&deg;C halbiert die Lebensdauer (~50 %). Berücksichtigen Sie das bei der Modellwahl.</li>
+<li><strong>Lüftung?</strong> Versiegelte Leuchten brauchen IP67 oder höher. Belüftete Gehäuse können IP20/65 nutzen.</li>
+<li><strong>Reserve:</strong> Immer 25 % draufschlagen. Der Preisunterschied zwischen 60-W- und 100-W-Treiber ist gering gegen einen Vor-Ort-Termin zum Tausch.</li>
+<li><strong>Ersatzbestand:</strong> Bei 24/7-Anlagen 5-10 % Ersatztreiber bereithalten. Das kostet weniger als Eilversand.</li>
+</ol>
+
+<div class="cta-box">
+<h3>Unsicher, welcher Treiber zu Ihrer Lebensdauer passt?</h3>
+<p>Nennen Sie uns Anwendung, tägliche Laufzeit und Umgebungsbedingungen. Wir empfehlen die passende Serie mit realistischer Lebensdauer für Ihre Installation.</p>
+<a href="/#inquiry" class="btn">Lebensdauer-Match empfehlen</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-Adapter 5-200W</span><span class="pc-desc">Langlebige Adapter mit MTBF-Daten für jede Klasse.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Innen-LED-Treiber 50-400W</span><span class="pc-desc">L70-klassifizierte Treiber für kommerzielle und architektonische Leuchten.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Vergossen und versiegelt für längere Lebensdauer im Freien.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Spritzwassergeschützte IP65-Treiber 100-600W</span><span class="pc-desc">Robuste Treiber für 50.000+ Stunden Außenbetrieb.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-Technik</span><span class="rel-title">Das richtige LED-Netzteil in 3 Schritten wählen</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Branchentrends</span><span class="rel-title">LED-Markt 2026: Was wir sehen</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatorisch</span><span class="rel-title">BIS-Zertifizierung für LED-Treiber: Importleitfaden Indien</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">BIS-Zertifizierung für LED-Treiber: Importleitfaden Indien</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">IP67 vs IP65: Welche Note brauchen Sie?</span></a></nav>
+</main>"""

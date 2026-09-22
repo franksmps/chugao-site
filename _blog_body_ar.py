@@ -1203,3 +1203,103 @@ BLOG_BODY['ar']['blog-4'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">سوق LED 2026: ما نراه</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">عمر مزودات LED: MTBF وL70 وكم تدوم فعليًا</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-5'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>عمر مزودات LED: MTBF وL70 وكم تدوم فعليًا</h1>
+<div class="meta">تحليل تقني &middot; أبريل 2026 &middot; 8 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
+<source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-indoor.jpg" alt="مزود LED داخلي بعمر طويل" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>تقول ورقة البيانات «50.000 ساعة». نحسبها: هذا <strong>5,7 سنوات</strong> تشغيل متواصل. إذن لماذا تحتاج بعض التركيبات لاستبدال المزود بعد سنتين أو ثلاث فقط؟</p>
+
+<p>الإجابة أن العمر المُصنّف والعمر الفعلي شيئان مختلفان. يشرح هذا المقال ما تعنيه تلك الأرقام حقًا، وما الذي يقتل المزودات مبكرًا، وكيف تختار المواصفة الصحيحة لعمر الخدمة المتوقع لمشروعك.</p>
+
+<h2>المقاييس الثلاثة التي تهم</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">المقياس</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">ماذا يقيس</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">القيمة النموذجية</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">متوسط الزمن بين الأعطال — المتوسط الإحصائي للزمن بين الأعطال في مجموعة</td><td style="padding:10px 14px;border:1px solid var(--b)">50.000–100.000 ساعة</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">الساعات حتى تهبط المخرجات إلى 70% أو 80% من قيمتها الأولية</td><td style="padding:10px 14px;border:1px solid var(--b)">30.000–50.000 ساعة</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>فترة الضمان</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">ضمان المصنّع ضد العيوب</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 سنوات</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>رؤية جوهرية:</strong> تقييم L70 البالغ 50.000 ساعة يعني أن المزود يحتفظ بما لا يقل عن 70% من مخرجاته الأصلية بعد 50.000 ساعة في ظروف الاختبار. لا يعني أن كل وحدة ستعمل 50.000 ساعة قبل العطل.
+</div>
+
+<h2>لماذا تفشل المزودات مبكرًا</h2>
+
+<h3>1. الحرارة هي القاتل الأول</h3>
+<p>كل 10&deg;C فوق درجة حرارة التشغيل المُصنّفة تُنقص عمر المكثفات الإلكتروليتية إلى النصف تقريبًا. مزود داخلي IP20 مثبّت داخل وحدة إضاءة مغلقة قد يسهل تشغيله بـ 20&deg;C فوق حرارة المحيط. إن كان المحيط 35&deg;C (شائع صيفًا)، قد تبلغ حرارة المكونات الداخلية 75-85&deg;C — أعلى بكثير من نقطة التصميم النموذجية 60&deg;C.</p>
+<ul>
+<li><strong>وحدات مقاومة للماء IP67:</strong> تشتيت حراري أفضل عبر هيكل معدني + حشو سيليكوني. مُصنّفة لـ -30 إلى +60&deg;C. العمر النموذجي: 50.000 ساعة.</li>
+<li><strong>وحدات داخلية IP20:</strong> تعتمد على تهوية الوحدة. في الهيئات المغلقة توقّع عمرًا أقل بنسبة 40-60% من المُصنّف.</li>
+<li><strong>المحولات:</strong> الهيكل البلاستيكي يحتبس حرارة أكثر. العمر النموذجي: 30.000 ساعة.</li>
+</ul>
+
+<h3>2. قفزات الجهد والارتفاعات اللحظية</h3>
+<p>تقلبات جهد الشبكة (خاصة في الأسواق الناشئة) تحمّل مكثفات الدخل والمقاومات المتغيرة. مزود مُصنّف لـ 190-264 فولت AC قد ينجو من عابرة 280 فولت مرة أو اثنتين، لكن الارتفاعات المتكررة تُتلف المكونات أسرع من التآكل الطبيعي.</p>
+
+<h3>3. التشغيل قرب الحمل الأقصى</h3>
+<p>عند 90-100% من الحمل المُصنّف، يرتفع تيار التموج عبر مكثفات المخرج. هذا يولّد حرارة أكثر ويسرّع الشيخوخة. القاعدة التي نوصي بها في CHUGAO:</p>
+<div class="highlight">
+<strong>قدرة الحمل &times; 1,25 = الحد الأدنى لتقييم المزود.</strong><br>تشغيل المزود عند 70-80% من السعة بدل 95% قد يمدّ العمر الفعلي بنسبة 30–50%.
+</div>
+
+<h2>ما تحتاجه التطبيقات المختلفة</h2>
+
+<table style="width:100%%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">التطبيق</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">المزود الموصى به</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">عمر الخدمة المتوقع</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">السبب</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">لافتات تجارية (8-12 ساعة/يوم)</td><td style="padding:10px 14px;border:1px solid var(--b)">محوّل / داخلي IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 سنة</td><td style="padding:10px 14px;border:1px solid var(--b)">قلة الساعات اليومية تعوّض العمر الأقل للوحدة</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">إضاءة واجهات خارجية (12+ ساعة/يوم)</td><td style="padding:10px 14px;border:1px solid var(--b)">مقاوم للماء IP67</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 سنة</td><td style="padding:10px 14px;border:1px solid var(--b)">الحشو المغلق يتحمل الرطوبة وتقلبات الحرارة</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">صناعي 24/7 (مستودع)</td><td style="padding:10px 14px;border:1px solid var(--b)">مقاوم للمطر IP65 أو Industrial CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 سنوات</td><td style="padding:10px 14px;border:1px solid var(--b)">التشغيل المتواصل عند حرارة عالية يسرّع التآكل</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">بحري / نافورة</td><td style="padding:10px 14px;border:1px solid var(--b)">وحدة مُصنّفة IP68</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 سنة</td><td style="padding:10px 14px;border:1px solid var(--b)">تقييم غمر كامل، مُختبَرة ضد رذاذ الملح</td></tr>
+</tbody>
+</table>
+
+<h2>كيف نختبر في CHUGAO</h2>
+
+<p>يمر كل مزود CHUGAO بـ <strong>اختبار تشغيل 48 ساعة</strong> قبل الشحن. تُتلف الوحدات المعطوبة — لا تغادر أرض المصنع. هذا الفرز قبل الشحن يلتقط أعطال الرضاعة المبكرة (الجزء المبكر من منحنى الحوض).</p>
+
+<p>لطلبات OEM فوق 500 قطعة، نوفّر خيارات تشغيل ممتدة (72-168 ساعة) بلا تكلفة إضافية إن حُدّدت في أمر الشراء PO الخاص بك.</p>
+
+<h2>دليل قرار سريع</h2>
+<ol>
+<li><strong>ساعات التشغيل اليومية؟</strong> 8 ساعات تجزئة مقابل 24 ساعة صناعة يغيّر كل شيء. اضرب عمر المشروع المستهدف في الساعات اليومية لتحصل على إجمالي الساعات المطلوبة.</li>
+<li><strong>حرارة المحيط؟</strong> كل 10&deg;C فوق 40&deg;C تقطع العمر بنحو 50%. ضع ذلك في اعتبار اختيار الموديل.</li>
+<li><strong>التهوية؟</strong> الوحدات المغلقة تحتاج IP67 أو أعلى. الهيئات المهوّاة يمكنها استخدام IP20/65.</li>
+<li><strong>الهامش:</strong> أضف دائمًا 25%. الفرق في التكلفة بين مزود 60 واط و100 واط ضئيل مقارنة بزيارة الموقع لاستبدال وحدة معطوبة.</li>
+<li><strong>مخزون احتياطي:</strong> للتركيبات 24/7، احتفظ بنسبة 5-10% مزودات احتياطية جاهزة. تكلفتها أقل من شحن طارئ.</li>
+</ol>
+
+<div class="cta-box">
+<h3>غير متأكد أي مزود يطابق حاجة عمرك؟</h3>
+<p>أخبرنا بتطبيقك وساعات التشغيل اليومية وظروف المحيط. نوصي بالسلسلة الصحيحة مع عمر واقعي متوقع لتركيبك المحدد.</p>
+<a href="/#inquiry" class="btn">احصل على توصية مطابقة للعمر</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">محولات LED 5-200W</span><span class="pc-desc">محولات طويلة العمر مع بيانات MTBF لكل فئة.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">مزودات LED داخلية 50-400W</span><span class="pc-desc">مزودات مُصنّفة L70 لوحدات الإضاءة التجارية والمعمارية.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">محشوة ومغلقة لعمر أطول في الخارج.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">مزودات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">مزودات متينة مصممة لـ 50.000+ ساعة تشغيل خارجي.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">تقنية LED</span><span class="rel-title">اختر مزود LED الصحيح في 3 خطوات</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">دليل تقني</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">اتجاهات القطاع</span><span class="rel-title">سوق LED 2026: ما نراه</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">تنظيمي</span><span class="rel-title">شهادة BIS لمزودات LED: دليل استيراد الهند</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">شهادة BIS لمزودات LED: دليل استيراد الهند</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">IP67 vs IP65: أي تقييم تحتاج؟</span></a></nav>
+</main>"""
