@@ -450,3 +450,82 @@ BLOG_BODY['pt']['blog-10'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Fonte LED de tensão constante vs corrente constante: qual você precisa?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Correção de fator de potência e drivers LED sem cintilação</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['pt']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar às notas de campo</a>
+
+<h1>Correção de fator de potência e drivers LED sem cintilação</h1>
+<div class="meta">Guia do comprador &middot; setembro de 2026 &middot; 7 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Especificação de fator de potência e driver LED sem cintilação" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>O «fator de potência» e a «cintilação» são as duas especificações que nunca aparecem na caixa de varejo, mas decidem se uma instalação passa na inspeção ou dá dores de cabeça às pessoas. Ambas se resolvem na etapa do driver, então aqui está o que um comprador deve realmente pedir.</p>
+
+<h2>Fator de potência: por que a concessionária se importa</h2>
+
+<p>O fator de potência (PF) é a razão entre a potência real que você usa e a potência total puxada da rede. Um driver barato com PF 0,5 puxa o dobro da corrente que precisa, sobrecarregando a fiação e disparando os limites em prédios comerciais. Muitas regiões já exigem PF 0,9 ou melhor acima de 5W, e a norma EN 61000-3-2 fixa limites harmônicos exatamente por isso.</p>
+
+<div class="highlight">
+<strong>PFC ativo versus passivo:</strong> nossos <a href="/products/indoor/">drivers de interior</a> usam <strong>PFC ativo</strong> e atingem PF 0,95+ em toda a faixa de carga — não o adesivo passivo de «correção de fator de potência» que só ajuda em carga total. Para um teto de 200 unidades, essa é a diferença entre um quadro limpo e um disjuntor disparado.
+</div>
+
+<h2>Cintilação: por que as pessoas se importam</h2>
+
+<p>A cintilação LED vem da ondulação na saída DC do driver. Drivers baratos deixam a ondulação chegar a 20-30%%, o que o olho pode não notar, mas câmeras, sensores e algumas pessoas percebem — aparece como bandas em vídeo, cintilação em CCTV e fadiga visual em escritórios. Drivers de qualidade mantêm a ondulação abaixo de 5-8%% e são rotulados como «sem cintilação».</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Sintoma</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Causa</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Solução</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Bandas na câmera / CCTV</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Alta ondulação de saída</td><td style="padding:10px 14px;border:1px solid var(--b)">Driver sem cintilação, ondulação <8%%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Disjuntor dispara sob carga</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Baixo fator de potência</td><td style="padding:10px 14px;border:1px solid var(--b)">Driver com PFC ativo, PF 0,95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Zumbido ao dimerizar</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Dimerização incompatível</td><td style="padding:10px 14px;border:1px solid var(--b)">Padrão de dimerização compatível (ver guia de dimerização)</td></tr>
+</tbody>
+</table>
+
+<h2>Onde «sem cintilação» é inegociável</h2>
+
+<ul>
+<li><strong>Escritórios e escolas</strong> — exposição o dia todo; drivers ruins causam reclamações de fadiga.</li>
+<li><strong>Varejo e museus</strong> — a cintilação arruína a cor do produto e a fotografia.</li>
+<li><strong>CCTV e terminais de transporte</strong> — as bandas tornam placas e rostos ilegíveis.</li>
+<li><strong>Qualquer local coberto por câmeras</strong> — se um telefone grava, especifique «sem cintilação».</li>
+</ul>
+
+<h2>Como ler uma folha de dados</h2>
+
+<ol>
+<li><strong>PF</strong> — peça o valor em toda a faixa de carga, não apenas a 100%. O PFC ativo o mantém alto; o passivo não.</li>
+<li><strong>Ondulação / porcentagem de cintilação</strong> — abaixo de 8% é «sem cintilação» pela métrica SVM que a maioria dos especificadores usa hoje.</li>
+<li><strong>THD</strong> —  (distorção harmônica total): quanto menor, mais limpa é a alimentação. Drivers com PFC ativo ficam bem abaixo do limite EN 61000-3-2.</li>
+</ol>
+
+<p>Cada driver CHUGAO de interior e IP67 é construído para PF 0,95+ e saída sem cintilação de série, não como opção paga. Se seu mercado tem um limite harmônico específico, diga-nos e entregamos o laudo de ensaio com o lote.</p>
+
+<h2>O que precisamos de você</h2>
+
+<p>Envie o tipo de local (escritório, varejo, coberto por CCTV), a carga em watts e a tensão, e qualquer limite local de PF/harmônicos. Confirmaremos um driver que passa — e enviaremos o laudo antes de pedir.</p>
+
+<div class="cta-box">
+<h3>Especificando para um escritório ou local com câmeras?</h3>
+<p>Envie o tipo de local, a carga em watts e qualquer limite local de PF/harmônicos. Confirmaremos um driver sem cintilação e de alto PF, e entregaremos o laudo de ensaio.</p>
+<a href="/#inquiry" class="btn">Obter especificação de driver limpo</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos e sinalização.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fontes LED de interior 50-400W</span><span class="pc-desc">Tensão constante com PFC ativo para luminárias de teto e painéis.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fontes impermeáveis IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, testadas contra névoa salina para locais úmidos e costeiros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fontes resistentes à chuva IP65 100-600W</span><span class="pc-desc">Caixa de metal ventilada para sinalização e instalações semi-externas.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">Guia técnico</span><span class="rel-title">Dimming de driver LED explicado: 0-10V, PWM, DALI e TRIAC</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Análise técnica</span><span class="rel-title">Vida útil do driver LED: MTBF, L70 e quanto duram realmente</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Guia técnico</span><span class="rel-title">Fonte LED de tensão constante vs corrente constante: qual você precisa?</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guia técnico</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Dimming de driver LED explicado: 0-10V, PWM, DALI e TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Proteção contra surtos para drivers LED: raios e transitórios</span></a></nav>
+</main>"""

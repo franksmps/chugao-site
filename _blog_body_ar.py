@@ -449,3 +449,82 @@ BLOG_BODY['ar']['blog-10'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">مزود LED ثابت الجهد مقابل ثابت التيار: أيهما تحتاج؟</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">تصحيح معامل القدرة ومزودات LED بلا وميض</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>تصحيح معامل القدرة ومزودات LED بلا وميض</h1>
+<div class="meta">دليل المشتري &middot; سبتمبر 2026 &middot; 7 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="مواصفات معامل القدرة ومزود LED بلا وميض" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>« معامل القدرة » و« الوميض » هما المواصفتان اللتان لا تظهران أبدًا على علبة التجزئة، لكنهما تقرران ما إذا كانت التركيبة تجتاز الفحص أو تسبب صداعًا للناس. كلاهما يُحسم عند مرحلة المزود، لذا إليك ما يجب أن يطلبه المشتري فعلًا.</p>
+
+<h2>معامل القدرة: لماذا تهتم شركة الكهرباء</h2>
+
+<p>معامل القدرة (PF) هو نسبة القدرة الحقيقية المستخدمة إلى إجمالي القدرة المسحوبة من الشبكة. مزود رخيص بمعامل 0,5 يسحب ضعف التيار الذي يحتاجه، مما يزيد حمل الأسلاك ويُطلق الحدود في المباني التجارية. العديد من المناطق تشترط الآن PF 0,9 أو أعلى فوق 5W، وتضع المواصفة EN 61000-3-2 حدودًا توافقية تمامًا لهذا السبب.</p>
+
+<div class="highlight">
+<strong>PFC نشط مقابل سلبي:</strong> <a href="/products/indoor/">مزوداتنا الداخلية</a> تستخدم <strong>PFC نشطًا</strong> وتصل إلى PF 0,95+ عبر نطاق الحمل بالكامل — لا ملصق « تصحيح معامل القدرة » السلبي الذي لا يفيد إلا عند الحمل الكامل. لسقف من 200 وحدة، هذا هو الفرق بين لوحة نظيفة وقاطع منفصل.
+</div>
+
+<h2>الوميض: لماذا يهم الناس</h2>
+
+<p>ينشأ وميض LED من التموّج على خرج DC للمزود. المزودات الرخيصة تسمح للتموّج بالوصول إلى 20-30%%， ما قد لا تلحظه العين لكن الكاميرات والحساسات وبعض الأشخاص يلحظونه حتمًا — يظهر كانبعاجات على الفيديو، ووميض على CCTV، وإجهاد للعين في المكاتب. المزودات الجيدة تُبقي التموّج تحت 5-8%% وتُوسم « بلا وميض ».</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">العَرَض</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">السبب</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">الحل</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>انبعاجات على الكاميرا / CCTV</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">تموّج خرج مرتفع</td><td style="padding:10px 14px;border:1px solid var(--b)">مزود بلا وميض، تموّج <8%%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>قاطع ينفصل تحت الحمل</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">معامل قدرة منخفض</td><td style="padding:10px 14px;border:1px solid var(--b)">مزود بـ PFC نشط، PF 0,95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>طنين عند التغميق</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">تغميق غير متوافق</td><td style="padding:10px 14px;border:1px solid var(--b)">معيار تغميق متطابق (انظر دليل التغميق)</td></tr>
+</tbody>
+</table>
+
+<h2>أين يكون « بلا وميض » غير قابل للتفاوض</h2>
+
+<ul>
+<li><strong>المكاتب والمدارس</strong> — تعرّض طوال اليوم؛ المزودات الرديئة تسبب شكاوى إجهاد.</li>
+<li><strong>البيع بالتجزئة والمتاحف</strong> — الوميض يفسد لون المنتج والتصوير.</li>
+<li><strong>CCTV ومراكز النقل</strong> — الانبعاجات تجعل اللوحات والوجوه غير مقروءة.</li>
+<li><strong>أي موقع مغطّى بكاميرات</strong> — إن سجّله هاتف، حدد « بلا وميض ».</li>
+</ul>
+
+<h2>كيف تقرأ ورقة البيانات</h2>
+
+<ol>
+<li><strong>PF</strong> — اطلب الرقم عبر نطاق الحمل، لا عند 100% فقط. PFC النشط يُبقيه مرتفعًا؛ السلبي لا يفعل.</li>
+<li><strong>التموّج / نسبة الوميض</strong> — تحت 8% يُعد « بلا وميض » وفق مقياس SVM الذي يستخدمه معظم المحددين اليوم.</li>
+<li><strong>THD</strong> —  (إجمالي التشوه التوافقي): أقل يعني تغذية أنظف. مزودات PFC النشط تبقى بعيدًا جدًا عن حد EN 61000-3-2.</li>
+</ol>
+
+<p>كل مزود CHUGAO داخلي أو IP67 مبني على PF 0,95+ وخرج بلا وميض كمعيار أساسي، لا كخيار مدفوع. إن كان سوقك له حد توافقي محدد، أخبرنا وسنزوّدك بتقرير الاختبار مع الشحنة.</p>
+
+<h2>ماذا نحتاج منك</h2>
+
+<p>أرسل نوع الموقع (مكتب، بيع بالتجزئة، مغطّى بـ CCTV)، والواط والجهد، وأي حد محلي لـ PF/التوافقيات. سنؤكد مزودًا يجتازه — ونرسل التقرير قبل الطلب.</p>
+
+<div class="cta-box">
+<h3>تحدد مواصفات لمكتب أو موقع بكاميرات؟</h3>
+<p>أرسل نوع الموقع، والواط، وأي حد محلي لـ PF/التوافقيات. سنؤكد مزودًا بلا وميض وبمعامل قدرة مرتفع، ونزوّدك بتقرير الاختبار.</p>
+<a href="/#inquiry" class="btn">احصل على مواصفات مزود نظيف</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">محوّلات LED 5-200W</span><span class="pc-desc">وحدات مدمجة 12V/24V للأشرطة والوحدات واللافتات.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">مزودات LED داخلية 50-400W</span><span class="pc-desc">ثابت الجهد مع PFC نشط لإضاءة السقف واللوحات.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">مغمورة بالكامل، مُختبَرة برذاذ الملح للمواقع الرطبة والساحلية.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">مزودات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">هيكل معدني مُهوّى للافتات والتركيبات شبه الخارجية.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">دليل تقني</span><span class="rel-title">شرح تغميق مزود LED: 0-10V وPWM وDALI وTRIAC</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">تحليل تقني</span><span class="rel-title">عمر مزود LED: MTBF وL70 وكم تدوم فعلًا</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">دليل تقني</span><span class="rel-title">مزود LED ثابت الجهد مقابل ثابت التيار: أيهما تحتاج؟</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">دليل تقني</span><span class="rel-title">IP20 مقابل IP65 مقابل IP67 مقابل IP68</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">شرح تغميق مزود LED: 0-10V وPWM وDALI وTRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">حماية مزودات LED من التأثيرات: البرق والعابرة</span></a></nav>
+</main>"""

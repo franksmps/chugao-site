@@ -450,3 +450,82 @@ BLOG_BODY['fr']['blog-10'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Alimentation LED à tension constante ou à courant constant : laquelle vous faut-il ?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Correction du facteur de puissance et drivers LED sans scintillement</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['fr']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Retour aux notes de terrain</a>
+
+<h1>Correction du facteur de puissance et drivers LED sans scintillement</h1>
+<div class="meta">Guide d'achat &middot; septembre 2026 &middot; 7 min de lecture</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Spécification du facteur de puissance et du driver LED sans scintillement" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Le « facteur de puissance » et le « scintillement » sont les deux caractéristiques qui ne figurent jamais sur la boîte grand public mais qui décident si une installation passe l'inspection ou donne des maux de tête. Toutes deux se règlent au stade du driver, voici donc ce qu'un acheteur doit vraiment demander.</p>
+
+<h2>Facteur de puissance : pourquoi le fournisseur s'en soucie</h2>
+
+<p>Le facteur de puissance (PF) est le rapport entre la puissance réellement utilisée et la puissance totale prélevée sur le réseau. Un driver bon marché avec PF 0,5 tire deux fois le courant nécessaire, surcharge le câblage et déclenche les limites dans les bâtiments commerciaux. Beaucoup de régions exigent désormais PF 0,9 ou mieux au-dessus de 5W, et la norme EN 61000-3-2 fixe des limites harmoniques exactement pour cette raison.</p>
+
+<div class="highlight">
+<strong>PFC actif contre passif :</strong> nos <a href="/products/indoor/">drivers d'intérieur</a> utilisent un <strong>PFC actif</strong> et atteignent PF 0,95+ sur toute la plage de charge — pas l'autocollant passif « correction du facteur de puissance » qui n'aide qu'à pleine charge. Pour un plafond de 200 unités, c'est la différence entre un tableau propre et un disjoncteur déclenché.
+</div>
+
+<h2>Scintillement : pourquoi les gens s'en soucient</h2>
+
+<p>Le scintillement LED vient de l'ondulation sur la sortie DC du driver. Les drivers bon marché laissent l'ondulation atteindre 20-30%%, ce que l'œil ne remarque peut-être pas, mais que les caméras, les capteurs et certaines personnes perçoivent — cela apparaît en bandes sur vidéo, en scintillement sur CCTV et en fatigue visuelle dans les bureaux. Les drivers de qualité maintiennent l'ondulation sous 5-8%% et sont étiquetés « sans scintillement ».</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Symptôme</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Cause</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Solution</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Bandes sur caméra / CCTV</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Forte ondulation de sortie</td><td style="padding:10px 14px;border:1px solid var(--b)">Driver sans scintillement, ondulation <8%%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Disjoncteur déclenché sous charge</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Faible facteur de puissance</td><td style="padding:10px 14px;border:1px solid var(--b)">Driver à PFC actif, PF 0,95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Bourdonnement en variation</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Variation incompatible</td><td style="padding:10px 14px;border:1px solid var(--b)">Norme de variation compatible (voir guide de variation)</td></tr>
+</tbody>
+</table>
+
+<h2>Où le « sans scintillement » est non négociable</h2>
+
+<ul>
+<li><strong>Bureaux et écoles</strong> — exposition toute la journée ; les mauvais drivers provoquent des plaintes de fatigue.</li>
+<li><strong>Commerce et musées</strong> — le scintillement ruine la couleur des produits et la photographie.</li>
+<li><strong>CCTV et hubs de transport</strong> — les bandes rendent les plaques et les visages illisibles.</li>
+<li><strong>Tout site couvert par caméra</strong> — si un téléphone filme, spécifiez « sans scintillement ».</li>
+</ul>
+
+<h2>Comment lire une fiche technique</h2>
+
+<ol>
+<li><strong>PF</strong> — demandez la valeur sur toute la plage de charge, pas seulement à 100%. Le PFC actif la maintient haute ; le passif non.</li>
+<li><strong>Ondulation / pourcentage de scintillement</strong> — en dessous de 8% est « sans scintillement » selon la métrique SVM que la plupart des prescripteurs utilisent aujourd'hui.</li>
+<li><strong>THD</strong> —  (distorsion harmonique totale) : plus c'est bas, plus l'alimentation est propre. Les drivers à PFC actif restent bien sous la limite EN 61000-3-2.</li>
+</ol>
+
+<p>Chaque driver CHUGAO d'intérieur et IP67 est conçu pour PF 0,95+ et une sortie sans scintillement de série, pas en option payante. Si votre marché a une limite harmonique spécifique, dites-le-nous et nous fournissons le rapport d'essai avec le lot.</p>
+
+<h2>Ce dont nous avons besoin</h2>
+
+<p>Envoyez le type de site (bureau, commerce, couvert par CCTV), la puissance en watts et la tension, ainsi que toute limite locale PF/harmoniques. Nous confirmerons un driver qui la satisfait — et enverrons le rapport avant votre commande.</p>
+
+<div class="cta-box">
+<h3>Vous spécifiez pour un bureau ou un site caméra ?</h3>
+<p>Envoyez le type de site, la puissance en watts et toute limite locale PF/harmoniques. Nous confirmerons un driver sans scintillement et à haut PF, et fournirons le rapport d'essai.</p>
+<a href="/#inquiry" class="btn">Obtenir une spécification de driver propre</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Découvrir les produits CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptateurs LED 5-200W</span><span class="pc-desc">Blocs compacts 12V/24V pour bandeaux, modules et enseignes.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Alimentations LED d'intérieur 50-400W</span><span class="pc-desc">Tension constante avec PFC actif pour plafonniers et panneaux.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Alimentations étanches IP67 10-400W</span><span class="pc-desc">Totalement encapsulées, testées aux brouillards salins pour sites humides et côtiers.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Alimentations anti-pluie IP65 100-600W</span><span class="pc-desc">Boîtier métallique ventilé pour enseignes et installations semi-extérieures.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Encore du terrain</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">Guide technique</span><span class="rel-title">Variation d'intensité des drivers LED : 0-10V, PWM, DALI et TRIAC</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Analyse technique</span><span class="rel-title">Durée de vie du driver LED : MTBF, L70 et combien de temps ils durent vraiment</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Guide technique</span><span class="rel-title">Alimentation LED à tension constante ou à courant constant : laquelle vous faut-il ?</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guide technique</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Variation d'intensité des drivers LED : 0-10V, PWM, DALI et TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Protection contre les surtensions pour drivers LED : foudre et transitoires</span></a></nav>
+</main>"""

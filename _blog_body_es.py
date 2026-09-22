@@ -449,3 +449,82 @@ BLOG_BODY['es']['blog-10'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Artículo anterior</span><span class="pn-t">Fuente LED de tensión constante frente a corriente constante: ¿cuál necesita?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Artículo siguiente</span><span class="pn-t">Corrección de factor de potencia y drivers LED sin parpadeo</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['es']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Volver a las notas de campo</a>
+
+<h1>Corrección de factor de potencia y drivers LED sin parpadeo</h1>
+<div class="meta">Guía del comprador &middot; septiembre de 2026 &middot; 7 min de lectura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Especificación de factor de potencia y driver LED sin parpadeo" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>El «factor de potencia» y el «parpadeo» son las dos especificaciones que nunca aparecen en la caja minorista pero que deciden si una instalación pasa la inspección o da dolores de cabeza a la gente. Ambas se resuelven en la etapa del driver, así que aquí está lo que un comprador debe pedir realmente.</p>
+
+<h2>Factor de potencia: por qué le importa a la compañía eléctrica</h2>
+
+<p>El factor de potencia (PF) es la relación entre la potencia real que usa y la potencia total que extrae de la red. Un driver barato con PF 0,5 demanda el doble de corriente que necesita, sobrecargando el cableado y saltando los límites en los edificios comerciales. Muchas regiones ya exigen PF 0,9 o superior por encima de 5W, y la norma EN 61000-3-2 fija límites de armónicos precisamente por esto.</p>
+
+<div class="highlight">
+<strong>PFC activo frente a pasivo:</strong> nuestros <a href="/products/indoor/">drivers de interior</a> usan <strong>PFC activo</strong> y alcanzan PF 0,95+ en todo el rango de carga — no la etiqueta pasiva de «corrección de factor de potencia» que solo ayuda a plena carga. Para un techo de 200 unidades, esa es la diferencia entre un cuadro limpio y un interruptor disparado.
+</div>
+
+<h2>Parpadeo: por qué le importa a la gente</h2>
+
+<p>El parpadeo LED proviene del rizado en la salida DC del driver. Los drivers baratos dejan que el rizado llegue al 20-30%%, lo que el ojo puede no notar pero que las cámaras, los sensores y algunas personas sí perciben — aparece como bandas en vídeo, parpadeo en CCTV y fatiga visual en oficinas. Los drivers de calidad mantienen el rizado por debajo del 5-8%% y se etiquetan como «sin parpadeo».</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Síntoma</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Causa</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Solución</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Bandas en cámara / CCTV</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Alto rizado de salida</td><td style="padding:10px 14px;border:1px solid var(--b)">Driver sin parpadeo, rizado <8%%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>El interruptor salta bajo carga</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Bajo factor de potencia</td><td style="padding:10px 14px;border:1px solid var(--b)">Driver con PFC activo, PF 0,95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Zumbido al atenuar</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Atenuado incompatible</td><td style="padding:10px 14px;border:1px solid var(--b)">Estándar de atenuado coincidente (ver guía de atenuado)</td></tr>
+</tbody>
+</table>
+
+<h2>Dónde el «sin parpadeo» es innegociable</h2>
+
+<ul>
+<li><strong>Oficinas y escuelas</strong> — exposición todo el día; los drivers deficientes causan quejas de fatiga.</li>
+<li><strong>Comercio y museos</strong> — el parpadeo arruina el color del producto y la fotografía.</li>
+<li><strong>CCTV y centros de transporte</strong> — las bandas hacen ilegibles las matrículas y los rostros.</li>
+<li><strong>Cualquier sitio cubierto por cámaras</strong> — si un teléfono lo graba, especifique «sin parpadeo».</li>
+</ul>
+
+<h2>Cómo leer una ficha técnica</h2>
+
+<ol>
+<li><strong>PF</strong> — pida el valor en todo el rango de carga, no solo al 100%. El PFC activo lo mantiene alto; el pasivo no.</li>
+<li><strong>Rizado / porcentaje de parpadeo</strong> — por debajo del 8% es «sin parpadeo» según la métrica SVM que usan hoy la mayoría de los especificadores.</li>
+<li><strong>THD</strong> —  (distorsión armónica total): cuanto menor, más limpia es la alimentación. Los drivers con PFC activo quedan muy por debajo del límite EN 61000-3-2.</li>
+</ol>
+
+<p>Cada driver CHUGAO de interior e IP67 se construye para PF 0,95+ y salida sin parpadeo de serie, no como opción de pago. Si su mercado tiene un límite armónico concreto, díganoslo y entregamos el informe de ensayo con el lote.</p>
+
+<h2>Qué necesitamos de usted</h2>
+
+<p>Envíe el tipo de sitio (oficina, comercio, cubierto por CCTV), los vatios y la tensión, y cualquier límite local de PF/armónicos. Confirmaremos un driver que lo supera — y enviaremos el informe antes de pedir.</p>
+
+<div class="cta-box">
+<h3>¿Especifica para una oficina o un sitio con cámaras?</h3>
+<p>Envíe el tipo de sitio, los vatios y cualquier límite local de PF/armónicos. Confirmaremos un driver sin parpadeo y de alto PF, y entregaremos el informe de ensayo.</p>
+<a href="/#inquiry" class="btn">Obtener especificación de driver limpio</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar productos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos y señalización.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fuentes LED de interior 50-400W</span><span class="pc-desc">Tensión constante con PFC activo para luces de techo y paneles.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fuentes impermeables IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, probadas contra sal marina para lugares húmedos y costeros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fuentes resistentes a la lluvia IP65 100-600W</span><span class="pc-desc">Carcasa metálica ventilada para señalización e instalaciones semiexteriores.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Más del campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">Guía técnica</span><span class="rel-title">Dimming de driver LED explicado: 0-10V, PWM, DALI y TRIAC</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Análisis técnico</span><span class="rel-title">Vida útil del driver LED: MTBF, L70 y cuánto duran realmente</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Guía técnica</span><span class="rel-title">Fuente LED de tensión constante frente a corriente constante: ¿cuál necesita?</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guía técnica</span><span class="rel-title">IP20 frente a IP65 frente a IP67 frente a IP68</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Artículo anterior</span><span class="pn-t">Dimming de driver LED explicado: 0-10V, PWM, DALI y TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Artículo siguiente</span><span class="pn-t">Protección contra sobretensiones para drivers LED: rayos y transitorios</span></a></nav>
+</main>"""

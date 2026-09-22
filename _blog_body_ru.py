@@ -449,3 +449,82 @@ BLOG_BODY['ru']['blog-10'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Стабилизатор напряжения или тока для LED: что вам нужно?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Коррекция коэффициента мощности и LED-драйверы без мерцания</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ru']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Назад к полевым заметкам</a>
+
+<h1>Коррекция коэффициента мощности и LED-драйверы без мерцания</h1>
+<div class="meta">Руководство покупателя &middot; сентябрь 2026 &middot; 7 мин чтения</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Спецификация коэффициента мощности и LED-драйвера без мерцания" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>«Коэффициент мощности» и «мерцание» — две характеристики, которых никогда не увидишь на розничной коробке, но именно они решают, пройдёт ли установка проверку или доведёт людей до головной боли. Обе закладываются на этапе драйвера, поэтому вот что покупателю стоит на самом деле спрашивать.</p>
+
+<h2>Коэффициент мощности: почему им важно энергокомпании</h2>
+
+<p>Коэффициент мощности (PF) — это отношение реальной потребляемой мощности к полной мощности, взятой из сети. Дешёвый драйвер с PF 0,5 забирает вдвое больше тока, чем нужно, перегружая проводку и срабатывая ограничители в коммерческих зданиях. Во многих регионах уже требуют PF 0,9 и выше при мощности свыше 5Вт, а стандарт EN 61000-3-2 устанавливает пределы гармоник именно по этой причине.</p>
+
+<div class="highlight">
+<strong>Активный против пассивного PFC:</strong> наши <a href="/products/indoor/">интерьерные драйверы</a> используют <strong>активный PFC</strong> и держат PF 0,95+ во всём диапазоне нагрузки — в отличие от пассивной наклейки «коррекция коэффициента мощности», которая помогает только при полной нагрузке. Для потолка из 200 светильников это разница между чистым щитом и выбитым автоматом.
+</div>
+
+<h2>Мерцание: почему им важно людям</h2>
+
+<p>Мерцание LED возникает из-за пульсации на DC-выходе драйвера. Дешёвые драйверы позволяют пульсации достигать 20-30%%, которую глаз может и не заметить, но камеры, датчики и некоторые люди — замечают: она проявляется как полосы на видео, стробоскоп на CCTV и утомление глаз в офисах. Качественные драйверы удерживают пульсацию ниже 5-8%% и маркируются как «без мерцания».</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Симптом</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Причина</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Решение</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Полосы на камере / CCTV</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Высокая пульсация выхода</td><td style="padding:10px 14px;border:1px solid var(--b)">Драйвер без мерцания, пульсация <8%%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Автомат срабатывает под нагрузкой</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Низкий коэффициент мощности</td><td style="padding:10px 14px;border:1px solid var(--b)">Драйвер с активным PFC, PF 0,95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Гул при диммировании</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Несовместимое диммирование</td><td style="padding:10px 14px;border:1px solid var(--b)">Совпадающий стандарт диммирования (см. гид по диммированию)</td></tr>
+</tbody>
+</table>
+
+<h2>Где «без мерцания» не обсуждается</h2>
+
+<ul>
+<li><strong>Офисы и школы</strong> — воздействие весь день; плохие драйверы вызывают жалобы на усталость.</li>
+<li><strong>Розница и музеи</strong> — мерцание портит цвет товара и фотографию.</li>
+<li><strong>CCTV и транспортные узлы</strong> — полосы делают номера и лица нечитаемыми.</li>
+<li><strong>Любой объект под камерами</strong> — если это снимает телефон, укажите «без мерцания».</li>
+</ul>
+
+<h2>Как читать паспорт (datasheet)</h2>
+
+<ol>
+<li><strong>PF</strong> — спрашивайте значение во всём диапазоне нагрузки, а не только при 100%. Активный PFC держит его высоким; пассивный — нет.</li>
+<li><strong>Пульсация / процент мерцания</strong> — ниже 8% считается «без мерцания» по метрике SVM, которую сейчас использует большинство проектировщиков.</li>
+<li><strong>THD</strong> —  (полные гармонические искажения): чем ниже, тем чище питание. Драйверы с активным PFC уверенно ниже предела EN 61000-3-2.</li>
+</ol>
+
+<p>Каждый интерьерный и IP67-драйвер CHUGAO строится на PF 0,95+ и выходе без мерцания в базе, а не как платная опция. Если на вашем рынке есть конкретный предел по гармоникам, скажите — и мы приложим протокол испытаний к партии.</p>
+
+<h2>Что нам нужно от вас</h2>
+
+<p>Пришлите тип объекта (офис, розница, под CCTV), мощность в ваттах и напряжение, а также любой местный предел по PF/гармоникам. Мы подтвердим подходящий драйвер — и пришлём протокол до заказа.</p>
+
+<div class="cta-box">
+<h3>Проектируете для офиса или объекта с камерами?</h3>
+<p>Пришлите тип объекта, мощность и любой местный предел по PF/гармоникам. Мы подтвердим драйвер без мерцания и с высоким PF и приложим протокол испытаний.</p>
+<a href="/#inquiry" class="btn">Получить спецификацию чистого драйвера</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Ознакомьтесь с продукцией CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-адаптеры 5-200Вт</span><span class="pc-desc">Компактные блоки 12В/24В для лент, модулей и вывесок.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Интерьерные LED-драйверы 50-400Вт</span><span class="pc-desc">Стабилизированное напряжение с активным PFC для потолочных и панельных светильников.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Водонепроницаемые драйверы IP67 10-400Вт</span><span class="pc-desc">Полностью залитые, испытаны солевым туманом для влажных и прибрежных объектов.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Драйверы IP65 100-600Вт</span><span class="pc-desc">Вентилируемый металлический корпус для вывесок и полууличных установок.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Ещё из поля</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">Диммирование LED-драйвера: 0-10В, PWM, DALI и TRIAC</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Технический разбор</span><span class="rel-title">Срок службы LED-драйвера: MTBF, L70 и как долго они реально работают</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">Стабилизатор напряжения или тока для LED: что вам нужно?</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">IP20 против IP65 против IP67 против IP68</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Диммирование LED-драйвера: 0-10В, PWM, DALI и TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Защита от перенапряжений для LED-драйверов: молнии и импульсы</span></a></nav>
+</main>"""

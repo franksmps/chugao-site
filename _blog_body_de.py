@@ -449,3 +449,82 @@ BLOG_BODY['de']['blog-10'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">LED-Treiber mit Konstantspannung oder Konstantstrom: Welchen benötigen Sie?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Leistungsfaktor-Korrektur und flimmerfreie LED-Treiber</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>Leistungsfaktor-Korrektur und flimmerfreie LED-Treiber</h1>
+<div class="meta">Käuferleitfaden &middot; September 2026 &middot; 7 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Spezifikation von Leistungsfaktor und flimmerfreiem LED-Treiber" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>« Leistungsfaktor » und « Flimmern » sind die zwei Kenngrößen, die nie auf der Verkaufsverpackung stehen, aber darüber entscheiden, ob eine Anlage die Prüfung besteht oder den Leuten Kopfschmerzen bereiten. Beides wird auf der Treiberstufe festgelegt — hier also, was ein Käufer wirklich fragen sollte.</p>
+
+<h2>Leistungsfaktor: warum die Energieversorger das interessiert</h2>
+
+<p>Der Leistungsfaktor (PF) ist das Verhältnis von genutzter Wirkleistung zur gesamten aus dem Netz entnommenen Leistung. Ein billiger Treiber mit PF 0,5 zieht die doppelte Stromstärke, überlastet die Verkabelung und löst in Gewerbegebäuden die Grenzwerte aus. Viele Regionen fordern mittlerweile PF 0,9 oder besser oberhalb von 5W, und die Norm EN 61000-3-2 legt genau deshalb Grenzwerte für Oberschwingungen fest.</p>
+
+<div class="highlight">
+<strong>Aktiver gegen passiven PFC:</strong> unsere <a href="/products/indoor/">Innen-Treiber</a> nutzen einen <strong>aktiven PFC</strong> und erreichen PF 0,95+ über den gesamten Lastbereich — nicht das passive « Leistungsfaktor-Korrektur »-Etikett, das nur bei Volllast hilft. Bei einer Decke mit 200 Leuchten ist das der Unterschied zwischen einem sauberen Verteiler und einem ausgelösten Schutzschalter.
+</div>
+
+<h2>Flimmern: warum es den Menschen wichtig ist</h2>
+
+<p>Das LED-Flimmern entsteht durch die Welligkeit am DC-Ausgang des Treibers. Billige Treiber lassen die Welligkeit auf 20-30%% steigen, was das Auge vielleicht nicht bemerkt, Kameras, Sensoren und manche Menschen aber sehr wohl — es zeigt sich als Bänder im Video, als Flimmern bei CCTV und als Augenbelastung in Büros. Qualitätstreiber halten die Welligkeit unter 5-8%% und werden als « flimmerfrei » gekennzeichnet.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Symptom</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Ursache</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Lösung</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Bänder auf Kamera / CCTV</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Hohe Ausgangswelligkeit</td><td style="padding:10px 14px;border:1px solid var(--b)">Flimmerfreier Treiber, Welligkeit <8%%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Schutzschalter löst unter Last aus</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Niedriger Leistungsfaktor</td><td style="padding:10px 14px;border:1px solid var(--b)">Treiber mit aktivem PFC, PF 0,95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Summen beim Dimmen</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Inkompatibles Dimmen</td><td style="padding:10px 14px;border:1px solid var(--b)">Passender Dimmstandard (siehe Dimm-Guide)</td></tr>
+</tbody>
+</table>
+
+<h2>Wo « flimmerfrei » unverhandelbar ist</h2>
+
+<ul>
+<li><strong>Büros und Schulen</strong> — Ganztagsexposition; schlechte Treiber führen zu Ermüdungsbeschwerden.</li>
+<li><strong>Einzelhandel und Museen</strong> — das Flimmern ruiniert Produktfarbe und Fotografie.</li>
+<li><strong>CCTV und Verkehrsknotenpunkte</strong> — Bänder machen Kennzeichen und Gesichter unlesbar.</li>
+<li><strong>Jede kameraüberwachte Stätte</strong> — wenn ein Handy sie aufnimmt, geben Sie « flimmerfrei » an.</li>
+</ul>
+
+<h2>Wie man ein Datenblatt liest</h2>
+
+<ol>
+<li><strong>PF</strong> — fragen Sie nach dem Wert über den Lastbereich, nicht nur bei 100%. Aktiver PFC hält ihn hoch; passiver nicht.</li>
+<li><strong>Welligkeit / Flimmeranteil</strong> — unter 8% gilt nach der SVM-Metrik, die die meisten Planer heute nutzen, als « flimmerfrei ».</li>
+<li><strong>THD</strong> —  (Totale Oberschwingungsverzerrung): je niedriger, desto sauberer die Versorgung. Treiber mit aktivem PFC liegen deutlich unter dem Grenzwert EN 61000-3-2.</li>
+</ol>
+
+<p>Jeder CHUGAO-Innen- und IP67-Treiber ist serienmäßig für PF 0,95+ und flimmerfreien Ausgang ausgelegt, nicht als kostenpflichtige Option. Wenn Ihr Markt ein spezifisches Oberschwingungs-Limit hat, sagen Sie es uns — wir liefern den Prüfbericht mit der Charge.</p>
+
+<h2>Was wir von Ihnen brauchen</h2>
+
+<p>Senden Sie die Art der Stätte (Büro, Einzelhandel, CCTV-überwacht), die Wattzahl und Spannung sowie ein lokales PF-/Oberschwingungs-Limit. Wir bestätigen einen Treiber, der es erfüllt — und senden den Bericht vor der Bestellung.</p>
+
+<div class="cta-box">
+<h3>Planen Sie für ein Büro oder eine Kamera-Stätte?</h3>
+<p>Senden Sie die Art der Stätte, die Wattzahl und ein lokales PF-/Oberschwingungs-Limit. Wir bestätigen einen flimmerfreien Treiber mit hohem PF und liefern den Prüfbericht.</p>
+<a href="/#inquiry" class="btn">Saubere-Treiber-Spezifikation anfordern</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-Adapter 5-200W</span><span class="pc-desc">Kompakte 12V/24V-Geräte für Streifen, Module und Beschilderung.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Innen-LED-Treiber 50-400W</span><span class="pc-desc">Konstantspannung mit aktivem PFC für Decken- und Panelleuchten.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Vollvergossen, salzsprühgetestet für feuchte und Küsten-Standorte.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Spritzwassergeschützte IP65-Treiber 100-600W</span><span class="pc-desc">Belüftetes Metallgehäuse für Beschilderung und semi-außen.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">LED-Treiber-Dimming erklärt: 0-10V, PWM, DALI und TRIAC</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Technische Analyse</span><span class="rel-title">Lebensdauer von LED-Treibern: MTBF, L70 und wie lange sie wirklich halten</span></a>
+  <a class="rel-card" href="/blog-9/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">LED-Treiber mit Konstantspannung oder Konstantstrom: Welchen benötigen Sie?</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">LED-Treiber-Dimming erklärt: 0-10V, PWM, DALI und TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Überspannungsschutz für LED-Treiber: Blitz und Transienten</span></a></nav>
+</main>"""
