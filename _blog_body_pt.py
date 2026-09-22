@@ -760,3 +760,99 @@ BLOG_BODY['pt']['blog-14'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Artigo anterior</span><span class="pn-t">Escolhendo uma fonte LED para exteriores e locais extremos</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">Notas de campo</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['pt']['blog-1'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Voltar às notas de campo</a>
+
+<h1>Escolha a fonte de alimentação LED certa em 3 passos</h1>
+<div class="meta">Tecnologia LED &middot; março de 2026 &middot; 6 min de leitura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-1-led-power-supply-md.avif 1200w, /images/blog-1-led-power-supply.avif 1024w">
+<source type="image/webp" srcset="/images/blog-1-led-power-supply-md.webp 1200w, /images/blog-1-led-power-supply.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-1-led-power-supply.jpg" alt="Guia de seleção de fontes de alimentação LED" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>Escolher uma fonte de alimentação LED parece técnico, mas resume-se a três coisas: potência (watts), grau de proteção IP e tensão de entrada. Acerte nestas três e eliminou 90% das devoluções e falhas em campo.</p>
+
+<p>Este guia mostra exatamente o que verificar antes de encomendar — escrito pela nossa equipa de engenharia, não pelo departamento de marketing.</p>
+
+<h2>Passo 1: Iguale a potência</h2>
+
+<p>O erro mais comum é subdimensionar. Esta é a regra prática que usamos na CHUGAO:</p>
+
+<div class="highlight">
+<strong>Potência de carga &times; 1,25 = rating mínimo do driver.</strong><br>Deixe sempre pelo menos 25% de margem. Fazer o driver trabalhar a 100% encurta a vida útil e aquece mais.
+</div>
+
+<h3>Exemplo</h3>
+<p>Se a sua tira LED consome 80W, não compre um driver de 80W. Compre um de 100W (ou maior). A capacidade extra mantém a saída estável, reduz o calor e prolonga a vida útil de ~3 anos para mais de 5 anos.</p>
+
+<h3>Por que a margem importa</h3>
+<ul>
+<li><strong>Temperatura:</strong> Os drivers funcionam mais frios abaixo da carga nominal. Cada redução de 10&deg;C duplica aproximadamente a vida do condensador.</li>
+<li><strong>Tolerância a picos:</strong> As tiras LED podem puxar picos breves no arranque. A margem absorve-os sem disparar a proteção.</li>
+<li><strong>Estabilidade de tensão:</strong> Um driver pouco carregado mantém a tensão de saída mais estável, o que significa brilho mais consistente.</li>
+</ul>
+
+<h2>Passo 2: Escolha o grau IP certo</h2>
+
+<p>O código IP (Ingress Protection) indica quão bem o driver resiste a poeira e água. É aqui que a maioria dos projetos falha: as pessoas poupam 2 $ no driver e depois substituem-no após uma tempestade.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Grau IP</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Poeira</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Água</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Caso de uso</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP20</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Sem proteção</td><td style="padding:10px 14px;border:1px solid var(--b)">Sem proteção contra água</td><td style="padding:10px 14px;border:1px solid var(--b)">Apenas interiores secos</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP65</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">À prova de poeira</td><td style="padding:10px 14px;border:1px solid var(--b)">Jatos de água (qualquer direção)</td><td style="padding:10px 14px;border:1px solid var(--b)">Exterior exposto, áreas de lavagem</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP67</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">À prova de poeira</td><td style="padding:10px 14px;border:1px solid var(--b)">Imersão até 1 m</td><td style="padding:10px 14px;border:1px solid var(--b)">Imersão temporária, risco de inundação</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP68</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">À prova de poeira</td><td style="padding:10px 14px;border:1px solid var(--b)">Imersão contínua</td><td style="padding:10px 14px;border:1px solid var(--b)">Luminárias submersas, imersão profunda</td></tr>
+</tbody>
+</table>
+
+<p>Se não tem certeza, suba um grau acima do que acha que precisa. A diferença de custo entre IP20 e IP65 num driver de 100W é tipicamente inferior a 3 $ com preço de fábrica.</p>
+
+<h2>Passo 3: Verifique a compatibilidade de tensão de entrada</h2>
+
+<p>Este é fácil de ignorar, mas causa a maior taxa de devoluções:</p>
+
+<ul>
+<li><strong>América do Norte, Japão, Taiwan, China:</strong> 110V AC / 60Hz</li>
+<li><strong>Europa, China, grande parte da Ásia, África:</strong> 220&ndash;240V AC / 50Hz</li>
+<li><strong>Brasil:</strong> híbrido 127V/220V (verifique a tomada local)</li>
+<li><strong>Industrial / marítimo:</strong> frequentemente 277V, 380V ou 480V trifásico</li>
+</ul>
+
+<p>As gamas de entrada variam por linha. Os adaptadores cobrem 100&ndash;240V AC; os modelos de interior, IP65 e IP67 cobrem 190&ndash;264V (IP67 até 340V). Consulte a gama de entrada exata do seu modelo na nossa <a href="/#specs">tabela de especificações</a> e confirme que coincide com a tensão da rede de destino.</p>
+
+<h2>Lista de verificação rápida</h2>
+
+<ol>
+<li>Some os watts totais de carga LED &rarr; multiplique por 1,25 &rarr; arredonde para o tamanho de driver padrão mais próximo.</li>
+<li>Verifique o ambiente de instalação &rarr; interior (IP20), exterior/anti-chuva (IP65) ou risco de imersão (IP67/IP68).</li>
+<li>Confirme a tensão da rede do país de destino &rarr; região de 110V ou região de 220V.</li>
+<li>Opcional: Precisa de dimerização? (0-10V, PWM, DALI ou Triac — especifique ao encomendar)</li>
+<li>Opcional: Requer certificação UL? (acrescenta custo, 2&ndash;3 semanas de prazo por modelo)</li>
+</ol>
+
+<div class="cta-box">
+<h3>Não sabe que modelo serve?</h3>
+<p>Envie-nos as suas especificações — potência, quantidade, porto de destino e mercado-alvo. Respondemos em 1 hora dentro do horário comercial com uma ficha técnica e orçamento.</p>
+<a href="/#inquiry" class="btn">Pedir orçamento</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar produtos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos e sinalização.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fontes LED de interior 50-400W</span><span class="pc-desc">Tensão constante com PFC ativo para luminárias de teto e painéis.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fontes impermeáveis IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, testadas contra névoa salina para locais úmidos e costeiros.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mais do campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guia técnico</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Tendências do setor</span><span class="rel-title">Mercado LED 2026: o que estamos a ver</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatório</span><span class="rel-title">Certificação BIS para drivers LED: guia de importação à Índia</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Análise técnica</span><span class="rel-title">Vida útil dos drivers LED: MTBF, L70 e vida real</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog/"><span class="pn-lab">Todos os artigos</span><span class="pn-t">Notas de campo</span></a><a class="pn-next" href="/blog-2/" rel="next"><span class="pn-lab">Próximo artigo</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a></nav>
+</main>"""

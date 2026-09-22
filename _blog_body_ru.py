@@ -759,3 +759,99 @@ BLOG_BODY['ru']['blog-14'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Выбор LED-блока для улицы и суровых объектов</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Полевые заметки</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ru']['blog-1'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Назад к полевым заметкам</a>
+
+<h1>Выберите правильный LED-блок за 3 шага</h1>
+<div class="meta">LED-технология &middot; март 2026 &middot; 6 мин чтения</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-1-led-power-supply-md.avif 1200w, /images/blog-1-led-power-supply.avif 1024w">
+<source type="image/webp" srcset="/images/blog-1-led-power-supply-md.webp 1200w, /images/blog-1-led-power-supply.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-1-led-power-supply.jpg" alt="Руководство по выбору LED-блоков питания" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>Выбор LED-блока питания звучит технически, но сводится к трём вещам: мощность (Вт), степень защиты IP и входное напряжение. Угадаете эти три — и уберёте 90% возвратов и полевых отказов.</p>
+
+<p>Это руководство точно показывает, что проверить перед заказом — написано нашей инженерной командой, а не отделом маркетинга.</p>
+
+<h2>Шаг 1: Подберите мощность</h2>
+
+<p>Самая частая ошибка — занижение. Вот эмпирическое правило, которым мы пользуемся в CHUGAO:</p>
+
+<div class="highlight">
+<strong>Мощность нагрузки &times; 1,25 = минимальный рейтинг драйвера.</strong><br>Всегда оставляйте запас не менее 25%. Работа драйвера на 100% сокращает срок службы и греет его сильнее.
+</div>
+
+<h3>Пример</h3>
+<p>Если ваша LED-лента потребляет 80Вт, не покупайте блок на 80Вт. Купите на 100Вт (или больше). Запас держит выход стабильным, снижает нагрев и продлевает срок службы с ~3 до 5+ лет.</p>
+
+<h3>Почему важен запас</h3>
+<ul>
+<li><strong>Температура:</strong> Драйверы холоднее работают ниже номинальной нагрузки. Каждое снижение на 10&deg;C примерно удваивает срок конденсатора.</li>
+<li><strong>Устойчивость к броскам:</strong> LED-ленты могут брать кратковременные пики при запуске. Запас гасит их, не срабатывая защиту.</li>
+<li><strong>Стабильность напряжения:</strong> Слабонагруженный драйвер держит выходное напряжение точнее — значит, яркость ровнее.</li>
+</ul>
+
+<h2>Шаг 2: Выберите нужную степень IP</h2>
+
+<p>Код IP (Ingress Protection) показывает, насколько блок защищён от пыли и воды. Здесь большинство проектов ошибается: экономят 2 $ на блоке, а потом меняют его после одной грозы.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Степень IP</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Пыль</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Вода</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Применение</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP20</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Без защиты</td><td style="padding:10px 14px;border:1px solid var(--b)">Без защиты от воды</td><td style="padding:10px 14px;border:1px solid var(--b)">Только сухие помещения</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP65</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Пылезащищённый</td><td style="padding:10px 14px;border:1px solid var(--b)">Струи воды (любое направление)</td><td style="padding:10px 14px;border:1px solid var(--b)">Открытый воздух, зоны мойки</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP67</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Пылезащищённый</td><td style="padding:10px 14px;border:1px solid var(--b)">Погружение до 1 м</td><td style="padding:10px 14px;border:1px solid var(--b)">Временное погружение, риск затопления</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP68</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Пылезащищённый</td><td style="padding:10px 14px;border:1px solid var(--b)">Постоянное погружение</td><td style="padding:10px 14px;border:1px solid var(--b)">Подводные светильники, глубокое погружение</td></tr>
+</tbody>
+</table>
+
+<p>Если сомневаетесь, берите на ступень выше, чем кажется нужным. Разница в цене между IP20 и IP65 на блоке 100Вт обычно меньше 3 $ по заводской цене.</p>
+
+<h2>Шаг 3: Проверьте совместимость по входному напряжению</h2>
+
+<p>Его легко упустить, но он даёт самую высокую частоту возвратов:</p>
+
+<ul>
+<li><strong>Северная Америка, Япония, Тайвань, Китай:</strong> 110V AC / 60Гц</li>
+<li><strong>Европа, Китай, большая часть Азии, Африка:</strong> 220&ndash;240V AC / 50Гц</li>
+<li><strong>Бразилия:</strong> гибрид 127V/220V (уточните местную розетку)</li>
+<li><strong>Промышленность / море:</strong> часто 277V, 380V или 480V трёхфазное</li>
+</ul>
+
+<p>Входные диапазоны различаются по линейке. Адаптеры покрывают 100&ndash;240V AC; модели для помещений, IP65 и IP67 — 190&ndash;264V (IP67 до 340V). Проверьте точный входной диапазон вашей модели в нашей <a href="/#specs">таблице характеристик</a> и сопоставьте с напряжением сети назначения.</p>
+
+<h2>Быстрый контрольный список</h2>
+
+<ol>
+<li>Сложите ватты общей LED-нагрузки &rarr; умножьте на 1,25 &rarr; округлите вверх до ближайшего стандартного размера.</li>
+<li>Проверьте среду установки &rarr; помещение (IP20), улица/дождезащита (IP65) или риск погружения (IP67/IP68).</li>
+<li>Подтвердите напряжение сети страны назначения &rarr; регион 110V или регион 220V.</li>
+<li>Опционально: нужно ли диммирование? (0-10V, PWM, DALI или Triac — укажите при заказе)</li>
+<li>Опционально: требуется ли сертификация UL? (добавляет стоимость, 2&ndash;3 недели срока на модель)</li>
+</ol>
+
+<div class="cta-box">
+<h3>Не уверены, какая модель подходит?</h3>
+<p>Пришлите нам параметры — мощность, количество, порт назначения и целевой рынок. В рабочее время отвечаем за 1 час с datasheet и расчётом.</p>
+<a href="/#inquiry" class="btn">Запросить расчёт</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Ознакомьтесь с продукцией CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-адаптеры 5-200Вт</span><span class="pc-desc">Компактные блоки 12В/24В для лент, модулей и вывесок.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Интерьерные LED-драйверы 50-400Вт</span><span class="pc-desc">Стабилизированное напряжение с активным PFC для потолочных и панельных светильников.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Водонепроницаемые драйверы IP67 10-400Вт</span><span class="pc-desc">Полностью залитые, испытаны солевым туманом для влажных и прибрежных объектов.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Ещё из поля</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Отраслевые тренды</span><span class="rel-title">Рынок LED 2026: что мы наблюдаем</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Регуляторика</span><span class="rel-title">Сертификация BIS для LED-драйверов: руководство по импорту в Индию</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Технический разбор</span><span class="rel-title">Срок службы LED-драйверов: MTBF, L70 и реальный срок</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog/"><span class="pn-lab">Все статьи</span><span class="pn-t">Полевые заметки</span></a><a class="pn-next" href="/blog-2/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a></nav>
+</main>"""

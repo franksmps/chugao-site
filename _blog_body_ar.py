@@ -759,3 +759,99 @@ BLOG_BODY['ar']['blog-14'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">اختيار مزود LED للخارج والبيئات القاسية</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">ملاحظات الميدان</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-1'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>اختر مزود LED الصحيح في 3 خطوات</h1>
+<div class="meta">تقنية LED &middot; مارس 2026 &middot; 6 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-1-led-power-supply-md.avif 1200w, /images/blog-1-led-power-supply.avif 1024w">
+<source type="image/webp" srcset="/images/blog-1-led-power-supply-md.webp 1200w, /images/blog-1-led-power-supply.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-1-led-power-supply.jpg" alt="دليل اختيار مزودات LED" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>يبدو اختيار مزود LED أمرًا تقنيًا، لكنه ينحصر في ثلاثة أمور: القدرة (واط)، درجة الحماية IP، وجهد الدخل. إن أتقنت هذه الثلاثة أزلت 90% من المرتجعات والأعطال الميدانية.</p>
+
+<p>يستعرض هذا الدليل بالضبط ما يجب فحصه قبل الطلب — كتبه فريق الهندسة لدينا، لا قسم التسويق.</p>
+
+<h2>الخطوة 1: طابق القدرة</h2>
+
+<p>الخطأ الأكثر شيوعًا هو التقليل من الحجم. هذه القاعدة العملية التي نستخدمها في CHUGAO:</p>
+
+<div class="highlight">
+<strong>قدرة الحمل &times; 1,25 = الحد الأدنى لتقييم المزود.</strong><br>اترك دائمًا هامشًا لا يقل عن 25%. تشغيل المزود بكامل طاقته يقلّص عمره ويرفع حرارته.
+</div>
+
+<h3>مثال</h3>
+<p>إذا كان شريط LED لديك يسحب 80W، لا تشترِ مزودًا بـ 80W. اشترِ وحدة بـ 100W (أكبر). السعة الإضافية تثبّت المخرج وتقلّل الحرارة وتمدّد العمر من ~3 سنوات إلى أكثر من 5 سنوات.</p>
+
+<h3>لماذا يهم الهامش</h3>
+<ul>
+<li><strong>الحرارة:</strong> تعمل المزودات أبرد تحت الحمل المقنن. كل خفض 10&deg;C يضاعف تقريبًا عمر المكثّف.</li>
+<li><strong>تحمّل التيار الاندفاعي:</strong> قد تسحب أشرطة LED ذروات وجيزة عند التشغيل. يمتص الهامش هذه الذروات دون تشغيل الحماية.</li>
+<li><strong>استقرار الجهد:</strong> مزود محمّل بخفة يثبّت جهد الخرج أكثر إحكامًا، أي إضاءة أكثر تجانسًا.</li>
+</ul>
+
+<h2>الخطوة 2: اختر درجة IP الصحيحة</h2>
+
+<p>يشير رمز IP (Ingress Protection) إلى مدى مقاومة المزود للغبار والماء. هنا تفسد معظم المشاريع: يوفّر الناس 2 $ على المزود ثم يستبدلونه بعد عاصفة مطر واحدة.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">درجة IP</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">الغبار</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">الماء</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">حالة الاستخدام</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP20</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">بلا حماية</td><td style="padding:10px 14px;border:1px solid var(--b)">بلا حماية من الماء</td><td style="padding:10px 14px;border:1px solid var(--b)">أماكن داخلية جافة فقط</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP65</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">مقاوم للغبار</td><td style="padding:10px 14px;border:1px solid var(--b)">أعمدة ماء (أي اتجاه)</td><td style="padding:10px 14px;border:1px solid var(--b)">خارجي مكشوف، مناطق الغسيل</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP67</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">مقاوم للغبار</td><td style="padding:10px 14px;border:1px solid var(--b)">غمر حتى 1 م</td><td style="padding:10px 14px;border:1px solid var(--b)">غمر مؤقت، خطر فيضان</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP68</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">مقاوم للغبار</td><td style="padding:10px 14px;border:1px solid var(--b)">غمر مستمر</td><td style="padding:10px 14px;border:1px solid var(--b)">إضاءة مغمورة، غمر عميق</td></tr>
+</tbody>
+</table>
+
+<p>إن لم تكن متأكدًا، اصعد درجة أعلى مما تعتقد أنك تحتاج. الفرق في التكلفة بين IP20 وIP65 على مزود 100W عادة أقل من 3 $ بسعر المصنع.</p>
+
+<h2>الخطوة 3: افحص توافق جهد الدخل</h2>
+
+<p>هذه سهلة الإغفال لكنها تسبب أعلى معدل مرتجعات:</p>
+
+<ul>
+<li><strong>أمريكا الشمالية، اليابان، تايوان، الصين:</strong> 110V AC / 60Hz</li>
+<li><strong>أوروبا، الصين، معظم آسيا، أفريقيا:</strong> 220&ndash;240V AC / 50Hz</li>
+<li><strong>البرازيل:</strong> هجين 127V/220V (افحص المقبس المحلي)</li>
+<li><strong>صناعي / بحري:</strong> غالبًا 277V أو 380V أو 480V ثلاثي الطور</li>
+</ul>
+
+<p>تختلف نطاقات الدخل حسب الفئة. تغطي المحوّلات 100&ndash;240V AC؛ وتغطي طرازات الداخل وIP65 وIP67 نطاق 190&ndash;264V (IP67 حتى 340V). افحص نطاق الدخل الدقيق لطرازك في <a href="/#specs">جدول المواصفات</a> لدينا وأكّد تطابقه مع جهد الشبكة في وجهتك.</p>
+
+<h2>قائمة فحص سريعة</h2>
+
+<ol>
+<li>اجمع إجمالي واط حمل LED &rarr; اضرب في 1,25 &rarr; قرّب لأقرب حجم مزود قياسي.</li>
+<li>افحص بيئة التركيب &rarr; داخلي (IP20)، أو خارجي/مقاوم للمطر (IP65)، أو خطر غمر (IP67/IP68).</li>
+<li>أكّد جهد شبكة بلد الوجهة &rarr; منطقة 110V أو منطقة 220V.</li>
+<li>اختياري: هل تحتاج لتعتيم؟ (0-10V أو PWM أو DALI أو Triac — حدّد عند الطلب)</li>
+<li>اختياري: هل مطلوب شهادة UL؟ (تضيف تكلفة، 2&ndash;3 أسابيع مهلة لكل طراز)</li>
+</ol>
+
+<div class="cta-box">
+<h3>غير متأكد أي طراز يناسب؟</h3>
+<p>أرسل لنا مواصفاتك — القدرة، الكمية، ميناء الوجهة، والسوق المستهدف. نرد خلال ساعة في ساعات العمل بورقة بيانات وعرض سعر.</p>
+<a href="/#inquiry" class="btn">اطلب عرض سعر</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">محوّلات LED 5-200W</span><span class="pc-desc">وحدات مدمجة 12V/24V للأشرطة والوحدات واللافتات.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">مزودات LED داخلية 50-400W</span><span class="pc-desc">ثابت الجهد مع PFC نشط لإضاءة السقف واللوحات.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">مغمورة بالكامل، مُختبَرة برذاذ الملح للمواقع الرطبة والساحلية.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">دليل تقني</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">اتجاهات القطاع</span><span class="rel-title">سوق LED 2026: ما نراه</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">تنظيمي</span><span class="rel-title">شهادة BIS لمزودات LED: دليل استيراد الهند</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">تحليل تقني</span><span class="rel-title">عمر مزودات LED: MTBF وL70 والحياة الواقعية</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog/"><span class="pn-lab">كل المقالات</span><span class="pn-t">ملاحظات الميدان</span></a><a class="pn-next" href="/blog-2/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a></nav>
+</main>"""

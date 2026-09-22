@@ -759,3 +759,99 @@ BLOG_BODY['de']['blog-14'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">LED-Netzteil für Außen und extreme Standorte wählen</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Feldbriefe</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-1'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>Das richtige LED-Netzteil in 3 Schritten wählen</h1>
+<div class="meta">LED-Technik &middot; März 2026 &middot; 6 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/blog-1-led-power-supply-md.avif 1200w, /images/blog-1-led-power-supply.avif 1024w">
+<source type="image/webp" srcset="/images/blog-1-led-power-supply-md.webp 1200w, /images/blog-1-led-power-supply.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/blog-1-led-power-supply.jpg" alt="Auswahlhilfe für LED-Netzteile" loading="lazy" style="width:100%;aspect-ratio:4/3">
+</picture>
+</div>
+
+<p>Ein LED-Netzteil zu wählen klingt technisch, läuft aber auf drei Dinge hinaus: Leistung (Watt), Schutzgrad IP und Eingangsspannung. Stimmen diese drei, haben Sie 90% der Retouren und Feldausfälle eliminiert.</p>
+
+<p>Diese Anleitung zeigt genau, was vor der Bestellung zu prüfen ist — geschrieben von unserem Engineering-Team, nicht von der Marketing-Abteilung.</p>
+
+<h2>Schritt 1: Leistung anpassen</h2>
+
+<p>Der häufigste Fehler ist Unterdimensionierung. Hier ist die Faustregel, die wir bei CHUGAO anwenden:</p>
+
+<div class="highlight">
+<strong>Last-Watt &times; 1,25 = minimaler Treiber-Rating.</strong><br>Lassen Sie immer mindestens 25% Reserve. Ein Treiber bei 100% Last altert schneller und wird heißer.
+</div>
+
+<h3>Beispiel</h3>
+<p>Wenn Ihr LED-Streifen 80W zieht, kaufen Sie keinen 80W-Treiber. Kaufen Sie ein 100W-Gerät (oder größer). Die Reserve hält die Ausgangsspannung stabil, reduziert Hitze und verlängert die Lebensdauer von ~3 auf über 5 Jahre.</p>
+
+<h3>Warum die Reserve wichtig ist</h3>
+<ul>
+<li><strong>Temperatur:</strong> Treiber laufen unter Nennlast kühler. Jede Senkung um 10&deg;C verdoppelt etwa die Kondensator-Lebensdauer.</li>
+<li><strong>Stoßtoleranz:</strong> LED-Streifen können beim Start kurze Spitzen ziehen. Die Reserve schluckt sie, ohne die Sicherung auszulösen.</li>
+<li><strong>Spannungsstabilität:</strong> Ein gering belasteter Treiber hält die Ausgangsspannung enger — also gleichmäßigere Helligkeit.</li>
+</ul>
+
+<h2>Schritt 2: Wählen Sie den richtigen IP-Grad</h2>
+
+<p>Der IP-Code (Ingress Protection) zeigt, wie gut der Treiber Staub und Wasser widersteht. Hier geht der meisten Projekten schief: Man spart 2 $ am Treiber und tauscht ihn nach einem Regenguss aus.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">IP-Grad</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Staub</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Wasser</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Einsatz</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP20</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Kein Schutz</td><td style="padding:10px 14px;border:1px solid var(--b)">Kein Wasserschutz</td><td style="padding:10px 14px;border:1px solid var(--b)">Nur trockene Innenräume</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP65</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Staubdicht</td><td style="padding:10px 14px;border:1px solid var(--b)">Wasserstrahlen (jede Richtung)</td><td style="padding:10px 14px;border:1px solid var(--b)">Freie Bewetterung, Waschbereiche</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP67</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Staubdicht</td><td style="padding:10px 14px;border:1px solid var(--b)">Tauchen bis 1 m</td><td style="padding:10px 14px;border:1px solid var(--b)">Temporäres Tauchen, Überschwemmungsrisiko</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>IP68</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Staubdicht</td><td style="padding:10px 14px;border:1px solid var(--b)">Dauerndes Tauchen</td><td style="padding:10px 14px;border:1px solid var(--b)">Unterwasser-Leuchten, tiefes Tauchen</td></tr>
+</tbody>
+</table>
+
+<p>Wenn Sie unsicher sind, gehen Sie einen Grad höher als nötig. Der Preisunterschied zwischen IP20 und IP65 bei einem 100W-Treiber liegt werksab Werk meist unter 3 $.</p>
+
+<h2>Schritt 3: Eingangsspannung prüfen</h2>
+
+<p>Diese wird leicht übersehen, verursacht aber die höchste Retourenquote:</p>
+
+<ul>
+<li><strong>Nordamerika, Japan, Taiwan, China:</strong> 110V AC / 60Hz</li>
+<li><strong>Europa, China, größter Teil Asiens, Afrika:</strong> 220&ndash;240V AC / 50Hz</li>
+<li><strong>Brasilien:</strong> Hybrid 127V/220V (örtliche Steckdose prüfen)</li>
+<li><strong>Industrie / Marine:</strong> oft 277V, 380V oder 480V Drehstrom</li>
+</ul>
+
+<p>Die Eingangsbereiche variieren je nach Baureihe. Adapter decken 100&ndash;240V AC ab; Innen-, IP65- und IP67-Modelle decken 190&ndash;264V (IP67 bis 340V). Prüfen Sie den genauen Eingangsbereich Ihres Modells in unserer <a href="/#specs">Spezifikationstabelle</a> und gleichen Sie ihn mit der Netzspannung am Zielort ab.</p>
+
+<h2>Kurze Prüfliste</h2>
+
+<ol>
+<li>Summieren Sie die LED-Last-Watt &rarr; multiplizieren Sie mit 1,25 &rarr; runden Sie auf die nächste Standard-Treibergröße.</li>
+<li>Prüfen Sie die Umgebung &rarr; Innen (IP20), Außen/regenfest (IP65) oder Tauchrisiko (IP67/IP68).</li>
+<li>Bestätigen Sie die Netzspannung des Ziellands &rarr; 110V-Region oder 220V-Region.</li>
+<li>Optional: Brauchen Sie Dimmen? (0-10V, PWM, DALI oder Triac — bei Bestellung angeben)</li>
+<li>Optional: UL-Zertifizierung nötig? (erhöht Kosten, 2&ndash;3 Wochen Lieferzeit pro Modell)</li>
+</ol>
+
+<div class="cta-box">
+<h3>Unsicher, welches Modell passt?</h3>
+<p>Senden Sie uns Ihre Spezifikationen — Leistung, Menge, Zielhafen und Zielmarkt. Wir antworten werktags binnen 1 Stunde mit Datenblatt und Angebot.</p>
+<a href="/#inquiry" class="btn">Angebot anfordern</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-Adapter 5-200W</span><span class="pc-desc">Kompakte 12V/24V-Geräte für Streifen, Module und Beschilderung.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Innen-LED-Treiber 50-400W</span><span class="pc-desc">Konstantspannung mit aktivem PFC für Decken- und Panelleuchten.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Vollvergossen, salzsprühgetestet für feuchte und Küsten-Standorte.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Branchentrends</span><span class="rel-title">LED-Markt 2026: Was wir sehen</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatorisch</span><span class="rel-title">BIS-Zertifizierung für LED-Treiber: Importleitfaden Indien</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Technische Analyse</span><span class="rel-title">Lebensdauer von LED-Treibern: MTBF, L70 und Praxis</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog/"><span class="pn-lab">Alle Artikel</span><span class="pn-t">Feldbriefe</span></a><a class="pn-next" href="/blog-2/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a></nav>
+</main>"""
