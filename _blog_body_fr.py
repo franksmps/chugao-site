@@ -683,3 +683,80 @@ BLOG_BODY['fr']['blog-13'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Protection contre les surtensions pour drivers LED : foudre et transitoires</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Section de câble et chute de tension pour installations LED</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['fr']['blog-14'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Retour aux notes de terrain</a>
+
+<h1>Section de câble et chute de tension pour installations LED</h1>
+<div class="meta">Guide technique &middot; octobre 2026 &middot; 7 min de lecture</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="Dimensionnement du câble pour installations LED et chute de tension" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>La cause la plus fréquente des « LED faibles à l'extrémité lointaine » n'est pas le driver — c'est le câble. Sous-dimensionnez le fil et la chute de tension vole la luminosité avant que la lumière ne la reçoive. Voici la méthode de dimensionnement que nous utilisons à chaque installation.</p>
+
+<h2>La loi qui décide</h2>
+
+<div class="highlight">
+<strong>Chute de tension = Courant &times; Résistance du câble.</strong> La résistance augmente avec la longueur et diminue avec la section, donc un câble plus long ou plus fin perd plus de volts. Gardez la chute totale sous <strong>5%</strong> (0,6V en 12V, 1,2V en 24V) et l'extrémité lointaine reste brillante.
+</div>
+
+<h2>Jusqu'où peut-on tirer en 12V contre 24V ?</h2>
+
+<p>À la même puissance, 24V tire la moitié du courant de 12V, donc il perd environ un quart de la chute et parcourt environ deux fois plus loin :</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Charge</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Câble</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Portée max. @ 12V</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Portée max. @ 24V</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>24 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">1,5 mm² (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>48 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2,5 mm² (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>96 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm² (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>192 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm² (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+</tbody>
+</table>
+
+<h2>Trois moyens de vaincre la chute</h2>
+
+<ol>
+<li><strong>Passez en 24V.</strong> Pour toute portée au-delà de ~5 m, 24V élimine le problème dans la plupart des pièces (voir le <a href="/blog-7/">guide 12V vs 24V</a>).</li>
+<li><strong>Alimentez par les deux extrémités.</strong> Réduit de moitié la longueur et la chute effectives.</li>
+<li><strong>Épaississez le câble.</strong> Monter d'une taille coûte peu et corrige une extrémité faible ; monter de deux tailles si le câble est enterré ou regroupé avec le secteur.</li>
+</ol>
+
+<h2>Deux erreurs que nous voyons constamment</h2>
+
+<ul>
+<li><strong>Dimensionner le câble pour le driver, pas pour la portée.</strong> Le rating du driver va bien ; la distance est ce qui tue la luminosité. Utilisez le tableau, puis prenez plus épais en cas de doute.</li>
+<li><strong>Utiliser du fil d'enceinte.</strong> Le fin « fil de lampe » semble propre mais double la chute. Utilisez un flexible secteur réel à la section que la charge exige.</li>
+</ul>
+
+<div class="highlight">
+<strong>Exemple traité :</strong> 10 m de bandeau 14,4W/m = 144W en 24V = 6A. Dans du 2,5 mm² cela fait environ 1,0V de chute — sous le budget de 1,2V (5%), donc reste brillant. La même charge en 12V nécessiterait environ 4 mm² pour obtenir la même chute.
+</div>
+
+<h2>Ce dont nous avons besoin de votre part</h2>
+
+<p>Envoyez la charge en watts, la tension de sortie (12V ou 24V), la longueur du câble et la section que vous comptez utiliser. Nous confirmerons que la portée est sûre — ou vous dirons de passer en 24V ou à un câble plus épais avant l'installation.</p>
+
+<div class="cta-box">
+<h3>Inquiet pour des LED faibles à l'extrémité lointaine ?</h3>
+<p>Envoyez la charge, la tension, la longueur et la section du câble. Nous confirmerons que la portée est sûre — ou vous dirons de passer en 24V ou à un câble plus épais.</p>
+<a href="/#inquiry" class="btn">Vérifier ma section de câble</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Découvrir les produits CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptateurs LED 5-200W</span><span class="pc-desc">Blocs compacts 12V/24V pour bandeaux, modules et enseignes.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Alimentations LED d'intérieur 50-400W</span><span class="pc-desc">Tension constante avec PFC actif pour plafonniers et panneaux.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Alimentations étanches IP67 10-400W</span><span class="pc-desc">Totalement encapsulées, testées aux brouillards salins pour sites humides et côtiers.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Alimentations anti-pluie IP65 100-600W</span><span class="pc-desc">Boîtier métallique ventilé pour enseignes et installations semi-extérieures.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Encore du terrain</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">Guide d'achat</span><span class="rel-title">Alimentation LED 12V vs 24V : comment choisir</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">Guide technique</span><span class="rel-title">Dimensionner une alimentation LED : watts, marge et inrush</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Technologie LED</span><span class="rel-title">Choisir la bonne alimentation LED en 3 étapes</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">Guide d'achat</span><span class="rel-title">Choisir une alimentation LED pour extérieur et sites extrêmes</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Choisir une alimentation LED pour extérieur et sites extrêmes</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">Notes de terrain</span></a></nav>
+</main>"""

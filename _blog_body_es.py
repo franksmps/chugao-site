@@ -682,3 +682,80 @@ BLOG_BODY['es']['blog-13'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">Artículo anterior</span><span class="pn-t">Protección contra sobretensiones para drivers LED: rayos y transitorios</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">Artículo siguiente</span><span class="pn-t">Sección de cable y caída de tensión para instalaciones LED</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['es']['blog-14'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Volver a las notas de campo</a>
+
+<h1>Sección de cable y caída de tensión para instalaciones LED</h1>
+<div class="meta">Guía técnica &middot; octubre de 2026 &middot; 7 min de lectura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="Dimensionado de cable para instalaciones LED y caída de tensión" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>La causa más frecuente de «LED tenues en el extremo lejano» no es el driver, sino el cable. Si subdimensiona el hilo, la caída de tensión roba brillo antes de que la luz lo reciba. Este es el método de dimensionado que usamos en cada instalación.</p>
+
+<h2>La ley que lo decide</h2>
+
+<div class="highlight">
+<strong>Caída de tensión = Corriente &times; Resistencia del cable.</strong> La resistencia crece con la longitud y baja con la sección, así que un cable más largo o más fino pierde más voltios. Mantenga la caída total por debajo del <strong>5%</strong> (0,6V en 12V, 1,2V en 24V) y el extremo lejano sigue brillante.
+</div>
+
+<h2>¿Cuánto puede recorrer en 12V frente a 24V?</h2>
+
+<p>A la misma potencia, 24V demanda la mitad de corriente que 12V, así que pierde aproximadamente un cuarto de la caída y recorre el doble de distancia:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Carga</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Cable</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Recorrido máx. @ 12V</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Recorrido máx. @ 24V</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>24 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">1,5 mm² (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>48 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2,5 mm² (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>96 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm² (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>192 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm² (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+</tbody>
+</table>
+
+<h2>Tres formas de vencer la caída</h2>
+
+<ol>
+<li><strong>Pase a 24V.</strong> Para cualquier recorrido superior a ~5 m, 24V elimina el problema en la mayoría de las estancias (véase la <a href="/blog-7/">guía 12V vs 24V</a>).</li>
+<li><strong>Alimente desde ambos extremos.</strong> Reduce a la mitad la longitud y la caída efectivas.</li>
+<li><strong>Engruese el cable.</strong> Subir un tamaño cuesta poco y corrige un extremo tenue; suba dos tamaños si el cable está enterrado o agrupado con la red.</li>
+</ol>
+
+<h2>Dos errores que vemos constantemente</h2>
+
+<ul>
+<li><strong>Dimensionar el cable para el driver, no para el recorrido.</strong> La clasificación del driver está bien; la distancia es lo que mata el brillo. Use la tabla y luego suba de sección si duda.</li>
+<li><strong>Usar cable de altavoz.</strong> El «cable de lámpara» fino parece ordenado pero duplica la caída. Use flexible de red real a la sección que la carga necesita.</li>
+</ul>
+
+<div class="highlight">
+<strong>Ejemplo resuelto:</strong> 10 m de tira de 14,4W/m = 144W en 24V = 6A. Por 2,5 mm² eso supone unas 1,0V de caída — por debajo del presupuesto de 1,2V (5%), así que sigue brillante. La misma carga en 12V necesitaría unas 4 mm² para igualar la caída.
+</div>
+
+<h2>Qué necesitamos de usted</h2>
+
+<p>Envíe la carga en vatios, la tensión de salida (12V o 24V), la longitud del cable y la sección que piensa usar. Confirmaremos que el recorrido es seguro — o le diremos que suba a 24V o a un cable más grueso antes de instalar.</p>
+
+<div class="cta-box">
+<h3>¿Preocupado por los LED tenues en el extremo lejano?</h3>
+<p>Envíe la carga, la tensión, la longitud y la sección del cable. Confirmaremos que el recorrido es seguro — o le diremos que suba a 24V o a un cable más grueso.</p>
+<a href="/#inquiry" class="btn">Comprobar mi sección de cable</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explorar productos CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptadores LED 5-200W</span><span class="pc-desc">Unidades compactas de 12V/24V para tiras, módulos y señalización.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Fuentes LED de interior 50-400W</span><span class="pc-desc">Tensión constante con PFC activo para luces de techo y paneles.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Fuentes impermeables IP67 10-400W</span><span class="pc-desc">Totalmente encapsuladas, probadas contra sal marina para lugares húmedos y costeros.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Fuentes resistentes a la lluvia IP65 100-600W</span><span class="pc-desc">Carcasa metálica ventilada para señalización e instalaciones semiexteriores.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Más del campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">Guía del comprador</span><span class="rel-title">Fuente LED 12V vs 24V: cómo elegir</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">Guía técnica</span><span class="rel-title">Cómo dimensionar una fuente LED: vatios, margen e inrush</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnología LED</span><span class="rel-title">Elija la fuente LED correcta en 3 pasos</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">Guía del comprador</span><span class="rel-title">Elegir una fuente LED para exteriores y sitios extremos</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Artículo anterior</span><span class="pn-t">Elegir una fuente LED para exteriores y sitios extremos</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">Artículo siguiente</span><span class="pn-t">Notas de campo</span></a></nav>
+</main>"""

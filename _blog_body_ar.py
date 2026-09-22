@@ -682,3 +682,80 @@ BLOG_BODY['ar']['blog-13'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">حماية مزودات LED من التأثيرات: البرق والعابرة</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">مقاس الكابل وهبوط الجهد لتجهيزات LED</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-14'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>مقاس الكابل وهبوط الجهد لتجهيزات LED</h1>
+<div class="meta">دليل تقني &middot; أكتوبر 2026 &middot; 7 دقائق قراءة</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="تحديد مقاس كابل تجهيزات LED وهبوط الجهد" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>السبب الأكثر شيوعًا لـ «خفوت LED عند الطرف البعيد» ليس المزود — بل الكابل. إن قلّلت حجم السلك، سرق هبوط الجهد الإضاءة قبل أن تصل للضوء. هذه طريقة التحديد التي نستخدمها في كل تركيب.</p>
+
+<h2>القانون الذي يقرّر</h2>
+
+<div class="highlight">
+<strong>هبوط الجهد = التيار &times; مقاومة الكابل.</strong> تزداد المقاومة مع الطول وتنخفض مع المقطع، لذا يفقد الكابل الأطول أو الأرفع مزيدًا من الفولتات. أبقِ الهبوط الكلي تحت <strong>5%</strong> (0,6V على 12V، 1,2V على 24V) فيظل الطرف البعيد مضيئًا.
+</div>
+
+<h2>إلى أي مدى يمكن مدّ الكابل على 12V مقابل 24V؟</h2>
+
+<p>عند نفس القدرة، يسحب 24V نصف تيار 12V، فيفقد نحو ربع الهبوط ويصل ضعف المسافة تقريبًا:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">الحمل</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">الكابل</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">أقصى مدى @ 12V</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">أقصى مدى @ 24V</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>24 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">1,5 mm² (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>48 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2,5 mm² (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>96 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm² (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>192 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm² (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+</tbody>
+</table>
+
+<h2>ثلاث طرق للتغلّب على الهبوط</h2>
+
+<ol>
+<li><strong>انتقل إلى 24V.</strong> لأي مدى فوق ~5 m، يزيل 24V المشكلة في معظم الغرف (انظر <a href="/blog-7/">دليل 12V مقابل 24V</a>).</li>
+<li><strong>غذِّ من الطرفين.</strong> يقلّص الطول والهبوط الفعليّين إلى النصف.</li>
+<li><strong>سَمّك الكابل.</strong> رفعه مقاسًا واحدًا لا يكلف كثيرًا ويصلح طرفًا خافتًا؛ ارفع مقاسين إن كان الكابل مدفونًا أو مُجمَّعًا مع الشبكة.</li>
+</ol>
+
+<h2>خطأان نراهما باستمرار</h2>
+
+<ul>
+<li><strong>تحديد مقاس الكابل للمزود لا للمسافة.</strong> تقييم المزود جيد؛ المسافة هي ما يقتل الإضاءة. استخدم الجدول ثم اذهب لأسمك عند الشك.</li>
+<li><strong>استخدام سلك مكبر الصوت.</strong> «سلك المصباح» الرفيع يبدو مرتبًا لكنه يضاعف الهبوط. استخدم فليكس شبكيًا حقيقيًا بالمقطع الذي تحتاجه الحمل.</li>
+</ul>
+
+<div class="highlight">
+<strong>مثال محسوب:</strong> 10 m من شريط 14,4W/m = 144W على 24V = 6A. عبر 2,5 mm² يكون الهبوط نحو 1,0V — تحت ميزانية 1,2V (5%)، فيظل مضيئًا. نفس الحمل على 12V سيحتاج نحو 4 mm² لنفس الهبوط.
+</div>
+
+<h2>ماذا نحتاج منك</h2>
+
+<p>أرسل الحمل بالواط وخرج الجهد (12V أو 24V) وطول الكابل والمقطع الذي تخطط لاستخدامه. سنؤكد أن المدى آمن — أو نقول لك أن ترفع إلى 24V أو كابل أسمك قبل التركيب.</p>
+
+<div class="cta-box">
+<h3>قلق من خفوت LED عند الطرف البعيد؟</h3>
+<p>أرسل الحمل والجهد وطول الكابل ومقطعه. سنؤكد أن المدى آمن — أو نقول لك أن ترفع إلى 24V أو كابل أسمك.</p>
+<a href="/#inquiry" class="btn">تحقق من مقاس كابلي</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">استكشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">محوّلات LED 5-200W</span><span class="pc-desc">وحدات مدمجة 12V/24V للأشرطة والوحدات واللافتات.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">مزودات LED داخلية 50-400W</span><span class="pc-desc">ثابت الجهد مع PFC نشط لإضاءة السقف واللوحات.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">مزودات مقاومة للماء IP67 10-400W</span><span class="pc-desc">مغمورة بالكامل، مُختبَرة برذاذ الملح للمواقع الرطبة والساحلية.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">مزودات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">هيكل معدني مُهوّى للافتات والتركيبات شبه الخارجية.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">دليل المشتري</span><span class="rel-title">مزود LED 12V مقابل 24V: كيف تختار</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">دليل تقني</span><span class="rel-title">كيف تحدد حجم مزود LED: الواط والهامش والتيار الاندفاعي</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">تقنية LED</span><span class="rel-title">اختر مزود LED الصحيح في 3 خطوات</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">دليل المشتري</span><span class="rel-title">اختيار مزود LED للخارج والبيئات القاسية</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">اختيار مزود LED للخارج والبيئات القاسية</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">ملاحظات الميدان</span></a></nav>
+</main>"""

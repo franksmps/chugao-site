@@ -682,3 +682,80 @@ BLOG_BODY['de']['blog-13'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">Überspannungsschutz für LED-Treiber: Blitz und Transienten</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Kabelquerschnitt und Spannungsabfall für LED-Anlagen</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-14'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldbriefen</a>
+
+<h1>Kabelquerschnitt und Spannungsabfall bei LED-Anlagen</h1>
+<div class="meta">Technischer Leitfaden &middot; Oktober 2026 &middot; 7 Min. Lesezeit</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="Kabelauslegung für LED-Anlagen und Spannungsabfall" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>Die häufigste Ursache für „trübe LEDs am entfernten Ende“ ist nicht der Treiber — es ist das Kabel. Unterdimensionieren Sie den Draht, stiehlt der Spannungsabfall die Helligkeit, bevor das Licht sie sieht. Das ist die Auslegungsmethode, die wir bei jeder Installation nutzen.</p>
+
+<h2>Das Gesetz, das entscheidet</h2>
+
+<div class="highlight">
+<strong>Spannungsabfall = Strom &times; Widerstand des Kabels.</strong> Der Widerstand steigt mit der Länge und fällt mit dem Querschnitt, also verliert ein längeres oder dünneres Kabel mehr Volt. Halten Sie den gesamten Abfall unter <strong>5%</strong> (0,6V bei 12V, 1,2V bei 24V), und das entfernte Ende bleibt hell.
+</div>
+
+<h2>Wie weit reicht es bei 12V gegenüber 24V?</h2>
+
+<p>Bei gleicher Leistung zieht 24V die Hälfte des Stroms von 12V, verliert also etwa ein Viertel des Abfalls und reicht etwa doppelt so weit:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Last</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Kabel</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Max. Länge @ 12V</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Max. Länge @ 24V</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>24 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">1,5 mm² (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>48 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2,5 mm² (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>96 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm² (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>192 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm² (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+</tbody>
+</table>
+
+<h2>Drei Wege, den Abfall zu schlagen</h2>
+
+<ol>
+<li><strong>Gehen Sie auf 24V.</strong> Bei jeder Länge über ~5 m beseitigt 24V das Problem in den meisten Räumen (siehe <a href="/blog-7/">12V-gegen-24V-Leitfaden</a>).</li>
+<li><strong>Speisen Sie von beiden Enden.</strong> Halbiert die effektive Länge und den Abfall.</li>
+<li><strong>Verdicken Sie das Kabel.</strong> Eine Nennweite höher kostet wenig und behebt ein trübes Ende; zwei Nennweiten höher, wenn das Kabel vergraben oder mit Netz gebündelt ist.</li>
+</ol>
+
+<h2>Zwei Fehler, die wir ständig sehen</h2>
+
+<ul>
+<li><strong>Kabel nach Treiber, nicht nach Länge dimensionieren.</strong> Das Treiber-Rating ist in Ordnung; die Entfernung tötet die Helligkeit. Nutzen Sie die Tabelle und gehen Sie bei Zweifel höher.</li>
+<li><strong>Lautsprecherkabel verwenden.</strong> Dünnes „Lampenkabel“ wirkt ordentlich, verdoppelt aber den Abfall. Nehmen Sie echtes, netztaugliches Flexkabel in der Sektion, die die Last braucht.</li>
+</ul>
+
+<div class="highlight">
+<strong>Gerechnetes Beispiel:</strong> 10 m Strip 14,4W/m = 144W bei 24V = 6A. Über 2,5 mm² sind das etwa 1,0V Abfall — innerhalb des Budgets von 1,2V (5%), also bleibt es hell. Dieselbe Last bräuchte bei 12V etwa 4 mm² für denselben Abfall.
+</div>
+
+<h2>Was wir von Ihnen brauchen</h2>
+
+<p>Senden Sie die Last in Watt, die Ausgangsspannung (12V oder 24V), die Kabellänge und den Querschnitt, den Sie verwenden wollen. Wir bestätigen, dass die Länge sicher ist — oder sagen Ihnen, vor der Installation auf 24V oder ein dickeres Kabel zu gehen.</p>
+
+<div class="cta-box">
+<h3>Sorge wegen trüber LEDs am entfernten Ende?</h3>
+<p>Senden Sie Last, Spannung, Kabellänge und Querschnitt. Wir bestätigen, dass die Länge sicher ist — oder sagen Ihnen, auf 24V oder ein dickeres Kabel zu gehen.</p>
+<a href="/#inquiry" class="btn">Meinen Kabelquerschnitt prüfen</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-Adapter 5-200W</span><span class="pc-desc">Kompakte 12V/24V-Geräte für Streifen, Module und Beschilderung.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Innen-LED-Treiber 50-400W</span><span class="pc-desc">Konstantspannung mit aktivem PFC für Decken- und Panelleuchten.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte IP67-Treiber 10-400W</span><span class="pc-desc">Vollvergossen, salzsprühgetestet für feuchte und Küsten-Standorte.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Spritzwassergeschützte IP65-Treiber 100-600W</span><span class="pc-desc">Belüftetes Metallgehäuse für Beschilderung und semi-außen.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Mehr aus dem Feld</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">Käuferleitfaden</span><span class="rel-title">LED-Netzteil 12V vs 24V: Wie wählen?</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">LED-Netzteil dimensionieren: Watt, Reserve und Einschaltstoß</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-Technik</span><span class="rel-title">Das richtige LED-Netzteil in 3 Schritten wählen</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">Käuferleitfaden</span><span class="rel-title">LED-Netzteil für Außen und extreme Standorte wählen</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">LED-Netzteil für Außen und extreme Standorte wählen</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Feldbriefe</span></a></nav>
+</main>"""

@@ -682,3 +682,80 @@ BLOG_BODY['ru']['blog-13'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Защита от перенапряжений для LED-драйверов: молнии и импульсы</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Сечение кабеля и падение напряжения для LED-установок</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ru']['blog-14'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Назад к полевым заметкам</a>
+
+<h1>Сечение кабеля и падение напряжения для LED-установок</h1>
+<div class="meta">Техническое руководство &middot; октябрь 2026 &middot; 7 мин чтения</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="Подбор сечения кабеля для LED-установок и падение напряжения" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>Самая частая причина «тусклых LED на дальнем конце» — не драйвер, а кабель. Занизите сечение провода, и падение напряжения украдёт яркость ещё до того, как её увидит свет. Это метод расчёта, который мы применяем на каждой установке.</p>
+
+<h2>Закон, который всё решает</h2>
+
+<div class="highlight">
+<strong>Падение напряжения = Ток &times; Сопротивление кабеля.</strong> Сопротивление растёт с длиной и падает с сечением, поэтому более длинный или тонкий кабель теряет больше вольт. Держите общее падение ниже <strong>5%</strong> (0,6В на 12В, 1,2В на 24В) — и дальний конец остаётся ярким.
+</div>
+
+<h2>Насколько далеко можно тянуть на 12В против 24В?</h2>
+
+<p>При той же мощности 24В потребляет вдвое меньше тока, чем 12В, поэтому теряет примерно четверть падения и уходит примерно вдвое дальше:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Нагрузка</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Кабель</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Макс. длина @ 12В</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Макс. длина @ 24В</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>24 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">1,5 мм² (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 м</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 м</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>48 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2,5 мм² (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 м</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 м</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>96 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">4 мм² (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 м</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 м</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>192 W</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">6 мм² (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 м</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 м</td></tr>
+</tbody>
+</table>
+
+<h2>Три способа победить падение</h2>
+
+<ol>
+<li><strong>Переходите на 24В.</strong> При любой трассе свыше ~5 м 24В устраняет проблему в большинстве помещений (см. <a href="/blog-7/">гид 12В против 24В</a>).</li>
+<li><strong>Питайте с обоих концов.</strong> Это вдвое сокращает эффективную длину и падение.</li>
+<li><strong>Увеличьте сечение кабеля.</strong> На один размер крупнее стоит дёшево и устраняет тусклый дальний конец; на два размера — если кабель закопан или проложен вместе с сетью.</li>
+</ol>
+
+<h2>Две ошибки, которые мы видим постоянно</h2>
+
+<ul>
+<li><strong>Сечение кабеля под драйвер, а не под трассу.</strong> Рейтинг драйвера в порядке; яркость убивает именно расстояние. Берите таблицу, а при сомнении — большее сечение.</li>
+<li><strong>Использование акустического провода.</strong> Тонкий «ламповый провод» выглядит аккуратно, но удваивает падение. Берите настоящий сетевой гибкий кабель нужного сечения.</li>
+</ul>
+
+<div class="highlight">
+<strong>Разобранный пример:</strong> 10 м ленты 14,4Вт/м = 144Вт на 24В = 6А. По 2,5 мм² это около 1,0В падения — в пределах бюджета 1,2В (5%), так что яркость сохраняется. Та же нагрузка на 12В потребовала бы около 4 мм² для того же падения.
+</div>
+
+<h2>Что нам нужно от вас</h2>
+
+<p>Пришлите нагрузку в ваттах, выходное напряжение (12В или 24В), длину кабеля и сечение, которое планируете использовать. Мы подтвердим, что трасса безопасна, — или скажем перейти на 24В или кабель толще, до установки.</p>
+
+<div class="cta-box">
+<h3>Беспокоит тусклый LED на дальнем конце?</h3>
+<p>Пришлите нагрузку, напряжение, длину и сечение кабеля. Мы подтвердим, что трасса безопасна, — или скажем перейти на 24В или кабель толще.</p>
+<a href="/#inquiry" class="btn">Проверить сечение моего кабеля</a>
+</div>
+
+<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Ознакомьтесь с продукцией CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-адаптеры 5-200Вт</span><span class="pc-desc">Компактные блоки 12В/24В для лент, модулей и вывесок.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Интерьерные LED-драйверы 50-400Вт</span><span class="pc-desc">Стабилизированное напряжение с активным PFC для потолочных и панельных светильников.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Водонепроницаемые драйверы IP67 10-400Вт</span><span class="pc-desc">Полностью залитые, испытаны солевым туманом для влажных и прибрежных объектов.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Драйверы IP65 100-600Вт</span><span class="pc-desc">Вентилируемый металлический корпус для вывесок и полууличных установок.</span></a></div></section>
+
+<section class="related" aria-label="Related articles">
+  <h2 class="related-h">Ещё из поля</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">Руководство покупателя</span><span class="rel-title">Светодиодный блок 12В против 24В: как выбрать</span></a>
+  <a class="rel-card" href="/blog-8/"><span class="rel-cat">Техническое руководство</span><span class="rel-title">Как подобрать размер LED-блока: ватты, запас и бросок тока</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-технология</span><span class="rel-title">Выберите правильный LED-блок за 3 шага</span></a>
+  <a class="rel-card" href="/blog-13/"><span class="rel-cat">Руководство покупателя</span><span class="rel-title">Выбор LED-блока для улицы и суровых объектов</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Предыдущая статья</span><span class="pn-t">Выбор LED-блока для улицы и суровых объектов</span></a><a class="pn-next" href="/blog/" rel="next"><span class="pn-lab">Следующая статья</span><span class="pn-t">Полевые заметки</span></a></nav>
+</main>"""
