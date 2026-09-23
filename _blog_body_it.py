@@ -646,3 +646,234 @@ BLOG_BODY['it']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Come dimensionare un alimentatore LED: watt, margine e inrush</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Dimming dei driver LED spiegato: 0-10V, PWM, DALI e TRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['it']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Torna alle note dal campo</a>
+
+<h1>Dimming dei driver LED spiegato: 0-10V, PWM, DALI e TRIAC</h1>
+<div class="meta">Guida tecnica &middot; settembre 2026 &middot; 9 min di lettura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Confronto degli standard di dimming per driver LED" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Il dimming di un impianto LED dovrebbe essere un'impostazione, non un progetto di ricerca. In pratica va storto perch&eacute; quattro diversi standard di dimming condividono gli stessi fili e nessuno &egrave; intercambiabile. Ecco cosa sono e quale specificare affinch&eacute; i tuoi controlli facciano davvero dimming.</p>
+
+<h2>I quattro standard, in chiaro</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Standard</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Come funziona</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Ideale per</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10V</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Una coppia di controllo a bassa tensione separata imposta 100% a 10V fino a ~10% a 0V</td><td style="padding:10px 14px;border:1px solid var(--b)">Soffitti commerciali, nuove costruzioni</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Modulazione di larghezza d'impulso sul lato DC; molto fluida, nessuno spostamento di colore</td><td style="padding:10px 14px;border:1px solid var(--b)">Insegne, siti sensibili alle telecamere</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Bus digitale indirizzabile; ogni apparecchio indirizzato e registrato</td><td style="padding:10px 14px;border:1px solid var(--b)">Grandi edifici smart</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Taglio di fase, sfrutta il dimmer di rete esistente (leading/trailing edge)</td><td style="padding:10px 14px;border:1px solid var(--b)">Retrofit, dimmer a parete esistenti</td></tr>
+</tbody>
+</table>
+
+<h2>0-10V: il default commerciale</h2>
+
+<p>0-10V &egrave; la specifica pi&ugrave; comune per gli allestimenti commerciali nuovi perch&eacute; &egrave; semplice ed economico da cablare — due conduttori a bassa tensione in pi&ugrave;, nessun dato. Il punto critico &egrave; che regola fino a circa il 10%, non spegne del tutto, a meno che tu non aggiunga un rel&egrave; di rete per lo &quot;spento&quot;. Se il tuo progetto richiede un vero blackout, specificalo.</p>
+
+<h2>PWM: il pi&ugrave; fluido, ideale per le insegne</h2>
+
+<p>Il dimming PWM taglia l'uscita DC ad alta frequenza. Poich&eacute; non cambia mai il livello di corrente, non c'&egrave; spostamento di temperatura colore mentre si regola — importante per le <a href="/products/ip65/">insegne</a> e per qualsiasi ambiente con telecamere o broadcast dove lo sfarfallio &egrave; inaccettabile. Il PWM vive sul lato DC, quindi si abbina a un driver a tensione costante.</p>
+
+<h2>DALI: controllo edificio indirizzabile</h2>
+
+<p>DALI mette ogni apparecchio su un bus digitale a due fili con il proprio indirizzo, cos&igrave; un sistema di gestione dell'edificio pu&ograve; regolare a zone, registrare guasti e richiamare scene. Costa di pi&ugrave; in driver e messa in servizio, ma per un ufficio di 20 piani si ripaga in manodopera. Forniamo versioni DALI sui <a href="/products/indoor/">driver indoor</a> da 100W in su.</p>
+
+<h2>TRIAC: retrofit senza ricablare</h2>
+
+<p>Il dimming TRIAC (taglio di fase) consente a un driver LED di sfruttare un dimmer a parete di rete esistente, cos&igrave; un retrofit non tira nuovo cavo di controllo. La trappola: non ogni driver LED &egrave; compatibile TRIAC, e i dimmer economici ronzano o cadono in basso. Usa un dimmer trailing-edge (ELV) e un driver esplicitamente nominale per esso.</p>
+
+<div class="highlight">
+<strong>Prima la compatibilit&agrave;:</strong> un &quot;LED dimmerabile&quot; fa dimming solo se il <em>driver</em> parla la lingua del dimmer. Dicci quale dimmer o sistema di controllo usi e confermiamo la compatibilit&agrave; prima che ordini — modelli indoor e IP67 selezionati supportano 0-10V, PWM e TRIAC da 100W in su; gli adattatori pi&ugrave; piccoli non fanno dimming.
+</div>
+
+<h2>Tre errori che vediamo</h2>
+
+<ol>
+<li><strong>Comprare una striscia &quot;dimmerabile&quot; e un driver non dimmerabile.</strong> Il dimming lo fa il driver, non la striscia.</li>
+<li><strong>Mescolare un dimmer TRIAC con un driver 0-10V.</strong> Non sono lo stesso sistema; il risultato &egrave; sfarfallio o nessun dimming.</li>
+<li><strong>Dimenticare il cavo di controllo.</strong> 0-10V e DALI richiedono la loro coppia extra tirata al momento dell'installazione, non dopo.</li>
+</ol>
+
+<h2>Cosa ci serve da te</h2>
+
+<p>Invia il modello del dimmer o del sistema di controllo, il carico in watt, la tensione d'uscita e se il sito &egrave; nuovo o in retrofit. Confermeremo lo standard di dimming e il modello giusto — 0-10V, PWM, DALI o TRIAC.</p>
+
+<div class="cta-box">
+<h3>Ti serve un driver che faccia davvero dimming?</h3>
+<p>Dicci il dimmer o sistema di controllo, il carico e la tensione. Confermeremo lo standard di dimming e il modello giusto.</p>
+<a href="/#inquiry" class="btn">Conferma il tipo di dimming</a>
+</div>
+
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Scopri i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adattatori LED 5-200W</span><span class="pc-desc">Unit&agrave; compatte 12V/24V per strisce, moduli e insegne.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Driver LED indoor 50-400W</span><span class="pc-desc">Tensione costante con PFC attivo per plafoniere e pannelli.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver waterproof IP67 10-400W</span><span class="pc-desc">Completamente pottati, testati alla nebbia salina per siti umidi e costieri.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver rainproof IP65 100-600W</span><span class="pc-desc">Custodia metallica ventilata per insegne e installazioni semi-esterne.</span></a></div></section>
+
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre note dal campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">Guida all'acquisto</span><span class="rel-title">Correzione del fattore di potenza e driver LED senza sfarfallio</span></a><a class="rel-card" href="/blog-9/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">Driver LED a tensione costante o a corrente costante: quale ti serve?</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">IP67 o IP65: quale driver LED impermeabile ti serve?</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Scegliere l'alimentatore LED giusto in 3 passi</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Driver LED a tensione costante o a corrente costante: quale ti serve?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Correzione del fattore di potenza e driver LED senza sfarfallio</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['it']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Torna alle note dal campo</a>
+
+<h1>Correzione del fattore di potenza e driver LED senza sfarfallio</h1>
+<div class="meta">Guida all'acquisto &middot; settembre 2026 &middot; 7 min di lettura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Specifica di fattore di potenza e driver LED senza sfarfallio" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>&quot;Fattore di potenza&quot; e &quot;sfarfallio&quot; sono le due specifiche che non compaiono mai su una scatola al dettaglio ma decidono se un impianto supera l'ispezione o fa venire mal di testa. Entrambe si fissano allo stadio del driver, quindi ecco cosa dovrebbe davvero chiedere un acquirente.</p>
+
+<h2>Fattore di potenza: perch&eacute; interessa alla rete</h2>
+
+<p>Il fattore di potenza (PF) &egrave; il rapporto tra la potenza reale che usi e la potenza totale prelevata dalla rete. Un driver economico con PF 0,5 assorbe il doppio della corrente necessaria, sovraccaricando il cablaggio e facendo scattare i limiti negli edifici commerciali. Molte regioni ora richiedono PF 0,9 o superiore sopra i 5W, e la EN 61000-3-2 fissa i limiti armonici proprio per questo motivo.</p>
+
+<div class="highlight">
+<strong>PFC attivo vs passivo:</strong> i nostri <a href="/products/indoor/">driver indoor</a> usano il <strong>PFC attivo</strong> e raggiungono PF 0,95+ su tutto il range di carico — non l'adesivo passivo di &quot;correzione del fattore di potenza&quot; che aiuta solo a pieno carico. Per un soffitto da 200 unit&agrave; &egrave; la differenza tra un quadro pulito e un interruttore scattato.
+</div>
+
+<h2>Sfarfallio: perch&eacute; interessa alle persone</h2>
+
+<p>Lo sfarfallio dei LED deriva dal ripple sull'uscita DC del driver. I driver economici lasciano il ripple al 20-30%, che l'occhio pu&ograve; non cogliere ma che telecamere, sensori e alcune persone percepiscono assolutamente — si manifesta come bande sul video, strobing sul CCTV e affaticamento visivo negli uffici. I driver di qualit&agrave; tengono il ripple sotto il 5-8% e sono etichettati &quot;senza sfarfallio&quot;.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Sintomo</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Causa</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Rimedio</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Bande su camera / CCTV</td><td style="padding:10px 14px;border:1px solid var(--b)">Ripple d'uscita elevato</td><td style="padding:10px 14px;border:1px solid var(--b)">Driver senza sfarfallio, ripple &lt;8%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Interruttore che scatta sotto carico</td><td style="padding:10px 14px;border:1px solid var(--b)">Fattore di potenza basso</td><td style="padding:10px 14px;border:1px solid var(--b)">Driver con PFC attivo, PF 0,95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Ronzio a bassa intensit&agrave;</td><td style="padding:10px 14px;border:1px solid var(--b)">Dimming incompatibile</td><td style="padding:10px 14px;border:1px solid var(--b)">Standard di dimming abbinato (vedi guida dimming)</td></tr>
+</tbody>
+</table>
+
+<h2>Dove il senza sfarfallio &egrave; irrinunciabile</h2>
+
+<ul>
+<li><strong>Uffici e scuole</strong> — esposizione tutto il giorno; driver scadenti causano lamentele per affaticamento.</li>
+<li><strong>Retail e musei</strong> — lo sfarfallio rovina il colore dei prodotti e la fotografia.</li>
+<li><strong>CCTV e hub di trasporto</strong> — le bande rendono targhe e volti illeggibili.</li>
+<li><strong>Qualsiasi sito coperto da telecamere</strong> — se un telefono lo riprende, specifica senza sfarfallio.</li>
+</ul>
+
+<h2>Come leggere un datasheet</h2>
+
+<ol>
+<li><strong>PF:</strong> chiedi il valore su tutto il carico, non solo al 100%. Il PFC attivo lo mantiene alto; il passivo no.</li>
+<li><strong>Percentuale di ripple / sfarfallio:</strong> sotto l'8% &egrave; &quot;senza sfarfallio&quot; secondo la metrica SVM che molti specificatori ora usano.</li>
+<li><strong>THD</strong> (distorsione armonica totale): pi&ugrave; bassa &egrave; pi&ugrave; pulita sull'alimentazione. I driver con PFC attivo stanno ben sotto il limite EN 61000-3-2.</li>
+</ol>
+
+<p>Ogni driver CHUGAO indoor e IP67 &egrave; costruito per PF 0,95+ e uscita senza sfarfallio come standard, non come opzione a pagamento. Se il tuo mercato ha un limite armonico specifico, diccelo e forniamo il rapporto di prova con il lotto.</p>
+
+<h2>Cosa ci serve da te</h2>
+
+<p>Invia il tipo di sito (ufficio, retail, coperto da CCTV), il wattaggio e la tensione, e qualsiasi limite locale di PF/armoniche. Confermeremo un driver che lo supera — e invieremo il rapporto prima che ordini.</p>
+
+<div class="cta-box">
+<h3>Stai specificando per un ufficio o un sito con telecamere?</h3>
+<p>Invia il tipo di sito, il wattaggio e qualsiasi limite locale di PF/armoniche. Confermeremo un driver senza sfarfallio ad alto PF e forniremo il rapporto di prova.</p>
+<a href="/#inquiry" class="btn">Ottieni una specifica di driver pulito</a>
+</div>
+
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Scopri i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adattatori LED 5-200W</span><span class="pc-desc">Unit&agrave; compatte 12V/24V per strisce, moduli e insegne.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Driver LED indoor 50-400W</span><span class="pc-desc">Tensione costante con PFC attivo per plafoniere e pannelli.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver waterproof IP67 10-400W</span><span class="pc-desc">Completamente pottati, testati alla nebbia salina per siti umidi e costieri.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver rainproof IP65 100-600W</span><span class="pc-desc">Custodia metallica ventilata per insegne e installazioni semi-esterne.</span></a></div></section>
+
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre note dal campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">Dimming dei driver LED spiegato: 0-10V, PWM, DALI e TRIAC</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">Approfondimento tecnico</span><span class="rel-title">Durata dei driver LED: MTBF, L70 e quanto durano davvero</span></a><a class="rel-card" href="/blog-9/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">Driver LED a tensione costante o a corrente costante: quale ti serve?</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Dimming dei driver LED spiegato: 0-10V, PWM, DALI e TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Protezione dalle sovratensioni per driver LED: fulmini e transitori</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['it']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Torna alle note dal campo</a>
+
+<h1>Protezione dalle sovratensioni per driver LED: fulmini e transitori</h1>
+<div class="meta">Guida tecnica &middot; settembre 2026 &middot; 7 min di lettura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Driver LED impermeabile IP67 con protezione dalle sovratensioni" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Un fulmine a tre isolati di distanza pu&ograve; uccidere un driver LED perfettamente buono. La protezione dalle sovratensioni &egrave; ci&ograve; che distingue un driver che sopravvive a una tempesta da uno che diventa rifiuto elettronico — e la maggior parte dei guasti attribuiti alla &quot;qualit&agrave;&quot; sono in realt&agrave; ingressi non protetti. Ecco cosa protegge davvero un driver.</p>
+
+<h2>Da dove arrivano le sovratensioni</h2>
+
+<ul>
+<li><strong>Fulmini</strong> — anche i colpi indiretti inducono picchi di kilovolt sulle lunghe linee esterne.</li>
+<li><strong>Commutazione</strong> — contattori, ascensori e grandi motori scaricano transitori sulla stessa linea.</li>
+<li><strong>Extracorrente induttiva</strong> — persino l'apertura di un rel&egrave; pu&ograve; generare picchi di centinaia di volt.</li>
+</ul>
+
+<p>I driver indoor su una rete di edificio pulita raramente li vedono. I driver esterni e per <a href="/products/ip67/">siti bagnati</a> su lunghe tratte di cavo li vedono di continuo: ecco perch&eacute; la tenuta alle sovratensioni fa parte della storia IP, non &egrave; una cosa separata.</p>
+
+<h2>I due livelli che contano</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Livello</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Cosa fa</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Valore tipico</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">MOV integrato</td><td style="padding:10px 14px;border:1px solid var(--b)">Limita i piccoli transitori dentro il driver</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV differenziale</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">SPD esterno</td><td style="padding:10px 14px;border:1px solid var(--b)">Assorbe il grande colpo al punto di alimentazione</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV, secondo IEC 61643</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Punto chiave:</strong> il limitatore di sovratensione interno al driver gestisce il rumore quotidiano. Un vero evento di fulmine richiede uno <strong>scarico di sovratensione esterno (SPD)</strong> all'ingresso dell'alimentazione, perch&eacute; nessun driver dimensionato per calore e costo pu&ograve; assorbire da solo un colpo di diversi kiloampere.
+</div>
+
+<h2>Come specificare per un sito tempestoso</h2>
+
+<ol>
+<li><strong>Scegli un driver IP67 pottato</strong> per ogni tratta esterna o costiera — la custodia sigillata &egrave; anche la prima difesa contro i guasti da umidit&agrave;.</li>
+<li><strong>Aggiungi uno SPD all'ingresso</strong> — uno scarico di sovratensione di Tipo 2 sul quadro che alimenta le luci.</li>
+<li><strong>Tieni il cavo sollevato da terra</strong> e lontano dalla rete dove possibile; le tratte parallele invitano picchi indotti.</li>
+<li><strong>Collega a terra l'involucro</strong> correttamente; un driver non messo a terra non pu&ograve; scaricare un fulmine in sicurezza.</li>
+</ol>
+
+<h2>Falsi miti sulle sovratensioni</h2>
+
+<ul>
+<li><strong>&quot;IP67 significa a prova di sovratensione.&quot;</strong> No — l'IP riguarda l'acqua, non i volt. Sono specifiche separate; servono entrambe.</li>
+<li><strong>&quot;Un driver protetto protegge l'intera linea.&quot;</strong> Il colpo viaggia lungo il cavo; proteggi l'ingresso, non una singola unit&agrave;.</li>
+<li><strong>&quot;Indoor &egrave; sicuro.&quot;</strong> I driver indoor su una linea condivisa con ascensori o compressori vedono comunque picchi di commutazione — chiedi il valore del limitatore integrato.</li>
+</ul>
+
+<p>I nostri <a href="/products/ip67/">driver impermeabili IP67</a> e <a href="/products/ip65/">driver antipioggia IP65</a> hanno limitatori di sovratensione interni di serie; per i siti esposti consigliamo uno SPD esterno all'alimentazione e lo dimensioneremo con te.</p>
+
+<h2>Cosa ci serve da te</h2>
+
+<p>Invia il sito (tetto, costa, entroterra), la lunghezza della tratta di cavo e se hai gi&agrave; uno SPD sul quadro. Confermeremo la tenuta alle sovratensioni del driver e la protezione esterna da aggiungere.</p>
+
+<div class="cta-box">
+<h3>Stai proteggendo un sito esterno o costiero?</h3>
+<p>Invia sito, lunghezza del cavo e se hai uno SPD sul quadro. Confermeremo la tenuta alle sovratensioni e la protezione esterna da aggiungere.</p>
+<a href="/#inquiry" class="btn">Ottieni un piano antica sovratensione</a>
+</div>
+
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Scopri i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adattatori LED 5-200W</span><span class="pc-desc">Unit&agrave; compatte 12V/24V per strisce, moduli e insegne.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Driver LED indoor 50-400W</span><span class="pc-desc">Tensione costante con PFC attivo per plafoniere e pannelli.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver waterproof IP67 10-400W</span><span class="pc-desc">Completamente pottati, testati alla nebbia salina per siti umidi e costieri.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver rainproof IP65 100-600W</span><span class="pc-desc">Custodia metallica ventilata per insegne e installazioni semi-esterne.</span></a></div></section>
+
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre note dal campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">IP67 o IP65: quale driver LED impermeabile ti serve?</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">Guida all'acquisto</span><span class="rel-title">Scegliere un alimentatore LED per siti esterni e difficili</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="rel-card" href="/blog-11/"><span class="rel-cat">Guida all'acquisto</span><span class="rel-title">Correzione del fattore di potenza e driver LED senza sfarfallio</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Correzione del fattore di potenza e driver LED senza sfarfallio</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Scegliere un alimentatore LED per siti esterni e difficili</span></a></nav>
+</main>"""

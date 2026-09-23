@@ -646,3 +646,234 @@ BLOG_BODY['ko']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">LED 전원 용량 정하기: 와트·여유·돌입전류</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">LED 드라이버 조광 설명: 0-10V, PWM, DALI &amp; TRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ko']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
+
+<h1>LED 드라이버 조광 설명: 0-10V, PWM, DALI &amp; TRIAC</h1>
+<div class="meta">기술 가이드 &middot; 2026년 9월 &middot; 약 9분 소요</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="LED 드라이버 조광 표준 비교" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>LED 설치의 조광은 설정이어야지 연구 프로젝트여서는 안 됩니다. 실제로 잘못되는 이유는 네 가지 조광 표준이 같은 배선을 공유하는데 어느 것도 호환되지 않기 때문입니다. 각각이 무엇이고, 제어가 실제로 조광되도록 무엇을 지정해야 하는지 설명합니다.</p>
+
+<h2>네 가지 표준, 알기 쉽게</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">표준</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">작동 방식</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">최적 용도</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10V</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">별도의 저전압 제어 쌍이 10V에서 100%, 0V에서 약 10%까지 설정</td><td style="padding:10px 14px;border:1px solid var(--b)">상업용 천장, 신축</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">DC 측 펄스폭 변조. 매우 매끄럽고 색 이동 없음</td><td style="padding:10px 14px;border:1px solid var(--b)">사인, 카메라에 민감한 현장</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">디지털 어드레서블 버스. 각 기구를 주소 지정하고 기록</td><td style="padding:10px 14px;border:1px solid var(--b)">대형 스마트 빌딩</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">위상 제어. 기존 상용 조광기를 활용(리딩/트레일링 에지)</td><td style="padding:10px 14px;border:1px solid var(--b)">리모델링, 기존 벽면 조광기</td></tr>
+</tbody>
+</table>
+
+<h2>0-10V: 상업용 기본</h2>
+
+<p>0-10V는 신축 상업 인테리어에서 가장 흔한 사양입니다. 배선이 간단하고 저렴하기 때문입니다——저전압 도체 2가닥이 추가될 뿐 데이터는 필요 없습니다. 문제는 약 10%까지만 조광되고 완전 소등은 되지 않는다는 점입니다(“오프”를 위해 상용 릴레이를 추가하지 않는 한). 진정한 소등이 필요하면 사양에 명시하십시오.</p>
+
+<h2>PWM: 가장 매끄럽고 사인에 최적</h2>
+
+<p>PWM 조광은 DC 출력을 고주파로 잘게 자릅니다. 전류 레벨을 바꾸지 않으므로 조광해도 색온도 이동이 없습니다——<a href="/products/ip65/">사인</a>과 플리커가 허용되지 않는 카메라·방송 환경에서 중요합니다. PWM은 DC 측에 있으므로 정전압 드라이버와 짝을 이룹니다.</p>
+
+<h2>DALI: 어드레서블 빌딩 제어</h2>
+
+<p>DALI는 각 기구를 고유 주소를 가진 2선 디지털 버스에 올리므로, 빌딩 관리 시스템이 구역 조광, 고장 기록, 장면 호출을 할 수 있습니다. 드라이버와 시운전 비용은 더 들지만, 20층 사무실이라면 인건비로 회수됩니다. 당사는 <a href="/products/indoor/">실내 드라이버</a>에서 100W부터 DALI 버전을 공급합니다.</p>
+
+<h2>TRIAC: 재배선 없는 리모델링</h2>
+
+<p>TRIAC(위상 제어) 조광은 LED 드라이버가 기존 상용 벽면 조광기를 활용하게 해주므로, 리모델링에서 새 제어 케이블을 끌 필요가 없습니다. 함정은 모든 LED 드라이버가 TRIAC 호환인 것은 아니며, 저렴한 조광기는 저역에서 웅웅거리거나 떨어진다는 점입니다. 트레일링 에지(ELV) 조광기와, 명시적으로 호환 정격인 드라이버를 사용하십시오.</p>
+
+<div class="highlight">
+<strong>호환성 우선:</strong> “조광 가능 LED”는 <em>드라이버</em>가 조광기의 언어를 말할 때만 조광됩니다. 사용하는 조광기 또는 제어 시스템을 알려 주시면 주문 전에 호환성을 확인합니다——일부 실내 및 IP67 모델은 100W부터 0-10V, PWM, TRIAC을 지원합니다. 가장 작은 어댑터는 조광되지 않습니다.
+</div>
+
+<h2>우리가 보는 세 가지 실수</h2>
+
+<ol>
+<li><strong>“조광 가능” 스트립과 비조광 드라이버를 산다.</strong>조광은 드라이버가 하며 스트립이 아닙니다.</li>
+<li><strong>TRIAC 조광기와 0-10V 드라이버를 혼용한다.</strong>같은 시스템이 아니며, 결과는 플리커 또는 무조광입니다.</li>
+<li><strong>제어 케이블을 잊는다.</strong>0-10V와 DALI는 설치 시 전용 한 쌍을 끌어야 하며 나중에는 안 됩니다.</li>
+</ol>
+
+<h2>필요한 정보</h2>
+
+<p>조광기 또는 제어 시스템 모델, 부하 와트수, 출력 전압, 그리고 현장이 신축인지 리모델링인지 보내 주십시오. 조광 표준과 적합한 모델(0-10V, PWM, DALI 또는 TRIAC)을 확인합니다.</p>
+
+<div class="cta-box">
+<h3>실제로 조광되는 드라이버가 필요하십니까?</h3>
+<p>조광기 또는 제어 시스템, 부하, 전압을 알려 주십시오. 조광 표준과 적합한 모델을 확인합니다.</p>
+<a href="/#inquiry" class="btn">조광 타입 확인</a>
+</div>
+
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">스트립, 모듈, 사인용 소형 12V/24V 유닛.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 드라이버 50-400W</span><span class="pc-desc">천장등과 패널등용 액티브 PFC 정전압.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">습윤·해안 현장용 완전 포팅, 염수 분무 시험 완료.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">사인과 반옥외 설치용 통기 금속 케이스.</span></a></div></section>
+
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">구매 가이드</span><span class="rel-title">역률 보정 및 플리커 프리 LED 드라이버</span></a><a class="rel-card" href="/blog-9/"><span class="rel-cat">기술 가이드</span><span class="rel-title">정전압 vs 정전류 LED 드라이버: 어느 것이 필요하십니까?</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP67 vs IP65: 어떤 방수 LED 구동장치를 선택해야 할까?</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 기술</span><span class="rel-title">3단계로 올바른 LED 전원 고르기</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">정전압 vs 정전류 LED 드라이버: 어느 것이 필요하십니까?</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">역률 보정 및 플리커 프리 LED 드라이버</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['ko']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
+
+<h1>역률 보정 및 플리커 프리 LED 드라이버</h1>
+<div class="meta">구매 가이드 &middot; 2026년 9월 &middot; 약 7분 소요</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="역률 및 플리커 프리 LED 드라이버 사양" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>“역률”과 “플리커”는 소매 박스에는 절대 나오지 않지만 설치가 검사를 통과할지, 사람에게 두통을 줄지를 결정하는 두 가지 사양입니다. 둘 다 드라이버 단계에서 정해지므로, 구매자가 실제로 요구해야 할 것을 정리합니다.</p>
+
+<h2>역률: 전력회사가 신경 쓰는 이유</h2>
+
+<p>역률(PF)은 사용하는 유효 전력과 계통에서 끌어오는 총 전력의 비율입니다. PF 0.5의 저렴한 드라이버는 필요한 전류의 두 배를 끌어와 배선을 과부하시키고 상업용 빌딩에서 한계를 초과하게 합니다. 많은 지역에서 이제 5W 이상에서 PF 0.9 이상을 요구하며, EN 61000-3-2는 바로 이 이유로 고조파 한계를 정합니다.</p>
+
+<div class="highlight">
+<strong>액티브 PFC 대 패시브:</strong> 당사의 <a href="/products/indoor/">실내 드라이버</a>는 <strong>액티브 PFC</strong>를 사용하여 부하 범위 전반에서 PF 0.95+에 도달합니다——전부하에서만 도움이 되는 패시브 “역률 보정” 스티커가 아닙니다. 200대 천장에서는 이것이 깨끗한 분전반과 차단기가 떨어지는 것의 차이입니다.
+</div>
+
+<h2>플리커: 사람이 신경 쓰는 이유</h2>
+
+<p>LED 플리커는 드라이버의 DC 출력 리플에서 발생합니다. 저렴한 드라이버는 리플을 20-30%까지 허용하는데, 육안으로는 못 잡을 수 있지만 카메라, 센서, 그리고 일부 사람은 확실히 느낍니다——영상의 띠, CCTV의 스트로브, 사무실의 눈 피로로 나타납니다. 양질의 드라이버는 리플을 5-8% 미만으로 유지하고 “플리커 프리”로 표기됩니다.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">증상</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">원인</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">해결</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">카메라／CCTV 띠</td><td style="padding:10px 14px;border:1px solid var(--b)">출력 리플 과다</td><td style="padding:10px 14px;border:1px solid var(--b)">플리커 프리, 리플 &lt;8%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">부하 시 차단기 트립</td><td style="padding:10px 14px;border:1px solid var(--b)">낮은 역률</td><td style="padding:10px 14px;border:1px solid var(--b)">액티브 PFC, PF 0.95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">조광 시 웅웅거림</td><td style="padding:10px 14px;border:1px solid var(--b)">조광 불일치</td><td style="padding:10px 14px;border:1px solid var(--b)">일치하는 조광 표준(조광 가이드 참조)</td></tr>
+</tbody>
+</table>
+
+<h2>플리커 프리가 타협 불가인 곳</h2>
+
+<ul>
+<li><strong>사무실과 학교</strong>——종일 노출. 열등한 드라이버는 피로 불만을 유발합니다.</li>
+<li><strong>소매와 박물관</strong>——플리커는 제품 색과 촬영을 망칩니다.</li>
+<li><strong>CCTV와 교통 허브</strong>——띠가 번호판과 얼굴을 판독 불가로 만듭니다.</li>
+<li><strong>카메라가 비추는 모든 현장</strong>——휴대폰으로 찍는다면 플리커 프리를 지정하십시오.</li>
+</ul>
+
+<h2>데이터시트 읽는 법</h2>
+
+<ol>
+<li><strong>PF:</strong> 100%에서만이 아니라 부하 전반의 수치를 요구하십시오. 액티브 PFC는 높게 유지하고 패시브는 못 합니다.</li>
+<li><strong>리플／플리커 비율:</strong> 대부분의 사양 작성자가 쓰는 SVM 지표로 8% 미만이 “플리커 프리”.</li>
+<li><strong>THD</strong>(총 고조파 왜곡): 낮을수록 공급 측이 깨끗합니다. 액티브 PFC 드라이버는 EN 61000-3-2 한계를 크게 밑돕니다.</li>
+</ol>
+
+<p>모든 CHUGAO 실내 및 IP67 드라이버는 PF 0.95+와 플리커 프리 출력을 유료 옵션이 아니라 표준으로 제조됩니다. 귀하의 시장에 특정 고조파 한계가 있으면 알려 주십시오. 배치에 시험 성적서를 첨부해 공급합니다.</p>
+
+<h2>필요한 정보</h2>
+
+<p>현장 유형(사무실, 소매, CCTV 설치), 와트수와 전압, 그리고 현지 PF／고조파 한계를 보내 주십시오. 이를 통과하는 드라이버를 확인하고 주문 전에 보고서를 보내 드립니다.</p>
+
+<div class="cta-box">
+<h3>사무실이나 카메라 현장용 사양입니까?</h3>
+<p>현장 유형, 와트수, 현지 PF／고조파 한계를 보내 주십시오. 플리커 프리 고PF 드라이버를 확인하고 시험 성적서를 제공합니다.</p>
+<a href="/#inquiry" class="btn">깨끗한 드라이버 사양 받기</a>
+</div>
+
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">스트립, 모듈, 사인용 소형 12V/24V 유닛.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 드라이버 50-400W</span><span class="pc-desc">천장등과 패널등용 액티브 PFC 정전압.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">습윤·해안 현장용 완전 포팅, 염수 분무 시험 완료.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">사인과 반옥외 설치용 통기 금속 케이스.</span></a></div></section>
+
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">기술 가이드</span><span class="rel-title">LED 드라이버 조광 설명: 0-10V, PWM, DALI &amp; TRIAC</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">기술 심층</span><span class="rel-title">LED 드라이버 수명: MTBF, L70 및 실제 수명</span></a><a class="rel-card" href="/blog-9/"><span class="rel-cat">기술 가이드</span><span class="rel-title">정전압 vs 정전류 LED 드라이버: 어느 것이 필요하십니까?</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">LED 드라이버 조광 설명: 0-10V, PWM, DALI &amp; TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">LED 드라이버 서지 보호: 낙뢰와 과도 현상</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['ko']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
+
+<h1>LED 드라이버 서지 보호: 낙뢰와 과도 현상</h1>
+<div class="meta">기술 가이드 &middot; 2026년 9월 &middot; 약 7분 소요</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="서지 보호 기능이 있는 IP67 방수 LED 드라이버" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>세 블록 떨어진 낙뢰가 멀쩡한 LED 드라이버를 죽일 수 있습니다. 서지 보호는 드라이버가 폭풍을 견디느냐 전자 폐기물이 되느냐를 가르는 차이입니다——그리고 "품질" 탓으로 돌려지는 대부분의 고장은 사실 보호되지 않은 입력단일 뿐입니다. 무엇이 실제로 드라이버를 지키는지 정리합니다.</p>
+
+<h2>서지는 어디서 오는가</h2>
+
+<ul>
+<li><strong>낙뢰</strong>——직격이 아니어도 긴 옥외 배선에 수 킬로볼트 스파이크를 유도합니다.</li>
+<li><strong>개폐 동작</strong>——접촉기, 엘리베이터, 대형 모터가 같은 피더에 과도 현상을 쏟아냅니다.</li>
+<li><strong>유도성 킥</strong>——릴레이 하나가 열려도 수백 볼트 스파이크가 생깁니다.</li>
+</ul>
+
+<p>깨끗한 건물 전원에 연결된 실내 드라이버는 이를 거의 겪지 않습니다. 긴 케이블의 옥외·<a href="/products/ip67/">습윤 현장 드라이버</a>는 끊임없이 겪습니다. 그래서 서지 정격은 IP 이야기의 일부이지, 별개가 아닙니다.</p>
+
+<h2>중요한 두 계층</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">계층</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">역할</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">일반 정격</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">내장 MOV</td><td style="padding:10px 14px;border:1px solid var(--b)">드라이버 내부에서 소형 과도를 클램프</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV 차동</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">외부 SPD</td><td style="padding:10px 14px;border:1px solid var(--b)">인입점에서 큰 낙뢰를 흡수</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV, IEC 61643 기준</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>핵심:</strong> 드라이버 내부 서지 클램프는 일상적인 노이즈를 처리합니다. 실제 낙뢰에는 공급 인입부의 <strong>외부 서지 보호 장치(SPD)</strong>가 필요합니다. 방열과 비용에 맞춰 설계된 드라이버 중 수천 암페어 낙뢰를 혼자 감당할 수 있는 것은 없기 때문입니다.
+</div>
+
+<h2>뇌우가 잦은 현장을 위한 사양</h2>
+
+<ol>
+<li><strong>옥외·해안 배선에는 포팅 IP67 드라이버</strong>를 선택하십시오——밀폐 케이스는 습기로 인한 고장의 첫 방어선이기도 합니다.</li>
+<li><strong>인입부에 SPD 추가</strong>——조명에 전원을 공급하는 분전반에 Type 2 서지 어레스터를.</li>
+<li><strong>케이블을 지면에서 띄우고</strong> 가능하면 전원선에서 멀리 두십시오. 평행 배선은 유도 스파이크를 부릅니다.</li>
+<li><strong>함체를 확실히 접지하십시오</strong>. 접지되지 않은 드라이버는 낙뢰를 안전하게 배출할 수 없습니다.</li>
+</ol>
+
+<h2>흔한 서지 오해</h2>
+
+<ul>
+<li><strong>"IP67이면 서지도 막아 준다."</strong> 아닙니다——IP는 물의 문제이고 볼트의 문제가 아닙니다. 별개의 사양이므로 둘 다 사야 합니다.</li>
+<li><strong>"드라이버 하나를 보호하면 열 전체가 보호된다."</strong> 낙뢰는 케이블을 타고 이동합니다. 한 대가 아니라 인입부를 보호하십시오.</li>
+<li><strong>"실내는 안전하다."</strong> 엘리베이터나 압축기와 같은 피더를 쓰는 실내 드라이버도 개폐 스파이크를 겪습니다——내장 클램프 정격을 확인하십시오.</li>
+</ul>
+
+<p>당사의 <a href="/products/ip67/">IP67 방수 드라이버</a>와 <a href="/products/ip65/">IP65 방우 드라이버</a>는 내부 서지 클램프를 표준으로 갖추고 있습니다. 노출된 현장에서는 공급부의 외부 SPD를 권장하며 함께 선정해 드립니다.</p>
+
+<h2>필요한 정보</h2>
+
+<p>현장(옥상, 해안, 내륙), 케이블 길이, 그리고 분전반에 SPD가 이미 있는지 알려 주십시오. 드라이버 서지 정격과 추가해야 할 외부 보호를 확인해 드립니다.</p>
+
+<div class="cta-box">
+<h3>옥외나 해안 현장을 보호하십니까?</h3>
+<p>현장, 케이블 길이, 분전반의 SPD 유무를 보내 주십시오. 서지 정격과 추가할 외부 보호를 확인해 드립니다.</p>
+<a href="/#inquiry" class="btn">서지 계획 받기</a>
+</div>
+
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">스트립, 모듈, 사인용 소형 12V/24V 유닛.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 드라이버 50-400W</span><span class="pc-desc">천장등과 패널등용 액티브 PFC 정전압.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">습윤·해안 현장용 완전 포팅, 염수 분무 시험 완료.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">사인과 반옥외 설치용 통기 금속 케이스.</span></a></div></section>
+
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP67 vs IP65: 어떤 방수 LED 구동장치를 선택해야 할까?</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">구매 가이드</span><span class="rel-title">옥외 및 혹독한 현장용 LED 전원 선택</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="rel-card" href="/blog-11/"><span class="rel-cat">구매 가이드</span><span class="rel-title">역률 보정 및 플리커 프리 LED 드라이버</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">역률 보정 및 플리커 프리 LED 드라이버</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">옥외 및 혹독한 현장용 LED 전원 선택</span></a></nav>
+</main>"""

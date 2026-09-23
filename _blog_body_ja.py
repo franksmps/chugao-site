@@ -646,3 +646,234 @@ BLOG_BODY['ja']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="記事ナビゲーション"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">前の記事</span><span class="pn-t">LED 電源の容量決め：ワット数・余裕・突入電流</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">次の記事</span><span class="pn-t">LED ドライバーの調光を解説：0-10V、PWM、DALI、TRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ja']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 現場ノートに戻る</a>
+
+<h1>LED ドライバーの調光を解説：0-10V、PWM、DALI、TRIAC</h1>
+<div class="meta">技術ガイド &middot; 2026 年 9 月 &middot; 約 9 分で読めます</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="LED ドライバーの調光規格の比較" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>LED 設置の調光は「設定」であるべきで、研究プロジェクトであるべきではありません。実際にうまくいかないのは、4 つの異なる調光規格が同じ配線を共有し、どれも互換性がないからです。それぞれが何であり、どれを指定すれば制御が実際に調光できるのかを説明します。</p>
+
+<h2>4 つの規格を平易に</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">規格</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">仕組み</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">最適な用途</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10V</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">独立した低電圧制御ペアが、10V で 100% から 0V で約 10% まで設定</td><td style="padding:10px 14px;border:1px solid var(--b)">商業用天井、新築</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">DC 側のパルス幅変調。非常に滑らかで色ずれなし</td><td style="padding:10px 14px;border:1px solid var(--b)">看板、カメラに敏感な現場</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">デジタルアドレッサブルバス。各器具をアドレス指定し記録</td><td style="padding:10px 14px;border:1px solid var(--b)">大規模スマートビル</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">位相制御。既存の商用調光器を利用（リーディング／トレーリングエッジ）</td><td style="padding:10px 14px;border:1px solid var(--b)">改修、既存の壁面調光器</td></tr>
+</tbody>
+</table>
+
+<h2>0-10V：商業の既定</h2>
+
+<p>0-10V は新築商業内装で最も一般的な仕様です。配線が簡単で安価だからです——低電圧導体が 2 本増えるだけで、データは不要です。注意点は、約 10% までしか調光でき、完全消灯にはならないことです（「オフ」用に商用リレーを追加しない限り）。真の消灯が必要なら仕様に明記してください。</p>
+
+<h2>PWM：最も滑らか、看板に最適</h2>
+
+<p>PWM 調光は DC 出力を高周波で切り刻みます。電流レベルを変えないため、調光しても色温度のずれがありません——<a href="/products/ip65/">看板</a> や、フリッカーが許されないカメラ・放送環境で重要です。PWM は DC 側にあるため、定電圧ドライバーと組み合わせます。</p>
+
+<h2>DALI：アドレッサブルなビル制御</h2>
+
+<p>DALI は各器具をそれぞれのアドレスを持つ 2 線デジタルバスに載せるため、ビル管理システムがゾーン調光、故障記録、シーン呼び出しを行えます。ドライバーと試運転のコストは増えますが、20 階建てのオフィスなら人件費で回収できます。当社は <a href="/products/indoor/">屋内ドライバー</a> で 100W 以上の DALI 版を供給しています。</p>
+
+<h2>TRIAC：配線し直さない改修</h2>
+
+<p>TRIAC（位相制御）調光は、LED ドライバーが既存の商用壁面調光器を利用できるようにするため、改修で新しい制御ケーブルを引く必要がありません。落とし穴は、すべての LED ドライバーが TRIAC 対応というわけではなく、安価な調光器は低端でブーンと鳴ったり落ちたりすることです。トレーリングエッジ（ELV）調光器と、明示的に対応定格のドライバーを使用してください。</p>
+
+<div class="highlight">
+<strong>互換性が第一：</strong> 「調光可能な LED」は、<em>ドライバー</em> が調光器の言語を話す場合にのみ調光します。使用する調光器または制御システムをお知らせいただければ、ご注文前に互換性を確認します——一部の屋内および IP67 モデルは 100W 以上で 0-10V、PWM、TRIAC に対応します。最小のアダプターは調光できません。
+</div>
+
+<h2>よく見る 3 つの間違い</h2>
+
+<ol>
+<li><strong>「調光可能」なテープと非調光ドライバーを買ってしまう。</strong>調光するのはドライバーであり、テープではありません。</li>
+<li><strong>TRIAC 調光器と 0-10V ドライバーを混用する。</strong>同じシステムではなく、結果はフリッカーか無調光です。</li>
+<li><strong>制御ケーブルを忘れる。</strong>0-10V と DALI は設置時に専用のペアを引く必要があり、後からでは間に合いません。</li>
+</ol>
+
+<h2>ご提供いただきたい情報</h2>
+
+<p>調光器または制御システムの型番、負荷ワット数、出力電圧、そして現場が新築か改修かを送ってください。調光規格と適切な型番（0-10V、PWM、DALI、TRIAC）を確認します。</p>
+
+<div class="cta-box">
+<h3>実際に調光するドライバーが必要ですか？</h3>
+<p>調光器または制御システム、負荷、電圧をお知らせください。調光規格と適切な型番を確認します。</p>
+<a href="/#inquiry" class="btn">調光タイプを確認</a>
+</div>
+
+<section class="product-crosslink" aria-label="関連製品"><h2 class="related-h">CHUGAO 製品を見る</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED アダプター 5-200W</span><span class="pc-desc">テープ、モジュール、看板向けのコンパクトな 12V/24V ユニット。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">屋内 LED ドライバー 50-400W</span><span class="pc-desc">シーリングやパネル灯向けのアクティブ PFC 付き定電圧。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水ドライバー 10-400W</span><span class="pc-desc">湿潤・沿岸地向けの完全ポッティング、塩水噴霧試験済み。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨ドライバー 100-600W</span><span class="pc-desc">看板や半屋外設置向けの通気金属ケース。</span></a></div></section>
+
+<section class="related" aria-label="関連記事">
+  <h2 class="related-h">その他の現場ノート</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">購入ガイド</span><span class="rel-title">力率改善とフリッカー防止 LED ドライバー</span></a><a class="rel-card" href="/blog-9/"><span class="rel-cat">技術ガイド</span><span class="rel-title">定電圧か定電流か：どちらの LED ドライバーが必要ですか？</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">技術ガイド</span><span class="rel-title">IP67 か IP65 か：どちらの防水 LED ドライバーが必要ですか？</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技術</span><span class="rel-title">3 ステップで正しい LED 電源を選ぶ</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="記事ナビゲーション"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">前の記事</span><span class="pn-t">定電圧か定電流か：どちらの LED ドライバーが必要ですか？</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">次の記事</span><span class="pn-t">力率改善とフリッカー防止 LED ドライバー</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['ja']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 現場ノートに戻る</a>
+
+<h1>力率改善とフリッカー防止 LED ドライバー</h1>
+<div class="meta">購入ガイド &middot; 2026 年 9 月 &middot; 約 7 分で読めます</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="力率とフリッカー防止 LED ドライバーの仕様" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>「力率」と「フリッカー」は、小売の箱には決して載らないのに、設置が検査に通るか、人に頭痛を起こさせるかを決める 2 つの仕様です。どちらもドライバー段で決まるので、買い手が実際に求めるべきことを示します。</p>
+
+<h2>力率：なぜ電力会社が気にするか</h2>
+
+<p>力率（PF）は、使用する有効電力と系統から引き出す総電力の比です。PF 0.5 の安価なドライバーは必要な 2 倍の電流を引き、配線を過負荷にし、商業ビルでは限界値を超えさせます。多くの地域で 5W 以上では PF 0.9 以上が要求されるようになり、EN 61000-3-2 はまさにこの理由で高調波限界を定めています。</p>
+
+<div class="highlight">
+<strong>アクティブ PFC 対パッシブ：</strong> 当社の <a href="/products/indoor/">屋内ドライバー</a> は<strong>アクティブ PFC</strong> を採用し、負荷範囲全体で PF 0.95+ に達します——全負荷時のみ効くパッシブな「力率改善」シールではありません。200 台の天井では、これがきれいな分電盤とブレーカーが落ちるかの違いになります。
+</div>
+
+<h2>フリッカー：なぜ人が気にするか</h2>
+
+<p>LED のフリッカーはドライバーの DC 出力のリップルから生じます。安価なドライバーはリップルを 20〜30% まで許し、肉眼では気づかないかもしれませんが、カメラやセンサー、そして一部の人は確実に感じます——動画の縞、CCTV のストロボ、オフィスでの眼精疲労として現れます。高品質なドライバーはリップルを 5〜8% 未満に抑え、「フリッカーフリー」と表示されます。</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">症状</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">原因</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">対策</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">カメラ／CCTV の縞</td><td style="padding:10px 14px;border:1px solid var(--b)">出力リップルが高い</td><td style="padding:10px 14px;border:1px solid var(--b)">フリッカーフリー、リップル &lt;8%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">負荷時のブレーカー落ち</td><td style="padding:10px 14px;border:1px solid var(--b)">力率が低い</td><td style="padding:10px 14px;border:1px solid var(--b)">アクティブ PFC、PF 0.95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">調光時のブーン</td><td style="padding:10px 14px;border:1px solid var(--b)">調光の不整合</td><td style="padding:10px 14px;border:1px solid var(--b)">一致した調光規格（調光ガイド参照）</td></tr>
+</tbody>
+</table>
+
+<h2>フリッカーフリーが譲れない場所</h2>
+
+<ul>
+<li><strong>オフィスと学校</strong>——終日露出。粗悪なドライバーは疲労の苦情を招きます。</li>
+<li><strong>小売と博物館</strong>——フリッカーは製品の色と撮影を台無しにします。</li>
+<li><strong>CCTV と交通拠点</strong>——縞がナンバープレートや顔を判読不能にします。</li>
+<li><strong>カメラに映るあらゆる現場</strong>——スマホで撮るなら、フリッカーフリーを指定してください。</li>
+</ul>
+
+<h2>データシートの読み方</h2>
+
+<ol>
+<li><strong>PF：</strong>100% 時だけでなく負荷範囲全体の数値を求めてください。アクティブ PFC は高く保ち、パッシブは保てません。</li>
+<li><strong>リップル／フリッカー率：</strong>多くの仕様策定者が使う SVM 指標で 8% 未満が「フリッカーフリー」。</li>
+<li><strong>THD</strong>（全高調波歪）：低いほど供給側でクリーン。アクティブ PFC ドライバーは EN 61000-3-2 の限界を大きく下回ります。</li>
+</ol>
+
+<p>CHUGAO の屋内および IP67 ドライバーはすべて、PF 0.95+ とフリッカーフリー出力を標準として製造しており、有償オプションではありません。お客様の市場に特定の高調波限界があればお知らせください。ロットに試験報告書を添えて供給します。</p>
+
+<h2>ご提供いただきたい情報</h2>
+
+<p>現場タイプ（オフィス、小売、CCTV 設置）、ワット数と電圧、および現地の PF／高調波限界をお送りください。それを満たすドライバーを確認し、ご注文前に報告書をお送りします。</p>
+
+<div class="cta-box">
+<h3>オフィスやカメラ現場向けの仕様ですか？</h3>
+<p>現場タイプ、ワット数、現地の PF／高調波限界をお送りください。フリッカーフリーで高 PF のドライバーを確認し、試験報告書を提供します。</p>
+<a href="/#inquiry" class="btn">クリーンなドライバー仕様を取得</a>
+</div>
+
+<section class="product-crosslink" aria-label="関連製品"><h2 class="related-h">CHUGAO 製品を見る</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED アダプター 5-200W</span><span class="pc-desc">テープ、モジュール、看板向けのコンパクトな 12V/24V ユニット。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">屋内 LED ドライバー 50-400W</span><span class="pc-desc">シーリングやパネル灯向けのアクティブ PFC 付き定電圧。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水ドライバー 10-400W</span><span class="pc-desc">湿潤・沿岸地向けの完全ポッティング、塩水噴霧試験済み。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨ドライバー 100-600W</span><span class="pc-desc">看板や半屋外設置向けの通気金属ケース。</span></a></div></section>
+
+<section class="related" aria-label="関連記事">
+  <h2 class="related-h">その他の現場ノート</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">技術ガイド</span><span class="rel-title">LED ドライバーの調光を解説：0-10V、PWM、DALI、TRIAC</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">技術深掘り</span><span class="rel-title">LED ドライバーの寿命：MTBF、L70、実際の使用年数</span></a><a class="rel-card" href="/blog-9/"><span class="rel-cat">技術ガイド</span><span class="rel-title">定電圧か定電流か：どちらの LED ドライバーが必要ですか？</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">技術ガイド</span><span class="rel-title">IP20・IP65・IP67・IP68 の比較</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="記事ナビゲーション"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">前の記事</span><span class="pn-t">LED ドライバーの調光を解説：0-10V、PWM、DALI、TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">次の記事</span><span class="pn-t">LED ドライバーのサージ保護：雷と過渡現象</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['ja']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 現場ノートに戻る</a>
+
+<h1>LED ドライバーのサージ保護：雷と過渡現象</h1>
+<div class="meta">技術ガイド &middot; 2026 年 9 月 &middot; 約 7 分で読めます</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="サージ保護付き IP67 防水 LED ドライバー" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>3 本先の落雷が、何の瑕疵もない LED ドライバーを壊すことがあります。サージ保護は、嵐を生き延びるドライバーと電子ゴミになるドライバーを分ける分かれ目です——そして「品質」のせいにされる故障の多くは、実際には無保護の入力側にすぎません。ここでは、ドライバーを本当に守るものを示します。</p>
+
+<h2>サージはどこから来るか</h2>
+
+<ul>
+<li><strong>雷</strong>——直撃でなくても、長い屋外配線に数キロボルトのスパイクを誘導します。</li>
+<li><strong>開閉操作</strong>——コンタクター、エレベーター、大型モーターが同じフィーダーに過渡を流し込みます。</li>
+<li><strong>誘導性キック</strong>——リレーが 1 つ開くだけでも数百ボルトのスパイクが立ちます。</li>
+</ul>
+
+<p>きれいなビル電源につながる屋内ドライバーはこれにほとんど遭いません。長いケーブルの屋外・<a href="/products/ip67/">湿潤現場のドライバー</a>は常に遭遇します。だからこそサージ定格は IP の話の一部であり、別物ではないのです。</p>
+
+<h2>重要な 2 つの層</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">層</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">役割</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">典型的な定格</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">内蔵 MOV</td><td style="padding:10px 14px;border:1px solid var(--b)">ドライバー内部で小さな過渡をクランプ</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV ディファレンシャル</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">外部 SPD</td><td style="padding:10px 14px;border:1px solid var(--b)">引込点で大きな落雷を吸収</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV、IEC 61643 準拠</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>要点：</strong> ドライバー内蔵のサージクランプは日常的なノイズを処理します。本物の落雷には給電入口での<strong>外部サージ保護装置（SPD）</strong>が必要です。放熱とコストで設計されたドライバーが、数千アンペアの落雷を単独で飲み込めるものは存在しないからです。
+</div>
+
+<h2>雷雨の多い現場のための仕様</h2>
+
+<ol>
+<li><strong>屋外・沿岸の配線にはポッティング IP67 ドライバー</strong>を選ぶ——密封ケースは湿気由来の故障に対する第一の防壁でもあります。</li>
+<li><strong>引込部に SPD を追加</strong>——照明に給電する分電盤に Type 2 サージアレスターを。</li>
+<li><strong>ケーブルを地面から離し、できれば電源線から離す</strong>。平行配線は誘導スパイクを招きます。</li>
+<li><strong>筐体を確実に接地する</strong>。接地のないドライバーは落雷を安全に逃がせません。</li>
+</ol>
+
+<h2>よくあるサージの誤解</h2>
+
+<ul>
+<li><strong>「IP67 ならサージも防げる。」</strong> いいえ——IP は水の話でボルトの話ではありません。別々の仕様なので、両方を買う必要があります。</li>
+<li><strong>「1 台を保護すれば列全体を守れる。」</strong> 落雷はケーブルを伝わります。守るのは 1 台ではなく引込部です。</li>
+<li><strong>「屋内なら安全。」</strong> エレベーターやコンプレッサーと同じフィーダーにつながる屋内ドライバーも開閉スパイクに遭います——内蔵クランプ定格を確認してください。</li>
+</ul>
+
+<p>当社の <a href="/products/ip67/">IP67 防水ドライバー</a> と <a href="/products/ip65/">IP65 防雨ドライバー</a> は内部サージクランプを標準装備しています。露出した現場では給電部への外部 SPD を推奨し、お客様と一緒に選定します。</p>
+
+<h2>ご提供いただきたい情報</h2>
+
+<p>現場（屋上、沿岸、内陸）、ケーブル長、そして分電盤に既に SPD があるかをお知らせください。ドライバーのサージ定格と追加すべき外部保護を確認します。</p>
+
+<div class="cta-box">
+<h3>屋外・沿岸の現場を保護しますか？</h3>
+<p>現場、ケーブル長、分電盤に SPD があるかをお送りください。サージ定格と追加すべき外部保護を確認します。</p>
+<a href="/#inquiry" class="btn">サージ計画を取得</a>
+</div>
+
+<section class="product-crosslink" aria-label="関連製品"><h2 class="related-h">CHUGAO 製品を見る</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED アダプター 5-200W</span><span class="pc-desc">テープ、モジュール、看板向けのコンパクトな 12V/24V ユニット。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">屋内 LED ドライバー 50-400W</span><span class="pc-desc">シーリングやパネル灯向けのアクティブ PFC 付き定電圧。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水ドライバー 10-400W</span><span class="pc-desc">湿潤・沿岸地向けの完全ポッティング、塩水噴霧試験済み。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨ドライバー 100-600W</span><span class="pc-desc">看板や半屋外設置向けの通気金属ケース。</span></a></div></section>
+
+<section class="related" aria-label="関連記事">
+  <h2 class="related-h">その他の現場ノート</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">技術ガイド</span><span class="rel-title">IP67 か IP65 か：どちらの防水 LED ドライバーが必要ですか？</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">購入ガイド</span><span class="rel-title">屋外・過酷な現場向け LED 電源の選び方</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">技術ガイド</span><span class="rel-title">IP20・IP65・IP67・IP68 の比較</span></a><a class="rel-card" href="/blog-11/"><span class="rel-cat">購入ガイド</span><span class="rel-title">力率改善とフリッカー防止 LED ドライバー</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="記事ナビゲーション"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">前の記事</span><span class="pn-t">力率改善とフリッカー防止 LED ドライバー</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">次の記事</span><span class="pn-t">屋外・過酷な現場向け LED 電源の選び方</span></a></nav>
+</main>"""

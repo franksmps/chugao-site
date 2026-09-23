@@ -58,7 +58,7 @@ gtag('js', new Date());
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NV6VNJQ8MY"></script>
 <script type="application/ld+json" id="jsonld-breadcrumb">
-{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"ko","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.chugaopower.com/ko/"},{"@type":"ListItem","position":2,"name":"Surge Protection for LED Drivers: Lightning & Transients","item":"https://www.chugaopower.com/ko/blog-12/"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"ko","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.chugaopower.com/ko/"},{"@type":"ListItem","position":2,"name":"LED 드라이버 서지 보호: 낙뢰와 과도 현상","item":"https://www.chugaopower.com/ko/blog-12/"}]}
 </script>
 </head>
 <body>
@@ -66,81 +66,81 @@ gtag('js', new Date());
 <div class="mm" id="mobileMenu"><a href="/#home" onclick="closeMobileMenu()" data-i18n="n_h">홈</a><a href="/#about" onclick="closeMobileMenu()" data-i18n="n_a">회사 소개</a><a href="/products/" onclick="closeMobileMenu()" data-i18n="n_p">제품</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">사양</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">왜 우리인가</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">뉴스</a><a href="/#faq" onclick="closeMobileMenu()" data-i18n="n_f">자주 묻는 질문</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">문의</a><div class="ml"><a href="/blog-12/" onclick="goLang('en');closeMobileMenu()" id="ml-en">EN</a><a href="/zh/blog-12/" onclick="goLang('zh');closeMobileMenu()" id="ml-zh">ZH</a><a href="/es/blog-12/" onclick="goLang('es');closeMobileMenu()" id="ml-es">ES</a><a href="/fr/blog-12/" onclick="goLang('fr');closeMobileMenu()" id="ml-fr">FR</a><a href="/de/blog-12/" onclick="goLang('de');closeMobileMenu()" id="ml-de">DE</a><a href="/pt/blog-12/" onclick="goLang('pt');closeMobileMenu()" id="ml-pt">PT</a><a href="/ru/blog-12/" onclick="goLang('ru');closeMobileMenu()" id="ml-ru">RU</a><a href="/ja/blog-12/" onclick="goLang('ja');closeMobileMenu()" id="ml-ja">JA</a><a href="/ko/blog-12/" onclick="goLang('ko');closeMobileMenu()" id="ml-ko" class="active">KO</a><a href="/ar/blog-12/" onclick="goLang('ar');closeMobileMenu()" id="ml-ar">AR</a><a href="/it/blog-12/" onclick="goLang('it');closeMobileMenu()" id="ml-it">IT</a></div></div>
 
 <main class="article">
-<a href="/blog/" class="back-link">← Back to Field notes</a>
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
 
-<h1>Surge Protection for LED Drivers: Lightning & Transients</h1>
-<div class="meta">Technical Guide · September 2026 · 7 min read</div>
+<h1>LED 드라이버 서지 보호: 낙뢰와 과도 현상</h1>
+<div class="meta">기술 가이드 &middot; 2026년 9월 &middot; 약 7분 소요</div>
 
 <div class="hero-img">
-<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="IP67 waterproof LED driver with surge protection" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="서지 보호 기능이 있는 IP67 방수 LED 드라이버" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
 </div>
 
 
-<p>A lightning strike three streets away can kill a perfectly good LED driver. Surge protection is the difference between a driver that survives a storm and one that becomes e-waste — and most failures blamed on "quality" are really unprotected inputs. Here is what actually protects a driver.</p>
+<p>세 블록 떨어진 낙뢰가 멀쩡한 LED 드라이버를 죽일 수 있습니다. 서지 보호는 드라이버가 폭풍을 견디느냐 전자 폐기물이 되느냐를 가르는 차이입니다——그리고 "품질" 탓으로 돌려지는 대부분의 고장은 사실 보호되지 않은 입력단일 뿐입니다. 무엇이 실제로 드라이버를 지키는지 정리합니다.</p>
 
-<h2>Where surges come from</h2>
+<h2>서지는 어디서 오는가</h2>
 
 <ul>
-<li><strong>Lightning</strong> — indirect strikes induce kilovolt spikes on long outdoor runs.</li>
-<li><strong>Switching</strong> — contactors, lifts and big motors dump transients onto the same feeder.</li>
-<li><strong>Inductive kick</strong> — even a relay opening can spike hundreds of volts.</li>
+<li><strong>낙뢰</strong>——직격이 아니어도 긴 옥외 배선에 수 킬로볼트 스파이크를 유도합니다.</li>
+<li><strong>개폐 동작</strong>——접촉기, 엘리베이터, 대형 모터가 같은 피더에 과도 현상을 쏟아냅니다.</li>
+<li><strong>유도성 킥</strong>——릴레이 하나가 열려도 수백 볼트 스파이크가 생깁니다.</li>
 </ul>
 
-<p>Indoor drivers on clean building mains rarely see this. Outdoor and <a href="/products/ip67/">wet-site drivers</a> on long cable runs see it constantly, which is why surge rating is part of the IP story, not separate from it.</p>
+<p>깨끗한 건물 전원에 연결된 실내 드라이버는 이를 거의 겪지 않습니다. 긴 케이블의 옥외·<a href="/products/ip67/">습윤 현장 드라이버</a>는 끊임없이 겪습니다. 그래서 서지 정격은 IP 이야기의 일부이지, 별개가 아닙니다.</p>
 
-<h2>The two layers that matter</h2>
+<h2>중요한 두 계층</h2>
 
 <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
-<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Layer</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">What it does</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Typical rating</th></tr></thead>
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">계층</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">역할</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">일반 정격</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Built-in MOV</td><td style="padding:10px 14px;border:1px solid var(--b)">Clamps small transients inside the driver</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV differential</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">External SPD</td><td style="padding:10px 14px;border:1px solid var(--b)">Absorbs the big strike at the feed point</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV, per IEC 61643</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">내장 MOV</td><td style="padding:10px 14px;border:1px solid var(--b)">드라이버 내부에서 소형 과도를 클램프</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV 차동</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">외부 SPD</td><td style="padding:10px 14px;border:1px solid var(--b)">인입점에서 큰 낙뢰를 흡수</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV, IEC 61643 기준</td></tr>
 </tbody>
 </table>
 
 <div class="highlight">
-<strong>Key point:</strong> a driver's internal surge clamp handles everyday noise. A real lightning event needs an <strong>external surge protective device (SPD)</strong> at the supply entry, because no driver sized for heat and cost can eat a multi-kiloamp strike alone.
+<strong>핵심:</strong> 드라이버 내부 서지 클램프는 일상적인 노이즈를 처리합니다. 실제 낙뢰에는 공급 인입부의 <strong>외부 서지 보호 장치(SPD)</strong>가 필요합니다. 방열과 비용에 맞춰 설계된 드라이버 중 수천 암페어 낙뢰를 혼자 감당할 수 있는 것은 없기 때문입니다.
 </div>
 
-<h2>How to spec for a stormy site</h2>
+<h2>뇌우가 잦은 현장을 위한 사양</h2>
 
 <ol>
-<li><strong>Pick a potted IP67 driver</strong> for any outdoor or coastal run — the sealed case is also the first line against moisture-driven faults.</li>
-<li><strong>Add an SPD at the feed</strong> — a Type 2 surge arrester on the distribution board feeding the lights.</li>
-<li><strong>Keep cable off the ground</strong> and away from mains where possible; parallel runs invite induced spikes.</li>
-<li><strong>Earth the enclosure</strong> properly; an un-earthed driver cannot dump a strike safely.</li>
+<li><strong>옥외·해안 배선에는 포팅 IP67 드라이버</strong>를 선택하십시오——밀폐 케이스는 습기로 인한 고장의 첫 방어선이기도 합니다.</li>
+<li><strong>인입부에 SPD 추가</strong>——조명에 전원을 공급하는 분전반에 Type 2 서지 어레스터를.</li>
+<li><strong>케이블을 지면에서 띄우고</strong> 가능하면 전원선에서 멀리 두십시오. 평행 배선은 유도 스파이크를 부릅니다.</li>
+<li><strong>함체를 확실히 접지하십시오</strong>. 접지되지 않은 드라이버는 낙뢰를 안전하게 배출할 수 없습니다.</li>
 </ol>
 
-<h2>Common surge myths</h2>
+<h2>흔한 서지 오해</h2>
 
 <ul>
-<li><strong>"IP67 means surge-proof."</strong> No — IP is water, not volts. They are separate specs; buy both.</li>
-<li><strong>"One protected driver protects the string."</strong> A strike travels the cable; protect the feed, not one unit.</li>
-<li><strong>"Indoor is safe."</strong> Indoor drivers on a shared feeder with lifts or compressors still see switching spikes — ask for the built-in clamp rating.</li>
+<li><strong>"IP67이면 서지도 막아 준다."</strong> 아닙니다——IP는 물의 문제이고 볼트의 문제가 아닙니다. 별개의 사양이므로 둘 다 사야 합니다.</li>
+<li><strong>"드라이버 하나를 보호하면 열 전체가 보호된다."</strong> 낙뢰는 케이블을 타고 이동합니다. 한 대가 아니라 인입부를 보호하십시오.</li>
+<li><strong>"실내는 안전하다."</strong> 엘리베이터나 압축기와 같은 피더를 쓰는 실내 드라이버도 개폐 스파이크를 겪습니다——내장 클램프 정격을 확인하십시오.</li>
 </ul>
 
-<p>Our <a href="/products/ip67/">IP67 waterproof drivers</a> and <a href="/products/ip65/">IP65 rainproof drivers</a> carry internal surge clamps as standard; for exposed sites we recommend an external SPD at the supply and will size it with you.</p>
+<p>당사의 <a href="/products/ip67/">IP67 방수 드라이버</a>와 <a href="/products/ip65/">IP65 방우 드라이버</a>는 내부 서지 클램프를 표준으로 갖추고 있습니다. 노출된 현장에서는 공급부의 외부 SPD를 권장하며 함께 선정해 드립니다.</p>
 
-<h2>What we need from you</h2>
+<h2>필요한 정보</h2>
 
-<p>Send the site (rooftop, coastal, inland), the cable run length, and whether you already have an SPD at the board. We will confirm the driver surge rating and the external protection to add.</p>
+<p>현장(옥상, 해안, 내륙), 케이블 길이, 그리고 분전반에 SPD가 이미 있는지 알려 주십시오. 드라이버 서지 정격과 추가해야 할 외부 보호를 확인해 드립니다.</p>
 
 <div class="cta-box">
-<h3>Protecting an outdoor or coastal site?</h3>
-<p>Send the site, cable run length and whether you have an SPD at the board. We will confirm the surge rating and the external protection to add.</p>
-<a href="/#inquiry" class="btn">Get a surge plan</a>
+<h3>옥외나 해안 현장을 보호하십니까?</h3>
+<p>현장, 케이블 길이, 분전반의 SPD 유무를 보내 주십시오. 서지 정격과 추가할 외부 보호를 확인해 드립니다.</p>
+<a href="/#inquiry" class="btn">서지 계획 받기</a>
 </div>
 
-<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explore CHUGAO products</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Compact 12V/24V units for strips, modules and signage.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">Constant voltage with active PFC for ceiling and panel lights.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Fully potted, salt-spray tested for wet and coastal sites.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Vented metal case for signage and semi-outdoor installs.</span></a></div></section>
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">스트립, 모듈, 사인용 소형 12V/24V 유닛.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 드라이버 50-400W</span><span class="pc-desc">천장등과 패널등용 액티브 PFC 정전압.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">습윤·해안 현장용 완전 포팅, 염수 분무 시험 완료.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">사인과 반옥외 설치용 통기 금속 케이스.</span></a></div></section>
 
-<section class="related" aria-label="Related articles">
-  <h2 class="related-h">More from the field</h2>
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
   <div class="rel-grid">
-  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Technical Guide</span><span class="rel-title">IP67 vs IP65 LED Driver: Which Rating Do You Need?</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">Buyer’s Guide</span><span class="rel-title">Choosing an LED Power Supply for Outdoor & Harsh Sites</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">Technical Guide</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="rel-card" href="/blog-11/"><span class="rel-cat">Buyer’s Guide</span><span class="rel-title">Power Factor Correction & Flicker-Free LED Drivers</span></a>
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP67 vs IP65: 어떤 방수 LED 구동장치를 선택해야 할까?</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">구매 가이드</span><span class="rel-title">옥외 및 혹독한 현장용 LED 전원 선택</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="rel-card" href="/blog-11/"><span class="rel-cat">구매 가이드</span><span class="rel-title">역률 보정 및 플리커 프리 LED 드라이버</span></a>
   </div>
 </section>
 
-<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">Power Factor Correction & Flicker-Free LED Drivers</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Next article</span><span class="pn-t">Choosing an LED Power Supply for Outdoor & Harsh Sites</span></a></nav>
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">역률 보정 및 플리커 프리 LED 드라이버</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">옥외 및 혹독한 현장용 LED 전원 선택</span></a></nav>
 </main>
 
 <footer><div class="c"><div class="fg"><div class="fb"><a href="/#home" class="logo"><img loading="lazy" src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px"></a><p data-i18n="f_desc">CHUGAO 는 중국 중산에서 LED 전원 공급 장치를 제조. 공장 직송.</p><div class="social"><a href="https://www.facebook.com/profile.php?id=100063658296873" target="_blank" rel="noopener noreferrer" class="sfb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.014 1.794-4.677 4.533-4.677 1.313 0 2.686.234 2.686.234v2.97h-1.513c-1.49 0-1.955.926-1.955 1.876v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a><a href="https://www.instagram.com/chugao_smps/" target="_blank" rel="noopener noreferrer" class="sig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.tiktok.com/@chugaosmpsofficial" target="_blank" rel="noopener noreferrer" class="stk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/chugaosmps/" target="_blank" rel="noopener noreferrer" class="sli" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></div></div><div class="fc"><h4 data-i18n="f_prod">제품</h4><a href="/products/">All products</a><a href="/products/adapters/" data-i18n="f_p1">어댑터</a><a href="/products/indoor/" data-i18n="f_p2">실내</a><a href="/products/ip67/" data-i18n="f_p3">IP67</a><a href="/products/ip65/" data-i18n="f_p4">IP65</a><a href="/oem-odm/">OEM & ODM</a></div><div class="fc"><h4 data-i18n="f_comp">회사</h4><a href="/#about" data-i18n="f_c1">소개</a><a href="/#why" data-i18n="f_c2">왜</a><a href="/blog/" data-i18n="f_c3">뉴스</a><a href="/#faq" data-i18n="f_c4">FAQ</a></div><div class="fc"><h4 data-i18n="f_supp">지원</h4><a href="/#contact" data-i18n="f_s1">문의</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">이메일</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" data-i18n="f_s3">WhatsApp</a><a href="/#inquiry" data-i18n="f_s4">데이터시트 요청</a></div></div><div class="fb2"><p>© 2026 Zhongshan Chugao Electronic Technology Co., Ltd. 저작권 보유.</p><p data-i18n="f_slogan">전 시리즈 LED 전원 공급 장치 원스톱 제조사</p></div></div></footer>

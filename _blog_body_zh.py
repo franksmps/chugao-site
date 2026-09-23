@@ -649,3 +649,234 @@ BLOG_BODY['zh']['blog-9'] = """<main class="article">
 
 <nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">LED 电源功率怎么选：瓦数与余量</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">LED 驱动调光详解：0-10V、PWM、DALI 与 TRIAC</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['zh']['blog-10'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
+
+<h1>LED 驱动调光详解：0-10V、PWM、DALI 与 TRIAC</h1>
+<div class="meta">技术指南 &middot; 2026 年 9 月 &middot; 阅读约 9 分钟</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="LED 驱动调光标准对比" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>给 LED 工程做调光本该是一个设置项，而不是一个科研项目。实践中之所以出错，是因为四种调光标准共用同样的线，而它们之间没有一种可以互换。下面说明各自是什么，以及该指定哪一种，才能让你的控制系统真的能调光。</p>
+
+<h2>四种标准，直白说</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">标准</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">如何工作</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">最适合</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>0-10V</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">一对独立的低压控制线，10V 时 100%，降到 0V 时约 10%</td><td style="padding:10px 14px;border:1px solid var(--b)">商业吊顶、新建项目</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>PWM</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">直流侧脉宽调制；非常平滑，无颜色偏移</td><td style="padding:10px 14px;border:1px solid var(--b)">标识、对摄像敏感的场所</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>DALI</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">数字可寻址总线；每台灯具可寻址并记录</td><td style="padding:10px 14px;border:1px solid var(--b)">大型智能楼宇</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>TRIAC</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">相位切割，沿用现有的市电调光器（前沿／后沿）</td><td style="padding:10px 14px;border:1px solid var(--b)">改造、现有墙壁调光器</td></tr>
+</tbody>
+</table>
+
+<h2>0-10V：商业默认</h2>
+
+<p>0-10V 是新建商业装修最常见的规格，因为接线简单又便宜——两根额外低压导体，无需数据。要注意的是它只能调到约 10%，不能完全熄灭，除非你为“关闭”加一个市电继电器。如果你的项目需要真正熄灭，请在规格中写明。</p>
+
+<h2>PWM：最平滑，最适合标识</h2>
+
+<p>PWM 调光以高频斩切直流输出。由于它从不改变电流大小，调光时不会有色温偏移——这对 <a href="/products/ip65/">标识</a> 以及任何不能接受频闪的摄像或广播环境都很重要。PWM 位于直流侧，因此与恒压驱动搭配。</p>
+
+<h2>DALI：可寻址的楼宇控制</h2>
+
+<p>DALI 把每台灯具挂到两线数字总线上，各有自己的地址，因此楼宇管理系统可以对分区调光、记录故障、场景调用。它在驱动和调试上更贵，但对一栋 20 层的办公楼来说，能在人工上回本。我们在 <a href="/products/indoor/">室内驱动</a> 上提供 100W 起的 DALI 版本。</p>
+
+<h2>TRIAC：无需重新布线的改造</h2>
+
+<p>TRIAC（相位切割）调光让 LED 驱动沿用现有的市电墙壁调光器，因此改造不必敷设新的控制电缆。陷阱在于：并非每个 LED 驱动都兼容 TRIAC，而便宜的调光器在低端会嗡嗡响或掉出。请使用后沿（ELV）调光器，并搭配明确标注兼容它的驱动。</p>
+
+<div class="highlight">
+<strong>兼容性优先：</strong> 一只“可调光 LED”只有在<em>驱动</em>能听懂调光器的语言时才能调光。告诉我们你用的是哪种调光器或控制系统，我们在你下单前确认兼容性——选定的室内与 IP67 型号从 100W 起支持 0-10V、PWM 与 TRIAC；最小的适配器不支持调光。
+</div>
+
+<h2>我们见到的三个错误</h2>
+
+<ol>
+<li><strong>买了“可调光”灯带，却配了不可调光的驱动。</strong>调光靠的是驱动，不是灯带。</li>
+<li><strong>把 TRIAC 调光器与 0-10V 驱动混用。</strong>它们不是同一套系统；结果是频闪或不调光。</li>
+<li><strong>忘了控制电缆。</strong>0-10V 与 DALI 需要在安装时就敷设它们额外的一对线，事后补不了。</li>
+</ol>
+
+<h2>我们需要你提供什么</h2>
+
+<p>请提供调光器或控制系统型号、负载瓦数、输出电压，以及现场是新建还是改造。我们会确认调光标准与合适的型号——0-10V、PWM、DALI 或 TRIAC。</p>
+
+<div class="cta-box">
+<h3>需要一款真能调光的驱动？</h3>
+<p>告诉我们调光器或控制系统、负载和电压。我们会确认调光标准与合适的型号。</p>
+<a href="/#inquiry" class="btn">确认调光类型</a>
+</div>
+
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">适用于灯带、模组与标识的紧凑型 12V/24V 单元。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动电源 50-400W</span><span class="pc-desc">带主动 PFC 的恒压驱动，适用于吊灯与面板灯。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">全灌封、盐雾测试，适用于潮湿与沿海场所。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">带通风口金属外壳，适用于标识与半户外安装。</span></a></div></section>
+
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-11/"><span class="rel-cat">选购指南</span><span class="rel-title">功率因数校正与无频闪 LED 驱动</span></a><a class="rel-card" href="/blog-9/"><span class="rel-cat">技术指南</span><span class="rel-title">恒压还是恒流 LED 驱动：你需要哪种？</span></a><a class="rel-card" href="/blog-6/"><span class="rel-cat">技术指南</span><span class="rel-title">IP67 还是 IP65：你需要哪种防水 LED 驱动？</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技术</span><span class="rel-title">三步选对 LED 电源</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-9/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">恒压还是恒流 LED 驱动：你需要哪种？</span></a><a class="pn-next" href="/blog-11/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">功率因数校正与无频闪 LED 驱动</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['zh']['blog-11'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
+
+<h1>功率因数校正与无频闪 LED 驱动</h1>
+<div class="meta">选购指南 &middot; 2026 年 9 月 &middot; 阅读约 7 分钟</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="功率因数与无频闪 LED 驱动规格" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>“功率因数”和“频闪”是两项从不出现在零售包装上、却决定一个工程是通过验收还是让人头疼的规格。两者都在驱动阶段定型，所以下面是买家真正应该要求的。</p>
+
+<h2>功率因数：为什么电网在意</h2>
+
+<p>功率因数（PF）是你使用的有功功率与从电网取用的总功率之比。PF 0.5 的廉价驱动会拉取它所需两倍的电流，使线路过载并在商业建筑中触发限值。许多地区现在要求 5W 以上 PF 达到 0.9 或更高，EN 61000-3-2 正是为此设定了谐波限值。</p>
+
+<div class="highlight">
+<strong>有源 PFC 对无源：</strong> 我们的 <a href="/products/indoor/">室内驱动</a> 采用<strong>有源 PFC</strong>，在整个负载范围内达到 PF 0.95+——而不是只在满载下才起作用的那种无源“功率因数校正”贴纸。对一个 200 只的吊顶来说，这就是配电盘干净与断路器跳闸的区别。
+</div>
+
+<h2>频闪：为什么人在意</h2>
+
+<p>LED 频闪来自驱动直流输出上的纹波。廉价驱动让纹波跑到 20-30%，肉眼也许看不出来，但摄像头、传感器以及一些人绝对能感受到——它表现为视频上的条纹、CCTV 上的频闪，以及办公室里的眼睛疲劳。优质驱动把纹波控制在 5-8% 以下，并标注为“无频闪”。</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">症状</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">原因</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">解决方案</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">摄像／CCTV 上出现条纹</td><td style="padding:10px 14px;border:1px solid var(--b)">输出纹波过高</td><td style="padding:10px 14px;border:1px solid var(--b)">无频闪驱动，纹波 &lt;8%</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">负载下断路器跳闸</td><td style="padding:10px 14px;border:1px solid var(--b)">功率因数低</td><td style="padding:10px 14px;border:1px solid var(--b)">有源 PFC 驱动，PF 0.95+</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">调光时嗡嗡响</td><td style="padding:10px 14px;border:1px solid var(--b)">调光不兼容</td><td style="padding:10px 14px;border:1px solid var(--b)">匹配的调光标准（见调光指南）</td></tr>
+</tbody>
+</table>
+
+<h2>无频闪不可妥协的场合</h2>
+
+<ul>
+<li><strong>办公室与学校</strong>——全天暴露；劣质驱动会导致疲劳投诉。</li>
+<li><strong>零售与博物馆</strong>——频闪会毁掉产品色彩与摄影。</li>
+<li><strong>CCTV 与交通枢纽</strong>——条纹会让车牌和人脸无法辨认。</li>
+<li><strong>任何有摄像头覆盖的场所</strong>——如果有手机在拍，就指定无频闪。</li>
+</ul>
+
+<h2>如何读参数表</h2>
+
+<ol>
+<li><strong>PF：</strong>要求给出整个负载范围内的数值，而不只是 100% 时。有源 PFC 能在全范围保持高值；无源做不到。</li>
+<li><strong>纹波／频闪百分比：</strong>按多数规格制定者现在采用的 SVM 指标，8% 以下即为“无频闪”。</li>
+<li><strong>THD</strong>（总谐波失真）：越低对供电越干净。有源 PFC 驱动远低于 EN 61000-3-2 限值。</li>
+</ol>
+
+<p>每一台 CHUGAO 室内与 IP67 驱动都按 PF 0.95+ 和无频闪输出作为标准制造，而不是付费选装。如果你的市场有特定的谐波限值，告诉我们，我们会随批次提供测试报告。</p>
+
+<h2>我们需要你提供什么</h2>
+
+<p>请提供现场类型（办公室、零售、有 CCTV 覆盖）、瓦数和电压，以及任何当地的 PF／谐波限值。我们会确认一款能通过的驱动——并在你下单前发送报告。</p>
+
+<div class="cta-box">
+<h3>为办公室或摄像场所做规格？</h3>
+<p>发来现场类型、瓦数和任何当地 PF／谐波限值。我们会确认一款无频闪、高 PF 的驱动并提供测试报告。</p>
+<a href="/#inquiry" class="btn">获取干净的驱动规格</a>
+</div>
+
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">适用于灯带、模组与标识的紧凑型 12V/24V 单元。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动电源 50-400W</span><span class="pc-desc">带主动 PFC 的恒压驱动，适用于吊灯与面板灯。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">全灌封、盐雾测试，适用于潮湿与沿海场所。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">带通风口金属外壳，适用于标识与半户外安装。</span></a></div></section>
+
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-10/"><span class="rel-cat">技术指南</span><span class="rel-title">LED 驱动调光详解：0-10V、PWM、DALI 与 TRIAC</span></a><a class="rel-card" href="/blog-5/"><span class="rel-cat">技术深读</span><span class="rel-title">LED 驱动寿命：MTBF、L70 与真实使用寿命</span></a><a class="rel-card" href="/blog-9/"><span class="rel-cat">技术指南</span><span class="rel-title">恒压还是恒流 LED 驱动：你需要哪种？</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">技术指南</span><span class="rel-title">IP20、IP65、IP67、IP68 对比</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-10/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">LED 驱动调光详解：0-10V、PWM、DALI 与 TRIAC</span></a><a class="pn-next" href="/blog-12/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">LED 驱动的浪涌防护：雷电与瞬变</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['zh']['blog-12'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
+
+<h1>LED 驱动的浪涌防护：雷电与瞬变</h1>
+<div class="meta">技术指南 &middot; 2026 年 9 月 &middot; 阅读约 7 分钟</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="带浪涌防护的 IP67 防水 LED 驱动" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>三条街外的一道闪电，就能毁掉一台完好的 LED 驱动。浪涌防护，决定了驱动是扛过暴雨还是变成电子垃圾——而大多数被归咎于“质量”的故障，其实只是输入端毫无防护。下面说说真正保护驱动的是什么。</p>
+
+<h2>浪涌从哪里来</h2>
+
+<ul>
+<li><strong>雷电</strong>——非直接雷击会在长长的户外线路上感应出数千伏的尖峰。</li>
+<li><strong>开关操作</strong>——接触器、电梯和大型电机会把瞬变灌进同一条馈线。</li>
+<li><strong>感性反冲</strong>——哪怕一个继电器断开，也能激起数百伏的尖峰。</li>
+</ul>
+
+<p>接在干净楼宇市电上的室内驱动很少遇到这些。而长线缆上的户外与 <a href="/products/ip67/">潮湿场所驱动</a> 则持续面对，这正是浪涌等级属于 IP 故事的一部分、而非另一回事的原因。</p>
+
+<h2>真正重要的两层</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">层级</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">作用</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">典型等级</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">内置 MOV</td><td style="padding:10px 14px;border:1px solid var(--b)">在驱动内部钳制小型瞬变</td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 kV 差模</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">外部 SPD</td><td style="padding:10px 14px;border:1px solid var(--b)">在进线点吸收巨大雷击</td><td style="padding:10px 14px;border:1px solid var(--b)">10-20 kV，依据 IEC 61643</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>关键点：</strong> 驱动内部的浪涌钳位能应付日常噪声。真正的雷击事件需要在供电入口加装<strong>外部浪涌保护器（SPD）</strong>，因为没有任何一台在散热与成本之间取舍的驱动，能独自吞下数千安培的雷击。
+</div>
+
+<h2>如何为雷暴频繁的现场选型</h2>
+
+<ol>
+<li><strong>户外或沿海线路一律选灌封 IP67 驱动</strong>——密封外壳也是对潮湿故障的第一道防线。</li>
+<li><strong>在进线处加装 SPD</strong>——在给灯具供电的配电箱上装一只 Type 2 浪涌保护器。</li>
+<li><strong>线缆尽量离地、远离市电</strong>；平行走线会招来感应尖峰。</li>
+<li><strong>正确接地外壳</strong>；未接地的驱动无法安全泄放雷击。</li>
+</ol>
+
+<h2>常见的浪涌误区</h2>
+
+<ul>
+<li><strong>“IP67 就等于防浪涌。”</strong> 不对——IP 管的是水，不是电压。这是两套规格，两者都要买。</li>
+<li><strong>“保护一台驱动就保护了整串。”</strong> 雷击沿线缆传播；要保护的是进线，而不是某一台。</li>
+<li><strong>“室内就安全。”</strong> 与电梯或压缩机共用馈线的室内驱动，照样会遇到开关尖峰——请索要内置钳位等级。</li>
+</ul>
+
+<p>我们的 <a href="/products/ip67/">IP67 防水驱动</a> 和 <a href="/products/ip65/">IP65 防雨驱动</a> 标配内部浪涌钳位；对于暴露现场，我们建议在供电处加装外部 SPD，并会与你一起选型。</p>
+
+<h2>我们需要你提供什么</h2>
+
+<p>请告知现场类型（屋顶、沿海、内陆）、线缆长度，以及配电箱上是否已有 SPD。我们会确认驱动的浪涌等级和建议加装的外部防护。</p>
+
+<div class="cta-box">
+<h3>正在保护户外或沿海现场？</h3>
+<p>发来现场、线缆长度以及配电箱上是否已有 SPD。我们会确认浪涌等级和需加装的外部防护。</p>
+<a href="/#inquiry" class="btn">获取浪涌方案</a>
+</div>
+
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">适用于灯带、模组与标识的紧凑型 12V/24V 单元。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动电源 50-400W</span><span class="pc-desc">带主动 PFC 的恒压驱动，适用于吊灯与面板灯。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">全灌封、盐雾测试，适用于潮湿与沿海场所。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">带通风口金属外壳，适用于标识与半户外安装。</span></a></div></section>
+
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">技术指南</span><span class="rel-title">IP67 还是 IP65：你需要哪种防水 LED 驱动？</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">选购指南</span><span class="rel-title">为户外与恶劣场所选择 LED 电源</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">技术指南</span><span class="rel-title">IP20、IP65、IP67、IP68 对比</span></a><a class="rel-card" href="/blog-11/"><span class="rel-cat">选购指南</span><span class="rel-title">功率因数校正与无频闪 LED 驱动</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">功率因数校正与无频闪 LED 驱动</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">为户外与恶劣场所选择 LED 电源</span></a></nav>
+</main>"""
