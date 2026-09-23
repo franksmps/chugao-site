@@ -35,6 +35,28 @@ def _load_market_blog_bodies():
 
 _load_market_blog_bodies()
 
+
+def _load_zh_ja_ko_it_blog_bodies():
+    """Extend BLOG_BODY['zh'|'ja'|'ko'|'it'] with the blog-1..5 / blog-9..14
+    bodies. blog_body_zh.py already declares the four sub-dicts (holding
+    blog-6/7/8), so these files MUST only assign new keys -- re-declaring
+    BLOG_BODY['zh'] = {} would wipe the existing 3 posts per language."""
+    _here = _os.path.dirname(_os.path.abspath(__file__))
+    for _f in ('_blog_body_zh.py', '_blog_body_ja.py',
+               '_blog_body_ko.py', '_blog_body_it.py'):
+        _p = _os.path.join(_here, _f)
+        if not _os.path.exists(_p):
+            continue
+        _spec = _ilu.spec_from_file_location('blog_body_cjk_' + _f, _p)
+        _mod = _ilu.module_from_spec(_spec)
+        _mod.BLOG_BODY = BLOG_BODY  # same dict; only NEW keys are added
+        try:
+            _spec.loader.exec_module(_mod)
+        except Exception as _e:
+            print('WARN: could not load', _f, repr(_e))
+
+_load_zh_ja_ko_it_blog_bodies()
+
 REPO = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(REPO, 'src')
 # Prefer the managed Node runtime, but fall back to whatever `node` is on PATH
