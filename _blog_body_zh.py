@@ -880,3 +880,147 @@ BLOG_BODY['zh']['blog-12'] = """<main class="article">
 
 <nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">功率因数校正与无频闪 LED 驱动</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">为户外与恶劣场所选择 LED 电源</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['zh']['blog-13'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
+
+<h1>为户外与恶劣场所选择 LED 电源</h1>
+<div class="meta">选购指南 &middot; 2026 年 10 月 &middot; 阅读约 8 分钟</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="面向恶劣环境的户外 LED 电源选型" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>“户外”并不是一种环境。商场雨棚下密封的灯箱和防波堤上的驱动都叫“户外”，但两年后只有一个还能正常工作。这份指南带你从干燥一端走到潮湿一端，让你选到合适的型号，而不是最便宜的那一个。</p>
+
+<h2>环境阶梯</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">环境</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">防护等级</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CHUGAO 产品线</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">室内干燥</td><td style="padding:10px 14px;border:1px solid var(--b)">IP20</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/indoor/">室内 50-400W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">半户外，雨淋 + 粉尘</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip65/">IP65 100-600W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">潮湿、积水、沿海</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 / IP68</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip67/">IP67 10-400W</a></td></tr>
+</tbody>
+</table>
+
+<h2>第 1 步：水会接触到驱动吗？</h2>
+
+<p>如果驱动装在密封的灯箱或雨棚内，雨水会流走、不会积聚——<a href="/products/ip65/">IP65</a> 就足够，而且散热更好。如果水会在外壳周围积聚，请升级到全灌封的 <a href="/products/ip67/">IP67</a> 型号。</p>
+
+<h2>第 2 步：是否靠海或需要冲洗？</h2>
+
+<p>盐雾会从内部腐蚀带通风口的金属外壳。在防波堤、洗车场，或被水枪冲洗的食品厂里，你需要硅胶灌封<em>并且</em>通过盐雾测试。要问供应商实际做了哪些测试，而不只是印了哪个数字。</p>
+
+<h2>第 3 步：会有多热？</h2>
+
+<p>密封能挡水，却也把热闷在里面。灌封的 IP67 单元只能通过外壳散热，所以在高温、密封的空间里应按额定负载的 70-80% 来选型，装在通风处，并且要接受 IP67 产品线止步于 400W、而带通风的 IP65 产品线可达 600W 这一点。这是物理规律，不是推销。</p>
+
+<div class="highlight">
+<strong>高温是无声的杀手：</strong> 每超出额定温度 10&deg;C，电容寿命大约减半。一台在密封坑里被烤着的 400W IP67 驱动，会比一台选型正确、装在阴凉通风处的 IP65 单元坏得更快。要让等级匹配环境温度，而不只是匹配瓦数。
+</div>
+
+<h2>第 4 步：是否调光或暴露于浪涌？</h2>
+
+<p>户外标识常常需要调光（夜间用 0-10V）并暴露于浪涌（长线路上的雷电）。请选择支持你所采用调光标准的驱动，并在进线处加装外部 SPD——参见<a href="/blog-10/">调光指南</a>与<a href="/blog-12/">浪涌指南</a>。</p>
+
+<h2>一行决策</h2>
+
+<p><strong>干燥 &rarr; 室内。有雨但无积水 &rarr; IP65。积水、沿海或需冲洗 &rarr; IP67。户外超过 400W &rarr; 有遮挡的带通风 IP65。</strong></p>
+
+<p>发来安装位置的照片，再加上负载瓦数和线路长度。我们会如实告诉你该买哪条产品线——包括在更便宜的 IP65 才是正确答案的时候。</p>
+
+<div class="cta-box">
+<h3>不确定你的现场需要哪个等级？</h3>
+<p>发来安装位置照片以及负载和线路长度。我们会如实告诉你该买哪条产品线。</p>
+<a href="/#inquiry" class="btn">获取等级建议</a>
+</div>
+
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">适用于灯带、模组与标识的紧凑型 12V/24V 单元。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动电源 50-400W</span><span class="pc-desc">带主动 PFC 的恒压驱动，适用于吊灯与面板灯。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">全灌封、盐雾测试，适用于潮湿与沿海场所。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">带通风口金属外壳，适用于标识与半户外安装。</span></a></div></section>
+
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">技术指南</span><span class="rel-title">IP67 还是 IP65：你需要哪种防水 LED 驱动？</span></a><a class="rel-card" href="/blog-12/"><span class="rel-cat">技术指南</span><span class="rel-title">LED 驱动的浪涌防护：雷电与瞬变</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">技术指南</span><span class="rel-title">IP20、IP65、IP67、IP68 对比</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">技术指南</span><span class="rel-title">LED 电源功率怎么选：瓦数与余量</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">LED 驱动的浪涌防护：雷电与瞬变</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">LED 装置的线径与压降</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['zh']['blog-14'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
+
+<h1>LED 装置的线径与压降</h1>
+<div class="meta">技术指南 &middot; 2026 年 10 月 &middot; 阅读约 7 分钟</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="面向压降的 LED 装置线缆选型" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>“远端 LED 变暗”最常见的单一原因不是驱动——而是线缆。线径选得太细，压降就会在灯还没看到电之前偷走亮度。这就是我们在每一次安装中使用的选型方法。</p>
+
+<h2>决定一切的定律</h2>
+
+<div class="highlight">
+<strong>压降 = 电流 &times; 线缆电阻。</strong> 电阻随长度增加、随截面积减小而上升，所以线缆越长或越细，压降的电压就越多。把总压降控制在 <strong>5%</strong> 以内（12V 上为 0.6V，24V 上为 1.2V），远端就能保持明亮。
+</div>
+
+<h2>12V 与 24V 分别能跑多远？</h2>
+
+<p>在相同瓦数下，24V 的电流只有 12V 的一半，因此损耗约为四分之一，能跑的距离大约翻倍：</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">负载</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">线缆</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">12V 最大长度</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">24V 最大长度</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">24 W</td><td style="padding:10px 14px;border:1px solid var(--b)">1.5 mm&sup2; (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">48 W</td><td style="padding:10px 14px;border:1px solid var(--b)">2.5 mm&sup2; (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">96 W</td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm&sup2; (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">192 W</td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm&sup2; (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+</tbody>
+</table>
+
+<h2>克服压降的三种方法</h2>
+
+<ol>
+<li><strong>改用 24V。</strong> 对于任何超过约 5 m 的线路，24V 在大多数房间里都能直接消除这个问题（见<a href="/blog-7/">12V 与 24V 指南</a>）。</li>
+<li><strong>两端同时供电。</strong> 有效长度减半，压降也随之减半。</li>
+<li><strong>加粗线缆。</strong> 升一档成本很低，却能解决远端偏暗；如果线缆埋地或与市电捆在一起，就升两档。</li>
+</ol>
+
+<h2>我们常见到的两个错误</h2>
+
+<ul>
+<li><strong>按驱动而不是按线路来选线。</strong> 驱动额定没问题；是距离在扼杀亮度。用上面的表，拿不准就再加粗。</li>
+<li><strong>用音箱线。</strong> 细的“灯线”看着整洁，却让压降翻倍。请按负载所需截面积使用真正符合市电规格的软线。</li>
+</ul>
+
+<div class="highlight">
+<strong>计算示例：</strong> 10 m 的 14.4W/m 灯带 = 24V 下 144W = 6A。通过 2.5 mm&sup2; 约产生 1.0V 压降——低于 1.2V（5%）的预算，所以仍然明亮。同样的负载在 12V 下要降到相同压降，大约需要 4 mm&sup2;。
+</div>
+
+<h2>我们需要你提供什么</h2>
+
+<p>请提供负载瓦数、输出电压（12V 或 24V）、线缆长度以及计划使用的截面积。我们会确认这条线路是否安全——或者在安装前告诉你要升到 24V 或更粗的线缆。</p>
+
+<div class="cta-box">
+<h3>担心远端 LED 偏暗？</h3>
+<p>发来负载、电压、线缆长度和截面积。我们会确认线路是否安全——或者告诉你要升到 24V 或更粗的线缆。</p>
+<a href="/#inquiry" class="btn">核算我的线径</a>
+</div>
+
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">适用于灯带、模组与标识的紧凑型 12V/24V 单元。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动电源 50-400W</span><span class="pc-desc">带主动 PFC 的恒压驱动，适用于吊灯与面板灯。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">全灌封、盐雾测试，适用于潮湿与沿海场所。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">带通风口金属外壳，适用于标识与半户外安装。</span></a></div></section>
+
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">选购指南</span><span class="rel-title">12V 还是 24V：LED 电源怎么选</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">技术指南</span><span class="rel-title">LED 电源功率怎么选：瓦数与余量</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技术</span><span class="rel-title">三步选对 LED 电源</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">选购指南</span><span class="rel-title">为户外与恶劣场所选择 LED 电源</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">为户外与恶劣场所选择 LED 电源</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">下一篇</span><span class="pn-t">现场笔记</span></a></nav>
+</main>"""

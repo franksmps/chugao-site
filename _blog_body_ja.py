@@ -877,3 +877,147 @@ BLOG_BODY['ja']['blog-12'] = """<main class="article">
 
 <nav class="post-nav" aria-label="記事ナビゲーション"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">前の記事</span><span class="pn-t">力率改善とフリッカー防止 LED ドライバー</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">次の記事</span><span class="pn-t">屋外・過酷な現場向け LED 電源の選び方</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ja']['blog-13'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 現場ノートに戻る</a>
+
+<h1>屋外・過酷な現場向け LED 電源の選び方</h1>
+<div class="meta">購入ガイド &middot; 2026 年 10 月 &middot; 約 8 分で読めます</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="過酷な環境向け屋外 LED 電源の選定" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>「屋外」は 1 つの環境ではありません。モールのキャノピー下の密閉看板ボックスも、防波堤上のドライバーも「屋外」ですが、2 年後も動いているのは片方だけです。このガイドは乾燥側から湿潤側へと進み、最も安いものではなく正しいものを選べるようにします。</p>
+
+<h2>環境のはしご</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">環境</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">等級</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CHUGAO 製品</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">屋内乾燥</td><td style="padding:10px 14px;border:1px solid var(--b)">IP20</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/indoor/">屋内 50-400W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">半屋外、雨 + 粉塵</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip65/">IP65 100-600W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">湿潤・浸水・沿岸</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 / IP68</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip67/">IP67 10-400W</a></td></tr>
+</tbody>
+</table>
+
+<h2>ステップ 1：水がドライバーに届くか？</h2>
+
+<p>ドライバーが密閉された看板ボックスやキャノピー内にあるなら、雨は流れ落ちて溜まりません——<a href="/products/ip65/">IP65</a> で十分で、しかも冷却に優れます。水が筐体の周りに溜まりうるなら、完全ポッティングの <a href="/products/ip67/">IP67</a> に格上げしてください。</p>
+
+<h2>ステップ 2：沿岸か、水洗いされるか？</h2>
+
+<p>塩水噴霧は通気金属ケースを内側から腐食させます。防波堤、洗車場、水で洗われる食品工場では、シリコンポッティング<em>と</em>塩水噴霧試験の両方が必要です。どの数字が印刷されているかではなく、実際にどの試験を実施したかをサプライヤーに尋ねてください。</p>
+
+<h2>ステップ 3：どれだけ熱くなるか？</h2>
+
+<p>密閉は水を防ぎますが熱を閉じ込めます。ポッティングされた IP67 は筐体のみで放熱するため、高温の密閉空間では定格負荷の 70〜80% で選定し、風の当たる場所に取り付け、IP67 は 400W で頭打ち、通気式 IP65 は 600W に達することを受け入れてください。これは物理であって、アップセルではありません。</p>
+
+<div class="highlight">
+<strong>熱は静かなる殺し屋：</strong> 定格より 10&deg;C 超えるごとに、コンデンサ寿命はほぼ半減します。密閉ピットで焼かれる 400W IP67 ドライバーは、日陰で正しく選定され通気された IP65 より早く壊れます。ワット数だけでなく周囲温度に等級を合わせてください。
+</div>
+
+<h2>ステップ 4：調光されるか、サージにさらされるか？</h2>
+
+<p>屋外看板はしばしば調光され（夜間の 0-10V）、サージにさらされます（長い配線の落雷）。採用する調光規格に対応したドライバーを選び、引込部に外部 SPD を追加してください——<a href="/blog-10/">調光ガイド</a> と <a href="/blog-12/">サージガイド</a> を参照してください。</p>
+
+<h2>一行で結論</h2>
+
+<p><strong>乾燥 &rarr; 屋内。雨はあるが水は溜まらない &rarr; IP65。水・沿岸・水洗い &rarr; IP67。屋外で 400W 超 &rarr; 遮蔽下の通気 IP65。</strong></p>
+
+<p>設置場所の写真と、負荷ワット数と配線長をお送りください。どちらの製品を買うべきか正直にお伝えします——安い IP65 が正解のときも含めて。</p>
+
+<div class="cta-box">
+<h3>現場に必要な等級が分かりませんか？</h3>
+<p>設置場所の写真、負荷、配線長をお送りください。どちらの製品を買うべきか正直にお伝えします。</p>
+<a href="/#inquiry" class="btn">等級の推奨を取得</a>
+</div>
+
+<section class="product-crosslink" aria-label="関連製品"><h2 class="related-h">CHUGAO 製品を見る</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED アダプター 5-200W</span><span class="pc-desc">テープ、モジュール、看板向けのコンパクトな 12V/24V ユニット。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">屋内 LED ドライバー 50-400W</span><span class="pc-desc">シーリングやパネル灯向けのアクティブ PFC 付き定電圧。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水ドライバー 10-400W</span><span class="pc-desc">湿潤・沿岸地向けの完全ポッティング、塩水噴霧試験済み。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨ドライバー 100-600W</span><span class="pc-desc">看板や半屋外設置向けの通気金属ケース。</span></a></div></section>
+
+<section class="related" aria-label="関連記事">
+  <h2 class="related-h">その他の現場ノート</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">技術ガイド</span><span class="rel-title">IP67 か IP65 か：どちらの防水 LED ドライバーが必要ですか？</span></a><a class="rel-card" href="/blog-12/"><span class="rel-cat">技術ガイド</span><span class="rel-title">LED ドライバーのサージ保護：雷と過渡現象</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">技術ガイド</span><span class="rel-title">IP20・IP65・IP67・IP68 の比較</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">技術ガイド</span><span class="rel-title">LED 電源の容量決め：ワット数・余裕・突入電流</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="記事ナビゲーション"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">前の記事</span><span class="pn-t">LED ドライバーのサージ保護：雷と過渡現象</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">次の記事</span><span class="pn-t">LED 設備のケーブルサイズと電圧降下</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['ja']['blog-14'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 現場ノートに戻る</a>
+
+<h1>LED 設備のケーブルサイズと電圧降下</h1>
+<div class="meta">技術ガイド &middot; 2026 年 10 月 &middot; 約 7 分で読めます</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="電圧降下に基づく LED 設備のケーブル選定" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>「遠端の LED が暗い」最も一般的な原因はドライバーではなくケーブルです。配線が細すぎると、電圧降下が光が電気を見る前に明るさを奪います。これは当社がすべての設置で使う選定方法です。</p>
+
+<h2>これを決める法則</h2>
+
+<div class="highlight">
+<strong>電圧降下 = 電流 &times; ケーブルの抵抗。</strong> 抵抗は長さで増え、断面積で減るので、長いほど、細いほど電圧を多く失います。総降下を <strong>5%</strong> 未満（12V で 0.6V、24V で 1.2V）に抑えれば、遠端は明るいままです。
+</div>
+
+<h2>12V と 24V でそれぞれどこまで引けるか？</h2>
+
+<p>同じワット数なら、24V の電流は 12V の半分なので、損失はおよそ 4 分の 1 になり、距離はほぼ 2 倍引けます：</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">負荷</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">ケーブル</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">12V 最大長</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">24V 最大長</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">24 W</td><td style="padding:10px 14px;border:1px solid var(--b)">1.5 mm&sup2; (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">48 W</td><td style="padding:10px 14px;border:1px solid var(--b)">2.5 mm&sup2; (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">96 W</td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm&sup2; (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">192 W</td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm&sup2; (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+</tbody>
+</table>
+
+<h2>電圧降下に打ち勝つ 3 つの方法</h2>
+
+<ol>
+<li><strong>24V に上げる。</strong> およそ 5 m を超える配線では、24V がほとんどの部屋で問題を解消します（<a href="/blog-7/">12V と 24V のガイド</a>を参照）。</li>
+<li><strong>両端から給電する。</strong> 実効長が半分になり、降下も半減します。</li>
+<li><strong>ケーブルを太くする。</strong> 1 サイズ上げるだけでもコストはわずかで、暗い遠端を直せます。埋設や電源線との結束なら 2 サイズ上げてください。</li>
+</ol>
+
+<h2>よく見かける 2 つのミス</h2>
+
+<ul>
+<li><strong>配線ではなくドライバーに合わせて線を選ぶ。</strong> ドライバー定格は問題ありません。明るさを殺すのは距離です。表を使い、迷ったら太くしてください。</li>
+<li><strong>スピーカーケーブルを使う。</strong> 細い「ランプ線」は見た目は整いますが降下が倍になります。負荷に必要な断面の、正規の電源用フレキシブル線を使ってください。</li>
+</ul>
+
+<div class="highlight">
+<strong>計算例：</strong> 10 m の 14.4W/m テープ = 24V で 144W = 6A。2.5 mm&sup2; を通すと約 1.0V の降下——1.2V（5%）の予算内なので明るいままです。同じ負荷を 12V で同じ降下にするには、およそ 4 mm&sup2; が必要です。
+</div>
+
+<h2>ご提供いただきたい情報</h2>
+
+<p>負荷ワット数、出力電圧（12V か 24V）、ケーブル長、使用予定の断面積をお送りください。この配線が安全か確認します——あるいは設置前に 24V か太いケーブルへ上げるようお伝えします。</p>
+
+<div class="cta-box">
+<h3>遠端の LED が暗くならないか心配ですか？</h3>
+<p>負荷、電圧、ケーブル長、断面積をお送りください。配線が安全か確認します——あるいは 24V か太いケーブルへ上げるようお伝えします。</p>
+<a href="/#inquiry" class="btn">ケーブルサイズを確認</a>
+</div>
+
+<section class="product-crosslink" aria-label="関連製品"><h2 class="related-h">CHUGAO 製品を見る</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED アダプター 5-200W</span><span class="pc-desc">テープ、モジュール、看板向けのコンパクトな 12V/24V ユニット。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">屋内 LED ドライバー 50-400W</span><span class="pc-desc">シーリングやパネル灯向けのアクティブ PFC 付き定電圧。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水ドライバー 10-400W</span><span class="pc-desc">湿潤・沿岸地向けの完全ポッティング、塩水噴霧試験済み。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨ドライバー 100-600W</span><span class="pc-desc">看板や半屋外設置向けの通気金属ケース。</span></a></div></section>
+
+<section class="related" aria-label="関連記事">
+  <h2 class="related-h">その他の現場ノート</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">購入ガイド</span><span class="rel-title">12V か 24V か：LED 電源の選び方</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">技術ガイド</span><span class="rel-title">LED 電源の容量決め：ワット数・余裕・突入電流</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技術</span><span class="rel-title">3 ステップで正しい LED 電源を選ぶ</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">購入ガイド</span><span class="rel-title">屋外・過酷な現場向け LED 電源の選び方</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="記事ナビゲーション"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">前の記事</span><span class="pn-t">屋外・過酷な現場向け LED 電源の選び方</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">次の記事</span><span class="pn-t">現場ノート</span></a></nav>
+</main>"""

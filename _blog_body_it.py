@@ -877,3 +877,147 @@ BLOG_BODY['it']['blog-12'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Correzione del fattore di potenza e driver LED senza sfarfallio</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Scegliere un alimentatore LED per siti esterni e difficili</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['it']['blog-13'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Torna alle note dal campo</a>
+
+<h1>Scegliere un alimentatore LED per siti esterni e difficili</h1>
+<div class="meta">Guida all'acquisto &middot; ottobre 2026 &middot; 8 min di lettura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="Selezione dell'alimentatore LED per esterni in ambienti difficili" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>&quot;Esterno&quot; non &egrave; un unico ambiente. Un box insegna sigillato sotto la pensilina di un centro commerciale e un driver su una scogliera sono entrambi &quot;esterni&quot;, ma solo uno dei due funzioner&agrave; ancora tra due anni. Questa guida va dal lato asciutto a quello bagnato, cos&igrave; scegli l'unit&agrave; giusta invece della pi&ugrave; economica.</p>
+
+<h2>La scala degli ambienti</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Ambiente</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Grado</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Linea CHUGAO</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Interno asciutto</td><td style="padding:10px 14px;border:1px solid var(--b)">IP20</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/indoor/">Indoor 50-400W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Semi-esterno, pioggia + polvere</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip65/">IP65 100-600W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Bagnato, allagato, costiero</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 / IP68</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip67/">IP67 10-400W</a></td></tr>
+</tbody>
+</table>
+
+<h2>Passo 1: l'acqua pu&ograve; raggiungere il driver?</h2>
+
+<p>Se il driver vive dentro un box insegna o una pensilina sigillati, la pioggia scorre e non ristagna — <a href="/products/ip65/">IP65</a> basta e scalda meno. Se l'acqua pu&ograve; raccogliersi intorno all'involucro, sali a un'unit&agrave; <a href="/products/ip67/">IP67</a> completamente pottata.</p>
+
+<h2>Passo 2: &egrave; costiero o viene lavato con getto?</h2>
+
+<p>La nebbia salina corrode una custodia metallica ventilata dall'interno. Su una scogliera, in un autolavaggio o in uno stabilimento alimentare lavato con getto, servono il potting in silicone <em>e</em> un test alla nebbia salina. Chiedi al fornitore quali test sono stati realmente eseguiti, non solo quale numero &egrave; stampato.</p>
+
+<h2>Passo 3: quanto diventa caldo?</h2>
+
+<p>La sigillatura tiene fuori l'acqua ma trattiene il calore. Un'unit&agrave; IP67 pottata dissipa solo attraverso il guscio, quindi dimensiona al 70-80% del carico nominale in uno spazio caldo e sigillato, montala in aria in movimento e accetta che la linea IP67 si fermi a 400W mentre la linea IP65 ventilata arriva a 600W. &Egrave; fisica, non un upsell.</p>
+
+<div class="highlight">
+<strong>Il calore &egrave; il killer silenzioso:</strong> ogni 10&deg;C oltre il valore nominale dimezza circa la vita del condensatore. Un driver IP67 da 400W cotto in una buca sigillata ceder&agrave; prima di un'unit&agrave; IP65 ventilata e correttamente dimensionata all'ombra. Fai corrispondere il grado alla temperatura ambiente, non solo ai watt.
+</div>
+
+<h2>Passo 4: &egrave; dimmerato o esposto a sovratensioni?</h2>
+
+<p>Le insegne esterne sono spesso dimmerate (0-10V di notte) ed esposte a sovratensioni (fulmini su tratte lunghe). Scegli un driver che supporti il tuo standard di dimming e aggiungi uno SPD esterno all'ingresso — vedi la <a href="/blog-10/">guida al dimming</a> e la <a href="/blog-12/">guida alle sovratensioni</a>.</p>
+
+<h2>Decisione in una riga</h2>
+
+<p><strong>Asciutto &rarr; indoor. Pioggia ma senza ristagno &rarr; IP65. Acqua, costiero o lavato &rarr; IP67. Oltre 400W all'esterno &rarr; IP65 ventilato sotto copertura.</strong></p>
+
+<p>Invia una foto del punto di installazione pi&ugrave; il carico in watt e la lunghezza della tratta. Ti diremo onestamente quale linea acquistare — anche quando l'IP65 pi&ugrave; economico &egrave; la risposta giusta.</p>
+
+<div class="cta-box">
+<h3>Non sai quale grado serve al tuo sito?</h3>
+<p>Invia una foto del punto di installazione, il carico e la lunghezza della tratta. Ti diremo onestamente quale linea acquistare.</p>
+<a href="/#inquiry" class="btn">Ottieni una raccomandazione sul grado</a>
+</div>
+
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Scopri i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adattatori LED 5-200W</span><span class="pc-desc">Unit&agrave; compatte 12V/24V per strisce, moduli e insegne.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Driver LED indoor 50-400W</span><span class="pc-desc">Tensione costante con PFC attivo per plafoniere e pannelli.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver waterproof IP67 10-400W</span><span class="pc-desc">Completamente pottati, testati alla nebbia salina per siti umidi e costieri.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver rainproof IP65 100-600W</span><span class="pc-desc">Custodia metallica ventilata per insegne e installazioni semi-esterne.</span></a></div></section>
+
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre note dal campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">IP67 o IP65: quale driver LED impermeabile ti serve?</span></a><a class="rel-card" href="/blog-12/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">Protezione dalle sovratensioni per driver LED: fulmini e transitori</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">Come dimensionare un alimentatore LED: watt, margine e inrush</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Protezione dalle sovratensioni per driver LED: fulmini e transitori</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Sezione del cavo e caduta di tensione per installazioni LED</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['it']['blog-14'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Torna alle note dal campo</a>
+
+<h1>Sezione del cavo e caduta di tensione per installazioni LED</h1>
+<div class="meta">Guida tecnica &middot; ottobre 2026 &middot; 7 min di lettura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="Dimensionamento del cavo per installazioni LED secondo la caduta di tensione" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>La causa singola pi&ugrave; comune di &quot;LED fiocchi in fondo alla linea&quot; non &egrave; il driver — &egrave; il cavo. Se il filo &egrave; sottodimensionato, la caduta di tensione ruba luminosit&agrave; prima che la luce veda mai la corrente. Questo &egrave; il metodo di dimensionamento che usiamo in ogni installazione.</p>
+
+<h2>La legge che lo decide</h2>
+
+<div class="highlight">
+<strong>Caduta di tensione = Corrente &times; Resistenza del cavo.</strong> La resistenza cresce con la lunghezza e cala con la sezione, quindi un cavo pi&ugrave; lungo o pi&ugrave; sottile perde pi&ugrave; volt. Mantieni la caduta totale sotto il <strong>5%</strong> (0,6V su 12V, 1,2V su 24V) e il capo lontano resta luminoso.
+</div>
+
+<h2>Quanto lontano puoi arrivare a 12V rispetto a 24V?</h2>
+
+<p>A pari wattaggio, il 24V assorbe met&agrave; della corrente del 12V, quindi disperde circa un quarto e arriva circa al doppio della distanza:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Carico</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Cavo</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Tratta max a 12V</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Tratta max a 24V</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">24 W</td><td style="padding:10px 14px;border:1px solid var(--b)">1.5 mm&sup2; (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">48 W</td><td style="padding:10px 14px;border:1px solid var(--b)">2.5 mm&sup2; (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">96 W</td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm&sup2; (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">192 W</td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm&sup2; (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+</tbody>
+</table>
+
+<h2>Tre modi per battere la caduta</h2>
+
+<ol>
+<li><strong>Passa a 24V.</strong> Per qualsiasi tratta oltre ~5 m, il 24V elimina il problema nella maggior parte degli ambienti (vedi la <a href="/blog-7/">guida 12V vs 24V</a>).</li>
+<li><strong>Alimenta da entrambe le estremit&agrave;.</strong> Dimezza la lunghezza effettiva e la caduta.</li>
+<li><strong>Ispessisci il cavo.</strong> Una taglia in pi&ugrave; costa poco e risolve il capo lontano fioco; due taglie se il cavo &egrave; interrato o affasciato con la rete.</li>
+</ol>
+
+<h2>Due errori che vediamo di continuo</h2>
+
+<ul>
+<li><strong>Dimensionare il cavo per il driver, non per la tratta.</strong> Il valore del driver va bene; &egrave; la distanza che uccide la luminosit&agrave;. Usa la tabella, poi vai pi&ugrave; spesso se hai dubbi.</li>
+<li><strong>Usare filo per altoparlanti.</strong> Il sottile &quot;filo da lampada&quot; sembra ordinato ma raddoppia la caduta. Usa un vero cavo flessibile da rete alla sezione richiesta dal carico.</li>
+</ul>
+
+<div class="highlight">
+<strong>Esempio calcolato:</strong> 10 m di striscia da 14,4W/m = 144W su 24V = 6A. Attraverso 2,5 mm&sup2; sono circa 1,0V di caduta — sotto il budget di 1,2V (5%), quindi resta luminoso. Lo stesso carico a 12V richiederebbe circa 4 mm&sup2; per la stessa caduta.
+</div>
+
+<h2>Cosa ci serve da te</h2>
+
+<p>Invia il carico in watt, la tensione d'uscita (12V o 24V), la lunghezza del cavo e la sezione che pensi di usare. Confermeremo che la tratta &egrave; sicura — oppure ti diremo di passare a 24V o a un cavo pi&ugrave; spesso prima di installare.</p>
+
+<div class="cta-box">
+<h3>Preoccupato per LED fiocchi in fondo alla linea?</h3>
+<p>Invia carico, tensione, lunghezza del cavo e sezione. Confermeremo che la tratta &egrave; sicura — oppure ti diremo di passare a 24V o a un cavo pi&ugrave; spesso.</p>
+<a href="/#inquiry" class="btn">Verifica la mia sezione del cavo</a>
+</div>
+
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Scopri i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adattatori LED 5-200W</span><span class="pc-desc">Unit&agrave; compatte 12V/24V per strisce, moduli e insegne.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Driver LED indoor 50-400W</span><span class="pc-desc">Tensione costante con PFC attivo per plafoniere e pannelli.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver waterproof IP67 10-400W</span><span class="pc-desc">Completamente pottati, testati alla nebbia salina per siti umidi e costieri.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver rainproof IP65 100-600W</span><span class="pc-desc">Custodia metallica ventilata per insegne e installazioni semi-esterne.</span></a></div></section>
+
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre note dal campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">Guida all'acquisto</span><span class="rel-title">12V o 24V: come scegliere l'alimentatore LED</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">Come dimensionare un alimentatore LED: watt, margine e inrush</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Scegliere l'alimentatore LED giusto in 3 passi</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">Guida all'acquisto</span><span class="rel-title">Scegliere un alimentatore LED per siti esterni e difficili</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Scegliere un alimentatore LED per siti esterni e difficili</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Note dal campo</span></a></nav>
+</main>"""

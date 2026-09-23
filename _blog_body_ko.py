@@ -877,3 +877,147 @@ BLOG_BODY['ko']['blog-12'] = """<main class="article">
 
 <nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-11/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">역률 보정 및 플리커 프리 LED 드라이버</span></a><a class="pn-next" href="/blog-13/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">옥외 및 혹독한 현장용 LED 전원 선택</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ko']['blog-13'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
+
+<h1>옥외 및 혹독한 현장용 LED 전원 선택</h1>
+<div class="meta">구매 가이드 &middot; 2026년 10월 &middot; 약 8분 소요</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof.avif"><source type="image/webp" srcset="/images/product-waterproof.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-waterproof.jpg" alt="혹독한 환경을 위한 옥외 LED 전원 선택" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>"옥외"는 하나의 환경이 아닙니다. 몰 캐노피 아래 밀폐된 사인 박스와 방파제 위의 드라이버는 둘 다 "옥외"지만, 2년 뒤에도 작동하는 것은 하나뿐입니다. 이 가이드는 건조한 쪽부터 습한 쪽까지 짚어, 가장 싼 것이 아니라 올바른 제품을 고르게 합니다.</p>
+
+<h2>환경 사다리</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">환경</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">등급</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CHUGAO 제품</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">실내 건조</td><td style="padding:10px 14px;border:1px solid var(--b)">IP20</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/indoor/">실내 50-400W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">반옥외, 비 + 먼지</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip65/">IP65 100-600W</a></td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">습윤·침수·해안</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 / IP68</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/ip67/">IP67 10-400W</a></td></tr>
+</tbody>
+</table>
+
+<h2>1단계: 물이 드라이버에 닿을 수 있는가?</h2>
+
+<p>드라이버가 밀폐된 사인 박스나 캐노피 안에 있다면 비가 흘러내려 고이지 않습니다——<a href="/products/ip65/">IP65</a>면 충분하고 냉각에도 유리합니다. 물이 함체 주위에 고일 수 있다면 완전 포팅된 <a href="/products/ip67/">IP67</a>로 올리십시오.</p>
+
+<h2>2단계: 해안가이거나 물로 씻는가?</h2>
+
+<p>염수 분무는 통기 금속 케이스를 안쪽부터 부식시킵니다. 방파제, 세차장, 물로 씻는 식품 공장에서는 실리콘 포팅<em>과</em> 염수 분무 시험이 모두 필요합니다. 어떤 숫자가 인쇄됐는지가 아니라 실제로 어떤 시험을 했는지 공급사에 물으십시오.</p>
+
+<h2>3단계: 얼마나 뜨거워지는가?</h2>
+
+<p>밀폐는 물을 막지만 열을 가둡니다. 포팅된 IP67은 케이스로만 방열하므로, 뜨겁고 밀폐된 공간에서는 정격 부하의 70-80%로 선정하고 바람이 통하는 곳에 설치하며, IP67 제품군은 400W에서 멈추고 통기식 IP65는 600W에 도달한다는 점을 받아들이십시오. 이는 물리이지 상술이 아닙니다.</p>
+
+<div class="highlight">
+<strong>열은 조용한 살인자:</strong> 정격보다 10&deg;C 초과할 때마다 커패시터 수명은 대략 절반이 됩니다. 밀폐된 구덩이에서 구워지는 400W IP67 드라이버는 그늘에서 올바르게 선정된 통기 IP65보다 빨리 고장 납니다. 와트수만이 아니라 주위 온도에 등급을 맞추십시오.
+</div>
+
+<h2>4단계: 조광되거나 서지에 노출되는가?</h2>
+
+<p>옥외 사인은 흔히 조광되고(야간 0-10V) 서지에 노출됩니다(긴 배선의 낙뢰). 사용하는 조광 표준을 지원하는 드라이버를 고르고 인입부에 외부 SPD를 추가하십시오——<a href="/blog-10/">조광 가이드</a>와 <a href="/blog-12/">서지 가이드</a>를 참조하십시오.</p>
+
+<h2>한 줄 결정</h2>
+
+<p><strong>건조 &rarr; 실내. 비는 오나 고임 없음 &rarr; IP65. 물·해안·물세척 &rarr; IP67. 옥외에서 400W 초과 &rarr; 가림막 아래 통기 IP65.</strong></p>
+
+<p>설치 위치 사진과 부하 와트수, 배선 길이를 보내 주십시오. 어느 제품을 사야 하는지 솔직하게 알려 드립니다——더 싼 IP65가 정답일 때도 포함해서.</p>
+
+<div class="cta-box">
+<h3>현장에 필요한 등급이 확실하지 않으십니까?</h3>
+<p>설치 위치 사진, 부하, 배선 길이를 보내 주십시오. 어느 제품을 사야 하는지 솔직하게 알려 드립니다.</p>
+<a href="/#inquiry" class="btn">등급 추천 받기</a>
+</div>
+
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">스트립, 모듈, 사인용 소형 12V/24V 유닛.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 드라이버 50-400W</span><span class="pc-desc">천장등과 패널등용 액티브 PFC 정전압.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">습윤·해안 현장용 완전 포팅, 염수 분무 시험 완료.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">사인과 반옥외 설치용 통기 금속 케이스.</span></a></div></section>
+
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-6/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP67 vs IP65: 어떤 방수 LED 구동장치를 선택해야 할까?</span></a><a class="rel-card" href="/blog-12/"><span class="rel-cat">기술 가이드</span><span class="rel-title">LED 드라이버 서지 보호: 낙뢰와 과도 현상</span></a><a class="rel-card" href="/blog-2/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">기술 가이드</span><span class="rel-title">LED 전원 용량 정하기: 와트·여유·돌입전류</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-12/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">LED 드라이버 서지 보호: 낙뢰와 과도 현상</span></a><a class="pn-next" href="/blog-14/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">LED 설치의 케이블 사이즈와 전압 강하</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['ko']['blog-14'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
+
+<h1>LED 설치의 케이블 사이즈와 전압 강하</h1>
+<div class="meta">기술 가이드 &middot; 2026년 10월 &middot; 약 7분 소요</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="전압 강하를 위한 LED 설치 케이블 선정" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>"멀리 있는 LED가 어둡다"의 가장 흔한 원인은 드라이버가 아니라 케이블입니다. 배선이 너무 가늘면 전압 강하가 빛이 전기를 보기도 전에 밝기를 훔쳐 갑니다. 이것이 우리가 모든 설치에서 쓰는 선정 방법입니다.</p>
+
+<h2>이를 결정하는 법칙</h2>
+
+<div class="highlight">
+<strong>전압 강하 = 전류 &times; 케이블 저항.</strong> 저항은 길이에 따라 커지고 단면적에 따라 줄어드므로, 길거나 가늘수록 더 많은 전압을 잃습니다. 총 강하를 <strong>5%</strong> 이내(12V에서 0.6V, 24V에서 1.2V)로 유지하면 먼 쪽도 밝게 유지됩니다.
+</div>
+
+<h2>12V와 24V에서 각각 얼마나 멀리 갈 수 있는가?</h2>
+
+<p>같은 와트수에서 24V는 12V의 절반 전류를 끌어오므로 손실이 약 4분의 1로 줄고 거리는 약 두 배로 늘어납니다:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">부하</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">케이블</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">12V 최대 길이</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">24V 최대 길이</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">24 W</td><td style="padding:10px 14px;border:1px solid var(--b)">1.5 mm&sup2; (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">48 W</td><td style="padding:10px 14px;border:1px solid var(--b)">2.5 mm&sup2; (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">96 W</td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm&sup2; (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">192 W</td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm&sup2; (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+</tbody>
+</table>
+
+<h2>전압 강하를 이기는 세 가지 방법</h2>
+
+<ol>
+<li><strong>24V로 올린다.</strong> 약 5 m를 넘는 배선이면 24V가 대부분의 공간에서 문제를 없앱니다(<a href="/blog-7/">12V vs 24V 가이드</a> 참조).</li>
+<li><strong>양쪽 끝에서 급전한다.</strong> 실효 길이가 절반이 되어 강하도 절반이 됩니다.</li>
+<li><strong>케이블을 두껍게 한다.</strong> 한 사이즈만 올려도 비용은 적고 어두운 먼 쪽을 고칩니다. 매설하거나 전원선과 묶는다면 두 사이즈 올리십시오.</li>
+</ol>
+
+<h2>자주 보는 두 가지 실수</h2>
+
+<ul>
+<li><strong>배선이 아니라 드라이버에 맞춰 전선을 고른다.</strong> 드라이버 정격은 문제없습니다. 밝기를 죽이는 것은 거리입니다. 표를 쓰고 애매하면 더 두껍게 하십시오.</li>
+<li><strong>스피커 선을 쓴다.</strong> 가는 "램프선"은 깔끔해 보이지만 강하가 두 배가 됩니다. 부하에 필요한 단면의 정식 전원용 플렉시블 선을 쓰십시오.</li>
+</ul>
+
+<div class="highlight">
+<strong>계산 예시:</strong> 10 m의 14.4W/m 테이프 = 24V에서 144W = 6A. 2.5 mm&sup2;를 통과하면 약 1.0V 강하——1.2V(5%) 예산 이내이므로 밝게 유지됩니다. 같은 부하를 12V에서 같은 강하로 맞추려면 약 4 mm&sup2;가 필요합니다.
+</div>
+
+<h2>필요한 정보</h2>
+
+<p>부하 와트수, 출력 전압(12V 또는 24V), 케이블 길이, 사용하려는 단면적을 보내 주십시오. 이 배선이 안전한지 확인해 드립니다——아니면 설치 전에 24V나 더 두꺼운 케이블로 올리라고 알려 드립니다.</p>
+
+<div class="cta-box">
+<h3>먼 쪽 LED가 어두워질까 걱정되십니까?</h3>
+<p>부하, 전압, 케이블 길이, 단면적을 보내 주십시오. 배선이 안전한지 확인해 드립니다——아니면 24V나 더 두꺼운 케이블로 올리라고 알려 드립니다.</p>
+<a href="/#inquiry" class="btn">케이블 사이즈 확인</a>
+</div>
+
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">스트립, 모듈, 사인용 소형 12V/24V 유닛.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 드라이버 50-400W</span><span class="pc-desc">천장등과 패널등용 액티브 PFC 정전압.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">습윤·해안 현장용 완전 포팅, 염수 분무 시험 완료.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">사인과 반옥외 설치용 통기 금속 케이스.</span></a></div></section>
+
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-7/"><span class="rel-cat">구매 가이드</span><span class="rel-title">12V 또는 24V: LED 전원 어떻게 선택할까</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">기술 가이드</span><span class="rel-title">LED 전원 용량 정하기: 와트·여유·돌입전류</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 기술</span><span class="rel-title">3단계로 올바른 LED 전원 고르기</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">구매 가이드</span><span class="rel-title">옥외 및 혹독한 현장용 LED 전원 선택</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">옥외 및 혹독한 현장용 LED 전원 선택</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">다음 글</span><span class="pn-t">현장 노트</span></a></nav>
+</main>"""
