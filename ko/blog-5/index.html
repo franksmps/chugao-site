@@ -58,7 +58,7 @@ gtag('js', new Date());
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NV6VNJQ8MY"></script>
 <script type="application/ld+json" id="jsonld-breadcrumb">
-{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"ko","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.chugaopower.com/ko/"},{"@type":"ListItem","position":2,"name":"LED Driver Lifespan: MTBF, L70, and How Long They Really Last","item":"https://www.chugaopower.com/ko/blog-5/"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"ko","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://www.chugaopower.com/ko/"},{"@type":"ListItem","position":2,"name":"LED 드라이버 수명: MTBF, L70 및 실제 수명","item":"https://www.chugaopower.com/ko/blog-5/"}]}
 </script>
 </head>
 <body>
@@ -66,107 +66,107 @@ gtag('js', new Date());
 <div class="mm" id="mobileMenu"><a href="/#home" onclick="closeMobileMenu()" data-i18n="n_h">홈</a><a href="/#about" onclick="closeMobileMenu()" data-i18n="n_a">회사 소개</a><a href="/products/" onclick="closeMobileMenu()" data-i18n="n_p">제품</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">사양</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">왜 우리인가</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">뉴스</a><a href="/#faq" onclick="closeMobileMenu()" data-i18n="n_f">자주 묻는 질문</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">문의</a><div class="ml"><a href="/blog-5/" onclick="goLang('en');closeMobileMenu()" id="ml-en">EN</a><a href="/zh/blog-5/" onclick="goLang('zh');closeMobileMenu()" id="ml-zh">ZH</a><a href="/es/blog-5/" onclick="goLang('es');closeMobileMenu()" id="ml-es">ES</a><a href="/fr/blog-5/" onclick="goLang('fr');closeMobileMenu()" id="ml-fr">FR</a><a href="/de/blog-5/" onclick="goLang('de');closeMobileMenu()" id="ml-de">DE</a><a href="/pt/blog-5/" onclick="goLang('pt');closeMobileMenu()" id="ml-pt">PT</a><a href="/ru/blog-5/" onclick="goLang('ru');closeMobileMenu()" id="ml-ru">RU</a><a href="/ja/blog-5/" onclick="goLang('ja');closeMobileMenu()" id="ml-ja">JA</a><a href="/ko/blog-5/" onclick="goLang('ko');closeMobileMenu()" id="ml-ko" class="active">KO</a><a href="/ar/blog-5/" onclick="goLang('ar');closeMobileMenu()" id="ml-ar">AR</a><a href="/it/blog-5/" onclick="goLang('it');closeMobileMenu()" id="ml-it">IT</a></div></div>
 
 <main class="article">
-<a href="/blog/" class="back-link">← Back to Field notes</a>
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
 
-<h1>LED Driver Lifespan: MTBF, L70, and How Long They Really Last</h1>
-<div class="meta">Technical Deep-dive · April 2026 · 8 min read</div>
+<h1>LED 드라이버 수명: MTBF, L70 및 실제 수명</h1>
+<div class="meta">기술 심층 &middot; 2026년 4월 &middot; 약 8분 소요</div>
 
 <div class="hero-img">
 <picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
 <source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
-<img src="/images/product-indoor.jpg" alt="Indoor LED driver with long lifespan" loading="lazy" style="width:100%;aspect-ratio:1/1">
+<img src="/images/product-indoor.jpg" alt="긴 수명의 실내 LED 드라이버" loading="lazy" style="width:100%;aspect-ratio:1/1">
 </picture>
 </div>
 
-<p>A datasheet says "50,000 hours." You do the math: that is <strong>5.7 years</strong> of continuous operation. So why do some installations need driver replacement after just 2-3 years?</p>
+<p>데이터시트에는 “50,000시간”이라고 적혀 있습니다. 계산해 보면 연속 운전으로 <strong>5.7년</strong>입니다. 그런데 왜 어떤 설치 현장은 2-3년 만에 드라이버를 교체해야 할까요?</p>
 
-<p>The answer is that rated lifespan and real-world lifespan are different things. This article explains what those numbers actually mean, what kills drivers early, and how to pick the right spec for your project's expected service life.</p>
+<p>답은 정격 수명과 실제 수명은 다르다는 것입니다. 이 글은 그 숫자들이 실제로 무엇을 의미하는지, 무엇이 드라이버를 일찍 고장내는지, 프로젝트의 예상 사용 수명에 맞는 사양을 어떻게 고를지 설명합니다.</p>
 
-<h2>The Three Metrics That Matter</h2>
+<h2>중요한 세 가지 지표</h2>
 
 <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
-<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Metric</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">What it measures</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Typical value</th></tr></thead>
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">지표</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">측정 대상</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">일반적인 값</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Mean Time Between Failures — statistical average time between failures across a population</td><td style="padding:10px 14px;border:1px solid var(--b)">50,000–100,000h</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Hours until output drops to 70% or 80% of initial value</td><td style="padding:10px 14px;border:1px solid var(--b)">30,000–50,000h</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Warranty period</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Manufacturer guarantee against defects</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 years</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">평균 고장 간격——모집단에서 고장 사이의 통계적 평균 시간</td><td style="padding:10px 14px;border:1px solid var(--b)">50,000-100,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">출력이 초기값의 70% 또는 80%로 떨어지는 시간</td><td style="padding:10px 14px;border:1px solid var(--b)">30,000-50,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>보증 기간</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">결함에 대한 제조사 보증</td><td style="padding:10px 14px;border:1px solid var(--b)">2-5년</td></tr>
 </tbody>
 </table>
 
 <div class="highlight">
-<strong>Key insight:</strong> A 50,000-hour L70 rating means the driver maintains at least 70% of its original output after 50,000 hours under test conditions. It does not mean every unit will run for 50,000 hours before failing.
+<strong>핵심 통찰:</strong> 50,000시간의 L70 정격은 시험 조건에서 50,000시간 후에도 드라이버가 초기 출력의 최소 70%를 유지한다는 뜻입니다. 모든 개체가 고장 나기까지 50,000시간을 간다는 뜻은 아닙니다.
 </div>
 
-<h2>Why Drivers Fail Early</h2>
+<h2>드라이버가 조기 고장하는 이유</h2>
 
-<h3>1. Heat is the #1 killer</h3>
-<p>Every 10°C above the rated operating temperature roughly halves electrolytic capacitor life. An IP20 indoor driver mounted inside a sealed light fixture can easily run 20°C hotter than ambient. If the ambient is 35°C (common in summer), internal component temps can hit 75-85°C — well above the typical 60°C design point.</p>
+<h3>1. 열이 최대 원인</h3>
+<p>정격 동작 온도보다 10&deg;C 높을 때마다 전해 커패시터 수명은 대략 절반이 됩니다. 밀폐 등기구 내부에 장착한 IP20 실내 드라이버는 주변보다 20&deg;C 더 뜨겁게 동작하기 쉽습니다. 주변이 35&deg;C(여름에 흔함)라면 내부 부품 온도는 75-85&deg;C에 달해 일반적인 설계점 60&deg;C를 훨씬 웃돕니다.</p>
 
 <ul>
-<li><strong>IP67 waterproof units:</strong> Better heat dissipation through metal case + silicone potting. Rated for -30 to +60°C. Typical lifespan: 50,000h.</li>
-<li><strong>IP20 indoor units:</strong> Depend on fixture ventilation. In sealed housings, expect 40-60% shorter life than rated.</li>
-<li><strong>Adapters:</strong> Plastic enclosure traps more heat. Typical lifespan: 30,000h.</li>
+<li><strong>IP67 방수 모델:</strong> 금속 케이스 + 실리콘 포팅으로 방열이 우수합니다. -30 ~ +60&deg;C 정격. 일반적인 수명: 50,000h.</li>
+<li><strong>IP20 실내 모델:</strong> 등기구 통기에 의존합니다. 밀폐 하우징에서는 정격보다 40-60% 짧은 수명을 예상하십시오.</li>
+<li><strong>어댑터:</strong> 플라스틱 인클로저가 열을 더 가둡니다. 일반적인 수명: 30,000h.</li>
 </ul>
 
-<h3>2. Voltage spikes and surges</h3>
-<p>Grid voltage fluctuations (especially in developing markets) stress input capacitors and MOVs. A driver rated for AC 190-264V may survive a 280V transient once or twice but repeated surges degrade components faster than normal wear.</p>
+<h3>2. 전압 스파이크와 서지</h3>
+<p>계통 전압 변동(특히 신흥 시장)은 입력 커패시터와 MOV에 스트레스를 줍니다. AC 190-264V 정격 드라이버는 280V 과도 현상을 한두 번은 견딜 수 있지만, 반복되는 서지는 정상 마모보다 빠르게 부품을 열화시킵니다.</p>
 
-<h3>3. Running near full load</h3>
-<p>At 90-100% rated load, ripple current through output capacitors increases. This generates more heat and accelerates aging. The rule we recommend at CHUGAO:</p>
+<h3>3. 정격 부하 근처 운전</h3>
+<p>정격 부하의 90-100%에서 출력 커패시터를 통과하는 리플 전류가 증가합니다. 이는 더 많은 열을 발생시키고 노화를 가속합니다. CHUGAO에서 권장하는 규칙:</p>
 
 <div class="highlight">
-<strong>Load wattage × 1.25 = minimum driver rating.</strong><br>
-Running a driver at 70-80% capacity instead of 95% can extend effective lifespan by 30–50%.
+<strong>부하 와트수 &times; 1.25 = 드라이버 최소 정격.</strong><br>
+드라이버를 95%가 아니라 70-80% 용량으로 운전하면 실효 수명을 30-50% 늘릴 수 있습니다.
 </div>
 
-<h2>What Different Applications Need</h2>
+<h2>용도별로 필요한 것</h2>
 
 <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
-<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Application</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Recommended driver</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b">Expected service life</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Why</th></tr></thead>
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">용도</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">권장 드라이버</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">예상 사용 수명</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">이유</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Retail signage (8-12 hrs/day)</td><td style="padding:10px 14px;border:1px solid var(--b)">Adapter / Indoor IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 years</td><td style="padding:10px 14px;border:1px solid var(--b">Low daily hours offset lower per-unit lifespan</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Outdoor facade lighting (12+ hrs/day)</td><td style="padding:10px 14px;border:1px solid var(--b">IP67 Waterproof</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 years</td><td style="padding:10px 14px;border:1px solid var(--b">Sealed potting handles humidity & temp swings</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b">Industrial 24/7 (warehouse)</td><td style="padding:10px 14px;border:1px solid var(--b">IP65 Rainproof or Industrial CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 years</td><td style="padding:10px 14px;border:1px solid var(--b)">Continuous high-temp operation accelerates wear</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b">Marine / fountain</td><td style="padding:10px 14px;border:1px solid var(--b">IP68-rated unit</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 years</td><td style="padding:10px 14px;border:1px solid var(--b">Full immersion rating, salt-spray tested</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">소매 사인(1일 8-12시간)</td><td style="padding:10px 14px;border:1px solid var(--b)">어댑터／실내 IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12년</td><td style="padding:10px 14px;border:1px solid var(--b)">하루 가동 시간이 짧아 단위 수명의 짧음을 상쇄</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">옥외 파사드 조명(1일 12시간 이상)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 방수</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14년</td><td style="padding:10px 14px;border:1px solid var(--b)">밀봉 포팅이 습도와 온도 변화를 감당</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">산업 24/7(창고)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65 방우 또는 산업용 CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7년</td><td style="padding:10px 14px;border:1px solid var(--b)">연속 고온 운전이 마모를 가속</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">해양／분수</td><td style="padding:10px 14px;border:1px solid var(--b)">IP68 등급 모델</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12년</td><td style="padding:10px 14px;border:1px solid var(--b)">완전 침수 등급, 염수 분무 시험 완료</td></tr>
 </tbody>
 </table>
 
-<h2>How We Test at CHUGAO</h2>
+<h2>CHUGAO의 시험 방식</h2>
 
-<p>Every CHUGAO driver runs through a <strong>48-hour burn-in test</strong> before shipment. Failed units are discarded — they do not leave the factory floor. This pre-shipment screening catches infant mortality failures (the early-failure portion of the bathtub curve).</p>
+<p>모든 CHUGAO 드라이버는 출하 전 <strong>48시간 번인 시험</strong>을 거칩니다. 불합격품은 폐기되며 공장을 떠나지 않습니다. 이 출하 전 스크리닝이 초기 고장(욕조 곡선의 조기 고장 구간)을 잡아냅니다.</p>
 
-<p>For OEM orders above 500 pcs, we offer extended burn-in options (72-168 hours) at no extra cost if specified in your PO.</p>
+<p>500개를 초과하는 OEM 주문의 경우, 발주서에 명시하면 추가 비용 없이 연장 번인(72-168시간) 옵션을 제공합니다.</p>
 
-<h2>Quick Decision Guide</h2>
+<h2>빠른 결정 가이드</h2>
 
 <ol>
-<li><strong>Daily runtime?</strong> 8h retail vs 24h industrial changes everything. Multiply your target project life by daily hours to get total hour requirement.</li>
-<li><strong>Ambient temperature?</strong> Every 10°C over 40°C cuts life by ~50%. Factor this into model selection.</li>
-<li><strong>Ventilation?</strong> Sealed fixtures need IP67 or higher. Ventilated enclosures can use IP20/65.</li>
-<li><strong>Headroom?</strong> Always add 25%. The cost difference between a 60W and 100W driver is small compared to a site visit to replace a failed unit.</li>
-<li><strong>Spare stock?</strong> For 24/7 installations, keep 5-10% spare drivers on hand. It costs less than emergency shipping.</li>
+<li><strong>하루 가동 시간?</strong> 소매 8시간과 산업 24시간은 전혀 다릅니다. 목표 프로젝트 수명에 하루 시간을 곱해 총 시간 요구량을 구하십시오.</li>
+<li><strong>주변 온도?</strong> 40&deg;C를 초과해 10&deg;C마다 수명이 약 50% 줄어듭니다. 모델 선정에 반영하십시오.</li>
+<li><strong>통기?</strong> 밀폐 기구는 IP67 이상이 필요합니다. 통기되는 하우징은 IP20/65로 가능합니다.</li>
+<li><strong>여유?</strong> 항상 25%를 더하십시오. 고장품 교체를 위한 현장 방문에 비하면 60W와 100W 드라이버의 가격 차이는 미미합니다.</li>
+<li><strong>예비 재고?</strong> 24/7 설치에는 5-10%의 예비 드라이버를 보유하십시오. 긴급 배송보다 저렴합니다.</li>
 </ol>
 
 <div class="cta-box">
-<h3>Not sure which driver matches your lifespan needs?</h3>
-<p>Tell us your application, daily run time, and ambient conditions. We recommend the right series with realistic life expectancy for your specific installation.</p>
-<a href="/#inquiry" class="btn">Get a lifespan-matched recommendation</a>
+<h3>어떤 드라이버가 수명 요구에 맞는지 모르시겠습니까?</h3>
+<p>용도, 하루 가동 시간, 주변 조건을 알려 주십시오. 설치에 맞는 시리즈와 현실적인 기대 수명을 추천해 드립니다.</p>
+<a href="/#inquiry" class="btn">수명 맞춤 추천 받기</a>
 </div>
 
 
-<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explore CHUGAO products</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Long-life adapters with MTBF data for every rating.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">L70-rated drivers for commercial and architectural fixtures.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Potted and sealed for extended outdoor service life.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Rugged drivers designed for 50,000+ hour outdoor operation.</span></a></div></section>
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">모든 정격에 MTBF 데이터를 제공하는 장수명 어댑터.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 드라이버 50-400W</span><span class="pc-desc">상업 및 건축 기구용 L70 등급 드라이버.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">옥외 사용 수명 연장을 위한 포팅 밀봉.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">50,000시간 이상 옥외 운전을 위해 설계된 견고한 드라이버.</span></a></div></section>
 
-<section class="related" aria-label="Related articles">
-  <h2 class="related-h">More from the field</h2>
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
   <div class="rel-grid">
-  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED Technology</span><span class="rel-title">Pick the Right LED Power Supply in 3 Steps</span></a>
-  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technical Guide</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
-  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Industry Trends</span><span class="rel-title">2026 LED Market: What We Are Seeing</span></a>
-  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatory</span><span class="rel-title">BIS Certification for LED Drivers: India Import Guide</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 기술</span><span class="rel-title">3단계로 올바른 LED 전원 고르기</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP20·IP65·IP67·IP68 선택법</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">업계 동향</span><span class="rel-title">2026 LED 시장: 우리가 보고 있는 것</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">규제</span><span class="rel-title">LED 드라이버 BIS 인증: 인도 수입 가이드</span></a>
   </div>
 </section>
 
-<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">BIS Certification for LED Drivers: India Import Guide</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">Next article</span><span class="pn-t">IP67 vs IP65 LED Driver: Which Rating Do You Need?</span></a></nav>
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">LED 드라이버 BIS 인증: 인도 수입 가이드</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">IP67 vs IP65 LED 드라이버: 어떤 등급이 필요하십니까?</span></a></nav>
 </main>
 
 <footer><div class="c"><div class="fg"><div class="fb"><a href="/#home" class="logo"><img loading="lazy" src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px"></a><p data-i18n="f_desc">CHUGAO 는 중국 중산에서 LED 전원 공급 장치를 제조. 공장 직송.</p><div class="social"><a href="https://www.facebook.com/profile.php?id=100063658296873" target="_blank" rel="noopener noreferrer" class="sfb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.014 1.794-4.677 4.533-4.677 1.313 0 2.686.234 2.686.234v2.97h-1.513c-1.49 0-1.955.926-1.955 1.876v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a><a href="https://www.instagram.com/chugao_smps/" target="_blank" rel="noopener noreferrer" class="sig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.tiktok.com/@chugaosmpsofficial" target="_blank" rel="noopener noreferrer" class="stk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/chugaosmps/" target="_blank" rel="noopener noreferrer" class="sli" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></div></div><div class="fc"><h4 data-i18n="f_prod">제품</h4><a href="/products/">All products</a><a href="/products/adapters/" data-i18n="f_p1">어댑터</a><a href="/products/indoor/" data-i18n="f_p2">실내</a><a href="/products/ip67/" data-i18n="f_p3">IP67</a><a href="/products/ip65/" data-i18n="f_p4">IP65</a><a href="/oem-odm/">OEM & ODM</a></div><div class="fc"><h4 data-i18n="f_comp">회사</h4><a href="/#about" data-i18n="f_c1">소개</a><a href="/#why" data-i18n="f_c2">왜</a><a href="/blog/" data-i18n="f_c3">뉴스</a><a href="/#faq" data-i18n="f_c4">FAQ</a></div><div class="fc"><h4 data-i18n="f_supp">지원</h4><a href="/#contact" data-i18n="f_s1">문의</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">이메일</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" data-i18n="f_s3">WhatsApp</a><a href="/#inquiry" data-i18n="f_s4">데이터시트 요청</a></div></div><div class="fb2"><p>© 2026 Zhongshan Chugao Electronic Technology Co., Ltd. 저작권 보유.</p><p data-i18n="f_slogan">전 시리즈 LED 전원 공급 장치 원스톱 제조사</p></div></div></footer>

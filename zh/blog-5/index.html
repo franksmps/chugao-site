@@ -58,7 +58,7 @@ gtag('js', new Date());
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NV6VNJQ8MY"></script>
 <script type="application/ld+json" id="jsonld-breadcrumb">
-{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"zh-CN","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.chugaopower.com/zh/"},{"@type":"ListItem","position":2,"name":"LED Driver Lifespan: MTBF, L70, and How Long They Really Last","item":"https://www.chugaopower.com/zh/blog-5/"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"zh-CN","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://www.chugaopower.com/zh/"},{"@type":"ListItem","position":2,"name":"LED 驱动寿命：MTBF、L70 与真实使用寿命","item":"https://www.chugaopower.com/zh/blog-5/"}]}
 </script>
 </head>
 <body>
@@ -66,107 +66,107 @@ gtag('js', new Date());
 <div class="mm" id="mobileMenu"><a href="/#home" onclick="closeMobileMenu()" data-i18n="n_h">首页</a><a href="/#about" onclick="closeMobileMenu()" data-i18n="n_a">关于</a><a href="/products/" onclick="closeMobileMenu()" data-i18n="n_p">产品</a><a href="/#specs" onclick="closeMobileMenu()" data-i18n="n_s">规格</a><a href="/#why" onclick="closeMobileMenu()" data-i18n="n_w">优势</a><a href="/blog/" onclick="closeMobileMenu()" data-i18n="n_b">资讯</a><a href="/#faq" onclick="closeMobileMenu()" data-i18n="n_f">常见问题</a><a href="/#contact" onclick="closeMobileMenu()" data-i18n="n_c">联系</a><div class="ml"><a href="/blog-5/" onclick="goLang('en');closeMobileMenu()" id="ml-en">EN</a><a href="/zh/blog-5/" onclick="goLang('zh');closeMobileMenu()" id="ml-zh" class="active">ZH</a><a href="/es/blog-5/" onclick="goLang('es');closeMobileMenu()" id="ml-es">ES</a><a href="/fr/blog-5/" onclick="goLang('fr');closeMobileMenu()" id="ml-fr">FR</a><a href="/de/blog-5/" onclick="goLang('de');closeMobileMenu()" id="ml-de">DE</a><a href="/pt/blog-5/" onclick="goLang('pt');closeMobileMenu()" id="ml-pt">PT</a><a href="/ru/blog-5/" onclick="goLang('ru');closeMobileMenu()" id="ml-ru">RU</a><a href="/ja/blog-5/" onclick="goLang('ja');closeMobileMenu()" id="ml-ja">JA</a><a href="/ko/blog-5/" onclick="goLang('ko');closeMobileMenu()" id="ml-ko">KO</a><a href="/ar/blog-5/" onclick="goLang('ar');closeMobileMenu()" id="ml-ar">AR</a><a href="/it/blog-5/" onclick="goLang('it');closeMobileMenu()" id="ml-it">IT</a></div></div>
 
 <main class="article">
-<a href="/blog/" class="back-link">← Back to Field notes</a>
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
 
-<h1>LED Driver Lifespan: MTBF, L70, and How Long They Really Last</h1>
-<div class="meta">Technical Deep-dive · April 2026 · 8 min read</div>
+<h1>LED 驱动寿命：MTBF、L70 与真实使用寿命</h1>
+<div class="meta">技术深读 &middot; 2026 年 4 月 &middot; 阅读约 8 分钟</div>
 
 <div class="hero-img">
 <picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
 <source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
-<img src="/images/product-indoor.jpg" alt="Indoor LED driver with long lifespan" loading="lazy" style="width:100%;aspect-ratio:1/1">
+<img src="/images/product-indoor.jpg" alt="长寿命的室内 LED 驱动电源" loading="lazy" style="width:100%;aspect-ratio:1/1">
 </picture>
 </div>
 
-<p>A datasheet says "50,000 hours." You do the math: that is <strong>5.7 years</strong> of continuous operation. So why do some installations need driver replacement after just 2-3 years?</p>
+<p>参数表上写着“50,000 小时”。你算一下：那是<strong>5.7 年</strong>连续运行。那为什么有些工程 2-3 年就得换驱动电源？</p>
 
-<p>The answer is that rated lifespan and real-world lifespan are different things. This article explains what those numbers actually mean, what kills drivers early, and how to pick the right spec for your project's expected service life.</p>
+<p>答案是：额定寿命与真实寿命是两回事。本文说明这些数字到底代表什么、什么会让驱动电源提前夭折，以及如何为项目的预期服役寿命挑选合适的规格。</p>
 
-<h2>The Three Metrics That Matter</h2>
+<h2>三个关键指标</h2>
 
 <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
-<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Metric</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">What it measures</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Typical value</th></tr></thead>
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">指标</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">衡量什么</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">典型值</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Mean Time Between Failures — statistical average time between failures across a population</td><td style="padding:10px 14px;border:1px solid var(--b)">50,000–100,000h</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Hours until output drops to 70% or 80% of initial value</td><td style="padding:10px 14px;border:1px solid var(--b)">30,000–50,000h</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Warranty period</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Manufacturer guarantee against defects</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 years</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">平均无故障时间——总体中两次故障之间的统计平均时间</td><td style="padding:10px 14px;border:1px solid var(--b)">50,000–100,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">输出降至初始值 70% 或 80% 所需的小时数</td><td style="padding:10px 14px;border:1px solid var(--b)">30,000–50,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>质保期</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">厂家对缺陷的保证</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 年</td></tr>
 </tbody>
 </table>
 
 <div class="highlight">
-<strong>Key insight:</strong> A 50,000-hour L70 rating means the driver maintains at least 70% of its original output after 50,000 hours under test conditions. It does not mean every unit will run for 50,000 hours before failing.
+<strong>关键洞察：</strong> 50,000 小时的 L70 额定值意味着驱动电源在测试条件下运行 50,000 小时后仍保持至少 70% 的原始输出。它并不意味着每台设备都能运行 50,000 小时才失效。
 </div>
 
-<h2>Why Drivers Fail Early</h2>
+<h2>驱动电源为何提前失效</h2>
 
-<h3>1. Heat is the #1 killer</h3>
-<p>Every 10°C above the rated operating temperature roughly halves electrolytic capacitor life. An IP20 indoor driver mounted inside a sealed light fixture can easily run 20°C hotter than ambient. If the ambient is 35°C (common in summer), internal component temps can hit 75-85°C — well above the typical 60°C design point.</p>
+<h3>1. 热是头号杀手</h3>
+<p>高于额定工作温度每 10&deg;C，电解电容寿命大致减半。装在密闭灯具内的 IP20 室内驱动电源，很容易比环境温度高出 20&deg;C。如果环境温度是 35&deg;C（夏季常见），内部元件温度可达 75-85&deg;C——远高于典型的 60&deg;C 设计点。</p>
 
 <ul>
-<li><strong>IP67 waterproof units:</strong> Better heat dissipation through metal case + silicone potting. Rated for -30 to +60°C. Typical lifespan: 50,000h.</li>
-<li><strong>IP20 indoor units:</strong> Depend on fixture ventilation. In sealed housings, expect 40-60% shorter life than rated.</li>
-<li><strong>Adapters:</strong> Plastic enclosure traps more heat. Typical lifespan: 30,000h.</li>
+<li><strong>IP67 防水型号：</strong>通过金属外壳 + 硅胶灌封实现更好的散热。额定 -30 至 +60&deg;C。典型寿命：50,000h。</li>
+<li><strong>IP20 室内型号：</strong>取决于灯具通风。在密闭外壳内，预计寿命比额定值短 40-60%。</li>
+<li><strong>适配器：</strong>塑料外壳更易积热。典型寿命：30,000h。</li>
 </ul>
 
-<h3>2. Voltage spikes and surges</h3>
-<p>Grid voltage fluctuations (especially in developing markets) stress input capacitors and MOVs. A driver rated for AC 190-264V may survive a 280V transient once or twice but repeated surges degrade components faster than normal wear.</p>
+<h3>2. 电压尖峰与浪涌</h3>
+<p>电网电压波动（在新兴市场尤其明显）会冲击输入电容和压敏电阻。额定 AC 190-264V 的驱动电源，也许能扛住一两次 280V 瞬变，但反复浪涌会比正常磨损更快地劣化元件。</p>
 
-<h3>3. Running near full load</h3>
-<p>At 90-100% rated load, ripple current through output capacitors increases. This generates more heat and accelerates aging. The rule we recommend at CHUGAO:</p>
+<h3>3. 接近满载运行</h3>
+<p>在 90-100% 额定负载下，流过输出电容的纹波电流增大。这会产生更多热量并加速老化。这是我们在 CHUGAO 推荐的经验法则：</p>
 
 <div class="highlight">
-<strong>Load wattage × 1.25 = minimum driver rating.</strong><br>
-Running a driver at 70-80% capacity instead of 95% can extend effective lifespan by 30–50%.
+<strong>负载功率 &times; 1.25 = 驱动电源最低额定值。</strong><br>
+让驱动电源在 70-80% 容量（而不是 95%）下运行，可把有效寿命延长 30–50%。
 </div>
 
-<h2>What Different Applications Need</h2>
+<h2>不同应用需要什么</h2>
 
 <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
-<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Application</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Recommended driver</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b">Expected service life</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Why</th></tr></thead>
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">应用</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">推荐驱动电源</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">预期服役寿命</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">原因</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Retail signage (8-12 hrs/day)</td><td style="padding:10px 14px;border:1px solid var(--b)">Adapter / Indoor IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 years</td><td style="padding:10px 14px;border:1px solid var(--b">Low daily hours offset lower per-unit lifespan</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">Outdoor facade lighting (12+ hrs/day)</td><td style="padding:10px 14px;border:1px solid var(--b">IP67 Waterproof</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 years</td><td style="padding:10px 14px;border:1px solid var(--b">Sealed potting handles humidity & temp swings</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b">Industrial 24/7 (warehouse)</td><td style="padding:10px 14px;border:1px solid var(--b">IP65 Rainproof or Industrial CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 years</td><td style="padding:10px 14px;border:1px solid var(--b)">Continuous high-temp operation accelerates wear</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b">Marine / fountain</td><td style="padding:10px 14px;border:1px solid var(--b">IP68-rated unit</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 years</td><td style="padding:10px 14px;border:1px solid var(--b">Full immersion rating, salt-spray tested</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">零售标识（每天 8-12 小时）</td><td style="padding:10px 14px;border:1px solid var(--b)">适配器／室内 IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 年</td><td style="padding:10px 14px;border:1px solid var(--b)">每日工时低，弥补了单机寿命较短</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">户外外立面照明（每天 12 小时以上）</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 防水</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 年</td><td style="padding:10px 14px;border:1px solid var(--b)">密封灌封可应对湿度与温差</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">工业 24/7（仓储）</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65 防雨或工业级 CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 年</td><td style="padding:10px 14px;border:1px solid var(--b)">连续高温运行加速磨损</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">船舶／喷泉</td><td style="padding:10px 14px;border:1px solid var(--b)">IP68 等级型号</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 年</td><td style="padding:10px 14px;border:1px solid var(--b)">全浸水等级，经盐雾测试</td></tr>
 </tbody>
 </table>
 
-<h2>How We Test at CHUGAO</h2>
+<h2>CHUGAO 如何测试</h2>
 
-<p>Every CHUGAO driver runs through a <strong>48-hour burn-in test</strong> before shipment. Failed units are discarded — they do not leave the factory floor. This pre-shipment screening catches infant mortality failures (the early-failure portion of the bathtub curve).</p>
+<p>每一台 CHUGAO 驱动电源在出厂前都要经过 <strong>48 小时老化测试</strong>。不合格的机器一律报废——不允许离开车间。这道出货前筛查能筛出早期失效（浴盆曲线的前段失效）。</p>
 
-<p>For OEM orders above 500 pcs, we offer extended burn-in options (72-168 hours) at no extra cost if specified in your PO.</p>
+<p>对于 500 只以上的 OEM 订单，如果在采购订单中注明，我们提供延长老化测试选项（72-168 小时），不额外收费。</p>
 
-<h2>Quick Decision Guide</h2>
+<h2>快速决策指南</h2>
 
 <ol>
-<li><strong>Daily runtime?</strong> 8h retail vs 24h industrial changes everything. Multiply your target project life by daily hours to get total hour requirement.</li>
-<li><strong>Ambient temperature?</strong> Every 10°C over 40°C cuts life by ~50%. Factor this into model selection.</li>
-<li><strong>Ventilation?</strong> Sealed fixtures need IP67 or higher. Ventilated enclosures can use IP20/65.</li>
-<li><strong>Headroom?</strong> Always add 25%. The cost difference between a 60W and 100W driver is small compared to a site visit to replace a failed unit.</li>
-<li><strong>Spare stock?</strong> For 24/7 installations, keep 5-10% spare drivers on hand. It costs less than emergency shipping.</li>
+<li><strong>每日运行时数？</strong>零售 8 小时与工业 24 小时天差地别。把目标项目寿命乘以每日小时数，得到总小时需求。</li>
+<li><strong>环境温度？</strong>超过 40&deg;C 每高 10&deg;C，寿命约减半。要把这一点纳入型号选择。</li>
+<li><strong>通风？</strong>密闭灯具需要 IP67 或更高。有通风的外壳可用 IP20/65。</li>
+<li><strong>余量？</strong>始终加 25%。相比跑一趟现场更换故障机，60W 与 100W 驱动电源的差价微不足道。</li>
+<li><strong>备件库存？</strong>对于 24/7 安装，常备 5-10% 的备用驱动电源。这比紧急发货更便宜。</li>
 </ol>
 
 <div class="cta-box">
-<h3>Not sure which driver matches your lifespan needs?</h3>
-<p>Tell us your application, daily run time, and ambient conditions. We recommend the right series with realistic life expectancy for your specific installation.</p>
-<a href="/#inquiry" class="btn">Get a lifespan-matched recommendation</a>
+<h3>不确定哪款驱动电源匹配你的寿命需求？</h3>
+<p>告诉我们你的应用、每日运行时间和环境条件。我们会为你的具体安装推荐合适的系列，并给出贴近实际的预期寿命。</p>
+<a href="/#inquiry" class="btn">获取寿命匹配推荐</a>
 </div>
 
 
-<section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explore CHUGAO products</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Long-life adapters with MTBF data for every rating.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">L70-rated drivers for commercial and architectural fixtures.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Potted and sealed for extended outdoor service life.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Rugged drivers designed for 50,000+ hour outdoor operation.</span></a></div></section>
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">每个功率段都提供 MTBF 数据的长寿命适配器。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动电源 50-400W</span><span class="pc-desc">适用于商业与建筑灯具的 L70 等级驱动。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">灌封密封，延长户外服役寿命。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">为 50,000+ 小时户外运行设计的坚固驱动。</span></a></div></section>
 
-<section class="related" aria-label="Related articles">
-  <h2 class="related-h">More from the field</h2>
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
   <div class="rel-grid">
-  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED Technology</span><span class="rel-title">Pick the Right LED Power Supply in 3 Steps</span></a>
-  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Technical Guide</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
-  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Industry Trends</span><span class="rel-title">2026 LED Market: What We Are Seeing</span></a>
-  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Regulatory</span><span class="rel-title">BIS Certification for LED Drivers: India Import Guide</span></a>
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技术</span><span class="rel-title">三步选对 LED 电源</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">技术指南</span><span class="rel-title">IP20、IP65、IP67、IP68 怎么选</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">行业趋势</span><span class="rel-title">2026 LED 市场：我们看到的</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">法规认证</span><span class="rel-title">LED 驱动电源 BIS 认证：印度进口指南</span></a>
   </div>
 </section>
 
-<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">BIS Certification for LED Drivers: India Import Guide</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">Next article</span><span class="pn-t">IP67 vs IP65 LED Driver: Which Rating Do You Need?</span></a></nav>
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">LED 驱动电源 BIS 认证：印度进口指南</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">IP67 与 IP65 LED 驱动电源：你需要哪种等级？</span></a></nav>
 </main>
 
 <footer><div class="c"><div class="fg"><div class="fb"><a href="/#home" class="logo"><img loading="lazy" src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px"></a><p data-i18n="f_desc">楚高,中山 LED 电源工厂。厂家直供。</p><div class="social"><a href="https://www.facebook.com/profile.php?id=100063658296873" target="_blank" rel="noopener noreferrer" class="sfb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.014 1.794-4.677 4.533-4.677 1.313 0 2.686.234 2.686.234v2.97h-1.513c-1.49 0-1.955.926-1.955 1.876v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a><a href="https://www.instagram.com/chugao_smps/" target="_blank" rel="noopener noreferrer" class="sig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.tiktok.com/@chugaosmpsofficial" target="_blank" rel="noopener noreferrer" class="stk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/chugaosmps/" target="_blank" rel="noopener noreferrer" class="sli" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></div></div><div class="fc"><h4 data-i18n="f_prod">产品</h4><a href="/products/">All products</a><a href="/products/adapters/" data-i18n="f_p1">适配器</a><a href="/products/indoor/" data-i18n="f_p2">室内电源</a><a href="/products/ip67/" data-i18n="f_p3">IP67</a><a href="/products/ip65/" data-i18n="f_p4">IP65</a><a href="/oem-odm/">OEM & ODM</a></div><div class="fc"><h4 data-i18n="f_comp">公司</h4><a href="/#about" data-i18n="f_c1">关于</a><a href="/#why" data-i18n="f_c2">优势</a><a href="/blog/" data-i18n="f_c3">资讯</a><a href="/#faq" data-i18n="f_c4">常见问题</a></div><div class="fc"><h4 data-i18n="f_supp">支持</h4><a href="/#contact" data-i18n="f_s1">联系</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">邮件</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" data-i18n="f_s3">WhatsApp</a><a href="/#inquiry" data-i18n="f_s4">索取规格书</a></div></div><div class="fb2"><p>© 2026 Zhongshan Chugao Electronic Technology Co., Ltd. 版权所有。</p><p data-i18n="f_slogan">一站式全系列开关电源制造商</p></div></div></footer>

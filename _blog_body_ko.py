@@ -366,3 +366,283 @@ BLOG_BODY['ko']['blog-3'] = """<main class="article">
 
 <nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">IP20·IP65·IP67·IP68 선택법</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">LED 드라이버 BIS 인증: 인도 수입 가이드</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ko']['blog-4'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
+
+<h1>LED 드라이버 BIS 인증: 인도 수입업자가 알아야 할 것</h1>
+<div class="meta">규제 &middot; 2026년 5월 &middot; 약 7분 소요</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof-md.avif 1200w, /images/product-waterproof.avif 1024w">
+<source type="image/webp" srcset="/images/product-waterproof-md.webp 1200w, /images/product-waterproof.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-waterproof.jpg" alt="인도 시장용 BIS 인증 LED 전원" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>2018년부터 인도는 전자 제품에 대한 의무 <strong>BIS(인도표준국)</strong> 등록 요건을 점진적으로 확대해 왔습니다. LED 전원을 인도로 수입하는 사람에게 BIS는 더 이상 선택이 아니라 세관 관문입니다.</p>
+
+<p>이 가이드는 BIS가 주문에 무엇을 의미하는지, 절차가 어떻게 진행되는지, 왜 일정에 영향을 미치는지, 그리고 CHUGAO처럼 BIS 인증을 받은 공장과 협력하면 수주 분의 서류 작업을 어떻게 절약할 수 있는지 설명합니다.</p>
+
+<h2>BIS란?</h2>
+
+<p>BIS는 인도의 국가표준기구입니다. 의무등록제도(CRS)에 따라 대상 카테고리 제품은 인도에서 수입 또는 판매되기 전에 BIS 등록 마크를 부착해야 합니다.</p>
+
+<p>LED 스위칭 전원에 적용되는 표준은 <strong>IS 13252(Part 1): 정보기술기기——안전——일반 요구사항</strong>이며, 다음을 포함합니다.</p>
+<ul>
+<li>전기 안전 및 절연</li>
+<li>온도 상승 한계</li>
+<li>감전 보호</li>
+<li>방화 인클로저 요구사항</li>
+<li>부품 안전 정격</li>
+</ul>
+
+<div class="highlight">
+<strong>핵심:</strong> LED 드라이버에 BIS 등록이 없으면 인도 세관은 화물을 거부하거나 통관을 지연시키거나, 귀하의 비용으로 재수출을 요구할 수 있습니다.
+</div>
+
+<h2>BIS 대 CE / RoHS</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">항목</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CE / RoHS</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">BIS(인도)</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>관리 기관</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">EU 집행위／자기 선언</td><td style="padding:10px 14px;border:1px solid var(--b)">인도 정부(BIS)</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>의무인가?</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">EU 시장에서 필수</td><td style="padding:10px 14px;border:1px solid var(--b)">인도 수입 시 필수</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>시험 장소</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">공장 실험실 또는 제3자</td><td style="padding:10px 14px;border:1px solid var(--b)">인도 내 BIS 인정 실험실</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>일반 기간</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">모델당 2-4주</td><td style="padding:10px 14px;border:1px solid var(--b)">모델당 4-8주</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>유효성</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">만료 없음(자기 선언)</td><td style="padding:10px 14px;border:1px solid var(--b)">2년, 갱신 가능</td></tr>
+</tbody>
+</table>
+
+<h2>BIS 절차</h2>
+
+<ol>
+<li><strong>신청:</strong> 제조사(또는 권한을 위임받은 대리인)가 포털을 통해 BIS에 온라인 신청하며, 기술 문서와 인정 실험실의 시험 성적서를 첨부합니다.</li>
+<li><strong>공장 심사:</strong> BIS는 품질 시스템과 생산 일관성을 검증하기 위해 제조 시설을 감사할 수 있습니다.</li>
+<li><strong>시험:</strong> 샘플은 IS 13252(Part 1)에 따라 시험됩니다. 절연 내력, 온도, 습도, 기계적 스트레스 시험이 포함됩니다.</li>
+<li><strong>라이선스 부여:</strong> 통과하면 BIS는 제품 라벨과 포장에 표시되는 등록 번호를 발급합니다.</li>
+<li><strong>사후 감독:</strong> 등록 후 BIS는 지속적 준수를 확인하기 위해 정기적인 후속 감사를 실시합니다.</li>
+</ol>
+
+<h2>이것이 일정에 영향을 주는 이유</h2>
+
+<p>인도 시장용 LED 드라이버를 주문한다면 두 가지 길이 있습니다.</p>
+
+<ul>
+<li><strong>경로 A——BIS 미인증 공장에서 주문:</strong> BIS를 직접 처리합니다. 화물이 출하되기 전에 4-8주 시험 + 신청 기간을 예상하십시오. 또한 실험실 비용(복잡도에 따라 모델당 500-2000달러).</li>
+<li><strong>경로 B——BIS 인증 공장에서 주문:</strong> 공장이 이미 해당 모델 시리즈의 BIS 라이선스를 보유하고 있습니다. 주문은 즉시 출하됩니다. BIS 인증서 사본을 선적 서류와 함께 받습니다.</li>
+</ul>
+
+<p>CHUGAO는 핵심 LED 드라이버 모델에 대한 BIS 등록을 보유하고 있습니다. 인도행 주문을 하시면 BIS 인증서 PDF를 선적 서류에 포함합니다——추가 대기 없음.</p>
+
+<h2>인도 구매자를 위한 실무 팁</h2>
+
+<ul>
+<li><strong>BIS 적용 범위를 일찍 확인하십시오.</strong> 모든 모델이 등록되어 있지는 않습니다. SKU 목록을 확정하기 전에 어떤 SKU가 유효한 BIS 상태인지 문의하십시오.</li>
+<li><strong>HS 코드 분류를 확인하십시오.</strong> LED 전원은 일반적으로 HS 8504.40(전자 안정기／변환기)에 분류됩니다. 규칙이 바뀌므로 관세사와 확인하십시오.</li>
+<li><strong>인도 항구의 BIS 서류 심사에 2-3일을 추가로 확보하십시오.</strong> 서류가 정확해도 일부 항구는 전자 제품 화물을 표본 검사합니다.</li>
+<li><strong>라벨 요건:</strong> BIS 등록 제품은 본체와 외부 카톤에 BIS 표준 마크를 표시해야 합니다. 주문에 “인도 목적지”를 명시하시면 당사가 이 라벨링을 처리합니다.</li>
+</ul>
+
+<div class="cta-box">
+<h3>인도 시장용 LED 드라이버를 조달 중이십니까?</h3>
+<p>대상 모델, 수량, 목적지 항구를 알려 주십시오. 1시간 이내에 BIS 상태를 확인하고 모든 인증서를 선적에 포함합니다.</p>
+<a href="/#inquiry" class="btn">인도 대응 견적 요청</a>
+</div>
+
+
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">인도행 선적 준비가 된 BIS 등록 모델.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">인도 라벨 요건을 충족하는 BIS 적용 전원.</span></a></div></section>
+
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 기술</span><span class="rel-title">3단계로 올바른 LED 전원 고르기</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP20·IP65·IP67·IP68 선택법</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">업계 동향</span><span class="rel-title">2026 LED 시장: 우리가 보고 있는 것</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">기술 심층</span><span class="rel-title">LED 드라이버 수명: MTBF, L70 및 실제 수명</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">2026 LED 시장: 우리가 보고 있는 것</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">LED 드라이버 수명: MTBF, L70 및 실제 수명</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['ko']['blog-5'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
+
+<h1>LED 드라이버 수명: MTBF, L70 및 실제 수명</h1>
+<div class="meta">기술 심층 &middot; 2026년 4월 &middot; 약 8분 소요</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
+<source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-indoor.jpg" alt="긴 수명의 실내 LED 드라이버" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>데이터시트에는 “50,000시간”이라고 적혀 있습니다. 계산해 보면 연속 운전으로 <strong>5.7년</strong>입니다. 그런데 왜 어떤 설치 현장은 2-3년 만에 드라이버를 교체해야 할까요?</p>
+
+<p>답은 정격 수명과 실제 수명은 다르다는 것입니다. 이 글은 그 숫자들이 실제로 무엇을 의미하는지, 무엇이 드라이버를 일찍 고장내는지, 프로젝트의 예상 사용 수명에 맞는 사양을 어떻게 고를지 설명합니다.</p>
+
+<h2>중요한 세 가지 지표</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">지표</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">측정 대상</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">일반적인 값</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">평균 고장 간격——모집단에서 고장 사이의 통계적 평균 시간</td><td style="padding:10px 14px;border:1px solid var(--b)">50,000-100,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">출력이 초기값의 70% 또는 80%로 떨어지는 시간</td><td style="padding:10px 14px;border:1px solid var(--b)">30,000-50,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>보증 기간</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">결함에 대한 제조사 보증</td><td style="padding:10px 14px;border:1px solid var(--b)">2-5년</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>핵심 통찰:</strong> 50,000시간의 L70 정격은 시험 조건에서 50,000시간 후에도 드라이버가 초기 출력의 최소 70%를 유지한다는 뜻입니다. 모든 개체가 고장 나기까지 50,000시간을 간다는 뜻은 아닙니다.
+</div>
+
+<h2>드라이버가 조기 고장하는 이유</h2>
+
+<h3>1. 열이 최대 원인</h3>
+<p>정격 동작 온도보다 10&deg;C 높을 때마다 전해 커패시터 수명은 대략 절반이 됩니다. 밀폐 등기구 내부에 장착한 IP20 실내 드라이버는 주변보다 20&deg;C 더 뜨겁게 동작하기 쉽습니다. 주변이 35&deg;C(여름에 흔함)라면 내부 부품 온도는 75-85&deg;C에 달해 일반적인 설계점 60&deg;C를 훨씬 웃돕니다.</p>
+
+<ul>
+<li><strong>IP67 방수 모델:</strong> 금속 케이스 + 실리콘 포팅으로 방열이 우수합니다. -30 ~ +60&deg;C 정격. 일반적인 수명: 50,000h.</li>
+<li><strong>IP20 실내 모델:</strong> 등기구 통기에 의존합니다. 밀폐 하우징에서는 정격보다 40-60% 짧은 수명을 예상하십시오.</li>
+<li><strong>어댑터:</strong> 플라스틱 인클로저가 열을 더 가둡니다. 일반적인 수명: 30,000h.</li>
+</ul>
+
+<h3>2. 전압 스파이크와 서지</h3>
+<p>계통 전압 변동(특히 신흥 시장)은 입력 커패시터와 MOV에 스트레스를 줍니다. AC 190-264V 정격 드라이버는 280V 과도 현상을 한두 번은 견딜 수 있지만, 반복되는 서지는 정상 마모보다 빠르게 부품을 열화시킵니다.</p>
+
+<h3>3. 정격 부하 근처 운전</h3>
+<p>정격 부하의 90-100%에서 출력 커패시터를 통과하는 리플 전류가 증가합니다. 이는 더 많은 열을 발생시키고 노화를 가속합니다. CHUGAO에서 권장하는 규칙:</p>
+
+<div class="highlight">
+<strong>부하 와트수 &times; 1.25 = 드라이버 최소 정격.</strong><br>
+드라이버를 95%가 아니라 70-80% 용량으로 운전하면 실효 수명을 30-50% 늘릴 수 있습니다.
+</div>
+
+<h2>용도별로 필요한 것</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">용도</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">권장 드라이버</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">예상 사용 수명</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">이유</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">소매 사인(1일 8-12시간)</td><td style="padding:10px 14px;border:1px solid var(--b)">어댑터／실내 IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12년</td><td style="padding:10px 14px;border:1px solid var(--b)">하루 가동 시간이 짧아 단위 수명의 짧음을 상쇄</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">옥외 파사드 조명(1일 12시간 이상)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 방수</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14년</td><td style="padding:10px 14px;border:1px solid var(--b)">밀봉 포팅이 습도와 온도 변화를 감당</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">산업 24/7(창고)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65 방우 또는 산업용 CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7년</td><td style="padding:10px 14px;border:1px solid var(--b)">연속 고온 운전이 마모를 가속</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">해양／분수</td><td style="padding:10px 14px;border:1px solid var(--b)">IP68 등급 모델</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12년</td><td style="padding:10px 14px;border:1px solid var(--b)">완전 침수 등급, 염수 분무 시험 완료</td></tr>
+</tbody>
+</table>
+
+<h2>CHUGAO의 시험 방식</h2>
+
+<p>모든 CHUGAO 드라이버는 출하 전 <strong>48시간 번인 시험</strong>을 거칩니다. 불합격품은 폐기되며 공장을 떠나지 않습니다. 이 출하 전 스크리닝이 초기 고장(욕조 곡선의 조기 고장 구간)을 잡아냅니다.</p>
+
+<p>500개를 초과하는 OEM 주문의 경우, 발주서에 명시하면 추가 비용 없이 연장 번인(72-168시간) 옵션을 제공합니다.</p>
+
+<h2>빠른 결정 가이드</h2>
+
+<ol>
+<li><strong>하루 가동 시간?</strong> 소매 8시간과 산업 24시간은 전혀 다릅니다. 목표 프로젝트 수명에 하루 시간을 곱해 총 시간 요구량을 구하십시오.</li>
+<li><strong>주변 온도?</strong> 40&deg;C를 초과해 10&deg;C마다 수명이 약 50% 줄어듭니다. 모델 선정에 반영하십시오.</li>
+<li><strong>통기?</strong> 밀폐 기구는 IP67 이상이 필요합니다. 통기되는 하우징은 IP20/65로 가능합니다.</li>
+<li><strong>여유?</strong> 항상 25%를 더하십시오. 고장품 교체를 위한 현장 방문에 비하면 60W와 100W 드라이버의 가격 차이는 미미합니다.</li>
+<li><strong>예비 재고?</strong> 24/7 설치에는 5-10%의 예비 드라이버를 보유하십시오. 긴급 배송보다 저렴합니다.</li>
+</ol>
+
+<div class="cta-box">
+<h3>어떤 드라이버가 수명 요구에 맞는지 모르시겠습니까?</h3>
+<p>용도, 하루 가동 시간, 주변 조건을 알려 주십시오. 설치에 맞는 시리즈와 현실적인 기대 수명을 추천해 드립니다.</p>
+<a href="/#inquiry" class="btn">수명 맞춤 추천 받기</a>
+</div>
+
+
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">모든 정격에 MTBF 데이터를 제공하는 장수명 어댑터.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 드라이버 50-400W</span><span class="pc-desc">상업 및 건축 기구용 L70 등급 드라이버.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">옥외 사용 수명 연장을 위한 포팅 밀봉.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">50,000시간 이상 옥외 운전을 위해 설계된 견고한 드라이버.</span></a></div></section>
+
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 기술</span><span class="rel-title">3단계로 올바른 LED 전원 고르기</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">기술 가이드</span><span class="rel-title">IP20·IP65·IP67·IP68 선택법</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">업계 동향</span><span class="rel-title">2026 LED 시장: 우리가 보고 있는 것</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">규제</span><span class="rel-title">LED 드라이버 BIS 인증: 인도 수입 가이드</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">LED 드라이버 BIS 인증: 인도 수입 가이드</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">IP67 vs IP65 LED 드라이버: 어떤 등급이 필요하십니까?</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['ko']['blog-9'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
+
+<h1>정전압 vs 정전류 LED 드라이버: 어느 것이 필요하십니까?</h1>
+<div class="meta">기술 가이드 &middot; 2026년 9월 &middot; 약 8분 소요</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="정전압 및 정전류 LED 드라이버를 나란히 놓은 사진" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>LED 기구가 아예 켜지느냐를 결정하는 두 단어가 있습니다——<strong>정전압</strong>과 <strong>정전류</strong>. 이 둘을 바꿔 쓰면 LED는 켜지지 않거나 며칠 만에 타 버립니다. 그런데 대부분의 구매자는 기구가 고장 난 뒤에야 이 용어를 접합니다. 그래서 모든 사양서 맨 앞에 인쇄되었으면 하는 짧은 설명을 여기 정리합니다.</p>
+
+<h2>“정전압”의 의미</h2>
+
+<p>정전압(CV) 드라이버는 출력 전압을 일정하게 유지하며——보통 12V, 24V, 36V, 48V——얼마의 전류를 끌어올지는 기구가 결정합니다. LED 스트립, 사인 모듈, 그리고 대부분의 “12V/24V” 제품은 자체 전류 제한 저항을 갖고 있어 고정 전압 공급이 필요합니다. 장식·건축·사인 작업의 대다수에서 이것이 기본입니다.</p>
+
+<div class="highlight">
+<strong>경험 법칙:</strong> 제품 라벨에 <strong>12V</strong> 또는 <strong>24V</strong>라고 되어 있으면 정전압 드라이버가 필요합니다. 전압은 드라이버가 정하고, 전류는 스트립이 정합니다.
+</div>
+
+<h2>“정전류”의 의미</h2>
+
+<p>정전류(CC) 드라이버는 전류를 일정하게 유지하며——보통 350mA, 500mA, 700mA, 1050mA, 1500mA——LED의 순방향 전압이 온도에 따라 변해도 그 전류를 일정하게 유지하도록 전압을 바꿉니다. 나전 고출력 LED(다운라이트, 투광등, 가로등, 하이베이 모듈)는 기판상 안정화가 없어 고정 전압원에 연결하면 폭주 전류를 끌어와 스스로를 태웁니다. CC 드라이버가 필요합니다.</p>
+
+<p>라벨에 <strong>350 mA</strong> 또는 <strong>700 mA</strong>라고 되어 있으면 정전류가 필요합니다. 기구 사양을 알려 주시면 맞춰 드립니다.</p>
+
+<h2>두 가지 나란히 비교</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">속성</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">정전압</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">정전류</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">유지하는 출력</td><td style="padding:10px 14px;border:1px solid var(--b)">전압(12/24/36/48V)</td><td style="padding:10px 14px;border:1px solid var(--b)">전류(350-1500mA)</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">구동 대상</td><td style="padding:10px 14px;border:1px solid var(--b)">스트립, 모듈, 사인</td><td style="padding:10px 14px;border:1px solid var(--b)">나전 고출력 LED, 다운라이트</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">기판상 안정화</td><td style="padding:10px 14px;border:1px solid var(--b)">LED 제품 쪽</td><td style="padding:10px 14px;border:1px solid var(--b)">드라이버 쪽</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">CHUGAO 대표 라인</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/adapters/">어댑터 5-200W</a>, <a href="/products/indoor/">실내 50-400W</a></td><td style="padding:10px 14px;border:1px solid var(--b)">실내／IP67(요청 시)</td></tr>
+</tbody>
+</table>
+
+<h2>혼용하면 기구가 망가지는 이유</h2>
+
+<ol>
+<li><strong>정전압 드라이버를 정전류 LED에</strong>——LED는 끌어올 수 있는 만큼 전류를 끌어와 발열하고 타 버립니다. 가장 흔한 것은 12V 스트립용 전원을 350mA 다운라이트에 재사용하는 경우입니다.</li>
+<li><strong>정전류 드라이버를 정전압 스트립에</strong>——드라이버는 스트립의 저항으로 제한할 수 없는 전류를 밀어 넣어, 스트립이 과열되거나 드라이버가 고장 납니다. 어느 쪽이든 불이 들어오지 않습니다.</li>
+</ol>
+
+<p>무엇이든 전원을 넣기 전에 반드시 기구 라벨을 읽으십시오. 조금이라도 의문이 있으면 라벨 사진을 보내 주시면 어떤 타입이 필요한지 알려 드립니다.</p>
+
+<h2>드라이버 하나로 둘 다 가능합니까?</h2>
+
+<p>일부 프로그래머블 또는 “듀얼 모드” 드라이버는 고정 출력에서 CV 또는 CC로 설정할 수 있지만, 더 비싸고 거의 필요하지 않습니다. 표준 설치에서는 올바른 타입을 한 번 고르면 현장 재방문을 피할 수 있습니다. 당사의 <a href="/products/indoor/">실내 드라이버</a>와 <a href="/products/ip67/">IP67 드라이버</a>는 고출력 기구 작업용으로 100W부터 정전류 버전을 제공합니다.</p>
+
+<h2>필요한 정보</h2>
+
+<p>기구 라벨(볼트 단위 전압 또는 밀리암페어 단위 전류), 총 와트수, 설치 위치, 수량을 보내 주십시오. 정전압인지 정전류인지 확인하고 정확한 모델을 견적해 드립니다——그리고 더 저렴한 기성품으로 정말 충분한 경우도 알려 드립니다.</p>
+
+<div class="cta-box">
+<h3>기구가 CV인지 CC인지 확실하지 않으십니까?</h3>
+<p>LED 라벨 사진을 보내 주십시오——볼트 단위 전압 또는 밀리암페어 단위 전류. 타입을 확인하고 정확한 모델을 견적해 드립니다.</p>
+<a href="/#inquiry" class="btn">CV인지 CC인지 확인</a>
+</div>
+
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 살펴보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">스트립, 모듈, 사인용 소형 12V/24V 유닛.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 드라이버 50-400W</span><span class="pc-desc">천장등과 패널등용 액티브 PFC 정전압.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 방수 드라이버 10-400W</span><span class="pc-desc">습윤·해안 현장용 완전 포팅, 염수 분무 시험 완료.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 방우 드라이버 100-600W</span><span class="pc-desc">사인과 반옥외 설치용 통기 금속 케이스.</span></a></div></section>
+
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">더 많은 현장 노트</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 기술</span><span class="rel-title">3단계로 올바른 LED 전원 고르기</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">구매 가이드</span><span class="rel-title">12V 또는 24V: LED 전원 어떻게 선택할까</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">기술 가이드</span><span class="rel-title">LED 전원 용량 정하기: 와트·여유·돌입전류</span></a><a class="rel-card" href="/blog-10/"><span class="rel-cat">기술 가이드</span><span class="rel-title">LED 드라이버 조광 설명: 0-10V, PWM, DALI &amp; TRIAC</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">LED 전원 용량 정하기: 와트·여유·돌입전류</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">다음 글</span><span class="pn-t">LED 드라이버 조광 설명: 0-10V, PWM, DALI &amp; TRIAC</span></a></nav>
+</main>"""

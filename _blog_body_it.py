@@ -366,3 +366,283 @@ BLOG_BODY['it']['blog-3'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">IP20 vs IP65 vs IP67 vs IP68</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Certificazione BIS per driver LED: guida all'import in India</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['it']['blog-4'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Torna alle note dal campo</a>
+
+<h1>Certificazione BIS per driver LED: cosa devono sapere gli importatori in India</h1>
+<div class="meta">Normativa &middot; maggio 2026 &middot; 7 min di lettura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof-md.avif 1200w, /images/product-waterproof.avif 1024w">
+<source type="image/webp" srcset="/images/product-waterproof-md.webp 1200w, /images/product-waterproof.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-waterproof.jpg" alt="Alimentatori LED certificati BIS per il mercato indiano" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>Dal 2018 l'India ha progressivamente ampliato l'obbligo di registrazione <strong>BIS (Bureau of Indian Standards)</strong> per i prodotti elettronici. Per chi importa alimentatori LED in India, il BIS non &egrave; pi&ugrave; opzionale — &egrave; una porta doganale.</p>
+
+<p>Questa guida spiega cosa significa il BIS per il tuo ordine, come funziona il processo, perch&eacute; conta per le tue tempistiche e come lavorare con una fabbrica certificata BIS come CHUGAO ti fa risparmiare settimane di burocrazia.</p>
+
+<h2>Che cos'&egrave; il BIS?</h2>
+
+<p>Il BIS &egrave; l'ente nazionale di normazione indiano. Nell'ambito del Compulsory Registration Scheme (CRS), i prodotti delle categorie interessate devono recare il marchio di registrazione BIS prima di poter essere importati o venduti in India.</p>
+
+<p>Per gli alimentatori switching LED, lo standard applicabile &egrave; <strong>IS 13252 (Part 1): Apparecchiature per la tecnologia dell'informazione — Sicurezza — Requisiti generali</strong>, che copre:</p>
+<ul>
+<li>Sicurezza elettrica e isolamento</li>
+<li>Limiti di aumento di temperatura</li>
+<li>Protezione contro le scosse elettriche</li>
+<li>Requisiti dell'involucro antincendio</li>
+<li>Valori di sicurezza dei componenti</li>
+</ul>
+
+<div class="highlight">
+<strong>Il punto chiave:</strong> se il tuo driver LED non ha la registrazione BIS, la dogana indiana pu&ograve; respingere la spedizione, ritardare lo sdoganamento o richiedere la riesportazione a tue spese.
+</div>
+
+<h2>BIS vs CE / RoHS</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Aspetto</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CE / RoHS</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">BIS (India)</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Ente di governo</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Commissione UE / autodichiarazione</td><td style="padding:10px 14px;border:1px solid var(--b)">Governo indiano (BIS)</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Obbligatorio?</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">S&igrave; per il mercato UE</td><td style="padding:10px 14px;border:1px solid var(--b)">S&igrave; per l'import in India</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Luogo dei test</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Laboratorio di fabbrica o terzi</td><td style="padding:10px 14px;border:1px solid var(--b)">Laboratorio riconosciuto BIS in India</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Tempi tipici</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">2-4 settimane per modello</td><td style="padding:10px 14px;border:1px solid var(--b)">4-8 settimane per modello</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Validit&agrave;</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Nessuna scadenza (autodichiarata)</td><td style="padding:10px 14px;border:1px solid var(--b)">2 anni, rinnovabile</td></tr>
+</tbody>
+</table>
+
+<h2>Come funziona il processo BIS</h2>
+
+<ol>
+<li><strong>Domanda:</strong> il produttore (o il suo rappresentante autorizzato) invia una domanda online al BIS tramite il portale, con documentazione tecnica e rapporti di prova di un laboratorio riconosciuto.</li>
+<li><strong>Ispezione in fabbrica:</strong> il BIS pu&ograve; verificare lo stabilimento produttivo per accertare i sistemi di qualit&agrave; e la coerenza produttiva.</li>
+<li><strong>Test:</strong> i campioni sono testati secondo IS 13252 (Part 1). Include prove di rigidit&agrave; dielettrica, temperatura, umidit&agrave; e sollecitazione meccanica.</li>
+<li><strong>Concessione della licenza:</strong> superato il test, il BIS rilascia un numero di registrazione che compare sull'etichetta del prodotto e sulla confezione.</li>
+<li><strong>Sorveglianza:</strong> dopo la registrazione, il BIS effettua audit periodici di follow-up per garantire la conformit&agrave; continuativa.</li>
+</ol>
+
+<h2>Perch&eacute; questo incide sulle tue tempistiche</h2>
+
+<p>Se ordini driver LED per il mercato indiano, hai due strade:</p>
+
+<ul>
+<li><strong>Percorso A — ordine da una fabbrica non BIS:</strong> gestisci il BIS da solo. Prevedi 4-8 settimane di test + domanda prima che la merce possa partire. In pi&ugrave; le tariffe di laboratorio (500-2000 dollari per modello a seconda della complessit&agrave;).</li>
+<li><strong>Percorso B — ordine da una fabbrica certificata BIS:</strong> la fabbrica detiene gi&agrave; la licenza BIS per la serie di modelli. Il tuo ordine parte subito. Ricevi la copia del certificato BIS con i documenti di spedizione.</li>
+</ul>
+
+<p>CHUGAO detiene la registrazione BIS per i nostri modelli core di driver LED. Quando effettui un ordine destinato all'India, includiamo il PDF del certificato BIS nel tuo dossier di spedizione — senza attese extra.</p>
+
+<h2>Consigli pratici per gli acquirenti in India</h2>
+
+<ul>
+<li><strong>Conferma presto la copertura BIS.</strong> Non tutti i modelli possono essere registrati. Chiedici quali SKU hanno uno stato BIS attivo prima di finalizzare la lista SKU.</li>
+<li><strong>Verifica la classificazione del codice HS.</strong> Gli alimentatori LED rientrano tipicamente nell'HS 8504.40 (reattori/convertitori elettronici). Conferma con il tuo spedizioniere doganale, perch&eacute; le regole cambiano.</li>
+<li><strong>Prevedi 2-3 giorni in pi&ugrave; per la revisione dei documenti BIS nei porti indiani.</strong> Anche con i documenti corretti, alcuni porti eseguono controlli a campione sulle spedizioni di elettronica.</li>
+<li><strong>Requisito di etichettatura:</strong> i prodotti registrati BIS devono mostrare il BIS Standard Mark sull'unit&agrave; e sul cartone esterno. Ci occupiamo noi di questa etichettatura quando specifichi &quot;destinazione India&quot; sull'ordine.</li>
+</ul>
+
+<div class="cta-box">
+<h3>Stai acquistando driver LED per il mercato indiano?</h3>
+<p>Dicci i modelli target, la quantit&agrave; e il porto di destinazione. Confermiamo lo stato BIS entro 1 ora e includiamo tutti i certificati con la spedizione.</p>
+<a href="/#inquiry" class="btn">Richiedi un preventivo India-ready</a>
+</div>
+
+
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Scopri i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver waterproof IP67 10-400W</span><span class="pc-desc">Modelli registrati BIS pronti per spedizioni destinate all'India.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver rainproof IP65 100-600W</span><span class="pc-desc">Alimentatori coperti da BIS con etichettatura conforme all'India.</span></a></div></section>
+
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre note dal campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Scegliere l'alimentatore LED giusto in 3 passi</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Tendenze di settore</span><span class="rel-title">Mercato LED 2026: cosa stiamo vedendo</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Approfondimento</span><span class="rel-title">Durata dei driver LED: MTBF, L70 e vita reale</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Mercato LED 2026: cosa stiamo vedendo</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Durata dei driver LED: MTBF, L70 e vita reale</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['it']['blog-5'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Torna alle note dal campo</a>
+
+<h1>Durata dei driver LED: MTBF, L70 e quanto durano davvero</h1>
+<div class="meta">Approfondimento tecnico &middot; aprile 2026 &middot; 8 min di lettura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
+<source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-indoor.jpg" alt="Driver LED indoor a lunga durata" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>Il datasheet dice &quot;50.000 ore&quot;. Fai il calcolo: sono <strong>5,7 anni</strong> di funzionamento continuo. Allora perch&eacute; alcune installazioni richiedono la sostituzione del driver dopo appena 2-3 anni?</p>
+
+<p>La risposta &egrave; che la durata nominale e la durata reale sono cose diverse. Questo articolo spiega cosa significano davvero quei numeri, cosa uccide prematuramente i driver e come scegliere la specifica giusta per la vita di servizio prevista del tuo progetto.</p>
+
+<h2>Le tre metriche che contano</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Metrica</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Cosa misura</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Valore tipico</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Tempo medio tra guasti — tempo medio statistico tra guasti in una popolazione</td><td style="padding:10px 14px;border:1px solid var(--b)">50.000–100.000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Ore fino a quando l'uscita scende al 70% o 80% del valore iniziale</td><td style="padding:10px 14px;border:1px solid var(--b)">30.000–50.000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>Periodo di garanzia</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">Garanzia del produttore contro i difetti</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 anni</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>Intuizione chiave:</strong> una classificazione L70 di 50.000 ore significa che il driver mantiene almeno il 70% dell'uscita originale dopo 50.000 ore in condizioni di test. Non significa che ogni unit&agrave; funzioner&agrave; per 50.000 ore prima di guastarsi.
+</div>
+
+<h2>Perch&eacute; i driver si guastano presto</h2>
+
+<h3>1. Il calore &egrave; il killer n.1</h3>
+<p>Ogni 10&deg;C sopra la temperatura operativa nominale dimezza all'incirca la vita dei condensatori elettrolitici. Un driver indoor IP20 montato dentro un apparecchio sigillato pu&ograve; facilmente lavorare 20&deg;C pi&ugrave; caldo dell'ambiente. Se l'ambiente &egrave; a 35&deg;C (comune in estate), le temperature dei componenti interni possono raggiungere 75-85&deg;C — ben oltre il punto di progetto tipico di 60&deg;C.</p>
+
+<ul>
+<li><strong>Unit&agrave; waterproof IP67:</strong> migliore dissipazione del calore grazie a custodia metallica + potting siliconico. Nominale da -30 a +60&deg;C. Durata tipica: 50.000h.</li>
+<li><strong>Unit&agrave; indoor IP20:</strong> dipendono dalla ventilazione dell'apparecchio. In custodie sigillate, aspettati una vita pi&ugrave; corta del 40-60% rispetto al nominale.</li>
+<li><strong>Adattatori:</strong> la custodia in plastica trattiene pi&ugrave; calore. Durata tipica: 30.000h.</li>
+</ul>
+
+<h3>2. Picchi di tensione e sovratensioni</h3>
+<p>Le fluttuazioni della tensione di rete (soprattutto nei mercati in via di sviluppo) stressano i condensatori di ingresso e i MOV. Un driver nominale AC 190-264V pu&ograve; sopravvivere a un transitorio di 280V una o due volte, ma sovratensioni ripetute degradano i componenti pi&ugrave; velocemente della normale usura.</p>
+
+<h3>3. Funzionamento vicino al pieno carico</h3>
+<p>Al 90-100% del carico nominale, la corrente di ripple attraverso i condensatori di uscita aumenta. Questo genera pi&ugrave; calore e accelera l'invecchiamento. La regola che consigliamo in CHUGAO:</p>
+
+<div class="highlight">
+<strong>Wattaggio del carico &times; 1,25 = potenza minima del driver.</strong><br>
+Far lavorare un driver al 70-80% della capacit&agrave; invece del 95% pu&ograve; estendere la vita effettiva del 30–50%.
+</div>
+
+<h2>Cosa serve alle diverse applicazioni</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Applicazione</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Driver consigliato</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Vita di servizio prevista</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Perch&eacute;</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Insegne retail (8-12 ore/giorno)</td><td style="padding:10px 14px;border:1px solid var(--b)">Adattatore / Indoor IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 anni</td><td style="padding:10px 14px;border:1px solid var(--b)">Le poche ore giornaliere compensano la minore durata per unit&agrave;</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Illuminazione di facciata esterna (12+ ore/giorno)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 Waterproof</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 anni</td><td style="padding:10px 14px;border:1px solid var(--b)">Il potting sigillato gestisce umidit&agrave; e sbalzi di temperatura</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Industriale 24/7 (magazzino)</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65 Rainproof o CGS industriale</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 anni</td><td style="padding:10px 14px;border:1px solid var(--b)">Il funzionamento continuo ad alta temperatura accelera l'usura</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Marino / fontane</td><td style="padding:10px 14px;border:1px solid var(--b)">Unit&agrave; con grado IP68</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 anni</td><td style="padding:10px 14px;border:1px solid var(--b)">Grado di immersione totale, testato con nebbia salina</td></tr>
+</tbody>
+</table>
+
+<h2>Come testiamo in CHUGAO</h2>
+
+<p>Ogni driver CHUGAO viene sottoposto a un <strong>test di burn-in di 48 ore</strong> prima della spedizione. Le unit&agrave; non conformi vengono scartate — non lasciano il reparto produttivo. Questo screening pre-spedizione intercetta i guasti di mortalit&agrave; infantile (la porzione di guasti precoci della curva a vasca da bagno).</p>
+
+<p>Per ordini OEM superiori a 500 pezzi, offriamo opzioni di burn-in esteso (72-168 ore) senza costi aggiuntivi se specificato nel tuo ordine.</p>
+
+<h2>Guida decisionale rapida</h2>
+
+<ol>
+<li><strong>Tempo di funzionamento giornaliero?</strong> 8 ore nel retail vs 24 ore nell'industriale cambia tutto. Moltiplica la vita target del progetto per le ore giornaliere per ottenere il fabbisogno totale in ore.</li>
+<li><strong>Temperatura ambiente?</strong> Ogni 10&deg;C oltre i 40&deg;C riduce la vita di ~50%. Consideralo nella scelta del modello.</li>
+<li><strong>Ventilazione?</strong> Gli apparecchi sigillati richiedono IP67 o superiore. Le custodie ventilate possono usare IP20/65.</li>
+<li><strong>Margine?</strong> Aggiungi sempre il 25%. La differenza di costo tra un driver da 60W e uno da 100W &egrave; piccola rispetto a un intervento in loco per sostituire un'unit&agrave; guasta.</li>
+<li><strong>Scorta di ricambi?</strong> Per installazioni 24/7, tieni il 5-10% di driver di scorta. Costa meno della spedizione d'emergenza.</li>
+</ol>
+
+<div class="cta-box">
+<h3>Non sei sicuro di quale driver corrisponda alle tue esigenze di durata?</h3>
+<p>Dicci la tua applicazione, il tempo di funzionamento giornaliero e le condizioni ambientali. Ti consigliamo la serie giusta con un'aspettativa di vita realistica per la tua installazione specifica.</p>
+<a href="/#inquiry" class="btn">Richiedi un consiglio abbinato alla durata</a>
+</div>
+
+
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Scopri i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adattatori LED 5-200W</span><span class="pc-desc">Adattatori a lunga durata con dati MTBF per ogni potenza.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Driver LED indoor 50-400W</span><span class="pc-desc">Driver con classificazione L70 per apparecchi commerciali e architetturali.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver waterproof IP67 10-400W</span><span class="pc-desc">Pottati e sigillati per una lunga vita di servizio all'aperto.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver rainproof IP65 100-600W</span><span class="pc-desc">Driver robusti progettati per oltre 50.000 ore di funzionamento all'aperto.</span></a></div></section>
+
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre note dal campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Scegliere l'alimentatore LED giusto in 3 passi</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">IP20 vs IP65 vs IP67 vs IP68</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">Tendenze di settore</span><span class="rel-title">Mercato LED 2026: cosa stiamo vedendo</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">Normativa</span><span class="rel-title">Certificazione BIS per driver LED: guida all'import in India</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Certificazione BIS per driver LED: guida all'import in India</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Driver LED IP67 vs IP65: quale grado ti serve?</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['it']['blog-9'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Torna alle note dal campo</a>
+
+<h1>Driver LED a tensione costante o a corrente costante: quale ti serve?</h1>
+<div class="meta">Guida tecnica &middot; settembre 2026 &middot; 8 min di lettura</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Driver LED a tensione costante e a corrente costante affiancati" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>Due parole decidono se un apparecchio LED funziona o no: <strong>tensione costante</strong> e <strong>corrente costante</strong>. Invertile e i LED non si accendono affatto o si bruciano in pochi giorni. Eppure la maggior parte degli acquirenti incontra questi termini solo dopo che un apparecchio si &egrave; guastato, quindi ecco la versione breve che vorremmo fosse stampata in testa a ogni datasheet.</p>
+
+<h2>Cosa significa &quot;tensione costante&quot;</h2>
+
+<p>Un driver a tensione costante (CV) mantiene stabile la tensione d'uscita — tipicamente 12V, 24V, 36V o 48V — e lascia che sia l'apparecchio a decidere quanta corrente assorbire. Le strisce LED, i moduli per insegne e la maggior parte dei prodotti &quot;12V/24V&quot; hanno gi&agrave; le proprie resistenze di limitazione, quindi richiedono un'alimentazione a tensione fissa. &Egrave; la scelta predefinita per la stragrande maggioranza dei lavori decorativi, architetturali e per insegne.</p>
+
+<div class="highlight">
+<strong>Regola empirica:</strong> se l'etichetta del prodotto dice <strong>12V</strong> o <strong>24V</strong>, vuole un driver a tensione costante. Il driver fissa i volt; la striscia fissa gli ampere.
+</div>
+
+<h2>Cosa significa &quot;corrente costante&quot;</h2>
+
+<p>Un driver a corrente costante (CC) mantiene stabile la corrente — di solito 350mA, 500mA, 700mA, 1050mA o 1500mA — e varia la tensione per mantenerla costante mentre la tensione diretta del LED cambia con la temperatura. I LED nudi ad alta potenza (faretti, proiettori, lampioni, moduli high-bay) non hanno regolazione a bordo, quindi assorbirebbero una corrente incontrollata da una sorgente a tensione fissa e si brucerebbero. Serve un driver CC.</p>
+
+<p>Se l'etichetta dice <strong>350 mA</strong> o <strong>700 mA</strong>, vuole corrente costante. Dicci le specifiche dell'apparecchio e lo abbineremo.</p>
+
+<h2>I due affiancati</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Propriet&agrave;</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Tensione costante</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Corrente costante</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Uscita mantenuta</td><td style="padding:10px 14px;border:1px solid var(--b)">Tensione (12/24/36/48V)</td><td style="padding:10px 14px;border:1px solid var(--b)">Corrente (350-1500mA)</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Cosa alimenta</td><td style="padding:10px 14px;border:1px solid var(--b)">Strisce, moduli, insegne</td><td style="padding:10px 14px;border:1px solid var(--b)">LED nudi ad alta potenza, faretti</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Regolazione a bordo</td><td style="padding:10px 14px;border:1px solid var(--b)">Nel prodotto LED</td><td style="padding:10px 14px;border:1px solid var(--b)">Nel driver</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Linea CHUGAO tipica</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/adapters/">Adattatori 5-200W</a>, <a href="/products/indoor/">indoor 50-400W</a></td><td style="padding:10px 14px;border:1px solid var(--b)">Indoor / IP67 su richiesta</td></tr>
+</tbody>
+</table>
+
+<h2>Perch&eacute; mescolarli distrugge gli apparecchi</h2>
+
+<ol>
+<li><strong>Driver CV su un LED CC</strong> — il LED assorbe tutta la corrente che pu&ograve;, si surriscalda e muore. Lo vediamo soprattutto quando qualcuno riusa un alimentatore per strisce 12V su un faretto da 350mA.</li>
+<li><strong>Driver CC su una striscia CV</strong> — il driver forza una corrente che le resistenze della striscia non possono limitare, quindi la striscia si surriscalda o il driver va in protezione. In ogni caso, niente luce.</li>
+</ol>
+
+<p>Leggi sempre l'etichetta dell'apparecchio prima di alimentare qualsiasi cosa. In caso di dubbio, inviaci una foto dell'etichetta e ti diremo quale tipo ti serve.</p>
+
+<h2>Un solo driver pu&ograve; fare entrambe?</h2>
+
+<p>Alcuni driver programmabili o &quot;dual-mode&quot; possono essere impostati su CV o CC a un'uscita fissa, ma costano di pi&ugrave; e raramente servono. Per un'installazione standard, scegli il tipo giusto una volta e eviti un intervento in loco. I nostri <a href="/products/indoor/">driver indoor</a> e <a href="/products/ip67/">driver IP67</a> sono disponibili in versioni a corrente costante da 100W in su per lavori su apparecchi ad alta potenza.</p>
+
+<h2>Cosa ci serve da te</h2>
+
+<p>Invia l'etichetta dell'apparecchio (tensione in volt, o corrente in milliampere), il wattaggio totale, il luogo d'installazione e la quantit&agrave;. Confermeremo tensione costante o corrente costante e preventiveremo il modello esatto — e ti diremo quando una pi&ugrave; economica unit&agrave; a catalogo &egrave; davvero sufficiente.</p>
+
+<div class="cta-box">
+<h3>Non sei sicuro se il tuo apparecchio &egrave; CV o CC?</h3>
+<p>Invia una foto dell'etichetta LED — tensione in volt, o corrente in milliampere. Confermeremo il tipo e preventiveremo il modello esatto.</p>
+<a href="/#inquiry" class="btn">Conferma CV o CC</a>
+</div>
+
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Scopri i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adattatori LED 5-200W</span><span class="pc-desc">Unit&agrave; compatte 12V/24V per strisce, moduli e insegne.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Driver LED indoor 50-400W</span><span class="pc-desc">Tensione costante con PFC attivo per plafoniere e pannelli.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver waterproof IP67 10-400W</span><span class="pc-desc">Completamente pottati, testati alla nebbia salina per siti umidi e costieri.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver rainproof IP65 100-600W</span><span class="pc-desc">Custodia metallica ventilata per insegne e installazioni semi-esterne.</span></a></div></section>
+
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre note dal campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Scegliere l'alimentatore LED giusto in 3 passi</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">Guida all'acquisto</span><span class="rel-title">12V o 24V: come scegliere l'alimentatore LED</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">Come dimensionare un alimentatore LED: watt, margine e inrush</span></a><a class="rel-card" href="/blog-10/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">Dimming dei driver LED spiegato: 0-10V, PWM, DALI e TRIAC</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Come dimensionare un alimentatore LED: watt, margine e inrush</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Dimming dei driver LED spiegato: 0-10V, PWM, DALI e TRIAC</span></a></nav>
+</main>"""

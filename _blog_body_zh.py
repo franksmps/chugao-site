@@ -369,3 +369,283 @@ BLOG_BODY['zh']['blog-3'] = """<main class="article">
 
 <nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-2/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">IP20、IP65、IP67、IP68 怎么选</span></a><a class="pn-next" href="/blog-4/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">LED 驱动电源 BIS 认证：印度进口指南</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['zh']['blog-4'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
+
+<h1>LED 驱动电源 BIS 认证：印度进口商须知</h1>
+<div class="meta">法规认证 &middot; 2026 年 5 月 &middot; 阅读约 7 分钟</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-waterproof-md.avif 1200w, /images/product-waterproof.avif 1024w">
+<source type="image/webp" srcset="/images/product-waterproof-md.webp 1200w, /images/product-waterproof.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-waterproof.jpg" alt="面向印度市场的 BIS 认证 LED 电源" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>自 2018 年起，印度逐步扩大了对电子产品的强制性 <strong>BIS（印度标准局）</strong>注册要求。对任何向印度进口 LED 电源的人来说，BIS 不再是可选项——它是一道海关闸门。</p>
+
+<p>本指南说明 BIS 对你的订单意味着什么、流程怎么走、为什么它影响你的交期，以及与像 CHUGAO 这样已获 BIS 认证的工厂合作，如何为你省下数周文书工作。</p>
+
+<h2>什么是 BIS？</h2>
+
+<p>BIS 是印度的国家标准机构。根据强制注册计划（CRS），受管控类别的产品在进口或销售到印度之前，必须带有 BIS 注册标志。</p>
+
+<p>对 LED 开关电源，适用标准是 <strong>IS 13252（第 1 部分）：信息技术设备——安全——通用要求</strong>，涵盖：</p>
+<ul>
+<li>电气安全与绝缘</li>
+<li>温升限值</li>
+<li>防电击保护</li>
+<li>防火外壳要求</li>
+<li>元器件安全额定值</li>
+</ul>
+
+<div class="highlight">
+<strong>关键点：</strong> 如果你的 LED 驱动电源没有 BIS 注册，印度海关可以拒收货物、延迟清关，或要求你自费退运。
+</div>
+
+<h2>BIS 与 CE / RoHS 对比</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">方面</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">CE / RoHS</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">BIS（印度）</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>主管机构</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">欧盟委员会／自我声明</td><td style="padding:10px 14px;border:1px solid var(--b)">印度政府（BIS）</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>是否强制？</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">欧盟市场强制</td><td style="padding:10px 14px;border:1px solid var(--b)">印度进口强制</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>测试地点</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">工厂实验室或第三方</td><td style="padding:10px 14px;border:1px solid var(--b)">印度境内 BIS 认可实验室</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>典型周期</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">每型号 2-4 周</td><td style="padding:10px 14px;border:1px solid var(--b)">每型号 4-8 周</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>有效期</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">无到期（自我声明）</td><td style="padding:10px 14px;border:1px solid var(--b)">2 年，可续期</td></tr>
+</tbody>
+</table>
+
+<h2>BIS 流程怎么走</h2>
+
+<ol>
+<li><strong>申请：</strong>制造商（或其授权代表）通过门户向 BIS 在线提交申请，并附技术文件与认可实验室的测试报告。</li>
+<li><strong>工厂审核：</strong>BIS 可能审核制造设施，以核实质量体系与生产一致性。</li>
+<li><strong>测试：</strong>样品按 IS 13252（第 1 部分）测试，包括介电强度、温度、湿度和机械应力测试。</li>
+<li><strong>授予许可：</strong>通过后，BIS 签发注册号，出现在产品标签与包装上。</li>
+<li><strong>监督：</strong>注册后，BIS 会进行定期跟进审核，确保持续合规。</li>
+</ol>
+
+<h2>为什么这影响你的交期</h2>
+
+<p>如果你要为印度市场订购 LED 驱动电源，有两条路：</p>
+
+<ul>
+<li><strong>路径 A——从非 BIS 工厂订购：</strong>BIS 由你自己办。货物可以发运前，预计需要 4-8 周测试 + 申请时间。另有实验室费用（每型号 500-2000 美元，视复杂度而定）。</li>
+<li><strong>路径 B——从已获 BIS 认证的工厂订购：</strong>工厂已持有该型号系列的 BIS 许可。你的订单立即发运。你会随货运单据收到 BIS 证书副本。</li>
+</ul>
+
+<p>CHUGAO 的核心 LED 驱动电源型号已持有 BIS 注册。当你下印度订单时，我们会在你的货运档案中附上 BIS 证书 PDF——无需额外等待。</p>
+
+<h2>给印度买家的实用建议</h2>
+
+<ul>
+<li><strong>尽早确认 BIS 覆盖范围。</strong>并非所有型号都已注册。在敲定 SKU 清单前，问我们哪些 SKU 的 BIS 状态有效。</li>
+<li><strong>核对 HS 编码归类。</strong>LED 电源通常归入 HS 8504.40（电子镇流器／变换器）。由于规则会变，请与你的报关行确认。</li>
+<li><strong>为印度口岸的 BIS 文件审核预留 2-3 天。</strong>即使文件正确，部分口岸也会对电子产品货运做抽查。</li>
+<li><strong>标签要求：</strong>BIS 注册产品必须在单机和外箱上显示 BIS 标准标志。当你在订单上注明“印度目的地”时，我们会处理这项贴标。</li>
+</ul>
+
+<div class="cta-box">
+<h3>正在为印度市场采购 LED 驱动电源？</h3>
+<p>告诉我们你的目标型号、数量和目的港。我们在 1 小时内确认 BIS 状态，并随货附上所有证书。</p>
+<a href="/#inquiry" class="btn">获取印度合规报价</a>
+</div>
+
+
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">已获 BIS 注册的型号，随时可发印度货。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">具备 BIS 覆盖且符合印度标签要求的电源。</span></a></div></section>
+
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技术</span><span class="rel-title">三步选对 LED 电源</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">技术指南</span><span class="rel-title">IP20、IP65、IP67、IP68 怎么选</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">行业趋势</span><span class="rel-title">2026 LED 市场：我们看到的</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">技术深读</span><span class="rel-title">LED 驱动寿命：MTBF、L70 与真实使用寿命</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-3/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">2026 LED 市场：我们看到的</span></a><a class="pn-next" href="/blog-5/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">LED 驱动寿命：MTBF、L70 与真实使用寿命</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['zh']['blog-5'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
+
+<h1>LED 驱动寿命：MTBF、L70 与真实使用寿命</h1>
+<div class="meta">技术深读 &middot; 2026 年 4 月 &middot; 阅读约 8 分钟</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor-md.avif 1200w, /images/product-indoor.avif 1024w">
+<source type="image/webp" srcset="/images/product-indoor-md.webp 1200w, /images/product-indoor.webp 1024w" sizes="(max-width:768px) 100vw, 800px">
+<img src="/images/product-indoor.jpg" alt="长寿命的室内 LED 驱动电源" loading="lazy" style="width:100%;aspect-ratio:1/1">
+</picture>
+</div>
+
+<p>参数表上写着“50,000 小时”。你算一下：那是<strong>5.7 年</strong>连续运行。那为什么有些工程 2-3 年就得换驱动电源？</p>
+
+<p>答案是：额定寿命与真实寿命是两回事。本文说明这些数字到底代表什么、什么会让驱动电源提前夭折，以及如何为项目的预期服役寿命挑选合适的规格。</p>
+
+<h2>三个关键指标</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">指标</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">衡量什么</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">典型值</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>MTBF</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">平均无故障时间——总体中两次故障之间的统计平均时间</td><td style="padding:10px 14px;border:1px solid var(--b)">50,000–100,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>L70 / L80</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">输出降至初始值 70% 或 80% 所需的小时数</td><td style="padding:10px 14px;border:1px solid var(--b)">30,000–50,000h</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)"><strong>质保期</strong></td><td style="padding:10px 14px;border:1px solid var(--b)">厂家对缺陷的保证</td><td style="padding:10px 14px;border:1px solid var(--b)">2–5 年</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>关键洞察：</strong> 50,000 小时的 L70 额定值意味着驱动电源在测试条件下运行 50,000 小时后仍保持至少 70% 的原始输出。它并不意味着每台设备都能运行 50,000 小时才失效。
+</div>
+
+<h2>驱动电源为何提前失效</h2>
+
+<h3>1. 热是头号杀手</h3>
+<p>高于额定工作温度每 10&deg;C，电解电容寿命大致减半。装在密闭灯具内的 IP20 室内驱动电源，很容易比环境温度高出 20&deg;C。如果环境温度是 35&deg;C（夏季常见），内部元件温度可达 75-85&deg;C——远高于典型的 60&deg;C 设计点。</p>
+
+<ul>
+<li><strong>IP67 防水型号：</strong>通过金属外壳 + 硅胶灌封实现更好的散热。额定 -30 至 +60&deg;C。典型寿命：50,000h。</li>
+<li><strong>IP20 室内型号：</strong>取决于灯具通风。在密闭外壳内，预计寿命比额定值短 40-60%。</li>
+<li><strong>适配器：</strong>塑料外壳更易积热。典型寿命：30,000h。</li>
+</ul>
+
+<h3>2. 电压尖峰与浪涌</h3>
+<p>电网电压波动（在新兴市场尤其明显）会冲击输入电容和压敏电阻。额定 AC 190-264V 的驱动电源，也许能扛住一两次 280V 瞬变，但反复浪涌会比正常磨损更快地劣化元件。</p>
+
+<h3>3. 接近满载运行</h3>
+<p>在 90-100% 额定负载下，流过输出电容的纹波电流增大。这会产生更多热量并加速老化。这是我们在 CHUGAO 推荐的经验法则：</p>
+
+<div class="highlight">
+<strong>负载功率 &times; 1.25 = 驱动电源最低额定值。</strong><br>
+让驱动电源在 70-80% 容量（而不是 95%）下运行，可把有效寿命延长 30–50%。
+</div>
+
+<h2>不同应用需要什么</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">应用</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">推荐驱动电源</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">预期服役寿命</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">原因</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">零售标识（每天 8-12 小时）</td><td style="padding:10px 14px;border:1px solid var(--b)">适配器／室内 IP20</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 年</td><td style="padding:10px 14px;border:1px solid var(--b)">每日工时低，弥补了单机寿命较短</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">户外外立面照明（每天 12 小时以上）</td><td style="padding:10px 14px;border:1px solid var(--b)">IP67 防水</td><td style="padding:10px 14px;border:1px solid var(--b)">10-14 年</td><td style="padding:10px 14px;border:1px solid var(--b)">密封灌封可应对湿度与温差</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">工业 24/7（仓储）</td><td style="padding:10px 14px;border:1px solid var(--b)">IP65 防雨或工业级 CGS</td><td style="padding:10px 14px;border:1px solid var(--b)">5-7 年</td><td style="padding:10px 14px;border:1px solid var(--b)">连续高温运行加速磨损</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">船舶／喷泉</td><td style="padding:10px 14px;border:1px solid var(--b)">IP68 等级型号</td><td style="padding:10px 14px;border:1px solid var(--b)">8-12 年</td><td style="padding:10px 14px;border:1px solid var(--b)">全浸水等级，经盐雾测试</td></tr>
+</tbody>
+</table>
+
+<h2>CHUGAO 如何测试</h2>
+
+<p>每一台 CHUGAO 驱动电源在出厂前都要经过 <strong>48 小时老化测试</strong>。不合格的机器一律报废——不允许离开车间。这道出货前筛查能筛出早期失效（浴盆曲线的前段失效）。</p>
+
+<p>对于 500 只以上的 OEM 订单，如果在采购订单中注明，我们提供延长老化测试选项（72-168 小时），不额外收费。</p>
+
+<h2>快速决策指南</h2>
+
+<ol>
+<li><strong>每日运行时数？</strong>零售 8 小时与工业 24 小时天差地别。把目标项目寿命乘以每日小时数，得到总小时需求。</li>
+<li><strong>环境温度？</strong>超过 40&deg;C 每高 10&deg;C，寿命约减半。要把这一点纳入型号选择。</li>
+<li><strong>通风？</strong>密闭灯具需要 IP67 或更高。有通风的外壳可用 IP20/65。</li>
+<li><strong>余量？</strong>始终加 25%。相比跑一趟现场更换故障机，60W 与 100W 驱动电源的差价微不足道。</li>
+<li><strong>备件库存？</strong>对于 24/7 安装，常备 5-10% 的备用驱动电源。这比紧急发货更便宜。</li>
+</ol>
+
+<div class="cta-box">
+<h3>不确定哪款驱动电源匹配你的寿命需求？</h3>
+<p>告诉我们你的应用、每日运行时间和环境条件。我们会为你的具体安装推荐合适的系列，并给出贴近实际的预期寿命。</p>
+<a href="/#inquiry" class="btn">获取寿命匹配推荐</a>
+</div>
+
+
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">每个功率段都提供 MTBF 数据的长寿命适配器。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动电源 50-400W</span><span class="pc-desc">适用于商业与建筑灯具的 L70 等级驱动。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">灌封密封，延长户外服役寿命。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">为 50,000+ 小时户外运行设计的坚固驱动。</span></a></div></section>
+
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技术</span><span class="rel-title">三步选对 LED 电源</span></a>
+  <a class="rel-card" href="/blog-2/"><span class="rel-cat">技术指南</span><span class="rel-title">IP20、IP65、IP67、IP68 怎么选</span></a>
+  <a class="rel-card" href="/blog-3/"><span class="rel-cat">行业趋势</span><span class="rel-title">2026 LED 市场：我们看到的</span></a>
+  <a class="rel-card" href="/blog-4/"><span class="rel-cat">法规认证</span><span class="rel-title">LED 驱动电源 BIS 认证：印度进口指南</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">LED 驱动电源 BIS 认证：印度进口指南</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">IP67 与 IP65 LED 驱动电源：你需要哪种等级？</span></a></nav>
+</main>"""
+
+
+BLOG_BODY['zh']['blog-9'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
+
+<h1>恒压还是恒流 LED 驱动：你需要哪种？</h1>
+<div class="meta">技术指南 &middot; 2026 年 9 月 &middot; 阅读约 8 分钟</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="恒压与恒流 LED 驱动电源并排展示" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+
+<p>两个词决定一款 LED 灯具到底能不能用：<strong>恒压</strong>与<strong>恒流</strong>。弄反了，LED 要么根本不亮，要么几天就烧掉。然而多数买家都是等灯具出故障后才接触到这两个词，所以这里给出我们最希望每张参数表都印在前面的简版说明。</p>
+
+<h2>“恒压”是什么意思</h2>
+
+<p>恒压（CV）驱动让输出电压保持稳定——通常是 12V、24V、36V 或 48V——由灯具自己决定拉多少电流。LED 灯带、标识模组以及大多数“12V/24V”产品本身就带限流电阻，所以它们需要一个固定电压电源。这是绝大多数装饰、建筑与标识工程的默认选择。</p>
+
+<div class="highlight">
+<strong>经验法则：</strong> 如果产品标签写着 <strong>12V</strong> 或 <strong>24V</strong>，它要的就是恒压驱动。驱动定电压，灯带定电流。
+</div>
+
+<h2>“恒流”是什么意思</h2>
+
+<p>恒流（CC）驱动让电流保持稳定——通常是 350mA、500mA、700mA、1050mA 或 1500mA——并调整电压，以便在 LED 正向电压随温度变化时维持这个电流恒定。裸装的大功率 LED（筒灯、泛光灯、路灯、高棚模组）没有板载稳压，接到固定电压源上会拉出失控电流把自己烧坏。它们需要 CC 驱动。</p>
+
+<p>如果标签写着 <strong>350 mA</strong> 或 <strong>700 mA</strong>，它要的就是恒流。把灯具规格告诉我们，我们帮你匹配。</p>
+
+<h2>两者并排对比</h2>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">属性</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">恒压</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">恒流</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">保持的输出</td><td style="padding:10px 14px;border:1px solid var(--b)">电压（12/24/36/48V）</td><td style="padding:10px 14px;border:1px solid var(--b)">电流（350-1500mA）</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">驱动什么</td><td style="padding:10px 14px;border:1px solid var(--b)">灯带、模组、标识</td><td style="padding:10px 14px;border:1px solid var(--b)">裸装大功率 LED、筒灯</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">板载稳压</td><td style="padding:10px 14px;border:1px solid var(--b)">在 LED 产品内</td><td style="padding:10px 14px;border:1px solid var(--b)">在驱动电源内</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">CHUGAO 典型产品线</td><td style="padding:10px 14px;border:1px solid var(--b)"><a href="/products/adapters/">适配器 5-200W</a>、<a href="/products/indoor/">室内 50-400W</a></td><td style="padding:10px 14px;border:1px solid var(--b)">室内／IP67（按需）</td></tr>
+</tbody>
+</table>
+
+<h2>为什么混用会毁掉灯具</h2>
+
+<ol>
+<li><strong>恒压驱动接恒流 LED</strong>——LED 会拉走它能拉到的所有电流，发热，然后烧毁。我们见得最多的情况，就是有人把 12V 灯带电源拿去做 350mA 筒灯。</li>
+<li><strong>恒流驱动接恒压灯带</strong>——驱动强行灌入灯带电阻无法限制的电流，灯带过热或驱动报故障。无论哪种，都不亮。</li>
+</ol>
+
+<p>通电之前务必先看灯具标签。如有任何疑问，把标签照片发给我们，我们会告诉你需要哪种。</p>
+
+<h2>一个驱动能兼顾两者吗？</h2>
+
+<p>一些可编程或“双模式”驱动可以在固定输出下设为 CV 或 CC，但它们更贵，且很少需要。对标准安装来说，一次选对类型就能免去跑一趟现场。我们的 <a href="/products/indoor/">室内驱动</a> 与 <a href="/products/ip67/">IP67 驱动</a> 都提供 100W 起的恒流版本，用于大功率灯具工程。</p>
+
+<h2>我们需要你提供什么</h2>
+
+<p>请提供灯具标签（以伏特表示的电压，或以毫安表示的电流）、总功率、安装位置和数量。我们会确认是恒压还是恒流，并报出确切的型号——同时告诉你什么时候一款更便宜的现货产品就真的够用。</p>
+
+<div class="cta-box">
+<h3>不确定你的灯具是 CV 还是 CC？</h3>
+<p>发一张 LED 标签的照片——以伏特表示的电压，或以毫安表示的电流。我们会确认类型并报出确切型号。</p>
+<a href="/#inquiry" class="btn">确认 CV 还是 CC</a>
+</div>
+
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">适用于灯带、模组与标识的紧凑型 12V/24V 单元。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动电源 50-400W</span><span class="pc-desc">带主动 PFC 的恒压驱动，适用于吊灯与面板灯。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动电源 10-400W</span><span class="pc-desc">全灌封、盐雾测试，适用于潮湿与沿海场所。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动电源 100-600W</span><span class="pc-desc">带通风口金属外壳，适用于标识与半户外安装。</span></a></div></section>
+
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技术</span><span class="rel-title">三步选对 LED 电源</span></a><a class="rel-card" href="/blog-7/"><span class="rel-cat">选购指南</span><span class="rel-title">12V 还是 24V：LED 电源怎么选</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">技术指南</span><span class="rel-title">LED 电源功率怎么选：瓦数与余量</span></a><a class="rel-card" href="/blog-10/"><span class="rel-cat">技术指南</span><span class="rel-title">LED 驱动调光详解：0-10V、PWM、DALI 与 TRIAC</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-8/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">LED 电源功率怎么选：瓦数与余量</span></a><a class="pn-next" href="/blog-10/" rel="next"><span class="pn-lab">下一篇</span><span class="pn-t">LED 驱动调光详解：0-10V、PWM、DALI 与 TRIAC</span></a></nav>
+</main>"""
