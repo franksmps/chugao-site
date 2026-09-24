@@ -249,6 +249,22 @@ def set_jsonld_lang(html, bcp):
     # json.dumps emits '"inLanguage": "en"' (with a space); tolerate both forms.
     return re.sub(r'("inLanguage"\s*:\s*)"en"', rf'\1"{bcp}"', html)
 
+def set_jsonld_headline(html, headline):
+    """Re-point the Article JSON-LD 'headline' at the page's localized <h1>.
+
+    The blog generator bakes the Article schema into src/ with an English
+    'headline' (its p['h1']); nothing localized it, so localized pages kept an
+    English rich-result headline. Only the Article schema carries a 'headline'
+    key (BreadcrumbList uses 'name'), so a single targeted substitution is safe.
+    The replacement is passed via a lambda so backslashes in the JSON-escaped
+    string are never re-interpreted as regex escapes.
+    """
+    if not headline:
+        return html
+    rep = json.dumps(headline, ensure_ascii=False)
+    return re.sub(r'("headline"\s*:\s*)"(?:[^"\\]|\\.)*"',
+                  lambda m: m.group(1) + rep, html, count=1)
+
 def strip_old_hreflang(html):
     html = re.sub(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*/?>\n?', '', html)
     html = re.sub(r'<link rel="canonical" href="[^"]*"\s*/?>\n?', '', html)
@@ -418,6 +434,9 @@ def build_page(rel_html, T, META):
         # here would create duplicate, conflicting schema.
         h1 = get_h1_text(html)
         if name != 'index' and h1:
+            # Localize the baked-in Article "headline" to the page's <h1> (which
+            # the per-language BLOG_BODY swap above already localized).
+            html = set_jsonld_headline(html, h1)
             html = inject_jsonld(html, build_breadcrumb(lang, page_url, h1), 'jsonld-breadcrumb')
         html = trim_meta(html)
         out_rel = out_path(url, lang)
