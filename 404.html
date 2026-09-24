@@ -14,7 +14,7 @@
   body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
        background:linear-gradient(180deg,#0f172a,#1e293b);color:#e2e8f0;min-height:100vh;
        display:flex;align-items:center;justify-content:center;padding:24px}
-  .box{max-width:520px;text-align:center;background:rgba(255,255,255,.04);
+  .box{max-width:560px;text-align:center;background:rgba(255,255,255,.04);
        border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:48px 32px}
   .code{font-size:72px;font-weight:800;color:#f8fafc;line-height:1;margin:0}
   .code span{color:var(--a)}
@@ -27,21 +27,80 @@
   .links a{color:#cbd5e1;text-decoration:none;margin:0 10px}
   .links a:hover{color:#fff;text-decoration:underline}
   img.logo{width:120px;margin-bottom:20px;opacity:.92}
+  .hint{margin-top:28px;font-size:13px;color:#94a3b8}
+  .langbar{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+  .langbar a{display:inline-block;padding:6px 12px;border:1px solid rgba(255,255,255,.18);
+             border-radius:8px;color:#cbd5e1;text-decoration:none;font-size:13px;transition:background .15s,border-color .15s}
+  .langbar a:hover,.langbar a.active{background:var(--a);color:#fff;border-color:var(--a)}
 </style>
 </head>
 <body>
   <div class="box">
     <img class="logo" src="/logo.png" alt="CHUGAO Power" loading="eager">
     <p class="code">4<span>0</span>4</p>
-    <h1>Page not found</h1>
-    <p>The page you are looking for may have moved, or the link may be outdated.<br>
+    <h1 id="t-h">Page not found</h1>
+    <p id="t-p">The page you were looking for may have moved, or the link may be outdated.<br>
        CHUGAO makes LED switching power supplies — adapters, drivers and waterproof units — factory direct from Zhongshan, China since 2008.</p>
-    <a class="btn" href="/">Back to home</a>
-    <div class="links">
+    <a class="btn" id="t-btn" href="/">Back to home</a>
+    <div class="links" id="t-links">
       <a href="/#products">Products</a>
       <a href="/blog/">News</a>
       <a href="/#contact">Contact</a>
     </div>
+    <div class="hint" id="t-hint">Choose your language</div>
+    <div class="langbar" id="langbar"></div>
   </div>
+<script>
+(function(){
+  var LANGS=['en','zh','es','pt','ru','fr','de','ar','ja','ko','it'];
+  var NATIVE={en:'English',zh:'中文',es:'Español',pt:'Português',ru:'Русский',fr:'Français',de:'Deutsch',ar:'العربية',ja:'日本語',ko:'한국어',it:'Italiano'};
+  var I18N={
+    en:{h:'Page not found',btn:'Back to home',hint:'Choose your language',links:['Products','News','Contact']},
+    zh:{h:'页面未找到',btn:'返回首页',hint:'选择语言',links:['产品','新闻','联系']},
+    es:{h:'Página no encontrada',btn:'Volver al inicio',hint:'Elige tu idioma',links:['Productos','Noticias','Contacto']},
+    pt:{h:'Página não encontrada',btn:'Voltar ao início',hint:'Escolha seu idioma',links:['Produtos','Notícias','Contato']},
+    ru:{h:'Страница не найдена',btn:'На главную',hint:'Выберите язык',links:['Продукция','Новости','Контакты']},
+    fr:{h:'Page introuvable',btn:'Retour à l’accueil',hint:'Choisissez votre langue',links:['Produits','Actualités','Contact']},
+    de:{h:'Seite nicht gefunden',btn:'Zur Startseite',hint:'Wählen Sie Ihre Sprache',links:['Produkte','Neuigkeiten','Kontakt']},
+    ar:{h:'الصفحة غير موجودة',btn:'العودة إلى الرئيسية',hint:'اختر لغتك',links:['المنتجات','الأخبار','اتصل بنا']},
+    ja:{h:'ページが見つかりません',btn:'ホームに戻る',hint:'言語を選択',links:['製品','ニュース','お問い合わせ']},
+    ko:{h:'페이지를 찾을 수 없습니다',btn:'홈으로 돌아가기',hint:'언어 선택',links:['제품','뉴스','문의']},
+    it:{h:'Pagina non trovata',btn:'Torna alla home',hint:'Scegli la tua lingua',links:['Prodotti','Notizie','Contatti']}
+  };
+  function detect(){
+    var nav=((navigator.language||'en').toLowerCase());
+    var two=nav.split('-')[0];
+    return LANGS.indexOf(two)>=0?two:'en';
+  }
+  var lang=detect();
+  var d=I18N[lang];
+  var root=document.documentElement;
+  root.lang=lang;
+  if(lang==='ar'){root.dir='rtl';}
+  document.getElementById('t-h').textContent=d.h;
+  document.getElementById('t-btn').textContent=d.btn;
+  document.getElementById('t-hint').textContent=d.hint;
+  var ll=document.getElementById('t-links');
+  var hrefs=['/#products','/blog/','/#contact'];
+  ll.innerHTML='';
+  d.links.forEach(function(t,i){
+    var a=document.createElement('a');
+    a.href=(lang==='en'?'/':('/'+lang+'/'))+hrefs[i].replace(/^\//,'');
+    a.textContent=t;
+    ll.appendChild(a);
+  });
+  // language bar -> localized home
+  var bar=document.getElementById('langbar');
+  LANGS.forEach(function(l){
+    var a=document.createElement('a');
+    a.href=(l==='en'?'/':('/'+l+'/'));
+    a.textContent=NATIVE[l];
+    a.hreflang=l;
+    if(l===lang){a.className='active';}
+    if(l==='ar'){a.dir='rtl';}
+    bar.appendChild(a);
+  });
+})();
+</script>
 </body>
 </html>
