@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Note dal Campo - guide e analisi per alimentatori LED | CHUGAO</title>
+    <link>https://www.chugaopower.com/it/blog/</link>
+    <atom:link href="https://www.chugaopower.com/feed-it.xml" rel="self" type="application/rss+xml" />
+    <atom:link rel="alternate" hreflang="en" type="application/rss+xml" href="https://www.chugaopower.com/feed.xml" />
+    <atom:link rel="alternate" hreflang="zh" type="application/rss+xml" href="https://www.chugaopower.com/feed-zh.xml" />
+    <atom:link rel="alternate" hreflang="es" type="application/rss+xml" href="https://www.chugaopower.com/feed-es.xml" />
+    <atom:link rel="alternate" hreflang="pt" type="application/rss+xml" href="https://www.chugaopower.com/feed-pt.xml" />
+    <atom:link rel="alternate" hreflang="ru" type="application/rss+xml" href="https://www.chugaopower.com/feed-ru.xml" />
+    <atom:link rel="alternate" hreflang="fr" type="application/rss+xml" href="https://www.chugaopower.com/feed-fr.xml" />
+    <atom:link rel="alternate" hreflang="de" type="application/rss+xml" href="https://www.chugaopower.com/feed-de.xml" />
+    <atom:link rel="alternate" hreflang="ar" type="application/rss+xml" href="https://www.chugaopower.com/feed-ar.xml" />
+    <atom:link rel="alternate" hreflang="ja" type="application/rss+xml" href="https://www.chugaopower.com/feed-ja.xml" />
+    <atom:link rel="alternate" hreflang="ko" type="application/rss+xml" href="https://www.chugaopower.com/feed-ko.xml" />
+    <description>Note dal Campo CHUGAO: guide pratiche agli alimentatori LED, spiegazioni delle classi IP, note di mercato e consigli sulle certificazioni per importatori e installatori.</description>
+    <language>it</language>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <generator>CHUGAO static site</generator>
+    <item>
+      <title>Sezione cavo e caduta di tensione per installazioni LED</title>
+      <link>https://www.chugaopower.com/it/blog-14/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-14/</guid>
+      <description>La regola del 5%, tabelle di lunghezza massima per 12V e 24V e tre modi per evitare strisce deboli in fondo.</description>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Scegliere l'alimentatore LED per esterno e ambienti difficili</title>
+      <link>https://www.chugaopower.com/it/blog-13/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-13/</guid>
+      <description>La scala ambienti da IP20 a IP67, il derating termico, il dimming e la sovratensione in un unico flusso decisionale.</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Protezione da sovratensioni per driver LED: fulmini e transitori</title>
+      <link>https://www.chugaopower.com/it/blog-12/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-12/</guid>
+      <description>Da dove arrivano le sovratensioni, i due livelli di protezione e come specificare un driver che sopravvive a fulmini e transitori.</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fattore di potenza e driver LED senza flicker</title>
+      <link>https://www.chugaopower.com/it/blog-11/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-11/</guid>
+      <description>Cosa significano PF e ripple, dove il senza flicker è non negoziabile e come leggere la scheda tecnica.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dimming dei driver LED spiegato: 0-10V, PWM, DALI e TRIAC</title>
+      <link>https://www.chugaopower.com/it/blog-10/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-10/</guid>
+      <description>Cosa fa ogni standard (0-10V, PWM, DALI, TRIAC), quale specificare e perché driver e dimmer devono combaciare.</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Driver LED a tensione o corrente costante: quale ti serve?</title>
+      <link>https://www.chugaopower.com/it/blog-9/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-9/</guid>
+      <description>Cosa alimenta ciascun tipo, perché mescolarli distrugge le luci e come leggere l'etichetta prima di comprare.</description>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Come dimensionare un alimentatore LED: watt, margine e inrush | Note dal Campo CHUGAO</title>
+      <link>https://www.chugaopower.com/it/blog-8/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-8/</guid>
+      <description>Driver sottodimensionati falliscono presto, quelli sovradimensionati sprecano denaro. Il metodo in 4 passi: carico, margine 20%, inrush sul interruttore e derating termico.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>12V o 24V: come scegliere l'alimentatore LED | Guida CHUGAO</title>
+      <link>https://www.chugaopower.com/it/blog-7/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-7/</guid>
+      <description>Caduta di tensione, lunghezza massima del cavo per sezione e la regola semplice per scegliere tra 12V e 24V per strisce LED.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP67 vs IP65: quale driver LED ti serve</title>
+      <link>https://www.chugaopower.com/it/blog-6/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-6/</guid>
+      <description>Cosa protegge davvero ogni classe IP, dove ciascuna cede e come scegliere l'alimentatore impermeabile giusto per la tua installazione.</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Certificazione BIS per driver LED: guida all'import in India | Note dal Campo CHUGAO</title>
+      <link>https://www.chugaopower.com/it/blog-4/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-4/</guid>
+      <description>Cosa significa la certificazione BIS indiana per gli importatori di alimentatori LED. Requisiti IS 13252 Parte 1, processo di test, tempi, costi e come un fornitore certificato BIS come CHUGAO accelera la dogana.</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Durata dei driver LED: MTBF, L70 e quanto durano davvero | Note dal Campo CHUGAO</title>
+      <link>https://www.chugaopower.com/it/blog-5/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-5/</guid>
+      <description>Cosa significano davvero 50.000 ore per un driver LED. Comprendere MTBF, il valore L70, gli effetti della temperatura e la reale durata degli alimentatori a commutazione LED.</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Scegliere l'alimentatore LED giusto in 3 passi | Note dal Campo CHUGAO</title>
+      <link>https://www.chugaopower.com/it/blog-1/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-1/</guid>
+      <description>Come scegliere il giusto alimentatore LED: corrispondenza di potenza, classe IP per ambiente e compatibilità di tensione, spiegato in modo semplice.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP20 vs IP65 vs IP67 vs IP68 | Note dal Campo CHUGAO</title>
+      <link>https://www.chugaopower.com/it/blog-2/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-2/</guid>
+      <description>Classi IP spiegate per driver LED: cosa significano i numeri, dove si usa ogni classe e come scegliere quella giusta per il progetto.</description>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Mercato LED 2026: cosa stiamo osservando | Note dal Campo CHUGAO</title>
+      <link>https://www.chugaopower.com/it/blog-3/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/it/blog-3/</guid>
+      <description>Osservazioni dirette dalla fabbrica: trend di domanda dei driver LED nel 2026 — quali mercati crescono, quali specifiche chiedono i buyer e come si muovono i prezzi.</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

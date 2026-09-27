@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CHUGAO 现场笔记</title>
+    <link>https://www.chugaopower.com/zh/blog/</link>
+    <atom:link href="https://www.chugaopower.com/feed-zh.xml" rel="self" type="application/rss+xml" />
+    <atom:link rel="alternate" hreflang="en" type="application/rss+xml" href="https://www.chugaopower.com/feed.xml" />
+    <atom:link rel="alternate" hreflang="es" type="application/rss+xml" href="https://www.chugaopower.com/feed-es.xml" />
+    <atom:link rel="alternate" hreflang="pt" type="application/rss+xml" href="https://www.chugaopower.com/feed-pt.xml" />
+    <atom:link rel="alternate" hreflang="ru" type="application/rss+xml" href="https://www.chugaopower.com/feed-ru.xml" />
+    <atom:link rel="alternate" hreflang="fr" type="application/rss+xml" href="https://www.chugaopower.com/feed-fr.xml" />
+    <atom:link rel="alternate" hreflang="de" type="application/rss+xml" href="https://www.chugaopower.com/feed-de.xml" />
+    <atom:link rel="alternate" hreflang="ar" type="application/rss+xml" href="https://www.chugaopower.com/feed-ar.xml" />
+    <atom:link rel="alternate" hreflang="ja" type="application/rss+xml" href="https://www.chugaopower.com/feed-ja.xml" />
+    <atom:link rel="alternate" hreflang="ko" type="application/rss+xml" href="https://www.chugaopower.com/feed-ko.xml" />
+    <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
+    <description>来自产线与现场的 LED 电源选型、认证与故障排查经验。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <generator>CHUGAO static site</generator>
+    <item>
+      <title>LED 布线线径与压降</title>
+      <link>https://www.chugaopower.com/zh/blog-14/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-14/</guid>
+      <description>5% 规则、12V 与 24V 最大布线长度表，以及三种让远端灯带不再变暗的办法。</description>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>户外与恶劣环境 LED 电源怎么选</title>
+      <link>https://www.chugaopower.com/zh/blog-13/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-13/</guid>
+      <description>从 IP20 到 IP67 的环境阶梯、散热降额、调光与浪涌，一步步选出对的户外驱动。</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 驱动浪涌防护：雷击与瞬变</title>
+      <link>https://www.chugaopower.com/zh/blog-12/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-12/</guid>
+      <description>浪涌从哪来、两层防护分别是什么，以及潮湿或长距离布线现场如何选能扛雷击的驱动。</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>功率因数校正与无频闪 LED 驱动</title>
+      <link>https://www.chugaopower.com/zh/blog-11/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-11/</guid>
+      <description>功率因数与纹波意味着什么、哪些场景无频闪不可省略，以及如何读 datasheet 上的关键数字。</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 驱动调光全解：0-10V、PWM、DALI 与 TRIAC</title>
+      <link>https://www.chugaopower.com/zh/blog-10/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-10/</guid>
+      <description>0-10V、PWM、DALI、TRIAC 四种调光标准各是什么、该选哪种，以及为何驱动与调光器必须匹配。</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>恒压还是恒流 LED 驱动：你的灯具需要哪种</title>
+      <link>https://www.chugaopower.com/zh/blog-9/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-9/</guid>
+      <description>恒压与恒流 LED 驱动各驱动什么、接反为何烧毁灯具，以及下单前如何看标签判断。</description>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 电源功率怎么选：瓦数与余量</title>
+      <link>https://www.chugaopower.com/zh/blog-8/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-8/</guid>
+      <description>累加真实负载、预留 20% 余量、考虑启动电流与温度：附实操算例。</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>12V 还是 24V：LED 电源怎么选</title>
+      <link>https://www.chugaopower.com/zh/blog-7/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-7/</guid>
+      <description>压降、不同线径下的最大线缆长度，以及 12V 与 24V LED 灯带选择的简单法则。</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP67 还是 IP65：你需要哪种防水 LED 驱动</title>
+      <link>https://www.chugaopower.com/zh/blog-6/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-6/</guid>
+      <description>每种 IP 等级真正防护什么、各自的失效点，以及如何按安装环境、成本与散热选对防水驱动。</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 驱动 BIS 认证：印度进口指南</title>
+      <link>https://www.chugaopower.com/zh/blog-4/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-4/</guid>
+      <description>BIS 对您的订单、交期与成本意味着什么。</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 驱动寿命：MTBF、L70 与真实使用寿命</title>
+      <link>https://www.chugaopower.com/zh/blog-5/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-5/</guid>
+      <description>50,000 小时并不是你想的意思。热量、负载与环境解析。</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>3 步选对 LED 电源</title>
+      <link>https://www.chugaopower.com/zh/blog-1/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-1/</guid>
+      <description>功率、防护等级、输入电压。抓住这三点就够了。</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP20、IP65、IP67、IP68 怎么选</title>
+      <link>https://www.chugaopower.com/zh/blog-2/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-2/</guid>
+      <description>这些数字代表什么，各自在什么环境下会失效。</description>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>2026 LED 市场：我们看到的</title>
+      <link>https://www.chugaopower.com/zh/blog-3/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-3/</guid>
+      <description>来自工厂一线的观察，不是分析师报告。</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

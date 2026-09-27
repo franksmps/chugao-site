@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Полевые заметки - руководства и обзоры блоков питания LED | CHUGAO</title>
+    <link>https://www.chugaopower.com/ru/blog/</link>
+    <atom:link href="https://www.chugaopower.com/feed-ru.xml" rel="self" type="application/rss+xml" />
+    <atom:link rel="alternate" hreflang="en" type="application/rss+xml" href="https://www.chugaopower.com/feed.xml" />
+    <atom:link rel="alternate" hreflang="zh" type="application/rss+xml" href="https://www.chugaopower.com/feed-zh.xml" />
+    <atom:link rel="alternate" hreflang="es" type="application/rss+xml" href="https://www.chugaopower.com/feed-es.xml" />
+    <atom:link rel="alternate" hreflang="pt" type="application/rss+xml" href="https://www.chugaopower.com/feed-pt.xml" />
+    <atom:link rel="alternate" hreflang="fr" type="application/rss+xml" href="https://www.chugaopower.com/feed-fr.xml" />
+    <atom:link rel="alternate" hreflang="de" type="application/rss+xml" href="https://www.chugaopower.com/feed-de.xml" />
+    <atom:link rel="alternate" hreflang="ar" type="application/rss+xml" href="https://www.chugaopower.com/feed-ar.xml" />
+    <atom:link rel="alternate" hreflang="ja" type="application/rss+xml" href="https://www.chugaopower.com/feed-ja.xml" />
+    <atom:link rel="alternate" hreflang="ko" type="application/rss+xml" href="https://www.chugaopower.com/feed-ko.xml" />
+    <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
+    <description>Полевые заметки CHUGAO: практические руководства по блокам питания LED, разъяснение степеней защиты IP, заметки о рынке и советы по сертификации для импортёров и монтажников.</description>
+    <language>ru</language>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <generator>CHUGAO static site</generator>
+    <item>
+      <title>Сечение кабеля и падение напряжения в LED-установках</title>
+      <link>https://www.chugaopower.com/ru/blog-14/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-14/</guid>
+      <description>Правило 5%, таблицы максимальной длины для 12В и 24В и три способа убрать тусклый конец ленты.</description>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Выбор блока питания LED для улицы и жёстких условий</title>
+      <link>https://www.chugaopower.com/ru/blog-13/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-13/</guid>
+      <description>Лестница сред от IP20 до IP67, тепловой дерейтинг, диммирование и перенапряжение в одном алгоритме.</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Защита драйверов LED от перенапряжения: молнии и импульсы</title>
+      <link>https://www.chugaopower.com/ru/blog-12/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-12/</guid>
+      <description>Откуда приходят перенапряжения, два уровня защиты и как выбрать драйвер, переживающий молнии и импульсы.</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Коррекция коэффициента мощности и драйверы LED без мерцания</title>
+      <link>https://www.chugaopower.com/ru/blog-11/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-11/</guid>
+      <description>Что означают PF и пульсации, где бесмерцание обязательно и как читать datasheet.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Диммирование драйверов LED: 0-10V, PWM, DALI и TRIAC</title>
+      <link>https://www.chugaopower.com/ru/blog-10/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-10/</guid>
+      <description>Что делает каждый стандарт (0-10V, PWM, DALI, TRIAC), какой выбрать и почему драйвер и диммер должны совпадать.</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Драйвер LED постоянного напряжения или тока: что вам нужно?</title>
+      <link>https://www.chugaopower.com/ru/blog-9/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-9/</guid>
+      <description>Что питает каждый тип, почему их смешивание выводит светильники из строя и как прочитать маркировку до покупки.</description>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Как рассчитать блок питания LED: ватты и запас</title>
+      <link>https://www.chugaopower.com/ru/blog-8/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-8/</guid>
+      <description>Суммируйте реальную нагрузку, добавьте запас 20%, учтите пусковой ток и температуру: практические примеры расчёта.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>12 В или 24 В: как выбрать блок питания LED</title>
+      <link>https://www.chugaopower.com/ru/blog-7/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-7/</guid>
+      <description>Падение напряжения, максимальная длина кабеля по сечению и простое правило выбора между 12 В и 24 В для LED-лент.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP67 против IP65: какой драйвер LED выбрать</title>
+      <link>https://www.chugaopower.com/ru/blog-6/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-6/</guid>
+      <description>Что реально защищает каждая степень IP, где каждый вариант подводит и как выбрать влагозащищённый блок питания LED для вашего объекта.</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Сертификация BIS для драйверов LED: руководство по импорту в Индию | Полевые заметки CHUGAO</title>
+      <link>https://www.chugaopower.com/ru/blog-4/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-4/</guid>
+      <description>Что означает индийская сертификация BIS для импортёров блоков питания LED. Требования IS 13252 часть 1, процесс испытаний, сроки, стоимость и как поставщик с BIS, такой как CHUGAO, помогает быстрее пройти таможню.</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Срок службы драйверов LED: MTBF, L70 и как долго они реально работают | Полевые заметки CHUGAO</title>
+      <link>https://www.chugaopower.com/ru/blog-5/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-5/</guid>
+      <description>Что значат 50 000 часов для драйвера LED? Понимание MTBF, показателя L70, влияния температуры и реального срока службы импульсных блоков питания LED.</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Выберите подходящий блок питания LED за 3 шага | Полевые заметки CHUGAO</title>
+      <link>https://www.chugaopower.com/ru/blog-1/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-1/</guid>
+      <description>Как выбрать правильный блок питания LED: подбор мощности, степень IP в зависимости от условий и совместимость по входному напряжению — простыми словами.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP20 против IP65, IP67 и IP68 | Полевые заметки CHUGAO</title>
+      <link>https://www.chugaopower.com/ru/blog-2/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-2/</guid>
+      <description>Что означает степень IP для блоков питания LED: о чём говорят цифры, где применяется каждая степень и как выбрать подходящую для вашего проекта.</description>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Рынок LED 2026: что мы наблюдаем | Полевые заметки CHUGAO</title>
+      <link>https://www.chugaopower.com/ru/blog-3/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-3/</guid>
+      <description>Наблюдения прямо с завода: тенденции спроса на драйверы LED в 2026 году — какие рынки растут, какие характеристики покупатели запрашивают чаще всего и как движутся цены.</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

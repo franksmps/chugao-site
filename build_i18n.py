@@ -320,6 +320,23 @@ def inject_twitter_image(html, og_image):
         html = re.sub(r'(</title>)', r'\1\n  <meta name="twitter:card" content="summary_large_image" />', html, count=1)
     return html
 
+def set_rss_link(html, lang):
+    """Point the blog feed <link rel=alternate type=rss+xml> at this language's
+    per-language feed (feed.xml for en, feed-{lang}.xml otherwise) and localize
+    its title attribute. Pages without an RSS link are returned unchanged."""
+    if 'application/rss+xml' not in html:
+        return html
+    href = DOMAIN + ('/feed.xml' if lang == 'en' else '/feed-%s.xml' % lang)
+    bm = BLOG_META.get('blog', {}).get(lang, {})
+    title = re.sub(r'\s*\|\s*CHUGAO.*$', '', bm.get('title', '') or '').strip() or 'CHUGAO Field Notes'
+
+    def repl(m):
+        tag = re.sub(r'href="[^"]*"', 'href="%s"' % href, m.group(0))
+        if 'title=' in tag:
+            tag = re.sub(r'title="[^"]*"', 'title="%s"' % title.replace('"', '&quot;'), tag)
+        return tag
+    return re.sub(r'<link[^>]*type="application/rss\+xml"[^>]*>', repl, html)
+
 # ---------- structured data ----------
 def get_h1_text(html):
     m = re.search(r'<h1[^>]*>(.*?)</h1>', html, flags=re.S)
@@ -429,6 +446,7 @@ def build_page(rel_html, T, META):
         html = inject_twitter_image(html, get_og_image(html))
         html = rewrite_urls(html)
         html = inject_switcher(html, lang, page_url)
+        html = set_rss_link(html, lang)
         # Breadcrumb only. Product / FAQPage schema already come from gen_pages.py
         # and are localized in place by apply_translations; emitting them again
         # here would create duplicate, conflicting schema.

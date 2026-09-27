@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feldbesuche - Leitfäden und Einblicke zu LED-Netzteilen | CHUGAO</title>
+    <link>https://www.chugaopower.com/de/blog/</link>
+    <atom:link href="https://www.chugaopower.com/feed-de.xml" rel="self" type="application/rss+xml" />
+    <atom:link rel="alternate" hreflang="en" type="application/rss+xml" href="https://www.chugaopower.com/feed.xml" />
+    <atom:link rel="alternate" hreflang="zh" type="application/rss+xml" href="https://www.chugaopower.com/feed-zh.xml" />
+    <atom:link rel="alternate" hreflang="es" type="application/rss+xml" href="https://www.chugaopower.com/feed-es.xml" />
+    <atom:link rel="alternate" hreflang="pt" type="application/rss+xml" href="https://www.chugaopower.com/feed-pt.xml" />
+    <atom:link rel="alternate" hreflang="ru" type="application/rss+xml" href="https://www.chugaopower.com/feed-ru.xml" />
+    <atom:link rel="alternate" hreflang="fr" type="application/rss+xml" href="https://www.chugaopower.com/feed-fr.xml" />
+    <atom:link rel="alternate" hreflang="ar" type="application/rss+xml" href="https://www.chugaopower.com/feed-ar.xml" />
+    <atom:link rel="alternate" hreflang="ja" type="application/rss+xml" href="https://www.chugaopower.com/feed-ja.xml" />
+    <atom:link rel="alternate" hreflang="ko" type="application/rss+xml" href="https://www.chugaopower.com/feed-ko.xml" />
+    <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
+    <description>Feldbesuche von CHUGAO: praktische Leitfäden zu LED-Netzteilen, Erklärungen der IP-Schutzarten, Marktnotizen und Zertifizierungstipps für Importeure und Installateure.</description>
+    <language>de</language>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <generator>CHUGAO static site</generator>
+    <item>
+      <title>Kabelquerschnitt und Spannungsabfall bei LED-Installationen</title>
+      <link>https://www.chugaopower.com/de/blog-14/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-14/</guid>
+      <description>Die 5%-Regel, Maximal-Längentabellen für 12V und 24V und drei Wege gegen dunkle Streifen am Ende.</description>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED-Netzteil für Außen und raue Umgebungen wählen</title>
+      <link>https://www.chugaopower.com/de/blog-13/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-13/</guid>
+      <description>Die Umgebungsleiter von IP20 bis IP67, Wärme-Derating, Dimming und Überspannung in einem Entscheidungsfluss.</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Überspannungsschutz für LED-Treiber: Blitz und Transienten</title>
+      <link>https://www.chugaopower.com/de/blog-12/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-12/</guid>
+      <description>Woher Überspannungen kommen, die zwei Schutzebenen und wie Sie einen Treiber wählen, der Blitz und Transienten übersteht.</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Leistungsfaktor-Korrektur und flimmerfreie LED-Treiber</title>
+      <link>https://www.chugaopower.com/de/blog-11/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-11/</guid>
+      <description>Was PF und Welligkeit bedeuten, wo flimmerfrei nicht verhandelbar ist und wie Sie das Datenblatt lesen.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED-Treiber-Dimming erklärt: 0-10V, PWM, DALI und TRIAC</title>
+      <link>https://www.chugaopower.com/de/blog-10/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-10/</guid>
+      <description>Was jeder Standard bewirkt (0-10V, PWM, DALI, TRIAC), welchen Sie wählen und warum Treiber und Dimmer passen müssen.</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED-Treiber Konstantspannung oder Konstantstrom: Was brauchen Sie?</title>
+      <link>https://www.chugaopower.com/de/blog-9/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-9/</guid>
+      <description>Was jeder Typ speist, warum das Mischen die Leuchten zerstört und wie Sie das Etikett vor dem Kauf lesen.</description>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED-Netzteil dimensionieren: Watt, Reserve, Einschaltstrom</title>
+      <link>https://www.chugaopower.com/de/blog-8/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-8/</guid>
+      <description>Summieren Sie die reale Last, addieren Sie 20% Reserve und berücksichtigen Sie Einschaltstrom und Temperatur: Praxisbeispiele.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>12V oder 24V: Welches LED-Netzteil?</title>
+      <link>https://www.chugaopower.com/de/blog-7/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-7/</guid>
+      <description>Spannungsabfall, maximale Kabellänge je Querschnitt und die einfache Regel für die Wahl zwischen 12V und 24V bei LED-Streifen.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP67 vs IP65: Welchen LED-Treiber brauchen Sie?</title>
+      <link>https://www.chugaopower.com/de/blog-6/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-6/</guid>
+      <description>Was jede IP-Schutzart wirklich schützt, wo sie versagt und wie Sie das passende wasserdichte LED-Netzteil für Ihre Installation auswählen.</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>BIS-Zertifizierung für LED-Treiber: Importleitfaden für Indien | Feldbesuche CHUGAO</title>
+      <link>https://www.chugaopower.com/de/blog-4/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-4/</guid>
+      <description>Was die indische BIS-Zertifizierung für Importeure von LED-Netzteilen bedeutet. Anforderungen der IS 13252 Teil 1, Prüfablauf, Zeitrahmen, Kosten und wie ein BIS-zertifizierter Lieferant wie CHUGAO Ihnen hilft, schneller durch den Zoll zu kommen.</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Lebensdauer von LED-Treibern: MTBF, L70 und wie lange sie wirklich halten | Feldbesuche CHUGAO</title>
+      <link>https://www.chugaopower.com/de/blog-5/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-5/</guid>
+      <description>Was bedeuten 50.000 Stunden für einen LED-Treiber? Verständnis von MTBF, L70-Wert, Temperatureffekten und der realen Lebensdauer von LED-Schaltnetzteilen.</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Das richtige LED-Netzteil in 3 Schritten wählen | Feldbesuche CHUGAO</title>
+      <link>https://www.chugaopower.com/de/blog-1/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-1/</guid>
+      <description>So wählen Sie das richtige LED-Netzteil: Leistungsabgleich, IP-Schutzart je nach Umgebung und Kompatibilität der Eingangsspannung – einfach erklärt.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP20 vs IP65 vs IP67 vs IP68 | Feldbesuche CHUGAO</title>
+      <link>https://www.chugaopower.com/de/blog-2/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-2/</guid>
+      <description>IP-Schutzart erklärt für LED-Netzteile: was die Zahlen bedeuten, wo jede Schutzart eingesetzt wird und wie Sie die richtige für Ihr Projekt auswählen.</description>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED-Markt 2026: was wir beobachten | Feldbesuche CHUGAO</title>
+      <link>https://www.chugaopower.com/de/blog-3/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-3/</guid>
+      <description>Beobachtungen direkt aus der Fertigung: Trends der Nachfrage nach LED-Treibern 2026 — welche Märkte wachsen, welche Spezifikationen Käufer am meisten wünschen und wie sich die Preise bewegen.</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ملاحظات ميدانية - أدلة ورؤى حول مزودات طاقة LED | CHUGAO</title>
+    <link>https://www.chugaopower.com/ar/blog/</link>
+    <atom:link href="https://www.chugaopower.com/feed-ar.xml" rel="self" type="application/rss+xml" />
+    <atom:link rel="alternate" hreflang="en" type="application/rss+xml" href="https://www.chugaopower.com/feed.xml" />
+    <atom:link rel="alternate" hreflang="zh" type="application/rss+xml" href="https://www.chugaopower.com/feed-zh.xml" />
+    <atom:link rel="alternate" hreflang="es" type="application/rss+xml" href="https://www.chugaopower.com/feed-es.xml" />
+    <atom:link rel="alternate" hreflang="pt" type="application/rss+xml" href="https://www.chugaopower.com/feed-pt.xml" />
+    <atom:link rel="alternate" hreflang="ru" type="application/rss+xml" href="https://www.chugaopower.com/feed-ru.xml" />
+    <atom:link rel="alternate" hreflang="fr" type="application/rss+xml" href="https://www.chugaopower.com/feed-fr.xml" />
+    <atom:link rel="alternate" hreflang="de" type="application/rss+xml" href="https://www.chugaopower.com/feed-de.xml" />
+    <atom:link rel="alternate" hreflang="ja" type="application/rss+xml" href="https://www.chugaopower.com/feed-ja.xml" />
+    <atom:link rel="alternate" hreflang="ko" type="application/rss+xml" href="https://www.chugaopower.com/feed-ko.xml" />
+    <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
+    <description>ملاحظات ميدانية من CHUGAO: أدلة عملية حول مزودات طاقة LED، وشرح درجات الحماية IP، وملاحظات السوق ونصائح الشهادات للمستوردين والمركّبين.</description>
+    <language>ar</language>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <generator>CHUGAO static site</generator>
+    <item>
+      <title>مقطع الكابل وهبوط الجهد في تركيبات LED</title>
+      <link>https://www.chugaopower.com/ar/blog-14/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-14/</guid>
+      <description>قاعدة 5%، جداول أقصى طول لـ 12V و24V، وثلاث طرق لمنع تعتيم الشريط في النهاية.</description>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>اختيار مزود طاقة LED للخارج والبيئات القاسية</title>
+      <link>https://www.chugaopower.com/ar/blog-13/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-13/</guid>
+      <description>سلم البيئات من IP20 إلى IP67، والتخفيض الحراري، والتضبيب، والتيارات الاندفاعية في تدفق قرار واحد.</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>حماية مشغلات LED من التيارات الاندفاعية: البرق والعواصف</title>
+      <link>https://www.chugaopower.com/ar/blog-12/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-12/</guid>
+      <description>من أين تأتي التيارات الاندفاعية، وطبقتا الحماية، وكيف تحدد مشغلًا ينجو من البرق والعواصف.</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>تصحيح معامل القدرة ومشغلات LED خالية من الوميض</title>
+      <link>https://www.chugaopower.com/ar/blog-11/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-11/</guid>
+      <description>ماذا يعني PF والتموج، وأين لا يمكن الاستغناء عن الخالي من الوميض، وكيف تقرأ ورقة البيانات.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>شرح تضبيب مشغلات LED: 0-10V وPWM وDALI وTRIAC</title>
+      <link>https://www.chugaopower.com/ar/blog-10/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-10/</guid>
+      <description>ماذا يفعل كل معيار (0-10V وPWM وDALI وTRIAC)، وأيًا تحدد، ولماذا يجب أن يتطابق المشغل مع المخفت.</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>مشغل LED جهد ثابت أم تيار ثابت: أيها تحتاج؟</title>
+      <link>https://www.chugaopower.com/ar/blog-9/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-9/</guid>
+      <description>ماذا يغذي كل نوع، ولماذا يؤدي خلطهما إلى تلف الإضاءة، وكيف تقرأ الملصق قبل الشراء.</description>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>كيف تختار قدرة مزود طاقة LED: الواط والهامش</title>
+      <link>https://www.chugaopower.com/ar/blog-8/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-8/</guid>
+      <description>اجمع الحمل الحقيقي، وأضف هامش 20%، واحسب تيار البدء والحرارة: أمثلة عملية من المصنع.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>12 فولت أم 24 فولت: كيف تختار مزود طاقة LED</title>
+      <link>https://www.chugaopower.com/ar/blog-7/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-7/</guid>
+      <description>هبوط الجهد، وأقصى طول للكابل حسب المقطع، وقاعدة بسيطة للاختيار بين 12 و24 فولت لشرائط LED.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP67 مقابل IP65: أي مشغل LED مقاوم للماء تحتاج؟</title>
+      <link>https://www.chugaopower.com/ar/blog-6/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-6/</guid>
+      <description>ماذا تحمي كل درجة IP فعليًا، وأين يفشل كل منها، وكيف تختار مزوّد طاقة LED مقاومًا للماء يناسب تركيبك وحرارته.</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>شهادة BIS لمحركات LED: دليل استيراد إلى الهند | ملاحظات ميدانية CHUGAO</title>
+      <link>https://www.chugaopower.com/ar/blog-4/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-4/</guid>
+      <description>ماذا تعني شهادة BIS الهندية لمستوردي مزوّدات طاقة LED. متطلبات IS 13252 الجزء 1، وعملية الاختبار، والجدول الزمني، والتكلفة، وكيف يساعدك مورّد حاصل على BIS مثل CHUGAO على تجاوز الجمارك أسرع.</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>العمر الافتراضي لمحركات LED: MTBF وL70 وكم تدوم فعليًا | ملاحظات ميدانية CHUGAO</title>
+      <link>https://www.chugaopower.com/ar/blog-5/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-5/</guid>
+      <description>ماذا تعني 50,000 ساعة لمحرك LED؟ فهم MTBF، وتصنيف L70، وتأثيرات الحرارة، والعمر الافتراضي الحقيقي لمزوّدات طاقة LED المحوّلة.</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>اختر مزوّد طاقة LED المناسب في 3 خطوات | ملاحظات ميدانية CHUGAO</title>
+      <link>https://www.chugaopower.com/ar/blog-1/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-1/</guid>
+      <description>كيفية اختيار مزوّد طاقة LED الصحيح: مطابقة القدرة، ودرجة IP حسب البيئة، وتوافق جهد الدخل، موضّحًا ببساطة.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP20 مقابل IP65 وIP67 وIP68 | ملاحظات ميدانية CHUGAO</title>
+      <link>https://www.chugaopower.com/ar/blog-2/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-2/</guid>
+      <description>شرح درجة IP لمزوّدات طاقة LED: ماذا تعني الأرقام، وأين تُستخدم كل درجة، وكيف تختار المناسب لمشروعك.</description>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>سوق LED لعام 2026: ما نلاحظه | ملاحظات ميدانية CHUGAO</title>
+      <link>https://www.chugaopower.com/ar/blog-3/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-3/</guid>
+      <description>ملاحظات مباشرة من أرض المصنع: اتجاهات الطلب على محركات LED لعام 2026 — أي الأسواق تنمو، وأي المواصفات يطلبها المشترون أكثر، وكيف تتحرك الأسعار.</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

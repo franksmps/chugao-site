@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>현장 노트 - LED 전원 가이드 및 분석 | CHUGAO</title>
+    <link>https://www.chugaopower.com/ko/blog/</link>
+    <atom:link href="https://www.chugaopower.com/feed-ko.xml" rel="self" type="application/rss+xml" />
+    <atom:link rel="alternate" hreflang="en" type="application/rss+xml" href="https://www.chugaopower.com/feed.xml" />
+    <atom:link rel="alternate" hreflang="zh" type="application/rss+xml" href="https://www.chugaopower.com/feed-zh.xml" />
+    <atom:link rel="alternate" hreflang="es" type="application/rss+xml" href="https://www.chugaopower.com/feed-es.xml" />
+    <atom:link rel="alternate" hreflang="pt" type="application/rss+xml" href="https://www.chugaopower.com/feed-pt.xml" />
+    <atom:link rel="alternate" hreflang="ru" type="application/rss+xml" href="https://www.chugaopower.com/feed-ru.xml" />
+    <atom:link rel="alternate" hreflang="fr" type="application/rss+xml" href="https://www.chugaopower.com/feed-fr.xml" />
+    <atom:link rel="alternate" hreflang="de" type="application/rss+xml" href="https://www.chugaopower.com/feed-de.xml" />
+    <atom:link rel="alternate" hreflang="ar" type="application/rss+xml" href="https://www.chugaopower.com/feed-ar.xml" />
+    <atom:link rel="alternate" hreflang="ja" type="application/rss+xml" href="https://www.chugaopower.com/feed-ja.xml" />
+    <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
+    <description>CHUGAO 현장 노트: 수입업체·시공업체를 위한 실전 LED 전원 가이드, IP 등급 설명, 시장 정보, 인증 팁.</description>
+    <language>ko</language>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <generator>CHUGAO static site</generator>
+    <item>
+      <title>LED 설비 케이블 굵기와 전압 강하</title>
+      <link>https://www.chugaopower.com/ko/blog-14/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-14/</guid>
+      <description>5% 규칙, 12V·24V 최대 배선 길이 표, 그리고 끝이 어두워지지 않게 하는 3가지 방법.</description>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>옥외 및 혹독한 환경용 LED 전원 선택법</title>
+      <link>https://www.chugaopower.com/ko/blog-13/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-13/</guid>
+      <description>IP20부터 IP67까지의 환경 사다리, 열 감율, 디밍, 서지를 하나의 결정 흐름으로.</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 구동장치 서지 보호: 낙뢰 및 순간 과전압</title>
+      <link>https://www.chugaopower.com/ko/blog-12/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-12/</guid>
+      <description>서지의 발생 원인, 두 층의 보호, 옥외·장거리 배선 현장에서 낙뢰를 견디는 구동장치 선정법.</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>역률 보정과 플리커 프리 LED 구동장치</title>
+      <link>https://www.chugaopower.com/ko/blog-11/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-11/</guid>
+      <description>PF와 리플이 의미하는 것, 플리커 프리가 필수인 현장, 데이터시트 읽는 법.</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 구동장치 디밍 해설: 0-10V, PWM, DALI, TRIAC</title>
+      <link>https://www.chugaopower.com/ko/blog-10/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-10/</guid>
+      <description>각 규격(0-10V, PWM, DALI, TRIAC)의 차이, 무엇을 지정할지, 구동장치와 디머가 일치해야 하는 이유.</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 구동장치 정전압 또는 정전류: 어떤 것이 필요한가?</title>
+      <link>https://www.chugaopower.com/ko/blog-9/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-9/</guid>
+      <description>각 타입이 구동하는 것, 혼용이 조명을 고장 내는 이유, 구매 전 라벨 읽는 법.</description>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 전원 용량 정하기: 와트·여유·돌입전류</title>
+      <link>https://www.chugaopower.com/ko/blog-8/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-8/</guid>
+      <description>용량 부족은 조기 고장, 과대는 낭비를 부른다. 4단계 선정법: 부하, 20% 여유, 차단기 돌입전류, 열 감율.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>12V 또는 24V: LED 전원 어떻게 선택할까</title>
+      <link>https://www.chugaopower.com/ko/blog-7/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-7/</guid>
+      <description>전압 강하, 굵기별 최대 케이블 길이, LED 스트립용 12V·24V 선택의 간단한 법칙.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP67 vs IP65: 어떤 LED 구동장치가 필요한가</title>
+      <link>https://www.chugaopower.com/ko/blog-6/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-6/</guid>
+      <description>각 IP 등급이 실제로 보호하는 것, 각각이 실패하는 지점, 설치에 맞는 방수 전원 선택법.</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 구동장치 BIS 인증: 인도 수입 가이드</title>
+      <link>https://www.chugaopower.com/ko/blog-4/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-4/</guid>
+      <description>인도 BIS 인증이 LED 전원 수입업체에게 의미하는 것. IS 13252 파트 1 요건, 시험 절차, 소요 기간, 비용, 그리고 CHUGAO 같은 BIS 인증 공급자가 통관을 앞당기는 이유.</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 구동장치 수명: MTBF, L70 그리고 실제 수명</title>
+      <link>https://www.chugaopower.com/ko/blog-5/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-5/</guid>
+      <description>50,000시간이 LED 구동장치에 실제로 의미하는 것. MTBF, L70 수치, 온도 영향, LED 스위칭 전원의 실제 수명 이해.</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>3단계로 맞는 LED 전원 선택하기</title>
+      <link>https://www.chugaopower.com/ko/blog-1/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-1/</guid>
+      <description>올바른 LED 전원 선택법: 출력 정합, 환경별 IP 등급, 입력 전압 호환성을 쉽게 설명.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP20·IP65·IP67·IP68 비교</title>
+      <link>https://www.chugaopower.com/ko/blog-2/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-2/</guid>
+      <description>LED 구동장치의 IP 등급 설명: 숫자의 의미, 각 등급의 용도, 프로젝트에 맞는 등급 선택법.</description>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 시장 2026: 현장에서 보는 것들</title>
+      <link>https://www.chugaopower.com/ko/blog-3/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-3/</guid>
+      <description>공장 현장의 직접 관찰: 2026년 LED 구동장치 수요 동향——성장하는 시장, 구매자가 요구하는 사양, 가격 흐름.</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

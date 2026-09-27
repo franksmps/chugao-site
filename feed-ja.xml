@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>現場ノート - LED 電源のガイドと解説 | CHUGAO</title>
+    <link>https://www.chugaopower.com/ja/blog/</link>
+    <atom:link href="https://www.chugaopower.com/feed-ja.xml" rel="self" type="application/rss+xml" />
+    <atom:link rel="alternate" hreflang="en" type="application/rss+xml" href="https://www.chugaopower.com/feed.xml" />
+    <atom:link rel="alternate" hreflang="zh" type="application/rss+xml" href="https://www.chugaopower.com/feed-zh.xml" />
+    <atom:link rel="alternate" hreflang="es" type="application/rss+xml" href="https://www.chugaopower.com/feed-es.xml" />
+    <atom:link rel="alternate" hreflang="pt" type="application/rss+xml" href="https://www.chugaopower.com/feed-pt.xml" />
+    <atom:link rel="alternate" hreflang="ru" type="application/rss+xml" href="https://www.chugaopower.com/feed-ru.xml" />
+    <atom:link rel="alternate" hreflang="fr" type="application/rss+xml" href="https://www.chugaopower.com/feed-fr.xml" />
+    <atom:link rel="alternate" hreflang="de" type="application/rss+xml" href="https://www.chugaopower.com/feed-de.xml" />
+    <atom:link rel="alternate" hreflang="ar" type="application/rss+xml" href="https://www.chugaopower.com/feed-ar.xml" />
+    <atom:link rel="alternate" hreflang="ko" type="application/rss+xml" href="https://www.chugaopower.com/feed-ko.xml" />
+    <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
+    <description>CHUGAO 現場ノート：輸入業者・施工者向けの実践的な LED 電源ガイド、IP 等級の解説、市場情報、認証のヒント。</description>
+    <language>ja</language>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <generator>CHUGAO static site</generator>
+    <item>
+      <title>LED 配線の線径と電圧降下</title>
+      <link>https://www.chugaopower.com/ja/blog-14/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-14/</guid>
+      <description>5% ルール、12V と 24V の最大配線長表、遠端のストリップを暗くしない 3 つの方法。</description>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>屋外・過酷環境向け LED 電源の選び方</title>
+      <link>https://www.chugaopower.com/ja/blog-13/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-13/</guid>
+      <description>IP20 から IP67 の環境段階、熱デレーティング、調光、サージを一つの判断フローに。</description>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED ドライバーの雷サージ保護：雷と過渡現象</title>
+      <link>https://www.chugaopower.com/ja/blog-12/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-12/</guid>
+      <description>サージの発生源、2 層の保護、屋外や長距離配線現場で雷に耐える駆動の選び方。</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>力率補正と無点滅（フリッカーフリー）LED ドライバー</title>
+      <link>https://www.chugaopower.com/ja/blog-11/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-11/</guid>
+      <description>PF とリップルが意味するもの、無点滅が必須な現場、データシートの読み方。</description>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED ドライバー調光の解説：0-10V・PWM・DALI・TRIAC</title>
+      <link>https://www.chugaopower.com/ja/blog-10/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-10/</guid>
+      <description>各規格（0-10V・PWM・DALI・TRIAC）の違い、どれを指定するか、ドライバーと調光器が一致する必要がある理由。</description>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED ドライバー 定電圧か定電流か：どちらが必要？</title>
+      <link>https://www.chugaopower.com/ja/blog-9/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-9/</guid>
+      <description>各タイプが駆動するもの、混用が器具を破壊する理由、購入前のラベル確認方法。</description>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 電源の容量決め：ワット数・余裕・突入電流</title>
+      <link>https://www.chugaopower.com/ja/blog-8/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-8/</guid>
+      <description>容量不足は早期故障を、過大は無駄な出費を招く。4 ステップの選定法：負荷、20% 余裕、ブレーカーの突入電流、熱降格。</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>12V か 24V か：LED 電源の選び方</title>
+      <link>https://www.chugaopower.com/ja/blog-7/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-7/</guid>
+      <description>電圧降下、線径ごとの最大ケーブル長、LED ストリップで 12V と 24V を選ぶ簡単な法則。</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP67 か IP65 か：どちらの LED ドライバーが必要？</title>
+      <link>https://www.chugaopower.com/ja/blog-6/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-6/</guid>
+      <description>各 IP 等級が本当に守るもの、それぞれが破綻する場面、設置に合った防水電源の選び方。</description>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED ドライバーの BIS 認証：インド輸入ガイド</title>
+      <link>https://www.chugaopower.com/ja/blog-4/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-4/</guid>
+      <description>インドの BIS 認証が LED 電源輸入業者に意味するもの。IS 13252 パート 1 の要件、試験プロセス、所要期間、コスト、および CHUGAO のような BIS 認証供給元が通関を早める理由。</description>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED ドライバーの寿命：MTBF・L70・実際のもち</title>
+      <link>https://www.chugaopower.com/ja/blog-5/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-5/</guid>
+      <description>50,000 時間が LED ドライバーに本当に意味するもの。MTBF、L70 の数値、温度の影響、スイッチング電源の実寿命を理解する。</description>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>3 ステップで選ぶ正しい LED 電源</title>
+      <link>https://www.chugaopower.com/ja/blog-1/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-1/</guid>
+      <description>正しい LED 電源の選び方：電力の適合、環境に応じた IP 等級、入力電圧の互換性をわかりやすく解説。</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>IP20・IP65・IP67・IP68 の違い</title>
+      <link>https://www.chugaopower.com/ja/blog-2/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-2/</guid>
+      <description>LED ドライバーの IP 等級解説：数字の意味、各等級の用途、プロジェクトに合った等級の選び方。</description>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>LED 市場 2026：現場で見ていること</title>
+      <link>https://www.chugaopower.com/ja/blog-3/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-3/</guid>
+      <description>工場現場からの直接的な観察：2026 年の LED ドライバー需要トレンド——成長する市場、買い手が求める仕様、価格の動き。</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
