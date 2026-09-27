@@ -16,8 +16,15 @@
     <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
     <description>Notas de Campo de CHUGAO: guías prácticas de fuentes LED, explicaciones de grados IP, novedades de mercado y consejos de certificación para importadores e instaladores.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>Derating térmico del driver LED: cómo el calor reduce potencia y vida útil</title>
+      <link>https://www.chugaopower.com/es/blog-15/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/es/blog-15/</guid>
+      <description>Qué es el derating térmico, por qué los vatios de la etiqueta solo valen a la temperatura ambiente nominal, cómo leer una curva de derating y cómo dimensionar para sitios calurosos o cerrados.</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Sección de cable y caída de tensión en instalaciones LED</title>
       <link>https://www.chugaopower.com/es/blog-14/</link>

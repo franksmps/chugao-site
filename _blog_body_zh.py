@@ -1024,3 +1024,86 @@ BLOG_BODY['zh']['blog-14'] = """<main class="article">
 
 <nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">为户外与恶劣场所选择 LED 电源</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">下一篇</span><span class="pn-t">现场笔记</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['zh']['blog-15'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 返回现场笔记</a>
+
+<h1>LED 驱动的热降额：高温如何削减输出与寿命</h1>
+<div class="meta">技术指南 &middot; 2026 年 11 月 &middot; 8 min</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="LED 驱动热降额与散热管理" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>每个 LED 驱动都印着额定功率——而这些数字几乎都假定了凉爽的室内环境。把同一个驱动放进密闭灯具、暴晒的机柜或热带机房，可用功率就会下降。本文讲清楚<strong>热降额</strong>：它是什么、怎么读，以及如何选一台能扛住真实高温的驱动。</p>
+
+<h2>为什么热才是真正的敌人</h2>
+
+<p>开关电源会把一部分输入变成热，而这些热只能散到外壳和周围空气。内部最先老化的是电解电容：内部温度每升高约 10&deg;C，寿命就减半。让驱动比预期热 20&deg;C 工作，寿命可能从 50,000 小时掉到不足 15,000 小时——远早于 LED 本身需要更换的时间。</p>
+
+<div class="highlight">
+<strong>一句话：</strong>标签上的瓦数<em>只</em>在规格书标明的环境温度下成立，通常是 25&deg;C 或 40&deg;C。超过就得降负载，而不是降电压。
+</div>
+
+<h2>“降额”到底是什么意思</h2>
+
+<p>降额是指随环境温度升高而主动降低输出功率，让内部元件保持在热限之内。一台按 40&deg;C 标定的 200W 驱动，在 55&deg;C 时可能只能输出约 160W，在 70&deg;C 时或许只有 120W。这不是故障，而是电源在自我保护。错误在于按标签瓦数选型，却装到永远见不到 40&deg;C 的地方。</p>
+
+<h2>环境温度、壳温与结温</h2>
+
+<p>三种温度常被混淆，而只有一种在你的掌控之中：</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">温度</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">是什么</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">由谁决定</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">环境（Ta）</td><td style="padding:10px 14px;border:1px solid var(--b)">驱动周围的空气</td><td style="padding:10px 14px;border:1px solid var(--b)">安装方式：通风、日照、柜体</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">壳温（Tc）</td><td style="padding:10px 14px;border:1px solid var(--b)">外壳金属表面</td><td style="padding:10px 14px;border:1px solid var(--b)">两者兼有：进多少热、怎么散出去</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">结温（Tj）</td><td style="padding:10px 14px;border:1px solid var(--b)">半导体内部</td><td style="padding:10px 14px;border:1px solid var(--b)">仅取决于驱动设计</td></tr>
+</tbody>
+</table>
+
+<p>规格书通常给出最大壳温（常在 70&ndash;90&deg;C）与环境范围（CHUGAO 室内驱动为 &minus;20 至 +50&deg;C）。若你能在运行一小时后用红外测温枪测外壳，就拿到了判断驱动是否被“烤”的最有用数字。</p>
+
+<h2>怎么看降额曲线</h2>
+
+<p>降额曲线以负载（通常是额定输出的百分比）对应环境温度绘制。在额定环境温度以下是一条平线，之后开始下斜。要按驱动真正会遇到的温度来读：不是室外平均温度，而是最热那天下午柜内的峰值温度。如果没有公布曲线，就直接索取；拿不出曲线的供应商就是在猜。</p>
+
+<h2>能避免大多数故障的实用规则</h2>
+
+<p>四条习惯能消除我们在现场见到的大部分热相关故障：</p>
+
+<ol>
+<li><strong>留 20&ndash;30% 余量。</strong>让驱动在预期温度下运行在额定输出的 70&ndash;80%。这为降额和启动电流都留出了余量。参见<a href="/blog-8/">如何选择 LED 电源功率</a>。</li>
+<li><strong>给它空气。</strong>安装时让两侧通风孔保持畅通。绝不要把驱动埋进保温层，也不要紧贴灯具的高温背板。</li>
+<li><strong>按对流安装。</strong>热往上升；竖装、上方有自由空气的驱动，比平放在密闭盒里的更凉。金属外壳只有在能把热传给更凉的空气时才有用。</li>
+<li><strong>不要叠负载。</strong>两个驱动挤在小柜里会互相加热。拉开距离，或直接换更大的单台。</li>
+</ol>
+
+<h2>防水驱动并不“防火热的账”</h2>
+
+<p>IP67 机型全灌封，能挡水——但灌封同样会困住热。所以同样功率下，<a href="/products/ip67/">防水驱动</a>的降额起点常常比开架式<a href="/products/indoor/">室内驱动</a>更低（或从更小的基数降额）。炎热日照气候下的室外安装需要更多余量而非更少。<a href="/products/ip65/">IP65 防雨系列</a>同理：它会“呼吸”所以更凉，但不适合整体浸没。</p>
+
+<h2>为高温或密闭场所选型</h2>
+
+<p>如果你是为中东、东南亚、机房、玻璃中庭或任何密闭灯具采购，告诉我们三件事：柜内峰值环境温度、总负载、安装方式。我们会按降额后的数值而非标签瓦数选型；必要时推荐更大功率的机型，让它在 70% 从容工作，而不是被顶到 100%。这一个决定，往往就是“三年保修从不被索赔”和“第一个夏天就坏”之间的差别。</p>
+
+<p>热是 LED 照明里最慢、最安静、也最容易被设计规避的失效模式。让驱动适配它真正要待的温度，它就会比灯具本身更耐用。</p>
+
+<div class="cta-box">
+<h3>为高温或密闭环境选型？</h3>
+<p>告诉我们柜内的峰值环境温度、总负载和安装方式。我们会按降额后的数值选型，而不是按标签瓦数。</p>
+<a href="/#inquiry" class="btn">获取降额选型建议</a>
+</div>
+
+<section class="product-crosslink" aria-label="相关产品"><h2 class="related-h">了解 CHUGAO 产品</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 适配器 5-200W</span><span class="pc-desc">12V/24V 紧凑机型，用于灯带、模组与招牌。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">室内 LED 驱动 50-400W</span><span class="pc-desc">恒压输出、内置主动 PFC，用于吸顶灯与面板灯。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水驱动 10-400W</span><span class="pc-desc">全灌封、通过盐雾测试，适用于潮湿与沿海场所。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨驱动 100-600W</span><span class="pc-desc">带通风的金属外壳，用于招牌与半室外安装。</span></a></div></section>
+
+<section class="related" aria-label="相关文章">
+  <h2 class="related-h">更多现场笔记</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">技术深读</span><span class="rel-title">LED 驱动寿命：MTBF、L70 与真实使用寿命</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">技术指南</span><span class="rel-title">LED 电源功率怎么选：瓦数与余量</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">买家指南</span><span class="rel-title">户外与恶劣环境 LED 电源怎么选</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技术</span><span class="rel-title">3 步选对 LED 电源</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="文章导航"><a class="pn-prev" href="/blog-14/" rel="prev"><span class="pn-lab">上一篇</span><span class="pn-t">LED 布线线径与压降</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">下一篇</span><span class="pn-t">现场笔记</span></a></nav>
+</main>"""

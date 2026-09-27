@@ -1021,3 +1021,86 @@ BLOG_BODY['it']['blog-14'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Scegliere un alimentatore LED per siti esterni e difficili</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Note dal campo</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['it']['blog-15'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Torna alle note dal campo</a>
+
+<h1>Derating termico del driver LED: come il calore riduce potenza e vita utile</h1>
+<div class="meta">Guida tecnica &middot; novembre 2026 &middot; 8 min</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Derating termico e gestione del calore dei driver LED" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>Ogni driver LED riporta una potenza nominale — e quasi tutte quelle cifre presuppongono una stanza temperata. Metti lo stesso driver dentro un apparecchio sigillato, un quadro al sole o una sala macchine tropicale e la potenza utile cala. Questa guida spiega il <strong>derating termico</strong>: cos’è, come si legge e come scegliere un driver che sopravvive al calore che hai davvero.</p>
+
+<h2>Perché il calore è il vero nemico</h2>
+
+<p>Un alimentatore switching converte parte dell’ingresso in calore, e quel calore può andare solo nel contenitore e nell’aria circostante. All’interno, i pezzi che invecchiano per primi sono i condensatori elettrolitici: la loro vita si dimezza ogni circa 10&deg;C di aumento della temperatura interna. Fai lavorare un driver 20&deg;C più caldo del previsto e la sua vita può scendere da 50.000 ore a meno di 15.000, molto prima della sostituzione dei LED stessi.</p>
+
+<div class="highlight">
+<strong>In breve:</strong> i watt sull’etichetta valgono <em>solo</em> alla temperatura ambiente del datasheet, di solito 25&deg;C o 40&deg;C. Oltre, va ridotto il carico, non la tensione.
+</div>
+
+<h2>Che cosa significa “derating”</h2>
+
+<p>Il derating è la riduzione volontaria della potenza d’uscita all’aumentare della temperatura ambiente, così che i componenti interni restino entro i limiti termici. Un driver da 200W nominale a 40&deg;C può erogare solo circa 160W a 55&deg;C e forse 120W a 70&deg;C. Non è un difetto: è l’alimentatore che si protegge. L’errore è dimensionare sul watt di targa e installare dove quei 40&deg;C non si vedranno mai.</p>
+
+<h2>Temperatura ambiente, di custodia e di giunzione</h2>
+
+<p>Tre temperature vengono confuse, e solo una è sotto il tuo controllo:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Temperatura</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Che cos’è</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Chi la controlla</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Ambiente (Ta)</td><td style="padding:10px 14px;border:1px solid var(--b)">L’aria attorno al driver</td><td style="padding:10px 14px;border:1px solid var(--b)">L’installazione: ventilazione, sole, contenitore</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Custodia (Tc)</td><td style="padding:10px 14px;border:1px solid var(--b)">La superficie metallica del contenitore</td><td style="padding:10px 14px;border:1px solid var(--b)">Entrambe: calore in ingresso e come esce</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Giunzione (Tj)</td><td style="padding:10px 14px;border:1px solid var(--b)">Dentro i semiconduttori</td><td style="padding:10px 14px;border:1px solid var(--b)">Solo il progetto del driver</td></tr>
+</tbody>
+</table>
+
+<p>I datasheet indicano di solito una temperatura massima di custodia (spesso 70&ndash;90&deg;C) e un intervallo ambiente (per i driver indoor CHUGAO, &minus;20 a +50&deg;C). Se riesci a misurare la custodia con un termometro a infrarossi dopo un’ora di funzionamento, hai il dato più utile per capire se un driver si sta cuocendo.</p>
+
+<h2>Come leggere una curva di derating</h2>
+
+<p>Una curva di derating traccia il carico (di solito una percentuale del nominale) rispetto alla temperatura ambiente. È piatta fino all’ambiente nominale, poi scende. Leggila alla temperatura che il driver vedrà davvero: non la media esterna, ma il picco dentro il contenitore nel pomeriggio più caldo. Se la curva non è pubblicata, chiedila; un fornitore che non può fornirla sta tirando a indovinare.</p>
+
+<h2>Regole pratiche che evitano la maggior parte dei guasti</h2>
+
+<p>Quattro abitudini eliminano la grande maggioranza dei guasti termici che vediamo sul campo:</p>
+
+<ol>
+<li><strong>Lascia il 20&ndash;30% di margine.</strong> Dimensiona il driver per lavorare al 70&ndash;80% del nominale alla temperatura prevista. Resta margine per il derating e per la corrente di spunto. Vedi <a href="/blog-8/">come dimensionare un alimentatore LED</a>.</li>
+<li><strong>Dagli aria.</strong> Montalo con le feritoie libere su entrambi i lati. Non seppellirlo mai nel coibente e non premerlo contro la piastra calda di un apparecchio.</li>
+<li><strong>Monta per convezione.</strong> Il calore sale; un driver su superficie verticale con aria libera sopra scalda meno di uno disteso in una scatola chiusa. Il metallo aiuta solo se può cedere calore ad aria più fredda.</li>
+<li><strong>Non impilare i carichi.</strong> Due driver in un contenitore piccolo si scaldano a vicenda. Distanziali o passa a una unità più grande.</li>
+</ol>
+
+<h2>Un driver impermeabile non è immune al calore</h2>
+
+<p>Un’unità IP67 è completamente pottata, il che sigilla l’acqua — ma il pott trattiene anche il calore. Per questo i <a href="/products/ip67/">driver impermeabili</a> spesso deratano a un ambiente più basso (o da una base più bassa) rispetto a un <a href="/products/indoor/">driver indoor</a> aperto della stessa potenza. Le installazioni esterne in climi caldi e soleggiati richiedono più margine, non meno. Stessa logica per la linea <a href="/products/ip65/">IP65 rainproof</a>: respira, quindi resta più fresca, ma non è per l’immersione totale.</p>
+
+<h2>Dimensionare per un sito caldo o chiuso</h2>
+
+<p>Se acquisti per il Golfo, il Sud-Est asiatico, una sala macchine, un atrio vetrato o qualsiasi apparecchio sigillato, dicci tre cose: l’ambiente di picco nel contenitore, il carico totale e il modo di montaggio. Dimensioneremo sul valore deratato invece che sul watt di targa e, se serve, consiglieremo un’unità più grande perché lavori comoda al 70% invece che forzata al 100%. Quella sola decisione è spesso la differenza tra una garanzia di tre anni mai richiesta e un driver che cede alla prima estate.</p>
+
+<p>Il calore è il modo di guasto più lento e silenzioso dell’illuminazione LED — e il più facile da eliminare in fase di progetto. Allinea il driver alla temperatura in cui vivrà davvero e durerà più dell’apparecchio stesso.</p>
+
+<div class="cta-box">
+<h3>Stai dimensionando per un sito caldo o chiuso?</h3>
+<p>Invia la temperatura ambiente di picco dentro il contenitore, il carico totale e il modo di montaggio. Dimensioneremo sul valore deratato, non sul watt dell’etichetta.</p>
+<a href="/#inquiry" class="btn">Richiedi una raccomandazione deratata</a>
+</div>
+
+<section class="product-crosslink" aria-label="Prodotti correlati"><h2 class="related-h">Scopri i prodotti CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adattatori LED 5-200W</span><span class="pc-desc">Unità compatte 12V/24V per strisce, moduli e insegne.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Driver LED indoor 50-400W</span><span class="pc-desc">Tensione costante con PFC attivo per plafoniere e pannelli.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Driver impermeabili IP67 10-400W</span><span class="pc-desc">Completamente pottati, testati alla nebbia salina per siti umidi e costieri.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Driver rainproof IP65 100-600W</span><span class="pc-desc">Custodia metallica ventilata per insegne e installazioni semi-esterne.</span></a></div></section>
+
+<section class="related" aria-label="Articoli correlati">
+  <h2 class="related-h">Altre note dal campo</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Analisi tecnica</span><span class="rel-title">Durata dei driver LED: MTBF, L70 e quanto durano davvero | Note dal Campo CHUGAO</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">Guida tecnica</span><span class="rel-title">Come dimensionare un alimentatore LED: watt, margine e inrush | Note dal Campo CHUGAO</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">Guida all’acquisto</span><span class="rel-title">Scegliere l'alimentatore LED per esterno e ambienti difficili</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">Tecnologia LED</span><span class="rel-title">Scegliere l'alimentatore LED giusto in 3 passi | Note dal Campo CHUGAO</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigazione articolo"><a class="pn-prev" href="/blog-14/" rel="prev"><span class="pn-lab">Articolo precedente</span><span class="pn-t">Sezione cavo e caduta di tensione per installazioni LED</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">Articolo successivo</span><span class="pn-t">Note dal campo</span></a></nav>
+</main>"""

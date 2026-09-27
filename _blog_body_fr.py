@@ -1304,3 +1304,86 @@ BLOG_BODY['fr']['blog-5'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Certification BIS pour drivers LED : guide d'importation en Inde</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">Article suivant</span><span class="pn-t">IP67 vs IP65 : quelle note choisir ?</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['fr']['blog-15'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Retour aux notes de terrain</a>
+
+<h1>Déclassement thermique du driver LED : comment la chaleur réduit puissance et durée de vie</h1>
+<div class="meta">Guide technique &middot; novembre 2026 &middot; 8 min</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Déclassement thermique et gestion de la chaleur des drivers LED" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>Chaque driver LED affiche une puissance nominale — et presque toutes ces valeurs supposent une pièce tempérée. Mettez le même driver dans un luminaire scellé, une armoire en plein soleil ou une salle des machines tropicale, et la puissance utile chute. Ce guide explique le <strong>déclassement thermique</strong> : ce que c’est, comment le lire, et comment choisir un driver qui survit à la chaleur que vous avez réellement.</p>
+
+<h2>Pourquoi la chaleur est le véritable ennemi</h2>
+
+<p>Une alimentation à découpage convertit une partie de son entrée en chaleur, et cette chaleur n’a nulle part où aller sinon le boîtier et l’air ambiant. À l’intérieur, les pièces qui vieillissent en premier sont les condensateurs électrolytiques : leur durée de vie est divisée par deux environ tous les 10&deg;C d’élévation de la température interne. Faites tourner un driver 20&deg;C plus chaud que prévu et sa durée de vie peut tomber de 50 000 à moins de 15 000 heures — bien avant le remplacement prévu des LED elles-mêmes.</p>
+
+<div class="highlight">
+<strong>En bref :</strong> les watts sur l’étiquette ne valent <em>que</em> à la température ambiante de la fiche technique, en général 25&deg;C ou 40&deg;C. Au-delà, il faut réduire la charge, pas la tension.
+</div>
+
+<h2>Ce que signifie « déclassement »</h2>
+
+<p>Le déclassement est la réduction volontaire de la puissance de sortie à mesure que la température ambiante monte, afin que les composants internes restent dans leurs limites thermiques. Un driver de 200W nominal à 40&deg;C ne pourra donner qu’environ 160W à 55&deg;C, et peut-être 120W à 70&deg;C. Ce n’est pas un défaut : c’est l’alimentation qui se protège. L’erreur est de dimensionner sur le watt de l’étiquette puis d’installer là où ces 40&deg;C ne seront jamais atteints.</p>
+
+<h2>Température ambiante, de boîtier et de jonction</h2>
+
+<p>Trois températures sont confondues, et une seule est sous votre contrôle :</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Température</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Ce qu’elle est</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Qui la maîtrise</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Ambiante (Ta)</td><td style="padding:10px 14px;border:1px solid var(--b)">L’air autour du driver</td><td style="padding:10px 14px;border:1px solid var(--b)">L’installation : ventilation, soleil, enceinte</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Boîtier (Tc)</td><td style="padding:10px 14px;border:1px solid var(--b)">La surface métallique du boîtier</td><td style="padding:10px 14px;border:1px solid var(--b)">Les deux : la chaleur entrante et sa sortie</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Jonction (Tj)</td><td style="padding:10px 14px;border:1px solid var(--b)">À l’intérieur des semi-conducteurs</td><td style="padding:10px 14px;border:1px solid var(--b)">Le design du driver uniquement</td></tr>
+</tbody>
+</table>
+
+<p>Les fiches techniques indiquent souvent une température de boîtier maximale (70&ndash;90&deg;C) et une plage ambiante (pour les drivers intérieurs CHUGAO, &minus;20 à +50&deg;C). Si vous pouvez mesurer le boîtier au thermomètre infrarouge après une heure de fonctionnement, vous tenez l’indication la plus utile pour juger si un driver est en train de cuire.</p>
+
+<h2>Comment lire une courbe de déclassement</h2>
+
+<p>Une courbe de déclassement trace la charge (souvent un pourcentage du nominal) en fonction de la température ambiante. Elle est plate jusqu’à l’ambiante nominale, puis descend. Lisez-la à la température que le driver verra vraiment : pas la moyenne extérieure, mais le pic dans l’enceinte par après-midi le plus chaud. Si la courbe n’est pas publiée, demandez-la ; un fournisseur qui ne peut pas la fournir devine.</p>
+
+<h2>Règles pratiques qui évitent la plupart des pannes</h2>
+
+<p>Quatre habitudes éliminent la grande majorité des pannes thermiques que nous voyons sur le terrain :</p>
+
+<ol>
+<li><strong>Gardez 20&ndash;30% de marge.</strong> Dimensionnez le driver pour qu’il tourne à 70&ndash;80% de son nominal à la température attendue. Cela laisse de la marge pour le déclassement et pour le courant d’appel. Voir <a href="/blog-8/">comment dimensionner une alimentation LED</a>.</li>
+<li><strong>Laissez-le respirer.</strong> Montez-le avec les grilles d’aération libres des deux côtés. Ne l’enfouissez jamais dans l’isolant et ne le plaquez pas contre la plaque chaude d’un luminaire.</li>
+<li><strong>Montez pour la convection.</strong> La chaleur monte ; un driver fixé sur une surface verticale avec de l’air libre au-dessus chauffe moins qu’un driver à plat dans un coffret fermé. Le boîtier métallique n’aide que s’il peut céder de la chaleur à un air plus frais.</li>
+<li><strong>N’empilez pas les charges.</strong> Deux drivers dans une petite enceinte se chauffent mutuellement. Espacez-les ou passez à une unité plus grosse.</li>
+</ol>
+
+<h2>Un driver étanche n’est pas à l’abri de la chaleur</h2>
+
+<p>Une unité IP67 est entièrement coulée, ce qui scelle l’eau — mais le coulage retient aussi la chaleur. C’est pourquoi les <a href="/products/ip67/">drivers étanches</a> sont souvent déclassés à une ambiante plus basse (ou depuis une base plus faible) qu’un <a href="/products/indoor/">driver intérieur</a> ouvert de même puissance. Les installations extérieures en climat chaud et ensoleillé demandent plus de marge, pas moins. Même logique pour la gamme <a href="/products/ip65/">IP65 anti-pluie</a> : elle respire, donc reste plus fraîche, mais ne convient pas à l’immersion totale.</p>
+
+<h2>Dimensionner pour un site chaud ou fermé</h2>
+
+<p>Si vous achetez pour le Golfe, l’Asie du Sud-Est, une salle des machines, un atrium vitré ou tout luminaire scellé, dites-nous trois choses : l’ambiante maximale dans l’enceinte, la charge totale et le mode de montage. Nous dimensionnerons sur la valeur déclassée plutôt que sur le watt de l’étiquette et, si besoin, recommanderons une unité plus forte pour qu’elle tourne à l’aise à 70% plutôt que forcée à 100%. Cette seule décision fait souvent la différence entre une garantie de trois ans jamais réclamée et un driver qui lâche dès le premier été.</p>
+
+<p>La chaleur est le mode de panne le plus lent et le plus silencieux de l’éclairage LED — et le plus facile à éliminer au stade de la conception. Calez le driver sur la température où il vivra vraiment, et il durera plus longtemps que le luminaire lui-même.</p>
+
+<div class="cta-box">
+<h3>Vous dimensionnez pour un site chaud ou fermé ?</h3>
+<p>Envoyez la température ambiante maximale dans l’enceinte, la charge totale et le mode de montage du driver. Nous dimensionnerons sur la valeur déclassée, pas sur le watt de l’étiquette.</p>
+<a href="/#inquiry" class="btn">Obtenir une recommandation déclassée</a>
+</div>
+
+<section class="product-crosslink" aria-label="Produits associés"><h2 class="related-h">Découvrir les produits CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">Adaptateurs LED 5-200W</span><span class="pc-desc">Modules compacts 12V/24V pour rubans, modules et enseignes.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Drivers LED intérieurs 50-400W</span><span class="pc-desc">Tension constante avec PFC actif pour plafonniers et panneaux.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Drivers étanches IP67 10-400W</span><span class="pc-desc">Entièrement coulés, testés au brouillard salin pour sites humides et côtiers.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Drivers anti-pluie IP65 100-600W</span><span class="pc-desc">Boîtier métallique ventilé pour enseignes et installations semi-extérieures.</span></a></div></section>
+
+<section class="related" aria-label="Articles associés">
+  <h2 class="related-h">Plus du terrain</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Analyse technique</span><span class="rel-title">Durée de vie des drivers LED : MTBF, L70 et combien de temps ils durent réellement | Notes de terrain CHUGAO</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">Guide technique</span><span class="rel-title">Dimensionner une alimentation LED : watts et marge</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">Guide d’achat</span><span class="rel-title">Choisir une alimentation LED pour extérieur et environnements difficiles</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">Technologie LED</span><span class="rel-title">Choisir la bonne alimentation LED en 3 étapes | Notes de terrain CHUGAO</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Navigation de l’article"><a class="pn-prev" href="/blog-14/" rel="prev"><span class="pn-lab">Article précédent</span><span class="pn-t">Section de câble et chute de tension pour installations LED</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">Article suivant</span><span class="pn-t">Notes de terrain</span></a></nav>
+</main>"""

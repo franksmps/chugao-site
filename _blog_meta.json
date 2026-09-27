@@ -96,5 +96,12 @@
   "desc": "Cable size and voltage drop for LED installations: the 5% rule, max run tables for 12V vs 24V, and three ways to stop dim LEDs at the far end.",
   "date": "2026-10-20",
   "img": "product-adapter.jpg"
+ },
+ "blog-15": {
+  "og": "LED Driver Thermal Derating: How Heat Cuts Output and Lifespan",
+  "h1": "LED Driver Thermal Derating: How Heat Cuts Output and Lifespan",
+  "desc": "LED driver thermal derating explained: why heat cuts usable output and lifespan, how to read a derating curve, and how to spec a driver for hot or enclosed sites.",
+  "date": "2026-11-01",
+  "img": "product-indoor.jpg"
  }
 }

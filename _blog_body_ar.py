@@ -1303,3 +1303,86 @@ BLOG_BODY['ar']['blog-5'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">شهادة BIS لمزودات LED: دليل استيراد الهند</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">المقال التالي</span><span class="pn-t">IP67 vs IP65: أي تقييم تحتاج؟</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ar']['blog-15'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; العودة إلى ملاحظات الميدان</a>
+
+<h1>التخفيض الحراري لمحرك LED: كيف تقلّل الحرارة القدرة والعمر</h1>
+<div class="meta">دليل تقني &middot; نوفمبر 2026 &middot; 8 min</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="التخفيض الحراري وإدارة الحرارة لمحركات LED" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>كل محرك LED يحمل قدرة اسمية مطبوعة — ومعظم هذه الأرقام تفترض غرفة معتدلة. ضع المحرك نفسه داخل وحدة إضاءة مغلقة أو خزانة تحت الشمس أو غرفة معدات استوائية، فتنخفض القدرة المفيدة. يشرح هذا الدليل <strong>التخفيض الحراري</strong>: ما هو، وكيف يُقرأ، وكيف تختار محركًا يصمد للحرارة الموجودة فعلاً.</p>
+
+<h2>لماذا الحرارة هي العدو الحقيقي</h2>
+
+<p>يحوّل مزوّد الطاقة الجزء من دخله إلى حرارة، وهذه الحرارة لا تجد مخرجًا إلا إلى الهيكل والهواء المحيط. وفي الداخل، أول ما يتقادم هي المكثفات الإلكتروليتية: ينخفض عمرها إلى النصف تقريبًا مع كل ارتفاع 10&deg;C في درجة الحرارة الداخلية. شغّل المحرك أسخن من المتوقّع بـ 20&deg;C وقد ينخفض عمره من 50,000 ساعة إلى أقل من 15,000 — قبل موعد استبدال مصابيح LED نفسها بكثير.</p>
+
+<div class="highlight">
+<strong>باختصار:</strong> الواطات على الملصق صحيحة <em>فقط</em> عند درجة الحرارة المحيطة في ورقة البيانات، عادةً 25&deg;C أو 40&deg;C. فوق ذلك يجب تقليل الحمل لا الجهد.
+</div>
+
+<h2>ماذا يعني «التخفيض»</h2>
+
+<p>التخفيض هو التقليل المتعمّد لقدرة الخرج مع ارتفاع الحرارة المحيطة، لتبقى المكوّنات الداخلية ضمن حدودها الحرارية. محرك 200W مصنّف عند 40&deg;C قد لا يقدّم سوى نحو 160W عند 55&deg;C وربما 120W عند 70&deg;C. ليس عيبًا — بل هو حماية المزوّد لنفسه. الخطأ أن تُصمّم على واط الملصق ثم تُركّب حيث لن تتحقق تلك الـ40&deg;C أبدًا.</p>
+
+<h2>الحرارة المحيطة وحرارة الهيكل وحرارة الوصلة</h2>
+
+<p>تُخلط ثلاث درجات حرارة، وواحدة فقط تحت سيطرتك:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">الحرارة</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">ما هي</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">من يتحكّم بها</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">المحيطة (Ta)</td><td style="padding:10px 14px;border:1px solid var(--b)">الهواء حول المحرك</td><td style="padding:10px 14px;border:1px solid var(--b)">التركيب: التهوية، الشمس، الحاوية</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">الهيكل (Tc)</td><td style="padding:10px 14px;border:1px solid var(--b)">السطح المعدني للهيكل</td><td style="padding:10px 14px;border:1px solid var(--b)">كلاهما: الحرارة الداخلة وكيفية خروجها</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">الوصلة (Tj)</td><td style="padding:10px 14px;border:1px solid var(--b)">داخل أشباه الموصلات</td><td style="padding:10px 14px;border:1px solid var(--b)">تصميم المحرك وحده</td></tr>
+</tbody>
+</table>
+
+<p>تذكر أوراق البيانات عادةً أقصى حرارة هيكل (غالبًا 70&ndash;90&deg;C) ونطاقًا محيطًا (في محركات CHUGAO الداخلية &minus;20 إلى +50&deg;C). إن استطعت قياس الهيكل بمقياس حرارة بالأشعة تحت الحمراء بعد ساعة تشغيل، فلديك أنفع رقم للحكم على مدى «طبخ» المحرك.</p>
+
+<h2>كيف تقرأ منحنى التخفيض</h2>
+
+<p>يرسم منحنى التخفيض الحمل (عادةً نسبة من الخرج الاسمي) مقابل الحرارة المحيطة. يبقى مستويًا حتى الحرارة الاسمية ثم ينحدر. اقرأه عند الحرارة التي سيراها المحرك فعلاً: لا المعدّل الخارجي، بل الذروة داخل الحاوية في أشد الظهيرات حرارة. وإن لم يُنشر المنحنى فاطلبه؛ فالمورّد الذي لا يقدّمه يخمّن.</p>
+
+<h2>قواعد عملية تمنع معظم الأعطال</h2>
+
+<p>أربع عادات تُزيل الغالبية العظمى من أعطال الحرارة التي نراها ميدانيًا:</p>
+
+<ol>
+<li><strong>اترك هامشًا 20&ndash;30%.</strong> صمّم المحرك ليعمل عند 70&ndash;80% من خرجه الاسمي عند الحرارة المتوقّعة. يوفّر ذلك هامشًا للتخفيض ولتيار الإقلاع. راجع <a href="/blog-8/">كيفية اختيار قدرة مزوّد LED</a>.</li>
+<li><strong>وفّر له الهواء.</strong> ركّبه مع إبقاء فتحات التهوية حرّة على الجانبين. لا تدفن محركًا في العزل ولا تضغطه على لوح معدني ساخن في وحدة الإضاءة.</li>
+<li><strong>ركّبه للحمل الحراري.</strong> الحرارة تصعد؛ محرك على سطح رأسي مع هواء حرّ أعلاه يبرد أكثر من آخر مسطّح في صندوق مغلق. الهياكل المعدنية لا تساعد إلا إذا أمكن للمعدن تصريف الحرارة إلى هواء أبرد.</li>
+<li><strong>لا تكدّس الأحمال.</strong> محرّكان في حاوية صغيرة يسخّن أحدهما الآخر. افصل بينهما أو انتقل إلى وحدة أكبر.</li>
+</ol>
+
+<h2>المحرك المقاوم للماء ليس محصّنًا ضد الحرارة</h2>
+
+<p>وحدة IP67 مصبوغة بالكامل، ما يمنع الماء — لكن الصبّ يحبس الحرارة أيضًا. لذا غالبًا ما تخضع <a href="/products/ip67/">المحركات المقاومة للماء</a> لتخفيض عند حرارة محيطة أقل (أو من أساس أقل) مقارنةً بـ<a href="/products/indoor/">محرك داخلي</a> مفتوح بالقدرة نفسها. تحتاج التركيبات الخارجية في المناخات الحارة المشمسة إلى هامش أكبر لا أقل. المنطق نفسه ينطبق على <a href="/products/ip65/">خط IP65 المقاوم للمطر</a>: فهو يتنفّس فيبقى أبرد، لكنه غير مناسب للغمر الكامل.</p>
+
+<h2>الاختيار لمكان حار أو مغلق</h2>
+
+<p>إن كنت تشتري لمنطقة الخليج أو جنوب شرق آسيا أو غرفة معدات أو بهو مزجّج أو أي وحدة إضاءة مغلقة، أخبرنا بثلاثة أمور: أقصى حرارة محيطة داخل الحاوية، والحمل الكلي، وطريقة تركيب المحرك. سنحدّد الحجم وفق القيمة المخفّضة بدل واط الملصق، ونوصي عند الحاجة بوحدة أقوى لتعمل مرتاحة عند 70% لا مضغوطة عند 100%. هذا القرار وحده غالبًا هو الفرق بين ضمان ثلاث سنوات لا يُطالب به أبدًا ومحرك يتعطّل في صيفه الأول.</p>
+
+<p>الحرارة أبطأ أوضاع التعطّل وأهدؤها في إضاءة LED — وأسهلها تجنّبًا في مرحلة التصميم. طابق المحرك مع الحرارة التي سيعيش فيها فعلاً، وسيدوم أطول من وحدة الإضاءة نفسها.</p>
+
+<div class="cta-box">
+<h3>تصمّم لمكان حار أو مغلق؟</h3>
+<p>أرسل أقصى حرارة محيطة داخل الحاوية، والحمل الكلي، وطريقة تركيب المحرك. سنحدّد الحجم وفق القيمة المخفّضة لا وفق واط الملصق.</p>
+<a href="/#inquiry" class="btn">احصل على توصية مخفّضة حرارياً</a>
+</div>
+
+<section class="product-crosslink" aria-label="منتجات ذات صلة"><h2 class="related-h">اكتشف منتجات CHUGAO</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">محوّلات LED ​​5-200W</span><span class="pc-desc">وحدات مدمجة 12V/24V للشرائط والوحدات واللوحات.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">محركات LED داخلية 50-400W</span><span class="pc-desc">جهد ثابت مع PFC نشط لإضاءة الأسقف واللوحات.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">محركات مقاومة للماء IP67 10-400W</span><span class="pc-desc">مصبوغة بالكامل، مختبرة ضد رذاذ الملح للأماكن الرطبة والساحلية.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">محركات مقاومة للمطر IP65 100-600W</span><span class="pc-desc">هيكل معدني مفتوح التهوية للوحات والتركيبات شبه الخارجية.</span></a></div></section>
+
+<section class="related" aria-label="مقالات ذات صلة">
+  <h2 class="related-h">المزيد من الميدان</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">تحليل تقني</span><span class="rel-title">العمر الافتراضي لمحركات LED: MTBF وL70 وكم تدوم فعليًا | ملاحظات ميدانية CHUGAO</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">دليل تقني</span><span class="rel-title">كيف تختار قدرة مزود طاقة LED: الواط والهامش</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">دليل المشتري</span><span class="rel-title">اختيار مزود طاقة LED للخارج والبيئات القاسية</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">تقنية LED</span><span class="rel-title">اختر مزوّد طاقة LED المناسب في 3 خطوات | ملاحظات ميدانية CHUGAO</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="تنقّل المقال"><a class="pn-prev" href="/blog-14/" rel="prev"><span class="pn-lab">المقال السابق</span><span class="pn-t">مقطع الكابل وهبوط الجهد في تركيبات LED</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">المقال التالي</span><span class="pn-t">ملاحظات الميدان</span></a></nav>
+</main>"""

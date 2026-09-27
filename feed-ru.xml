@@ -16,8 +16,15 @@
     <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
     <description>Полевые заметки CHUGAO: практические руководства по блокам питания LED, разъяснение степеней защиты IP, заметки о рынке и советы по сертификации для импортёров и монтажников.</description>
     <language>ru</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>Тепловой дерийтинг LED-драйверов: как жара снижает мощность и срок службы</title>
+      <link>https://www.chugaopower.com/ru/blog-15/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ru/blog-15/</guid>
+      <description>Что такое тепловой дерийтинг, почему ватты на этикетке верны только при номинальной температуре окружающей среды, как читать кривую дерийтинга и как подобрать драйвер для жарких или закрытых мест.</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Сечение кабеля и падение напряжения в LED-установках</title>
       <link>https://www.chugaopower.com/ru/blog-14/</link>

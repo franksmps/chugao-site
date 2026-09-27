@@ -16,8 +16,15 @@
     <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
     <description>来自产线与现场的 LED 电源选型、认证与故障排查经验。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>LED 驱动的热降额：高温如何削减输出与寿命</title>
+      <link>https://www.chugaopower.com/zh/blog-15/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/zh/blog-15/</guid>
+      <description>什么是热降额、为何标签瓦数只在额定环境温度下成立、如何读降额曲线，以及为高温或密闭环境选型的方法。</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>LED 布线线径与压降</title>
       <link>https://www.chugaopower.com/zh/blog-14/</link>

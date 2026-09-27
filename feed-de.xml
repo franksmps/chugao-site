@@ -16,8 +16,15 @@
     <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
     <description>Feldbesuche von CHUGAO: praktische Leitfäden zu LED-Netzteilen, Erklärungen der IP-Schutzarten, Marktnotizen und Zertifizierungstipps für Importeure und Installateure.</description>
     <language>de</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>Thermisches Derating von LED-Treibern: Wie Hitze Leistung und Lebensdauer senkt</title>
+      <link>https://www.chugaopower.com/de/blog-15/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/de/blog-15/</guid>
+      <description>Was thermisches Derating ist, warum die Watt auf dem Etikett nur bei Nenntemperatur gelten, wie man eine Derating-Kurve liest und wie man für heiße oder geschlossene Orte dimensioniert.</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Kabelquerschnitt und Spannungsabfall bei LED-Installationen</title>
       <link>https://www.chugaopower.com/de/blog-14/</link>

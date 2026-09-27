@@ -1021,3 +1021,86 @@ BLOG_BODY['ko']['blog-14'] = """<main class="article">
 
 <nav class="post-nav" aria-label="글 탐색"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">옥외 및 혹독한 현장용 LED 전원 선택</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">다음 글</span><span class="pn-t">현장 노트</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ko']['blog-15'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 현장 노트로 돌아가기</a>
+
+<h1>LED 구동장치의 열 감율: 열이 출력과 수명을 줄이는 방식</h1>
+<div class="meta">기술 가이드 &middot; 2026년 11월 &middot; 8 min</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="LED 구동장치의 열 감율과 방열 설계" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>모든 LED 구동장치에는 정격 와트가 인쇄되어 있습니다. 그런데 그 수치는 거의 예외 없이 서늘한 실내를 전제로 합니다. 같은 구동장치를 밀폐 등기구, 햇볕 드는 캐비닛, 열대 기계실에 넣으면 사용 가능한 전력이 떨어집니다. 이 글은 <strong>열 감율</strong>을 설명합니다. 무엇인지, 어떻게 읽는지, 그리고 실제 열을 견디는 구동장치를 고르는 법입니다.</p>
+
+<h2>왜 열이 진짜 적인가</h2>
+
+<p>스위칭 전원은 입력의 일부를 열로 바꾸고, 그 열은 케이스와 주변 공기로만 빠져나갑니다. 내부에서 가장 먼저 노화되는 부품은 전해 커패시터입니다. 내부 온도가 약 10&deg;C 오를 때마다 수명이 절반으로 줄어듭니다. 예상보다 20&deg;C 뜨겁게 동작시키면 수명이 50,000시간에서 15,000시간 미만으로 떨어질 수 있으며, 이는 LED 자체의 교체 시점보다 훨씬 이릅니다.</p>
+
+<div class="highlight">
+<strong>요점:</strong> 라벨의 와트는 데이터시트의 주위 온도(보통 25&deg;C 또는 40&deg;C)에서<em>만</em> 유효합니다. 그 이상에서는 전압이 아니라 부하를 낮춰야 합니다.
+</div>
+
+<h2>“감율”이란 무엇인가</h2>
+
+<p>감율은 주위 온도가 오를수록 출력 전력을 의도적으로 줄여 내부 부품을 열 한계 안에 두는 것입니다. 40&deg;C 기준 200W 구동장치는 55&deg;C에서 약 160W, 70&deg;C에서는 아마 120W만 낼 수 있습니다. 고장이 아니라 전원이 스스로를 보호하는 것입니다. 실수는 라벨 와트로 설계하고, 그 40&deg;C가 결코 나오지 않는 곳에 설치하는 것입니다.</p>
+
+<h2>주위·케이스·접합부 온도</h2>
+
+<p>세 가지 온도가 혼동되지만, 통제 가능한 것은 하나뿐입니다.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">온도</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">무엇인가</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">누가 정하나</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">주위(Ta)</td><td style="padding:10px 14px;border:1px solid var(--b)">구동장치 주변 공기</td><td style="padding:10px 14px;border:1px solid var(--b)">설치: 통풍·햇볕·함체</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">케이스(Tc)</td><td style="padding:10px 14px;border:1px solid var(--b)">케이스 금속 표면</td><td style="padding:10px 14px;border:1px solid var(--b)">둘 다: 들어오는 열과 빠져나가는 방식</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">접합부(Tj)</td><td style="padding:10px 14px;border:1px solid var(--b)">반도체 내부</td><td style="padding:10px 14px;border:1px solid var(--b)">오직 구동장치 설계</td></tr>
+</tbody>
+</table>
+
+<p>데이터시트에는 보통 최대 케이스 온도(흔히 70&ndash;90&deg;C)와 주위 범위(CHUGAO 실내 구동장치는 &minus;20~+50&deg;C)가 적혀 있습니다. 1시간 가동 후 적외선 온도계로 케이스를 측정할 수 있다면, 구동장치가 “익고 있는지” 판단하는 가장 유용한 숫자를 얻은 셈입니다.</p>
+
+<h2>감율 곡선 읽는 법</h2>
+
+<p>감율 곡선은 부하(보통 정격 출력의 백분율)를 주위 온도에 대해 그린 것입니다. 정격 주위까지는 평평하고 그 뒤로 내려갑니다. 구동장치가 실제로 만날 온도, 즉 바깥 평균이 아니라 가장 더운 오후의 함체 내부 피크에서 읽으세요. 곡선이 공개되지 않았다면 요청하세요. 제공하지 못하는 공급사는 추측하는 것입니다.</p>
+
+<h2>대부분의 고장을 막는 실무 규칙</h2>
+
+<p>네 가지 습관이 현장에서 보는 열 관련 고장의 대부분을 없앱니다.</p>
+
+<ol>
+<li><strong>20&ndash;30% 여유를 두세요.</strong> 예상 온도에서 정격 출력의 70&ndash;80%로 동작하도록 선정합니다. 감율과 돌입 전류 모두에 여유가 생깁니다. <a href="/blog-8/">LED 전원 용량 선정</a>도 참고하세요.</li>
+<li><strong>공기를 주세요.</strong> 통풍구가 양쪽에서 막히지 않게 장착합니다. 절연재에 묻거나 등기구의 뜨거운 배면판에 밀착시키지 마세요.</li>
+<li><strong>대류를 고려해 장착하세요.</strong> 열은 위로 갑니다. 위쪽에 자유 공기가 있는 수직 장착이 밀폐 상자에 눕힌 것보다 시원합니다. 금속 케이스는 더 차가운 공기로 열을 넘길 수 있을 때만 도움이 됩니다.</li>
+<li><strong>부하를 쌓지 마세요.</strong> 작은 함체에 두 대를 넣으면 서로를 가열합니다. 간격을 두거나 더 큰 한 대로 바꾸세요.</li>
+</ol>
+
+<h2>방수 구동장치도 열에는 강하지 않다</h2>
+
+<p>IP67은 완전 포팅으로 물을 막지만, 포팅은 열도 가둡니다. 그래서 같은 전력이라도 <a href="/products/ip67/">방수 구동장치</a>는 개방형 <a href="/products/indoor/">실내 구동장치</a>보다 더 낮은 주위(또는 더 낮은 기준)에서 감율이 시작되는 경우가 많습니다. 덥고 햇볕 강한 기후의 옥외 설치에는 여유가 더 필요하지, 덜 필요하지 않습니다. 통풍형 <a href="/products/ip65/">IP65 빗물 방수 라인</a>도 같은 논리로, 숨을 쉬어 더 시원하지만 완전 침수에는 부적합합니다.</p>
+
+<h2>고온·밀폐 장소를 위한 선정</h2>
+
+<p>중동, 동남아시아, 기계실, 유리 아트리움 또는 밀폐 등기구용으로 구매한다면 세 가지를 알려주세요. 함체 내부 피크 주위 온도, 총 부하, 장착 방식입니다. 우리는 라벨 와트가 아니라 감율 적용 값으로 선정하고, 필요하면 70%에서 여유 있게 동작하도록 더 큰 제품을 권합니다. 이 한 가지 결정이 “한 번도 청구되지 않는 3년 보증”과 “첫여름에 고장”을 가르는 경우가 많습니다.</p>
+
+<p>열은 LED 조명에서 가장 느리고 조용한 고장 모드이며, 설계로 가장 쉽게 없앨 수 있는 것입니다. 구동장치를 실제로 살아갈 온도에 맞추면, 등기구 자체보다 오래갑니다.</p>
+
+<div class="cta-box">
+<h3>고온·밀폐 환경용으로 선정하시나요?</h3>
+<p>함체 내부 최고 주위 온도, 총 부하, 장착 방식을 알려주세요. 라벨 와트가 아니라 감율 적용 값으로 선정합니다.</p>
+<a href="/#inquiry" class="btn">감율 선정 상담 받기</a>
+</div>
+
+<section class="product-crosslink" aria-label="관련 제품"><h2 class="related-h">CHUGAO 제품 보기</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED 어댑터 5-200W</span><span class="pc-desc">스트립·모듈·간판용 12V/24V 컴팩트 제품.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">실내 LED 구동장치 50-400W</span><span class="pc-desc">액티브 PFC 내장 정전압. 천장·패널 조명용.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">방수 구동장치 IP67 10-400W</span><span class="pc-desc">완전 포팅, 염수 분무 시험 완료. 습윤·해안 환경용.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">빗물 방수 구동장치 IP65 100-600W</span><span class="pc-desc">통풍 금속 케이스. 간판·준외부 설치용.</span></a></div></section>
+
+<section class="related" aria-label="관련 글">
+  <h2 class="related-h">현장 노트 더 보기</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">기술 심층</span><span class="rel-title">LED 구동장치 수명: MTBF, L70 그리고 실제 수명</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">기술 가이드</span><span class="rel-title">LED 전원 용량 정하기: 와트·여유·돌입전류</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">구매 가이드</span><span class="rel-title">옥외 및 혹독한 환경용 LED 전원 선택법</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 기술</span><span class="rel-title">3단계로 맞는 LED 전원 선택하기</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="글 내비게이션"><a class="pn-prev" href="/blog-14/" rel="prev"><span class="pn-lab">이전 글</span><span class="pn-t">LED 설비 케이블 굵기와 전압 강하</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">다음 글</span><span class="pn-t">현장 노트</span></a></nav>
+</main>"""

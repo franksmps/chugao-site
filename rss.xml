@@ -16,8 +16,15 @@
     <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
     <description>Technical guides and factory-field notes on LED power supplies, drivers, IP ratings, certifications, and the 2026 LED market — published by CHUGAO, an LED driver manufacturer in Zhongshan, China since 2008.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>LED Driver Thermal Derating: How Heat Cuts Output and Lifespan</title>
+      <link>https://www.chugaopower.com/blog-15/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/blog-15/</guid>
+      <description>LED driver thermal derating explained: why heat cuts usable output and lifespan, how to read a derating curve, and how to spec a driver for hot or enclosed sites.</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Cable Size &amp; Voltage Drop for LED Installations</title>
       <link>https://www.chugaopower.com/blog-14/</link>

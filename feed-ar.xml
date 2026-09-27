@@ -16,8 +16,15 @@
     <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
     <description>ملاحظات ميدانية من CHUGAO: أدلة عملية حول مزودات طاقة LED، وشرح درجات الحماية IP، وملاحظات السوق ونصائح الشهادات للمستوردين والمركّبين.</description>
     <language>ar</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>التخفيض الحراري لمحرك LED: كيف تقلّل الحرارة القدرة والعمر</title>
+      <link>https://www.chugaopower.com/ar/blog-15/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ar/blog-15/</guid>
+      <description>ما هو التخفيض الحراري، ولماذا تنطبق الواطات على الملصق فقط عند درجة الحرارة المحيطة الاسمية، وكيف تقرأ منحنى التخفيض، وكيف تختار لمكان حار أو مغلق.</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>مقطع الكابل وهبوط الجهد في تركيبات LED</title>
       <link>https://www.chugaopower.com/ar/blog-14/</link>

@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0f172a">
-<title>Cable Size & Voltage Drop for LED Installations | CHUGAO Field Notes</title>
+<title>LED Driver Thermal Derating: How Heat Cuts Output and Lifespan | CHUGAO Field Notes</title>
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-<meta name="description" content="Cable size and voltage drop for LED installations: the 5% rule, max run tables for 12V vs 24V, and three ways to stop dim LEDs at the far end.">
-<link rel="canonical" href="https://www.chugaopower.com/blog-14/">
-<meta property="og:title" content="Cable Size & Voltage Drop for LED Installations">
-<meta property="og:description" content="Undersize the wire and voltage drop steals brightness. The 5% rule, 12V vs 24V max-run tables, and how to beat drop without a bigger driver.">
+<meta name="description" content="LED driver thermal derating explained: why heat cuts usable output and lifespan, how to read a derating curve, and how to spec a driver for hot or enclosed sites.">
+<link rel="canonical" href="https://www.chugaopower.com/blog-15/">
+<meta property="og:title" content="LED Driver Thermal Derating: How Heat Cuts Output and Lifespan">
+<meta property="og:description" content="The watts on the label assume a cool room. Above the rated ambient you must derate — here is how heat cuts output and lifespan, and how to size around it.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.chugaopower.com/blog-14/">
-<meta property="og:image" content="https://www.chugaopower.com/images/product-adapter.jpg">
+<meta property="og:url" content="https://www.chugaopower.com/blog-15/">
+<meta property="og:image" content="https://www.chugaopower.com/images/product-indoor.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1024">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Cable Size & Voltage Drop for LED Installations", "datePublished": "2026-10-20", "dateModified": "2026-10-20", "inLanguage": "en", "author": {"@type": "Organization", "name": "CHUGAO Power"}, "publisher": {"@type": "Organization", "name": "CHUGAO Power", "logo": {"@type": "ImageObject", "url": "https://www.chugaopower.com/logo.png"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "LED Driver Thermal Derating: How Heat Cuts Output and Lifespan", "datePublished": "2026-11-01", "dateModified": "2026-11-01", "inLanguage": "en", "author": {"@type": "Organization", "name": "CHUGAO Power"}, "publisher": {"@type": "Organization", "name": "CHUGAO Power", "logo": {"@type": "ImageObject", "url": "https://www.chugaopower.com/logo.png"}}}</script>
 <link rel="stylesheet" href="/blog.css?v=4">
 <!-- Google tag (gtag.js) - GA4 -->
 <script>
@@ -41,63 +41,72 @@ gtag('js', new Date());
 <main class="article">
 <a href="/blog/" class="back-link">&larr; Back to Field notes</a>
 
-<h1>Cable Size & Voltage Drop for LED Installations</h1>
-<div class="meta">Technical Guide &middot; October 2026 &middot; 7 min read</div>
+<h1>LED Driver Thermal Derating: How Heat Cuts Output and Lifespan</h1>
+<div class="meta">Technical Guide &middot; November 2026 &middot; 8 min read</div>
 
 <div class="hero-img">
-<picture><source type="image/avif" srcset="/images/product-adapter.avif"><source type="image/webp" srcset="/images/product-adapter.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-adapter.jpg" alt="LED installation cable sizing for voltage drop" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="LED driver thermal derating and heat management" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
 </div>
 
 
-<p>The single most common cause of "dim LEDs at the far end" is not the driver — it is the cable. Undersize the wire and voltage drop steals brightness before the light ever sees it. This is the sizing method we use on every install.</p>
+<p>Every LED driver has a rated wattage printed on it — and almost every one of those figures assumes a comfortable room. Put the same driver in a sealed luminaire, a sun-baked cabinet or a tropical plant room and the usable power drops. This guide explains <strong>thermal derating</strong>: what it is, how to read it, and how to choose a driver that survives the heat you actually have.</p>
 
-<h2>The law that decides it</h2>
+<h2>Why heat is the real enemy</h2>
+
+<p>A switching power supply converts part of its input into heat, and that heat has nowhere to go but the case and the air around it. Inside, the parts that age first are the electrolytic capacitors: their lifetime halves for roughly every 10&deg;C rise in internal temperature. Run a driver 20&deg;C hotter than intended and you can cut its working life from 50,000 hours to under 15,000 — long before the LEDs themselves are due for replacement.</p>
 
 <div class="highlight">
-<strong>Voltage drop = Current &times; Resistance of the cable.</strong> Resistance rises with length and falls with cross-section, so a longer or thinner cable drops more volts. Keep total drop under <strong>5%</strong> (0.6V on 12V, 1.2V on 24V) and the far end stays bright.
+<strong>The short version:</strong> the watts on the label are valid <em>only</em> at the ambient temperature in the datasheet &mdash; typically 25&deg;C or 40&deg;C. Above that, you must reduce the load, not the voltage.
 </div>
 
-<h2>How far can you run at 12V vs 24V?</h2>
+<h2>What "derating" actually means</h2>
 
-<p>At the same wattage, 24V draws half the current of 12V, so it drops roughly a quarter of the loss and runs about twice as far:</p>
+<p>Derating is the deliberate reduction of output power as ambient temperature rises, so the internal components stay within their thermal limits. A 200W driver rated at 40&deg;C ambient may be able to deliver only about 160W at 55&deg;C and perhaps 120W at 70&deg;C. It is not a fault &mdash; it is the supply protecting itself. The mistake is to size a job on the headline wattage and then install it where it will never see 40&deg;C.</p>
+
+<h2>Ambient vs case vs internal temperature</h2>
+
+<p>Three temperatures get confused, and only one of them is under your control:</p>
 
 <table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
-<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Load</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Cable</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Max run @ 12V</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Max run @ 24V</th></tr></thead>
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Temperature</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">What it is</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Who controls it</th></tr></thead>
 <tbody>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">24 W</td><td style="padding:10px 14px;border:1px solid var(--b)">1.5 mm&sup2; (16 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">48 W</td><td style="padding:10px 14px;border:1px solid var(--b)">2.5 mm&sup2; (14 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~8 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~16 m</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">96 W</td><td style="padding:10px 14px;border:1px solid var(--b)">4 mm&sup2; (12 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~7 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~14 m</td></tr>
-<tr><td style="padding:10px 14px;border:1px solid var(--b)">192 W</td><td style="padding:10px 14px;border:1px solid var(--b)">6 mm&sup2; (10 AWG)</td><td style="padding:10px 14px;border:1px solid var(--b)">~5 m</td><td style="padding:10px 14px;border:1px solid var(--b)">~10 m</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Ambient (Ta)</td><td style="padding:10px 14px;border:1px solid var(--b)">Air around the driver</td><td style="padding:10px 14px;border:1px solid var(--b)">The installation &mdash; ventilation, sun, enclosure</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Case (Tc)</td><td style="padding:10px 14px;border:1px solid var(--b)">Metal surface of the housing</td><td style="padding:10px 14px;border:1px solid var(--b)">Both &mdash; heat in, and how it escapes</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Junction (Tj)</td><td style="padding:10px 14px;border:1px solid var(--b)">Inside the semiconductors</td><td style="padding:10px 14px;border:1px solid var(--b)">The driver design alone</td></tr>
 </tbody>
 </table>
 
-<h2>Three ways to beat drop</h2>
+<p>Data sheets usually quote a maximum case temperature (often 70&ndash;90&deg;C) and an ambient range (for CHUGAO indoor drivers, &minus;20 to +50&deg;C). If you can measure the case with an infrared thermometer after an hour of running, you have the single most useful number for judging whether a driver is being cooked.</p>
+
+<h2>How to read a derating curve</h2>
+
+<p>A derating curve plots load (usually a percentage of rated output) against ambient temperature. It is flat up to the rated ambient, then slopes down. Read it at the temperature your driver will really see &mdash; not the average outdoor temperature, but the peak inside the enclosure on the hottest afternoon. If the curve is not published, ask for it; a supplier who cannot provide one is guessing.</p>
+
+<h2>Practical rules that prevent most failures</h2>
+
+<p>Four habits remove the great majority of heat-related failures we see in the field:</p>
 
 <ol>
-<li><strong>Go to 24V.</strong> For any run over ~5 m, 24V removes the problem in most rooms (see the <a href="/blog-7/">12V vs 24V guide</a>).</li>
-<li><strong>Feed from both ends.</strong> Halves the effective length and the drop.</li>
-<li><strong>Thicken the cable.</strong> One size up costs little and fixes a dim far end; two sizes up if the cable is buried or bundled with mains.</li>
+<li><strong>Keep 20&ndash;30% headroom.</strong> Size the driver so it runs at 70&ndash;80% of its rated output at your expected ambient. This leaves margin for derating and for the extra draw of inrush. See <a href="/blog-8/">how to size an LED power supply</a>.</li>
+<li><strong>Give it air.</strong> Mount with the ventilation slots free on both sides. Never bury a driver in insulation or pack it against a hot luminaire backplate.</li>
+<li><strong>Mount for convection.</strong> Heat rises; a driver mounted on a vertical surface with free air above it runs cooler than one flat in a closed box. Metal enclosures help only if the metal can shed heat to cooler air.</li>
+<li><strong>Don't stack loads.</strong> Two drivers in one small enclosure heat each other. Space them, or step up to one larger unit.</li>
 </ol>
 
-<h2>Two mistakes we see constantly</h2>
+<h2>Waterproof drivers are not fireproof from heat</h2>
 
-<ul>
-<li><strong>Sizing cable for the driver, not the run.</strong> The driver rating is fine; distance is what kills brightness. Use the table, then go thicker if in doubt.</li>
-<li><strong>Using speaker wire.</strong> Thin "lamp wire" looks tidy but doubles the drop. Use real mains-rated flex at the section the load needs.</li>
-</ul>
+<p>An IP67 unit is fully potted, which seals out water &mdash; but potting also traps heat. That is why <a href="/products/ip67/">waterproof drivers</a> often derate at a lower ambient (or from a lower base) than an open <a href="/products/indoor/">indoor driver</a> of the same wattage. Outdoor installs in hot, sunny climates need more headroom, not less. The same logic applies to the vented <a href="/products/ip65/">IP65 rainproof line</a>: it breathes, so it stays cooler, but it is not for total immersion.</p>
 
-<div class="highlight">
-<strong>Worked example:</strong> 10 m of 14.4W/m strip = 144W on 24V = 6A. Through 2.5 mm&sup2; that is about 1.0V drop — under the 1.2V (5%) budget, so it stays bright. The same load on 12V would need roughly 4 mm&sup2; to hit the same drop.
-</div>
+<h2>Specifying for a hot or enclosed site</h2>
 
-<h2>What we need from you</h2>
+<p>If you are buying for the Gulf, South-East Asia, a plant room, a glazed atrium or any sealed fixture, tell us three things: the peak ambient inside the enclosure, the total load, and how the driver will be mounted. We will size for the derated figure rather than the headline wattage, and where needed recommend a higher-rated unit so it runs comfortably at 70% instead of being pushed at 100%. That single decision is usually the difference between a three-year warranty that is never claimed and a driver that fails in the first summer.</p>
 
-<p>Send the load in watts, the output voltage (12V or 24V), the cable length and the section you plan to use. We will confirm the run is safe — or tell you to step up to 24V or a thicker cable before you install.</p>
+<p>Heat is the slowest, quietest failure mode in LED lighting &mdash; and the easiest to design out. Match the driver to the temperature it will actually live in, and it will outlast the fixture.</p>
 
 <div class="cta-box">
-<h3>Worried about dim LEDs at the far end?</h3>
-<p>Send the load, voltage, cable length and section. We will confirm the run is safe — or tell you to step up to 24V or thicker cable.</p>
-<a href="/#inquiry" class="btn">Check my cable size</a>
+<h3>Sizing for a hot or sealed enclosure?</h3>
+<p>Send the peak ambient temperature inside the enclosure, the total load and how the driver will be mounted. We will size to the derated figure, not the headline wattage.</p>
+<a href="/#inquiry" class="btn">Get a derated recommendation</a>
 </div>
 
 <section class="product-crosslink" aria-label="Related products"><h2 class="related-h">Explore CHUGAO products</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED Adapters 5-200W</span><span class="pc-desc">Compact 12V/24V units for strips, modules and signage.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">Indoor LED Drivers 50-400W</span><span class="pc-desc">Constant voltage with active PFC for ceiling and panel lights.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 Waterproof Drivers 10-400W</span><span class="pc-desc">Fully potted, salt-spray tested for wet and coastal sites.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 Rainproof Drivers 100-600W</span><span class="pc-desc">Vented metal case for signage and semi-outdoor installs.</span></a></div></section>
@@ -105,11 +114,11 @@ gtag('js', new Date());
 <section class="related" aria-label="Related articles">
   <h2 class="related-h">More from the field</h2>
   <div class="rel-grid">
-  <a class="rel-card" href="/blog-7/"><span class="rel-cat">Buyer's Guide</span><span class="rel-title">12V vs 24V LED Power Supply: How to Choose</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">Technical Guide</span><span class="rel-title">How to Size an LED Power Supply: Wattage, Margin & Inrush</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED Technology</span><span class="rel-title">Pick the Right LED Power Supply in 3 Steps</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">Buyer’s Guide</span><span class="rel-title">Choosing an LED Power Supply for Outdoor & Harsh Sites</span></a>
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Technical Deep-dive</span><span class="rel-title">LED Driver Lifespan: MTBF, L70, and How Long They Really Last</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">Technical Guide</span><span class="rel-title">How to Size an LED Power Supply: Wattage, Margin & Inrush</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">Buyer's Guide</span><span class="rel-title">Choosing an LED Power Supply for Outdoor & Harsh Sites</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED Technology</span><span class="rel-title">Pick the Right LED Power Supply in 3 Steps</span></a>
   </div>
 </section>
 
-<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">Choosing an LED Power Supply for Outdoor & Harsh Sites</span></a><a class="pn-next" href="/blog-15/" rel="next"><span class="pn-lab">Next article</span><span class="pn-t">LED Driver Thermal Derating: How Heat Cuts Output and Lifespan</span></a></nav>
+<nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-14/" rel="prev"><span class="pn-lab">Previous article</span><span class="pn-t">Cable Size & Voltage Drop for LED Installations</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">Next article</span><span class="pn-t">Field Notes</span></a></nav>
 </main>
 
 <footer><div class="c"><div class="fg"><div class="fb"><a href="/#home" class="logo"><img loading="lazy" src="/logo.png" alt="CHUGAO" class="logo-white" style="height:32px"></a><p data-i18n="f_desc">CHUGAO makes LED power supplies in Zhongshan, China. Factory direct.</p><div class="social"><a href="https://www.facebook.com/profile.php?id=100063658296873" target="_blank" rel="noopener noreferrer" class="sfb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.43c0-3.014 1.794-4.677 4.533-4.677 1.313 0 2.686.234 2.686.234v2.97h-1.513c-1.49 0-1.955.926-1.955 1.876v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a><a href="https://www.instagram.com/chugao_smps/" target="_blank" rel="noopener noreferrer" class="sig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><a href="https://www.tiktok.com/@chugaosmpsofficial" target="_blank" rel="noopener noreferrer" class="stk" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a><a href="https://www.linkedin.com/company/chugaosmps/" target="_blank" rel="noopener noreferrer" class="sli" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></div></div><div class="fc"><h4 data-i18n="f_prod">Products</h4><a href="/products/">All products</a><a href="/products/adapters/" data-i18n="f_p1">Adapters</a><a href="/products/indoor/" data-i18n="f_p2">Indoor drivers</a><a href="/products/ip67/" data-i18n="f_p3">IP67</a><a href="/products/ip65/" data-i18n="f_p4">IP65</a><a href="/oem-odm/">OEM &amp; ODM</a></div><div class="fc"><h4 data-i18n="f_comp">Company</h4><a href="/#about" data-i18n="f_c1">About</a><a href="/#why" data-i18n="f_c2">Why us</a><a href="/blog/" data-i18n="f_c3">News</a><a href="/#faq" data-i18n="f_c4">FAQ</a></div><div class="fc"><h4 data-i18n="f_supp">Support</h4><a href="/#contact" data-i18n="f_s1">Contact</a><a href="mailto:info@chugaopower.com" data-i18n="f_s2">Email</a><a href="https://wa.me/8618933373873" target="_blank" rel="noopener noreferrer" data-i18n="f_s3">WhatsApp</a><a href="/#inquiry" data-i18n="f_s4">Request datasheets</a></div></div><div class="fb2"><p>&copy; 2026 Zhongshan Chugao Electronic Technology Co., Ltd. All Rights Reserved.</p><p data-i18n="f_slogan">LED power supplies, made in China since 2008</p></div></div></footer>

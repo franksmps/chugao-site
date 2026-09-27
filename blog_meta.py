@@ -458,4 +458,16 @@ BLOG_META = {
         'ko': {'title': "LED 설비 케이블 굵기와 전압 강하", 'desc': "5% 규칙, 12V·24V 최대 배선 길이 표, 그리고 끝이 어두워지지 않게 하는 3가지 방법."},
         'it': {'title': "Sezione cavo e caduta di tensione per installazioni LED", 'desc': "La regola del 5%, tabelle di lunghezza massima per 12V e 24V e tre modi per evitare strisce deboli in fondo."},
     },
+    'blog-15': {
+        'zh': {'title': "LED 驱动的热降额：高温如何削减输出与寿命", 'desc': "什么是热降额、为何标签瓦数只在额定环境温度下成立、如何读降额曲线，以及为高温或密闭环境选型的方法。"},
+        'es': {'title': "Derating térmico del driver LED: cómo el calor reduce potencia y vida útil", 'desc': "Qué es el derating térmico, por qué los vatios de la etiqueta solo valen a la temperatura ambiente nominal, cómo leer una curva de derating y cómo dimensionar para sitios calurosos o cerrados."},
+        'pt': {'title': "Derating térmico do driver LED: como o calor reduz potência e vida útil", 'desc': "O que é o derating térmico, por que os watts da etiqueta só valem na temperatura ambiente nominal, como ler uma curva de derating e como dimensionar para locais quentes ou fechados."},
+        'ru': {'title': "Тепловой дерийтинг LED-драйверов: как жара снижает мощность и срок службы", 'desc': "Что такое тепловой дерийтинг, почему ватты на этикетке верны только при номинальной температуре окружающей среды, как читать кривую дерийтинга и как подобрать драйвер для жарких или закрытых мест."},
+        'fr': {'title': "Déclassement thermique du driver LED : comment la chaleur réduit puissance et durée de vie", 'desc': "Ce qu'est le déclassement thermique, pourquoi les watts sur l'étiquette ne valent qu'à la température ambiante nominale, comment lire une courbe de déclassement et comment dimensionner pour un site chaud ou fermé."},
+        'de': {'title': "Thermisches Derating von LED-Treibern: Wie Hitze Leistung und Lebensdauer senkt", 'desc': "Was thermisches Derating ist, warum die Watt auf dem Etikett nur bei Nenntemperatur gelten, wie man eine Derating-Kurve liest und wie man für heiße oder geschlossene Orte dimensioniert."},
+        'ar': {'title': "التخفيض الحراري لمحرك LED: كيف تقلّل الحرارة القدرة والعمر", 'desc': "ما هو التخفيض الحراري، ولماذا تنطبق الواطات على الملصق فقط عند درجة الحرارة المحيطة الاسمية، وكيف تقرأ منحنى التخفيض، وكيف تختار لمكان حار أو مغلق."},
+        'ja': {'title': "LED ドライバーの熱デレーティング：熱が出力と寿命をどう削るか", 'desc': "熱デレーティングとは何か、ラベルのワット数が定格周囲温度でのみ有効な理由、デレーティング曲線の読み方、高温・密閉環境向けの選定方法。"},
+        'ko': {'title': "LED 구동장치의 열 감율: 열이 출력과 수명을 줄이는 방식", 'desc': "열 감율이란 무엇이며, 라벨의 와트가 정격 주위 온도에서만 유효한 이유, 감율 곡선 읽는 법, 고온·밀폐 환경용 선정 방법."},
+        'it': {'title': "Derating termico del driver LED: come il calore riduce potenza e vita utile", 'desc': "Cos'è il derating termico, perché i watt sull'etichetta valgono solo alla temperatura ambiente nominale, come leggere una curva di derating e come dimensionare per siti caldi o chiusi."},
+    },
 }

@@ -1303,3 +1303,86 @@ BLOG_BODY['de']['blog-5'] = """<main class="article">
 
 <nav class="post-nav" aria-label="Article navigation"><a class="pn-prev" href="/blog-4/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">BIS-Zertifizierung für LED-Treiber: Importleitfaden Indien</span></a><a class="pn-next" href="/blog-6/" rel="next"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">IP67 vs IP65: Welche Note brauchen Sie?</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['de']['blog-15'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; Zurück zu den Feldnotizen</a>
+
+<h1>Thermisches Derating von LED-Treibern: Wie Hitze Leistung und Lebensdauer senkt</h1>
+<div class="meta">Technischer Leitfaden &middot; November 2026 &middot; 8 min</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="Thermisches Derating und Wärmemanagement von LED-Treibern" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>Auf jedem LED-Treiber steht eine Nennleistung — und fast alle diese Werte setzen einen temperierten Raum voraus. Steckt derselbe Treiber in einer geschlossenen Leuchte, einem sonnigen Schrank oder einem tropischen Technikraum, sinkt die nutzbare Leistung. Dieser Leitfaden erklärt das <strong>thermische Derating</strong>: was es ist, wie man es liest und wie man einen Treiber wählt, der der Hitze standhält, die man wirklich hat.</p>
+
+<h2>Warum Hitze der wahre Feind ist</h2>
+
+<p>Ein Schaltnetzteil wandelt einen Teil seiner Eingangsleistung in Wärme um, und diese Wärme kann nur ins Gehäuse und in die umgebende Luft. Innen altern zuerst die Elektrolytkondensatoren: Ihre Lebensdauer halbiert sich etwa je 10&deg;C höherer Innentemperatur. Lassen Sie einen Treiber 20&deg;C heißer laufen als vorgesehen, kann seine Lebensdauer von 50.000 Stunden auf unter 15.000 fallen — lange bevor die LEDs selbst getauscht werden müssten.</p>
+
+<div class="highlight">
+<strong>Kurz gesagt:</strong> Die Watt auf dem Etikett gelten <em>nur</em> bei der Umgebungstemperatur des Datenblatts, meist 25&deg;C oder 40&deg;C. Darüber muss die Last reduziert werden, nicht die Spannung.
+</div>
+
+<h2>Was „Derating“ bedeutet</h2>
+
+<p>Derating ist die bewusste Reduzierung der Ausgangsleistung mit steigender Umgebungstemperatur, damit die internen Bauteile in ihren thermischen Grenzen bleiben. Ein auf 40&deg;C ausgelegter 200W-Treiber liefert bei 55&deg;C vielleicht nur noch rund 160W und bei 70&deg;C etwa 120W. Das ist kein Fehler — das Netzteil schützt sich selbst. Der Fehler ist, einen Auftrag nach dem Kopf-Watt auszulegen und dort zu installieren, wo diese 40&deg;C nie erreicht werden.</p>
+
+<h2>Umgebungs-, Gehäuse- und Sperrschichttemperatur</h2>
+
+<p>Drei Temperaturen werden verwechselt, und nur eine liegt in Ihrer Hand:</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Temperatur</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Was sie ist</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">Wer sie steuert</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Umgebung (Ta)</td><td style="padding:10px 14px;border:1px solid var(--b)">Die Luft um den Treiber</td><td style="padding:10px 14px;border:1px solid var(--b)">Die Installation: Lüftung, Sonne, Gehäuse</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Gehäuse (Tc)</td><td style="padding:10px 14px;border:1px solid var(--b)">Die Metalloberfläche des Gehäuses</td><td style="padding:10px 14px;border:1px solid var(--b)">Beide: Wärmeeintrag und -abgabe</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">Sperrschicht (Tj)</td><td style="padding:10px 14px;border:1px solid var(--b)">Im Inneren der Halbleiter</td><td style="padding:10px 14px;border:1px solid var(--b)">Allein die Treiberkonstruktion</td></tr>
+</tbody>
+</table>
+
+<p>Datenblätter nennen meist eine maximale Gehäusetemperatur (oft 70&ndash;90&deg;C) und einen Umgebungsbereich (bei CHUGAO-Innentreibern &minus;20 bis +50&deg;C). Können Sie das Gehäuse nach einer Stunde Betrieb mit einem Infrarotthermometer messen, haben Sie den nützlichsten Wert, um zu beurteilen, ob ein Treiber gegart wird.</p>
+
+<h2>So liest man eine Derating-Kurve</h2>
+
+<p>Eine Derating-Kurve trägt die Last (meist ein Prozentsatz der Nennleistung) gegen die Umgebungstemperatur auf. Bis zur Nennumgebung ist sie flach, danach fällt sie. Lesen Sie sie bei der Temperatur, die der Treiber wirklich sieht: nicht der Außendurchschnitt, sondern die Spitze im Gehäuse am heißesten Nachmittag. Ist die Kurve nicht veröffentlicht, fordern Sie sie an; wer sie nicht liefern kann, rät.</p>
+
+<h2>Praktische Regeln gegen die meisten Ausfälle</h2>
+
+<p>Vier Gewohnheiten beseitigen die große Mehrheit der hitzebedingten Ausfälle, die wir im Feld sehen:</p>
+
+<ol>
+<li><strong>20&ndash;30% Reserve lassen.</strong> Dimensionieren Sie den Treiber so, dass er bei der erwarteten Temperatur mit 70&ndash;80% der Nennleistung läuft. Das lässt Reserve für Derating und für den Einschaltstrom. Siehe <a href="/blog-8/">LED-Netzteil richtig dimensionieren</a>.</li>
+<li><strong>Luft geben.</strong> Montieren Sie so, dass die Lüftungsschlitze beidseitig frei bleiben. Vergraben Sie einen Treiber nie in Dämmung und drücken Sie ihn nicht gegen die heiße Platte einer Leuchte.</li>
+<li><strong>Für Konvektion montieren.</strong> Hitze steigt; ein Treiber an einer senkrechten Fläche mit freier Luft darüber läuft kühler als einer flach in einer geschlossenen Box. Metallgehäuse helfen nur, wenn das Metall Wärme an kühlere Luft abgeben kann.</li>
+<li><strong>Lasten nicht stapeln.</strong> Zwei Treiber in einem kleinen Gehäuse heizen sich gegenseitig. Abstand halten oder auf eine größere Einheit wechseln.</li>
+</ol>
+
+<h2>Ein wasserdichter Treiber ist nicht hitzefest</h2>
+
+<p>Eine IP67-Einheit ist voll vergossen, was Wasser aussperrt — aber die Vergussmasse hält auch Wärme zurück. Deshalb haben <a href="/products/ip67/">wasserdichte Treiber</a> oft ein Derating bei niedrigerer Umgebung (oder von einer niedrigeren Basis) als ein offener <a href="/products/indoor/">Innentreiber</a> gleicher Leistung. Außeninstallationen in heißem, sonnigem Klima brauchen mehr Reserve, nicht weniger. Dieselbe Logik gilt für die belüftete <a href="/products/ip65/">IP65-Regenserie</a>: Sie atmet, bleibt also kühler, ist aber nicht für vollständiges Eintauchen geeignet.</p>
+
+<h2>Auslegung für einen heißen oder geschlossenen Ort</h2>
+
+<p>Wenn Sie für den Golf, Südostasien, einen Technikraum, ein verglastes Atrium oder eine geschlossene Leuchte kaufen, nennen Sie uns drei Dinge: die Spitzenumgebung im Gehäuse, die Gesamtlast und die Montageart. Wir dimensionieren nach dem derateten Wert statt nach dem Kopf-Watt und empfehlen bei Bedarf eine stärkere Einheit, damit sie entspannt bei 70% statt am Limit bei 100% läuft. Diese eine Entscheidung ist meist der Unterschied zwischen einer nie beanspruchten Dreijahresgarantie und einem Treiber, der schon im ersten Sommer ausfällt.</p>
+
+<p>Hitze ist der langsamste und leiseste Ausfallmodus der LED-Beleuchtung — und der am leichtesten wegzukonstruierende. Passen Sie den Treiber an die Temperatur an, in der er wirklich lebt, und er hält länger als die Leuchte selbst.</p>
+
+<div class="cta-box">
+<h3>Dimensionieren Sie für einen heißen oder geschlossenen Ort?</h3>
+<p>Senden Sie die maximale Umgebungstemperatur im Gehäuse, die Gesamtlast und die Montageart. Wir dimensionieren nach dem derateten Wert, nicht nach dem Watt auf dem Etikett.</p>
+<a href="/#inquiry" class="btn">Deratete Empfehlung erhalten</a>
+</div>
+
+<section class="product-crosslink" aria-label="Passende Produkte"><h2 class="related-h">CHUGAO-Produkte entdecken</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED-Adapter 5-200W</span><span class="pc-desc">Kompakte 12V/24V-Einheiten für Streifen, Module und Schilder.</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">LED-Treiber innen 50-400W</span><span class="pc-desc">Konstante Spannung mit aktiver PFC für Decken- und Panel-Leuchten.</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">Wasserdichte Treiber IP67 10-400W</span><span class="pc-desc">Voll vergossen, salzsprühgetestet für feuchte und küstennahe Orte.</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">Regengeschützte Treiber IP65 100-600W</span><span class="pc-desc">Belüftetes Metallgehäuse für Schilder und halb Außenbereiche.</span></a></div></section>
+
+<section class="related" aria-label="Passende Artikel">
+  <h2 class="related-h">Mehr aus der Praxis</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">Technische Analyse</span><span class="rel-title">Lebensdauer von LED-Treibern: MTBF, L70 und wie lange sie wirklich halten | Feldbesuche CHUGAO</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">Technischer Leitfaden</span><span class="rel-title">LED-Netzteil dimensionieren: Watt, Reserve, Einschaltstrom</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">Kaufberatung</span><span class="rel-title">LED-Netzteil für Außen und raue Umgebungen wählen</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED-Technologie</span><span class="rel-title">Das richtige LED-Netzteil in 3 Schritten wählen | Feldbesuche CHUGAO</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="Artikelnavigation"><a class="pn-prev" href="/blog-14/" rel="prev"><span class="pn-lab">Vorheriger Artikel</span><span class="pn-t">Kabelquerschnitt und Spannungsabfall bei LED-Installationen</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">Nächster Artikel</span><span class="pn-t">Feldnotizen</span></a></nav>
+</main>"""

@@ -127,7 +127,7 @@ LOCALIZED = {'index', 'about', 'certs', 'faq',
              'products/cgf-36w', 'products/cgf-60w', 'products/cgf-150w', 'products/cgf-300w',
              'blog', 'blog-1', 'blog-2', 'blog-3', 'blog-4', 'blog-5',
              'blog-6', 'blog-7', 'blog-8',
-             'blog-9', 'blog-10', 'blog-11', 'blog-12', 'blog-13', 'blog-14',
+             'blog-9', 'blog-10', 'blog-11', 'blog-12', 'blog-13', 'blog-14', 'blog-15',
              'products', 'oem-odm'}
 
 def flag(letters):

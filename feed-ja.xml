@@ -16,8 +16,15 @@
     <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
     <description>CHUGAO 現場ノート：輸入業者・施工者向けの実践的な LED 電源ガイド、IP 等級の解説、市場情報、認証のヒント。</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>LED ドライバーの熱デレーティング：熱が出力と寿命をどう削るか</title>
+      <link>https://www.chugaopower.com/ja/blog-15/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ja/blog-15/</guid>
+      <description>熱デレーティングとは何か、ラベルのワット数が定格周囲温度でのみ有効な理由、デレーティング曲線の読み方、高温・密閉環境向けの選定方法。</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>LED 配線の線径と電圧降下</title>
       <link>https://www.chugaopower.com/ja/blog-14/</link>

@@ -16,8 +16,15 @@
     <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
     <description>CHUGAO 현장 노트: 수입업체·시공업체를 위한 실전 LED 전원 가이드, IP 등급 설명, 시장 정보, 인증 팁.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>LED 구동장치의 열 감율: 열이 출력과 수명을 줄이는 방식</title>
+      <link>https://www.chugaopower.com/ko/blog-15/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/ko/blog-15/</guid>
+      <description>열 감율이란 무엇이며, 라벨의 와트가 정격 주위 온도에서만 유효한 이유, 감율 곡선 읽는 법, 고온·밀폐 환경용 선정 방법.</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>LED 설비 케이블 굵기와 전압 강하</title>
       <link>https://www.chugaopower.com/ko/blog-14/</link>

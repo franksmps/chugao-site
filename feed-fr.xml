@@ -16,8 +16,15 @@
     <atom:link rel="alternate" hreflang="it" type="application/rss+xml" href="https://www.chugaopower.com/feed-it.xml" />
     <description>Notes de terrain CHUGAO : guides pratiques sur les alimentations LED, explications des indices IP, tendances du marché et conseils de certification pour les importateurs et installateurs.</description>
     <language>fr</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
     <generator>CHUGAO static site</generator>
+    <item>
+      <title>Déclassement thermique du driver LED : comment la chaleur réduit puissance et durée de vie</title>
+      <link>https://www.chugaopower.com/fr/blog-15/</link>
+      <guid isPermaLink="true">https://www.chugaopower.com/fr/blog-15/</guid>
+      <description>Ce qu'est le déclassement thermique, pourquoi les watts sur l'étiquette ne valent qu'à la température ambiante nominale, comment lire une courbe de déclassement et comment dimensionner pour un site chaud ou fermé.</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Section de câble et chute de tension pour installations LED</title>
       <link>https://www.chugaopower.com/fr/blog-14/</link>

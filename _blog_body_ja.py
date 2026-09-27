@@ -1021,3 +1021,86 @@ BLOG_BODY['ja']['blog-14'] = """<main class="article">
 
 <nav class="post-nav" aria-label="記事ナビゲーション"><a class="pn-prev" href="/blog-13/" rel="prev"><span class="pn-lab">前の記事</span><span class="pn-t">屋外・過酷な現場向け LED 電源の選び方</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">次の記事</span><span class="pn-t">現場ノート</span></a></nav>
 </main>"""
+
+
+BLOG_BODY['ja']['blog-15'] = """<main class="article">
+<a href="/blog/" class="back-link">&larr; 現場ノートに戻る</a>
+
+<h1>LED ドライバーの熱デレーティング：熱が出力と寿命をどう削るか</h1>
+<div class="meta">技術ガイド &middot; 2026 年 11 月 &middot; 8 min</div>
+
+<div class="hero-img">
+<picture><source type="image/avif" srcset="/images/product-indoor.avif"><source type="image/webp" srcset="/images/product-indoor.webp" sizes="(max-width:768px) 100vw, 800px"><img src="/images/product-indoor.jpg" alt="LED ドライバーの熱デレーティングと放熱設計" loading="lazy" style="width:100%;aspect-ratio:4/3"></picture>
+</div>
+
+<p>すべての LED ドライバーには定格ワットが印字されています。そしてその数値は、ほぼ例外なく「涼しい室内」を前提にしています。同じドライバーを密閉灯具、日射の当たるキャビネット、熱帯の機械室に入れれば、使える電力は下がります。本記事では<strong>熱デレーティング</strong>——それが何か、どう読むか、そして実際の暑さに耐えるドライバーの選び方を解説します。</p>
+
+<h2>なぜ熱が本当の敵なのか</h2>
+
+<p>スイッチング電源は入力の一部を熱に変え、その熱は筐体と周囲の空気にしか逃げられません。内部で最初に劣化するのは電解コンデンサです。内部温度が約 10&deg;C 上がるごとに寿命は半減します。想定より 20&deg;C 高温で使えば、寿命は 50,000 時間から 15,000 時間未満に落ち、LED 本体の交換時期よりはるかに早く寿命が尽きます。</p>
+
+<div class="highlight">
+<strong>要点：</strong>ラベルのワット数は、データシートに記載の周囲温度（通常 25&deg;C か 40&deg;C）で<em>のみ</em>有効です。それ以上では電圧ではなく負荷を下げる必要があります。
+</div>
+
+<h2>「デレーティング」とは</h2>
+
+<p>デレーティングとは、周囲温度の上昇に応じて出力電力を意図的に下げ、内部部品を熱限界内に保つことです。40&deg;C 定格の 200W ドライバーは、55&deg;C では約 160W、70&deg;C ではおそらく 120W しか出せません。故障ではなく、電源自らを守っているのです。誤りは、ラベルのワット数で設計し、その 40&deg;C に決してならない場所へ設置することです。</p>
+
+<h2>周囲温度・ケース温度・ジャンクション温度</h2>
+
+<p>三つの温度は混同されますが、制御できるのは一つだけです。</p>
+
+<table style="width:100%;border-collapse:collapse;margin:20px 0;font-size:15px">
+<thead><tr style="background:var(--bg)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">温度</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">内容</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--b)">決めるのは</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">周囲（Ta）</td><td style="padding:10px 14px;border:1px solid var(--b)">ドライバー周辺の空気</td><td style="padding:10px 14px;border:1px solid var(--b)">設置条件：通気・日射・筐体</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">ケース（Tc）</td><td style="padding:10px 14px;border:1px solid var(--b)">筐体の金属表面</td><td style="padding:10px 14px;border:1px solid var(--b)">両方：入る熱と逃げ方</td></tr>
+<tr><td style="padding:10px 14px;border:1px solid var(--b)">ジャンクション（Tj）</td><td style="padding:10px 14px;border:1px solid var(--b)">半導体の内部</td><td style="padding:10px 14px;border:1px solid var(--b)">ドライバー設計のみ</td></tr>
+</tbody>
+</table>
+
+<p>データシートには通常、最大ケース温度（多くは 70&ndash;90&deg;C）と周囲範囲（CHUGAO 屋内ドライバーは &minus;20〜+50&deg;C）が記載されます。1 時間運転後に赤外線温度計で筐体を測れるなら、ドライバーが「焼かれている」かどうかを判断する最も有用な数字が得られます。</p>
+
+<h2>デレーティング曲線の読み方</h2>
+
+<p>デレーティング曲線は、負荷（通常は定格出力の割合）を周囲温度に対して描いたものです。定格周囲までは平らで、その後右下がりになります。ドライバーが実際に遭遇する温度——屋外の平均ではなく、最も暑い日の午後の筐体内ピーク——で読み取ってください。曲線が公開されていなければ請求しましょう。出せないサプライヤーは推測しているだけです。</p>
+
+<h2>ほとんどの故障を防ぐ実務ルール</h2>
+
+<p>次の四つの習慣で、現場で見る熱関連故障の大半を排除できます。</p>
+
+<ol>
+<li><strong>20&ndash;30% の余裕を残す。</strong>想定温度で定格出力の 70&ndash;80% で動くよう選定します。デレーティングと突入電流の両方に余裕が生まれます。<a href="/blog-8/">LED 電源の容量選定</a>も参照。</li>
+<li><strong>空気を与える。</strong>通気孔を両側でふさがないよう取り付けます。断熱材に埋めたり、灯具の高温背板に密着させたりしないこと。</li>
+<li><strong>対流を考えて取り付ける。</strong>熱は上へ。上方に自由な空気がある縦置きは、密閉箱に平置きするより低温です。金属筐体は、冷たい空気へ熱を渡せてこそ役立ちます。</li>
+<li><strong>負荷を積み重ねない。</strong>小さな筐体に二台入れると互いを加熱します。離すか、より大きな一台に替えます。</li>
+</ol>
+
+<h2>防水ドライバーは熱に強いわけではない</h2>
+
+<p>IP67 は完全ポッティングで水を遮断しますが、ポッティングは熱も閉じ込めます。だから同じ電力でも、<a href="/products/ip67/">防水ドライバー</a>は開架の<a href="/products/indoor/">屋内ドライバー</a>より低い周囲（または低い基準）からデレーティングすることが多いのです。高温で日射の強い屋外設置には、余裕はより多く必要で、少なくてよいことはありません。通気型の<a href="/products/ip65/">IP65 防雨シリーズ</a>も同じ理屈で、呼吸するため低温ですが、完全水没には向きません。</p>
+
+<h2>高温・密閉場所向けの選定</h2>
+
+<p>中東、東南アジア、機械室、ガラスのある吹き抜け、あるいは密閉灯具向けに購入するなら、三つを教えてください。筐体内のピーク周囲温度、合計負荷、取り付け方法です。私たちはラベルのワット数ではなくデレーティング後の値で選定し、必要なら余裕をもって 70% で動くよう、より大きな機種を提案します。この一つの判断が、「一度も請求されない 3 年保証」と「最初の夏に壊れる」の分かれ目になることが多いのです。</p>
+
+<p>熱は LED 照明で最も遅く静かな故障モードであり、設計で最も簡単に排除できるものでもあります。ドライバーを実際に暮らす温度に合わせれば、灯具本体より長く持ちます。</p>
+
+<div class="cta-box">
+<h3>高温・密閉環境での選定ですか？</h3>
+<p>筐体内の最高周囲温度、合計負荷、取り付け方法をお知らせください。ラベルのワット数ではなく、デレーティング後の値で選定します。</p>
+<a href="/#inquiry" class="btn">デレーティング選定の相談</a>
+</div>
+
+<section class="product-crosslink" aria-label="関連製品"><h2 class="related-h">CHUGAO の製品を見る</h2><div class="pc-grid"><a class="pc-card" href="/products/adapters/"><span class="pc-title">LED アダプター 5-200W</span><span class="pc-desc">ストリップ・モジュール・看板向けの 12V/24V コンパクト機。</span></a><a class="pc-card" href="/products/indoor/"><span class="pc-title">屋内 LED ドライバー 50-400W</span><span class="pc-desc">アクティブ PFC 内蔵の定電圧。シーリング・パネル照明に。</span></a><a class="pc-card" href="/products/ip67/"><span class="pc-title">IP67 防水ドライバー 10-400W</span><span class="pc-desc">完全ポッティング、塩水噴霧試験済み。湿潤・沿岸環境向け。</span></a><a class="pc-card" href="/products/ip65/"><span class="pc-title">IP65 防雨ドライバー 100-600W</span><span class="pc-desc">通気メタル筐体。看板・半屋外設置向け。</span></a></div></section>
+
+<section class="related" aria-label="関連記事">
+  <h2 class="related-h">現場ノートをもっと読む</h2>
+  <div class="rel-grid">
+  <a class="rel-card" href="/blog-5/"><span class="rel-cat">技術解説</span><span class="rel-title">LED ドライバーの寿命：MTBF・L70・実際のもち</span></a><a class="rel-card" href="/blog-8/"><span class="rel-cat">技術ガイド</span><span class="rel-title">LED 電源の容量決め：ワット数・余裕・突入電流</span></a><a class="rel-card" href="/blog-13/"><span class="rel-cat">購入ガイド</span><span class="rel-title">屋外・過酷環境向け LED 電源の選び方</span></a><a class="rel-card" href="/blog-1/"><span class="rel-cat">LED 技術</span><span class="rel-title">3 ステップで選ぶ正しい LED 電源</span></a>
+  </div>
+</section>
+
+<nav class="post-nav" aria-label="記事ナビゲーション"><a class="pn-prev" href="/blog-14/" rel="prev"><span class="pn-lab">前の記事</span><span class="pn-t">LED 配線の線径と電圧降下</span></a><a class="pn-next" href="/blog/"><span class="pn-lab">次の記事</span><span class="pn-t">現場ノート</span></a></nav>
+</main>"""
