@@ -201,9 +201,9 @@ def set_title_desc(html, META, lang):
     return html
 
 # ---------- TDK length normalization (SEO safety net) ----------
-def _trim_title(t, limit=70):
-    """Trim an over-long <title> to <=limit chars at a word boundary,
-    preferring to drop a trailing brand/suffix separator first."""
+def _trim_title(t, limit=62):
+    """Trim an over-long <title> to <=limit chars, preferring a clean cut:
+    drop a trailing brand/suffix separator, then cut at the last clause delimiter."""
     t = (t or '').strip()
     if len(t) <= limit:
         return t
@@ -212,7 +212,12 @@ def _trim_title(t, limit=70):
             left = t.rsplit(sep, 1)[0]
             if len(left) >= 30 and len(left) <= limit:
                 return left
-    cut = t[:limit].rsplit(' ', 1)[0]
+    head = t[:limit]
+    for d in (': ', ' — ', ' – ', ', ', '. ', '; '):
+        i = head.rfind(d)
+        if i >= 30:
+            return head[:i].rstrip(' -|—,:;')
+    cut = head.rsplit(' ', 1)[0]
     return cut.rstrip(' -|—,')
 
 def _trim_desc(d, limit=160):
@@ -223,7 +228,7 @@ def _trim_desc(d, limit=160):
     return cut.rstrip(' -|—,')
 
 def trim_meta(html):
-    """Enforce title<=70 and description<=160 on every emitted page so Google
+    """Enforce title<=62 and description<=160 on every emitted page so Google
     never truncates our SERP snippets. Applied uniformly across all languages
     and survives future rebuilds."""
     m = re.search(r'<title>([^<]*)</title>', html)
