@@ -15,7 +15,7 @@ BLOG_META = {
         },
         'zh': {
             'title': "CHUGAO 现场笔记",
-            'desc': "来自产线与现场的 LED 电源选型、认证与故障排查经验。",
+            'desc': "CHUGAO 现场笔记：来自 LED 电源工厂产线与现场的一手经验，涵盖选型方法、IP 防护等级、认证要求、调光与浪涌防护、散热与寿命，助进口商、工程商与安装方少走弯路。",
         },
         'pt': {
             'title': "Notas de Campo - Guias e análises de fontes de alimentação LED | CHUGAO",
@@ -57,7 +57,7 @@ BLOG_META = {
         },
         'zh': {
             'title': "3 步选对 LED 电源",
-            'desc': "功率、防护等级、输入电压。抓住这三点就够了。",
+            'desc': "选对 LED 电源只需抓住三点：功率是否匹配、防护等级是否适合使用环境、输入电压是否兼容。本文用通俗方式讲清这三点如何影响你的项目。",
         },
         'pt': {
             'title': "Escolha a fonte de alimentação LED certa em 3 passos | Notas de Campo CHUGAO",
@@ -81,11 +81,11 @@ BLOG_META = {
         },
         'ja': {
             'title': "3 ステップで選ぶ正しい LED 電源 | CHUGAO 現場ノート",
-            'desc': "正しい LED 電源の選び方：電力の適合、環境に応じた IP 等級、入力電圧の互換性をわかりやすく解説。",
+            'desc': "正しい LED 電源の選び方：電力の適合、環境に応じた IP 等級、入力電圧の互換性という 3 つの要点を、プロジェクトへの影響とともにわかりやすく解説します。",
         },
         'ko': {
             'title': "3단계로 맞는 LED 전원 선택하기 | CHUGAO 현장 노트",
-            'desc': "올바른 LED 전원 선택법: 출력 정합, 환경별 IP 등급, 입력 전압 호환성을 쉽게 설명.",
+            'desc': "올바른 LED 전원 선택법: 출력 정합, 환경에 맞는 IP 등급, 입력 전압 호환성이라는 세 가지 핵심이 프로젝트에 미치는 영향을 알기 쉽게 설명합니다.",
         },
         'it': {
             'title': "Scegliere l'alimentatore LED giusto in 3 passi | Note dal Campo CHUGAO",
@@ -99,7 +99,7 @@ BLOG_META = {
         },
         'zh': {
             'title': "IP20、IP65、IP67、IP68 怎么选",
-            'desc': "这些数字代表什么，各自在什么环境下会失效。",
+            'desc': "IP 等级的两个数字各代表什么？IP20、IP65、IP67、IP68 分别能防什么、在哪些环境下会失效，以及室内、户外、地埋、潮湿等场景该如何对号入座。",
         },
         'pt': {
             'title': "IP20 vs IP65 vs IP67 vs IP68 | Notas de Campo CHUGAO",
@@ -123,11 +123,11 @@ BLOG_META = {
         },
         'ja': {
             'title': "IP20・IP65・IP67・IP68 の違い | CHUGAO 現場ノート",
-            'desc': "LED ドライバーの IP 等級解説：数字の意味、各等級の用途、プロジェクトに合った等級の選び方。",
+            'desc': "LED ドライバーの IP 等級解説：数字の意味、IP20・IP65・IP67・IP68 それぞれが守れる範囲と限界、屋内・屋外・埋設・湿潤など用途別の正しい選び方。",
         },
         'ko': {
             'title': "IP20·IP65·IP67·IP68 비교 | CHUGAO 현장 노트",
-            'desc': "LED 구동장치의 IP 등급 설명: 숫자의 의미, 각 등급의 용도, 프로젝트에 맞는 등급 선택법.",
+            'desc': "LED 구동장치의 IP 등급 설명: 숫자의 의미, IP20·IP65·IP67·IP68이 각각 보호하는 범위와 한계, 실내·옥외·매립·습윤 등 용도별 올바른 선택법.",
         },
         'it': {
             'title': "IP20 vs IP65 vs IP67 vs IP68 | Note dal Campo CHUGAO",
@@ -141,7 +141,7 @@ BLOG_META = {
         },
         'zh': {
             'title': "2026 LED 市场：我们看到的",
-            'desc': "来自工厂一线的观察，不是分析师报告。",
+            'desc': "2026 年 LED 驱动市场，来自工厂产线而非分析师的观察：哪些市场需求在增长、买家最常追加哪些规格、原材料与运费如何影响报价，以及下单节奏的变化。",
         },
         'pt': {
             'title': "Mercado LED 2026: o que estamos a ver | Notas de Campo CHUGAO",
@@ -183,7 +183,7 @@ BLOG_META = {
         },
         'zh': {
             'title': "LED 驱动 BIS 认证：印度进口指南",
-            'desc': "BIS 对您的订单、交期与成本意味着什么。",
+            'desc': "印度 BIS 认证对 LED 驱动进口意味着什么：IS 13252 第 1 部分的要求、测试与注册流程、典型周期与成本，以及选择像 CHUGAO 这样的 BIS 供应商如何加快清关。",
         },
         'pt': {
             'title': "Certificação BIS para drivers LED: guia de importação para a Índia | Notas de Campo CHUGAO",
@@ -225,7 +225,7 @@ BLOG_META = {
         },
         'zh': {
             'title': "LED 驱动寿命：MTBF、L70 与真实使用寿命",
-            'desc': "50,000 小时并不是你想的意思。热量、负载与环境解析。",
+            'desc': "50,000 小时到底意味着什么？拆解 MTBF 与 L70 指标、温度与电解电容对寿命的影响，以及负载与环境如何决定 LED 开关电源的真实使用寿命。",
         },
         'pt': {
             'title': "Vida útil dos drivers LED: MTBF, L70 e quanto realmente duram | Notas de Campo CHUGAO",
@@ -267,7 +267,7 @@ BLOG_META = {
         },
         'zh': {
             'title': "IP67 还是 IP65：你需要哪种防水 LED 驱动",
-            'desc': "每种 IP 等级真正防护什么、各自的失效点，以及如何按安装环境、成本与散热选对防水驱动。",
+            'desc': "IP67 与 IP65 分别真正防什么、各自在什么情况下会失效，以及如何按安装环境、成本与散热，为户外与潮湿场景选对防水 LED 驱动。",
         },
         'pt': {
             'title': "IP67 vs IP65: qual driver LED impermeável precisa | CHUGAO",
@@ -291,11 +291,11 @@ BLOG_META = {
         },
         'ja': {
             'title': "IP67 か IP65 か：どちらの LED ドライバーが必要？ | CHUGAO",
-            'desc': "各 IP 等級が本当に守るもの、それぞれが破綻する場面、設置に合った防水電源の選び方。",
+            'desc': "IP67 と IP65 が本当に守るもの、それぞれが破綻する場面、設置環境・コスト・放熱を踏まえた防水 LED 電源の選び方を解説します。",
         },
         'ko': {
             'title': "IP67 vs IP65: 어떤 LED 구동장치가 필요한가 | CHUGAO",
-            'desc': "각 IP 등급이 실제로 보호하는 것, 각각이 실패하는 지점, 설치에 맞는 방수 전원 선택법.",
+            'desc': "IP67과 IP65가 실제로 보호하는 것, 각각이 한계에 부딪히는 상황, 설치 환경·비용·발열을 고려한 방수 LED 전원 선택법을 설명합니다.",
         },
         'it': {
             'title': "IP67 vs IP65: quale driver LED ti serve | CHUGAO",
@@ -309,7 +309,7 @@ BLOG_META = {
         },
         'zh': {
             'title': "12V 还是 24V：LED 电源怎么选",
-            'desc': "压降、不同线径下的最大线缆长度，以及 12V 与 24V LED 灯带选择的简单法则。",
+            'desc': "12V 还是 24V？从压降原理讲起，说明不同线径下的最大线缆长度，并给出选择 12V 与 24V LED 灯带的简单法则，帮助避免远端灯带变暗。",
         },
         'pt': {
             'title': "12V ou 24V: como escolher a fonte LED | Guia CHUGAO",
@@ -333,11 +333,11 @@ BLOG_META = {
         },
         'ja': {
             'title': "12V か 24V か：LED 電源の選び方 | CHUGAO ガイド",
-            'desc': "電圧降下、線径ごとの最大ケーブル長、LED ストリップで 12V と 24V を選ぶ簡単な法則。",
+            'desc': "12V か 24V か：電圧降下の仕組みから、線径ごとの最大ケーブル長の目安、LED ストリップで 12V と 24V を選び分ける簡単な法則までを解説します。",
         },
         'ko': {
             'title': "12V 또는 24V: LED 전원 어떻게 선택할까 | CHUGAO 가이드",
-            'desc': "전압 강하, 굵기별 최대 케이블 길이, LED 스트립용 12V·24V 선택의 간단한 법칙.",
+            'desc': "12V냐 24V냐: 전압 강하의 원리부터 굵기별 최대 케이블 길이 기준, LED 스트립에서 12V와 24V를 구분해 선택하는 간단한 법칙까지 정리합니다.",
         },
         'it': {
             'title': "12V o 24V: come scegliere l'alimentatore LED | Guida CHUGAO",
@@ -351,7 +351,7 @@ BLOG_META = {
         },
         'zh': {
             'title': "LED 电源功率怎么选：瓦数与余量",
-            'desc': "累加真实负载、预留 20% 余量、考虑启动电流与温度：附实操算例。",
+            'desc': "如何为 LED 电源选对功率？容量不足会早期故障，过大会浪费成本。本文从累加真实负载、预留 20% 余量，到计入启动电流与高温降额，一步步讲清正确选型方法。",
         },
         'pt': {
             'title': "Como dimensionar uma fonte LED: watts e margem | CHUGAO",
@@ -375,7 +375,7 @@ BLOG_META = {
         },
         'ja': {
             'title': "LED 電源の容量決め：ワット数・余裕・突入電流 | CHUGAO 現場ノート",
-            'desc': "容量不足は早期故障を、過大は無駄な出費を招く。4 ステップの選定法：負荷、20% 余裕、ブレーカーの突入電流、熱降格。",
+            'desc': "容量不足は早期故障を、過大は無駄な出費を招きます。負荷の積算、20% の余裕、ブレーカーの突入電流、高温時のデレーティングという 4 ステップで正しく選定。",
         },
         'ko': {
             'title': "LED 전원 용량 정하기: 와트·여유·돌입전류 | CHUGAO 현장 노트",
@@ -387,19 +387,19 @@ BLOG_META = {
         },
     },
     'blog-9': {
-        'zh': {'title': "恒压还是恒流 LED 驱动：你的灯具需要哪种", 'desc': "恒压与恒流 LED 驱动各驱动什么、接反为何烧毁灯具，以及下单前如何看标签判断。"},
+        'zh': {'title': "恒压还是恒流 LED 驱动：你的灯具需要哪种", 'desc': "恒压与恒流 LED 驱动各自驱动什么、为什么接错会烧毁灯具，以及下单前如何通过标签与参数判断该用哪种，避免常见的接线与选型错误。"},
         'es': {'title': "Driver LED de tensión constante o corriente constante: ¿cuál necesita?", 'desc': "Qué alimenta cada tipo, por qué mezclarlos destruye las luminarias y cómo leer la etiqueta antes de comprar."},
         'pt': {'title': "Driver LED de tensão constante ou corrente constante: qual você precisa?", 'desc': "O que cada tipo alimenta, por que misturá-los destrói as luminárias e como ler o rótulo antes de comprar."},
         'ru': {'title': "Драйвер LED постоянного напряжения или тока: что вам нужно?", 'desc': "Что питает каждый тип, почему их смешивание выводит светильники из строя и как прочитать маркировку до покупки."},
         'fr': {'title': "Driver LED tension constante ou courant constant : lequel choisir ?", 'desc': "Ce que alimente chaque type, pourquoi les mélanger détruit les luminaires et comment lire l'étiquette avant d'acheter."},
         'de': {'title': "LED-Treiber Konstantspannung oder Konstantstrom: Was brauchen Sie?", 'desc': "Was jeder Typ speist, warum das Mischen die Leuchten zerstört und wie Sie das Etikett vor dem Kauf lesen."},
         'ar': {'title': "مشغل LED جهد ثابت أم تيار ثابت: أيها تحتاج؟", 'desc': "ماذا يغذي كل نوع، ولماذا يؤدي خلطهما إلى تلف الإضاءة، وكيف تقرأ الملصق قبل الشراء."},
-        'ja': {'title': "LED ドライバー 定電圧か定電流か：どちらが必要？", 'desc': "各タイプが駆動するもの、混用が器具を破壊する理由、購入前のラベル確認方法。"},
-        'ko': {'title': "LED 구동장치 정전압 또는 정전류: 어떤 것이 필요한가?", 'desc': "각 타입이 구동하는 것, 혼용이 조명을 고장 내는 이유, 구매 전 라벨 읽는 법."},
+        'ja': {'title': "LED ドライバー 定電圧か定電流か：どちらが必要？", 'desc': "定電圧と定電流の LED ドライバーがそれぞれ何を駆動するのか、取り違えると器具が壊れる理由、購入前にラベルと仕様で見分ける方法を解説します。"},
+        'ko': {'title': "LED 구동장치 정전압 또는 정전류: 어떤 것이 필요한가?", 'desc': "정전압과 정전류 LED 구동장치가 각각 무엇을 구동하는지, 잘못 혼용하면 조명이 고장 나는 이유, 구매 전 라벨과 사양으로 구분하는 방법을 설명합니다."},
         'it': {'title': "Driver LED a tensione o corrente costante: quale ti serve?", 'desc': "Cosa alimenta ciascun tipo, perché mescolarli distrugge le luci e come leggere l'etichetta prima di comprare."},
     },
     'blog-10': {
-        'zh': {'title': "LED 驱动调光全解：0-10V、PWM、DALI 与 TRIAC", 'desc': "0-10V、PWM、DALI、TRIAC 四种调光标准各是什么、该选哪种，以及为何驱动与调光器必须匹配。"},
+        'zh': {'title': "LED 驱动调光全解：0-10V、PWM、DALI 与 TRIAC", 'desc': "0-10V、PWM、DALI、TRIAC 四种调光方式各自的工作原理、适用场景与优劣，以及为什么驱动必须与调光器匹配才能避免频闪与失灵。"},
         'es': {'title': "Dimado de drivers LED explicado: 0-10V, PWM, DALI y TRIAC", 'desc': "Qué hace cada estándar (0-10V, PWM, DALI, TRIAC), cuál especificar y por qué driver y dimmer deben coincidir."},
         'pt': {'title': "Dimming de drivers LED explicado: 0-10V, PWM, DALI e TRIAC", 'desc': "O que faz cada padrão (0-10V, PWM, DALI, TRIAC), qual especificar e por que driver e dimerizador devem coincidir."},
         'ru': {'title': "Диммирование драйверов LED: 0-10V, PWM, DALI и TRIAC", 'desc': "Что делает каждый стандарт (0-10V, PWM, DALI, TRIAC), какой выбрать и почему драйвер и диммер должны совпадать."},
@@ -411,55 +411,55 @@ BLOG_META = {
         'it': {'title': "Dimming dei driver LED spiegato: 0-10V, PWM, DALI e TRIAC", 'desc': "Cosa fa ogni standard (0-10V, PWM, DALI, TRIAC), quale specificare e perché driver e dimmer devono combaciare."},
     },
     'blog-11': {
-        'zh': {'title': "功率因数校正与无频闪 LED 驱动", 'desc': "功率因数与纹波意味着什么、哪些场景无频闪不可省略，以及如何读 datasheet 上的关键数字。"},
+        'zh': {'title': "功率因数校正与无频闪 LED 驱动", 'desc': "功率因数、纹波与频闪意味着什么，哪些应用对无频闪不可妥协，以及如何在 datasheet 中读出判断无频闪（flicker-free）的关键数字。"},
         'es': {'title': "Corrección de factor de potencia y drivers LED sin parpadeo", 'desc': "Qué significan PF y el rizado, dónde lo sin parpadeo es innegociable y cómo leer la ficha técnica."},
         'pt': {'title': "Fator de potência e drivers LED sem cintilação", 'desc': "O que significam PF e o ripple, onde o sem cintilação é inegociável e como ler a ficha técnica."},
         'ru': {'title': "Коррекция коэффициента мощности и драйверы LED без мерцания", 'desc': "Что означают PF и пульсации, где бесмерцание обязательно и как читать datasheet."},
         'fr': {'title': "Correction du facteur de puissance et drivers LED sans scintillement", 'desc': "Ce que signifient PF et l'ondulation, où le sans scintillement est non négociable et comment lire la fiche."},
         'de': {'title': "Leistungsfaktor-Korrektur und flimmerfreie LED-Treiber", 'desc': "Was PF und Welligkeit bedeuten, wo flimmerfrei nicht verhandelbar ist und wie Sie das Datenblatt lesen."},
         'ar': {'title': "تصحيح معامل القدرة ومشغلات LED خالية من الوميض", 'desc': "ماذا يعني PF والتموج، وأين لا يمكن الاستغناء عن الخالي من الوميض، وكيف تقرأ ورقة البيانات."},
-        'ja': {'title': "力率補正と無点滅（フリッカーフリー）LED ドライバー", 'desc': "PF とリップルが意味するもの、無点滅が必須な現場、データシートの読み方。"},
-        'ko': {'title': "역률 보정과 플리커 프리 LED 구동장치", 'desc': "PF와 리플이 의미하는 것, 플리커 프리가 필수인 현장, 데이터시트 읽는 법."},
+        'ja': {'title': "力率補正と無点滅（フリッカーフリー）LED ドライバー", 'desc': "力率（PF）とリップルが意味するもの、撮影・小売・オフィスなど無点滅（フリッカーフリー）が必須となる現場、データシートで見るべき数値の読み方。"},
+        'ko': {'title': "역률 보정과 플리커 프리 LED 구동장치", 'desc': "역률(PF)과 리플이 의미하는 것, 촬영·소매·사무실 등 플리커 프리가 필수인 현장, 데이터시트에서 확인해야 할 핵심 수치를 읽는 방법을 다룹니다."},
         'it': {'title': "Fattore di potenza e driver LED senza flicker", 'desc': "Cosa significano PF e ripple, dove il senza flicker è non negoziabile e come leggere la scheda tecnica."},
     },
     'blog-12': {
-        'zh': {'title': "LED 驱动浪涌防护：雷击与瞬变", 'desc': "浪涌从哪来、两层防护分别是什么，以及潮湿或长距离布线现场如何选能扛雷击的驱动。"},
+        'zh': {'title': "LED 驱动浪涌防护：雷击与瞬变", 'desc': "浪涌从何而来、共模与差模两层防护分别是什么，以及雷区、潮湿或长距离布线现场该如何选型，确保 LED 驱动在雷击与瞬变下存活。"},
         'es': {'title': "Protección contra sobretensiones para drivers LED: rayos y transitorios", 'desc': "De dónde vienen las sobretensiones, las dos capas de protección y cómo especificar un driver que sobrevive a rayos y transitorios."},
         'pt': {'title': "Proteção contra surtos em drivers LED: raios e transientes", 'desc': "De onde vêm os surtos, as duas camadas de proteção e como especificar um driver que sobrevive a raios e transientes."},
         'ru': {'title': "Защита драйверов LED от перенапряжения: молнии и импульсы", 'desc': "Откуда приходят перенапряжения, два уровня защиты и как выбрать драйвер, переживающий молнии и импульсы."},
         'fr': {'title': "Protection contre les surtensions des drivers LED : foudre et transitoires", 'desc': "D'où viennent les surtensions, les deux couches de protection et comment spécifier un driver qui survit à la foudre et aux transitoires."},
         'de': {'title': "Überspannungsschutz für LED-Treiber: Blitz und Transienten", 'desc': "Woher Überspannungen kommen, die zwei Schutzebenen und wie Sie einen Treiber wählen, der Blitz und Transienten übersteht."},
         'ar': {'title': "حماية مشغلات LED من التيارات الاندفاعية: البرق والعواصف", 'desc': "من أين تأتي التيارات الاندفاعية، وطبقتا الحماية، وكيف تحدد مشغلًا ينجو من البرق والعواصف."},
-        'ja': {'title': "LED ドライバーの雷サージ保護：雷と過渡現象", 'desc': "サージの発生源、2 層の保護、屋外や長距離配線現場で雷に耐える駆動の選び方。"},
-        'ko': {'title': "LED 구동장치 서지 보호: 낙뢰 및 순간 과전압", 'desc': "서지의 발생 원인, 두 층의 보호, 옥외·장거리 배선 현장에서 낙뢰를 견디는 구동장치 선정법."},
+        'ja': {'title': "LED ドライバーの雷サージ保護：雷と過渡現象", 'desc': "サージの発生源、コモンモードとディファレンシャルの 2 層の保護、雷の多い地域や屋外・長距離配線の現場で雷サージに耐える LED ドライバーの選び方。"},
+        'ko': {'title': "LED 구동장치 서지 보호: 낙뢰 및 순간 과전압", 'desc': "서지의 발생 원인, 공통 모드와 차동 모드의 두 층 보호, 낙뢰가 잦은 지역이나 옥외·장거리 배선 현장에서 서지에 견디는 LED 구동장치 선정 방법."},
         'it': {'title': "Protezione da sovratensioni per driver LED: fulmini e transitori", 'desc': "Da dove arrivano le sovratensioni, i due livelli di protezione e come specificare un driver che sopravvive a fulmini e transitori."},
     },
     'blog-13': {
-        'zh': {'title': "户外与恶劣环境 LED 电源怎么选", 'desc': "从 IP20 到 IP67 的环境阶梯、散热降额、调光与浪涌，一步步选出对的户外驱动。"},
+        'zh': {'title': "户外与恶劣环境 LED 电源怎么选", 'desc': "从 IP20 到 IP67 的防护阶梯、散热降额、调光与浪涌防护，通过一套分步决策流程，为户外与恶劣环境选出合适的 LED 电源。"},
         'es': {'title': "Cómo elegir una fuente LED para exteriores y entornos difíciles", 'desc': "La escalera de entornos de IP20 a IP67, la derating térmica, el dimado y la sobretensión en un solo flujo de decisión."},
         'pt': {'title': "Como escolher uma fonte LED para externo e ambientes agressivos", 'desc': "A escada de ambientes de IP20 a IP67, a derating térmica, o dimming e a surto num único fluxo de decisão."},
         'ru': {'title': "Выбор блока питания LED для улицы и жёстких условий", 'desc': "Лестница сред от IP20 до IP67, тепловой дерейтинг, диммирование и перенапряжение в одном алгоритме."},
         'fr': {'title': "Choisir une alimentation LED pour extérieur et environnements difficiles", 'desc': "L'échelle d'environnements de IP20 à IP67, la dérating thermique, le variateur et la surtension dans un seul flux de décision."},
         'de': {'title': "LED-Netzteil für Außen und raue Umgebungen wählen", 'desc': "Die Umgebungsleiter von IP20 bis IP67, Wärme-Derating, Dimming und Überspannung in einem Entscheidungsfluss."},
         'ar': {'title': "اختيار مزود طاقة LED للخارج والبيئات القاسية", 'desc': "سلم البيئات من IP20 إلى IP67، والتخفيض الحراري، والتضبيب، والتيارات الاندفاعية في تدفق قرار واحد."},
-        'ja': {'title': "屋外・過酷環境向け LED 電源の選び方", 'desc': "IP20 から IP67 の環境段階、熱デレーティング、調光、サージを一つの判断フローに。"},
-        'ko': {'title': "옥외 및 혹독한 환경용 LED 전원 선택법", 'desc': "IP20부터 IP67까지의 환경 사다리, 열 감율, 디밍, 서지를 하나의 결정 흐름으로."},
+        'ja': {'title': "屋外・過酷環境向け LED 電源の選び方", 'desc': "IP20 から IP67 までの環境段階、熱デレーティング、調光、サージ保護を一つの判断フローにまとめ、屋外・過酷環境向け LED 電源の選び方を解説します。"},
+        'ko': {'title': "옥외 및 혹독한 환경용 LED 전원 선택법", 'desc': "IP20부터 IP67까지의 환경 사다리, 열 감율, 디밍, 서지 보호를 하나의 결정 흐름으로 정리해 옥외·혹독한 환경용 LED 전원을 고르는 방법을 안내합니다."},
         'it': {'title': "Scegliere l'alimentatore LED per esterno e ambienti difficili", 'desc': "La scala ambienti da IP20 a IP67, il derating termico, il dimming e la sovratensione in un unico flusso decisionale."},
     },
     'blog-14': {
-        'zh': {'title': "LED 布线线径与压降", 'desc': "5% 规则、12V 与 24V 最大布线长度表，以及三种让远端灯带不再变暗的办法。"},
+        'zh': {'title': "LED 布线线径与压降", 'desc': "5% 压降规则、12V 与 24V 的最大布线长度参考，以及三种让远端灯带不再变暗的实用办法，帮助你选对线径、避免末端变暗。"},
         'es': {'title': "Sección de cable y caída de tensión en instalaciones LED", 'desc': "La regla del 5%, tablas de longitud máxima para 12V y 24V, y tres formas de evitar tiras tenues al final."},
         'pt': {'title': "Bitola de cabo e queda de tensão em instalações LED", 'desc': "A regra de 5%, tabelas de comprimento máximo para 12V e 24V e três formas de evitar fitas fracas no final."},
         'ru': {'title': "Сечение кабеля и падение напряжения в LED-установках", 'desc': "Правило 5%, таблицы максимальной длины для 12В и 24В и три способа убрать тусклый конец ленты."},
         'fr': {'title': "Section de câble et chute de tension pour installations LED", 'desc': "La règle des 5%, tables de longueur max pour 12V et 24V et trois moyens d'éviter les bandes faibles en bout."},
         'de': {'title': "Kabelquerschnitt und Spannungsabfall bei LED-Installationen", 'desc': "Die 5%-Regel, Maximal-Längentabellen für 12V und 24V und drei Wege gegen dunkle Streifen am Ende."},
         'ar': {'title': "مقطع الكابل وهبوط الجهد في تركيبات LED", 'desc': "قاعدة 5%، جداول أقصى طول لـ 12V و24V، وثلاث طرق لمنع تعتيم الشريط في النهاية."},
-        'ja': {'title': "LED 配線の線径と電圧降下", 'desc': "5% ルール、12V と 24V の最大配線長表、遠端のストリップを暗くしない 3 つの方法。"},
-        'ko': {'title': "LED 설비 케이블 굵기와 전압 강하", 'desc': "5% 규칙, 12V·24V 최대 배선 길이 표, 그리고 끝이 어두워지지 않게 하는 3가지 방법."},
+        'ja': {'title': "LED 配線の線径と電圧降下", 'desc': "5% ルール（電圧降下）、12V と 24V の最大配線長の目安、遠端の LED ストリップを暗くしない 3 つの方法を解説します。"},
+        'ko': {'title': "LED 설비 케이블 굵기와 전압 강하", 'desc': "5% 규칙(전압 강하), 12V·24V 최대 배선 길이 기준, 끝단 LED 스트립이 어두워지지 않게 하는 세 가지 방법을 정리했습니다."},
         'it': {'title': "Sezione cavo e caduta di tensione per installazioni LED", 'desc': "La regola del 5%, tabelle di lunghezza massima per 12V e 24V e tre modi per evitare strisce deboli in fondo."},
     },
     'blog-15': {
-        'zh': {'title': "LED 驱动的热降额：高温如何削减输出与寿命", 'desc': "什么是热降额、为何标签瓦数只在额定环境温度下成立、如何读降额曲线，以及为高温或密闭环境选型的方法。"},
+        'zh': {'title': "LED 驱动的热降额：高温如何削减输出与寿命", 'desc': "什么是热降额、为何标签瓦数只在额定环境温度下成立、如何读懂降额曲线，以及为高温、密闭或通风不良的环境选型 LED 驱动电源的具体方法。"},
         'es': {'title': "Derating térmico del driver LED: cómo el calor reduce potencia y vida útil", 'desc': "Qué es el derating térmico, por qué los vatios de la etiqueta solo valen a la temperatura ambiente nominal, cómo leer una curva de derating y cómo dimensionar para sitios calurosos o cerrados."},
         'pt': {'title': "Derating térmico do driver LED: como o calor reduz potência e vida útil", 'desc': "O que é o derating térmico, por que os watts da etiqueta só valem na temperatura ambiente nominal, como ler uma curva de derating e como dimensionar para locais quentes ou fechados."},
         'ru': {'title': "Тепловой дерийтинг LED-драйверов: как жара снижает мощность и срок службы", 'desc': "Что такое тепловой дерийтинг, почему ватты на этикетке верны только при номинальной температуре окружающей среды, как читать кривую дерийтинга и как подобрать драйвер для жарких или закрытых мест."},
